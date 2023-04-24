@@ -5,8 +5,12 @@ export default {
   events: [
     {
       http: {
-        method: 'get',
-        path: 'sfdc-user',
+        method: 'post',
+        path: 'challenge-events',
+        cors: {
+          origin: '*',
+          headers: ['Content-Type'],
+        },
       },
     },
   ],
