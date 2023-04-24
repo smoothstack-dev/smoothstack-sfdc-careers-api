@@ -1,10 +1,18 @@
 import type { AWS } from '@serverless/typescript';
-import sfdcUser from './src/functions/sfdcUser';
+import jobs from './src/functions/jobs';
+import { snsResources } from './resources/sns/snsResources';
+import linksGenerator from './src/functions/linksGenerator';
+import appointmentGenerator from './src/functions/appointmentGenerator';
+import schedulingEvents from './src/functions/schedulingEvents';
+import webinarEvents from './src/functions/webinarEvents';
+import webinarProcessing from './src/functions/webinarProcessing';
+import challengeEvents from './src/functions/challengeEvents';
+import documentEvents from './src/functions/documentEvents';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild', 'serverless-offline'],
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-offline-sns', 'serverless-ngrok-tunnel'],
   provider: {
     name: 'aws',
     runtime: 'nodejs16.x',
@@ -28,10 +36,14 @@ const serverlessConfiguration: AWS = {
       JSFORCE_CONNECTION_REGISTRY: 'sfdx',
     },
   },
-  // import the function via paths
-  functions: { sfdcUser },
-  package: { individually: true },
   custom: {
+    ngrokTunnel: {
+      tunnels: [
+        {
+          port: 3000,
+        },
+      ],
+    },
     esbuild: {
       bundle: true,
       minify: false,
@@ -41,6 +53,28 @@ const serverlessConfiguration: AWS = {
       define: { 'require.resolve': undefined },
       platform: 'node',
       concurrency: 10,
+    },
+    'serverless-offline-sns': {
+      port: 4002,
+      debug: false,
+      accountId: '${opt:aws_account, env: AWS_ACCOUNT}',
+    },
+  },
+  // import the function via paths
+  package: { individually: true },
+  functions: {
+    jobs,
+    linksGenerator,
+    appointmentGenerator,
+    schedulingEvents,
+    webinarEvents,
+    webinarProcessing,
+    challengeEvents,
+    documentEvents,
+  },
+  resources: {
+    Resources: {
+      ...snsResources,
     },
   },
 };

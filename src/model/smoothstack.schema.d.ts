@@ -316,6 +316,8 @@ type Fields$Account = {
   JigsawCompanyId: string | null;
   AccountSource: string | null;
   SicDesc: string | null;
+  ActivityMetricId: string | null;
+  ActivityMetricRollupId: string | null;
   Account_type__c: string | null;
   DSCORGPKG__Conflict__c: string | null;
   DSCORGPKG__DO_3yr_Employees_Growth__c: string | null;
@@ -359,6 +361,8 @@ type ParentReferences$Account = {
   Owner: SObjectDefinition$User;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  ActivityMetric: SObjectDefinition$ActivityMetric | null;
+  ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
   DSCORGPKG__Conflict__r: SObjectDefinition$DSCORGPKG__Conflict__c | null;
   DSCORGPKG__Locked_By_User__r: SObjectDefinition$User | null;
 };
@@ -927,6 +931,85 @@ interface SObjectDefinition$ActivityHistory extends SObjectDefinition<'ActivityH
     Fields: Fields$ActivityHistory;
     ParentReferences: ParentReferences$ActivityHistory;
     ChildRelationships: ChildRelationships$ActivityHistory;
+  }
+
+type Fields$ActivityMetric = {
+  //
+  Id: string;
+  BaseId: string;
+  BaseType: string | null;
+  InactiveDays: number | null;
+  LastModifiedDate: DateString;
+  LastActivityDateTime: DateString | null;
+  LastActivityDateLastModDate: DateString | null;
+  NextActivityDateTime: DateString | null;
+  NextActivityDateLastModDate: DateString | null;
+  LastCallDateTime: DateString | null;
+  LastCallDateLastModDate: DateString | null;
+  LastEventDateTime: DateString | null;
+  LastEventDateLastModDate: DateString | null;
+  LastTaskDateTime: DateString | null;
+  LastTaskDateLastModDate: DateString | null;
+  LastEmailDateTime: DateString | null;
+  LastEmailDateLastModDate: DateString | null;
+  SystemModstamp: DateString;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$ActivityMetric = {
+  //
+  Base: SObjectDefinition$Name;
+};
+
+type ChildRelationships$ActivityMetric = {
+  //
+  AccountActivityMetric: SObjectDefinition$Account;
+  ContactActivityMetric: SObjectDefinition$Contact;
+  ContractActivityMetric: SObjectDefinition$Contract;
+  LeadActivityMetric: SObjectDefinition$Lead;
+  OpportunityActivityMetric: SObjectDefinition$Opportunity;
+};
+
+interface SObjectDefinition$ActivityMetric extends SObjectDefinition<'ActivityMetric'> {
+    Name: 'ActivityMetric';
+    Fields: Fields$ActivityMetric;
+    ParentReferences: ParentReferences$ActivityMetric;
+    ChildRelationships: ChildRelationships$ActivityMetric;
+  }
+
+type Fields$ActivityMetricRollup = {
+  //
+  Id: string;
+  BaseId: string;
+  BaseType: string | null;
+  LastModifiedDate: DateString;
+  TotalActivitiesDay: number | null;
+  TotalActivitiesDayLastModDate: DateString | null;
+  TotalActivities7Days: number | null;
+  TotalActivities30Days: number | null;
+  SystemModstamp: DateString;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$ActivityMetricRollup = {
+  //
+  Base: SObjectDefinition$Name;
+};
+
+type ChildRelationships$ActivityMetricRollup = {
+  //
+  AccountActivityMetricRollup: SObjectDefinition$Account;
+  ContactActivityMetricRollup: SObjectDefinition$Contact;
+  ContractActivityMetricRollup: SObjectDefinition$Contract;
+  LeadActivityMetricRollup: SObjectDefinition$Lead;
+  OpportunityActivityMetricRollup: SObjectDefinition$Opportunity;
+};
+
+interface SObjectDefinition$ActivityMetricRollup extends SObjectDefinition<'ActivityMetricRollup'> {
+    Name: 'ActivityMetricRollup';
+    Fields: Fields$ActivityMetricRollup;
+    ParentReferences: ParentReferences$ActivityMetricRollup;
+    ChildRelationships: ChildRelationships$ActivityMetricRollup;
   }
 
 type Fields$AdditionalNumber = {
@@ -1780,6 +1863,36 @@ interface SObjectDefinition$Applicant__ChangeEvent extends SObjectDefinition<'Ap
     ChildRelationships: ChildRelationships$Applicant__ChangeEvent;
   }
 
+type Fields$Applicant__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Applicant__History = {
+  //
+  Parent: SObjectDefinition$Applicant__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Applicant__History = {
+  //
+};
+
+interface SObjectDefinition$Applicant__History extends SObjectDefinition<'Applicant__History'> {
+    Name: 'Applicant__History';
+    Fields: Fields$Applicant__History;
+    ParentReferences: ParentReferences$Applicant__History;
+    ChildRelationships: ChildRelationships$Applicant__History;
+  }
+
 type Fields$Applicant__c = {
   //
   Id: string;
@@ -1791,6 +1904,8 @@ type Fields$Applicant__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
   Email__c: string | null;
   Mobile__c: string | null;
   First_Name__c: string | null;
@@ -1823,6 +1938,7 @@ type ParentReferences$Applicant__c = {
 
 type ChildRelationships$Applicant__c = {
   //
+  Histories: SObjectDefinition$Applicant__History;
   AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
   AttachedContentNotes: SObjectDefinition$AttachedContentNote;
   Attachments: SObjectDefinition$Attachment;
@@ -1890,6 +2006,7 @@ type Fields$Application__ChangeEvent = {
   Responsive__c: string | null;
   Challenge_Date_Time__c: DateString | null;
   Challenge_Link__c: string | null;
+  Job__c: string | null;
   Challenge_Appointment_Status__c: string | null;
   Challenge_Result__c: string | null;
   Challenge_Score__c: number | null;
@@ -1941,7 +2058,6 @@ type Fields$Application__ChangeEvent = {
   Months_to_Graduation__c: number | null;
   Additional_Questions__c: string | null;
   Years_of_Experience_Self_Disclosed__c: string | null;
-  Strongest_Programming_Languages__c: string | null;
   Refer_a_Friend__c: string | null;
   Commit_to_Intense_Program__c: string | null;
   Military_Branch__c: string | null;
@@ -1949,7 +2065,9 @@ type Fields$Application__ChangeEvent = {
   Overall_Candidate_Rank_Tech_Screener__c: number | null;
   Coding_Challenge_Name__c: string | null;
   Applicant__c: string | null;
-  Job__c: string | null;
+  Instagram_URL__c: string | null;
+  Application_Device__c: string | null;
+  Strongest_Programming_Languages__c: string | null;
 };
 
 type ParentReferences$Application__ChangeEvent = {
@@ -1967,6 +2085,36 @@ interface SObjectDefinition$Application__ChangeEvent extends SObjectDefinition<'
     ChildRelationships: ChildRelationships$Application__ChangeEvent;
   }
 
+type Fields$Application__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Application__History = {
+  //
+  Parent: SObjectDefinition$Application__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Application__History = {
+  //
+};
+
+interface SObjectDefinition$Application__History extends SObjectDefinition<'Application__History'> {
+    Name: 'Application__History';
+    Fields: Fields$Application__History;
+    ParentReferences: ParentReferences$Application__History;
+    ChildRelationships: ChildRelationships$Application__History;
+  }
+
 type Fields$Application__c = {
   //
   Id: string;
@@ -1977,6 +2125,8 @@ type Fields$Application__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
   Overall_Candidate_Rank_Recruiter__c: number | null;
   Project_Experience_Months__c: number | null;
   External_Applications__c: string | null;
@@ -2005,6 +2155,7 @@ type Fields$Application__c = {
   Responsive__c: string | null;
   Challenge_Date_Time__c: DateString | null;
   Challenge_Link__c: string | null;
+  Job__c: string;
   Challenge_Appointment_Status__c: string | null;
   Challenge_Result__c: string | null;
   Challenge_Score__c: number | null;
@@ -2056,7 +2207,6 @@ type Fields$Application__c = {
   Months_to_Graduation__c: number | null;
   Additional_Questions__c: string | null;
   Years_of_Experience_Self_Disclosed__c: string | null;
-  Strongest_Programming_Languages__c: string | null;
   Refer_a_Friend__c: string | null;
   Commit_to_Intense_Program__c: string | null;
   Military_Branch__c: string | null;
@@ -2064,19 +2214,22 @@ type Fields$Application__c = {
   Overall_Candidate_Rank_Tech_Screener__c: number | null;
   Coding_Challenge_Name__c: string | null;
   Applicant__c: string;
-  Job__c: string;
+  Instagram_URL__c: string | null;
+  Application_Device__c: string | null;
+  Strongest_Programming_Languages__c: string | null;
 };
 
 type ParentReferences$Application__c = {
   //
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
-  Applicant__r: SObjectDefinition$Applicant__c;
   Job__r: SObjectDefinition$Job__c;
+  Applicant__r: SObjectDefinition$Applicant__c;
 };
 
 type ChildRelationships$Application__c = {
   //
+  Histories: SObjectDefinition$Application__History;
   AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
   AttachedContentNotes: SObjectDefinition$AttachedContentNote;
   Attachments: SObjectDefinition$Attachment;
@@ -5180,6 +5333,114 @@ interface SObjectDefinition$CategoryNode extends SObjectDefinition<'CategoryNode
     ChildRelationships: ChildRelationships$CategoryNode;
   }
 
+type Fields$Certification__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Attempted_Date__c: DateString | null;
+  Voucher_Assignee__c: string | null;
+  Date_Assigned__c: DateString | null;
+  Expiration_Date__c: DateString | null;
+  Scheduled_Date__c: DateString | null;
+  Status__c: string | null;
+  Assignment_Aging__c: number | null;
+  Voucher__c: string | null;
+  Credential__c: string | null;
+  Credential_ID__c: string | null;
+  Is_Latest__c: boolean;
+};
+
+type ParentReferences$Certification__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Certification__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Certification__ChangeEvent extends SObjectDefinition<'Certification__ChangeEvent'> {
+    Name: 'Certification__ChangeEvent';
+    Fields: Fields$Certification__ChangeEvent;
+    ParentReferences: ParentReferences$Certification__ChangeEvent;
+    ChildRelationships: ChildRelationships$Certification__ChangeEvent;
+  }
+
+type Fields$Certification__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Attempted_Date__c: DateString | null;
+  Voucher_Assignee__c: string | null;
+  Date_Assigned__c: DateString | null;
+  Expiration_Date__c: DateString | null;
+  Scheduled_Date__c: DateString | null;
+  Status__c: string | null;
+  Assignment_Aging__c: number | null;
+  Voucher__c: string;
+  Credential__c: string | null;
+  Credential_ID__c: string | null;
+  Is_Latest__c: boolean;
+};
+
+type ParentReferences$Certification__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Voucher_Assignee__r: SObjectDefinition$Contact | null;
+  Voucher__r: SObjectDefinition$Voucher__c;
+};
+
+type ChildRelationships$Certification__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Certification__c extends SObjectDefinition<'Certification__c'> {
+    Name: 'Certification__c';
+    Fields: Fields$Certification__c;
+    ParentReferences: ParentReferences$Certification__c;
+    ChildRelationships: ChildRelationships$Certification__c;
+  }
+
 type Fields$ChatterActivity = {
   //
   Id: string;
@@ -5308,6 +5569,104 @@ interface SObjectDefinition$ClientBrowser extends SObjectDefinition<'ClientBrows
     ChildRelationships: ChildRelationships$ClientBrowser;
   }
 
+type Fields$Cohort_Participant_Ranking__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Cohort_Participant__c: string | null;
+  Communication__c: number | null;
+  Initiative__c: number | null;
+  Participation__c: number | null;
+  Responsiveness__c: number | null;
+  Start_Date__c: DateString | null;
+  Tech_Skills__c: number | null;
+  Avg_Ranking__c: number | null;
+  Meta__c: string | null;
+};
+
+type ParentReferences$Cohort_Participant_Ranking__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Cohort_Participant_Ranking__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Cohort_Participant_Ranking__ChangeEvent extends SObjectDefinition<'Cohort_Participant_Ranking__ChangeEvent'> {
+    Name: 'Cohort_Participant_Ranking__ChangeEvent';
+    Fields: Fields$Cohort_Participant_Ranking__ChangeEvent;
+    ParentReferences: ParentReferences$Cohort_Participant_Ranking__ChangeEvent;
+    ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__ChangeEvent;
+  }
+
+type Fields$Cohort_Participant_Ranking__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Cohort_Participant__c: string | null;
+  Communication__c: number | null;
+  Initiative__c: number | null;
+  Participation__c: number | null;
+  Responsiveness__c: number | null;
+  Start_Date__c: DateString | null;
+  Tech_Skills__c: number | null;
+  Avg_Ranking__c: number | null;
+  Meta__c: string | null;
+};
+
+type ParentReferences$Cohort_Participant_Ranking__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Cohort_Participant__r: SObjectDefinition$Cohort_Participant__c | null;
+};
+
+type ChildRelationships$Cohort_Participant_Ranking__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Cohort_Participant_Ranking__c extends SObjectDefinition<'Cohort_Participant_Ranking__c'> {
+    Name: 'Cohort_Participant_Ranking__c';
+    Fields: Fields$Cohort_Participant_Ranking__c;
+    ParentReferences: ParentReferences$Cohort_Participant_Ranking__c;
+    ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__c;
+  }
+
 type Fields$Cohort_Participant__ChangeEvent = {
   //
   Id: string | null;
@@ -5329,12 +5688,15 @@ type Fields$Cohort_Participant__ChangeEvent = {
   Inactive_Status__c: string | null;
   Cut_Keep__c: string | null;
   Cohort_Name__c: string | null;
-  Weighted_Score__c: number | null;
+  Stack_Rank__c: number | null;
   Engagement_Backout_Reason__c: string | null;
   Is_Latest__c: boolean;
+  Placement_Start_Date__c: DateString | null;
   Training_To_Placement_Aging__c: number | null;
   MSMembershipId__c: string | null;
   Prework_Status__c: string | null;
+  Interview_Readiness_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant__ChangeEvent = {
@@ -5406,12 +5768,15 @@ type Fields$Cohort_Participant__c = {
   Inactive_Status__c: string | null;
   Cut_Keep__c: string | null;
   Cohort_Name__c: string | null;
-  Weighted_Score__c: number | null;
+  Stack_Rank__c: number | null;
   Engagement_Backout_Reason__c: string | null;
   Is_Latest__c: boolean;
+  Placement_Start_Date__c: DateString | null;
   Training_To_Placement_Aging__c: number | null;
   MSMembershipId__c: string | null;
   Prework_Status__c: string | null;
+  Interview_Readiness_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant__c = {
@@ -5496,6 +5861,7 @@ type Fields$Cohort__ChangeEvent = {
   Cohort_Category__c: string | null;
   Slack_Channel_Name__c: string | null;
   Open_Cohort_Comments__c: string | null;
+  Revised_Target_Completion_Date__c: DateString | null;
   Tovuti_Group_Name__c: string | null;
   Training_Start_Date__c: DateString | null;
   Number_of_people__c: number | null;
@@ -5508,6 +5874,9 @@ type Fields$Cohort__ChangeEvent = {
   Secondary_Anchor_Client__c: string | null;
   Pilot_1_Client__c: string | null;
   Pilot_2_Client__c: string | null;
+  Revise_Target_Completion_Date_Reason__c: string | null;
+  Current_Training_Completion_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Cohort__ChangeEvent = {
@@ -5595,6 +5964,7 @@ type Fields$Cohort__c = {
   Cohort_Category__c: string | null;
   Slack_Channel_Name__c: string | null;
   Open_Cohort_Comments__c: string | null;
+  Revised_Target_Completion_Date__c: DateString | null;
   Tovuti_Group_Name__c: string | null;
   Training_Start_Date__c: DateString | null;
   Number_of_people__c: number | null;
@@ -5607,6 +5977,9 @@ type Fields$Cohort__c = {
   Secondary_Anchor_Client__c: string | null;
   Pilot_1_Client__c: string | null;
   Pilot_2_Client__c: string | null;
+  Revise_Target_Completion_Date_Reason__c: string | null;
+  Current_Training_Completion_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Cohort__c = {
@@ -6769,6 +7142,8 @@ type Fields$Contact = {
   Jigsaw: string | null;
   JigsawContactId: string | null;
   IndividualId: string | null;
+  ActivityMetricId: string | null;
+  ActivityMetricRollupId: string | null;
   Linkedin__c: string | null;
   Home_email__c: string | null;
   Type__c: string | null;
@@ -6897,6 +7272,7 @@ type Fields$Contact = {
   Lead_Source__c: string | null;
   VIP__c: boolean;
   Medium__c: string | null;
+  Internal_Memberships__c: string | null;
   Contact_Stage__c: string | null;
   Campaign__c: string | null;
   Clearance_Status__c: string | null;
@@ -6931,6 +7307,17 @@ type Fields$Contact = {
   Digital_Badge_Issue_Date__c: DateString | null;
   Certificate_of_Completion_Date__c: DateString | null;
   Apprenticeship_Agreement_Uploaded__c: string | null;
+  PTO_Total_Hours__c: number | null;
+  Apprenticeship_Cancellation__c: DateString | null;
+  X1st_Pay_Increase_Evaluated_Processed__c: string | null;
+  X2nd_Pay_Increase_Evaluated_Processed__c: string | null;
+  Potential_Smoothstack_Email__c: string | null;
+  Potential_Smoothstack_Email_QC__c: string | null;
+  Hire_Date__c: DateString | null;
+  Candidate_Status__c: string | null;
+  Last_Activity_Date__c: DateString | null;
+  Number_of_Messages_Sent__c: number | null;
+  Number_of_Messages_Received__c: number | null;
 };
 
 type ParentReferences$Contact = {
@@ -6943,6 +7330,8 @@ type ParentReferences$Contact = {
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
   Individual: SObjectDefinition$Individual | null;
+  ActivityMetric: SObjectDefinition$ActivityMetric | null;
+  ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
   DSCORGPKG__Conflict__r: SObjectDefinition$DSCORGPKG__Conflict__c | null;
   DSCORGPKG__Locked_By_User__r: SObjectDefinition$User | null;
   Other_supervisor__r: SObjectDefinition$Contact | null;
@@ -7214,6 +7603,7 @@ type Fields$ContactChangeEvent = {
   Lead_Source__c: string | null;
   VIP__c: boolean;
   Medium__c: string | null;
+  Internal_Memberships__c: string | null;
   Contact_Stage__c: string | null;
   Campaign__c: string | null;
   Clearance_Status__c: string | null;
@@ -7248,6 +7638,17 @@ type Fields$ContactChangeEvent = {
   Digital_Badge_Issue_Date__c: DateString | null;
   Certificate_of_Completion_Date__c: DateString | null;
   Apprenticeship_Agreement_Uploaded__c: string | null;
+  PTO_Total_Hours__c: number | null;
+  Apprenticeship_Cancellation__c: DateString | null;
+  X1st_Pay_Increase_Evaluated_Processed__c: string | null;
+  X2nd_Pay_Increase_Evaluated_Processed__c: string | null;
+  Potential_Smoothstack_Email__c: string | null;
+  Potential_Smoothstack_Email_QC__c: string | null;
+  Hire_Date__c: DateString | null;
+  Candidate_Status__c: string | null;
+  Last_Activity_Date__c: DateString | null;
+  Number_of_Messages_Sent__c: number | null;
+  Number_of_Messages_Received__c: number | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -9172,6 +9573,8 @@ type Fields$Contract = {
   LastModifiedById: string;
   SystemModstamp: DateString;
   LastActivityDate: DateString | null;
+  ActivityMetricId: string | null;
+  ActivityMetricRollupId: string | null;
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
   Contract_Type__c: string | null;
@@ -9187,6 +9590,8 @@ type ParentReferences$Contract = {
   ActivatedBy: SObjectDefinition$User | null;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  ActivityMetric: SObjectDefinition$ActivityMetric | null;
+  ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
 };
 
 type ChildRelationships$Contract = {
@@ -13333,6 +13738,7 @@ type Fields$EngagementChannelType = {
   SystemModstamp: DateString;
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
+  ContactPointType: string | null;
 };
 
 type ParentReferences$EngagementChannelType = {
@@ -16102,13 +16508,14 @@ type Fields$Funding_Invoice__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Account__c: string | null;
   Aging__c: number | null;
   Submission_Date__c: DateString | null;
   Amount__c: number | null;
   Amount_Received__c: number | null;
   Received_Date__c: DateString | null;
   Notes__c: string | null;
-  Cohort_Participant__c: string | null;
+  Participant__c: string | null;
 };
 
 type ParentReferences$Funding_Invoice__ChangeEvent = {
@@ -16170,13 +16577,14 @@ type Fields$Funding_Invoice__c = {
   LastActivityDate: DateString | null;
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
+  Account__c: string | null;
   Aging__c: number | null;
   Submission_Date__c: DateString;
   Amount__c: number;
   Amount_Received__c: number | null;
   Received_Date__c: DateString | null;
   Notes__c: string | null;
-  Cohort_Participant__c: string;
+  Participant__c: string | null;
 };
 
 type ParentReferences$Funding_Invoice__c = {
@@ -16184,7 +16592,8 @@ type ParentReferences$Funding_Invoice__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
-  Cohort_Participant__r: SObjectDefinition$Cohort_Participant__c;
+  Account__r: SObjectDefinition$Account | null;
+  Participant__r: SObjectDefinition$Contact | null;
 };
 
 type ChildRelationships$Funding_Invoice__c = {
@@ -16241,6 +16650,7 @@ type Fields$Funding_Source__ChangeEvent = {
   Status__c: string | null;
   Tax_Year__c: string | null;
   Funding_Origin__c: string | null;
+  Participant_Application_Required__c: string | null;
 };
 
 type ParentReferences$Funding_Source__ChangeEvent = {
@@ -16308,6 +16718,7 @@ type Fields$Funding_Source__c = {
   Status__c: string;
   Tax_Year__c: string | null;
   Funding_Origin__c: string | null;
+  Participant_Application_Required__c: string | null;
 };
 
 type ParentReferences$Funding_Source__c = {
@@ -16378,6 +16789,7 @@ type Fields$Funding_Submission__ChangeEvent = {
   Participant__c: string | null;
   Funding_Source_Name__c: string | null;
   Contact__c: string | null;
+  Candidate_Primary_Status__c: string | null;
 };
 
 type ParentReferences$Funding_Submission__ChangeEvent = {
@@ -16451,6 +16863,7 @@ type Fields$Funding_Submission__c = {
   Participant__c: string | null;
   Funding_Source_Name__c: string | null;
   Contact__c: string;
+  Candidate_Primary_Status__c: string | null;
 };
 
 type ParentReferences$Funding_Submission__c = {
@@ -16628,6 +17041,7 @@ type ParentReferences$Holiday = {
 
 type ChildRelationships$Holiday = {
   //
+  OperatingHoursHolidays: SObjectDefinition$OperatingHoursHoliday;
 };
 
 interface SObjectDefinition$Holiday extends SObjectDefinition<'Holiday'> {
@@ -17234,6 +17648,9 @@ type Fields$Invoice_Line__ChangeEvent = {
   Job_Placement_Details__c: string | null;
   Settlement__c: string | null;
   Settlement_Fee__c: string | null;
+  Payment_Status__c: string | null;
+  Amount_Due__c: number | null;
+  Total_Payments__c: number | null;
 };
 
 type ParentReferences$Invoice_Line__ChangeEvent = {
@@ -17276,6 +17693,9 @@ type Fields$Invoice_Line__c = {
   Job_Placement_Details__c: string | null;
   Settlement__c: string | null;
   Settlement_Fee__c: string | null;
+  Payment_Status__c: string | null;
+  Amount_Due__c: number | null;
+  Total_Payments__c: number | null;
 };
 
 type ParentReferences$Invoice_Line__c = {
@@ -17319,6 +17739,135 @@ interface SObjectDefinition$Invoice_Line__c extends SObjectDefinition<'Invoice_L
     Fields: Fields$Invoice_Line__c;
     ParentReferences: ParentReferences$Invoice_Line__c;
     ChildRelationships: ChildRelationships$Invoice_Line__c;
+  }
+
+type Fields$Invoice_Payment_Line__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Invoice_Payment__c: string | null;
+  Invoice_Line__c: string | null;
+  Amount__c: number | null;
+  Client_Address__Street__s: string | null;
+  Client_Address__City__s: string | null;
+  Client_Address__PostalCode__s: string | null;
+  Client_Address__StateCode__s: string | null;
+  Client_Address__CountryCode__s: string | null;
+  Client_Address__Latitude__s: number | null;
+  Client_Address__Longitude__s: number | null;
+  Client_Address__GeocodeAccuracy__s: string | null;
+  Client_Address__c: Address | null;
+  JP_Work_Location__c: string | null;
+  Resource_Address__Street__s: string | null;
+  Resource_Address__City__s: string | null;
+  Resource_Address__PostalCode__s: string | null;
+  Resource_Address__StateCode__s: string | null;
+  Resource_Address__CountryCode__s: string | null;
+  Resource_Address__Latitude__s: number | null;
+  Resource_Address__Longitude__s: number | null;
+  Resource_Address__GeocodeAccuracy__s: string | null;
+  Resource_Address__c: Address | null;
+  Resource__c: string | null;
+  Payment_Date__c: DateString | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Invoice_Payment_Line__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Invoice_Payment_Line__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Invoice_Payment_Line__ChangeEvent extends SObjectDefinition<'Invoice_Payment_Line__ChangeEvent'> {
+    Name: 'Invoice_Payment_Line__ChangeEvent';
+    Fields: Fields$Invoice_Payment_Line__ChangeEvent;
+    ParentReferences: ParentReferences$Invoice_Payment_Line__ChangeEvent;
+    ChildRelationships: ChildRelationships$Invoice_Payment_Line__ChangeEvent;
+  }
+
+type Fields$Invoice_Payment_Line__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Invoice_Payment__c: string;
+  Invoice_Line__c: string;
+  Amount__c: number | null;
+  Client_Address__Street__s: string | null;
+  Client_Address__City__s: string | null;
+  Client_Address__PostalCode__s: string | null;
+  Client_Address__StateCode__s: string | null;
+  Client_Address__CountryCode__s: string | null;
+  Client_Address__Latitude__s: number | null;
+  Client_Address__Longitude__s: number | null;
+  Client_Address__GeocodeAccuracy__s: string | null;
+  Client_Address__c: Address | null;
+  JP_Work_Location__c: string | null;
+  Resource_Address__Street__s: string | null;
+  Resource_Address__City__s: string | null;
+  Resource_Address__PostalCode__s: string | null;
+  Resource_Address__StateCode__s: string | null;
+  Resource_Address__CountryCode__s: string | null;
+  Resource_Address__Latitude__s: number | null;
+  Resource_Address__Longitude__s: number | null;
+  Resource_Address__GeocodeAccuracy__s: string | null;
+  Resource_Address__c: Address | null;
+  Resource__c: string | null;
+  Payment_Date__c: DateString | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Invoice_Payment_Line__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Invoice_Payment__r: SObjectDefinition$Invoice_Payment__c;
+  Invoice_Line__r: SObjectDefinition$Invoice_Line__c;
+  Resource__r: SObjectDefinition$Contact | null;
+};
+
+type ChildRelationships$Invoice_Payment_Line__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Invoice_Payment_Line__c extends SObjectDefinition<'Invoice_Payment_Line__c'> {
+    Name: 'Invoice_Payment_Line__c';
+    Fields: Fields$Invoice_Payment_Line__c;
+    ParentReferences: ParentReferences$Invoice_Payment_Line__c;
+    ChildRelationships: ChildRelationships$Invoice_Payment_Line__c;
   }
 
 type Fields$Invoice_Payment__ChangeEvent = {
@@ -17425,6 +17974,7 @@ type Fields$Invoice_Settings__ChangeEvent = {
   Invoices_CC_Email__c: string | null;
   Invoices_Debug_Email__c: string | null;
   Invoices_From_Email__c: string | null;
+  Company_Account_Name__c: string | null;
 };
 
 type ParentReferences$Invoice_Settings__ChangeEvent = {
@@ -17461,6 +18011,7 @@ type Fields$Invoice_Settings__c = {
   Invoices_CC_Email__c: string | null;
   Invoices_Debug_Email__c: string | null;
   Invoices_From_Email__c: string | null;
+  Company_Account_Name__c: string | null;
 };
 
 type ParentReferences$Invoice_Settings__c = {
@@ -17538,6 +18089,12 @@ type Fields$Invoice__ChangeEvent = {
   Sent_to_Email_2__c: string | null;
   Contact__c: string | null;
   Settlement__c: string | null;
+  Total_Send__c: number | null;
+  Total_Payments_From_Lines__c: number | null;
+  Total_Payments_Diff__c: number | null;
+  Recipient__c: string | null;
+  Last_Payment_Date__c: DateString | null;
+  Aging_Months__c: number | null;
 };
 
 type ParentReferences$Invoice__ChangeEvent = {
@@ -17628,6 +18185,12 @@ type Fields$Invoice__c = {
   Sent_to_Email_2__c: string | null;
   Contact__c: string | null;
   Settlement__c: string | null;
+  Total_Send__c: number | null;
+  Total_Payments_From_Lines__c: number | null;
+  Total_Payments_Diff__c: number | null;
+  Recipient__c: string | null;
+  Last_Payment_Date__c: DateString | null;
+  Aging_Months__c: number | null;
 };
 
 type ParentReferences$Invoice__c = {
@@ -17891,6 +18454,36 @@ type Fields$Job__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Job_Title__c: string | null;
+  Job_ID__c: number | null;
+  Job_Status__c: string | null;
+  Min_Years_Experience__c: string | null;
+  Min_Degree_Required__c: string | null;
+  Job_Location__c: string | null;
+  Allowable_Work_Authorization__c: string | null;
+  Max_Months_to_Graduation__c: string | null;
+  Min_Years_of_Coding_Experience__c: string | null;
+  Min_Coding_Self_Rank__c: string | null;
+  Cohort_Category__c: string | null;
+  Coding_Challenge_Name__c: string | null;
+  Passing_Challenge_Score__c: number | null;
+  Foundations_Passing_Challenge_Socre__c: number | null;
+  Tech_Screen_Type__c: string | null;
+  Year_1_Salary__c: number | null;
+  Year_2_Salary__c: number | null;
+  Quick_Course_Start_Date__c: DateString | null;
+  Training_Length_Weeks__c: string | null;
+  Foundations_Job__c: string | null;
+  Office_Address__Street__s: string | null;
+  Office_Address__City__s: string | null;
+  Office_Address__PostalCode__s: string | null;
+  Office_Address__StateCode__s: string | null;
+  Office_Address__CountryCode__s: string | null;
+  Office_Address__Latitude__s: number | null;
+  Office_Address__Longitude__s: number | null;
+  Office_Address__GeocodeAccuracy__s: string | null;
+  Office_Address__c: Address | null;
+  Publishing_Status__c: string | null;
 };
 
 type ParentReferences$Job__ChangeEvent = {
@@ -17908,6 +18501,36 @@ interface SObjectDefinition$Job__ChangeEvent extends SObjectDefinition<'Job__Cha
     ChildRelationships: ChildRelationships$Job__ChangeEvent;
   }
 
+type Fields$Job__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Job__History = {
+  //
+  Parent: SObjectDefinition$Job__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Job__History = {
+  //
+};
+
+interface SObjectDefinition$Job__History extends SObjectDefinition<'Job__History'> {
+    Name: 'Job__History';
+    Fields: Fields$Job__History;
+    ParentReferences: ParentReferences$Job__History;
+    ChildRelationships: ChildRelationships$Job__History;
+  }
+
 type Fields$Job__c = {
   //
   Id: string;
@@ -17919,6 +18542,38 @@ type Fields$Job__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Job_Title__c: string | null;
+  Job_ID__c: number;
+  Job_Status__c: string | null;
+  Min_Years_Experience__c: string | null;
+  Min_Degree_Required__c: string | null;
+  Job_Location__c: string | null;
+  Allowable_Work_Authorization__c: string | null;
+  Max_Months_to_Graduation__c: string | null;
+  Min_Years_of_Coding_Experience__c: string | null;
+  Min_Coding_Self_Rank__c: string | null;
+  Cohort_Category__c: string | null;
+  Coding_Challenge_Name__c: string | null;
+  Passing_Challenge_Score__c: number;
+  Foundations_Passing_Challenge_Socre__c: number;
+  Tech_Screen_Type__c: string | null;
+  Year_1_Salary__c: number;
+  Year_2_Salary__c: number;
+  Quick_Course_Start_Date__c: DateString;
+  Training_Length_Weeks__c: string | null;
+  Foundations_Job__c: string | null;
+  Office_Address__Street__s: string | null;
+  Office_Address__City__s: string | null;
+  Office_Address__PostalCode__s: string | null;
+  Office_Address__StateCode__s: string | null;
+  Office_Address__CountryCode__s: string | null;
+  Office_Address__Latitude__s: number | null;
+  Office_Address__Longitude__s: number | null;
+  Office_Address__GeocodeAccuracy__s: string | null;
+  Office_Address__c: Address | null;
+  Publishing_Status__c: string;
 };
 
 type ParentReferences$Job__c = {
@@ -17926,6 +18581,7 @@ type ParentReferences$Job__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  Foundations_Job__r: SObjectDefinition$Job__c | null;
 };
 
 type ChildRelationships$Job__c = {
@@ -17940,6 +18596,7 @@ type ChildRelationships$Job__c = {
   DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
   FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
   EventRelations: SObjectDefinition$EventRelation;
+  Histories: SObjectDefinition$Job__History;
   Notes: SObjectDefinition$Note;
   NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
   ProcessExceptions: SObjectDefinition$ProcessException;
@@ -18037,6 +18694,8 @@ type Fields$Lead = {
   EmailBouncedReason: string | null;
   EmailBouncedDate: DateString | null;
   IndividualId: string | null;
+  ActivityMetricId: string | null;
+  ActivityMetricRollupId: string | null;
   DSCORGPKG__Company_HQ_Address__c: string | null;
   DSCORGPKG__Company_HQ_City__c: string | null;
   DSCORGPKG__Company_HQ_Country_Code__c: string | null;
@@ -18115,6 +18774,8 @@ type ParentReferences$Lead = {
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
   Individual: SObjectDefinition$Individual | null;
+  ActivityMetric: SObjectDefinition$ActivityMetric | null;
+  ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
   DSCORGPKG__Conflict__r: SObjectDefinition$DSCORGPKG__Conflict__c | null;
   DSCORGPKG__Locked_By_User__r: SObjectDefinition$User | null;
   AccountId__r: SObjectDefinition$Account | null;
@@ -19892,6 +20553,14 @@ type Fields$Marketing__ChangeEvent = {
   Technology__c: string | null;
   Client_Id__c: string | null;
   Technology_Override__c: string | null;
+  Interview_Format__c: string | null;
+  Resource_Name__c: string | null;
+  Cohort_Name__c: string | null;
+  Cohort_Target_Completion_Date__c: DateString | null;
+  Cohort_Revised_Target_Completion_Date__c: DateString | null;
+  Link_To_Resource__c: string | null;
+  Interview_Readiness_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Marketing__ChangeEvent = {
@@ -19981,6 +20650,14 @@ type Fields$Marketing__c = {
   Technology__c: string | null;
   Client_Id__c: string | null;
   Technology_Override__c: string | null;
+  Interview_Format__c: string | null;
+  Resource_Name__c: string | null;
+  Cohort_Name__c: string | null;
+  Cohort_Target_Completion_Date__c: DateString | null;
+  Cohort_Revised_Target_Completion_Date__c: DateString | null;
+  Link_To_Resource__c: string | null;
+  Interview_Readiness_Date__c: DateString | null;
+  Capstone_Readiness_Date__c: DateString | null;
 };
 
 type ParentReferences$Marketing__c = {
@@ -20138,6 +20815,106 @@ interface SObjectDefinition$MatchingRuleItem extends SObjectDefinition<'Matching
     Fields: Fields$MatchingRuleItem;
     ParentReferences: ParentReferences$MatchingRuleItem;
     ChildRelationships: ChildRelationships$MatchingRuleItem;
+  }
+
+type Fields$Membership__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Start_Date__c: DateString | null;
+  Active__c: string | null;
+  NFT_Type__c: string | null;
+  Badge_Assigned__c: string | null;
+  NFT_Owner__c: string | null;
+  NFT_URL__c: string | null;
+};
+
+type ParentReferences$Membership__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Membership__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Membership__ChangeEvent extends SObjectDefinition<'Membership__ChangeEvent'> {
+    Name: 'Membership__ChangeEvent';
+    Fields: Fields$Membership__ChangeEvent;
+    ParentReferences: ParentReferences$Membership__ChangeEvent;
+    ChildRelationships: ChildRelationships$Membership__ChangeEvent;
+  }
+
+type Fields$Membership__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Start_Date__c: DateString | null;
+  Active__c: string | null;
+  NFT_Type__c: string;
+  Badge_Assigned__c: string | null;
+  NFT_Owner__c: string | null;
+  NFT_URL__c: string | null;
+};
+
+type ParentReferences$Membership__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  NFT_Owner__r: SObjectDefinition$Contact | null;
+};
+
+type ChildRelationships$Membership__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Membership__c extends SObjectDefinition<'Membership__c'> {
+    Name: 'Membership__c';
+    Fields: Fields$Membership__c;
+    ParentReferences: ParentReferences$Membership__c;
+    ChildRelationships: ChildRelationships$Membership__c;
   }
 
 type Fields$MobileApplicationDetail = {
@@ -20391,6 +21168,7 @@ type Fields$MutingPermissionSet = {
   PermissionsSubscribeReportRolesGrps: boolean;
   PermissionsSubscribeDashboardRolesGrps: boolean;
   PermissionsUseWebLink: boolean;
+  PermissionsEditASEFields: boolean;
   PermissionsHasUnlimitedNBAExecutions: boolean;
   PermissionsViewOnlyEmbeddedAppUser: boolean;
   PermissionsSendExternalEmailAvailable: boolean;
@@ -20447,6 +21225,7 @@ type Fields$MutingPermissionSet = {
   PermissionsPackaging2Delete: boolean;
   PermissionsViewRestrictionAndScopingRules: boolean;
   PermissionsFSCComprehensiveUserAccess: boolean;
+  PermissionsMicrosoftTeamsUser: boolean;
   PermissionsManageTrustMeasures: boolean;
   PermissionsViewTrustMeasures: boolean;
   PermissionsIsotopeCToCUser: boolean;
@@ -21025,6 +21804,188 @@ interface SObjectDefinition$OpenActivity extends SObjectDefinition<'OpenActivity
     ChildRelationships: ChildRelationships$OpenActivity;
   }
 
+type Fields$OperatingHours = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Description: string | null;
+  TimeZone: string;
+};
+
+type ParentReferences$OperatingHours = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$OperatingHours = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Feeds: SObjectDefinition$OperatingHoursFeed;
+  OperatingHoursHolidays: SObjectDefinition$OperatingHoursHoliday;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  TimeSlots: SObjectDefinition$TimeSlot;
+};
+
+interface SObjectDefinition$OperatingHours extends SObjectDefinition<'OperatingHours'> {
+    Name: 'OperatingHours';
+    Fields: Fields$OperatingHours;
+    ParentReferences: ParentReferences$OperatingHours;
+    ChildRelationships: ChildRelationships$OperatingHours;
+  }
+
+type Fields$OperatingHoursFeed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$OperatingHoursFeed = {
+  //
+  Parent: SObjectDefinition$OperatingHours;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$OperatingHoursFeed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$OperatingHoursFeed extends SObjectDefinition<'OperatingHoursFeed'> {
+    Name: 'OperatingHoursFeed';
+    Fields: Fields$OperatingHoursFeed;
+    ParentReferences: ParentReferences$OperatingHoursFeed;
+    ChildRelationships: ChildRelationships$OperatingHoursFeed;
+  }
+
+type Fields$OperatingHoursHoliday = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  OperatingHoursHolidayNumber: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  OperatingHoursId: string;
+  HolidayId: string;
+  DateAndTime: string | null;
+};
+
+type ParentReferences$OperatingHoursHoliday = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  OperatingHours: SObjectDefinition$OperatingHours;
+  Holiday: SObjectDefinition$Holiday;
+};
+
+type ChildRelationships$OperatingHoursHoliday = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  Feeds: SObjectDefinition$OperatingHoursHolidayFeed;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+};
+
+interface SObjectDefinition$OperatingHoursHoliday extends SObjectDefinition<'OperatingHoursHoliday'> {
+    Name: 'OperatingHoursHoliday';
+    Fields: Fields$OperatingHoursHoliday;
+    ParentReferences: ParentReferences$OperatingHoursHoliday;
+    ChildRelationships: ChildRelationships$OperatingHoursHoliday;
+  }
+
+type Fields$OperatingHoursHolidayFeed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$OperatingHoursHolidayFeed = {
+  //
+  Parent: SObjectDefinition$OperatingHoursHoliday;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$OperatingHoursHolidayFeed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$OperatingHoursHolidayFeed extends SObjectDefinition<'OperatingHoursHolidayFeed'> {
+    Name: 'OperatingHoursHolidayFeed';
+    Fields: Fields$OperatingHoursHolidayFeed;
+    ParentReferences: ParentReferences$OperatingHoursHolidayFeed;
+    ChildRelationships: ChildRelationships$OperatingHoursHolidayFeed;
+  }
+
 type Fields$Opportunity = {
   //
   Id: string;
@@ -21038,6 +21999,7 @@ type Fields$Opportunity = {
   Amount: number | null;
   Probability: number | null;
   ExpectedRevenue: number | null;
+  TotalOpportunityQuantity: number | null;
   CloseDate: DateString;
   Type: string | null;
   NextStep: string | null;
@@ -21068,6 +22030,8 @@ type Fields$Opportunity = {
   HasOverdueTask: boolean;
   LastAmountChangedHistoryId: string | null;
   LastCloseDateChangedHistoryId: string | null;
+  ActivityMetricId: string | null;
+  ActivityMetricRollupId: string | null;
   Total_Anticipated_Revenue__c: number | null;
   Discovery_Completed__c: boolean;
   ROI_Analysis_Completed__c: boolean;
@@ -21077,31 +22041,38 @@ type Fields$Opportunity = {
   SOW__c: boolean;
   RFP__c: boolean;
   competitive_landscape__c: string | null;
+  Skill_Set__c: string | null;
+  Ability_to_Learn_Quickly__c: string | null;
   DSCORGPKG__Attributed_to_DiscoverOrg__c: boolean;
   DSCORGPKG__Converted_from_Discoverorg_Data__c: boolean;
   Job_Description__c: string | null;
+  About_Yourself__c: string | null;
+  Additional_Notes_Prescreen__c: string | null;
   Location__c: string | null;
   Interview_Process__c: string | null;
+  Additional_Questions__c: string | null;
   DB_Competitor__c: string | null;
   Referral_terms__c: string | null;
   Qualified__c: boolean;
   Client_Job_Description__c: string | null;
   Qualification_notes__c: string | null;
   Decision_Maker__c: string | null;
+  Application_Device__c: string | null;
   Political_Landscape__c: string | null;
   Operational_Landscape__c: string | null;
   Technical_requirements__c: string | null;
   Pricing_detail__c: string | null;
   T_C_s__c: string | null;
-  Cohort__c: string;
+  Cohort__c: string | null;
   Training_Start_Date__c: DateString | null;
   Client_Start_Date__c: DateString | null;
   Bill_Rate_Hourly__c: number | null;
+  Background_Check_Notes__c: string | null;
   Cohort_size__c: number | null;
   Confirmed_cohort_duration_weeks__c: number | null;
   Competition_1__c: string | null;
   UTM_Content__c: string | null;
-  Project_Dept__c: string;
+  Project_Dept__c: string | null;
   UTM_Campaign__c: string | null;
   UTM_Term__c: string | null;
   UTM_Medium__c: string | null;
@@ -21110,7 +22081,7 @@ type Fields$Opportunity = {
   Work_location__c: string | null;
   Recruiting_Start_Date__c: DateString | null;
   Onboarding_Compliance_Date__c: DateString | null;
-  Work_Authorization__c: string | null;
+  Req_Work_Authorization__c: string | null;
   Education_Requirements__c: string | null;
   Technologies__c: string | null;
   Security_Clearance_Requirements__c: string | null;
@@ -21122,6 +22093,112 @@ type Fields$Opportunity = {
   Budget_Confirmed__c: string | null;
   Internal_Process__c: string | null;
   Ratecard_Status__c: string | null;
+  Candidate__c: string | null;
+  Candidate_on_Time_Prescreen__c: string | null;
+  Candidate_on_Time_Tech_Screen__c: string | null;
+  Challenge_Appointment_Event_ID__c: string | null;
+  Challenge_Appointment_ID__c: string | null;
+  Challenge_Appointment_Status__c: string | null;
+  Challenge_Date_Time__c: DateString | null;
+  Challenge_Link__c: string | null;
+  Challenge_Result__c: string | null;
+  Challenge_Scheduling_Link__c: string | null;
+  Challenge_Score__c: number | null;
+  Challenge_Similarity_Flag__c: string | null;
+  Challenging_Situation__c: string | null;
+  Coding_Challenge_Name__c: string | null;
+  Coding_Self_Rank__c: number | null;
+  Communication_Rank_Recruiter__c: number | null;
+  Communication_Rank_Tech_Screener__c: number | null;
+  Concerns_Passing_Background__c: string | null;
+  Concerns_Passing_Drug_Screen__c: string | null;
+  Currently_Student__c: string | null;
+  Dressed_Professionally__c: string | null;
+  Drug_Screen_Notes__c: string | null;
+  Education_Level__c: string | null;
+  Event_ID_Microsoft__c: string | null;
+  Expected_Degree__c: string | null;
+  Expected_Graduation_Date__c: DateString | null;
+  External_Applications__c: string | null;
+  GCLID__c: string | null;
+  Git_Hub_URL__c: string | null;
+  Good_Fit__c: string | null;
+  Graduation_Date__c: DateString | null;
+  Instagram_URL__c: string | null;
+  LinkedIn_URL__c: string | null;
+  Major__c: string | null;
+  Military_Branch__c: string | null;
+  Military_Status__c: string | null;
+  Months_to_Graduation__c: number | null;
+  Opportunity_Rank__c: string | null;
+  Overall_Candidate_Rank_Recruiter__c: number | null;
+  Overall_Candidate_Rank_Tech_Screener__c: number | null;
+  Pre_Screen_Raw_Data_2__c: string | null;
+  Pre_Screen_Raw_Data__c: string | null;
+  Prescreen_Result__c: string | null;
+  Previous_Challenge_ID__c: string | null;
+  Project_Experience_Months__c: number | null;
+  Projects__c: string | null;
+  Refer_a_Friend__c: string | null;
+  Responsive_Notes__c: string | null;
+  Screener_Determination__c: string | null;
+  Security_Clearance__c: string | null;
+  Source_Prescreen__c: string | null;
+  Strongest_Programming_Languages__c: string | null;
+  Teamwork_Experience__c: string | null;
+  Tech_Screen_Appointment_Event_ID__c: string | null;
+  Tech_Screen_Appointment_ID__c: string | null;
+  Tech_Screen_Appointment_Status__c: string | null;
+  Tech_Screen_Cancellation_Link__c: string | null;
+  Tech_Screen_Date__c: DateString | null;
+  Tech_Screen_Raw_Data__c: string | null;
+  Tech_Screen_Result__c: string | null;
+  Tech_Screen_Scheduling_Link__c: string | null;
+  Tech_Screen_Type__c: string | null;
+  Tech_Screener_Email__c: string | null;
+  Total_Behavioral_Score__c: string | null;
+  Total_Project_Score__c: string | null;
+  Total_Technical_Score__c: string | null;
+  Two_Year_Committment__c: string | null;
+  Vaccination_Notes__c: string | null;
+  Vaccination_Status__c: string | null;
+  Webinar_Appointment_ID__c: string | null;
+  Webinar_Appointment_Status__c: string | null;
+  Webinar_Attended__c: string | null;
+  Webinar_Date__c: DateString | null;
+  Webinar_Link__c: string | null;
+  Webinar_Poll_Response__c: string | null;
+  Webinar_Registrant_ID__c: string | null;
+  Webinar_Scheduling_Link__c: string | null;
+  Willing_to_Relocate__c: string | null;
+  Years_of_Experience_Self_Disclosed__c: string | null;
+  Work_Authorization__c: string | null;
+  Job__c: string | null;
+  Application_N__c: number | null;
+  Rejection_Reason__c: string | null;
+  Willing_to_Relocate_Notes__c: string | null;
+  Hobbies__c: string | null;
+  Best_Attributes__c: string | null;
+  Responsive__c: string | null;
+  Snooze_Reason__c: string | null;
+  Major_Notes__c: string | null;
+  Rate_Us__c: number | null;
+  Source_Prescreen_Notes__c: string | null;
+  Strongest_Programming_Languages_Notes__c: string | null;
+  Behavioral_Assessment_Adaptability__c: string | null;
+  Behavioral_Assessment_Ownership__c: string | null;
+  Project_Quality__c: number | null;
+  Project_Technical_Explanation__c: number | null;
+  Tech_Screen_Notes__c: string | null;
+  Technical_Question_1_Score__c: string | null;
+  Technical_Question_2_Score__c: string | null;
+  Technical_Question_3_Score__c: string | null;
+  Technical_Question_4_Score__c: string | null;
+  Technical_Question_5_Score__c: string | null;
+  pandadoc__TrackingNumber__c: string | null;
+  Webinar_ID__c: string | null;
+  Webinar_Occurrence_ID__c: string | null;
+  Application_Date__c: DateString | null;
 };
 
 type ParentReferences$Opportunity = {
@@ -21137,7 +22214,11 @@ type ParentReferences$Opportunity = {
   Contract: SObjectDefinition$Contract | null;
   LastAmountChangedHistory: SObjectDefinition$OpportunityHistory | null;
   LastCloseDateChangedHistory: SObjectDefinition$OpportunityHistory | null;
+  ActivityMetric: SObjectDefinition$ActivityMetric | null;
+  ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
   Decision_Maker__r: SObjectDefinition$Contact | null;
+  Candidate__r: SObjectDefinition$Contact | null;
+  Job__r: SObjectDefinition$Job__c | null;
 };
 
 type ChildRelationships$Opportunity = {
@@ -21200,6 +22281,7 @@ type Fields$OpportunityChangeEvent = {
   Amount: number | null;
   Probability: number | null;
   ExpectedRevenue: number | null;
+  TotalOpportunityQuantity: number | null;
   CloseDate: DateString | null;
   Type: string | null;
   NextStep: string | null;
@@ -21230,17 +22312,23 @@ type Fields$OpportunityChangeEvent = {
   SOW__c: boolean;
   RFP__c: boolean;
   competitive_landscape__c: string | null;
+  Skill_Set__c: string | null;
+  Ability_to_Learn_Quickly__c: string | null;
   DSCORGPKG__Attributed_to_DiscoverOrg__c: boolean;
   DSCORGPKG__Converted_from_Discoverorg_Data__c: boolean;
   Job_Description__c: string | null;
+  About_Yourself__c: string | null;
+  Additional_Notes_Prescreen__c: string | null;
   Location__c: string | null;
   Interview_Process__c: string | null;
+  Additional_Questions__c: string | null;
   DB_Competitor__c: string | null;
   Referral_terms__c: string | null;
   Qualified__c: boolean;
   Client_Job_Description__c: string | null;
   Qualification_notes__c: string | null;
   Decision_Maker__c: string | null;
+  Application_Device__c: string | null;
   Political_Landscape__c: string | null;
   Operational_Landscape__c: string | null;
   Technical_requirements__c: string | null;
@@ -21250,6 +22338,7 @@ type Fields$OpportunityChangeEvent = {
   Training_Start_Date__c: DateString | null;
   Client_Start_Date__c: DateString | null;
   Bill_Rate_Hourly__c: number | null;
+  Background_Check_Notes__c: string | null;
   Cohort_size__c: number | null;
   Confirmed_cohort_duration_weeks__c: number | null;
   Competition_1__c: string | null;
@@ -21263,7 +22352,7 @@ type Fields$OpportunityChangeEvent = {
   Work_location__c: string | null;
   Recruiting_Start_Date__c: DateString | null;
   Onboarding_Compliance_Date__c: DateString | null;
-  Work_Authorization__c: string | null;
+  Req_Work_Authorization__c: string | null;
   Education_Requirements__c: string | null;
   Technologies__c: string | null;
   Security_Clearance_Requirements__c: string | null;
@@ -21275,6 +22364,112 @@ type Fields$OpportunityChangeEvent = {
   Budget_Confirmed__c: string | null;
   Internal_Process__c: string | null;
   Ratecard_Status__c: string | null;
+  Candidate__c: string | null;
+  Candidate_on_Time_Prescreen__c: string | null;
+  Candidate_on_Time_Tech_Screen__c: string | null;
+  Challenge_Appointment_Event_ID__c: string | null;
+  Challenge_Appointment_ID__c: string | null;
+  Challenge_Appointment_Status__c: string | null;
+  Challenge_Date_Time__c: DateString | null;
+  Challenge_Link__c: string | null;
+  Challenge_Result__c: string | null;
+  Challenge_Scheduling_Link__c: string | null;
+  Challenge_Score__c: number | null;
+  Challenge_Similarity_Flag__c: string | null;
+  Challenging_Situation__c: string | null;
+  Coding_Challenge_Name__c: string | null;
+  Coding_Self_Rank__c: number | null;
+  Communication_Rank_Recruiter__c: number | null;
+  Communication_Rank_Tech_Screener__c: number | null;
+  Concerns_Passing_Background__c: string | null;
+  Concerns_Passing_Drug_Screen__c: string | null;
+  Currently_Student__c: string | null;
+  Dressed_Professionally__c: string | null;
+  Drug_Screen_Notes__c: string | null;
+  Education_Level__c: string | null;
+  Event_ID_Microsoft__c: string | null;
+  Expected_Degree__c: string | null;
+  Expected_Graduation_Date__c: DateString | null;
+  External_Applications__c: string | null;
+  GCLID__c: string | null;
+  Git_Hub_URL__c: string | null;
+  Good_Fit__c: string | null;
+  Graduation_Date__c: DateString | null;
+  Instagram_URL__c: string | null;
+  LinkedIn_URL__c: string | null;
+  Major__c: string | null;
+  Military_Branch__c: string | null;
+  Military_Status__c: string | null;
+  Months_to_Graduation__c: number | null;
+  Opportunity_Rank__c: string | null;
+  Overall_Candidate_Rank_Recruiter__c: number | null;
+  Overall_Candidate_Rank_Tech_Screener__c: number | null;
+  Pre_Screen_Raw_Data_2__c: string | null;
+  Pre_Screen_Raw_Data__c: string | null;
+  Prescreen_Result__c: string | null;
+  Previous_Challenge_ID__c: string | null;
+  Project_Experience_Months__c: number | null;
+  Projects__c: string | null;
+  Refer_a_Friend__c: string | null;
+  Responsive_Notes__c: string | null;
+  Screener_Determination__c: string | null;
+  Security_Clearance__c: string | null;
+  Source_Prescreen__c: string | null;
+  Strongest_Programming_Languages__c: string | null;
+  Teamwork_Experience__c: string | null;
+  Tech_Screen_Appointment_Event_ID__c: string | null;
+  Tech_Screen_Appointment_ID__c: string | null;
+  Tech_Screen_Appointment_Status__c: string | null;
+  Tech_Screen_Cancellation_Link__c: string | null;
+  Tech_Screen_Date__c: DateString | null;
+  Tech_Screen_Raw_Data__c: string | null;
+  Tech_Screen_Result__c: string | null;
+  Tech_Screen_Scheduling_Link__c: string | null;
+  Tech_Screen_Type__c: string | null;
+  Tech_Screener_Email__c: string | null;
+  Total_Behavioral_Score__c: string | null;
+  Total_Project_Score__c: string | null;
+  Total_Technical_Score__c: string | null;
+  Two_Year_Committment__c: string | null;
+  Vaccination_Notes__c: string | null;
+  Vaccination_Status__c: string | null;
+  Webinar_Appointment_ID__c: string | null;
+  Webinar_Appointment_Status__c: string | null;
+  Webinar_Attended__c: string | null;
+  Webinar_Date__c: DateString | null;
+  Webinar_Link__c: string | null;
+  Webinar_Poll_Response__c: string | null;
+  Webinar_Registrant_ID__c: string | null;
+  Webinar_Scheduling_Link__c: string | null;
+  Willing_to_Relocate__c: string | null;
+  Years_of_Experience_Self_Disclosed__c: string | null;
+  Work_Authorization__c: string | null;
+  Job__c: string | null;
+  Application_N__c: number | null;
+  Rejection_Reason__c: string | null;
+  Willing_to_Relocate_Notes__c: string | null;
+  Hobbies__c: string | null;
+  Best_Attributes__c: string | null;
+  Responsive__c: string | null;
+  Snooze_Reason__c: string | null;
+  Major_Notes__c: string | null;
+  Rate_Us__c: number | null;
+  Source_Prescreen_Notes__c: string | null;
+  Strongest_Programming_Languages_Notes__c: string | null;
+  Behavioral_Assessment_Adaptability__c: string | null;
+  Behavioral_Assessment_Ownership__c: string | null;
+  Project_Quality__c: number | null;
+  Project_Technical_Explanation__c: number | null;
+  Tech_Screen_Notes__c: string | null;
+  Technical_Question_1_Score__c: string | null;
+  Technical_Question_2_Score__c: string | null;
+  Technical_Question_3_Score__c: string | null;
+  Technical_Question_4_Score__c: string | null;
+  Technical_Question_5_Score__c: string | null;
+  pandadoc__TrackingNumber__c: string | null;
+  Webinar_ID__c: string | null;
+  Webinar_Occurrence_ID__c: string | null;
+  Application_Date__c: DateString | null;
 };
 
 type ParentReferences$OpportunityChangeEvent = {
@@ -22849,6 +24044,7 @@ type Fields$Payroll_Config__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Data__c: string | null;
 };
 
 type ParentReferences$Payroll_Config__ChangeEvent = {
@@ -22877,6 +24073,7 @@ type Fields$Payroll_Config__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  Data__c: string | null;
 };
 
 type ParentReferences$Payroll_Config__c = {
@@ -22932,6 +24129,7 @@ type Fields$Payroll_Period_Adjustment__ChangeEvent = {
   Payroll_Date__c: DateString | null;
   Timesheet_Line_Name__c: string | null;
   Timesheet_Line__c: string | null;
+  Timesheet_Line_Group_Id__c: string | null;
 };
 
 type ParentReferences$Payroll_Period_Adjustment__ChangeEvent = {
@@ -22964,6 +24162,7 @@ type Fields$Payroll_Period_Adjustment__c = {
   Payroll_Date__c: DateString | null;
   Timesheet_Line_Name__c: string | null;
   Timesheet_Line__c: string | null;
+  Timesheet_Line_Group_Id__c: string | null;
 };
 
 type ParentReferences$Payroll_Period_Adjustment__c = {
@@ -23131,6 +24330,8 @@ type Fields$Payroll_Period__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
   Start_Date__c: DateString;
 };
 
@@ -23407,6 +24608,7 @@ type Fields$PermissionSet = {
   PermissionsSubscribeReportRolesGrps: boolean;
   PermissionsSubscribeDashboardRolesGrps: boolean;
   PermissionsUseWebLink: boolean;
+  PermissionsEditASEFields: boolean;
   PermissionsHasUnlimitedNBAExecutions: boolean;
   PermissionsViewOnlyEmbeddedAppUser: boolean;
   PermissionsSendExternalEmailAvailable: boolean;
@@ -23463,6 +24665,7 @@ type Fields$PermissionSet = {
   PermissionsPackaging2Delete: boolean;
   PermissionsViewRestrictionAndScopingRules: boolean;
   PermissionsFSCComprehensiveUserAccess: boolean;
+  PermissionsMicrosoftTeamsUser: boolean;
   PermissionsManageTrustMeasures: boolean;
   PermissionsViewTrustMeasures: boolean;
   PermissionsIsotopeCToCUser: boolean;
@@ -23820,6 +25023,7 @@ type Fields$PermissionSetLicense = {
   MaximumPermissionsSubscribeReportRolesGrps: boolean;
   MaximumPermissionsSubscribeDashboardRolesGrps: boolean;
   MaximumPermissionsUseWebLink: boolean;
+  MaximumPermissionsEditASEFields: boolean;
   MaximumPermissionsHasUnlimitedNBAExecutions: boolean;
   MaximumPermissionsViewOnlyEmbeddedAppUser: boolean;
   MaximumPermissionsSendExternalEmailAvailable: boolean;
@@ -23876,6 +25080,7 @@ type Fields$PermissionSetLicense = {
   MaximumPermissionsPackaging2Delete: boolean;
   MaximumPermissionsViewRestrictionAndScopingRules: boolean;
   MaximumPermissionsFSCComprehensiveUserAccess: boolean;
+  MaximumPermissionsMicrosoftTeamsUser: boolean;
   MaximumPermissionsManageTrustMeasures: boolean;
   MaximumPermissionsViewTrustMeasures: boolean;
   MaximumPermissionsIsotopeCToCUser: boolean;
@@ -25220,6 +26425,7 @@ type Fields$Profile = {
   PermissionsSubscribeReportRolesGrps: boolean;
   PermissionsSubscribeDashboardRolesGrps: boolean;
   PermissionsUseWebLink: boolean;
+  PermissionsEditASEFields: boolean;
   PermissionsHasUnlimitedNBAExecutions: boolean;
   PermissionsViewOnlyEmbeddedAppUser: boolean;
   PermissionsSendExternalEmailAvailable: boolean;
@@ -25276,6 +26482,7 @@ type Fields$Profile = {
   PermissionsPackaging2Delete: boolean;
   PermissionsViewRestrictionAndScopingRules: boolean;
   PermissionsFSCComprehensiveUserAccess: boolean;
+  PermissionsMicrosoftTeamsUser: boolean;
   PermissionsManageTrustMeasures: boolean;
   PermissionsViewTrustMeasures: boolean;
   PermissionsIsotopeCToCUser: boolean;
@@ -29544,6 +30751,7 @@ type Fields$Sstack_CC__JP_Information__ChangeEvent = {
   Sstack_CC__Bill_Rate_Effective_Date__c: DateString | null;
   Sstack_CC__Commission_Amount__c: number | null;
   Sstack_CC__Bill_Rate_Aging__c: number | null;
+  Sstack_CC__Future_Bill_Rate__c: number | null;
 };
 
 type ParentReferences$Sstack_CC__JP_Information__ChangeEvent = {
@@ -29601,6 +30809,8 @@ type Fields$Sstack_CC__JP_Information__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
   Sstack_CC__Job_Placement__c: string;
   Sstack_CC__Account_Fee_Expense__c: number | null;
   Sstack_CC__Account_Fee_Revenue__c: number | null;
@@ -29637,6 +30847,7 @@ type Fields$Sstack_CC__JP_Information__c = {
   Sstack_CC__Bill_Rate_Effective_Date__c: DateString | null;
   Sstack_CC__Commission_Amount__c: number | null;
   Sstack_CC__Bill_Rate_Aging__c: number | null;
+  Sstack_CC__Future_Bill_Rate__c: number | null;
 };
 
 type ParentReferences$Sstack_CC__JP_Information__c = {
@@ -31798,6 +33009,127 @@ interface SObjectDefinition$ThirdPartyAccountLink extends SObjectDefinition<'Thi
     ChildRelationships: ChildRelationships$ThirdPartyAccountLink;
   }
 
+type Fields$TimeSlot = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  TimeSlotNumber: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  OperatingHoursId: string;
+  DayOfWeek: string;
+  Type: string;
+  StartTime: DateString;
+  EndTime: DateString;
+};
+
+type ParentReferences$TimeSlot = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  OperatingHours: SObjectDefinition$OperatingHours;
+};
+
+type ChildRelationships$TimeSlot = {
+  //
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+};
+
+interface SObjectDefinition$TimeSlot extends SObjectDefinition<'TimeSlot'> {
+    Name: 'TimeSlot';
+    Fields: Fields$TimeSlot;
+    ParentReferences: ParentReferences$TimeSlot;
+    ChildRelationships: ChildRelationships$TimeSlot;
+  }
+
+type Fields$Timesheet_File__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Timesheet__c: string | null;
+};
+
+type ParentReferences$Timesheet_File__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Timesheet_File__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Timesheet_File__ChangeEvent extends SObjectDefinition<'Timesheet_File__ChangeEvent'> {
+    Name: 'Timesheet_File__ChangeEvent';
+    Fields: Fields$Timesheet_File__ChangeEvent;
+    ParentReferences: ParentReferences$Timesheet_File__ChangeEvent;
+    ChildRelationships: ChildRelationships$Timesheet_File__ChangeEvent;
+  }
+
+type Fields$Timesheet_File__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Timesheet__c: string | null;
+};
+
+type ParentReferences$Timesheet_File__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Timesheet__r: SObjectDefinition$Timesheet__c | null;
+};
+
+type ChildRelationships$Timesheet_File__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Timesheet_File__c extends SObjectDefinition<'Timesheet_File__c'> {
+    Name: 'Timesheet_File__c';
+    Fields: Fields$Timesheet_File__c;
+    ParentReferences: ParentReferences$Timesheet_File__c;
+    ChildRelationships: ChildRelationships$Timesheet_File__c;
+  }
+
 type Fields$Timesheet_Line__ChangeEvent = {
   //
   Id: string | null;
@@ -32272,6 +33604,7 @@ type Fields$Timesheet__ChangeEvent = {
   Training_Bench_Total_Hours__c: number | null;
   Unexcused_Absences_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
+  PTO_Total_Hours__c: number | null;
 };
 
 type ParentReferences$Timesheet__ChangeEvent = {
@@ -32320,6 +33653,7 @@ type Fields$Timesheet__c = {
   Training_Bench_Total_Hours__c: number | null;
   Unexcused_Absences_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
+  PTO_Total_Hours__c: number | null;
 };
 
 type ParentReferences$Timesheet__c = {
@@ -33251,6 +34585,29 @@ interface SObjectDefinition$UserChangeEvent extends SObjectDefinition<'UserChang
     ChildRelationships: ChildRelationships$UserChangeEvent;
   }
 
+type Fields$UserEmailCalendarSync = {
+  //
+  Id: string;
+  ExternalId: string | null;
+  UserId: string | null;
+  ConfigurationId: string | null;
+};
+
+type ParentReferences$UserEmailCalendarSync = {
+  //
+};
+
+type ChildRelationships$UserEmailCalendarSync = {
+  //
+};
+
+interface SObjectDefinition$UserEmailCalendarSync extends SObjectDefinition<'UserEmailCalendarSync'> {
+    Name: 'UserEmailCalendarSync';
+    Fields: Fields$UserEmailCalendarSync;
+    ParentReferences: ParentReferences$UserEmailCalendarSync;
+    ChildRelationships: ChildRelationships$UserEmailCalendarSync;
+  }
+
 type Fields$UserEmailPreferredPerson = {
   //
   Id: string;
@@ -33775,6 +35132,7 @@ type Fields$UserPermissionAccess = {
   PermissionsSubscribeReportRolesGrps: boolean;
   PermissionsSubscribeDashboardRolesGrps: boolean;
   PermissionsUseWebLink: boolean;
+  PermissionsEditASEFields: boolean;
   PermissionsHasUnlimitedNBAExecutions: boolean;
   PermissionsViewOnlyEmbeddedAppUser: boolean;
   PermissionsSendExternalEmailAvailable: boolean;
@@ -33831,6 +35189,7 @@ type Fields$UserPermissionAccess = {
   PermissionsPackaging2Delete: boolean;
   PermissionsViewRestrictionAndScopingRules: boolean;
   PermissionsFSCComprehensiveUserAccess: boolean;
+  PermissionsMicrosoftTeamsUser: boolean;
   PermissionsManageTrustMeasures: boolean;
   PermissionsViewTrustMeasures: boolean;
   PermissionsIsotopeCToCUser: boolean;
@@ -34421,6 +35780,109 @@ interface SObjectDefinition$Vote extends SObjectDefinition<'Vote'> {
     ChildRelationships: ChildRelationships$Vote;
   }
 
+type Fields$Voucher__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Cost__c: number | null;
+  Date_of_Purchase__c: DateString | null;
+  Expiration_Date__c: DateString | null;
+  Nmb_of_Attempts_Allowed__c: string | null;
+  Credential_Name__c: string | null;
+  Voucher_ID_Code__c: string | null;
+  Status__c: string | null;
+  Assignment_Count__c: number | null;
+};
+
+type ParentReferences$Voucher__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Voucher__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Voucher__ChangeEvent extends SObjectDefinition<'Voucher__ChangeEvent'> {
+    Name: 'Voucher__ChangeEvent';
+    Fields: Fields$Voucher__ChangeEvent;
+    ParentReferences: ParentReferences$Voucher__ChangeEvent;
+    ChildRelationships: ChildRelationships$Voucher__ChangeEvent;
+  }
+
+type Fields$Voucher__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Cost__c: number;
+  Date_of_Purchase__c: DateString | null;
+  Expiration_Date__c: DateString | null;
+  Nmb_of_Attempts_Allowed__c: string;
+  Credential_Name__c: string | null;
+  Voucher_ID_Code__c: string;
+  Status__c: string | null;
+  Assignment_Count__c: number | null;
+};
+
+type ParentReferences$Voucher__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Voucher__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Voucher__c extends SObjectDefinition<'Voucher__c'> {
+    Name: 'Voucher__c';
+    Fields: Fields$Voucher__c;
+    ParentReferences: ParentReferences$Voucher__c;
+    ChildRelationships: ChildRelationships$Voucher__c;
+  }
+
 type Fields$WaveAutoInstallRequest = {
   //
   Id: string;
@@ -34876,6 +36338,789 @@ interface SObjectDefinition$WorkThanksShare extends SObjectDefinition<'WorkThank
     ChildRelationships: ChildRelationships$WorkThanksShare;
   }
 
+type Fields$pandadoc__DocStatus__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__PandaDocDocument__c: string | null;
+  pandadoc__InputJSON_EV2__c: string | null;
+  pandadoc__InputJSON__c: string | null;
+  pandadoc__Status__c: string | null;
+};
+
+type ParentReferences$pandadoc__DocStatus__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__DocStatus__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__DocStatus__ChangeEvent extends SObjectDefinition<'pandadoc__DocStatus__ChangeEvent'> {
+    Name: 'pandadoc__DocStatus__ChangeEvent';
+    Fields: Fields$pandadoc__DocStatus__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__DocStatus__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__DocStatus__ChangeEvent;
+  }
+
+type Fields$pandadoc__DocStatus__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__PandaDocDocument__c: string;
+  pandadoc__InputJSON_EV2__c: string | null;
+  pandadoc__InputJSON__c: string | null;
+  pandadoc__Status__c: string | null;
+};
+
+type ParentReferences$pandadoc__DocStatus__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  pandadoc__PandaDocDocument__r: SObjectDefinition$pandadoc__PandaDocDocument__c;
+};
+
+type ChildRelationships$pandadoc__DocStatus__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__DocStatus__c extends SObjectDefinition<'pandadoc__DocStatus__c'> {
+    Name: 'pandadoc__DocStatus__c';
+    Fields: Fields$pandadoc__DocStatus__c;
+    ParentReferences: ParentReferences$pandadoc__DocStatus__c;
+    ChildRelationships: ChildRelationships$pandadoc__DocStatus__c;
+  }
+
+type Fields$pandadoc__Object_Tokens__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Data__c: string | null;
+};
+
+type ParentReferences$pandadoc__Object_Tokens__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Object_Tokens__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Object_Tokens__ChangeEvent extends SObjectDefinition<'pandadoc__Object_Tokens__ChangeEvent'> {
+    Name: 'pandadoc__Object_Tokens__ChangeEvent';
+    Fields: Fields$pandadoc__Object_Tokens__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Object_Tokens__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__ChangeEvent;
+  }
+
+type Fields$pandadoc__Object_Tokens__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Data__c: string | null;
+};
+
+type ParentReferences$pandadoc__Object_Tokens__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__Object_Tokens__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__Object_Tokens__c extends SObjectDefinition<'pandadoc__Object_Tokens__c'> {
+    Name: 'pandadoc__Object_Tokens__c';
+    Fields: Fields$pandadoc__Object_Tokens__c;
+    ParentReferences: ParentReferences$pandadoc__Object_Tokens__c;
+    ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__c;
+  }
+
+type Fields$pandadoc__PandaDocDocument__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Account__c: string | null;
+  pandadoc__Contact__c: string | null;
+  pandadoc__Custom_Object_Id__c: string | null;
+  pandadoc__Editor_Version__c: string | null;
+  pandadoc__File_With_Content__c: string | null;
+  pandadoc__InputJSON_EV2__c: string | null;
+  pandadoc__InputJSON__c: string | null;
+  pandadoc__Is_Deleted__c: boolean;
+  pandadoc__Lead__c: string | null;
+  pandadoc__Opportunity__c: string | null;
+  pandadoc__Status__c: string | null;
+  pandadoc__Template_Id__c: string | null;
+  pandadoc__Template_Name__c: string | null;
+  pandadoc__UUID__c: string | null;
+  pandadoc__ParentId__c: string | null;
+};
+
+type ParentReferences$pandadoc__PandaDocDocument__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__PandaDocDocument__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__PandaDocDocument__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDocDocument__ChangeEvent'> {
+    Name: 'pandadoc__PandaDocDocument__ChangeEvent';
+    Fields: Fields$pandadoc__PandaDocDocument__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__PandaDocDocument__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__ChangeEvent;
+  }
+
+type Fields$pandadoc__PandaDocDocument__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Account__c: string | null;
+  pandadoc__Contact__c: string | null;
+  pandadoc__Custom_Object_Id__c: string | null;
+  pandadoc__Editor_Version__c: string | null;
+  pandadoc__File_With_Content__c: string | null;
+  pandadoc__InputJSON_EV2__c: string | null;
+  pandadoc__InputJSON__c: string | null;
+  pandadoc__Is_Deleted__c: boolean;
+  pandadoc__Lead__c: string | null;
+  pandadoc__Opportunity__c: string | null;
+  pandadoc__Status__c: string | null;
+  pandadoc__Template_Id__c: string | null;
+  pandadoc__Template_Name__c: string | null;
+  pandadoc__UUID__c: string | null;
+  pandadoc__ParentId__c: string | null;
+};
+
+type ParentReferences$pandadoc__PandaDocDocument__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  pandadoc__Account__r: SObjectDefinition$Account | null;
+  pandadoc__Contact__r: SObjectDefinition$Contact | null;
+  pandadoc__Lead__r: SObjectDefinition$Lead | null;
+  pandadoc__Opportunity__r: SObjectDefinition$Opportunity | null;
+};
+
+type ChildRelationships$pandadoc__PandaDocDocument__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__PandaDocDocument__c extends SObjectDefinition<'pandadoc__PandaDocDocument__c'> {
+    Name: 'pandadoc__PandaDocDocument__c';
+    Fields: Fields$pandadoc__PandaDocDocument__c;
+    ParentReferences: ParentReferences$pandadoc__PandaDocDocument__c;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__c;
+  }
+
+type Fields$pandadoc__PandaDocLog__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Description__c: string | null;
+  pandadoc__Level__c: string | null;
+  pandadoc__Location__c: string | null;
+};
+
+type ParentReferences$pandadoc__PandaDocLog__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__PandaDocLog__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDocLog__ChangeEvent'> {
+    Name: 'pandadoc__PandaDocLog__ChangeEvent';
+    Fields: Fields$pandadoc__PandaDocLog__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__PandaDocLog__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__ChangeEvent;
+  }
+
+type Fields$pandadoc__PandaDocLog__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Description__c: string | null;
+  pandadoc__Level__c: string | null;
+  pandadoc__Location__c: string | null;
+};
+
+type ParentReferences$pandadoc__PandaDocLog__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__PandaDocLog__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__PandaDocLog__c extends SObjectDefinition<'pandadoc__PandaDocLog__c'> {
+    Name: 'pandadoc__PandaDocLog__c';
+    Fields: Fields$pandadoc__PandaDocLog__c;
+    ParentReferences: ParentReferences$pandadoc__PandaDocLog__c;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
+  }
+
+type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Document_Name__c: string | null;
+  pandadoc__JsonBuilder_Class_Name__c: string | null;
+  pandadoc__ReferencedRecipients__c: string | null;
+  pandadoc__Related_Pricing_Items__c: string | null;
+  pandadoc__Related_Recipients__c: string | null;
+  pandadoc__Send_Itself_As_Recipient__c: boolean;
+  pandadoc__Use_Standard_Builder__c: boolean;
+};
+
+type ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
+    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
+    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+  }
+
+type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Document_Name__c: string | null;
+  pandadoc__JsonBuilder_Class_Name__c: string;
+  pandadoc__ReferencedRecipients__c: string | null;
+  pandadoc__Related_Pricing_Items__c: string | null;
+  pandadoc__Related_Recipients__c: string | null;
+  pandadoc__Send_Itself_As_Recipient__c: boolean;
+  pandadoc__Use_Standard_Builder__c: boolean;
+};
+
+type ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
+  //
+  SetupOwner: SObjectDefinition$Name | null;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__c'> {
+    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__c';
+    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+  }
+
+type Fields$pandadoc__Pricing_Item_Mapping__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Config_JSON__c: string | null;
+};
+
+type ParentReferences$pandadoc__Pricing_Item_Mapping__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Pricing_Item_Mapping__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__ChangeEvent'> {
+    Name: 'pandadoc__Pricing_Item_Mapping__ChangeEvent';
+    Fields: Fields$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+  }
+
+type Fields$pandadoc__Pricing_Item_Mapping__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Config_JSON__c: string | null;
+};
+
+type ParentReferences$pandadoc__Pricing_Item_Mapping__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__Pricing_Item_Mapping__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__c extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__c'> {
+    Name: 'pandadoc__Pricing_Item_Mapping__c';
+    Fields: Fields$pandadoc__Pricing_Item_Mapping__c;
+    ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__c;
+    ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__c;
+  }
+
+type Fields$pandadoc__Recipient_Map__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Config_JSON__c: string | null;
+};
+
+type ParentReferences$pandadoc__Recipient_Map__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Recipient_Map__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent extends SObjectDefinition<'pandadoc__Recipient_Map__ChangeEvent'> {
+    Name: 'pandadoc__Recipient_Map__ChangeEvent';
+    Fields: Fields$pandadoc__Recipient_Map__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Recipient_Map__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__ChangeEvent;
+  }
+
+type Fields$pandadoc__Recipient_Map__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Config_JSON__c: string | null;
+};
+
+type ParentReferences$pandadoc__Recipient_Map__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__Recipient_Map__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__Recipient_Map__c extends SObjectDefinition<'pandadoc__Recipient_Map__c'> {
+    Name: 'pandadoc__Recipient_Map__c';
+    Fields: Fields$pandadoc__Recipient_Map__c;
+    ParentReferences: ParentReferences$pandadoc__Recipient_Map__c;
+    ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
+  }
+
+type Fields$pandadoc__Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Value__c: string | null;
+};
+
+type ParentReferences$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Settings__ChangeEvent extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
+    Name: 'pandadoc__Settings__ChangeEvent';
+    Fields: Fields$pandadoc__Settings__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
+  }
+
+type Fields$pandadoc__Settings__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Value__c: string | null;
+};
+
+type ParentReferences$pandadoc__Settings__c = {
+  //
+  SetupOwner: SObjectDefinition$Name | null;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__Settings__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__Settings__c extends SObjectDefinition<'pandadoc__Settings__c'> {
+    Name: 'pandadoc__Settings__c';
+    Fields: Fields$pandadoc__Settings__c;
+    ParentReferences: ParentReferences$pandadoc__Settings__c;
+    ChildRelationships: ChildRelationships$pandadoc__Settings__c;
+  }
+
+type Fields$pandadoc__TriggerSetting__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Custom_Settings__c: string | null;
+  pandadoc__EV1_Ready__c: boolean;
+  pandadoc__EV2_Ready__c: boolean;
+  pandadoc__Enabled__c: boolean;
+  pandadoc__Title__c: string | null;
+};
+
+type ParentReferences$pandadoc__TriggerSetting__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__TriggerSetting__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent extends SObjectDefinition<'pandadoc__TriggerSetting__ChangeEvent'> {
+    Name: 'pandadoc__TriggerSetting__ChangeEvent';
+    Fields: Fields$pandadoc__TriggerSetting__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__TriggerSetting__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__ChangeEvent;
+  }
+
+type Fields$pandadoc__TriggerSetting__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  pandadoc__Custom_Settings__c: string | null;
+  pandadoc__EV1_Ready__c: boolean;
+  pandadoc__EV2_Ready__c: boolean;
+  pandadoc__Enabled__c: boolean;
+  pandadoc__Title__c: string | null;
+};
+
+type ParentReferences$pandadoc__TriggerSetting__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$pandadoc__TriggerSetting__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$pandadoc__TriggerSetting__c extends SObjectDefinition<'pandadoc__TriggerSetting__c'> {
+    Name: 'pandadoc__TriggerSetting__c';
+    Fields: Fields$pandadoc__TriggerSetting__c;
+    ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
+    ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
+  }
+
 type Fields$rcsfl__AdminSetting__ChangeEvent = {
   //
   Id: string | null;
@@ -35306,6 +37551,8 @@ export interface SmoothstackSchema extends Schema {
     ActionLinkGroupTemplate: SObjectDefinition$ActionLinkGroupTemplate;
     ActionLinkTemplate: SObjectDefinition$ActionLinkTemplate;
     ActivityHistory: SObjectDefinition$ActivityHistory;
+    ActivityMetric: SObjectDefinition$ActivityMetric;
+    ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup;
     AdditionalNumber: SObjectDefinition$AdditionalNumber;
     AggregateResult: SObjectDefinition$AggregateResult;
     Announcement: SObjectDefinition$Announcement;
@@ -35329,8 +37576,10 @@ export interface SmoothstackSchema extends Schema {
     AppTabMember: SObjectDefinition$AppTabMember;
     AppleDomainVerification: SObjectDefinition$AppleDomainVerification;
     Applicant__ChangeEvent: SObjectDefinition$Applicant__ChangeEvent;
+    Applicant__History: SObjectDefinition$Applicant__History;
     Applicant__c: SObjectDefinition$Applicant__c;
     Application__ChangeEvent: SObjectDefinition$Application__ChangeEvent;
+    Application__History: SObjectDefinition$Application__History;
     Application__c: SObjectDefinition$Application__c;
     Approval: SObjectDefinition$Approval;
     Asset: SObjectDefinition$Asset;
@@ -35414,10 +37663,14 @@ export interface SmoothstackSchema extends Schema {
     CaseTeamTemplateRecord: SObjectDefinition$CaseTeamTemplateRecord;
     CategoryData: SObjectDefinition$CategoryData;
     CategoryNode: SObjectDefinition$CategoryNode;
+    Certification__ChangeEvent: SObjectDefinition$Certification__ChangeEvent;
+    Certification__c: SObjectDefinition$Certification__c;
     ChatterActivity: SObjectDefinition$ChatterActivity;
     ChatterExtension: SObjectDefinition$ChatterExtension;
     ChatterExtensionConfig: SObjectDefinition$ChatterExtensionConfig;
     ClientBrowser: SObjectDefinition$ClientBrowser;
+    Cohort_Participant_Ranking__ChangeEvent: SObjectDefinition$Cohort_Participant_Ranking__ChangeEvent;
+    Cohort_Participant_Ranking__c: SObjectDefinition$Cohort_Participant_Ranking__c;
     Cohort_Participant__ChangeEvent: SObjectDefinition$Cohort_Participant__ChangeEvent;
     Cohort_Participant__History: SObjectDefinition$Cohort_Participant__History;
     Cohort_Participant__c: SObjectDefinition$Cohort_Participant__c;
@@ -35702,6 +37955,8 @@ export interface SmoothstackSchema extends Schema {
     Invoice_History__c: SObjectDefinition$Invoice_History__c;
     Invoice_Line__ChangeEvent: SObjectDefinition$Invoice_Line__ChangeEvent;
     Invoice_Line__c: SObjectDefinition$Invoice_Line__c;
+    Invoice_Payment_Line__ChangeEvent: SObjectDefinition$Invoice_Payment_Line__ChangeEvent;
+    Invoice_Payment_Line__c: SObjectDefinition$Invoice_Payment_Line__c;
     Invoice_Payment__ChangeEvent: SObjectDefinition$Invoice_Payment__ChangeEvent;
     Invoice_Payment__c: SObjectDefinition$Invoice_Payment__c;
     Invoice_Settings__ChangeEvent: SObjectDefinition$Invoice_Settings__ChangeEvent;
@@ -35715,6 +37970,7 @@ export interface SmoothstackSchema extends Schema {
     Invoiced_Hours__c: SObjectDefinition$Invoiced_Hours__c;
     Job_Portal_Settings__mdt: SObjectDefinition$Job_Portal_Settings__mdt;
     Job__ChangeEvent: SObjectDefinition$Job__ChangeEvent;
+    Job__History: SObjectDefinition$Job__History;
     Job__c: SObjectDefinition$Job__c;
     KnowledgeableUser: SObjectDefinition$KnowledgeableUser;
     Lead: SObjectDefinition$Lead;
@@ -35766,6 +38022,8 @@ export interface SmoothstackSchema extends Schema {
     MatchingInformation: SObjectDefinition$MatchingInformation;
     MatchingRule: SObjectDefinition$MatchingRule;
     MatchingRuleItem: SObjectDefinition$MatchingRuleItem;
+    Membership__ChangeEvent: SObjectDefinition$Membership__ChangeEvent;
+    Membership__c: SObjectDefinition$Membership__c;
     MobileApplicationDetail: SObjectDefinition$MobileApplicationDetail;
     MutingPermissionSet: SObjectDefinition$MutingPermissionSet;
     MyDomainDiscoverableLogin: SObjectDefinition$MyDomainDiscoverableLogin;
@@ -35781,6 +38039,10 @@ export interface SmoothstackSchema extends Schema {
     Onboarding__ChangeEvent: SObjectDefinition$Onboarding__ChangeEvent;
     Onboarding__c: SObjectDefinition$Onboarding__c;
     OpenActivity: SObjectDefinition$OpenActivity;
+    OperatingHours: SObjectDefinition$OperatingHours;
+    OperatingHoursFeed: SObjectDefinition$OperatingHoursFeed;
+    OperatingHoursHoliday: SObjectDefinition$OperatingHoursHoliday;
+    OperatingHoursHolidayFeed: SObjectDefinition$OperatingHoursHolidayFeed;
     Opportunity: SObjectDefinition$Opportunity;
     OpportunityChangeEvent: SObjectDefinition$OpportunityChangeEvent;
     OpportunityCompetitor: SObjectDefinition$OpportunityCompetitor;
@@ -36015,6 +38277,9 @@ export interface SmoothstackSchema extends Schema {
     TenantUsageEntitlement: SObjectDefinition$TenantUsageEntitlement;
     TestSuiteMembership: SObjectDefinition$TestSuiteMembership;
     ThirdPartyAccountLink: SObjectDefinition$ThirdPartyAccountLink;
+    TimeSlot: SObjectDefinition$TimeSlot;
+    Timesheet_File__ChangeEvent: SObjectDefinition$Timesheet_File__ChangeEvent;
+    Timesheet_File__c: SObjectDefinition$Timesheet_File__c;
     Timesheet_Line__ChangeEvent: SObjectDefinition$Timesheet_Line__ChangeEvent;
     Timesheet_Line__c: SObjectDefinition$Timesheet_Line__c;
     Timesheet_Note__ChangeEvent: SObjectDefinition$Timesheet_Note__ChangeEvent;
@@ -36042,6 +38307,7 @@ export interface SmoothstackSchema extends Schema {
     UserAppMenuCustomizationShare: SObjectDefinition$UserAppMenuCustomizationShare;
     UserAppMenuItem: SObjectDefinition$UserAppMenuItem;
     UserChangeEvent: SObjectDefinition$UserChangeEvent;
+    UserEmailCalendarSync: SObjectDefinition$UserEmailCalendarSync;
     UserEmailPreferredPerson: SObjectDefinition$UserEmailPreferredPerson;
     UserEmailPreferredPersonShare: SObjectDefinition$UserEmailPreferredPersonShare;
     UserEntityAccess: SObjectDefinition$UserEntityAccess;
@@ -36069,6 +38335,8 @@ export interface SmoothstackSchema extends Schema {
     VerificationHistory: SObjectDefinition$VerificationHistory;
     VisualforceAccessMetrics: SObjectDefinition$VisualforceAccessMetrics;
     Vote: SObjectDefinition$Vote;
+    Voucher__ChangeEvent: SObjectDefinition$Voucher__ChangeEvent;
+    Voucher__c: SObjectDefinition$Voucher__c;
     WaveAutoInstallRequest: SObjectDefinition$WaveAutoInstallRequest;
     WaveCompatibilityCheckItem: SObjectDefinition$WaveCompatibilityCheckItem;
     WebLink: SObjectDefinition$WebLink;
@@ -36081,6 +38349,24 @@ export interface SmoothstackSchema extends Schema {
     WorkBadgeDefinitionShare: SObjectDefinition$WorkBadgeDefinitionShare;
     WorkThanks: SObjectDefinition$WorkThanks;
     WorkThanksShare: SObjectDefinition$WorkThanksShare;
+    pandadoc__DocStatus__ChangeEvent: SObjectDefinition$pandadoc__DocStatus__ChangeEvent;
+    pandadoc__DocStatus__c: SObjectDefinition$pandadoc__DocStatus__c;
+    pandadoc__Object_Tokens__ChangeEvent: SObjectDefinition$pandadoc__Object_Tokens__ChangeEvent;
+    pandadoc__Object_Tokens__c: SObjectDefinition$pandadoc__Object_Tokens__c;
+    pandadoc__PandaDocDocument__ChangeEvent: SObjectDefinition$pandadoc__PandaDocDocument__ChangeEvent;
+    pandadoc__PandaDocDocument__c: SObjectDefinition$pandadoc__PandaDocDocument__c;
+    pandadoc__PandaDocLog__ChangeEvent: SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent;
+    pandadoc__PandaDocLog__c: SObjectDefinition$pandadoc__PandaDocLog__c;
+    pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    pandadoc__PandaDoc_JsonBulder_Mapping__c: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+    pandadoc__Pricing_Item_Mapping__ChangeEvent: SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+    pandadoc__Pricing_Item_Mapping__c: SObjectDefinition$pandadoc__Pricing_Item_Mapping__c;
+    pandadoc__Recipient_Map__ChangeEvent: SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent;
+    pandadoc__Recipient_Map__c: SObjectDefinition$pandadoc__Recipient_Map__c;
+    pandadoc__Settings__ChangeEvent: SObjectDefinition$pandadoc__Settings__ChangeEvent;
+    pandadoc__Settings__c: SObjectDefinition$pandadoc__Settings__c;
+    pandadoc__TriggerSetting__ChangeEvent: SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent;
+    pandadoc__TriggerSetting__c: SObjectDefinition$pandadoc__TriggerSetting__c;
     rcsfl__AdminSetting__ChangeEvent: SObjectDefinition$rcsfl__AdminSetting__ChangeEvent;
     rcsfl__AdminSetting__c: SObjectDefinition$rcsfl__AdminSetting__c;
     sansancard__SSCard__ChangeEvent: SObjectDefinition$sansancard__SSCard__ChangeEvent;

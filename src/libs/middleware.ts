@@ -7,6 +7,7 @@ import MiddlewareFunction = middy.MiddlewareFn;
 export const apiGatewayResponseMiddleware = (options: { enableErrorLogger?: boolean } = {}) => {
   const after: MiddlewareFunction<APIGatewayProxyEvent, any> = async (request) => {
     if (!request.event?.httpMethod || request.response === undefined || request.response === null) {
+      request.response = { statusCode: 200 };
       return;
     }
     const existingKeys = Object.keys(request.response);
