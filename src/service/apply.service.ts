@@ -3,7 +3,7 @@ import { parse } from 'aws-multipart-parser';
 import { Knockout, KNOCKOUT_NOTE, KNOCKOUT_STATUS } from 'src/model/Knockout';
 import { toTitleCase } from '../util/misc.util';
 import { resolveJobByKnockout } from '../util/job.util';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { findCandidateByEmailOrPhone } from './candidate.service';
 import { findActiveJobs } from './jobs.service';
 import { calculateKnockout } from '../util/knockout.util';

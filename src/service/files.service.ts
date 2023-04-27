@@ -6,7 +6,7 @@ import { SmoothstackSchema } from '../model/smoothstack.schema';
 export const saveSFDCFiles = async (conn: Connection<SmoothstackSchema>, objectID: string, files: FileUpload[]) => {
   let resumeNum = 1;
   for (const file of files) {
-    let fileName = file.type;
+    let fileName = file.name.split('.')[0];
     if (file.type === 'Application Resume') {
       fileName = `Resume_Internal_Use_Only_${resumeNum}`;
       resumeNum++;
@@ -14,7 +14,7 @@ export const saveSFDCFiles = async (conn: Connection<SmoothstackSchema>, objectI
     const { id: contentVerId } = await conn.sobject('ContentVersion').create({
       VersionData: file.fileContent as BlobString,
       PathOnClient: `${fileName}${deriveFileExtension(file.name)}`,
-      Type__c: 'Application Resume',
+      Type__c: file.type,
     });
     const { ContentDocumentId } = await conn.sobject('ContentVersion').retrieve(contentVerId);
     await conn.sobject('ContentDocumentLink').create({

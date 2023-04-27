@@ -1,7 +1,8 @@
 import { middyfy } from '@libs/lambda';
 import { APIGatewayEvent } from 'aws-lambda';
-import { publishDocumentGenerationRequest } from '../../service/sns.service';
+import { publishDocumentEventProcessingRequest, publishDocumentGenerationRequest } from '../../service/sns.service';
 import createHttpError from 'http-errors';
+import { DocumentEvent } from '../../model/Document';
 
 const documentEvents = async (event: APIGatewayEvent) => {
   try {
@@ -9,9 +10,16 @@ const documentEvents = async (event: APIGatewayEvent) => {
       case '/document-events': {
         switch (event.httpMethod) {
           case 'POST': {
-            return 'Processed document successfully.';
+            const docEvents = event.body as unknown as DocumentEvent[];
+            for (const docEvent of docEvents) {
+              if (['document_state_changed', 'recipient_completed'].includes(docEvent.event)) {
+                await publishDocumentEventProcessingRequest(docEvent);
+              }
+            }
+            break;
           }
         }
+        break;
       }
       case '/document-events/generate': {
         switch (event.httpMethod) {
@@ -22,8 +30,10 @@ const documentEvents = async (event: APIGatewayEvent) => {
             } else {
               throw createHttpError(400, 'applicationId missing in request body.');
             }
+            break;
           }
         }
+        break;
       }
     }
   } catch (e) {

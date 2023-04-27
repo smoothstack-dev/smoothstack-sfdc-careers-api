@@ -2,7 +2,7 @@ import { middyfy } from '@libs/lambda';
 import { APIGatewayEvent } from 'aws-lambda';
 import { apply } from '../../service/apply.service';
 import { fetchJobs } from '../../service/jobs.service';
-import { getSFDCConnection } from '../../service/sfdc.service';
+import { getSFDCConnection } from '../../service/auth/sfdc.auth.service';
 
 const jobs = async (event: APIGatewayEvent) => {
   try {

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getHackerRankSecrets } from './secrets.service';
 import { Application } from '../model/Application';
 import { ChallengeEvent, ChallengeSession } from '../model/Challenge';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { fetchApplication, findApplications, updateApplication } from './application.service';
 import { Fields$Opportunity, SmoothstackSchema } from '../model/smoothstack.schema';
 import { Connection } from 'jsforce';

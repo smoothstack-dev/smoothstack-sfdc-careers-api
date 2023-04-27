@@ -8,7 +8,7 @@ import {
 import { sendTechScreenCalendarInvite } from './calendar.service';
 import { sendChallengeCalendarInvite } from './calendar.service';
 import { generateChallengeLinks } from './links.service';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { updateApplication } from './application.service';
 
 export const generateAppointment = async (event: SNSEvent) => {

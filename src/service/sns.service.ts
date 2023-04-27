@@ -10,7 +10,7 @@ import {
 } from '../model/AppointmentGenerationRequest';
 import { WEBINAR_TOPIC, WEBINAR_TYPE } from './webinar.service';
 import { WebinarEvent } from '../model/Webinar';
-import { DocumentGenerationRequest } from '../model/Document';
+import { DocumentEvent, DocumentGenerationRequest } from '../model/Document';
 
 export const publishLinksGenerationRequest = async (applicationId: string, type: LinksGenerationType) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
@@ -74,6 +74,17 @@ export const publishDocumentGenerationRequest = async (applicationId: string) =>
   };
   const message: PublishInput = {
     Message: JSON.stringify(request),
+    TopicArn: topic,
+  };
+
+  await sns.publish(message).promise();
+};
+
+export const publishDocumentEventProcessingRequest = async (docEvent: DocumentEvent) => {
+  const sns = new SNS(getSNSConfig(process.env.ENV));
+  const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-document-event-processing-sns-topic-v2`;
+  const message: PublishInput = {
+    Message: JSON.stringify(docEvent),
     TopicArn: topic,
   };
 

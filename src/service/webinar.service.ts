@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Appointment } from '../model/Appointment';
 import { generateZoomToken } from './auth/zoom.jwt.service';
 import { WebinarEvent, WebinarRegistration } from '../model/Webinar';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { updateApplication } from './application.service';
 
 export const WEBINAR_TOPIC = 'Candidate Information Session / Learn about Smoothstack';
