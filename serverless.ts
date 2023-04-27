@@ -8,6 +8,8 @@ import webinarEvents from './src/functions/webinarEvents';
 import webinarProcessing from './src/functions/webinarProcessing';
 import challengeEvents from './src/functions/challengeEvents';
 import documentEvents from './src/functions/documentEvents';
+import documentGenerator from './src/functions/documentGenerator';
+import documentEventProcessor from './src/functions/documentEventProcessor';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -71,6 +73,8 @@ const serverlessConfiguration: AWS = {
     webinarProcessing,
     challengeEvents,
     documentEvents,
+    documentGenerator,
+    documentEventProcessor,
   },
   resources: {
     Resources: {

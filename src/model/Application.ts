@@ -1,7 +1,8 @@
-import { Fields$Contact, Fields$Job__c, Fields$Opportunity } from './smoothstack.schema';
+import { Candidate } from './Candidate';
+import { Fields$Job__c, Fields$Opportunity } from './smoothstack.schema';
 
 export interface Application extends Fields$Opportunity {
-  Candidate__r?: Fields$Contact;
+  Candidate__r?: Candidate;
   Job__r?: Fields$Job__c;
 }
 

@@ -5,7 +5,7 @@ import { SchedulingTypeId } from '../model/SchedulingType';
 import { Fields$Contact, SmoothstackSchema } from '../model/smoothstack.schema';
 import { getSchedulingLink } from '../util/links';
 import { fetchApplication, updateApplication } from './application.service';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { fetchCandidate } from './candidate.service';
 import { Application } from '../model/Application';
 import { CHALLENGE_APP_STATUS, deriveChallengeResult } from '../util/challenge.util';

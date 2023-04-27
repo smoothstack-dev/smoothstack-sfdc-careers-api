@@ -1,7 +1,7 @@
 import { Connection } from 'jsforce';
 import { getToken } from 'sf-jwt-token';
-import { SmoothstackSchema } from '../model/smoothstack.schema';
-import { getSFDCSecrets } from './secrets.service';
+import { SmoothstackSchema } from '../../model/smoothstack.schema';
+import { getSFDCSecrets } from '../secrets.service';
 
 const INSTANCE_URL = 'https://smoothstack.my.salesforce.com';
 

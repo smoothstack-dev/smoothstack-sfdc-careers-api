@@ -26,3 +26,7 @@ export interface HackerRankCredentials {
   CALLBACK_URL: string;
   CALLBACK_URL_V2: string;
 }
+
+export interface PandaDocCredentials {
+  API_KEY: string;
+}

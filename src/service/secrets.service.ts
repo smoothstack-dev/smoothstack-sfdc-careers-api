@@ -2,6 +2,7 @@ import { SecretsManager } from 'aws-sdk';
 import {
   HackerRankCredentials,
   MicrosoftCredentials,
+  PandaDocCredentials,
   SalesforceCredentials,
   SquareSpaceCredentials,
   ZoomCredentials,
@@ -49,6 +50,17 @@ export const getMSSecrets = async (): Promise<MicrosoftCredentials> => {
 
 export const getHackerRankSecrets = async (): Promise<HackerRankCredentials> => {
   const secretPath = 'smoothstack/hackerrank-credentials';
+  const client = new SecretsManager({
+    region: 'us-east-1',
+  });
+
+  const res = await client.getSecretValue({ SecretId: secretPath }).promise();
+  return JSON.parse(res.SecretString);
+};
+
+
+export const getPandaDocSecrets = async (): Promise<PandaDocCredentials> => {
+  const secretPath = 'smoothstack/pandadoc-credentials';
   const client = new SecretsManager({
     region: 'us-east-1',
   });

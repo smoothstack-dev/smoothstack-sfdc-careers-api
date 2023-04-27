@@ -25,4 +25,10 @@ export const snsResources: AWS['resources']['Resources'] = {
       TopicName: 'smoothstack-document-generation-sns-topic-v2',
     },
   },
+  DocumentEventProcessingTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-document-event-processing-sns-topic-v2',
+    },
+  },
 };

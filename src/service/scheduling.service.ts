@@ -13,7 +13,7 @@ import {
   saveSchedulingDataByAppointmentId,
 } from './application.service';
 import { updateCandidate } from './candidate.service';
-import { getSFDCConnection } from './sfdc.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { Connection } from 'jsforce';
 import { SmoothstackSchema } from '../model/smoothstack.schema';
 
