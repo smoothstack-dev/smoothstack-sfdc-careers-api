@@ -1,4 +1,5 @@
 import { handlerPath } from '@libs/handler-resolver';
+import { protectedFunctionSettings } from '../../libs/protectedFunctionSettings';
 
 export default {
   handler: `${handlerPath(__dirname)}/handler.main`,
@@ -10,6 +11,22 @@ export default {
         cors: {
           origin: '*',
         },
+      },
+    },
+    {
+      http: {
+        method: 'get',
+        path: 'jobs/{jobId}',
+        cors: {
+          origin: '*',
+        },
+      },
+    },
+    {
+      http: {
+        method: 'put',
+        path: 'jobs/{jobId}',
+        ...protectedFunctionSettings,
       },
     },
     {
