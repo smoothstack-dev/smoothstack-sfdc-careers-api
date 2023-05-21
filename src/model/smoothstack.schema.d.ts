@@ -2745,6 +2745,7 @@ type Fields$Assignment_Group_Member__ChangeEvent = {
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
+  Calendar_Link__c: string | null;
 };
 
 type ParentReferences$Assignment_Group_Member__ChangeEvent = {
@@ -2779,6 +2780,7 @@ type Fields$Assignment_Group_Member__c = {
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
+  Calendar_Link__c: string | null;
 };
 
 type ParentReferences$Assignment_Group_Member__c = {
@@ -7630,6 +7632,7 @@ type Fields$Contact = {
   Active_JP_Count__c: number | null;
   Is_User_Active__c: boolean;
   Last_Email_or_Meeting_Date__c: DateString | null;
+  Relationship_Status__c: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -7969,6 +7972,7 @@ type Fields$ContactChangeEvent = {
   Active_JP_Count__c: number | null;
   Is_User_Active__c: boolean;
   Last_Email_or_Meeting_Date__c: DateString | null;
+  Relationship_Status__c: string | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -18787,6 +18791,7 @@ type Fields$Job__ChangeEvent = {
   Cohort_Category__c: string | null;
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number | null;
+  Public_Description__c: string | null;
   Tech_Screen_Type__c: string | null;
   Year_1_Salary__c: number | null;
   Year_2_Salary__c: number | null;
@@ -18877,6 +18882,7 @@ type Fields$Job__c = {
   Cohort_Category__c: string | null;
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number;
+  Public_Description__c: string | null;
   Tech_Screen_Type__c: string | null;
   Year_1_Salary__c: number;
   Year_2_Salary__c: number;

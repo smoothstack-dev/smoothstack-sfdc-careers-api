@@ -9,7 +9,7 @@ export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candid
     .sobject('Contact')
     .findOne({ Id: { $eq: candidateId } })
     .include('Applications__r')
-    .select('*, Job__r.*')
+    .select('*, Job__r.*, Owner.*')
     .end();
 };
 

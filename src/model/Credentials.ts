@@ -30,3 +30,11 @@ export interface HackerRankCredentials {
 export interface PandaDocCredentials {
   API_KEY: string;
 }
+
+export interface HubspotCredentials {
+  ACCESS_TOKEN: string;
+}
+
+export interface TextusCredentials {
+  ACCESS_TOKEN: string;
+}
