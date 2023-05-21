@@ -1,19 +1,20 @@
 import { middyfy } from '@libs/lambda';
 import { APIGatewayEvent } from 'aws-lambda';
 import { publishWebinarProcessingRequest } from '../../service/sns.service';
+import { validateWebinarUrl } from '../../service/webinar.service';
 
 const webinarEvents = async (event: APIGatewayEvent) => {
   console.log('Received Webinar Event: ', event.body);
   try {
     switch (event.httpMethod) {
       case 'POST':
-        // return {
-        //   plainToken: (event.body as any).payload.plainToken,
-        //   encryptedToken: createHmac('sha256', 'secretKey')
-        //     .update((event.body as any).payload.plainToken)
-        //     .digest('hex'),
-        // };
-        await publishWebinarProcessingRequest(event.body as any);
+        const webinarEvent = event.body as any;
+        if (webinarEvent.event === 'endpoint.url_validation') {
+          return await validateWebinarUrl(webinarEvent);
+        } else {
+          await publishWebinarProcessingRequest(webinarEvent);
+        }
+        break;
     }
   } catch (e) {
     console.error(e);

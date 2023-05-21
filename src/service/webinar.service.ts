@@ -5,6 +5,8 @@ import { generateZoomToken } from './auth/zoom.jwt.service';
 import { WebinarEvent, WebinarRegistration } from '../model/Webinar';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { updateApplication } from './application.service';
+import { createHmac } from 'crypto';
+import { getZoomSecrets } from './secrets.service';
 
 export const WEBINAR_TOPIC = 'Candidate Information Session / Learn about Smoothstack';
 
@@ -196,4 +198,12 @@ const getPollAnswers = async (token: string, webinarUUID: string): Promise<any[]
   });
 
   return data.questions;
+};
+
+export const validateWebinarUrl = async (event: any) => {
+  const { WEBINAR_SECRET_KEY } = await getZoomSecrets();
+  return {
+    plainToken: event.payload.plainToken,
+    encryptedToken: createHmac('sha256', WEBINAR_SECRET_KEY).update(event.payload.plainToken).digest('hex'),
+  };
 };
