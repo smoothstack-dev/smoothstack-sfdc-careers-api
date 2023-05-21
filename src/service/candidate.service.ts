@@ -1,8 +1,8 @@
 import { Connection } from 'jsforce';
 import { Candidate, CandidateFields } from '../model/Candidate';
-
 import { Fields$Contact, Fields$ContentVersion, SmoothstackSchema } from '../model/smoothstack.schema';
 import { getStateCode } from '../util/state.util';
+import { derivePotentialEmail } from '../util/candidate.util';
 
 export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candidateId: string): Promise<Candidate> => {
   return await conn
@@ -44,6 +44,7 @@ export const createCandidate = async (
     MailingStateCode: getStateCode(candidateFields.state),
     MailingCountryCode: 'US',
     MailingPostalCode: candidateFields.zip,
+    Potential_Smoothstack_Email__c: derivePotentialEmail(candidateFields.firstName, candidateFields.lastName),
   };
   const candidateRes: any = await conn._createSingle('Contact', candidateRecord, {});
   return candidateRes.id;
@@ -70,8 +71,6 @@ export const fetchCandidateFiles = async (
   ).map((cdl) => cdl.ContentDocument.LatestPublishedVersionId);
 
   return contentVersionIds.length
-    ? await conn
-        .sobject('ContentVersion')
-        .find({ Id: { $in: contentVersionIds }, $and: { Type__c: fileType } })
+    ? await conn.sobject('ContentVersion').find({ Id: { $in: contentVersionIds }, $and: { Type__c: fileType } })
     : [];
 };
