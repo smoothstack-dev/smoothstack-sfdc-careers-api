@@ -10,6 +10,7 @@ import challengeEvents from './src/functions/challengeEvents';
 import documentEvents from './src/functions/documentEvents';
 import documentGenerator from './src/functions/documentGenerator';
 import documentEventProcessor from './src/functions/documentEventProcessor';
+import hubspotEvents from './src/functions/hubspotEvents';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -75,6 +76,7 @@ const serverlessConfiguration: AWS = {
     documentEvents,
     documentGenerator,
     documentEventProcessor,
+    hubspotEvents,
   },
   resources: {
     Resources: {

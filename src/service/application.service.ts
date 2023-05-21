@@ -61,6 +61,14 @@ export const createApplication = async (
   };
 
   const { id: applicationId }: any = await conn._createSingle('Opportunity', applicationRecord, {});
+  await conn._createSingle(
+    'OpportunityContactRole',
+    {
+      ContactId: candidateId,
+      OpportunityId: applicationId,
+    },
+    {}
+  );
   resume &&
     (await saveSFDCFiles(conn, applicationId, [
       {
@@ -82,7 +90,7 @@ export const fetchApplication = async (
     .sobject('Opportunity')
     .findOne({ Id: { $eq: applicationId } })
     .select(
-      'Id, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
+      'Id, Challenge_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
     );
 
   return application
