@@ -25,6 +25,7 @@ export const processHubspotEvent = async (event: HubspotEvent) => {
       application.Candidate__r.MobilePhone,
       textMsg
     );
+    await updateDeal(HS_ACCESS_TOKEN, event.objectId, { [event.propertyName]: 'Sent' });
   }
 };
 
@@ -35,6 +36,18 @@ const fetchDeal = async (token: string, dealId: number): Promise<HSDeal> => {
     },
   });
   return data;
+};
+
+const updateDeal = async (token: string, dealId: number, updateData: any) => {
+  await axios.patch(
+    `${BASE_URL}/objects/deals/${dealId}`,
+    { properties: updateData },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 };
 
 const prepTextMessage = (msg: string, application: Application, hubspotCalLink: string) => {
