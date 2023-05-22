@@ -208,7 +208,7 @@ export const saveSchedulingDataByApplicationId = async (
       break;
     }
     case SchedulingType.TECHSCREEN: {
-      eventType = `${type}(${application.Job__r.Tech_Screen_Type__c})`;
+      eventType = type;
       updateData = {
         Tech_Screen_Appointment_Status__c: status,
         Tech_Screen_Date__c: date as DateString,
@@ -271,7 +271,7 @@ export const saveSchedulingDataByAppointmentId = async (
         break;
       }
       case SchedulingType.TECHSCREEN: {
-        eventType = `${type}(${application.Job__r.Tech_Screen_Type__c})`;
+        eventType = type;
         updateData = {
           Tech_Screen_Appointment_Status__c: status,
           Tech_Screen_Date__c: date as DateString,
