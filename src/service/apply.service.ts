@@ -5,7 +5,7 @@ import { toTitleCase } from '../util/misc.util';
 import { resolveJobByKnockout } from '../util/job.util';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { findCandidateByEmailOrPhone } from './candidate.service';
-import { findActiveJobs } from './jobs.service';
+import { findActiveKOJobs } from './jobs.service';
 import { calculateKnockout } from '../util/knockout.util';
 import { createApplication } from './application.service';
 import { getSchedulingLink } from '../util/links';
@@ -60,7 +60,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
       hardwareSkills,
     } = extraFields;
 
-    const activeJobs = await findActiveJobs(conn);
+    const activeJobs = await findActiveKOJobs(conn);
     const knockoutFields = {
       workAuthorization,
       relocation,

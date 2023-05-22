@@ -6,8 +6,16 @@ export const fetchJobs = async (conn: Connection<SmoothstackSchema>) => {
   return jobs;
 };
 
+
 export const findActiveJobs = async (conn: Connection<SmoothstackSchema>) => {
   const jobs = await conn.sobject('Job__c').find({ Publishing_Status__c: { $eq: 'Published' } });
+  return jobs;
+};
+
+export const findActiveKOJobs = async (conn: Connection<SmoothstackSchema>) => {
+  const jobs = await conn
+    .sobject('Job__c')
+    .find({ Publishing_Status__c: { $eq: 'Published' }, $and: { Job_ID__c: { $ne: 1 } } });
   return jobs;
 };
 
