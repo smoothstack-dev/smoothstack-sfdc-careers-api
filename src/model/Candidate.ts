@@ -1,14 +1,10 @@
 import { Application } from './Application';
+import { Owner } from './Owner';
 import { Fields$Contact } from './smoothstack.schema';
 
 export interface Candidate extends Fields$Contact {
   Applications__r?: { records: Application[] };
-  Owner?: {
-    Id: string;
-    FirstName: string;
-    LastName: string;
-    Email: string;
-  };
+  Owner?: Owner;
 }
 
 export interface CandidateFields {

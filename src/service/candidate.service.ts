@@ -3,6 +3,7 @@ import { Candidate, CandidateFields } from '../model/Candidate';
 import { Fields$Contact, Fields$ContentVersion, SmoothstackSchema } from '../model/smoothstack.schema';
 import { getStateCode } from '../util/state.util';
 import { derivePotentialEmail } from '../util/candidate.util';
+import { fetchHTDAssignmentGroup } from './assigmentGroup.service';
 
 export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candidateId: string): Promise<Candidate> => {
   return await conn
@@ -30,8 +31,10 @@ export const findCandidateByEmailOrPhone = async (
 
 export const createCandidate = async (
   conn: Connection<SmoothstackSchema>,
-  candidateFields: CandidateFields
+  candidateFields: CandidateFields,
+  utmSource: string
 ): Promise<string> => {
+  const candidateOwner = await deriveCandidateOwner(conn, utmSource);
   const candidateRecord: Partial<Fields$Contact> = {
     RecordTypeId: '0125G000000feaZQAQ',
     Email: candidateFields.email,
@@ -45,9 +48,19 @@ export const createCandidate = async (
     MailingCountryCode: 'US',
     MailingPostalCode: candidateFields.zip,
     Potential_Smoothstack_Email__c: derivePotentialEmail(candidateFields.firstName, candidateFields.lastName),
+    OwnerId: candidateOwner?.Id,
   };
   const candidateRes: any = await conn._createSingle('Contact', candidateRecord, {});
   return candidateRes.id;
+};
+
+const deriveCandidateOwner = async (conn: Connection<SmoothstackSchema>, utmSource: string) => {
+  if (utmSource) {
+    const assignmentGroup = await fetchHTDAssignmentGroup(conn);
+    return assignmentGroup.Assignment_Group_Members__r.records.find((m) => utmSource.includes(m.User__r.Alias))
+      ?.User__r;
+  }
+  return null;
 };
 
 export const updateCandidate = async (
