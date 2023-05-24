@@ -37,7 +37,7 @@ export const KNOCKOUT_STATUS = {
   [Knockout.GRADUATION]: { applicationStatus: 'R-Timing', candidateStatus: 'Snooze' },
   [Knockout.YEARS_OF_EXP]: { applicationStatus: 'R-Years of Experience', candidateStatus: 'Snooze' },
   [Knockout.DEGREE]: { applicationStatus: 'R-Education', candidateStatus: 'Snooze' },
-  [Knockout.SELF_RANK]: { applicationStatus: 'R-Self-Rank', candidateStatus: 'Rejected' },
+  [Knockout.SELF_RANK]: { applicationStatus: 'R-Self Rank', candidateStatus: 'Rejected' },
 };
 
 export const KNOCKOUT_NOTE = {
@@ -48,5 +48,5 @@ export const KNOCKOUT_NOTE = {
     'Candidate Snoozed as they are currently in school and not graduating within a reasonable timeframe.',
   [Knockout.YEARS_OF_EXP]: 'Candidate rejected for years of experience. Potentially eligible for another role.',
   [Knockout.DEGREE]: 'Candidate rejected for education. Potentially eligible for another role.',
-  [Knockout.SELF_RANK]: 'Candidate rejected for coding self-rank ability.',
+  [Knockout.SELF_RANK]: 'Candidate rejected for coding self rank ability.',
 };
