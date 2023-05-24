@@ -6,7 +6,7 @@ import { TEXTS } from '../constants/texts';
 import { sendText } from './sms.service';
 import { fetchApplication } from './application.service';
 import { Application } from '../model/Application';
-import { findAssignmentGroupMemberByUserId } from './assigmentGroup.service';
+import { findHTDAssignmentGroupMemberByUserId } from './assigmentGroup.service';
 
 const BASE_URL = 'https://api.hubapi.com/crm/v3';
 
@@ -17,7 +17,7 @@ export const processHubspotEvent = async (event: HubspotEvent) => {
     const conn = await getSFDCConnection();
     const deal = await fetchDeal(HS_ACCESS_TOKEN, event.objectId);
     const application = await fetchApplication(conn, deal.properties.hs_salesforceopportunityid);
-    const { Calendar_Link__c } = await findAssignmentGroupMemberByUserId(conn, application.Candidate__r.Owner.Id);
+    const { Calendar_Link__c } = await findHTDAssignmentGroupMemberByUserId(conn, application.Candidate__r.Owner.Id);
     const textMsg = prepTextMessage(TEXTS[event.propertyName], application, Calendar_Link__c);
     await sendText(
       TU_ACCESS_TOKEN,
