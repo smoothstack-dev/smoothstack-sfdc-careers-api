@@ -32,9 +32,9 @@ export const findCandidateByEmailOrPhone = async (
 export const createCandidate = async (
   conn: Connection<SmoothstackSchema>,
   candidateFields: CandidateFields,
-  utmSource: string
+  utmTerm: string
 ): Promise<string> => {
-  const candidateOwner = await deriveCandidateOwner(conn, utmSource);
+  const candidateOwner = await deriveCandidateOwner(conn, utmTerm);
   const candidateRecord: Partial<Fields$Contact> = {
     RecordTypeId: '0125G000000feaZQAQ',
     Email: candidateFields.email,
@@ -54,10 +54,10 @@ export const createCandidate = async (
   return candidateRes.id;
 };
 
-const deriveCandidateOwner = async (conn: Connection<SmoothstackSchema>, utmSource: string) => {
-  if (utmSource) {
+const deriveCandidateOwner = async (conn: Connection<SmoothstackSchema>, utmTerm: string) => {
+  if (utmTerm) {
     const assignmentGroup = await fetchHTDAssignmentGroup(conn);
-    return assignmentGroup.Assignment_Group_Members__r.records.find((m) => utmSource.includes(m.User__r.Alias))
+    return assignmentGroup.Assignment_Group_Members__r.records.find((m) => utmTerm.includes(m.User__r.Alias))
       ?.User__r;
   }
   return null;

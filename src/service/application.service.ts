@@ -27,7 +27,7 @@ export const createApplication = async (
 ): Promise<{ candidateId: string; applicationId: string }> => {
   const { candidateFields, applicationFields } = application;
 
-  const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmSource);
+  const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmTerm);
   const { stageName, rejectionReason } = deriveApplicationStatus(applicationFields.status);
   const applicationRecord: Partial<Fields$Opportunity> = {
     RecordTypeId: '0125G000000feaeQAA',
