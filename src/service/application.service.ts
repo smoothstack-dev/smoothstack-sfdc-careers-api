@@ -35,7 +35,7 @@ export const createApplication = async (
     CloseDate: new Date().toISOString() as DateString,
     Application_Date__c: new Date().toISOString() as DateString,
     StageName: stageName,
-    ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
+    ...(rejectionReason && { Rejection_Reason__c: rejectionReason, Rejection_Stage__c: 'Knockout' }),
     Application_Device__c: applicationFields.deviceType,
     ...(applicationFields.utmSource && { UTM_Source__c: applicationFields.utmSource }),
     ...(applicationFields.utmMedium && { UTM_Medium__c: applicationFields.utmMedium }),
@@ -188,7 +188,8 @@ export const saveSchedulingDataByApplicationId = async (
   appointment: Appointment,
   type: SchedulingType,
   applicationStatus: string,
-  webinarRegistration?: WebinarRegistration
+  webinarRegistration?: WebinarRegistration,
+  screenerEmail?: string
 ) => {
   const { datetime: date } = appointment;
   const application = await fetchApplication(conn, applicationId);
@@ -213,6 +214,7 @@ export const saveSchedulingDataByApplicationId = async (
         Tech_Screen_Appointment_Status__c: status,
         Tech_Screen_Date__c: date as DateString,
         Tech_Screen_Appointment_ID__c: `${appointment.id}`,
+        Tech_Screener_Email__c: screenerEmail,
         StageName: stageName,
         ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
         Tech_Screen_Cancellation_Link__c: appointment.confirmationPage,
@@ -252,7 +254,8 @@ export const saveSchedulingDataByAppointmentId = async (
   date: string,
   type: SchedulingType,
   applicationStatus: string,
-  webinarRegistration?: WebinarRegistration
+  webinarRegistration?: WebinarRegistration,
+  screenerEmail?: string
 ) => {
   const application = await findApplicationByAppointmentId(conn, appointmentId, type);
   if (application) {
@@ -275,6 +278,7 @@ export const saveSchedulingDataByAppointmentId = async (
         updateData = {
           Tech_Screen_Appointment_Status__c: status,
           Tech_Screen_Date__c: date as DateString,
+          Tech_Screener_Email__c: screenerEmail,
           StageName: stageName,
           ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
         };

@@ -1970,297 +1970,6 @@ interface SObjectDefinition$Applicant__c extends SObjectDefinition<'Applicant__c
     ChildRelationships: ChildRelationships$Applicant__c;
   }
 
-type Fields$Application__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  Overall_Candidate_Rank_Recruiter__c: number | null;
-  Project_Experience_Months__c: number | null;
-  External_Applications__c: string | null;
-  Communication_Rank_Recruiter__c: number | null;
-  Dressed_Professionally__c: string | null;
-  Candidate_on_Time_Prescreen__c: string | null;
-  Candidate_on_Time_Tech_Screen__c: string | null;
-  Opportunity_Rank__c: string | null;
-  Two_Year_Committment__c: string | null;
-  Willing_to_Relocate__c: string | null;
-  Prescreen_Result__c: string | null;
-  Good_Fit__c: string | null;
-  LinkedIn_URL__c: string | null;
-  Git_Hub_URL__c: string | null;
-  Vaccination_Status__c: string | null;
-  Projects__c: string | null;
-  About_Yourself__c: string | null;
-  Source_Prescreen__c: string | null;
-  Vaccination_Notes__c: string | null;
-  Background_Check_Notes__c: string | null;
-  Ability_to_Learn_Quickly__c: string | null;
-  Challenging_Situation__c: string | null;
-  Additional_Notes_Prescreen__c: string | null;
-  Drug_Screen_Notes__c: string | null;
-  Teamwork_Experience__c: string | null;
-  Responsive__c: string | null;
-  Challenge_Date_Time__c: DateString | null;
-  Challenge_Link__c: string | null;
-  Job__c: string | null;
-  Challenge_Appointment_Status__c: string | null;
-  Challenge_Result__c: string | null;
-  Challenge_Score__c: number | null;
-  Challenge_Similarity_Flag__c: string | null;
-  Previous_Challenge_ID__c: string | null;
-  Challenge_Appointment_Event_ID__c: string | null;
-  Challenge_Scheduling_Link__c: string | null;
-  Challenge_Appointment_ID__c: string | null;
-  Event_ID_Microsoft__c: string | null;
-  Application_Status__c: string | null;
-  Communication_Rank_Tech_Screener__c: number | null;
-  Total_Technical_Score__c: string | null;
-  Total_Behavioral_Score__c: string | null;
-  Total_Project_Score__c: string | null;
-  Tech_Screen_Result__c: string | null;
-  Screener_Determination__c: string | null;
-  Tech_Screener_Email__c: string | null;
-  Tech_Screen_Cancellation_Link__c: string | null;
-  Tech_Screen_Appointment_Event_ID__c: string | null;
-  Tech_Screen_Appointment_ID__c: string | null;
-  Tech_Screen_Appointment_Status__c: string | null;
-  Tech_Screen_Date__c: DateString | null;
-  Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screen_Type__c: string | null;
-  UTM_Source__c: string | null;
-  UTM_Medium__c: string | null;
-  UTM_Term__c: string | null;
-  UTM_Campaign__c: string | null;
-  GCLID__c: string | null;
-  Webinar_Date__c: DateString | null;
-  Webinar_Attended__c: string | null;
-  Webinar_Poll_Response__c: string | null;
-  Webinar_Appointment_Status__c: string | null;
-  Webinar_Registrant_ID__c: string | null;
-  Webinar_Appointment_ID__c: string | null;
-  Webinar_Scheduling_Link__c: string | null;
-  Webinar_Link__c: string | null;
-  Education_Level__c: string | null;
-  Expected_Degree__c: string | null;
-  Currently_Student__c: string | null;
-  Graduation_Date__c: DateString | null;
-  Work_Authorization__c: string | null;
-  Security_Clearance__c: string | null;
-  Concerns_Passing_Drug_Screen__c: string | null;
-  Concerns_Passing_Background__c: string | null;
-  Expected_Graduation_Date__c: DateString | null;
-  Major__c: string | null;
-  Coding_Self_Rank__c: number | null;
-  Months_to_Graduation__c: number | null;
-  Additional_Questions__c: string | null;
-  Years_of_Experience_Self_Disclosed__c: string | null;
-  Refer_a_Friend__c: string | null;
-  Commit_to_Intense_Program__c: string | null;
-  Military_Branch__c: string | null;
-  Military_Status__c: string | null;
-  Overall_Candidate_Rank_Tech_Screener__c: number | null;
-  Coding_Challenge_Name__c: string | null;
-  Applicant__c: string | null;
-  Instagram_URL__c: string | null;
-  Application_Device__c: string | null;
-  Strongest_Programming_Languages__c: string | null;
-};
-
-type ParentReferences$Application__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$Application__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$Application__ChangeEvent extends SObjectDefinition<'Application__ChangeEvent'> {
-    Name: 'Application__ChangeEvent';
-    Fields: Fields$Application__ChangeEvent;
-    ParentReferences: ParentReferences$Application__ChangeEvent;
-    ChildRelationships: ChildRelationships$Application__ChangeEvent;
-  }
-
-type Fields$Application__History = {
-  //
-  Id: string;
-  IsDeleted: boolean;
-  ParentId: string;
-  CreatedById: string;
-  CreatedDate: DateString;
-  Field: string;
-  DataType: string | null;
-  OldValue: string | null;
-  NewValue: string | null;
-};
-
-type ParentReferences$Application__History = {
-  //
-  Parent: SObjectDefinition$Application__c;
-  CreatedBy: SObjectDefinition$User;
-};
-
-type ChildRelationships$Application__History = {
-  //
-};
-
-interface SObjectDefinition$Application__History extends SObjectDefinition<'Application__History'> {
-    Name: 'Application__History';
-    Fields: Fields$Application__History;
-    ParentReferences: ParentReferences$Application__History;
-    ChildRelationships: ChildRelationships$Application__History;
-  }
-
-type Fields$Application__c = {
-  //
-  Id: string;
-  IsDeleted: boolean;
-  Name: string;
-  CreatedDate: DateString;
-  CreatedById: string;
-  LastModifiedDate: DateString;
-  LastModifiedById: string;
-  SystemModstamp: DateString;
-  LastViewedDate: DateString | null;
-  LastReferencedDate: DateString | null;
-  Overall_Candidate_Rank_Recruiter__c: number | null;
-  Project_Experience_Months__c: number | null;
-  External_Applications__c: string | null;
-  Communication_Rank_Recruiter__c: number | null;
-  Dressed_Professionally__c: string | null;
-  Candidate_on_Time_Prescreen__c: string | null;
-  Candidate_on_Time_Tech_Screen__c: string | null;
-  Opportunity_Rank__c: string | null;
-  Two_Year_Committment__c: string | null;
-  Willing_to_Relocate__c: string | null;
-  Prescreen_Result__c: string | null;
-  Good_Fit__c: string | null;
-  LinkedIn_URL__c: string | null;
-  Git_Hub_URL__c: string | null;
-  Vaccination_Status__c: string | null;
-  Projects__c: string | null;
-  About_Yourself__c: string | null;
-  Source_Prescreen__c: string | null;
-  Vaccination_Notes__c: string | null;
-  Background_Check_Notes__c: string | null;
-  Ability_to_Learn_Quickly__c: string | null;
-  Challenging_Situation__c: string | null;
-  Additional_Notes_Prescreen__c: string | null;
-  Drug_Screen_Notes__c: string | null;
-  Teamwork_Experience__c: string | null;
-  Responsive__c: string | null;
-  Challenge_Date_Time__c: DateString | null;
-  Challenge_Link__c: string | null;
-  Job__c: string;
-  Challenge_Appointment_Status__c: string | null;
-  Challenge_Result__c: string | null;
-  Challenge_Score__c: number | null;
-  Challenge_Similarity_Flag__c: string | null;
-  Previous_Challenge_ID__c: string | null;
-  Challenge_Appointment_Event_ID__c: string | null;
-  Challenge_Scheduling_Link__c: string | null;
-  Challenge_Appointment_ID__c: string | null;
-  Event_ID_Microsoft__c: string | null;
-  Application_Status__c: string | null;
-  Communication_Rank_Tech_Screener__c: number | null;
-  Total_Technical_Score__c: string | null;
-  Total_Behavioral_Score__c: string | null;
-  Total_Project_Score__c: string | null;
-  Tech_Screen_Result__c: string | null;
-  Screener_Determination__c: string | null;
-  Tech_Screener_Email__c: string | null;
-  Tech_Screen_Cancellation_Link__c: string | null;
-  Tech_Screen_Appointment_Event_ID__c: string | null;
-  Tech_Screen_Appointment_ID__c: string | null;
-  Tech_Screen_Appointment_Status__c: string | null;
-  Tech_Screen_Date__c: DateString | null;
-  Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screen_Type__c: string | null;
-  UTM_Source__c: string | null;
-  UTM_Medium__c: string | null;
-  UTM_Term__c: string | null;
-  UTM_Campaign__c: string | null;
-  GCLID__c: string | null;
-  Webinar_Date__c: DateString | null;
-  Webinar_Attended__c: string | null;
-  Webinar_Poll_Response__c: string | null;
-  Webinar_Appointment_Status__c: string | null;
-  Webinar_Registrant_ID__c: string | null;
-  Webinar_Appointment_ID__c: string | null;
-  Webinar_Scheduling_Link__c: string | null;
-  Webinar_Link__c: string | null;
-  Education_Level__c: string | null;
-  Expected_Degree__c: string | null;
-  Currently_Student__c: string | null;
-  Graduation_Date__c: DateString | null;
-  Work_Authorization__c: string | null;
-  Security_Clearance__c: string | null;
-  Concerns_Passing_Drug_Screen__c: string | null;
-  Concerns_Passing_Background__c: string | null;
-  Expected_Graduation_Date__c: DateString | null;
-  Major__c: string | null;
-  Coding_Self_Rank__c: number | null;
-  Months_to_Graduation__c: number | null;
-  Additional_Questions__c: string | null;
-  Years_of_Experience_Self_Disclosed__c: string | null;
-  Refer_a_Friend__c: string | null;
-  Commit_to_Intense_Program__c: string | null;
-  Military_Branch__c: string | null;
-  Military_Status__c: string | null;
-  Overall_Candidate_Rank_Tech_Screener__c: number | null;
-  Coding_Challenge_Name__c: string | null;
-  Applicant__c: string;
-  Instagram_URL__c: string | null;
-  Application_Device__c: string | null;
-  Strongest_Programming_Languages__c: string | null;
-};
-
-type ParentReferences$Application__c = {
-  //
-  CreatedBy: SObjectDefinition$User;
-  LastModifiedBy: SObjectDefinition$User;
-  Job__r: SObjectDefinition$Job__c;
-  Applicant__r: SObjectDefinition$Applicant__c;
-};
-
-type ChildRelationships$Application__c = {
-  //
-  Histories: SObjectDefinition$Application__History;
-  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
-  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
-  Attachments: SObjectDefinition$Attachment;
-  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
-  CombinedAttachments: SObjectDefinition$CombinedAttachment;
-  ContactRequests: SObjectDefinition$ContactRequest;
-  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
-  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
-  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
-  EventRelations: SObjectDefinition$EventRelation;
-  Notes: SObjectDefinition$Note;
-  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
-  ProcessExceptions: SObjectDefinition$ProcessException;
-  ProcessInstances: SObjectDefinition$ProcessInstance;
-  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
-  RecordActions: SObjectDefinition$RecordAction;
-  RecordActionHistories: SObjectDefinition$RecordActionHistory;
-  SurveySubjectEntities: SObjectDefinition$SurveySubject;
-  TaskRelations: SObjectDefinition$TaskRelation;
-  TopicAssignments: SObjectDefinition$TopicAssignment;
-};
-
-interface SObjectDefinition$Application__c extends SObjectDefinition<'Application__c'> {
-    Name: 'Application__c';
-    Fields: Fields$Application__c;
-    ParentReferences: ParentReferences$Application__c;
-    ChildRelationships: ChildRelationships$Application__c;
-  }
-
 type Fields$Approval = {
   //
   Id: string;
@@ -18792,7 +18501,6 @@ type Fields$Job__ChangeEvent = {
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number | null;
   Public_Description__c: string | null;
-  Tech_Screen_Type__c: string | null;
   Year_1_Salary__c: number | null;
   Year_2_Salary__c: number | null;
   Quick_Course_Start_Date__c: DateString | null;
@@ -18883,7 +18591,6 @@ type Fields$Job__c = {
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number;
   Public_Description__c: string | null;
-  Tech_Screen_Type__c: string | null;
   Year_1_Salary__c: number;
   Year_2_Salary__c: number;
   Quick_Course_Start_Date__c: DateString;
@@ -22530,8 +22237,8 @@ type Fields$Opportunity = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
-  Coding_Challenge_Name__c: string | null;
   Coding_Self_Rank__c: number | null;
+  BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
   Communication_Rank_Tech_Screener__c: number | null;
   Concerns_Passing_Background__c: string | null;
@@ -22578,7 +22285,6 @@ type Fields$Opportunity = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screen_Type__c: string | null;
   Tech_Screener_Email__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
@@ -22619,10 +22325,21 @@ type Fields$Opportunity = {
   Technical_Question_3_Score__c: string | null;
   Technical_Question_4_Score__c: string | null;
   Technical_Question_5_Score__c: string | null;
+  Prescreen_Appointment_Status__c: string | null;
+  Prescreen_Date__c: DateString | null;
   pandadoc__TrackingNumber__c: string | null;
   Webinar_ID__c: string | null;
   Webinar_Occurrence_ID__c: string | null;
   Application_Date__c: DateString | null;
+  BA_Adaptability_Question__c: string | null;
+  BA_Ownership_Answer__c: string | null;
+  BA_Ownership_Question__c: string | null;
+  Prescreen_Scheduling_Link__c: string | null;
+  Prescreen_Appointment_ID__c: string | null;
+  Tech_Screener__c: string | null;
+  Candidate_Phone_Number__c: string | null;
+  External_Tech_Screen_Link__c: string | null;
+  Rejection_Stage__c: string | null;
 };
 
 type ParentReferences$Opportunity = {
@@ -22643,6 +22360,7 @@ type ParentReferences$Opportunity = {
   Decision_Maker__r: SObjectDefinition$Contact | null;
   Candidate__r: SObjectDefinition$Contact | null;
   Job__r: SObjectDefinition$Job__c | null;
+  Tech_Screener__r: SObjectDefinition$User | null;
 };
 
 type ChildRelationships$Opportunity = {
@@ -22801,8 +22519,8 @@ type Fields$OpportunityChangeEvent = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
-  Coding_Challenge_Name__c: string | null;
   Coding_Self_Rank__c: number | null;
+  BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
   Communication_Rank_Tech_Screener__c: number | null;
   Concerns_Passing_Background__c: string | null;
@@ -22849,7 +22567,6 @@ type Fields$OpportunityChangeEvent = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screen_Type__c: string | null;
   Tech_Screener_Email__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
@@ -22890,10 +22607,21 @@ type Fields$OpportunityChangeEvent = {
   Technical_Question_3_Score__c: string | null;
   Technical_Question_4_Score__c: string | null;
   Technical_Question_5_Score__c: string | null;
+  Prescreen_Appointment_Status__c: string | null;
+  Prescreen_Date__c: DateString | null;
   pandadoc__TrackingNumber__c: string | null;
   Webinar_ID__c: string | null;
   Webinar_Occurrence_ID__c: string | null;
   Application_Date__c: DateString | null;
+  BA_Adaptability_Question__c: string | null;
+  BA_Ownership_Answer__c: string | null;
+  BA_Ownership_Question__c: string | null;
+  Prescreen_Scheduling_Link__c: string | null;
+  Prescreen_Appointment_ID__c: string | null;
+  Tech_Screener__c: string | null;
+  Candidate_Phone_Number__c: string | null;
+  External_Tech_Screen_Link__c: string | null;
+  Rejection_Stage__c: string | null;
 };
 
 type ParentReferences$OpportunityChangeEvent = {
@@ -38011,9 +37739,6 @@ export interface SmoothstackSchema extends Schema {
     Applicant__ChangeEvent: SObjectDefinition$Applicant__ChangeEvent;
     Applicant__History: SObjectDefinition$Applicant__History;
     Applicant__c: SObjectDefinition$Applicant__c;
-    Application__ChangeEvent: SObjectDefinition$Application__ChangeEvent;
-    Application__History: SObjectDefinition$Application__History;
-    Application__c: SObjectDefinition$Application__c;
     Approval: SObjectDefinition$Approval;
     Asset: SObjectDefinition$Asset;
     AssetChangeEvent: SObjectDefinition$AssetChangeEvent;
