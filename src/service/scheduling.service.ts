@@ -221,16 +221,17 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
       const applicationId = appointment.forms
         .find((f) => f.id === 2075339)
         .values.find((v) => v.fieldID === 11569425).value;
-      const calendarEmailReq = findCalendarEmail(apiKey, userId, appointment.calendarID);
-      const applicationReq = saveSchedulingDataByApplicationId(
+      const screenerEmail = await findCalendarEmail(apiKey, userId, appointment.calendarID);
+      const application = await saveSchedulingDataByApplicationId(
         conn,
         applicationId,
         status,
         appointment,
         schedulingType,
-        'Tech Screen Scheduled'
+        'Tech Screen Scheduled',
+        null,
+        screenerEmail
       );
-      const [screenerEmail, application] = await Promise.all([calendarEmailReq, applicationReq]);
       await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
       if (existingAppointment) {
         const cancelAppReq = cancelAppointment(apiKey, userId, existingAppointment.id);
@@ -248,16 +249,17 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
       break;
     }
     case 'rescheduled': {
-      const calendarEmailReq = findCalendarEmail(apiKey, userId, appointment.calendarID);
-      const applicationReq = saveSchedulingDataByAppointmentId(
+      const screenerEmail = await findCalendarEmail(apiKey, userId, appointment.calendarID);
+      const application = await saveSchedulingDataByAppointmentId(
         conn,
         eventType,
         appointment.id,
         appointment.datetime,
         schedulingType,
-        'Tech Screen Scheduled'
+        'Tech Screen Scheduled',
+        null,
+        screenerEmail
       );
-      const [screenerEmail, application] = await Promise.all([calendarEmailReq, applicationReq]);
       if (application) {
         await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
         const cancelReq = cancelCalendarInvite(application.Event_ID_Microsoft__c);

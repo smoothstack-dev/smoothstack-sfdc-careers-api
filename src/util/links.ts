@@ -20,5 +20,5 @@ export const getSchedulingLink = (
 
 export const getTechScreeningLink = (application: Application) => {
   const { Id: applicationId } = application;
-  return `https://smoothstack.lightning.force.com/lightning/r/Opportunity/${applicationId}/view`;
+  return `https://smoothstack.my.salesforce.com/lightning/n/Tech_Screen?c__appId=${applicationId}`;
 };
