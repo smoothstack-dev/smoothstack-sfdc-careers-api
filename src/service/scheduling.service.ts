@@ -8,7 +8,9 @@ import { publishAppointmentGenerationRequest } from './sns.service';
 import { cancelCalendarInvite } from './calendar.service';
 import { AppointmentType } from 'src/model/AppointmentGenerationRequest';
 import {
+  fetchApplication,
   fetchApplicationHistory,
+  findApplicationByAppointmentId,
   saveSchedulingDataByApplicationId,
   saveSchedulingDataByAppointmentId,
 } from './application.service';
@@ -138,6 +140,17 @@ const processWebinarScheduling = async (event: SchedulingEvent) => {
       const applicationId = appointment.forms
         .find((f) => f.id === 2075339)
         .values.find((v) => v.fieldID === 11569425).value;
+      if (existingAppointment) {
+        await cancelAppointment(apiKey, userId, existingAppointment.id);
+        const application = await fetchApplication(conn, applicationId);
+        if (application) {
+          await cancelWebinarRegistration({
+            registrantId: application.Webinar_Registrant_ID__c,
+            webinarId: application.Webinar_ID__c,
+            occurrenceId: application.Webinar_Occurrence_ID__c,
+          });
+        }
+      }
       const registration = await generateWebinarRegistration(appointment);
       const application = await saveSchedulingDataByApplicationId(
         conn,
@@ -149,35 +162,28 @@ const processWebinarScheduling = async (event: SchedulingEvent) => {
         registration
       );
       await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
-      if (existingAppointment) {
-        await cancelAppointment(apiKey, userId, existingAppointment.id);
-        application &&
-          (await cancelWebinarRegistration({
-            registrantId: application.Webinar_Registrant_ID__c,
-            webinarId: application.Webinar_ID__c,
-            occurrenceId: application.Webinar_Occurrence_ID__c,
-          }));
-      }
       break;
     }
     case 'rescheduled': {
-      const registration = await generateWebinarRegistration(appointment);
-      const application = await saveSchedulingDataByAppointmentId(
-        conn,
-        eventType,
-        appointment.id,
-        appointment.datetime,
-        schedulingType,
-        'Webinar Scheduled',
-        registration
-      );
+      const application = await findApplicationByAppointmentId(conn, appointment.id, schedulingType);
       if (application) {
-        await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
         await cancelWebinarRegistration({
           registrantId: application.Webinar_Registrant_ID__c,
           webinarId: application.Webinar_ID__c,
           occurrenceId: application.Webinar_Occurrence_ID__c,
         });
+        const registration = await generateWebinarRegistration(appointment);
+        const appReq = saveSchedulingDataByAppointmentId(
+          conn,
+          eventType,
+          appointment.id,
+          appointment.datetime,
+          schedulingType,
+          'Webinar Scheduled',
+          registration
+        );
+        const canReq = updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
+        await Promise.all([appReq, canReq]);
       }
       break;
     }
