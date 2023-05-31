@@ -230,7 +230,7 @@ export const saveSchedulingDataByApplicationId = async (
         Webinar_Appointment_ID__c: `${appointment.id}`,
         Webinar_Date__c: date as DateString,
         Webinar_Link__c: webinarRegistration.joinUrl,
-        Webinar_Registrant_ID__c: webinarRegistration.registrantId,
+        ...(status !== 'rescheduled' && { Webinar_Registrant_ID__c: webinarRegistration.registrantId }),
         Webinar_ID__c: webinarRegistration.webinarId,
         Webinar_Occurrence_ID__c: webinarRegistration.occurrenceId,
       };
@@ -293,7 +293,7 @@ export const saveSchedulingDataByAppointmentId = async (
           Webinar_Date__c: date as DateString,
           ...(webinarRegistration && {
             Webinar_Link__c: webinarRegistration.joinUrl,
-            Webinar_Registrant_ID__c: webinarRegistration.registrantId,
+            ...(status !== 'rescheduled' && { Webinar_Registrant_ID__c: webinarRegistration.registrantId }),
             Webinar_ID__c: webinarRegistration.webinarId,
             Webinar_Occurrence_ID__c: webinarRegistration.occurrenceId,
           }),
