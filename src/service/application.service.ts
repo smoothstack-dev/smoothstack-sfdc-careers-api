@@ -245,6 +245,7 @@ export const saveSchedulingDataByApplicationId = async (
         Prescreen_Appointment_ID__c: `${appointment.id}`,
         Prescreen_Date__c: date as DateString,
       };
+      break;
     }
   }
 
