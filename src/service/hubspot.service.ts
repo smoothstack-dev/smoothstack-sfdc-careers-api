@@ -6,7 +6,6 @@ import { TEXTS } from '../constants/texts';
 import { sendText } from './sms.service';
 import { fetchApplication } from './application.service';
 import { Application } from '../model/Application';
-import { findHTDAssignmentGroupMemberByUserId } from './assigmentGroup.service';
 
 const BASE_URL = 'https://api.hubapi.com/crm/v3';
 
@@ -17,8 +16,7 @@ export const processHubspotEvent = async (event: HubspotEvent) => {
     const conn = await getSFDCConnection();
     const deal = await fetchDeal(HS_ACCESS_TOKEN, event.objectId);
     const application = await fetchApplication(conn, deal.properties.hs_salesforceopportunityid);
-    const { Calendar_Link__c } = await findHTDAssignmentGroupMemberByUserId(conn, application.Candidate__r.Owner.Id);
-    const textMsg = prepTextMessage(TEXTS[event.propertyName], application, Calendar_Link__c);
+    const textMsg = prepTextMessage(TEXTS[event.propertyName], application);
     await sendText(
       TU_ACCESS_TOKEN,
       application.Candidate__r.Owner.Email,
@@ -50,7 +48,7 @@ const updateDeal = async (token: string, dealId: number, updateData: any) => {
   );
 };
 
-const prepTextMessage = (msg: string, application: Application, hubspotCalLink: string) => {
+const prepTextMessage = (msg: string, application: Application) => {
   const vars = {
     '%FIRSTNAME%': application.Candidate__r.FirstName,
     '%OWNERFIRSTNAME%': application.Candidate__r.Owner.FirstName,
@@ -58,7 +56,7 @@ const prepTextMessage = (msg: string, application: Application, hubspotCalLink: 
     '%CHALLENGE_LINK%': application.Challenge_Link__c,
     '%CHALLENGE_DATE%': application.Challenge_Date_Time__c,
     '%WEBINAR_SCHEDULING_LINK%': application.Webinar_Scheduling_Link__c,
-    '%HUBSPOT_CALENDAR_LINK%': hubspotCalLink,
+    '%PRESCREEN_SCHEDULING_LINK%': application.Prescreen_Scheduling_Link__c,
   };
 
   return Object.keys(vars).reduce((acc, v) => {

@@ -12,6 +12,7 @@ import { CHALLENGE_APP_STATUS, deriveChallengeResult } from '../util/challenge.u
 import { generateChallengeLink } from './challenge.service';
 import { deriveApplicationStatus, deriveApplicationStatusTS } from '../util/application.util';
 import { publishLinksGenerationRequest } from './sns.service';
+import { findHTDAssignmentGroupMemberByUserId } from './assigmentGroup.service';
 
 export const generateLinks = async (event: SNSEvent) => {
   console.log('Received Links Generation Request.');
@@ -31,7 +32,8 @@ export const generateLinks = async (event: SNSEvent) => {
 
 const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applicationId: string) => {
   const application = await fetchApplication(conn, applicationId);
-  const { Candidate__r }: { Candidate__r: Fields$Contact } = application as any;
+  const { Candidate__r } = application as any;
+  const { Calendar_ID__c } = await findHTDAssignmentGroupMemberByUserId(conn, Candidate__r.Owner.Id);
 
   const webinarSchedulingLink = getSchedulingLink(
     Candidate__r.FirstName,
@@ -51,12 +53,23 @@ const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applica
     application.Id
   );
 
+  const prescreenSchedulingLink = getSchedulingLink(
+    Candidate__r.FirstName,
+    Candidate__r.LastName,
+    Candidate__r.Email,
+    Candidate__r.MobilePhone,
+    SchedulingTypeId.PRESCREEN,
+    application.Id,
+    Calendar_ID__c,
+  );
+
   await updateApplication(
     conn,
     { id: applicationId },
     {
       Challenge_Scheduling_Link__c: challengeSchedulingLink,
       Webinar_Scheduling_Link__c: webinarSchedulingLink,
+      Prescreen_Scheduling_Link__c: prescreenSchedulingLink,
     }
   );
 

@@ -35,7 +35,7 @@ export const createApplication = async (
     CloseDate: new Date().toISOString() as DateString,
     Application_Date__c: new Date().toISOString() as DateString,
     StageName: stageName,
-    ...(rejectionReason && { Rejection_Reason__c: rejectionReason, Rejection_Stage__c: 'Knockout' }),
+    ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
     Application_Device__c: applicationFields.deviceType,
     ...(applicationFields.utmSource && { UTM_Source__c: applicationFields.utmSource }),
     ...(applicationFields.utmMedium && { UTM_Medium__c: applicationFields.utmMedium }),
@@ -90,7 +90,7 @@ export const fetchApplication = async (
     .sobject('Opportunity')
     .findOne({ Id: { $eq: applicationId } })
     .select(
-      'Id, Challenge_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
+      'Id, Challenge_Scheduling_Link__c, Prescreen_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
     );
 
   return application
@@ -117,6 +117,9 @@ export const findApplicationByAppointmentId = async (
       break;
     case SchedulingType.WEBINAR:
       appointmentIdField = 'Webinar_Appointment_ID__c';
+      break;
+    case SchedulingType.PRESCREEN:
+      appointmentIdField = 'Prescreen_Appointment_ID__c';
       break;
   }
 
@@ -195,7 +198,7 @@ export const saveSchedulingDataByApplicationId = async (
   const application = await fetchApplication(conn, applicationId);
   const { stageName, rejectionReason } = deriveApplicationStatus(applicationStatus);
   let updateData: Partial<Fields$Opportunity>;
-  let eventType: string;
+  let eventType: string = type;
   switch (type) {
     case SchedulingType.CHALLENGE: {
       eventType = `${type}(${application.Job__r.Coding_Challenge_Name__c})`;
@@ -209,7 +212,6 @@ export const saveSchedulingDataByApplicationId = async (
       break;
     }
     case SchedulingType.TECHSCREEN: {
-      eventType = type;
       updateData = {
         Tech_Screen_Appointment_Status__c: status,
         Tech_Screen_Date__c: date as DateString,
@@ -222,7 +224,6 @@ export const saveSchedulingDataByApplicationId = async (
       break;
     }
     case SchedulingType.WEBINAR: {
-      eventType = type;
       updateData = {
         StageName: stageName,
         ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
@@ -233,6 +234,16 @@ export const saveSchedulingDataByApplicationId = async (
         Webinar_Registrant_ID__c: webinarRegistration.registrantId,
         Webinar_ID__c: webinarRegistration.webinarId,
         Webinar_Occurrence_ID__c: webinarRegistration.occurrenceId,
+      };
+      break;
+    }
+    case SchedulingType.PRESCREEN: {
+      updateData = {
+        StageName: stageName,
+        ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
+        Prescreen_Appointment_Status__c: status,
+        Prescreen_Appointment_ID__c: `${appointment.id}`,
+        Prescreen_Date__c: date as DateString,
       };
       break;
     }
@@ -261,7 +272,7 @@ export const saveSchedulingDataByAppointmentId = async (
   if (application) {
     let updateData: Partial<Fields$Opportunity>;
     const { stageName, rejectionReason } = deriveApplicationStatus(applicationStatus);
-    let eventType: string;
+    let eventType: string = type;
     switch (type) {
       case SchedulingType.CHALLENGE: {
         eventType = `${type}(${application.Job__r.Coding_Challenge_Name__c})`;
@@ -274,7 +285,6 @@ export const saveSchedulingDataByAppointmentId = async (
         break;
       }
       case SchedulingType.TECHSCREEN: {
-        eventType = type;
         updateData = {
           Tech_Screen_Appointment_Status__c: status,
           Tech_Screen_Date__c: date as DateString,
@@ -285,7 +295,6 @@ export const saveSchedulingDataByAppointmentId = async (
         break;
       }
       case SchedulingType.WEBINAR: {
-        eventType = type;
         updateData = {
           StageName: stageName,
           ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
@@ -297,6 +306,15 @@ export const saveSchedulingDataByAppointmentId = async (
             Webinar_ID__c: webinarRegistration.webinarId,
             Webinar_Occurrence_ID__c: webinarRegistration.occurrenceId,
           }),
+        };
+        break;
+      }
+      case SchedulingType.PRESCREEN: {
+        updateData = {
+          StageName: stageName,
+          ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
+          Prescreen_Appointment_Status__c: status,
+          Prescreen_Date__c: date as DateString,
         };
         break;
       }
