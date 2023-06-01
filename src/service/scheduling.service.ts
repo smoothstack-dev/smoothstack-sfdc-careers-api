@@ -34,6 +34,9 @@ export const processSchedulingEvent = async (event: SchedulingEvent) => {
     case SchedulingTypeId.TECHSCREEN:
       await processTechScreenScheduling(event);
       break;
+    case SchedulingTypeId.PRESCREEN:
+      await processPrescreenScheduling(event);
+      break;
   }
 };
 
@@ -293,6 +296,64 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
       if (application) {
         await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Rejected' });
         await cancelCalendarInvite(application.Event_ID_Microsoft__c);
+      }
+      break;
+    }
+  }
+};
+
+const processPrescreenScheduling = async (event: SchedulingEvent) => {
+  const { apiKey, userId } = await getSquareSpaceSecrets();
+  const appointment = await fetchAppointment(apiKey, userId, event.id);
+  const conn = await getSFDCConnection();
+  const eventType = event.action.split('.')[1];
+  const schedulingType = SchedulingType.PRESCREEN;
+  switch (eventType) {
+    case 'scheduled': {
+      const existingAppointment = await findExistingAppointment(apiKey, userId, appointment);
+      const status = existingAppointment ? 'rescheduled' : 'scheduled';
+      const applicationId = appointment.forms
+        .find((f) => f.id === 2075339)
+        .values.find((v) => v.fieldID === 11569425).value;
+      const application = await saveSchedulingDataByApplicationId(
+        conn,
+        applicationId,
+        status,
+        appointment,
+        schedulingType,
+        'Prescreen Scheduled'
+      );
+      await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
+      if (existingAppointment) {
+        await cancelAppointment(apiKey, userId, existingAppointment.id);
+      }
+      break;
+    }
+    case 'rescheduled': {
+      const application = await saveSchedulingDataByAppointmentId(
+        conn,
+        eventType,
+        appointment.id,
+        appointment.datetime,
+        schedulingType,
+        'Prescreen Scheduled'
+      );
+      if (application) {
+        await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
+      }
+      break;
+    }
+    case 'canceled': {
+      const application = await saveSchedulingDataByAppointmentId(
+        conn,
+        eventType,
+        appointment.id,
+        '',
+        schedulingType,
+        'R-Prescreen Canceled'
+      );
+      if (application) {
+        await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Rejected' });
       }
       break;
     }

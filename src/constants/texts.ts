@@ -20,7 +20,7 @@ export const TEXTS = {
   webinar_no_show_text_1:
     'Hi %FIRSTNAME%, I noticed that you missed the information session. If you would like to reschedule, click on the link below to reschedule, or reach out to me directly.\n\n%WEBINAR_SCHEDULING_LINK%\n\n-%OWNERFIRSTNAME%\n\nSmoothstack Hiring',
   prescreen_text_1:
-    "Thank you for attending our Information Session! I'd like to schedule some time with you to get to know you better and answer any questions you have regarding this role. Please click on the calendar link below to schedule a 1:1 call with me.\n\n%HUBSPOT_CALENDAR_LINK%\n\nI look forward to speaking with you!\n\n%OWNERFIRSTNAME%\n\nSmoothstack Hiring",
+    "Thank you for attending our Information Session! I'd like to schedule some time with you to get to know you better and answer any questions you have regarding this role. Please click on the calendar link below to schedule a 1:1 call with me.\n\n%PRESCREEN_SCHEDULING_LINK%\n\nI look forward to speaking with you!\n\n%OWNERFIRSTNAME%\n\nSmoothstack Hiring",
   prescreen_text_2:
-    "Hi %FIRSTNAME%, this is %OWNERFIRSTNAME% from Smoothstack. This is my final attempt to schedule your interview. If I don't hear from you, I am going to close out your application.\n\nPlease click on the calendar link below to schedule a 1:1 call with me.\n\n%HUBSPOT_CALENDAR_LINK%\n\n%OWNERFIRSTNAME%\n\nSmoothstack Hiring",
+    "Hi %FIRSTNAME%, this is %OWNERFIRSTNAME% from Smoothstack. This is my final attempt to schedule your interview. If I don't hear from you, I am going to close out your application.\n\nPlease click on the calendar link below to schedule a 1:1 call with me.\n\n%PRESCREEN_SCHEDULING_LINK%\n\n%OWNERFIRSTNAME%\n\nSmoothstack Hiring",
 };

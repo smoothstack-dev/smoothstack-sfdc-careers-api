@@ -7,14 +7,16 @@ export const getSchedulingLink = (
   email: string,
   phone: string,
   typeId: SchedulingTypeId,
-  submissionId?: string
+  applicationId: string,
+  calendarId?: string
 ) => {
   return (
     `https://app.squarespacescheduling.com/schedule.php?owner=23045512&appointmentType=${typeId}&firstName=${encodeURIComponent(
       firstName
     )}&lastName=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(
       phone
-    )}&field:13195611=sfdc` + (submissionId ? `&field:11569425=${encodeURIComponent(submissionId)}` : '')
+    )}&field:13195611=sfdc&field:11569425=${encodeURIComponent(applicationId)}` +
+    (calendarId ? `&calendarID=${encodeURIComponent(calendarId)}` : '')
   );
 };
 

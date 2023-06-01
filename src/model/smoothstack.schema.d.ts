@@ -2451,6 +2451,7 @@ type Fields$Assignment_Group_Member__ChangeEvent = {
   LastModifiedById: string | null;
   Assignment_Group__c: string | null;
   User__c: string | null;
+  Calendar_ID__c: string | null;
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
@@ -2486,6 +2487,7 @@ type Fields$Assignment_Group_Member__c = {
   LastReferencedDate: DateString | null;
   Assignment_Group__c: string;
   User__c: string | null;
+  Calendar_ID__c: string;
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
@@ -23892,6 +23894,195 @@ interface SObjectDefinition$OwnerChangeOptionInfo extends SObjectDefinition<'Own
     ChildRelationships: ChildRelationships$OwnerChangeOptionInfo;
   }
 
+type Fields$PTO_Request__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  PTO_Year__c: string | null;
+  Approval_Status__c: string | null;
+  Contact__c: string | null;
+  Hours__c: number | null;
+  Start_Date__c: DateString | null;
+  End_Date__c: DateString | null;
+  Status__c: string | null;
+  PTO_Balance__c: number | null;
+};
+
+type ParentReferences$PTO_Request__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$PTO_Request__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$PTO_Request__ChangeEvent extends SObjectDefinition<'PTO_Request__ChangeEvent'> {
+    Name: 'PTO_Request__ChangeEvent';
+    Fields: Fields$PTO_Request__ChangeEvent;
+    ParentReferences: ParentReferences$PTO_Request__ChangeEvent;
+    ChildRelationships: ChildRelationships$PTO_Request__ChangeEvent;
+  }
+
+type Fields$PTO_Request__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  PTO_Year__c: string;
+  Approval_Status__c: string | null;
+  Contact__c: string | null;
+  Hours__c: number;
+  Start_Date__c: DateString;
+  End_Date__c: DateString | null;
+  Status__c: string | null;
+  PTO_Balance__c: number | null;
+};
+
+type ParentReferences$PTO_Request__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  PTO_Year__r: SObjectDefinition$PTO_Year__c;
+  Contact__r: SObjectDefinition$Contact | null;
+};
+
+type ChildRelationships$PTO_Request__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$PTO_Request__c extends SObjectDefinition<'PTO_Request__c'> {
+    Name: 'PTO_Request__c';
+    Fields: Fields$PTO_Request__c;
+    ParentReferences: ParentReferences$PTO_Request__c;
+    ChildRelationships: ChildRelationships$PTO_Request__c;
+  }
+
+type Fields$PTO_Year__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Contact__c: string | null;
+  Balance__c: number | null;
+  Carryover__c: number | null;
+  Earned__c: number | null;
+  Pending__c: number | null;
+  Scheduled__c: number | null;
+  Taken__c: number | null;
+  Year__c: string | null;
+};
+
+type ParentReferences$PTO_Year__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$PTO_Year__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$PTO_Year__ChangeEvent extends SObjectDefinition<'PTO_Year__ChangeEvent'> {
+    Name: 'PTO_Year__ChangeEvent';
+    Fields: Fields$PTO_Year__ChangeEvent;
+    ParentReferences: ParentReferences$PTO_Year__ChangeEvent;
+    ChildRelationships: ChildRelationships$PTO_Year__ChangeEvent;
+  }
+
+type Fields$PTO_Year__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Contact__c: string;
+  Balance__c: number | null;
+  Carryover__c: number | null;
+  Earned__c: number | null;
+  Pending__c: number | null;
+  Scheduled__c: number | null;
+  Taken__c: number | null;
+  Year__c: string;
+};
+
+type ParentReferences$PTO_Year__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$PTO_Year__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$PTO_Year__c extends SObjectDefinition<'PTO_Year__c'> {
+    Name: 'PTO_Year__c';
+    Fields: Fields$PTO_Year__c;
+    ParentReferences: ParentReferences$PTO_Year__c;
+    ChildRelationships: ChildRelationships$PTO_Year__c;
+  }
+
 type Fields$PackageLicense = {
   //
   Id: string;
@@ -38242,6 +38433,10 @@ export interface SmoothstackSchema extends Schema {
     OutgoingEmailRelation: SObjectDefinition$OutgoingEmailRelation;
     OwnedContentDocument: SObjectDefinition$OwnedContentDocument;
     OwnerChangeOptionInfo: SObjectDefinition$OwnerChangeOptionInfo;
+    PTO_Request__ChangeEvent: SObjectDefinition$PTO_Request__ChangeEvent;
+    PTO_Request__c: SObjectDefinition$PTO_Request__c;
+    PTO_Year__ChangeEvent: SObjectDefinition$PTO_Year__ChangeEvent;
+    PTO_Year__c: SObjectDefinition$PTO_Year__c;
     PackageLicense: SObjectDefinition$PackageLicense;
     Partner: SObjectDefinition$Partner;
     PartnerRole: SObjectDefinition$PartnerRole;
