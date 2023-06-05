@@ -237,9 +237,7 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
         status,
         appointment,
         schedulingType,
-        'Tech Screen Scheduled',
-        null,
-        screenerEmail
+        'Tech Screen Scheduled'
       );
       await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
       if (existingAppointment) {
@@ -265,9 +263,7 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
         appointment.id,
         appointment.datetime,
         schedulingType,
-        'Tech Screen Scheduled',
-        null,
-        screenerEmail
+        'Tech Screen Scheduled'
       );
       if (application) {
         await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
