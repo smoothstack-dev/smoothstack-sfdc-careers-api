@@ -28,7 +28,7 @@ export const createApplication = async (
   const { candidateFields, applicationFields } = application;
 
   const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmTerm);
-  const { stageName, rejectionReason } = deriveApplicationStatus(applicationFields.status);
+  const { stageName, rejectionReason, snoozeReason } = deriveApplicationStatus(applicationFields.status);
   const applicationRecord: Partial<Fields$Opportunity> = {
     RecordTypeId: '0125G000000feaeQAA',
     Name: uuidv4(),
@@ -36,6 +36,7 @@ export const createApplication = async (
     Application_Date__c: new Date().toISOString() as DateString,
     StageName: stageName,
     ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
+    ...(snoozeReason && { Snooze_Reason__c: snoozeReason }),
     Application_Device__c: applicationFields.deviceType,
     ...(applicationFields.utmSource && { UTM_Source__c: applicationFields.utmSource }),
     ...(applicationFields.utmMedium && { UTM_Medium__c: applicationFields.utmMedium }),
@@ -90,7 +91,7 @@ export const fetchApplication = async (
     .sobject('Opportunity')
     .findOne({ Id: { $eq: applicationId } })
     .select(
-      'Id, Challenge_Scheduling_Link__c, Prescreen_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
+      'Id, Challenge_Scheduling_Link__c, Prescreen_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Nickname__c, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
     );
 
   return application

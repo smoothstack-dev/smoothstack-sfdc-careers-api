@@ -94,7 +94,8 @@ export const generateDocument = async (applicationId: string) => {
   await pDoc.createDocument(body);
 };
 
-export const sendDocument = async (documentId: string) => {
+export const sendDocument = async (documentId: string, applicationId:string) => {
+  const conn = await getSFDCConnection();
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const body: DocumentsApiSendDocumentRequest = {
     id: documentId,
@@ -106,8 +107,14 @@ export const sendDocument = async (documentId: string) => {
       },
     },
   };
-
   await pDoc.sendDocument(body);
+  await updateApplication(
+    conn,
+    { id: applicationId },
+    {
+      StageName: 'Quick Course Offered',
+    }
+  );
 };
 
 export const processSignedDocument = async (documentId: string, applicationId: string) => {

@@ -149,7 +149,7 @@ export const processWebinarEvent = async (event: SNSEvent): Promise<void> => {
     await updateApplication(
       conn,
       { byField: 'Webinar_Registrant_ID__c', byValue: absentee.id },
-      { Webinar_Attended__c: 'No', StageName: 'Rejected', Rejection_Reason__c: 'Webinar no show' }
+      { Webinar_Attended__c: 'No', StageName: 'Rejected', Rejection_Reason__c: 'No Show' }
     );
   }
   console.log('Successfully processed webinar event');

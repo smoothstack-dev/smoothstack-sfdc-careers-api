@@ -9,7 +9,7 @@ const documentEventProcessor = async (event: SNSEvent) => {
     switch (docEvent.event) {
       case 'document_state_changed':
         if (docEvent.data.status === 'document.draft') {
-          await sendDocument(docEvent.data.id);
+          await sendDocument(docEvent.data.id, docEvent.data.metadata.applicationId);
         }
         break;
       case 'recipient_completed':

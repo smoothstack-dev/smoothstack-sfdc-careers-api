@@ -1,7 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 import jobs from './src/functions/jobs';
 import { snsResources } from './resources/sns/snsResources';
-import linksGenerator from './src/functions/linksGenerator';
 import appointmentGenerator from './src/functions/appointmentGenerator';
 import schedulingEvents from './src/functions/schedulingEvents';
 import webinarEvents from './src/functions/webinarEvents';
@@ -11,6 +10,7 @@ import documentEvents from './src/functions/documentEvents';
 import documentGenerator from './src/functions/documentGenerator';
 import documentEventProcessor from './src/functions/documentEventProcessor';
 import hubspotEvents from './src/functions/hubspotEvents';
+import dataGenerator from './src/functions/dataGenerator';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -67,7 +67,7 @@ const serverlessConfiguration: AWS = {
   package: { individually: true },
   functions: {
     jobs,
-    linksGenerator,
+    dataGenerator,
     appointmentGenerator,
     schedulingEvents,
     webinarEvents,

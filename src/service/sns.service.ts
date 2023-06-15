@@ -1,4 +1,3 @@
-import { LinksGenerationRequest, LinksGenerationType } from '../model/Links';
 import { SNS } from 'aws-sdk';
 import { PublishInput } from 'aws-sdk/clients/sns';
 import { getSNSConfig } from '../util/sns.util';
@@ -11,11 +10,12 @@ import {
 import { WEBINAR_TOPIC, WEBINAR_TYPE } from './webinar.service';
 import { WebinarEvent } from '../model/Webinar';
 import { DocumentEvent, DocumentGenerationRequest } from '../model/Document';
+import { DataGenerationRequest, GenerationType } from '../model/ApplicationData';
 
-export const publishLinksGenerationRequest = async (applicationId: string, type: LinksGenerationType) => {
+export const publishDataGenerationRequest = async (applicationId: string, type: GenerationType) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
-  const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-links-generation-sns-topic-v2`;
-  const request: LinksGenerationRequest = {
+  const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-data-generation-sns-topic-v2`;
+  const request: DataGenerationRequest = {
     applicationId,
     type,
   };

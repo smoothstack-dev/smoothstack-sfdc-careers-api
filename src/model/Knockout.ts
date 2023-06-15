@@ -34,9 +34,9 @@ export const KNOCKOUT_STATUS = {
   [Knockout.PASS]: { applicationStatus: 'Submitted', candidateStatus: 'Active' },
   [Knockout.WORK_AUTH]: { applicationStatus: 'R-Work Authorization', candidateStatus: 'Rejected' },
   [Knockout.RELOCATION]: { applicationStatus: 'R-Relocation', candidateStatus: 'Rejected' },
-  [Knockout.GRADUATION]: { applicationStatus: 'R-Timing', candidateStatus: 'Snooze' },
-  [Knockout.YEARS_OF_EXP]: { applicationStatus: 'R-Years of Experience', candidateStatus: 'Snooze' },
-  [Knockout.DEGREE]: { applicationStatus: 'R-Education', candidateStatus: 'Snooze' },
+  [Knockout.GRADUATION]: { applicationStatus: 'S-Graduation Date', candidateStatus: 'Snooze' },
+  [Knockout.YEARS_OF_EXP]: { applicationStatus: 'R-Years of Experience', candidateStatus: 'Rejected' },
+  [Knockout.DEGREE]: { applicationStatus: 'R-Education', candidateStatus: 'Rejected' },
   [Knockout.SELF_RANK]: { applicationStatus: 'R-Self Rank', candidateStatus: 'Rejected' },
 };
 

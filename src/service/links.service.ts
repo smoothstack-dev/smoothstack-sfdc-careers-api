@@ -1,36 +1,18 @@
-import { SNSEvent } from 'aws-lambda';
 import { Connection, DateString } from 'jsforce';
-import { ChallengeLinksData, LinksGenerationRequest, TechScreenLinksData } from '../model/Links';
+import { ChallengeLinksData, TechScreenLinksData } from '../model/Links';
 import { SchedulingTypeId } from '../model/SchedulingType';
-import { Fields$Contact, SmoothstackSchema } from '../model/smoothstack.schema';
+import { SmoothstackSchema } from '../model/smoothstack.schema';
 import { getSchedulingLink } from '../util/links';
 import { fetchApplication, updateApplication } from './application.service';
-import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { fetchCandidate } from './candidate.service';
 import { Application } from '../model/Application';
 import { CHALLENGE_APP_STATUS, deriveChallengeResult } from '../util/challenge.util';
 import { generateChallengeLink } from './challenge.service';
 import { deriveApplicationStatus, deriveApplicationStatusTS } from '../util/application.util';
-import { publishLinksGenerationRequest } from './sns.service';
 import { findHTDAssignmentGroupMemberByUserId } from './assigmentGroup.service';
+import { publishDataGenerationRequest } from './sns.service';
 
-export const generateLinks = async (event: SNSEvent) => {
-  console.log('Received Links Generation Request.');
-  const request: LinksGenerationRequest = JSON.parse(event.Records[0].Sns.Message);
-  const conn = await getSFDCConnection();
-  switch (request.type) {
-    case 'initial': {
-      await generateInitialLinks(conn, request.applicationId);
-      break;
-    }
-    case 'techscreen': {
-      await generateTechScreenLinks(conn, request.applicationId);
-      break;
-    }
-  }
-};
-
-const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applicationId: string) => {
+export const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applicationId: string) => {
   const application = await fetchApplication(conn, applicationId);
   const { Candidate__r } = application as any;
   const { Calendar_ID__c } = await findHTDAssignmentGroupMemberByUserId(conn, Candidate__r.Owner.Id);
@@ -60,7 +42,7 @@ const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applica
     Candidate__r.MobilePhone,
     SchedulingTypeId.PRESCREEN,
     application.Id,
-    Calendar_ID__c,
+    Calendar_ID__c
   );
 
   await updateApplication(
@@ -97,7 +79,7 @@ export const generateChallengeLinks = async (conn: Connection<SmoothstackSchema>
         ...(previousChallengeScore && { Challenge_Score__c: previousChallengeScore }),
       }
     );
-    applicationStatus === 'Challenge Passed' && (await publishLinksGenerationRequest(applicationId, 'techscreen'));
+    applicationStatus === 'Challenge Passed' && (await publishDataGenerationRequest(applicationId, 'TECHSCREEN_LINKS'));
     if (!applicationStatus) {
       return challengeLink;
     }
