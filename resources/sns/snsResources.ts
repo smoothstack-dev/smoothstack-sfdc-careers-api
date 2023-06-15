@@ -1,10 +1,10 @@
 import { AWS } from '@serverless/typescript';
 
 export const snsResources: AWS['resources']['Resources'] = {
-  LinksGenerationTopic: {
+  DataGenerationTopic: {
     Type: 'AWS::SNS::Topic',
     Properties: {
-      TopicName: 'smoothstack-links-generation-sns-topic-v2',
+      TopicName: 'smoothstack-data-generation-sns-topic-v2',
     },
   },
   AppointmentGenerationTopic: {

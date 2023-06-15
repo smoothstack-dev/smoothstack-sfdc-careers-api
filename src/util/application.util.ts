@@ -1,14 +1,20 @@
 export interface ApplicationStatus {
   stageName: string;
   rejectionReason?: string;
+  snoozeReason?: string;
 }
 
 export const deriveApplicationStatus = (status: string): ApplicationStatus => {
   const shortStatus = status?.split('-')[0];
-  const rejectionReason = status?.split('-')[1];
+  const reason = status?.split('-')[1];
+  const statusMap = {
+    R: 'Rejected',
+    S: 'Snooze',
+  };
   return {
-    stageName: shortStatus === 'R' ? 'Rejected' : status,
-    rejectionReason,
+    stageName: statusMap[shortStatus] ?? status,
+    ...(shortStatus === 'S' && { snoozeReason: reason }),
+    ...(shortStatus === 'R' && { rejectionReason: reason }),
   };
 };
 

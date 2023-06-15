@@ -5,8 +5,8 @@ export default {
   events: [
     {
       sns: {
-        arn: { Ref: 'LinksGenerationTopic' },
-        topicName: 'smoothstack-links-generation-sns-topic-v2',
+        arn: { Ref: 'DataGenerationTopic' },
+        topicName: 'smoothstack-data-generation-sns-topic-v2',
       },
     },
   ],

@@ -50,7 +50,7 @@ const updateDeal = async (token: string, dealId: number, updateData: any) => {
 
 const prepTextMessage = (msg: string, application: Application) => {
   const vars = {
-    '%FIRSTNAME%': application.Candidate__r.FirstName,
+    '%FIRSTNAME%': application.Candidate__r.Nickname__c || application.Candidate__r.FirstName,
     '%OWNERFIRSTNAME%': application.Candidate__r.Owner.FirstName,
     '%CHALLENGE_SCHEDULING_LINK%': application.Challenge_Scheduling_Link__c,
     '%CHALLENGE_LINK%': application.Challenge_Link__c,

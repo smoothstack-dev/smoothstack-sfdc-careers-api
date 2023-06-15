@@ -10,10 +10,10 @@ import { calculateKnockout } from '../util/knockout.util';
 import { createApplication } from './application.service';
 import { getSchedulingLink } from '../util/links';
 import { SchedulingTypeId } from '../model/SchedulingType';
-import { publishLinksGenerationRequest } from './sns.service';
 import { Application } from '../model/Application';
 import { saveNote } from './notes.service';
 import { generateApplicationNote } from '../util/note.util';
+import { publishDataGenerationRequest } from './sns.service';
 
 const DAY_DIFF = 60;
 
@@ -126,7 +126,8 @@ export const apply = async (event: APIGatewayProxyEvent) => {
       saveNote(conn, candidateId, { title: 'Knockout', content: KNOCKOUT_NOTE[knockout] }),
     ];
     await Promise.all(noteReqs);
-    await publishLinksGenerationRequest(applicationId, 'initial');
+    await publishDataGenerationRequest(applicationId, 'INITIAL_LINKS');
+    await publishDataGenerationRequest(applicationId, 'SMS_CONTACT');
 
     console.log('Successfully created new Candidate.');
     return {

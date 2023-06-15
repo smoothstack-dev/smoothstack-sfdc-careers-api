@@ -9,8 +9,8 @@ import { Connection } from 'jsforce';
 import { CHALLENGE_APP_STATUS, deriveChallengeResult } from '../util/challenge.util';
 import { deriveApplicationStatus } from '../util/application.util';
 import { updateCandidate } from './candidate.service';
-import { publishLinksGenerationRequest } from './sns.service';
 import { saveNote } from './notes.service';
+import { publishDataGenerationRequest } from './sns.service';
 
 const BASE_URL = `https://www.hackerrank.com/x/api/v3/tests`;
 
@@ -86,5 +86,5 @@ const saveApplicationChallengeResult = async (
   await saveNote(conn, Candidate__r.Id, { title: 'Challenge Result', content: resultNote });
   await updateCandidate(conn, Candidate__r.Id, { Candidate_Status__c: candidateStatus });
   await updateApplication(conn, { id: applicationId }, updateData);
-  result === 'Pass' && (await publishLinksGenerationRequest(applicationId, 'techscreen'));
+  result === 'Pass' && (await publishDataGenerationRequest(applicationId, 'TECHSCREEN_LINKS'));
 };

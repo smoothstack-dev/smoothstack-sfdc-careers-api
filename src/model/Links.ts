@@ -1,11 +1,4 @@
-import { ApplicationStatus } from "../util/application.util";
-
-export type LinksGenerationType = 'initial' | 'techscreen';
-
-export interface LinksGenerationRequest {
-  type: LinksGenerationType;
-  applicationId: string;
-}
+import { ApplicationStatus } from '../util/application.util';
 
 export interface ChallengeLinksData {
   challengeLink: string;
