@@ -20,7 +20,7 @@ export const findActiveKOJobs = async (conn: Connection<SmoothstackSchema>) => {
 };
 
 export const fetchJob = async (conn: Connection<SmoothstackSchema>, jobId: number) => {
-  const job = await conn.sobject('Job__c').findOne({ Job_ID__c: { $eq: jobId } });
+  const job = await conn.sobject('Job__c').findOne({ Job_ID__c: { $eq: jobId ?? null } });
   return job;
 };
 

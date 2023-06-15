@@ -10,7 +10,7 @@ export const findHTDAssignmentGroupMemberByUserId = async (
   userId: string
 ): Promise<Fields$Assignment_Group_Member__c> => {
   return await conn.sobject('Assignment_Group_Member__c').findOne({
-    User__c: { $eq: userId },
+    User__c: { $eq: userId ?? null },
     $and: { Assignment_Group__c: HTD_GROUP_ID },
   });
 };

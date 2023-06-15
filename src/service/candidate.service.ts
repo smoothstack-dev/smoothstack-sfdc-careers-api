@@ -8,7 +8,7 @@ import { fetchHTDAssignmentGroup } from './assigmentGroup.service';
 export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candidateId: string): Promise<Candidate> => {
   return await conn
     .sobject('Contact')
-    .findOne({ Id: { $eq: candidateId } })
+    .findOne({ Id: { $eq: candidateId ?? null } })
     .include('Applications__r')
     .select('*, Job__r.*')
     .end();
@@ -22,7 +22,7 @@ export const findCandidateByEmailOrPhone = async (
   return await conn
     .sobject('Contact')
     .findOne({
-      $or: [{ Email: { $eq: email } }, { MobilePhone: { $eq: phone } }],
+      $or: [{ Email: { $eq: email ?? null } }, { MobilePhone: { $eq: phone ?? null } }],
       $and: { RecordTypeId: '0125G000000feaZQAQ' },
     })
     .include('Applications__r')
@@ -79,7 +79,7 @@ export const fetchCandidateFiles = async (
   const contentVersionIds = (
     await conn
       .sobject('ContentDocumentLink')
-      .find({ LinkedEntityId: { $eq: candidateId } })
+      .find({ LinkedEntityId: { $eq: candidateId ?? null } })
       .select('ContentDocument.LatestPublishedVersionId')
   ).map((cdl) => cdl.ContentDocument.LatestPublishedVersionId);
 
