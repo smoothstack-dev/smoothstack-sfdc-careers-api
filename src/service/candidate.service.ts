@@ -5,6 +5,8 @@ import { getStateCode } from '../util/state.util';
 import { derivePotentialEmail } from '../util/candidate.util';
 import { fetchHTDAssignmentGroup } from './assigmentGroup.service';
 
+const CANDIDATE_RECORD_TYPE_ID = '0125G000000feaZQAQ';
+
 export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candidateId: string): Promise<Candidate> => {
   return await conn
     .sobject('Contact')
@@ -23,7 +25,7 @@ export const findCandidateByEmailOrPhone = async (
     .sobject('Contact')
     .findOne({
       $or: [{ Email: { $eq: email ?? null } }, { MobilePhone: { $eq: phone ?? null } }],
-      $and: { RecordTypeId: '0125G000000feaZQAQ' },
+      $and: { RecordTypeId: CANDIDATE_RECORD_TYPE_ID },
     })
     .include('Applications__r')
     .end();
@@ -36,7 +38,7 @@ export const createCandidate = async (
 ): Promise<string> => {
   const candidateOwner = await deriveCandidateOwner(conn, utmTerm);
   const candidateRecord: Partial<Fields$Contact> = {
-    RecordTypeId: '0125G000000feaZQAQ',
+    RecordTypeId: CANDIDATE_RECORD_TYPE_ID,
     Email: candidateFields.email,
     MobilePhone: candidateFields.phone,
     FirstName: candidateFields.firstName,

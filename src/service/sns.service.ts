@@ -9,8 +9,10 @@ import {
 } from '../model/AppointmentGenerationRequest';
 import { WEBINAR_TOPIC, WEBINAR_TYPE } from './webinar.service';
 import { WebinarEvent } from '../model/Webinar';
-import { DocumentEvent, DocumentGenerationRequest } from '../model/Document';
+import { DocumentEvent } from '../model/Document';
 import { DataGenerationRequest, GenerationType } from '../model/ApplicationData';
+import { ConsultantGenerationRequest } from '../model/Consultant';
+import { MSUser } from '../model/MSUser';
 
 export const publishDataGenerationRequest = async (applicationId: string, type: GenerationType) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
@@ -69,7 +71,7 @@ export const publishWebinarProcessingRequest = async (data: any) => {
 export const publishDocumentGenerationRequest = async (applicationId: string) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
   const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-document-generation-sns-topic-v2`;
-  const request: DocumentGenerationRequest = {
+  const request = {
     applicationId,
   };
   const message: PublishInput = {
@@ -85,6 +87,35 @@ export const publishDocumentEventProcessingRequest = async (docEvent: DocumentEv
   const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-document-event-processing-sns-topic-v2`;
   const message: PublishInput = {
     Message: JSON.stringify(docEvent),
+    TopicArn: topic,
+  };
+
+  await sns.publish(message).promise();
+};
+
+export const publishMSUserGenerationRequest = async (applicationId: string) => {
+  const sns = new SNS(getSNSConfig(process.env.ENV));
+  const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-ms-user-generation-sns-topic-v2`;
+  const request = {
+    applicationId,
+  };
+  const message: PublishInput = {
+    Message: JSON.stringify(request),
+    TopicArn: topic,
+  };
+
+  await sns.publish(message).promise();
+};
+
+export const publishConsultantGenerationRequest = async (applicationId: string, msUser: MSUser) => {
+  const sns = new SNS(getSNSConfig(process.env.ENV));
+  const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-consultant-generation-sns-topic-v2`;
+  const request: ConsultantGenerationRequest = {
+    applicationId,
+    msUser,
+  };
+  const message: PublishInput = {
+    Message: JSON.stringify(request),
     TopicArn: topic,
   };
 

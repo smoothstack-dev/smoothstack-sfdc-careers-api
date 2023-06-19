@@ -10,6 +10,7 @@ import {
   DocumentsApiSendDocumentRequest,
 } from 'pandadoc-node-client';
 import { saveSFDCFiles } from './files.service';
+import { publishMSUserGenerationRequest } from './sns.service';
 
 export const generateDocument = async (applicationId: string) => {
   const conn = await getSFDCConnection();
@@ -139,4 +140,5 @@ export const processSignedDocument = async (documentId: string, applicationId: s
       name: 'Signed_Quick_Course_Offer.pdf',
     },
   ]);
+  await publishMSUserGenerationRequest(applicationId);
 };
