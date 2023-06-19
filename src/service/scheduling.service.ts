@@ -18,6 +18,7 @@ import { updateCandidate } from './candidate.service';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { Connection } from 'jsforce';
 import { SmoothstackSchema } from '../model/smoothstack.schema';
+import { findUserByEmail } from './user.service';
 
 const baseUrl = 'https://acuityscheduling.com/api/v1';
 
@@ -231,13 +232,16 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
         .find((f) => f.id === 2075339)
         .values.find((v) => v.fieldID === 11569425).value;
       const screenerEmail = await findCalendarEmail(apiKey, userId, appointment.calendarID);
+      const screener = await findUserByEmail(conn, screenerEmail);
       const application = await saveSchedulingDataByApplicationId(
         conn,
         applicationId,
         status,
         appointment,
         schedulingType,
-        'Tech Screen Scheduled'
+        'Tech Screen Scheduled',
+        null,
+        screener?.Id
       );
       await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });
       if (existingAppointment) {
@@ -257,13 +261,16 @@ const processTechScreenScheduling = async (event: SchedulingEvent) => {
     }
     case 'rescheduled': {
       const screenerEmail = await findCalendarEmail(apiKey, userId, appointment.calendarID);
+      const screener = await findUserByEmail(conn, screenerEmail);
       const application = await saveSchedulingDataByAppointmentId(
         conn,
         eventType,
         appointment.id,
         appointment.datetime,
         schedulingType,
-        'Tech Screen Scheduled'
+        'Tech Screen Scheduled',
+        null,
+        screener?.Id
       );
       if (application) {
         await updateCandidate(conn, application.Candidate__r.Id, { Candidate_Status__c: 'Active' });

@@ -192,7 +192,8 @@ export const saveSchedulingDataByApplicationId = async (
   appointment: Appointment,
   type: SchedulingType,
   applicationStatus: string,
-  webinarRegistration?: WebinarRegistration
+  webinarRegistration?: WebinarRegistration,
+  screenerUserId?: string
 ) => {
   const { datetime: date } = appointment;
   const application = await fetchApplication(conn, applicationId);
@@ -219,6 +220,7 @@ export const saveSchedulingDataByApplicationId = async (
         StageName: stageName,
         ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
         Tech_Screen_Cancellation_Link__c: appointment.confirmationPage,
+        ...(screenerUserId && { Tech_Screener__c: screenerUserId }),
       };
       break;
     }
@@ -264,7 +266,8 @@ export const saveSchedulingDataByAppointmentId = async (
   date: string,
   type: SchedulingType,
   applicationStatus: string,
-  webinarRegistration?: WebinarRegistration
+  webinarRegistration?: WebinarRegistration,
+  screenerUserId?: string
 ) => {
   const application = await findApplicationByAppointmentId(conn, appointmentId, type);
   if (application) {
@@ -288,6 +291,7 @@ export const saveSchedulingDataByAppointmentId = async (
           Tech_Screen_Date__c: date as DateString,
           StageName: stageName,
           ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
+          ...(screenerUserId && { Tech_Screener__c: screenerUserId }),
         };
         break;
       }
