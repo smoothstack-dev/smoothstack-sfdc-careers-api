@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import { parse } from 'aws-multipart-parser';
-import { Knockout, KNOCKOUT_NOTE, KNOCKOUT_STATUS } from 'src/model/Knockout';
+import { Knockout, KNOCKOUT_NOTE, KNOCKOUT_STATUS } from '../model/Knockout';
 import { toTitleCase } from '../util/misc.util';
 import { resolveJobByKnockout } from '../util/job.util';
 import { getSFDCConnection } from './auth/sfdc.auth.service';

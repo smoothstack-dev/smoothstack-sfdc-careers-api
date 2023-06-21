@@ -6,7 +6,7 @@ import { SchedulingType, SchedulingTypeId } from '../model/SchedulingType';
 import { cancelWebinarRegistration, generateWebinarRegistration } from './webinar.service';
 import { publishAppointmentGenerationRequest } from './sns.service';
 import { cancelCalendarInvite } from './calendar.service';
-import { AppointmentType } from 'src/model/AppointmentGenerationRequest';
+import { AppointmentType } from '../model/AppointmentGenerationRequest';
 import {
   fetchApplication,
   fetchApplicationHistory,

@@ -3,7 +3,7 @@ import { getMSSecrets } from '../secrets.service';
 import { MSAuthData } from '../../model/Auth';
 
 export const getMSAuthData = async (): Promise<MSAuthData> => {
-  const { CLIENT_ID, CLIENT_SECRET, AUTHORITY, CALLBACK_URL } = await getMSSecrets();
+  const { CLIENT_ID, CLIENT_SECRET, AUTHORITY, CALLBACK_URL, CALLBACK_URL_V2 } = await getMSSecrets();
   const msalConfig = {
     auth: {
       clientId: CLIENT_ID,
@@ -16,5 +16,6 @@ export const getMSAuthData = async (): Promise<MSAuthData> => {
   return {
     token: result.accessToken,
     callBackUrl: CALLBACK_URL,
+    callBackUrlV2: CALLBACK_URL_V2,
   };
 };

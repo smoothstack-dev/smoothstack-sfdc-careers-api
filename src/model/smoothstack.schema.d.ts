@@ -2455,7 +2455,6 @@ type Fields$Assignment_Group_Member__ChangeEvent = {
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
-  Calendar_Link__c: string | null;
 };
 
 type ParentReferences$Assignment_Group_Member__ChangeEvent = {
@@ -2491,7 +2490,6 @@ type Fields$Assignment_Group_Member__c = {
   Last_Assignment_Date__c: DateString | null;
   Active__c: boolean;
   Pause_Assignments__c: boolean;
-  Calendar_Link__c: string | null;
 };
 
 type ParentReferences$Assignment_Group_Member__c = {
@@ -6899,6 +6897,7 @@ type Fields$Compensation_Policy__ChangeEvent = {
   LastModifiedById: string | null;
   Contact__c: string | null;
   Effective_Date__c: DateString | null;
+  End_Date__c: DateString | null;
   Holidays__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
@@ -6952,6 +6951,7 @@ type Fields$Compensation_Policy__c = {
   LastReferencedDate: DateString | null;
   Contact__c: string;
   Effective_Date__c: DateString;
+  End_Date__c: DateString | null;
   Holidays__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
@@ -7344,6 +7344,7 @@ type Fields$Contact = {
   Is_User_Active__c: boolean;
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
+  Smoothstack_Email__c: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -7684,6 +7685,7 @@ type Fields$ContactChangeEvent = {
   Is_User_Active__c: boolean;
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
+  Smoothstack_Email__c: string | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -17990,43 +17992,6 @@ interface SObjectDefinition$Invoice_Payment__c extends SObjectDefinition<'Invoic
     ChildRelationships: ChildRelationships$Invoice_Payment__c;
   }
 
-type Fields$Invoice_Settings__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  Company_Name__c: string | null;
-  Email_Sender_Display_Name__c: string | null;
-  From_Address_Line_1__c: string | null;
-  From_Address_Line_2__c: string | null;
-  From_Address_Line_3__c: string | null;
-  Invoices_CC_Email__c: string | null;
-  Invoices_Debug_Email__c: string | null;
-  Invoices_From_Email__c: string | null;
-  Company_Account_Name__c: string | null;
-};
-
-type ParentReferences$Invoice_Settings__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$Invoice_Settings__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$Invoice_Settings__ChangeEvent extends SObjectDefinition<'Invoice_Settings__ChangeEvent'> {
-    Name: 'Invoice_Settings__ChangeEvent';
-    Fields: Fields$Invoice_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_Settings__ChangeEvent;
-  }
-
 type Fields$Invoice_Settings__c = {
   //
   Id: string;
@@ -22287,7 +22252,6 @@ type Fields$Opportunity = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screener_Email__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -22569,7 +22533,6 @@ type Fields$OpportunityChangeEvent = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
-  Tech_Screener_Email__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -23674,6 +23637,7 @@ type ParentReferences$OrgWideEmailAddress = {
 
 type ChildRelationships$OrgWideEmailAddress = {
   //
+  SetupEntityAccessItems: SObjectDefinition$SetupEntityAccess;
 };
 
 interface SObjectDefinition$OrgWideEmailAddress extends SObjectDefinition<'OrgWideEmailAddress'> {
@@ -23899,19 +23863,23 @@ type Fields$PTO_Request__ChangeEvent = {
   Id: string | null;
   ReplayId: string | null;
   ChangeEventHeader: any;
+  OwnerId: string | null;
   Name: string | null;
   CreatedDate: DateString | null;
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
-  PTO_Year__c: string | null;
+  Comment__c: string | null;
+  Adjusted_Total_Hours__c: number | null;
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number | null;
   Start_Date__c: DateString | null;
-  End_Date__c: DateString | null;
   Status__c: string | null;
-  PTO_Balance__c: number | null;
+  Dates__c: string | null;
+  End_Date__c: DateString | null;
+  Total_Hours__c: number | null;
+  Type__c: string | null;
 };
 
 type ParentReferences$PTO_Request__ChangeEvent = {
@@ -23932,6 +23900,7 @@ interface SObjectDefinition$PTO_Request__ChangeEvent extends SObjectDefinition<'
 type Fields$PTO_Request__c = {
   //
   Id: string;
+  OwnerId: string;
   IsDeleted: boolean;
   Name: string;
   CreatedDate: DateString;
@@ -23941,21 +23910,24 @@ type Fields$PTO_Request__c = {
   SystemModstamp: DateString;
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
-  PTO_Year__c: string;
+  Comment__c: string | null;
+  Adjusted_Total_Hours__c: number | null;
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number;
   Start_Date__c: DateString;
-  End_Date__c: DateString | null;
   Status__c: string | null;
-  PTO_Balance__c: number | null;
+  Dates__c: string | null;
+  End_Date__c: DateString | null;
+  Total_Hours__c: number | null;
+  Type__c: string | null;
 };
 
 type ParentReferences$PTO_Request__c = {
   //
+  Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
-  PTO_Year__r: SObjectDefinition$PTO_Year__c;
   Contact__r: SObjectDefinition$Contact | null;
 };
 
@@ -23988,99 +23960,6 @@ interface SObjectDefinition$PTO_Request__c extends SObjectDefinition<'PTO_Reques
     Fields: Fields$PTO_Request__c;
     ParentReferences: ParentReferences$PTO_Request__c;
     ChildRelationships: ChildRelationships$PTO_Request__c;
-  }
-
-type Fields$PTO_Year__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  Contact__c: string | null;
-  Balance__c: number | null;
-  Carryover__c: number | null;
-  Earned__c: number | null;
-  Pending__c: number | null;
-  Scheduled__c: number | null;
-  Taken__c: number | null;
-  Year__c: string | null;
-};
-
-type ParentReferences$PTO_Year__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$PTO_Year__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$PTO_Year__ChangeEvent extends SObjectDefinition<'PTO_Year__ChangeEvent'> {
-    Name: 'PTO_Year__ChangeEvent';
-    Fields: Fields$PTO_Year__ChangeEvent;
-    ParentReferences: ParentReferences$PTO_Year__ChangeEvent;
-    ChildRelationships: ChildRelationships$PTO_Year__ChangeEvent;
-  }
-
-type Fields$PTO_Year__c = {
-  //
-  Id: string;
-  IsDeleted: boolean;
-  Name: string;
-  CreatedDate: DateString;
-  CreatedById: string;
-  LastModifiedDate: DateString;
-  LastModifiedById: string;
-  SystemModstamp: DateString;
-  Contact__c: string;
-  Balance__c: number | null;
-  Carryover__c: number | null;
-  Earned__c: number | null;
-  Pending__c: number | null;
-  Scheduled__c: number | null;
-  Taken__c: number | null;
-  Year__c: string;
-};
-
-type ParentReferences$PTO_Year__c = {
-  //
-  CreatedBy: SObjectDefinition$User;
-  LastModifiedBy: SObjectDefinition$User;
-  Contact__r: SObjectDefinition$Contact;
-};
-
-type ChildRelationships$PTO_Year__c = {
-  //
-  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
-  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
-  Attachments: SObjectDefinition$Attachment;
-  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
-  CombinedAttachments: SObjectDefinition$CombinedAttachment;
-  ContactRequests: SObjectDefinition$ContactRequest;
-  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
-  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
-  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
-  EventRelations: SObjectDefinition$EventRelation;
-  Notes: SObjectDefinition$Note;
-  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
-  ProcessExceptions: SObjectDefinition$ProcessException;
-  ProcessInstances: SObjectDefinition$ProcessInstance;
-  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
-  RecordActions: SObjectDefinition$RecordAction;
-  RecordActionHistories: SObjectDefinition$RecordActionHistory;
-  SurveySubjectEntities: SObjectDefinition$SurveySubject;
-  TaskRelations: SObjectDefinition$TaskRelation;
-  TopicAssignments: SObjectDefinition$TopicAssignment;
-};
-
-interface SObjectDefinition$PTO_Year__c extends SObjectDefinition<'PTO_Year__c'> {
-    Name: 'PTO_Year__c';
-    Fields: Fields$PTO_Year__c;
-    ParentReferences: ParentReferences$PTO_Year__c;
-    ChildRelationships: ChildRelationships$PTO_Year__c;
   }
 
 type Fields$PackageLicense = {
@@ -24374,6 +24253,220 @@ interface SObjectDefinition$PartyConsentShare extends SObjectDefinition<'PartyCo
     Fields: Fields$PartyConsentShare;
     ParentReferences: ParentReferences$PartyConsentShare;
     ChildRelationships: ChildRelationships$PartyConsentShare;
+  }
+
+type Fields$Pay_Period_Year__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Contact__c: string | null;
+  End_Date__c: DateString | null;
+  PTO_Carryover__c: number | null;
+  Start_Date__c: DateString | null;
+  Year__c: string | null;
+  PTO_Balance_2__c: number | null;
+  PTO_Balance__c: number | null;
+  PTO_Earned__c: number | null;
+  PTO_Pending_Approval__c: number | null;
+  PTO_Scheduled__c: number | null;
+  PTO_Taken__c: number | null;
+};
+
+type ParentReferences$Pay_Period_Year__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Pay_Period_Year__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Pay_Period_Year__ChangeEvent extends SObjectDefinition<'Pay_Period_Year__ChangeEvent'> {
+    Name: 'Pay_Period_Year__ChangeEvent';
+    Fields: Fields$Pay_Period_Year__ChangeEvent;
+    ParentReferences: ParentReferences$Pay_Period_Year__ChangeEvent;
+    ChildRelationships: ChildRelationships$Pay_Period_Year__ChangeEvent;
+  }
+
+type Fields$Pay_Period_Year__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Contact__c: string | null;
+  End_Date__c: DateString | null;
+  PTO_Carryover__c: number | null;
+  Start_Date__c: DateString | null;
+  Year__c: string | null;
+  PTO_Balance_2__c: number | null;
+  PTO_Balance__c: number | null;
+  PTO_Earned__c: number | null;
+  PTO_Pending_Approval__c: number | null;
+  PTO_Scheduled__c: number | null;
+  PTO_Taken__c: number | null;
+};
+
+type ParentReferences$Pay_Period_Year__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Contact__r: SObjectDefinition$Contact | null;
+};
+
+type ChildRelationships$Pay_Period_Year__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Pay_Period_Year__c extends SObjectDefinition<'Pay_Period_Year__c'> {
+    Name: 'Pay_Period_Year__c';
+    Fields: Fields$Pay_Period_Year__c;
+    ParentReferences: ParentReferences$Pay_Period_Year__c;
+    ChildRelationships: ChildRelationships$Pay_Period_Year__c;
+  }
+
+type Fields$Pay_Period__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Contact__c: string | null;
+  Earned_Data__c: string | null;
+  End_Date__c: DateString | null;
+  LWP_Hours__c: number | null;
+  PTO_Balance__c: number | null;
+  PTO_Carryover__c: number | null;
+  PTO_Earned__c: number | null;
+  PTO_Pending_Approval__c: number | null;
+  PTO_Scheduled__c: number | null;
+  PTO_Taken__c: number | null;
+  Payroll_Periods_Data__c: string | null;
+  Start_Date__c: DateString | null;
+  Pay_Period_Year__c: string | null;
+  PTO_Balance_wo_Carryover__c: number | null;
+  Status__c: string | null;
+};
+
+type ParentReferences$Pay_Period__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Pay_Period__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Pay_Period__ChangeEvent extends SObjectDefinition<'Pay_Period__ChangeEvent'> {
+    Name: 'Pay_Period__ChangeEvent';
+    Fields: Fields$Pay_Period__ChangeEvent;
+    ParentReferences: ParentReferences$Pay_Period__ChangeEvent;
+    ChildRelationships: ChildRelationships$Pay_Period__ChangeEvent;
+  }
+
+type Fields$Pay_Period__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Contact__c: string | null;
+  Earned_Data__c: string | null;
+  End_Date__c: DateString;
+  LWP_Hours__c: number | null;
+  PTO_Balance__c: number | null;
+  PTO_Carryover__c: number | null;
+  PTO_Earned__c: number | null;
+  PTO_Pending_Approval__c: number | null;
+  PTO_Scheduled__c: number | null;
+  PTO_Taken__c: number | null;
+  Payroll_Periods_Data__c: string | null;
+  Start_Date__c: DateString;
+  Pay_Period_Year__c: string;
+  PTO_Balance_wo_Carryover__c: number | null;
+  Status__c: string | null;
+};
+
+type ParentReferences$Pay_Period__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Contact__r: SObjectDefinition$Contact | null;
+  Pay_Period_Year__r: SObjectDefinition$Pay_Period_Year__c;
+};
+
+type ChildRelationships$Pay_Period__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Pay_Period__c extends SObjectDefinition<'Pay_Period__c'> {
+    Name: 'Pay_Period__c';
+    Fields: Fields$Pay_Period__c;
+    ParentReferences: ParentReferences$Pay_Period__c;
+    ChildRelationships: ChildRelationships$Pay_Period__c;
   }
 
 type Fields$Payroll_Config__ChangeEvent = {
@@ -33526,6 +33619,7 @@ type Fields$Timesheet_Line__ChangeEvent = {
   Is_Billable__c: boolean;
   Override_Details__c: string | null;
   Manager_3__c: string | null;
+  End_Date__c: DateString | null;
   PTO_Type__c: string | null;
 };
 
@@ -33594,6 +33688,7 @@ type Fields$Timesheet_Line__c = {
   Is_Billable__c: boolean;
   Override_Details__c: string | null;
   Manager_3__c: string | null;
+  End_Date__c: DateString | null;
   PTO_Type__c: string | null;
 };
 
@@ -33761,38 +33856,6 @@ interface SObjectDefinition$Timesheet_Settings_2__mdt extends SObjectDefinition<
     Fields: Fields$Timesheet_Settings_2__mdt;
     ParentReferences: ParentReferences$Timesheet_Settings_2__mdt;
     ChildRelationships: ChildRelationships$Timesheet_Settings_2__mdt;
-  }
-
-type Fields$Timesheet_Settings__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  CC_Email__c: string | null;
-  Email_Sender_Display_Name__c: string | null;
-  Redirect_All_to_Email__c: string | null;
-  Username_Prefix__c: string | null;
-};
-
-type ParentReferences$Timesheet_Settings__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$Timesheet_Settings__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$Timesheet_Settings__ChangeEvent extends SObjectDefinition<'Timesheet_Settings__ChangeEvent'> {
-    Name: 'Timesheet_Settings__ChangeEvent';
-    Fields: Fields$Timesheet_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_Settings__ChangeEvent;
   }
 
 type Fields$Timesheet_Settings__c = {
@@ -35270,6 +35333,7 @@ type Fields$UserPackageLicense = {
 type ParentReferences$UserPackageLicense = {
   //
   PackageLicense: SObjectDefinition$PackageLicense;
+  User: SObjectDefinition$User;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
 };
@@ -36147,6 +36211,7 @@ type Fields$Voucher__ChangeEvent = {
   Date_of_Purchase__c: DateString | null;
   Expiration_Date__c: DateString | null;
   Nmb_of_Attempts_Allowed__c: string | null;
+  Registration_Drop_Dead_Date__c: DateString | null;
   Credential_Name__c: string | null;
   Voucher_ID_Code__c: string | null;
   Status__c: string | null;
@@ -36186,6 +36251,7 @@ type Fields$Voucher__c = {
   Date_of_Purchase__c: DateString | null;
   Expiration_Date__c: DateString | null;
   Nmb_of_Attempts_Allowed__c: string;
+  Registration_Drop_Dead_Date__c: DateString | null;
   Credential_Name__c: string | null;
   Voucher_ID_Code__c: string;
   Status__c: string | null;
@@ -37054,41 +37120,6 @@ interface SObjectDefinition$pandadoc__PandaDocLog__c extends SObjectDefinition<'
     ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
   }
 
-type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  pandadoc__Document_Name__c: string | null;
-  pandadoc__JsonBuilder_Class_Name__c: string | null;
-  pandadoc__ReferencedRecipients__c: string | null;
-  pandadoc__Related_Pricing_Items__c: string | null;
-  pandadoc__Related_Recipients__c: string | null;
-  pandadoc__Send_Itself_As_Recipient__c: boolean;
-  pandadoc__Use_Standard_Builder__c: boolean;
-};
-
-type ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
-    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
-    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-  }
-
 type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
   //
   Id: string;
@@ -37306,35 +37337,6 @@ interface SObjectDefinition$pandadoc__Recipient_Map__c extends SObjectDefinition
     ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
   }
 
-type Fields$pandadoc__Settings__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  pandadoc__Value__c: string | null;
-};
-
-type ParentReferences$pandadoc__Settings__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$pandadoc__Settings__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$pandadoc__Settings__ChangeEvent extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
-    Name: 'pandadoc__Settings__ChangeEvent';
-    Fields: Fields$pandadoc__Settings__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
-  }
-
 type Fields$pandadoc__Settings__c = {
   //
   Id: string;
@@ -37471,45 +37473,6 @@ interface SObjectDefinition$pandadoc__TriggerSetting__c extends SObjectDefinitio
     Fields: Fields$pandadoc__TriggerSetting__c;
     ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
     ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
-  }
-
-type Fields$rcsfl__AdminSetting__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  rcsfl__AutoFill__c: boolean;
-  rcsfl__AutoSave__c: boolean;
-  rcsfl__HvsDispositionField__c: string | null;
-  rcsfl__HvsMode__c: boolean;
-  rcsfl__IsUnMandatory__c: boolean;
-  rcsfl__ToVoiceMail__c: boolean;
-  rcsfl__accountRelatedTo__c: boolean;
-  rcsfl__autoSelect__c: boolean;
-  rcsfl__fieldOrder__c: number | null;
-  rcsfl__popOnRinging__c: boolean;
-  rcsfl__saveOnRinging__c: boolean;
-};
-
-type ParentReferences$rcsfl__AdminSetting__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$rcsfl__AdminSetting__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$rcsfl__AdminSetting__ChangeEvent extends SObjectDefinition<'rcsfl__AdminSetting__ChangeEvent'> {
-    Name: 'rcsfl__AdminSetting__ChangeEvent';
-    Fields: Fields$rcsfl__AdminSetting__ChangeEvent;
-    ParentReferences: ParentReferences$rcsfl__AdminSetting__ChangeEvent;
-    ChildRelationships: ChildRelationships$rcsfl__AdminSetting__ChangeEvent;
   }
 
 type Fields$rcsfl__AdminSetting__c = {
@@ -37686,49 +37649,6 @@ interface SObjectDefinition$sansancard__SSCard__c extends SObjectDefinition<'san
     Fields: Fields$sansancard__SSCard__c;
     ParentReferences: ParentReferences$sansancard__SSCard__c;
     ChildRelationships: ChildRelationships$sansancard__SSCard__c;
-  }
-
-type Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
-  //
-  Id: string | null;
-  ReplayId: string | null;
-  ChangeEventHeader: any;
-  Name: string | null;
-  SetupOwnerId: string | null;
-  CreatedDate: DateString | null;
-  CreatedById: string | null;
-  LastModifiedDate: DateString | null;
-  LastModifiedById: string | null;
-  sansancard__AccountRecordType__c: string | null;
-  sansancard__AccountValue__c: string | null;
-  sansancard__ContactRecordType__c: string | null;
-  sansancard__ContactValue__c: string | null;
-  sansancard__DisableAllCards__c: boolean;
-  sansancard__DisableDisplayReport__c: boolean;
-  sansancard__DisplayAllDeleteCards__c: boolean;
-  sansancard__DisplayReportId__c: string | null;
-  sansancard__DisplayReportName__c: string | null;
-  sansancard__EnableNotification__c: boolean;
-  sansancard__Enable_Contact__c: boolean;
-  sansancard__Enable_EditFields__c: boolean;
-  sansancard__LeadRecordType__c: string | null;
-  sansancard__LeadValue__c: string | null;
-  sansancard__TransferDest__c: string | null;
-};
-
-type ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
-  //
-};
-
-type ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
-  //
-};
-
-interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__ChangeEvent'> {
-    Name: 'sansancard__ScanToSalesforce_Setting__ChangeEvent';
-    Fields: Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent;
-    ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent;
-    ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent;
   }
 
 type Fields$sansancard__ScanToSalesforce_Setting__c = {
@@ -38314,7 +38234,6 @@ export interface SmoothstackSchema extends Schema {
     Invoice_Payment_Line__c: SObjectDefinition$Invoice_Payment_Line__c;
     Invoice_Payment__ChangeEvent: SObjectDefinition$Invoice_Payment__ChangeEvent;
     Invoice_Payment__c: SObjectDefinition$Invoice_Payment__c;
-    Invoice_Settings__ChangeEvent: SObjectDefinition$Invoice_Settings__ChangeEvent;
     Invoice_Settings__c: SObjectDefinition$Invoice_Settings__c;
     Invoice__ChangeEvent: SObjectDefinition$Invoice__ChangeEvent;
     Invoice__History: SObjectDefinition$Invoice__History;
@@ -38435,8 +38354,6 @@ export interface SmoothstackSchema extends Schema {
     OwnerChangeOptionInfo: SObjectDefinition$OwnerChangeOptionInfo;
     PTO_Request__ChangeEvent: SObjectDefinition$PTO_Request__ChangeEvent;
     PTO_Request__c: SObjectDefinition$PTO_Request__c;
-    PTO_Year__ChangeEvent: SObjectDefinition$PTO_Year__ChangeEvent;
-    PTO_Year__c: SObjectDefinition$PTO_Year__c;
     PackageLicense: SObjectDefinition$PackageLicense;
     Partner: SObjectDefinition$Partner;
     PartnerRole: SObjectDefinition$PartnerRole;
@@ -38445,6 +38362,10 @@ export interface SmoothstackSchema extends Schema {
     PartyConsentFeed: SObjectDefinition$PartyConsentFeed;
     PartyConsentHistory: SObjectDefinition$PartyConsentHistory;
     PartyConsentShare: SObjectDefinition$PartyConsentShare;
+    Pay_Period_Year__ChangeEvent: SObjectDefinition$Pay_Period_Year__ChangeEvent;
+    Pay_Period_Year__c: SObjectDefinition$Pay_Period_Year__c;
+    Pay_Period__ChangeEvent: SObjectDefinition$Pay_Period__ChangeEvent;
+    Pay_Period__c: SObjectDefinition$Pay_Period__c;
     Payroll_Config__ChangeEvent: SObjectDefinition$Payroll_Config__ChangeEvent;
     Payroll_Config__c: SObjectDefinition$Payroll_Config__c;
     Payroll_Period_Adjustment__ChangeEvent: SObjectDefinition$Payroll_Period_Adjustment__ChangeEvent;
@@ -38646,7 +38567,6 @@ export interface SmoothstackSchema extends Schema {
     Timesheet_Note__ChangeEvent: SObjectDefinition$Timesheet_Note__ChangeEvent;
     Timesheet_Note__c: SObjectDefinition$Timesheet_Note__c;
     Timesheet_Settings_2__mdt: SObjectDefinition$Timesheet_Settings_2__mdt;
-    Timesheet_Settings__ChangeEvent: SObjectDefinition$Timesheet_Settings__ChangeEvent;
     Timesheet_Settings__c: SObjectDefinition$Timesheet_Settings__c;
     Timesheet_Survey_Settings__ChangeEvent: SObjectDefinition$Timesheet_Survey_Settings__ChangeEvent;
     Timesheet_Survey_Settings__c: SObjectDefinition$Timesheet_Survey_Settings__c;
@@ -38718,21 +38638,17 @@ export interface SmoothstackSchema extends Schema {
     pandadoc__PandaDocDocument__c: SObjectDefinition$pandadoc__PandaDocDocument__c;
     pandadoc__PandaDocLog__ChangeEvent: SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent;
     pandadoc__PandaDocLog__c: SObjectDefinition$pandadoc__PandaDocLog__c;
-    pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
     pandadoc__PandaDoc_JsonBulder_Mapping__c: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c;
     pandadoc__Pricing_Item_Mapping__ChangeEvent: SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent;
     pandadoc__Pricing_Item_Mapping__c: SObjectDefinition$pandadoc__Pricing_Item_Mapping__c;
     pandadoc__Recipient_Map__ChangeEvent: SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent;
     pandadoc__Recipient_Map__c: SObjectDefinition$pandadoc__Recipient_Map__c;
-    pandadoc__Settings__ChangeEvent: SObjectDefinition$pandadoc__Settings__ChangeEvent;
     pandadoc__Settings__c: SObjectDefinition$pandadoc__Settings__c;
     pandadoc__TriggerSetting__ChangeEvent: SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent;
     pandadoc__TriggerSetting__c: SObjectDefinition$pandadoc__TriggerSetting__c;
-    rcsfl__AdminSetting__ChangeEvent: SObjectDefinition$rcsfl__AdminSetting__ChangeEvent;
     rcsfl__AdminSetting__c: SObjectDefinition$rcsfl__AdminSetting__c;
     sansancard__SSCard__ChangeEvent: SObjectDefinition$sansancard__SSCard__ChangeEvent;
     sansancard__SSCard__c: SObjectDefinition$sansancard__SSCard__c;
-    sansancard__ScanToSalesforce_Setting__ChangeEvent: SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent;
     sansancard__ScanToSalesforce_Setting__c: SObjectDefinition$sansancard__ScanToSalesforce_Setting__c;
     sansancard__TransferMeta__ChangeEvent: SObjectDefinition$sansancard__TransferMeta__ChangeEvent;
     sansancard__TransferMeta__c: SObjectDefinition$sansancard__TransferMeta__c;

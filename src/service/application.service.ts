@@ -19,6 +19,8 @@ import { Application, ApplicationFields } from '../model/Application';
 import { saveNote } from './notes.service';
 import { generateSchedulingNote } from '../util/note.util';
 
+const APPLICATION_RECORD_TYPE_ID = '0125G000000feaeQAA';
+
 export const createApplication = async (
   conn: Connection<SmoothstackSchema>,
   jobId: string,
@@ -30,7 +32,7 @@ export const createApplication = async (
   const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmTerm);
   const { stageName, rejectionReason, snoozeReason } = deriveApplicationStatus(applicationFields.status);
   const applicationRecord: Partial<Fields$Opportunity> = {
-    RecordTypeId: '0125G000000feaeQAA',
+    RecordTypeId: APPLICATION_RECORD_TYPE_ID,
     Name: uuidv4(),
     CloseDate: new Date().toISOString() as DateString,
     Application_Date__c: new Date().toISOString() as DateString,
@@ -91,7 +93,7 @@ export const fetchApplication = async (
     .sobject('Opportunity')
     .findOne({ Id: { $eq: applicationId ?? null } })
     .select(
-      'Id, Challenge_Scheduling_Link__c, Prescreen_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Nickname__c, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Job__r.*'
+      'Id, Challenge_Scheduling_Link__c, Prescreen_Scheduling_Link__c, Challenge_Link__c, Challenge_Date_Time__c, Webinar_Scheduling_Link__c, Webinar_Registrant_ID__c, Webinar_ID__c, Webinar_Occurrence_ID__c, Event_ID_Microsoft__c, Candidate__r.Id, Candidate__r.FirstName, Candidate__r.LastName, Candidate__r.Nickname__c, Candidate__r.Email, Candidate__r.MobilePhone, Candidate__r.MailingCity, Candidate__r.MailingStateCode, Candidate__r.MailingStreet, Candidate__r.MailingPostalCode, Candidate__r.Owner.*, Candidate__r.Potential_Smoothstack_Email__c, Job__r.*'
     );
 
   return application

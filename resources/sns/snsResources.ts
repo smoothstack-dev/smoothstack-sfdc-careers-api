@@ -31,4 +31,22 @@ export const snsResources: AWS['resources']['Resources'] = {
       TopicName: 'smoothstack-document-event-processing-sns-topic-v2',
     },
   },
+  MSUserGenerationTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-ms-user-generation-sns-topic-v2',
+    },
+  },
+  ConsultantGenerationTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-consultant-generation-sns-topic-v2',
+    },
+  },
+  CohortUserGenerationTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-cohort-user-generation-sns-topic-v2',
+    },
+  },
 };
