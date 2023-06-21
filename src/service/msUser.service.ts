@@ -1,11 +1,16 @@
 import { Candidate } from '../model/Candidate';
-import { MSUser } from '../model/MSUser';
+import { MSUser, MSUserEvent } from '../model/MSUser';
 import axios from 'axios';
 import { SmoothstackSchema } from '../model/smoothstack.schema';
 import { Connection } from 'jsforce';
-import { findConsultantByCandidateId, findNameAlikeConsultants } from './consultant.service';
+import { fetchConsultant, findConsultantBySmoothstackEmail, findNameAlikeConsultants } from './consultant.service';
 import { generate as generatePassword } from 'generate-password';
 import { listDeletedUsers, restoreDeletedUser } from './msDirectory.service';
+import { getMSAuthData } from './auth/microsoft.oauth.service';
+import { getSFDCConnection } from './auth/sfdc.auth.service';
+import { sendNewAccountDetails } from './email.service';
+import { deleteUserSubscription } from './msSubscriptions.service';
+import { updateCandidate } from './candidate.service';
 
 const BASE_URL = 'https://graph.microsoft.com/v1.0/users';
 
@@ -55,14 +60,14 @@ const getOrDeriveEmailAddress = async (
   candidateId: string,
   potentialEmail: string
 ) => {
-  const consultant = await findConsultantByCandidateId(conn, candidateId);
-  if (consultant?.Email) {
+  const consultant = await fetchConsultant(conn, candidateId);
+  if (consultant?.Smoothstack_Email__c) {
     const recentDeletedUsers = await listDeletedUsers(token);
-    const deletedUserMatch = recentDeletedUsers.find((u) => u.mail === consultant.Email);
+    const deletedUserMatch = recentDeletedUsers.find((u) => u.mail === consultant.Smoothstack_Email__c);
     if (deletedUserMatch) {
       await restoreDeletedUser(token, deletedUserMatch.id);
     }
-    return consultant.Email;
+    return consultant.Smoothstack_Email__c;
   } else {
     const nameAdress = potentialEmail.split('@')[0];
     return derivePrimaryEmail(token, conn, nameAdress);
@@ -110,5 +115,35 @@ const findDuplicateUsers = async (token: string, conn: Connection<SmoothstackSch
   const requests = [findNameAlikeMSUsers(token, prefix), findNameAlikeConsultants(conn, prefix)];
   const users = (await Promise.all(requests)).flat();
   const pattern = /^[a-z]+\.[a-z]+(\d*)@smoothstack\.com$/;
-  return users.filter((u) => pattern.test((u.userPrincipalName || u.Email).toLowerCase()));
+  return users.filter((u) => pattern.test((u.userPrincipalName || u.Smoothstack_Email__c).toLowerCase()));
+};
+
+export const processMSUserEvent = async (event: MSUserEvent) => {
+  const { token } = await getMSAuthData();
+  const conn = await getSFDCConnection();
+  const userId = event.value[0].resourceData.id;
+  const { userPrincipalName, assignedLicenses } = await fetchMSUser(token, userId);
+  if (assignedLicenses.length) {
+    const { Id, Email, Temp_MS_Password__c, MS_Subscription_ID__c } = await findConsultantBySmoothstackEmail(
+      conn,
+      userPrincipalName
+    );
+    if (MS_Subscription_ID__c) {
+      await sendNewAccountDetails(token, Email, userPrincipalName, Temp_MS_Password__c);
+      await deleteUserSubscription(token, MS_Subscription_ID__c);
+      await updateCandidate(conn, Id, { MS_Subscription_ID__c: null });
+    }
+  }
+};
+
+export const fetchMSUser = async (authToken: string, userId: string): Promise<MSUser> => {
+  const { data } = await axios.get(`${BASE_URL}/${userId}`, {
+    params: {
+      $select: 'id,userPrincipalName,assignedLicenses',
+    },
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
+  return data;
 };

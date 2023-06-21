@@ -37,4 +37,16 @@ export const snsResources: AWS['resources']['Resources'] = {
       TopicName: 'smoothstack-ms-user-generation-sns-topic-v2',
     },
   },
+  ConsultantGenerationTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-consultant-generation-sns-topic-v2',
+    },
+  },
+  CohortUserGenerationTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-cohort-user-generation-sns-topic-v2',
+    },
+  },
 };

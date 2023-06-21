@@ -12,6 +12,9 @@ import documentEventProcessor from './src/functions/documentEventProcessor';
 import hubspotEvents from './src/functions/hubspotEvents';
 import dataGenerator from './src/functions/dataGenerator';
 import msUserGenerator from './src/functions/msUserGenerator';
+import consultantGenerator from './src/functions/consultantGenerator';
+import msUserEvents from './src/functions/msUserEvents';
+import cohortUserGenerator from './src/functions/cohortUserGenerator';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -79,6 +82,9 @@ const serverlessConfiguration: AWS = {
     documentEventProcessor,
     hubspotEvents,
     msUserGenerator,
+    consultantGenerator,
+    cohortUserGenerator,
+    msUserEvents,
   },
   resources: {
     Resources: {

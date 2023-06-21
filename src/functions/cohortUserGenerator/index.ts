@@ -5,8 +5,8 @@ export default {
   events: [
     {
       sns: {
-        arn: { Ref: 'ConsultantGenerationTopic' },
-        topicName: 'smoothstack-consultant-generation-sns-topic-v2',
+        arn: { Ref: 'CohortUserGenerationTopic' },
+        topicName: 'smoothstack-cohort-user-generation-sns-topic-v2',
       },
     },
   ],
