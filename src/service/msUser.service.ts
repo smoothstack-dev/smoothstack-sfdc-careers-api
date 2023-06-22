@@ -78,7 +78,7 @@ const derivePrimaryEmail = async (token: string, sfdcConn: any, prefix: string) 
   const existingUsers = await findDuplicateUsers(token, sfdcConn, prefix);
   if (existingUsers?.length) {
     const highestDigit = existingUsers.reduce((acc, u) => {
-      const digit = +u.userPrincipalName.match(/\d+/)?.[0];
+      const digit = +(u.userPrincipalName || u.Smoothstack_Email__c).match(/\d+/)?.[0];
       return digit > acc ? digit : acc;
     }, 0);
     return `${prefix}${highestDigit + 1}@smoothstack.com`;

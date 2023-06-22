@@ -1,81 +1,9 @@
 import axios from 'axios';
-import { generate as generatePassword } from 'generate-password';
-import { MSUser } from 'src/model/MSUser';
-import { Candidate } from '../model/Candidate';
-import { getSFDCConnection } from './auth/sfdc.auth.service';
-import { listDeletedUsers, restoreDeletedUser } from './msDirectory.service';
-import { fetchMSUser, findMsUserByEmail, findNameAlikeMSUsers } from './msUser.service';
-import { fetchConsultant, findNameAlikeConsultants } from './consultant.service';
+import { fetchMSUser } from './msUser.service';
 import { Fields$Job__c } from '../model/smoothstack.schema';
 import { MSTeam } from '../model/MSTeam';
 
 const BASE_URL = `https://graph.microsoft.com/v1.0`;
-
-export const addUser = async (authToken: string, candidate: Candidate): Promise<MSUser> => {
-  const { Id, FirstName, LastName, Potential_Smoothstack_Email__c } = candidate;
-  const primaryEmail = await getOrDeriveEmailAddress(authToken, Id, Potential_Smoothstack_Email__c?.trim());
-  const activeUser = await findMsUserByEmail(authToken, primaryEmail);
-  if (!activeUser) {
-    const tempPassword = generatePassword({
-      length: 15,
-      numbers: true,
-      symbols: '!@$#$()&_',
-    });
-    const user = {
-      accountEnabled: true,
-      displayName: `${FirstName} ${LastName}`,
-      userPrincipalName: primaryEmail,
-      mailNickname: primaryEmail.split('@')[0],
-      passwordProfile: {
-        forceChangePasswordNextSignIn: true,
-        password: tempPassword,
-      },
-      usageLocation: 'US',
-    };
-    const { data } = await axios.post(`${BASE_URL}/users`, user, {
-      headers: {
-        Authorization: `Bearer ${authToken}`,
-      },
-    });
-    return { id: data.id, userPrincipalName: primaryEmail, tempPassword, assignedLicenses: [] };
-  }
-  return { id: undefined, userPrincipalName: primaryEmail, assignedLicenses: activeUser.assignedLicenses };
-};
-
-const getOrDeriveEmailAddress = async (token: string, candidateId: string, potentialEmail: string) => {
-  const conn = await getSFDCConnection();
-  const consultant = await fetchConsultant(conn, candidateId);
-  if (consultant?.Smoothstack_Email__c) {
-    const recentDeletedUsers = await listDeletedUsers(token);
-    const deletedUserMatch = recentDeletedUsers.find((u) => u.mail === consultant.Smoothstack_Email__c);
-    if (deletedUserMatch) {
-      await restoreDeletedUser(token, deletedUserMatch.id);
-    }
-    return consultant.Smoothstack_Email__c;
-  } else {
-    const nameAdress = potentialEmail.split('@')[0];
-    return derivePrimaryEmail(token, conn, nameAdress);
-  }
-};
-
-const derivePrimaryEmail = async (token: string, sfdcConn: any, prefix: string) => {
-  const existingUsers = await findDuplicateUsers(token, sfdcConn, prefix);
-  if (existingUsers?.length) {
-    const highestDigit = existingUsers.reduce((acc, u) => {
-      const digit = +(u.userPrincipalName || u.Smoothstack_Email__c).match(/\d+/)?.[0];
-      return digit > acc ? digit : acc;
-    }, 0);
-    return `${prefix}${highestDigit + 1}@smoothstack.com`;
-  }
-  return `${prefix}@smoothstack.com`;
-};
-
-const findDuplicateUsers = async (token: string, sfdcConnection: any, prefix: string) => {
-  const requests = [findNameAlikeMSUsers(token, prefix), findNameAlikeConsultants(sfdcConnection, prefix)];
-  const users = (await Promise.all(requests)).flat();
-  const pattern = /^[a-z]+\.[a-z]+(\d*)@smoothstack\.com$/;
-  return users.filter((u) => pattern.test((u.userPrincipalName || u.Smoothstack_Email__c).toLowerCase()));
-};
 
 export const addTeam = async (authToken: string, job: Fields$Job__c): Promise<MSTeam> => {
   const teamName = deriveTeamName(job);
