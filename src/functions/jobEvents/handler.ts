@@ -10,6 +10,7 @@ const jobEvents = async (event: APIGatewayEvent) => {
       case 'GET': {
         if (jobId) {
           await publishJobProcessingRequest({ jobId: +jobId });
+          return {}
         }
         break;
       }
