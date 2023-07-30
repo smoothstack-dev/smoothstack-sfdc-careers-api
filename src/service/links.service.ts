@@ -122,7 +122,6 @@ export const generateTechScreenLinks = async (conn: Connection<SmoothstackSchema
       techScreenSchedulingLink,
       techScreenResult,
       techScreenDate,
-      screenerEmail,
       screenerDetermination,
       applicationStatus,
     } = getTechScreenLinksData(Applications__r.records, application);
@@ -133,7 +132,6 @@ export const generateTechScreenLinks = async (conn: Connection<SmoothstackSchema
       ...(applicationStatus?.rejectionReason && { StageName: applicationStatus.rejectionReason }),
       ...(techScreenResult && { Tech_Screen_Result__c: techScreenResult }),
       ...(techScreenDate && { Tech_Screen_Date__c: techScreenDate as DateString }),
-      ...(screenerEmail && { Tech_Screener_Email__c: screenerEmail }),
       ...(screenerDetermination && { Screener_Determination__c: screenerDetermination }),
     };
     await updateApplication(conn, { id: applicationId }, updateData);
@@ -172,7 +170,6 @@ const getTechScreenLinksData = (
       ),
     techScreenResult: matchedApplication?.Tech_Screen_Result__c,
     techScreenDate: matchedApplication?.Tech_Screen_Date__c,
-    screenerEmail: matchedApplication?.Tech_Screener_Email__c,
     screenerDetermination: matchedApplication?.Screener_Determination__c,
     applicationStatus,
   };

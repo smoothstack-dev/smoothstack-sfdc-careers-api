@@ -16,7 +16,7 @@ export const addTeam = async (authToken: string, job: Fields$Job__c): Promise<MS
       {
         '@odata.type': '#microsoft.graph.aadUserConversationMember',
         roles: ['owner'],
-        'user@odata.bind': `${BASE_URL}/users('hr@smoothstack.com')`,
+        'user@odata.bind': `${BASE_URL}/users('oscar.cedano@smoothstack.com')`,
       },
     ],
   };
@@ -74,7 +74,7 @@ export const addDistribution = async (
 ): Promise<MSTeam> => {
   const distributionName = deriveTeamName(job, '_Trainees');
   const distribution = {
-    'owners@odata.bind': [`${BASE_URL}/users('hr@smoothstack.com')`],
+    'owners@odata.bind': [`${BASE_URL}/users('oscar.cedano@smoothstack.com')`],
     groupTypes: ['Unified'],
     displayName: distributionName,
     mailEnabled: true,
@@ -172,7 +172,7 @@ const deriveTeamName = (job: Fields$Job__c, suffix: string = '') => {
     minimumIntegerDigits: 2,
     useGrouping: false,
   });
-  const dayOfMonth = date.getDate();
+  const dayOfMonth = date.getUTCDate();
   const technology = job.Cohort_Category__c.replace(/ /g, '');
   return `${year}_${numberMonth}_${dayOfMonth}_${technology}${suffix}`;
 };

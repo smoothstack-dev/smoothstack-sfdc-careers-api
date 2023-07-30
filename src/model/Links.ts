@@ -11,7 +11,6 @@ export interface TechScreenLinksData {
   techScreenSchedulingLink: string;
   techScreenResult: string;
   techScreenDate: string;
-  screenerEmail: string;
   screenerDetermination: string;
   applicationStatus: ApplicationStatus;
 }

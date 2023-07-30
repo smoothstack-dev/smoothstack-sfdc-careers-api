@@ -6,7 +6,6 @@ export const fetchJobs = async (conn: Connection<SmoothstackSchema>) => {
   return jobs;
 };
 
-
 export const findActiveJobs = async (conn: Connection<SmoothstackSchema>) => {
   const jobs = await conn.sobject('Job__c').find({ Publishing_Status__c: { $eq: 'Published' } });
   return jobs;
