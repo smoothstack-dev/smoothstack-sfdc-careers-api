@@ -16,7 +16,7 @@ export const addTeam = async (authToken: string, job: Fields$Job__c): Promise<MS
       {
         '@odata.type': '#microsoft.graph.aadUserConversationMember',
         roles: ['owner'],
-        'user@odata.bind': `${BASE_URL}/users('oscar.cedano@smoothstack.com')`,
+        'user@odata.bind': `${BASE_URL}/users('support@smoothstack.com')`,
       },
     ],
   };
@@ -74,7 +74,7 @@ export const addDistribution = async (
 ): Promise<MSTeam> => {
   const distributionName = deriveTeamName(job, '_Trainees');
   const distribution = {
-    'owners@odata.bind': [`${BASE_URL}/users('oscar.cedano@smoothstack.com')`],
+    'owners@odata.bind': [`${BASE_URL}/users('support@smoothstack.com')`],
     groupTypes: ['Unified'],
     displayName: distributionName,
     mailEnabled: true,
