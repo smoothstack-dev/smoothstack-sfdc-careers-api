@@ -25,7 +25,7 @@ const cohortUserGenerator = async (event: SNSEvent) => {
     const conn = await getSFDCConnection();
     const { token: msToken } = await getMSAuthData();
     const { Candidate__r, Job__r } = await fetchApplication(conn, applicationId);
-    const { Id: Cohort_Id, MSTeamID__c, MSDistributionID__c } = await findCohortByJobId(conn, Job__r.Job_ID__c);
+    const { Id: Cohort_Id, MSTeamID__c, MSDistributionID__c } = await findCohortByJobId(conn, Job__r.Id);
     const cohortParticipant = await findCohortParticipantByConsultantId(conn, Candidate__r.Id);
     if (cohortParticipant?.Cohort__c !== Cohort_Id) {
       if (cohortParticipant) {
