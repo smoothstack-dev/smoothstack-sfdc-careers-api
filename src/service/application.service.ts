@@ -352,3 +352,25 @@ export const fetchApplicationHistory = async (
         .find({ OpportunityId: { $eq: applicationId ?? null }, $and: { Field: historyField } })
     : [];
 };
+
+export const findAppsByBhId = async (
+  conn: Connection<SmoothstackSchema>,
+  bullhornIds: string[]
+): Promise<Application[]> => {
+  return await conn
+    .sobject('Opportunity')
+    .find({
+      Bullhorn_ID__c: { $in: bullhornIds },
+    })
+    .select('Id, Bullhorn_ID__c');
+};
+
+export const findAppsByAbilitytoLearn = async (conn: Connection<SmoothstackSchema>): Promise<Application[]> => {
+  return await conn
+    .sobject('Opportunity')
+    .find({
+      Ability_to_Learn_Quickly__c: { $nin: ['Yes', 'No', null] },
+      $and: { RecordTypeId: APPLICATION_RECORD_TYPE_ID },
+    })
+    .select('Id, Ability_to_Learn_Quickly__c');
+};

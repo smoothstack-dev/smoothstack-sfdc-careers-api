@@ -1,20 +1,19 @@
 import { BlobString, Connection } from 'jsforce';
 import { FileUpload } from '../model/File';
-import { SmoothstackSchema } from '../model/smoothstack.schema';
+import { Fields$ContentVersion, SmoothstackSchema } from '../model/smoothstack.schema';
 // import MemoryStream from 'memorystream';
 
 export const saveSFDCFiles = async (conn: Connection<SmoothstackSchema>, objectID: string, files: FileUpload[]) => {
-  let resumeNum = 1;
   for (const file of files) {
     let fileName = file.name.split('.')[0];
     if (file.type === 'Application Resume') {
-      fileName = `Resume_Internal_Use_Only_${resumeNum}`;
-      resumeNum++;
+      fileName = `Resume_Internal_Use_Only`;
     }
     const { id: contentVerId } = await conn.sobject('ContentVersion').create({
       VersionData: file.fileContent as BlobString,
       PathOnClient: `${fileName}${deriveFileExtension(file.name)}`,
       Type__c: file.type,
+      Bullhorn_ID__c: file.bhId
     });
     const { ContentDocumentId } = await conn.sobject('ContentVersion').retrieve(contentVerId);
     await conn.sobject('ContentDocumentLink').create({
@@ -23,6 +22,18 @@ export const saveSFDCFiles = async (conn: Connection<SmoothstackSchema>, objectI
       ShareType: 'V',
     });
   }
+};
+
+export const findFilesByBhId = async (
+  conn: Connection<SmoothstackSchema>,
+  bullhornIds: string[]
+): Promise<Fields$ContentVersion[]> => {
+  return await conn
+    .sobject('ContentVersion')
+    .find({
+      Bullhorn_ID__c: { $in: bullhornIds },
+    })
+    .select('Id, Bullhorn_ID__c');
 };
 
 // export const downloadSFDCFile = async (

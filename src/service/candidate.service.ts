@@ -31,6 +31,17 @@ export const findCandidateByEmailOrPhone = async (
     .end();
 };
 
+export const findCandidatesByEmail = async (
+  conn: Connection<SmoothstackSchema>,
+  emails: string[]
+): Promise<Candidate[]> => {
+  return await conn
+    .sobject('Contact')
+    .find({
+      Email: { $in: emails },
+    })
+    .select('Id,FirstName,LastName,Email');
+};
 export const createCandidate = async (
   conn: Connection<SmoothstackSchema>,
   candidateFields: CandidateFields,
@@ -59,8 +70,7 @@ export const createCandidate = async (
 const deriveCandidateOwner = async (conn: Connection<SmoothstackSchema>, utmTerm: string) => {
   if (utmTerm) {
     const assignmentGroup = await fetchHTDAssignmentGroup(conn);
-    return assignmentGroup.Assignment_Group_Members__r.records.find((m) => utmTerm.includes(m.User__r.Alias))
-      ?.User__r;
+    return assignmentGroup.Assignment_Group_Members__r.records.find((m) => utmTerm.includes(m.User__r.Alias))?.User__r;
   }
   return null;
 };

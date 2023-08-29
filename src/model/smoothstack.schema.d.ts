@@ -5477,6 +5477,8 @@ type Fields$Cohort_Participant_Ranking__ChangeEvent = {
   Tech_Skills__c: number | null;
   Avg_Ranking__c: number | null;
   Meta__c: string | null;
+  Comment__c: string | null;
+  Email_Report_Sent_At__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant_Ranking__ChangeEvent = {
@@ -5514,6 +5516,8 @@ type Fields$Cohort_Participant_Ranking__c = {
   Tech_Skills__c: number | null;
   Avg_Ranking__c: number | null;
   Meta__c: string | null;
+  Comment__c: string | null;
+  Email_Report_Sent_At__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant_Ranking__c = {
@@ -5765,6 +5769,7 @@ type Fields$Cohort__ChangeEvent = {
   Revise_Target_Completion_Date_Reason__c: string | null;
   Current_Training_Completion_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Job_ID__c: string | null;
 };
 
 type ParentReferences$Cohort__ChangeEvent = {
@@ -5868,6 +5873,7 @@ type Fields$Cohort__c = {
   Revise_Target_Completion_Date_Reason__c: string | null;
   Current_Training_Completion_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Job_ID__c: string | null;
 };
 
 type ParentReferences$Cohort__c = {
@@ -5879,6 +5885,7 @@ type ParentReferences$Cohort__c = {
   Pilot_Opportunity_2__r: SObjectDefinition$Opportunity | null;
   Primary_Anchor_Opportunity__r: SObjectDefinition$Opportunity | null;
   Secondary_Anchor_Opportunity__r: SObjectDefinition$Opportunity | null;
+  Job_ID__r: SObjectDefinition$Job__c | null;
 };
 
 type ChildRelationships$Cohort__c = {
@@ -6899,6 +6906,8 @@ type Fields$Compensation_Policy__ChangeEvent = {
   Effective_Date__c: DateString | null;
   End_Date__c: DateString | null;
   Holidays__c: string | null;
+  Work_Classification__c: string | null;
+  Employee_Type__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
   Home_Address__PostalCode__s: string | null;
@@ -6908,7 +6917,6 @@ type Fields$Compensation_Policy__ChangeEvent = {
   Home_Address__Longitude__s: number | null;
   Home_Address__GeocodeAccuracy__s: string | null;
   Home_Address__c: Address | null;
-  PTO_Carry_Over__c: number | null;
   Is_Latest__c: boolean;
   Hourly_Rate__c: number | null;
   State_Sick_Leave_Hours__c: string | null;
@@ -6916,7 +6924,6 @@ type Fields$Compensation_Policy__ChangeEvent = {
   PTO_Hours__c: string | null;
   County__c: string | null;
   Policy_Event__c: string | null;
-  Employee_Type__c: string | null;
   Min_Wage__c: string | null;
   Min_Wage_Rate__c: number | null;
   Min_Wage_Issue__c: string | null;
@@ -6947,12 +6954,12 @@ type Fields$Compensation_Policy__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
-  LastViewedDate: DateString | null;
-  LastReferencedDate: DateString | null;
   Contact__c: string;
   Effective_Date__c: DateString;
   End_Date__c: DateString | null;
   Holidays__c: string | null;
+  Work_Classification__c: string | null;
+  Employee_Type__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
   Home_Address__PostalCode__s: string | null;
@@ -6962,7 +6969,6 @@ type Fields$Compensation_Policy__c = {
   Home_Address__Longitude__s: number | null;
   Home_Address__GeocodeAccuracy__s: string | null;
   Home_Address__c: Address | null;
-  PTO_Carry_Over__c: number | null;
   Is_Latest__c: boolean;
   Hourly_Rate__c: number | null;
   State_Sick_Leave_Hours__c: string | null;
@@ -6970,7 +6976,6 @@ type Fields$Compensation_Policy__c = {
   PTO_Hours__c: string | null;
   County__c: string | null;
   Policy_Event__c: string | null;
-  Employee_Type__c: string | null;
   Min_Wage__c: string | null;
   Min_Wage_Rate__c: number | null;
   Min_Wage_Issue__c: string | null;
@@ -7163,7 +7168,7 @@ type Fields$Contact = {
   ActivityMetricId: string | null;
   ActivityMetricRollupId: string | null;
   Linkedin__c: string | null;
-  Home_email__c: string | null;
+  Is_Migrated__c: boolean;
   Type__c: string | null;
   Internal_Advocate__c: boolean;
   DSCORGPKG__Company_HQ_Address__c: string | null;
@@ -7312,7 +7317,7 @@ type Fields$Contact = {
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
   sansancard__CreatedByScanToSalesforce__c: boolean;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Vaccination_Status__c: string | null;
   Sstack_CC__Offshore_Total_Hours__c: number | null;
   Sstack_CC__Staff_Aug_Total_Hours__c: number | null;
@@ -7345,6 +7350,7 @@ type Fields$Contact = {
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
   Smoothstack_Email__c: string | null;
+  Hubspot_Account__c: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -7504,7 +7510,7 @@ type Fields$ContactChangeEvent = {
   JigsawContactId: string | null;
   IndividualId: string | null;
   Linkedin__c: string | null;
-  Home_email__c: string | null;
+  Is_Migrated__c: boolean;
   Type__c: string | null;
   Internal_Advocate__c: boolean;
   DSCORGPKG__Company_HQ_Address__c: string | null;
@@ -7653,7 +7659,7 @@ type Fields$ContactChangeEvent = {
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
   sansancard__CreatedByScanToSalesforce__c: boolean;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Vaccination_Status__c: string | null;
   Sstack_CC__Offshore_Total_Hours__c: number | null;
   Sstack_CC__Staff_Aug_Total_Hours__c: number | null;
@@ -7686,6 +7692,7 @@ type Fields$ContactChangeEvent = {
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
   Smoothstack_Email__c: string | null;
+  Hubspot_Account__c: string | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -9276,6 +9283,7 @@ type Fields$ContentVersion = {
   IsMajorVersion: boolean;
   IsAssetEnabled: boolean;
   Type__c: string | null;
+  Bullhorn_ID__c: string | null;
 };
 
 type ParentReferences$ContentVersion = {
@@ -17992,6 +18000,43 @@ interface SObjectDefinition$Invoice_Payment__c extends SObjectDefinition<'Invoic
     ChildRelationships: ChildRelationships$Invoice_Payment__c;
   }
 
+type Fields$Invoice_Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Company_Name__c: string | null;
+  Email_Sender_Display_Name__c: string | null;
+  From_Address_Line_1__c: string | null;
+  From_Address_Line_2__c: string | null;
+  From_Address_Line_3__c: string | null;
+  Invoices_CC_Email__c: string | null;
+  Invoices_Debug_Email__c: string | null;
+  Invoices_From_Email__c: string | null;
+  Company_Account_Name__c: string | null;
+};
+
+type ParentReferences$Invoice_Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Invoice_Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Invoice_Settings__ChangeEvent extends SObjectDefinition<'Invoice_Settings__ChangeEvent'> {
+    Name: 'Invoice_Settings__ChangeEvent';
+    Fields: Fields$Invoice_Settings__ChangeEvent;
+    ParentReferences: ParentReferences$Invoice_Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$Invoice_Settings__ChangeEvent;
+  }
+
 type Fields$Invoice_Settings__c = {
   //
   Id: string;
@@ -22204,6 +22249,7 @@ type Fields$Opportunity = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
+  Is_Migrated__c: boolean;
   Coding_Self_Rank__c: number | null;
   BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
@@ -22252,6 +22298,7 @@ type Fields$Opportunity = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
+  Bullhorn_ID__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -22485,6 +22532,7 @@ type Fields$OpportunityChangeEvent = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
+  Is_Migrated__c: boolean;
   Coding_Self_Rank__c: number | null;
   BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
@@ -22533,6 +22581,7 @@ type Fields$OpportunityChangeEvent = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
+  Bullhorn_ID__c: string | null;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -23874,6 +23923,7 @@ type Fields$PTO_Request__ChangeEvent = {
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number | null;
+  Request_Initiated_By__c: string | null;
   Start_Date__c: DateString | null;
   Status__c: string | null;
   Dates__c: string | null;
@@ -23915,6 +23965,7 @@ type Fields$PTO_Request__c = {
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number;
+  Request_Initiated_By__c: string | null;
   Start_Date__c: DateString;
   Status__c: string | null;
   Dates__c: string | null;
@@ -24277,6 +24328,7 @@ type Fields$Pay_Period_Year__ChangeEvent = {
   PTO_Pending_Approval__c: number | null;
   PTO_Scheduled__c: number | null;
   PTO_Taken__c: number | null;
+  PTO_Earned_Override__c: number | null;
 };
 
 type ParentReferences$Pay_Period_Year__ChangeEvent = {
@@ -24318,6 +24370,7 @@ type Fields$Pay_Period_Year__c = {
   PTO_Pending_Approval__c: number | null;
   PTO_Scheduled__c: number | null;
   PTO_Taken__c: number | null;
+  PTO_Earned_Override__c: number | null;
 };
 
 type ParentReferences$Pay_Period_Year__c = {
@@ -24384,6 +24437,8 @@ type Fields$Pay_Period__ChangeEvent = {
   Pay_Period_Year__c: string | null;
   PTO_Balance_wo_Carryover__c: number | null;
   Status__c: string | null;
+  PTO_Earned_Override__c: number | null;
+  PTO_Earned_Final__c: number | null;
 };
 
 type ParentReferences$Pay_Period__ChangeEvent = {
@@ -24428,6 +24483,8 @@ type Fields$Pay_Period__c = {
   Pay_Period_Year__c: string;
   PTO_Balance_wo_Carryover__c: number | null;
   Status__c: string | null;
+  PTO_Earned_Override__c: number | null;
+  PTO_Earned_Final__c: number | null;
 };
 
 type ParentReferences$Pay_Period__c = {
@@ -33858,6 +33915,38 @@ interface SObjectDefinition$Timesheet_Settings_2__mdt extends SObjectDefinition<
     ChildRelationships: ChildRelationships$Timesheet_Settings_2__mdt;
   }
 
+type Fields$Timesheet_Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  CC_Email__c: string | null;
+  Email_Sender_Display_Name__c: string | null;
+  Redirect_All_to_Email__c: string | null;
+  Username_Prefix__c: string | null;
+};
+
+type ParentReferences$Timesheet_Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Timesheet_Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Timesheet_Settings__ChangeEvent extends SObjectDefinition<'Timesheet_Settings__ChangeEvent'> {
+    Name: 'Timesheet_Settings__ChangeEvent';
+    Fields: Fields$Timesheet_Settings__ChangeEvent;
+    ParentReferences: ParentReferences$Timesheet_Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$Timesheet_Settings__ChangeEvent;
+  }
+
 type Fields$Timesheet_Settings__c = {
   //
   Id: string;
@@ -34015,7 +34104,7 @@ type Fields$Timesheet__ChangeEvent = {
   Paid_Sick_Leave_Total_Hours__c: number | null;
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
   PTO_Total_Hours__c: number | null;
   TS_Submission_Aging__c: number | null;
@@ -34065,7 +34154,7 @@ type Fields$Timesheet__c = {
   Paid_Sick_Leave_Total_Hours__c: number | null;
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
   PTO_Total_Hours__c: number | null;
   TS_Submission_Aging__c: number | null;
@@ -37120,6 +37209,41 @@ interface SObjectDefinition$pandadoc__PandaDocLog__c extends SObjectDefinition<'
     ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
   }
 
+type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Document_Name__c: string | null;
+  pandadoc__JsonBuilder_Class_Name__c: string | null;
+  pandadoc__ReferencedRecipients__c: string | null;
+  pandadoc__Related_Pricing_Items__c: string | null;
+  pandadoc__Related_Recipients__c: string | null;
+  pandadoc__Send_Itself_As_Recipient__c: boolean;
+  pandadoc__Use_Standard_Builder__c: boolean;
+};
+
+type ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
+    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
+    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+  }
+
 type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
   //
   Id: string;
@@ -37337,6 +37461,35 @@ interface SObjectDefinition$pandadoc__Recipient_Map__c extends SObjectDefinition
     ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
   }
 
+type Fields$pandadoc__Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Value__c: string | null;
+};
+
+type ParentReferences$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Settings__ChangeEvent extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
+    Name: 'pandadoc__Settings__ChangeEvent';
+    Fields: Fields$pandadoc__Settings__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
+  }
+
 type Fields$pandadoc__Settings__c = {
   //
   Id: string;
@@ -37473,6 +37626,45 @@ interface SObjectDefinition$pandadoc__TriggerSetting__c extends SObjectDefinitio
     Fields: Fields$pandadoc__TriggerSetting__c;
     ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
     ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
+  }
+
+type Fields$rcsfl__AdminSetting__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  rcsfl__AutoFill__c: boolean;
+  rcsfl__AutoSave__c: boolean;
+  rcsfl__HvsDispositionField__c: string | null;
+  rcsfl__HvsMode__c: boolean;
+  rcsfl__IsUnMandatory__c: boolean;
+  rcsfl__ToVoiceMail__c: boolean;
+  rcsfl__accountRelatedTo__c: boolean;
+  rcsfl__autoSelect__c: boolean;
+  rcsfl__fieldOrder__c: number | null;
+  rcsfl__popOnRinging__c: boolean;
+  rcsfl__saveOnRinging__c: boolean;
+};
+
+type ParentReferences$rcsfl__AdminSetting__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$rcsfl__AdminSetting__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$rcsfl__AdminSetting__ChangeEvent extends SObjectDefinition<'rcsfl__AdminSetting__ChangeEvent'> {
+    Name: 'rcsfl__AdminSetting__ChangeEvent';
+    Fields: Fields$rcsfl__AdminSetting__ChangeEvent;
+    ParentReferences: ParentReferences$rcsfl__AdminSetting__ChangeEvent;
+    ChildRelationships: ChildRelationships$rcsfl__AdminSetting__ChangeEvent;
   }
 
 type Fields$rcsfl__AdminSetting__c = {
@@ -37649,6 +37841,49 @@ interface SObjectDefinition$sansancard__SSCard__c extends SObjectDefinition<'san
     Fields: Fields$sansancard__SSCard__c;
     ParentReferences: ParentReferences$sansancard__SSCard__c;
     ChildRelationships: ChildRelationships$sansancard__SSCard__c;
+  }
+
+type Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  sansancard__AccountRecordType__c: string | null;
+  sansancard__AccountValue__c: string | null;
+  sansancard__ContactRecordType__c: string | null;
+  sansancard__ContactValue__c: string | null;
+  sansancard__DisableAllCards__c: boolean;
+  sansancard__DisableDisplayReport__c: boolean;
+  sansancard__DisplayAllDeleteCards__c: boolean;
+  sansancard__DisplayReportId__c: string | null;
+  sansancard__DisplayReportName__c: string | null;
+  sansancard__EnableNotification__c: boolean;
+  sansancard__Enable_Contact__c: boolean;
+  sansancard__Enable_EditFields__c: boolean;
+  sansancard__LeadRecordType__c: string | null;
+  sansancard__LeadValue__c: string | null;
+  sansancard__TransferDest__c: string | null;
+};
+
+type ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__ChangeEvent'> {
+    Name: 'sansancard__ScanToSalesforce_Setting__ChangeEvent';
+    Fields: Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+    ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+    ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent;
   }
 
 type Fields$sansancard__ScanToSalesforce_Setting__c = {
@@ -38234,6 +38469,7 @@ export interface SmoothstackSchema extends Schema {
     Invoice_Payment_Line__c: SObjectDefinition$Invoice_Payment_Line__c;
     Invoice_Payment__ChangeEvent: SObjectDefinition$Invoice_Payment__ChangeEvent;
     Invoice_Payment__c: SObjectDefinition$Invoice_Payment__c;
+    Invoice_Settings__ChangeEvent: SObjectDefinition$Invoice_Settings__ChangeEvent;
     Invoice_Settings__c: SObjectDefinition$Invoice_Settings__c;
     Invoice__ChangeEvent: SObjectDefinition$Invoice__ChangeEvent;
     Invoice__History: SObjectDefinition$Invoice__History;
@@ -38567,6 +38803,7 @@ export interface SmoothstackSchema extends Schema {
     Timesheet_Note__ChangeEvent: SObjectDefinition$Timesheet_Note__ChangeEvent;
     Timesheet_Note__c: SObjectDefinition$Timesheet_Note__c;
     Timesheet_Settings_2__mdt: SObjectDefinition$Timesheet_Settings_2__mdt;
+    Timesheet_Settings__ChangeEvent: SObjectDefinition$Timesheet_Settings__ChangeEvent;
     Timesheet_Settings__c: SObjectDefinition$Timesheet_Settings__c;
     Timesheet_Survey_Settings__ChangeEvent: SObjectDefinition$Timesheet_Survey_Settings__ChangeEvent;
     Timesheet_Survey_Settings__c: SObjectDefinition$Timesheet_Survey_Settings__c;
@@ -38638,17 +38875,21 @@ export interface SmoothstackSchema extends Schema {
     pandadoc__PandaDocDocument__c: SObjectDefinition$pandadoc__PandaDocDocument__c;
     pandadoc__PandaDocLog__ChangeEvent: SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent;
     pandadoc__PandaDocLog__c: SObjectDefinition$pandadoc__PandaDocLog__c;
+    pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
     pandadoc__PandaDoc_JsonBulder_Mapping__c: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c;
     pandadoc__Pricing_Item_Mapping__ChangeEvent: SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent;
     pandadoc__Pricing_Item_Mapping__c: SObjectDefinition$pandadoc__Pricing_Item_Mapping__c;
     pandadoc__Recipient_Map__ChangeEvent: SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent;
     pandadoc__Recipient_Map__c: SObjectDefinition$pandadoc__Recipient_Map__c;
+    pandadoc__Settings__ChangeEvent: SObjectDefinition$pandadoc__Settings__ChangeEvent;
     pandadoc__Settings__c: SObjectDefinition$pandadoc__Settings__c;
     pandadoc__TriggerSetting__ChangeEvent: SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent;
     pandadoc__TriggerSetting__c: SObjectDefinition$pandadoc__TriggerSetting__c;
+    rcsfl__AdminSetting__ChangeEvent: SObjectDefinition$rcsfl__AdminSetting__ChangeEvent;
     rcsfl__AdminSetting__c: SObjectDefinition$rcsfl__AdminSetting__c;
     sansancard__SSCard__ChangeEvent: SObjectDefinition$sansancard__SSCard__ChangeEvent;
     sansancard__SSCard__c: SObjectDefinition$sansancard__SSCard__c;
+    sansancard__ScanToSalesforce_Setting__ChangeEvent: SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent;
     sansancard__ScanToSalesforce_Setting__c: SObjectDefinition$sansancard__ScanToSalesforce_Setting__c;
     sansancard__TransferMeta__ChangeEvent: SObjectDefinition$sansancard__TransferMeta__ChangeEvent;
     sansancard__TransferMeta__c: SObjectDefinition$sansancard__TransferMeta__c;

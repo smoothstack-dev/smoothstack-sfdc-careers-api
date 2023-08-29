@@ -1,0 +1,3298 @@
+[
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WIlQAM"
+    },
+    "Id": "0065G00000w5WIlQAM",
+    "Ability_to_Learn_Quickly__c": "I have to do that before in college."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WKdQAM"
+    },
+    "Id": "0065G00000w5WKdQAM",
+    "Ability_to_Learn_Quickly__c": "I feel like a challenge in the beginning and then as soon as I get into my zone I am good. I was a teacher assistant"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WKeQAM"
+    },
+    "Id": "0065G00000w5WKeQAM",
+    "Ability_to_Learn_Quickly__c": "I feel like a challenge in the beginning and then as soon as I get into my zone I am good. I was a teacher assistant"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WIkQAM"
+    },
+    "Id": "0065G00000w5WIkQAM",
+    "Ability_to_Learn_Quickly__c": "I have to do that before in college."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XdBQAU"
+    },
+    "Id": "0065G00000w5XdBQAU",
+    "Ability_to_Learn_Quickly__c": "originally in Java, and then used typescript."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XdCQAU"
+    },
+    "Id": "0065G00000w5XdCQAU",
+    "Ability_to_Learn_Quickly__c": "originally in Java, and then used typescript."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XlQQAU"
+    },
+    "Id": "0065G00000w5XlQQAU",
+    "Ability_to_Learn_Quickly__c": "I have no problem with that and gave several examples of why"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XcQQAU"
+    },
+    "Id": "0065G00000w5XcQQAU",
+    "Ability_to_Learn_Quickly__c": "App Academy was very internse"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XcRQAU"
+    },
+    "Id": "0065G00000w5XcRQAU",
+    "Ability_to_Learn_Quickly__c": "App Academy was very internse"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5W1uQAE"
+    },
+    "Id": "0065G00000w5W1uQAE",
+    "Ability_to_Learn_Quickly__c": "prepared for this environment because hack reactor bootcamp was similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5W1vQAE"
+    },
+    "Id": "0065G00000w5W1vQAE",
+    "Ability_to_Learn_Quickly__c": "prepared for this environment because hack reactor bootcamp was similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WCWQA2"
+    },
+    "Id": "0065G00000w5WCWQA2",
+    "Ability_to_Learn_Quickly__c": "Working in my undergraduate while taking a full course load. GPA 3.69"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5WCXQA2"
+    },
+    "Id": "0065G00000w5WCXQA2",
+    "Ability_to_Learn_Quickly__c": "Working in my undergraduate while taking a full course load. GPA 3.69"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XJLQA2"
+    },
+    "Id": "0065G00000w5XJLQA2",
+    "Ability_to_Learn_Quickly__c": "school was somewhat similar in some instances and his retail job is also very similar.ly intense. he is comfortable with a heavy workload."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XJMQA2"
+    },
+    "Id": "0065G00000w5XJMQA2",
+    "Ability_to_Learn_Quickly__c": "school was somewhat similar in some instances and his retail job is also very similar.ly intense. he is comfortable with a heavy workload."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5X37QAE"
+    },
+    "Id": "0065G00000w5X37QAE",
+    "Ability_to_Learn_Quickly__c": "Confident because of the Bootcamp- and i can transfer my knowledge easily"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5X38QAE"
+    },
+    "Id": "0065G00000w5X38QAE",
+    "Ability_to_Learn_Quickly__c": "Confident because of the Bootcamp- and i can transfer my knowledge easily"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ZTLQA2"
+    },
+    "Id": "0065G00000w5ZTLQA2",
+    "Ability_to_Learn_Quickly__c": "in the military he had to learn Arabic in a year and learned their politics& terminology."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5Y5kQAE"
+    },
+    "Id": "0065G00000w5Y5kQAE",
+    "Ability_to_Learn_Quickly__c": "last year he joined a program about data structure and algorithms which was really intensive - he feels prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5Y5lQAE"
+    },
+    "Id": "0065G00000w5Y5lQAE",
+    "Ability_to_Learn_Quickly__c": "last year he joined a program about data structure and algorithms which was really intensive - he feels prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5Z3GQAU"
+    },
+    "Id": "0065G00000w5Z3GQAU",
+    "Ability_to_Learn_Quickly__c": "Not a worry at all."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5Z3HQAU"
+    },
+    "Id": "0065G00000w5Z3HQAU",
+    "Ability_to_Learn_Quickly__c": "Not a worry at all."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ZB1QAM"
+    },
+    "Id": "0065G00000w5ZB1QAM",
+    "Ability_to_Learn_Quickly__c": "I had to develop 3 month curriculums ahead of time with strict timing and then I had to learn everything I had to teach."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ZB2QAM"
+    },
+    "Id": "0065G00000w5ZB2QAM",
+    "Ability_to_Learn_Quickly__c": "I had to develop 3 month curriculums ahead of time with strict timing and then I had to learn everything I had to teach."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5b0JQAQ"
+    },
+    "Id": "0065G00000w5b0JQAQ",
+    "Ability_to_Learn_Quickly__c": "Yes- I have done it in the past."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5b0KQAQ"
+    },
+    "Id": "0065G00000w5b0KQAQ",
+    "Ability_to_Learn_Quickly__c": "Yes- I have done it in the past."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5c4cQAA"
+    },
+    "Id": "0065G00000w5c4cQAA",
+    "Ability_to_Learn_Quickly__c": "THinkful"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bxLQAQ"
+    },
+    "Id": "0065G00000w5bxLQAQ",
+    "Ability_to_Learn_Quickly__c": "The bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bGgQAI"
+    },
+    "Id": "0065G00000w5bGgQAI",
+    "Ability_to_Learn_Quickly__c": "Coding bootcamp, had to go through an intensive program for 14 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bPbQAI"
+    },
+    "Id": "0065G00000w5bPbQAI",
+    "Ability_to_Learn_Quickly__c": "Took a ton of AP classes and always has to cram lots of info in my self before exams and finals and it got busy in the end but I always did well and was able to pull it all together."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bBOQAY"
+    },
+    "Id": "0065G00000w5bBOQAY",
+    "Ability_to_Learn_Quickly__c": "Had to python very very quickly because the team he worked with expected him to know it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bBPQAY"
+    },
+    "Id": "0065G00000w5bBPQAY",
+    "Ability_to_Learn_Quickly__c": "Had to python very very quickly because the team he worked with expected him to know it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bBSQAY"
+    },
+    "Id": "0065G00000w5bBSQAY",
+    "Ability_to_Learn_Quickly__c": "switching to linux"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bBTQAY"
+    },
+    "Id": "0065G00000w5bBTQAY",
+    "Ability_to_Learn_Quickly__c": "switching to linux"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bPaQAI"
+    },
+    "Id": "0065G00000w5bPaQAI",
+    "Ability_to_Learn_Quickly__c": "Took a ton of AP classes and always has to cram lots of info in my self before exams and finals and it got busy in the end but I always did well and was able to pull it all together."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cG0QAI"
+    },
+    "Id": "0065G00000w5cG0QAI",
+    "Ability_to_Learn_Quickly__c": "Back when he was working as an air traffic controller, he had to do a lot of fast paced learning."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5c5VQAQ"
+    },
+    "Id": "0065G00000w5c5VQAQ",
+    "Ability_to_Learn_Quickly__c": "Bootcamp was 8 hour days and we learned alot of info and then needed to practice with lectures and labs twice a day."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5c5jQAA"
+    },
+    "Id": "0065G00000w5c5jQAA",
+    "Ability_to_Learn_Quickly__c": "For his group project back in School, he took on a major chunk of the work. Learnt advanced Java in a short period."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bRFQAY"
+    },
+    "Id": "0065G00000w5bRFQAY",
+    "Ability_to_Learn_Quickly__c": "In the internship he had to use an old IBM language.  So he had to learn it in order to build something in it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5bRGQAY"
+    },
+    "Id": "0065G00000w5bRGQAY",
+    "Ability_to_Learn_Quickly__c": "In the internship he had to use an old IBM language.  So he had to learn it in order to build something in it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dXPQAY"
+    },
+    "Id": "0065G00000w5dXPQAY",
+    "Ability_to_Learn_Quickly__c": "when is started at Accenture I needed to know Bash and java to do that internship and I never worked with it before and I had to learn it on my own to do the internship"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e0rQAA"
+    },
+    "Id": "0065G00000w5e0rQAA",
+    "Ability_to_Learn_Quickly__c": "having to learn how web development worked"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eUPQAY"
+    },
+    "Id": "0065G00000w5eUPQAY",
+    "Ability_to_Learn_Quickly__c": "a have a pair of part time jobs- Full time learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eUQQAY"
+    },
+    "Id": "0065G00000w5eUQQAY",
+    "Ability_to_Learn_Quickly__c": "a have a pair of part time jobs- Full time learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dzyQAA"
+    },
+    "Id": "0065G00000w5dzyQAA",
+    "Ability_to_Learn_Quickly__c": "had to learn how to do functions and the synthax in Java."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cb3QAA"
+    },
+    "Id": "0065G00000w5cb3QAA",
+    "Ability_to_Learn_Quickly__c": "Had to learn Reach during the bootcamp in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dHaQAI"
+    },
+    "Id": "0065G00000w5dHaQAI",
+    "Ability_to_Learn_Quickly__c": "really good at working under pressure with time re-straights and feel that is how i work best"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eURQAY"
+    },
+    "Id": "0065G00000w5eURQAY",
+    "Ability_to_Learn_Quickly__c": "a have a pair of part time jobs- Full time learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dFkQAI"
+    },
+    "Id": "0065G00000w5dFkQAI",
+    "Ability_to_Learn_Quickly__c": "Calculus"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dFnQAI"
+    },
+    "Id": "0065G00000w5dFnQAI",
+    "Ability_to_Learn_Quickly__c": "had to learn python.  took one class to learn it in 7 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ed2QAA"
+    },
+    "Id": "0065G00000w5ed2QAA",
+    "Ability_to_Learn_Quickly__c": "I want to learn new things and have the growth that i need."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dyqQAA"
+    },
+    "Id": "0065G00000w5dyqQAA",
+    "Ability_to_Learn_Quickly__c": "recently started using an android studio and had to learn it from scratch."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dyrQAA"
+    },
+    "Id": "0065G00000w5dyrQAA",
+    "Ability_to_Learn_Quickly__c": "moving to Japan for the first time was very challenging."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dVqQAI"
+    },
+    "Id": "0065G00000w5dVqQAI",
+    "Ability_to_Learn_Quickly__c": "said he can't think of a time when he had to learn a lot in a short period of time.  After thinking for a while he asked what would be a short period of time.  I said whatever you want it to be. He then said he can't think of an example."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eN1QAI"
+    },
+    "Id": "0065G00000w5eN1QAI",
+    "Ability_to_Learn_Quickly__c": "trying to figure out how to build the AI in a game."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eN4QAI"
+    },
+    "Id": "0065G00000w5eN4QAI",
+    "Ability_to_Learn_Quickly__c": "That is up my alley - the bootcamp was nonstop"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ed9QAA"
+    },
+    "Id": "0065G00000w5ed9QAA",
+    "Ability_to_Learn_Quickly__c": "raspberry Pi was very new to him."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dG0QAI"
+    },
+    "Id": "0065G00000w5dG0QAI",
+    "Ability_to_Learn_Quickly__c": "having to learn rest framework was challenging."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e1SQAQ"
+    },
+    "Id": "0065G00000w5e1SQAQ",
+    "Ability_to_Learn_Quickly__c": "I would have all the time to learn and grasp all of my time to it and I look forward to putting in all the hours I have to"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e1TQAQ"
+    },
+    "Id": "0065G00000w5e1TQAQ",
+    "Ability_to_Learn_Quickly__c": "I would have all the time to learn and grasp all of my time to it and I look forward to putting in all the hours I have to"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5edeQAA"
+    },
+    "Id": "0065G00000w5edeQAA",
+    "Ability_to_Learn_Quickly__c": "had to learn Javascript really quickly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dzAQAQ"
+    },
+    "Id": "0065G00000w5dzAQAQ",
+    "Ability_to_Learn_Quickly__c": "current job, came in not knowing anything about the cinema industry, and he had to learn since certain standards kept changing."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dzBQAQ"
+    },
+    "Id": "0065G00000w5dzBQAQ",
+    "Ability_to_Learn_Quickly__c": "Extremely seasoned with degrees and work experience"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e1UQAQ"
+    },
+    "Id": "0065G00000w5e1UQAQ",
+    "Ability_to_Learn_Quickly__c": "I would have all the time to learn and grasp all of my time to it and I look forward to putting in all the hours I have to"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eLRQAY"
+    },
+    "Id": "0065G00000w5eLRQAY",
+    "Ability_to_Learn_Quickly__c": "confident- for school situations and 5 classes"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eReQAI"
+    },
+    "Id": "0065G00000w5eReQAI",
+    "Ability_to_Learn_Quickly__c": "been in the field and build projects outside of work and that is why I feel good about the pacing of the training."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eTNQAY"
+    },
+    "Id": "0065G00000w5eTNQAY",
+    "Ability_to_Learn_Quickly__c": "School."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eLWQAY"
+    },
+    "Id": "0065G00000w5eLWQAY",
+    "Ability_to_Learn_Quickly__c": "had to use a software called Flash, even his professor didn't know how to use it.  and he had to figure it out."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eNXQAY"
+    },
+    "Id": "0065G00000w5eNXQAY",
+    "Ability_to_Learn_Quickly__c": "BA"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dIIQAY"
+    },
+    "Id": "0065G00000w5dIIQAY",
+    "Ability_to_Learn_Quickly__c": "bootcamp was very similar to the Smoothstack training program"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dIJQAY"
+    },
+    "Id": "0065G00000w5dIJQAY",
+    "Ability_to_Learn_Quickly__c": "bootcamp was very similar to the Smoothstack training program"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dGYQAY"
+    },
+    "Id": "0065G00000w5dGYQAY",
+    "Ability_to_Learn_Quickly__c": "I learn pretty fast and I also love collaborating with others and asking questions and that helps me further my understanding on things in a short time frame."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dGbQAI"
+    },
+    "Id": "0065G00000w5dGbQAI",
+    "Ability_to_Learn_Quickly__c": "The current apprenticeship has been a huge undertaking and have had to learn a ton and needed time management to get through this. Last summer I took a few high level courses and got all As."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e0EQAQ"
+    },
+    "Id": "0065G00000w5e0EQAQ",
+    "Ability_to_Learn_Quickly__c": "We had an open ended coding project for one of my classes. It was nothing we learned in class so i had to teach myself all that stuff and understand and program it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eNwQAI"
+    },
+    "Id": "0065G00000w5eNwQAI",
+    "Ability_to_Learn_Quickly__c": "May not have been thru anything for 8 hours a day but does not scare me"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eSAQAY"
+    },
+    "Id": "0065G00000w5eSAQAY",
+    "Ability_to_Learn_Quickly__c": "I think with college behind me it is something I can do"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eMDQAY"
+    },
+    "Id": "0065G00000w5eMDQAY",
+    "Ability_to_Learn_Quickly__c": "I am an eagle scout and an EMT and those are courses I accelerated thru"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eO4QAI"
+    },
+    "Id": "0065G00000w5eO4QAI",
+    "Ability_to_Learn_Quickly__c": "had to learn 3 languages in one class."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cSIQAY"
+    },
+    "Id": "0065G00000w5cSIQAY",
+    "Ability_to_Learn_Quickly__c": "His Data Engineer position was challenge as it had a learning curve and he had to learn a lot, train on data engineer apps."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e0ZQAQ"
+    },
+    "Id": "0065G00000w5e0ZQAQ",
+    "Ability_to_Learn_Quickly__c": "he had to learn C in a week to understand what he had to do in a class since it was a pre-requisite"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dFJQAY"
+    },
+    "Id": "0065G00000w5dFJQAY",
+    "Ability_to_Learn_Quickly__c": "I am really good at simulating lots of knowledge in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e0iQAA"
+    },
+    "Id": "0065G00000w5e0iQAA",
+    "Ability_to_Learn_Quickly__c": "Love learning on the job and had the year plus internship"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eUKQAY"
+    },
+    "Id": "0065G00000w5eUKQAY",
+    "Ability_to_Learn_Quickly__c": "super exciting - i tend to push thru and learn quickly. TIme passes fast and I get lost in learnin"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dFOQAY"
+    },
+    "Id": "0065G00000w5dFOQAY",
+    "Ability_to_Learn_Quickly__c": "works at upwork - they had a custom javascript and after researching for a hour he was able to put something together that worked."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e0jQAA"
+    },
+    "Id": "0065G00000w5e0jQAA",
+    "Ability_to_Learn_Quickly__c": "I have self taught myself so much and done the bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eMZQAY"
+    },
+    "Id": "0065G00000w5eMZQAY",
+    "Ability_to_Learn_Quickly__c": "I am used to that and if anything that is something I am very accustomed to. Very fast learner- finished my BA in half the time and I am better at self learning than most people."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cwaQAA"
+    },
+    "Id": "0065G00000w5cwaQAA",
+    "Ability_to_Learn_Quickly__c": "ASP.net and MVC was the first time he had to learn how to use it last year during the internship."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d53QAA"
+    },
+    "Id": "0065G00000w5d53QAA",
+    "Ability_to_Learn_Quickly__c": "The last year I got a 16 credit cert on top of an associated degree plus work in 12 months."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dkmQAA"
+    },
+    "Id": "0065G00000w5dkmQAA",
+    "Ability_to_Learn_Quickly__c": "fast tracked thru school doing summers and really no breaks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5efNQAQ"
+    },
+    "Id": "0065G00000w5efNQAQ",
+    "Ability_to_Learn_Quickly__c": "I think that would be fine- Capstone was intense and you had to learn alot"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5efRQAQ"
+    },
+    "Id": "0065G00000w5efRQAQ",
+    "Ability_to_Learn_Quickly__c": "i am excited and ready to learn. School helped me prep for this time of challenge."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d5AQAQ"
+    },
+    "Id": "0065G00000w5d5AQAQ",
+    "Ability_to_Learn_Quickly__c": "in his development class, one of his projects was intensive and he wasn't educated in it.  He had to learn Javascript, CSS, and HTML."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d2dQAA"
+    },
+    "Id": "0065G00000w5d2dQAA",
+    "Ability_to_Learn_Quickly__c": "He had to learn how to code in C# over one weekend so he had to quickly pick up what he needed."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d3HQAQ"
+    },
+    "Id": "0065G00000w5d3HQAQ",
+    "Ability_to_Learn_Quickly__c": "Described his internship and what he had to do around others that had no idea what they were doing. I had to clearly describe what I was doing to those who didn't know much about technology. I learned about planning!"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ehMQAQ"
+    },
+    "Id": "0065G00000w5ehMQAQ",
+    "Ability_to_Learn_Quickly__c": "senior year of high school was insanely - 2-3 months took time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ehNQAQ"
+    },
+    "Id": "0065G00000w5ehNQAQ",
+    "Ability_to_Learn_Quickly__c": "senior year of high school was insanely - 2-3 months took time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dP2QAI"
+    },
+    "Id": "0065G00000w5dP2QAI",
+    "Ability_to_Learn_Quickly__c": "learning to build RestAPIs"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dP3QAI"
+    },
+    "Id": "0065G00000w5dP3QAI",
+    "Ability_to_Learn_Quickly__c": "learning to build RestAPIs"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dP4QAI"
+    },
+    "Id": "0065G00000w5dP4QAI",
+    "Ability_to_Learn_Quickly__c": "learning to build RestAPIs"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dixQAA"
+    },
+    "Id": "0065G00000w5dixQAA",
+    "Ability_to_Learn_Quickly__c": "In school and having to learn a new language and cramming for exams"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5efnQAA"
+    },
+    "Id": "0065G00000w5efnQAA",
+    "Ability_to_Learn_Quickly__c": "finished school in 2 year"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dCXQAY"
+    },
+    "Id": "0065G00000w5dCXQAY",
+    "Ability_to_Learn_Quickly__c": "the coding bootcamp was tough because he had to learn around just in the first 2 months."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cpxQAA"
+    },
+    "Id": "0065G00000w5cpxQAA",
+    "Ability_to_Learn_Quickly__c": "when she finished high school, she went to a military academy.  There was a lot of information she had to learn very quickly, even how to walk."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dCeQAI"
+    },
+    "Id": "0065G00000w5dCeQAI",
+    "Ability_to_Learn_Quickly__c": "I have learned things in 2 days if I have a direction to go and I feel like I have experience leaning new coding stacks"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5djPQAQ"
+    },
+    "Id": "0065G00000w5djPQAQ",
+    "Ability_to_Learn_Quickly__c": "Early on Mike didn't know anything about databases, and within 3 months he went from not knowing anything to building an efficient model."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dE8QAI"
+    },
+    "Id": "0065G00000w5dE8QAI",
+    "Ability_to_Learn_Quickly__c": "Had to learn Java to mod the game minecraft.  Gave himself a week to learn enough to implement it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5csBQAQ"
+    },
+    "Id": "0065G00000w5csBQAQ",
+    "Ability_to_Learn_Quickly__c": "During senior year of high school, he had to take an AP class. The teacher wanted him to recreate Yahtzee in Java."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e9GQAQ"
+    },
+    "Id": "0065G00000w5e9GQAQ",
+    "Ability_to_Learn_Quickly__c": "I'm pretty excited about that. I learn things very quickly"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eALQAY"
+    },
+    "Id": "0065G00000w5eALQAY",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general but specifically it was tough to learn javascript in a short period of time with agile methodology"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dEQQAY"
+    },
+    "Id": "0065G00000w5dEQQAY",
+    "Ability_to_Learn_Quickly__c": "The Rocket team and my experience with Java was super low and I had to learn how to read a bunch of documentation and learn on my own"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cxwQAA"
+    },
+    "Id": "0065G00000w5cxwQAA",
+    "Ability_to_Learn_Quickly__c": "Calculus and learning Boolean languages at the same time. When I first started at Cannon. It was heavy and took some time to get through."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cqgQAA"
+    },
+    "Id": "0065G00000w5cqgQAA",
+    "Ability_to_Learn_Quickly__c": "in the software engineering class, had to learn html and bash really quick while changing his programming style."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dRkQAI"
+    },
+    "Id": "0065G00000w5dRkQAI",
+    "Ability_to_Learn_Quickly__c": "In a recent class I had to take comptia progress + and the amount of things you have to know for that certification and all the terms you need to know for that and I learned in 2 days."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eAkQAI"
+    },
+    "Id": "0065G00000w5eAkQAI",
+    "Ability_to_Learn_Quickly__c": "I am confident in my skills and ability"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dElQAI"
+    },
+    "Id": "0065G00000w5dElQAI",
+    "Ability_to_Learn_Quickly__c": "Bloom tech was 8 months long and there was so much to learn in a short amount of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ef3QAA"
+    },
+    "Id": "0065G00000w5ef3QAA",
+    "Ability_to_Learn_Quickly__c": "Stack Overlow is a tool he uses a lot to learn new things."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e9vQAA"
+    },
+    "Id": "0065G00000w5e9vQAA",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general was super fast paced, especially having to learn React as well."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dQYQAY"
+    },
+    "Id": "0065G00000w5dQYQAY",
+    "Ability_to_Learn_Quickly__c": "I want to learn as much as possible before I enter into my career and put aside as much time as possible to make it so I am successfull"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dvpQAA"
+    },
+    "Id": "0065G00000w5dvpQAA",
+    "Ability_to_Learn_Quickly__c": "the part time role where he had to learn javascript."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eZ1QAI"
+    },
+    "Id": "0065G00000w5eZ1QAI",
+    "Ability_to_Learn_Quickly__c": "just my internship"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eazQAA"
+    },
+    "Id": "0065G00000w5eazQAA",
+    "Ability_to_Learn_Quickly__c": "yes- i am not working"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5clLQAQ"
+    },
+    "Id": "0065G00000w5clLQAQ",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general since she had no coding experience going into it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5clMQAQ"
+    },
+    "Id": "0065G00000w5clMQAQ",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general since she had no coding experience going into it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eZCQAY"
+    },
+    "Id": "0065G00000w5eZCQAY",
+    "Ability_to_Learn_Quickly__c": "no concerns at all- App Academy"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dq8QAA"
+    },
+    "Id": "0065G00000w5dq8QAA",
+    "Ability_to_Learn_Quickly__c": "My bootcamp went over a lot of material quickly and I was working a full time job"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ds5QAA"
+    },
+    "Id": "0065G00000w5ds5QAA",
+    "Ability_to_Learn_Quickly__c": "During my last year in college and I filled my semesters with classes to finish in the spring. So I had to cram a bunch of classes and did well."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5du5QAA"
+    },
+    "Id": "0065G00000w5du5QAA",
+    "Ability_to_Learn_Quickly__c": "had to work in a team of 5 where everyone had different areas of focus.  He had to focus on the HTML side and had to teach himself."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5depQAA"
+    },
+    "Id": "0065G00000w5depQAA",
+    "Ability_to_Learn_Quickly__c": "in his multimedia class he had to design his own project.  Had to incorporate audio and visuals into the project.  He had never used Python before.  Had to learn all of Python and incorporate all of it in 10 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eYFQAY"
+    },
+    "Id": "0065G00000w5eYFQAY",
+    "Ability_to_Learn_Quickly__c": "Yes- I would give it the time needed to process info and plan it out to gain the knowledge"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dyDQAQ"
+    },
+    "Id": "0065G00000w5dyDQAQ",
+    "Ability_to_Learn_Quickly__c": "Self imposed intense - 2 weeks I leaned Java"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dsVQAQ"
+    },
+    "Id": "0065G00000w5dsVQAQ",
+    "Ability_to_Learn_Quickly__c": "One of the reasons I stuck with this for so long - I am good at self teaching myself what I do not understand"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dcbQAA"
+    },
+    "Id": "0065G00000w5dcbQAA",
+    "Ability_to_Learn_Quickly__c": "In my degree I handle pressure well and always got through it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dccQAA"
+    },
+    "Id": "0065G00000w5dccQAA",
+    "Ability_to_Learn_Quickly__c": "In my degree I handle pressure well and always got through it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dseQAA"
+    },
+    "Id": "0065G00000w5dseQAA",
+    "Ability_to_Learn_Quickly__c": "Working at the company remotely we were using a language that I was unfamiliar with and needed to learn that very quickly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dcmQAA"
+    },
+    "Id": "0065G00000w5dcmQAA",
+    "Ability_to_Learn_Quickly__c": "HTP had 3 different systems that he had to learn quickly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dhCQAQ"
+    },
+    "Id": "0065G00000w5dhCQAQ",
+    "Ability_to_Learn_Quickly__c": "database systems where he had to SQL"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dukQAA"
+    },
+    "Id": "0065G00000w5dukQAA",
+    "Ability_to_Learn_Quickly__c": "I have done bootcamps- college courses and feel I can handle it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dotQAA"
+    },
+    "Id": "0065G00000w5dotQAA",
+    "Ability_to_Learn_Quickly__c": "finished his masters in 1.5 years."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dqrQAA"
+    },
+    "Id": "0065G00000w5dqrQAA",
+    "Ability_to_Learn_Quickly__c": "had to learn angular to build a project within a month."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dhKQAQ"
+    },
+    "Id": "0065G00000w5dhKQAQ",
+    "Ability_to_Learn_Quickly__c": "not having enough to finish the final project but still getting it done so that it's functions worked properly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dhOQAQ"
+    },
+    "Id": "0065G00000w5dhOQAQ",
+    "Ability_to_Learn_Quickly__c": "For me I am curious and enjoy a challenge and am always up for learning new languages and skills."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5duzQAA"
+    },
+    "Id": "0065G00000w5duzQAA",
+    "Ability_to_Learn_Quickly__c": "C++"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dv0QAA"
+    },
+    "Id": "0065G00000w5dv0QAA",
+    "Ability_to_Learn_Quickly__c": "C++"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e5zQAA"
+    },
+    "Id": "0065G00000w5e5zQAA",
+    "Ability_to_Learn_Quickly__c": "I love learning new things and kind of like the pressure."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dfgQAA"
+    },
+    "Id": "0065G00000w5dfgQAA",
+    "Ability_to_Learn_Quickly__c": "Putting time and effort and buckling down learning everything I would need to know to be sent out would be great."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dfhQAA"
+    },
+    "Id": "0065G00000w5dfhQAA",
+    "Ability_to_Learn_Quickly__c": "Putting time and effort and buckling down learning everything I would need to know to be sent out would be great."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e64QAA"
+    },
+    "Id": "0065G00000w5e64QAA",
+    "Ability_to_Learn_Quickly__c": "Bootcamp- High honors"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cfEQAQ"
+    },
+    "Id": "0065G00000w5cfEQAQ",
+    "Ability_to_Learn_Quickly__c": "She had to request an API for the first time in JAVA.  She had only done it for a web based application but not in JAVA."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dxAQAQ"
+    },
+    "Id": "0065G00000w5dxAQAQ",
+    "Ability_to_Learn_Quickly__c": "figuring out how to get Apache to work.  Learning how to make everything work together."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ecAQAQ"
+    },
+    "Id": "0065G00000w5ecAQAQ",
+    "Ability_to_Learn_Quickly__c": "Double Major in school"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cdPQAQ"
+    },
+    "Id": "0065G00000w5cdPQAQ",
+    "Ability_to_Learn_Quickly__c": "Most recently went to study abroad,"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dfyQAA"
+    },
+    "Id": "0065G00000w5dfyQAA",
+    "Ability_to_Learn_Quickly__c": "Coding comes naturally to me and I feel good at this and have that advantage and confident I will be good at this"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e6KQAQ"
+    },
+    "Id": "0065G00000w5e6KQAQ",
+    "Ability_to_Learn_Quickly__c": "I feel I am very equip to learn a lot in a short amount of time and understand that I would need to work on things independently. If It is something I love then I do not mind doing it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dfzQAA"
+    },
+    "Id": "0065G00000w5dfzQAA",
+    "Ability_to_Learn_Quickly__c": "Coding comes naturally to me and I feel good at this and have that advantage and confident I will be good at this"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eYmQAI"
+    },
+    "Id": "0065G00000w5eYmQAI",
+    "Ability_to_Learn_Quickly__c": "In 2020 he was working hard to make his own game engines using C++."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dgCQAQ"
+    },
+    "Id": "0065G00000w5dgCQAQ",
+    "Ability_to_Learn_Quickly__c": "Graduated in 4 years after changing majors and was craming 5 to 6 classes every semester and did summer to finish"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dtYQAQ"
+    },
+    "Id": "0065G00000w5dtYQAQ",
+    "Ability_to_Learn_Quickly__c": "Project in school, didn't know about PHP, HTML, CSS, and he had to learn how to use all of it really quickly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dvWQAQ"
+    },
+    "Id": "0065G00000w5dvWQAQ",
+    "Ability_to_Learn_Quickly__c": "UPS in the morning and the first day I was thrown in the job and I had to learn"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eYnQAI"
+    },
+    "Id": "0065G00000w5eYnQAI",
+    "Ability_to_Learn_Quickly__c": "In 2020 he was working hard to make his own game engines using C++."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eYrQAI"
+    },
+    "Id": "0065G00000w5eYrQAI",
+    "Ability_to_Learn_Quickly__c": "I need to know more all the time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dxaQAA"
+    },
+    "Id": "0065G00000w5dxaQAA",
+    "Ability_to_Learn_Quickly__c": "i would welcome it with open arms"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5clCQAQ"
+    },
+    "Id": "0065G00000w5clCQAQ",
+    "Ability_to_Learn_Quickly__c": "taking 5 classes while working part time at starbucks was really tough and had to learn a lot in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dgDQAQ"
+    },
+    "Id": "0065G00000w5dgDQAQ",
+    "Ability_to_Learn_Quickly__c": "Graduated in 4 years after changing majors and was craming 5 to 6 classes every semester and did summer to finish"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5clDQAQ"
+    },
+    "Id": "0065G00000w5clDQAQ",
+    "Ability_to_Learn_Quickly__c": "taking 5 classes while working part time at starbucks was really tough and had to learn a lot in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5deQQAQ"
+    },
+    "Id": "0065G00000w5deQQAQ",
+    "Ability_to_Learn_Quickly__c": "I feel like it makes me a bit nervous but excited- I feel like I do a great job in fast past environment and am always very cutting edge."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eDdQAI"
+    },
+    "Id": "0065G00000w5eDdQAI",
+    "Ability_to_Learn_Quickly__c": "java, he tried to learn it in a few weeks"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3ZQAQ"
+    },
+    "Id": "0065G00000w5e3ZQAQ",
+    "Ability_to_Learn_Quickly__c": "Javacript and Reach due to a project that didn't require the skills he had already learned such as C++"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eQJQAY"
+    },
+    "Id": "0065G00000w5eQJQAY",
+    "Ability_to_Learn_Quickly__c": "a lot of self directed learning at the bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dUJQAY"
+    },
+    "Id": "0065G00000w5dUJQAY",
+    "Ability_to_Learn_Quickly__c": "The bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dK8QAI"
+    },
+    "Id": "0065G00000w5dK8QAI",
+    "Ability_to_Learn_Quickly__c": "For his senior project they had to build a mobile app.  They had not done any mobile development.  It was a tough week where they had to figure out how to do it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dMsQAI"
+    },
+    "Id": "0065G00000w5dMsQAI",
+    "Ability_to_Learn_Quickly__c": "I like to learn things and tend to learn things very quickly. for example never knew Bash and learned it for coding challenge."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d7XQAQ"
+    },
+    "Id": "0065G00000w5d7XQAQ",
+    "Ability_to_Learn_Quickly__c": "During my last semester in college I was in a group of 8 doing game design and we had to learn Unity and make a game and publish it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3fQAA"
+    },
+    "Id": "0065G00000w5e3fQAA",
+    "Ability_to_Learn_Quickly__c": "I am a quick learner and I am always willing to work extra hours"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eOWQAY"
+    },
+    "Id": "0065G00000w5eOWQAY",
+    "Ability_to_Learn_Quickly__c": "had to learn c# and Unity"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eDyQAI"
+    },
+    "Id": "0065G00000w5eDyQAI",
+    "Ability_to_Learn_Quickly__c": "I am always out for learning things and am the type of person who is always learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d7mQAA"
+    },
+    "Id": "0065G00000w5d7mQAA",
+    "Ability_to_Learn_Quickly__c": "When he first learned Java5, he learned it quickly and use it right away."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3tQAA"
+    },
+    "Id": "0065G00000w5e3tQAA",
+    "Ability_to_Learn_Quickly__c": "he had to teach himself python to build a project really quick"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dNDQAY"
+    },
+    "Id": "0065G00000w5dNDQAY",
+    "Ability_to_Learn_Quickly__c": "I am confident in my abilities to learn new tech and new software"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cKYQAY"
+    },
+    "Id": "0065G00000w5cKYQAY",
+    "Ability_to_Learn_Quickly__c": "I have had similar courses where they expect a lot."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5cKZQAY"
+    },
+    "Id": "0065G00000w5cKZQAY",
+    "Ability_to_Learn_Quickly__c": "I have had similar courses where they expect a lot."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3vQAA"
+    },
+    "Id": "0065G00000w5e3vQAA",
+    "Ability_to_Learn_Quickly__c": "see question #10"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eQjQAI"
+    },
+    "Id": "0065G00000w5eQjQAI",
+    "Ability_to_Learn_Quickly__c": "Yes there was definitely a few times in college where I was pulling several all nighters to get everything done."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d6DQAQ"
+    },
+    "Id": "0065G00000w5d6DQAQ",
+    "Ability_to_Learn_Quickly__c": "General Assembly coding bootcamp was tough because he had no experience with javascript, css, html.  It took 12 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d82QAA"
+    },
+    "Id": "0065G00000w5d82QAA",
+    "Ability_to_Learn_Quickly__c": "Capstone learning react native"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eP7QAI"
+    },
+    "Id": "0065G00000w5eP7QAI",
+    "Ability_to_Learn_Quickly__c": "The light at the end of the tunnel would be there and is what would be enough"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eEXQAY"
+    },
+    "Id": "0065G00000w5eEXQAY",
+    "Ability_to_Learn_Quickly__c": "Fast learner- and Chemistry- 3.2"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dNbQAI"
+    },
+    "Id": "0065G00000w5dNbQAI",
+    "Ability_to_Learn_Quickly__c": "had to learn javascript, css, API in a short period of time to make something from scratch."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dNeQAI"
+    },
+    "Id": "0065G00000w5dNeQAI",
+    "Ability_to_Learn_Quickly__c": "I have experience with high stress and learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dNoQAI"
+    },
+    "Id": "0065G00000w5dNoQAI",
+    "Ability_to_Learn_Quickly__c": "in school they had to take AI class to implement it slightly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d6ZQAQ"
+    },
+    "Id": "0065G00000w5d6ZQAQ",
+    "Ability_to_Learn_Quickly__c": "university"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5d8TQAQ"
+    },
+    "Id": "0065G00000w5d8TQAQ",
+    "Ability_to_Learn_Quickly__c": "senior project, didn't know much about django and had to learn it in 14 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eRKQAY"
+    },
+    "Id": "0065G00000w5eRKQAY",
+    "Ability_to_Learn_Quickly__c": "School with my Masters there was a lot to learn and it was the start of Covid."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e2kQAA"
+    },
+    "Id": "0065G00000w5e2kQAA",
+    "Ability_to_Learn_Quickly__c": "Jira and git"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eRUQAY"
+    },
+    "Id": "0065G00000w5eRUQAY",
+    "Ability_to_Learn_Quickly__c": "I did a few certs out of college and the fast pace is preferred for me"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eKUQAY"
+    },
+    "Id": "0065G00000w5eKUQAY",
+    "Ability_to_Learn_Quickly__c": "having to keep production going."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eWNQAY"
+    },
+    "Id": "0065G00000w5eWNQAY",
+    "Ability_to_Learn_Quickly__c": "Had to learn how to use Playfab."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3BQAQ"
+    },
+    "Id": "0065G00000w5e3BQAQ",
+    "Ability_to_Learn_Quickly__c": "I took 5 classes in a semester and was able to keep up with them all."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e4sQAA"
+    },
+    "Id": "0065G00000w5e4sQAA",
+    "Ability_to_Learn_Quickly__c": "data structures and algorithms class."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5eITQAY"
+    },
+    "Id": "0065G00000w5eITQAY",
+    "Ability_to_Learn_Quickly__c": "Rest API using Python"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3DQAQ"
+    },
+    "Id": "0065G00000w5e3DQAQ",
+    "Ability_to_Learn_Quickly__c": "When I learned react we had one microservice to do per week and it had to be done in 4 weeks."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3GQAQ"
+    },
+    "Id": "0065G00000w5e3GQAQ",
+    "Ability_to_Learn_Quickly__c": "had to learn React on his own to help build a project.  used google and online resources to teach himself."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e4zQAA"
+    },
+    "Id": "0065G00000w5e4zQAA",
+    "Ability_to_Learn_Quickly__c": "That is one of my strong suits and enjoy programming"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dONQAY"
+    },
+    "Id": "0065G00000w5dONQAY",
+    "Ability_to_Learn_Quickly__c": "Had to dive into Java while working at Spirit and he had to learn it in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dOOQAY"
+    },
+    "Id": "0065G00000w5dOOQAY",
+    "Ability_to_Learn_Quickly__c": "Had to dive into Java while working at Spirit and he had to learn it in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dOPQAY"
+    },
+    "Id": "0065G00000w5dOPQAY",
+    "Ability_to_Learn_Quickly__c": "Had to dive into Java while working at Spirit and he had to learn it in a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5e3HQAQ"
+    },
+    "Id": "0065G00000w5e3HQAQ",
+    "Ability_to_Learn_Quickly__c": "School was tough and I was great with time management."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dJuQAI"
+    },
+    "Id": "0065G00000w5dJuQAI",
+    "Ability_to_Learn_Quickly__c": "The capstone project.  He had to quickly learn what he would need to finish his project.  Such as how to setup a .net and how to connect a server to his application."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dJvQAI"
+    },
+    "Id": "0065G00000w5dJvQAI",
+    "Ability_to_Learn_Quickly__c": "The capstone project.  He had to quickly learn what he would need to finish his project.  Such as how to setup a .net and how to connect a server to his application."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dUHQAY"
+    },
+    "Id": "0065G00000w5dUHQAY",
+    "Ability_to_Learn_Quickly__c": "The bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5dUIQAY"
+    },
+    "Id": "0065G00000w5dUIQAY",
+    "Ability_to_Learn_Quickly__c": "The bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g42QAA"
+    },
+    "Id": "0065G00000w5g42QAA",
+    "Ability_to_Learn_Quickly__c": "in school there were many instances where he had to prepare materials in a short amount of time"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gTXQAY"
+    },
+    "Id": "0065G00000w5gTXQAY",
+    "Ability_to_Learn_Quickly__c": "not too worried about it because school classes were always like this"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gTZQAY"
+    },
+    "Id": "0065G00000w5gTZQAY",
+    "Ability_to_Learn_Quickly__c": "No I have been taking pretty intense classes and I seek them out"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gUAQAY"
+    },
+    "Id": "0065G00000w5gUAQAY",
+    "Ability_to_Learn_Quickly__c": "took a class in college called Programming Languages - learned 1 programming language per week - databases too. Lots of cramming."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fh1QAA"
+    },
+    "Id": "0065G00000w5fh1QAA",
+    "Ability_to_Learn_Quickly__c": "I have the ability to learn really fast"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5esrQAA"
+    },
+    "Id": "0065G00000w5esrQAA",
+    "Ability_to_Learn_Quickly__c": "I need to understand something from top to bottom and spend lots of my free time to get it and excel in it to make sure I am 100% ready for the next step."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gWPQAY"
+    },
+    "Id": "0065G00000w5gWPQAY",
+    "Ability_to_Learn_Quickly__c": "I want to build something in the future and this will help get me there so I can handle it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fcWQAQ"
+    },
+    "Id": "0065G00000w5fcWQAQ",
+    "Ability_to_Learn_Quickly__c": "I did 60 hours a week at Galvanize"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fhLQAQ"
+    },
+    "Id": "0065G00000w5fhLQAQ",
+    "Ability_to_Learn_Quickly__c": "took a bunch of math classes at once"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gUcQAI"
+    },
+    "Id": "0065G00000w5gUcQAI",
+    "Ability_to_Learn_Quickly__c": "school was similar - loves to learn. Focused on one thing."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fToQAI"
+    },
+    "Id": "0065G00000w5fToQAI",
+    "Ability_to_Learn_Quickly__c": "Yes- I am very good at learning and focusing on the task at hand"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g6bQAA"
+    },
+    "Id": "0065G00000w5g6bQAA",
+    "Ability_to_Learn_Quickly__c": "many projects during school were crammed"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fj4QAA"
+    },
+    "Id": "0065G00000w5fj4QAA",
+    "Ability_to_Learn_Quickly__c": "HackReactor and work experience."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g4rQAA"
+    },
+    "Id": "0065G00000w5g4rQAA",
+    "Ability_to_Learn_Quickly__c": "Udemy learning environment was similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g4yQAA"
+    },
+    "Id": "0065G00000w5g4yQAA",
+    "Ability_to_Learn_Quickly__c": "has done it before during the bootcamps - fast paced and in a short amount of time"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g6jQAA"
+    },
+    "Id": "0065G00000w5g6jQAA",
+    "Ability_to_Learn_Quickly__c": "equated it to school - class called software architectures - learned about stuff that he had never known before - learned about microservices - did a project with no example code to go from so it was super difficult"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fbLQAQ"
+    },
+    "Id": "0065G00000w5fbLQAQ",
+    "Ability_to_Learn_Quickly__c": "Semester - learning a lot"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gV8QAI"
+    },
+    "Id": "0065G00000w5gV8QAI",
+    "Ability_to_Learn_Quickly__c": "during school he had this experience - researching new programming languages on his own as well- 8 hours per day"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gXJQAY"
+    },
+    "Id": "0065G00000w5gXJQAY",
+    "Ability_to_Learn_Quickly__c": "school was similar - learned React, JS, HTML and CSS by fire like this"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fAhQAI"
+    },
+    "Id": "0065G00000w5fAhQAI",
+    "Ability_to_Learn_Quickly__c": "AWS"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gVvQAI"
+    },
+    "Id": "0065G00000w5gVvQAI",
+    "Ability_to_Learn_Quickly__c": "school is similar - intensity isn't a thing he isn't scared of"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gVyQAI"
+    },
+    "Id": "0065G00000w5gVyQAI",
+    "Ability_to_Learn_Quickly__c": "I did 2 majors in my degree taking 19 credit hours a semester"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gPIQAY"
+    },
+    "Id": "0065G00000w5gPIQAY",
+    "Ability_to_Learn_Quickly__c": "bootcamp was similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5etzQAA"
+    },
+    "Id": "0065G00000w5etzQAA",
+    "Ability_to_Learn_Quickly__c": "took accelerated  classes while working."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gVSQAY"
+    },
+    "Id": "0065G00000w5gVSQAY",
+    "Ability_to_Learn_Quickly__c": "school involved a lot of cramming and learning things quickly"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gVWQAY"
+    },
+    "Id": "0065G00000w5gVWQAY",
+    "Ability_to_Learn_Quickly__c": "bootcamp was very similar - he was very productive and excelled"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g3eQAA"
+    },
+    "Id": "0065G00000w5g3eQAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp - loved it 3 months - first time - 4 hrs of sleep"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fdhQAA"
+    },
+    "Id": "0065G00000w5fdhQAA",
+    "Ability_to_Learn_Quickly__c": "Really feel like I am ready for that type of experience."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gXlQAI"
+    },
+    "Id": "0065G00000w5gXlQAI",
+    "Ability_to_Learn_Quickly__c": "bootcamp and Amazon experience very similar to Smoothstack training"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5f9MQAQ"
+    },
+    "Id": "0065G00000w5f9MQAQ",
+    "Ability_to_Learn_Quickly__c": "I am looking for this and want to develop my skills before jumping in a job. I thrive under pressure and that is why I did the 2 degrees- I don;t get stuck on something for 2 long"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g5fQAA"
+    },
+    "Id": "0065G00000w5g5fQAA",
+    "Ability_to_Learn_Quickly__c": "Bootcamp is a perfect example. He was putting a lot of work into 60+ hour weeks. Tons of cramming but he enjoyed it and learned a ton."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gXzQAI"
+    },
+    "Id": "0065G00000w5gXzQAI",
+    "Ability_to_Learn_Quickly__c": "he said he hasn't experienced much of this outside of school"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5esbQAA"
+    },
+    "Id": "0065G00000w5esbQAA",
+    "Ability_to_Learn_Quickly__c": "Had to learn BASH and SQL for our coding challenge."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hS0QAI"
+    },
+    "Id": "0065G00000w5hS0QAI",
+    "Ability_to_Learn_Quickly__c": "operating systems class is high intensity - moves quickly"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hOOQAY"
+    },
+    "Id": "0065G00000w5hOOQAY",
+    "Ability_to_Learn_Quickly__c": "seems challenging and doable - hasn't experienced anything like this but feels prepared from school"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5faMQAQ"
+    },
+    "Id": "0065G00000w5faMQAQ",
+    "Ability_to_Learn_Quickly__c": "he's not the best designer but had to learn design principles."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5goEQAQ"
+    },
+    "Id": "0065G00000w5goEQAQ",
+    "Ability_to_Learn_Quickly__c": "intro to artifical intelligence was tough because he had to learn a new language right away."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5faTQAQ"
+    },
+    "Id": "0065G00000w5faTQAQ",
+    "Ability_to_Learn_Quickly__c": "yes!- The bootcamp is 16 weeks full time"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hSHQAY"
+    },
+    "Id": "0065G00000w5hSHQAY",
+    "Ability_to_Learn_Quickly__c": "6 days per week during his bootcamp - very rigorous and fast paced. He feels prepared for Smoothstack. Lovers it. Has been missing it - he is ready to dive in."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hUFQAY"
+    },
+    "Id": "0065G00000w5hUFQAY",
+    "Ability_to_Learn_Quickly__c": "I think with my school and have been told that before and I got through it all quicker than expected"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gkiQAA"
+    },
+    "Id": "0065G00000w5gkiQAA",
+    "Ability_to_Learn_Quickly__c": "I would say in University the upper level courses get rough and picking things up and applying them is something I do well."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gloQAA"
+    },
+    "Id": "0065G00000w5gloQAA",
+    "Ability_to_Learn_Quickly__c": "some during school - doesn't think he'd have any issues with this though"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hQDQAY"
+    },
+    "Id": "0065G00000w5hQDQAY",
+    "Ability_to_Learn_Quickly__c": "incredibly similar to his bootcamp and loves it - feels prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fUnQAI"
+    },
+    "Id": "0065G00000w5fUnQAI",
+    "Ability_to_Learn_Quickly__c": "Excites me to learn this much and have it be my main focus."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hScQAI"
+    },
+    "Id": "0065G00000w5hScQAI",
+    "Ability_to_Learn_Quickly__c": "His bootcamp was very difficult and he learned a lot in 6 months - he had to teach himself a lot - wasn't too interactive but he put in 100 hours per week so he loves the challenge. Loves that Smoothstack training is live with instructors."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hUZQAY"
+    },
+    "Id": "0065G00000w5hUZQAY",
+    "Ability_to_Learn_Quickly__c": "Having to learn about Web Sockets and then teaching others"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gm9QAA"
+    },
+    "Id": "0065G00000w5gm9QAA",
+    "Ability_to_Learn_Quickly__c": "school semesters have been stressful and crammed sometimes so he doesn't see any problem with the Smoothstack training environment"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gQMQAY"
+    },
+    "Id": "0065G00000w5gQMQAY",
+    "Ability_to_Learn_Quickly__c": "has experienced it a lot in school -large course loads - feels very prepared to take this on"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fVEQAY"
+    },
+    "Id": "0065G00000w5fVEQAY",
+    "Ability_to_Learn_Quickly__c": "Thoroughly enjoy the experience of programming"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fXBQAY"
+    },
+    "Id": "0065G00000w5fXBQAY",
+    "Ability_to_Learn_Quickly__c": "python"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hMQQAY"
+    },
+    "Id": "0065G00000w5hMQQAY",
+    "Ability_to_Learn_Quickly__c": "sounds challenging but doable and is ready for the commitment because college was similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hNSQAY"
+    },
+    "Id": "0065G00000w5hNSQAY",
+    "Ability_to_Learn_Quickly__c": "understanding how to debug"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5glPQAQ"
+    },
+    "Id": "0065G00000w5glPQAQ",
+    "Ability_to_Learn_Quickly__c": "his last job was similar - flew to Austria for month of training - 9-5 university lecture style very intensive"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gpAQAQ"
+    },
+    "Id": "0065G00000w5gpAQAQ",
+    "Ability_to_Learn_Quickly__c": "What ever tempo the program is expected and I will meet that"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gmeQAA"
+    },
+    "Id": "0065G00000w5gmeQAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp was the exact same"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5h0cQAA"
+    },
+    "Id": "0065G00000w5h0cQAA",
+    "Ability_to_Learn_Quickly__c": "Learning React"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gSwQAI"
+    },
+    "Id": "0065G00000w5gSwQAI",
+    "Ability_to_Learn_Quickly__c": "4 week summer session during school - work load similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gjxQAA"
+    },
+    "Id": "0065G00000w5gjxQAA",
+    "Ability_to_Learn_Quickly__c": "internship was similar - job description asked for languages he didn't know - learned otj and with mentor"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5glnQAA"
+    },
+    "Id": "0065G00000w5glnQAA",
+    "Ability_to_Learn_Quickly__c": "current certification process is similar - learning a lot very quickly\n\nit takes 6 months usually but he did it in 1 month - devops engineer cert\n\njob as PM - learned a lot quickly - 3"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gpZQAQ"
+    },
+    "Id": "0065G00000w5gpZQAQ",
+    "Ability_to_Learn_Quickly__c": "has taken some pretty busy semesters - would be able to cope"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hPOQAY"
+    },
+    "Id": "0065G00000w5hPOQAY",
+    "Ability_to_Learn_Quickly__c": "Revature was exactly the same - he is prepared for the training"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gR3QAI"
+    },
+    "Id": "0065G00000w5gR3QAI",
+    "Ability_to_Learn_Quickly__c": "data science program through correlation 1 - bootcamp style for 6 months"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hNyQAI"
+    },
+    "Id": "0065G00000w5hNyQAI",
+    "Ability_to_Learn_Quickly__c": "similar to his bootcamp experience - did not fall behind. always ahead of the curve. prepared for this."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fU7QAI"
+    },
+    "Id": "0065G00000w5fU7QAI",
+    "Ability_to_Learn_Quickly__c": "I have no problem and like the intensive training."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hPZQAY"
+    },
+    "Id": "0065G00000w5hPZQAY",
+    "Ability_to_Learn_Quickly__c": "used to it - Revature was very similar so he feels prepared."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5h81QAA"
+    },
+    "Id": "0065G00000w5h81QAA",
+    "Ability_to_Learn_Quickly__c": "learning why to write a software rather done just doing it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gTMQAY"
+    },
+    "Id": "0065G00000w5gTMQAY",
+    "Ability_to_Learn_Quickly__c": "school is very similar to the training at Smoothstack. He said it seems like another semester of school. 9-5 full-time hours would be the only difference. He is used to breaks and classes every other day so it would just be a minor adjustment."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gq4QAA"
+    },
+    "Id": "0065G00000w5gq4QAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp is similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gq5QAA"
+    },
+    "Id": "0065G00000w5gq5QAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp is similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5evXQAQ"
+    },
+    "Id": "0065G00000w5evXQAQ",
+    "Ability_to_Learn_Quickly__c": "That does not scare me at all- It excites me and is what I am looking for."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ezQQAQ"
+    },
+    "Id": "0065G00000w5ezQQAQ",
+    "Ability_to_Learn_Quickly__c": "the certificate courses for programming"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gdHQAQ"
+    },
+    "Id": "0065G00000w5gdHQAQ",
+    "Ability_to_Learn_Quickly__c": "school has been similar to the Smoothstack training - he feels ready"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fIrQAI"
+    },
+    "Id": "0065G00000w5fIrQAI",
+    "Ability_to_Learn_Quickly__c": "At revature the pace was fast and he had to learn a lot."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5exiQAA"
+    },
+    "Id": "0065G00000w5exiQAA",
+    "Ability_to_Learn_Quickly__c": "he answered it well but it reset when I went back to get his scheduling link"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g8EQAQ"
+    },
+    "Id": "0065G00000w5g8EQAQ",
+    "Ability_to_Learn_Quickly__c": "I take school seriously and am always taking my learning seriously as well- I focused in my bachelors and in the bootcamp so I understand."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fPxQAI"
+    },
+    "Id": "0065G00000w5fPxQAI",
+    "Ability_to_Learn_Quickly__c": "School, hacker ranks, and other intense things so I am ready."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5frUQAQ"
+    },
+    "Id": "0065G00000w5frUQAQ",
+    "Ability_to_Learn_Quickly__c": "Stock Market Price Predictor, had to learn HTML in a day to complete the project."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5frVQAQ"
+    },
+    "Id": "0065G00000w5frVQAQ",
+    "Ability_to_Learn_Quickly__c": "Stock Market Price Predictor, had to learn HTML in a day to complete the project."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g8NQAQ"
+    },
+    "Id": "0065G00000w5g8NQAQ",
+    "Ability_to_Learn_Quickly__c": "bootcamp was very similar - lots of cramming"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5frdQAA"
+    },
+    "Id": "0065G00000w5frdQAA",
+    "Ability_to_Learn_Quickly__c": "a lot code testing and bug testing during projects."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fJTQAY"
+    },
+    "Id": "0065G00000w5fJTQAY",
+    "Ability_to_Learn_Quickly__c": "for a game he had to figure out a lot to make it work."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5frkQAA"
+    },
+    "Id": "0065G00000w5frkQAA",
+    "Ability_to_Learn_Quickly__c": "RIght up my alley"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ftcQAA"
+    },
+    "Id": "0065G00000w5ftcQAA",
+    "Ability_to_Learn_Quickly__c": "I feel like I would be fine and learning more about tech and taking the time needed since it will be a full time job."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ge1QAA"
+    },
+    "Id": "0065G00000w5ge1QAA",
+    "Ability_to_Learn_Quickly__c": "school is the most similar thing he could think of - cramming for a test of learning a new programming language quickly"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fQCQAY"
+    },
+    "Id": "0065G00000w5fQCQAY",
+    "Ability_to_Learn_Quickly__c": "That is what i like and tend to thrive it- Like intense learning experiences"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5froQAA"
+    },
+    "Id": "0065G00000w5froQAA",
+    "Ability_to_Learn_Quickly__c": "Jobs with IT tech and support I learned all on my own. There was a lot to learn and the companies needed us to get up to date."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gHGQAY"
+    },
+    "Id": "0065G00000w5gHGQAY",
+    "Ability_to_Learn_Quickly__c": "during a cloud computing course there was an assignment where he was to replicate a real life project - had1 week to learn everything - lots of cramming so he is used to the fast paced learning environment"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5geHQAQ"
+    },
+    "Id": "0065G00000w5geHQAQ",
+    "Ability_to_Learn_Quickly__c": "some college classes have been similar to the Smoothstack training pace"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fgwQAA"
+    },
+    "Id": "0065G00000w5fgwQAA",
+    "Ability_to_Learn_Quickly__c": "lots of working experience"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g8sQAA"
+    },
+    "Id": "0065G00000w5g8sQAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp is very similar and her degree was also remote so she is very comfortable with cramming and fast paced learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5geNQAQ"
+    },
+    "Id": "0065G00000w5geNQAQ",
+    "Ability_to_Learn_Quickly__c": "a lot of her learning has been quicker paced - girls who code course - summer immersion program for 12 weeks - new language every week\n\ncollege - half semester courses - accelerated timeline"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fJwQAI"
+    },
+    "Id": "0065G00000w5fJwQAI",
+    "Ability_to_Learn_Quickly__c": "Coding challenge and have experience- used to spending 8 hours"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gHUQAY"
+    },
+    "Id": "0065G00000w5gHUQAY",
+    "Ability_to_Learn_Quickly__c": "coding bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gHZQAY"
+    },
+    "Id": "0065G00000w5gHZQAY",
+    "Ability_to_Learn_Quickly__c": "solving HackerRank challenges."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ewxQAA"
+    },
+    "Id": "0065G00000w5ewxQAA",
+    "Ability_to_Learn_Quickly__c": "MySQL"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fK5QAI"
+    },
+    "Id": "0065G00000w5fK5QAI",
+    "Ability_to_Learn_Quickly__c": "see question above"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5g9EQAQ"
+    },
+    "Id": "0065G00000w5g9EQAQ",
+    "Ability_to_Learn_Quickly__c": "He is in his 5th year of university - loves the intensity of learning. He has always overloaded with 6 classes instead of 5 so he has a lot of experience cramming. He enjoys it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5geSQAQ"
+    },
+    "Id": "0065G00000w5geSQAQ",
+    "Ability_to_Learn_Quickly__c": "the Smoothstack training environment is similar to his internships at Amazon - both were 12 weeks long - he picked up a lot of info and learned a lot during that time"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fIOQAY"
+    },
+    "Id": "0065G00000w5fIOQAY",
+    "Ability_to_Learn_Quickly__c": "School-took 6 classes 18 credits"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fP6QAI"
+    },
+    "Id": "0065G00000w5fP6QAI",
+    "Ability_to_Learn_Quickly__c": "I love to learn."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fqqQAA"
+    },
+    "Id": "0065G00000w5fqqQAA",
+    "Ability_to_Learn_Quickly__c": "I am an intense person and the quicker the better."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gIZQAY"
+    },
+    "Id": "0065G00000w5gIZQAY",
+    "Ability_to_Learn_Quickly__c": "asked a bit about training first - told me it sounds a lot like school and his internship - a lot to cram into weeks"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fPLQAY"
+    },
+    "Id": "0065G00000w5fPLQAY",
+    "Ability_to_Learn_Quickly__c": "Learning React during the bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hJuQAI"
+    },
+    "Id": "0065G00000w5hJuQAI",
+    "Ability_to_Learn_Quickly__c": "learning React without having much experience with it for capital one."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gbnQAA"
+    },
+    "Id": "0065G00000w5gbnQAA",
+    "Ability_to_Learn_Quickly__c": "university has prepared him for this - CS major had a rigorous curriculum\n\nused to work 60+ hours per week in high pressure environment"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5h3mQAA"
+    },
+    "Id": "0065G00000w5h3mQAA",
+    "Ability_to_Learn_Quickly__c": "well prepared - U of MD - super rigorous CS program so he is up for it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ghkQAA"
+    },
+    "Id": "0065G00000w5ghkQAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp was exactly like Smoothstack training - he feels very prepared for it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ghqQAA"
+    },
+    "Id": "0065G00000w5ghqQAA",
+    "Ability_to_Learn_Quickly__c": "internship was similar - Jenkins, Kubernetis - had to learn quickly - industry specific techs"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ghrQAA"
+    },
+    "Id": "0065G00000w5ghrQAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp was the same - challenging but a lot of fun - 9 hours per day coding and projects. Picks up new things quickly."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gc9QAA"
+    },
+    "Id": "0065G00000w5gc9QAA",
+    "Ability_to_Learn_Quickly__c": "pharmacy school was intense - there isn't a lot he can't do"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fERQAY"
+    },
+    "Id": "0065G00000w5fERQAY",
+    "Ability_to_Learn_Quickly__c": "I feel it is better that way"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fEXQAY"
+    },
+    "Id": "0065G00000w5fEXQAY",
+    "Ability_to_Learn_Quickly__c": "I look at other languages that are out there and I know where I am weak so I can make the most of it so I do not have many weaknesses."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5fEcQAI"
+    },
+    "Id": "0065G00000w5fEcQAI",
+    "Ability_to_Learn_Quickly__c": "excited about it and very confident about getting to the level i need to"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hKZQAY"
+    },
+    "Id": "0065G00000w5hKZQAY",
+    "Ability_to_Learn_Quickly__c": "being self taught"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gggQAA"
+    },
+    "Id": "0065G00000w5gggQAA",
+    "Ability_to_Learn_Quickly__c": "school degree has given me the along with my internship has given me that comfortability to say I am good learning new tech stacks and technologies."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hFiQAI"
+    },
+    "Id": "0065G00000w5hFiQAI",
+    "Ability_to_Learn_Quickly__c": "Deploying the project"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hKsQAI"
+    },
+    "Id": "0065G00000w5hKsQAI",
+    "Ability_to_Learn_Quickly__c": "Sounds exactly like the bootcamp he completed - it was in person which is the only difference - classroom based, instructor led, pair programming.  Challenging but loves it."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5enMQAQ"
+    },
+    "Id": "0065G00000w5enMQAQ",
+    "Ability_to_Learn_Quickly__c": "the bootcamp as a whole"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gYrQAI"
+    },
+    "Id": "0065G00000w5gYrQAI",
+    "Ability_to_Learn_Quickly__c": "college was similar in some instances - thinks he can do it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ggsQAA"
+    },
+    "Id": "0065G00000w5ggsQAA",
+    "Ability_to_Learn_Quickly__c": "ready for the challenge - came into flatiron cold with no skills - loves to learn -"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hL7QAI"
+    },
+    "Id": "0065G00000w5hL7QAI",
+    "Ability_to_Learn_Quickly__c": "bootcamp I thought was slow and i love programming"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gb9QAA"
+    },
+    "Id": "0065G00000w5gb9QAA",
+    "Ability_to_Learn_Quickly__c": "I enjoy talking with people and working in my degree I figured out that I put my best foot forward and do not procrastinate."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gqIQAQ"
+    },
+    "Id": "0065G00000w5gqIQAQ",
+    "Ability_to_Learn_Quickly__c": "his bootcamp was a very rigorous program so he is used to it - put in tons of hours and work. Loves the idea. Is prepared."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gqJQAQ"
+    },
+    "Id": "0065G00000w5gqJQAQ",
+    "Ability_to_Learn_Quickly__c": "summer semester in college was similar - would be able to handle"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gsRQAQ"
+    },
+    "Id": "0065G00000w5gsRQAQ",
+    "Ability_to_Learn_Quickly__c": "I have the ability to learn new technology quickly and have done mini boot camps online that guide me through projects."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hLCQAY"
+    },
+    "Id": "0065G00000w5hLCQAY",
+    "Ability_to_Learn_Quickly__c": "During his capstone where he wanted to develop an iOS app."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gf7QAA"
+    },
+    "Id": "0065G00000w5gf7QAA",
+    "Ability_to_Learn_Quickly__c": "bootcamp was very similar to the Smoothstack training from his perspective"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gf9QAA"
+    },
+    "Id": "0065G00000w5gf9QAA",
+    "Ability_to_Learn_Quickly__c": "similar to bootcamps - twice - got easier in the second one - loves it and feels like it builds a backbone"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gqWQAQ"
+    },
+    "Id": "0065G00000w5gqWQAQ",
+    "Ability_to_Learn_Quickly__c": "bootcamp was similar - it was an adjustment for him but he exceled. Every week was a different package of things to learn."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gseQAA"
+    },
+    "Id": "0065G00000w5gseQAA",
+    "Ability_to_Learn_Quickly__c": "I have a drive and when I commit I am going to see it through no matter what"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5gfAQAQ"
+    },
+    "Id": "0065G00000w5gfAQAQ",
+    "Ability_to_Learn_Quickly__c": "thrives in this type of environment - during college all of the classes were so different so it was hard but this will be easier because there is one focus"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5entQAA"
+    },
+    "Id": "0065G00000w5entQAA",
+    "Ability_to_Learn_Quickly__c": "The bootcamp helped me get ready for that."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5enuQAA"
+    },
+    "Id": "0065G00000w5enuQAA",
+    "Ability_to_Learn_Quickly__c": "The bootcamp helped me get ready for that."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5emAQAQ"
+    },
+    "Id": "0065G00000w5emAQAQ",
+    "Ability_to_Learn_Quickly__c": "enjoy learning new things and I thrive on fast pace"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hpTQAQ"
+    },
+    "Id": "0065G00000w5hpTQAQ",
+    "Ability_to_Learn_Quickly__c": "I look forward to it and would love to dedicate my life to that goal of finishing;"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hpUQAQ"
+    },
+    "Id": "0065G00000w5hpUQAQ",
+    "Ability_to_Learn_Quickly__c": "Amazon training was very similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hkBQAQ"
+    },
+    "Id": "0065G00000w5hkBQAQ",
+    "Ability_to_Learn_Quickly__c": "similar to bootcamp experience - 14 hour days - used to it and feels prepared. Loves this type of environment."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hkFQAQ"
+    },
+    "Id": "0065G00000w5hkFQAQ",
+    "Ability_to_Learn_Quickly__c": "bootcamp taught me I can learn quickly"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i4KQAQ"
+    },
+    "Id": "0065G00000w5i4KQAQ",
+    "Ability_to_Learn_Quickly__c": "Machine Learning"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i2kQAA"
+    },
+    "Id": "0065G00000w5i2kQAA",
+    "Ability_to_Learn_Quickly__c": "similar to college experience - comfortable with the learning schedule - very motivated and loves to learn new things - feels ready"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iAtQAI"
+    },
+    "Id": "0065G00000w5iAtQAI",
+    "Ability_to_Learn_Quickly__c": "school classes were similar and so was his internship because it was so short"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i51QAA"
+    },
+    "Id": "0065G00000w5i51QAA",
+    "Ability_to_Learn_Quickly__c": "the entire bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hlJQAQ"
+    },
+    "Id": "0065G00000w5hlJQAQ",
+    "Ability_to_Learn_Quickly__c": "With multiple classes at the same time it is all about time management"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hovQAA"
+    },
+    "Id": "0065G00000w5hovQAA",
+    "Ability_to_Learn_Quickly__c": "doesn't think it would be a problem"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5howQAA"
+    },
+    "Id": "0065G00000w5howQAA",
+    "Ability_to_Learn_Quickly__c": "doesn't think it would be a problem"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i5bQAA"
+    },
+    "Id": "0065G00000w5i5bQAA",
+    "Ability_to_Learn_Quickly__c": "has been doing a lot of certifications on his own - very fast paced and feels prepared\n\nCollege was on quarter system - prepared him for it"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i5cQAA"
+    },
+    "Id": "0065G00000w5i5cQAA",
+    "Ability_to_Learn_Quickly__c": "Bootcamp was intense"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hYIQAY"
+    },
+    "Id": "0065G00000w5hYIQAY",
+    "Ability_to_Learn_Quickly__c": "Sounds very doable - welcomes the challenge - hasn't experienced this level of intensity aside from his time at Amazon. He was thrown into a chaotic situation there so he feels well equipped for Smoothstack training."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i7dQAA"
+    },
+    "Id": "0065G00000w5i7dQAA",
+    "Ability_to_Learn_Quickly__c": "I used to weeks of working hard late nights for projects that I did. It was all self taught and do things for ourselves/"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iOQQAY"
+    },
+    "Id": "0065G00000w5iOQQAY",
+    "Ability_to_Learn_Quickly__c": "That is what App Academy was as well"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5he4QAA"
+    },
+    "Id": "0065G00000w5he4QAA",
+    "Ability_to_Learn_Quickly__c": "seems very doable to him - feels prepared. Feels like this program will change the trajectory of his life."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hhuQAA"
+    },
+    "Id": "0065G00000w5hhuQAA",
+    "Ability_to_Learn_Quickly__c": "software engineering course was project based - short amount of time. implementing full SDLC and building full stack application on similar timeline. feels prepared."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5heLQAQ"
+    },
+    "Id": "0065G00000w5heLQAQ",
+    "Ability_to_Learn_Quickly__c": "prefers an interactive style of learning so the Smoothstack program seems great - some of his school classes were similar"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i5vQAA"
+    },
+    "Id": "0065G00000w5i5vQAA",
+    "Ability_to_Learn_Quickly__c": "sounds doable - his fellowship is pretty intense and he also completed his masters so he feels prepared for the training environment"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i82QAA"
+    },
+    "Id": "0065G00000w5i82QAA",
+    "Ability_to_Learn_Quickly__c": "Java, had to learn it in order to take the coding challenge."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iN2QAI"
+    },
+    "Id": "0065G00000w5iN2QAI",
+    "Ability_to_Learn_Quickly__c": "the entire bootcamp, and constantly having to learn something to solve a new problem."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iP2QAI"
+    },
+    "Id": "0065G00000w5iP2QAI",
+    "Ability_to_Learn_Quickly__c": "I enjoy and digest a lot of info really quickly and hyper focus."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iLdQAI"
+    },
+    "Id": "0065G00000w5iLdQAI",
+    "Ability_to_Learn_Quickly__c": "Yes- In App Academy and with teaching you need to learn what your teaching. I taught Phsyical science"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iNDQAY"
+    },
+    "Id": "0065G00000w5iNDQAY",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hcxQAA"
+    },
+    "Id": "0065G00000w5hcxQAA",
+    "Ability_to_Learn_Quickly__c": "at the mortgage company he started from scratch - learned quickly - welcomes the Smoothstack challenge"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iJhQAI"
+    },
+    "Id": "0065G00000w5iJhQAI",
+    "Ability_to_Learn_Quickly__c": "The entire bootcamp because he had to build projects in such a short period of time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iLtQAI"
+    },
+    "Id": "0065G00000w5iLtQAI",
+    "Ability_to_Learn_Quickly__c": "seems very doable - excited for the opportunity - makes sense that it is a lot"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iIHQAY"
+    },
+    "Id": "0065G00000w5iIHQAY",
+    "Ability_to_Learn_Quickly__c": "That is the environment that i thrive in and love an atmosphere that is immersive"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i6YQAQ"
+    },
+    "Id": "0065G00000w5i6YQAQ",
+    "Ability_to_Learn_Quickly__c": "I think specific moments in my college career - I am good at time management and organization and rank tasks based on difficulty."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hd7QAA"
+    },
+    "Id": "0065G00000w5hd7QAA",
+    "Ability_to_Learn_Quickly__c": "last semester group project - 6 weeks to learn new technology (React) - create a web app with React and NodeJS - successful project. Welcomes the challenge and feels prepared."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iGYQAY"
+    },
+    "Id": "0065G00000w5iGYQAY",
+    "Ability_to_Learn_Quickly__c": "Progress I made during my bootcamp - doing 60 to 80 hours of work a week,"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iGiQAI"
+    },
+    "Id": "0065G00000w5iGiQAI",
+    "Ability_to_Learn_Quickly__c": "going through the coding bootcamp and having to learn front-end and back-end"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hhGQAQ"
+    },
+    "Id": "0065G00000w5hhGQAQ",
+    "Ability_to_Learn_Quickly__c": "seems doable - took a lot of classes online during COVID so he feels prepared for the rigorous remote learning - loves that it is full time"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hulQAA"
+    },
+    "Id": "0065G00000w5hulQAA",
+    "Ability_to_Learn_Quickly__c": "similar instances in college - feels prepared - web dev was fast paced"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hswQAA"
+    },
+    "Id": "0065G00000w5hswQAA",
+    "Ability_to_Learn_Quickly__c": "the bootcamp overall and then learning react"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hffQAA"
+    },
+    "Id": "0065G00000w5hffQAA",
+    "Ability_to_Learn_Quickly__c": "Commitment to 9-5 is something he is looking for. Comfortable with this. Really excited to learn the whole time."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iGxQAI"
+    },
+    "Id": "0065G00000w5iGxQAI",
+    "Ability_to_Learn_Quickly__c": "The boot camp in general since it was fast paced"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iH1QAI"
+    },
+    "Id": "0065G00000w5iH1QAI",
+    "Ability_to_Learn_Quickly__c": "the bootcamp in general was very fast paced"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5imUQAQ"
+    },
+    "Id": "0065G00000w5imUQAQ",
+    "Ability_to_Learn_Quickly__c": "believes that the training will be manageable - college has prepared him for this - it was very fast paced"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hfkQAA"
+    },
+    "Id": "0065G00000w5hfkQAA",
+    "Ability_to_Learn_Quickly__c": "Bootcamp was 9-5 high intensity. Covered something new every week that tied into the previous week's material. Started with basics and progressed. Feels prepared for the Smoothstack environment. Weekly homework. Assessments. Pair programming."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hhcQAA"
+    },
+    "Id": "0065G00000w5hhcQAA",
+    "Ability_to_Learn_Quickly__c": "his last 2 semesters were very rigorous - fast paced learning Python and algorithms class. He feels prepared for Smoothstack. He said it seems like you have to be on your game which makes learning easier and enjoyable."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hvBQAQ"
+    },
+    "Id": "0065G00000w5hvBQAQ",
+    "Ability_to_Learn_Quickly__c": "bootcamp was extremely similar - can't fall behind"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iOIQAY"
+    },
+    "Id": "0065G00000w5iOIQAY",
+    "Ability_to_Learn_Quickly__c": "had to learn java and springboot to build a game within a week."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hY9QAI"
+    },
+    "Id": "0065G00000w5hY9QAI",
+    "Ability_to_Learn_Quickly__c": "his bootcamp was similar - 3 classes of 60 people - highly collaborative and interactive. Used to the fulltime learning. Feels prepared. Loves to learn new things."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hfvQAA"
+    },
+    "Id": "0065G00000w5hfvQAA",
+    "Ability_to_Learn_Quickly__c": "Avanade - the first month was very intense training to get going in the Microsoft Ecosystem - stressful but was so ready for the end goal. Highly motivated and feels prepared."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hfxQAA"
+    },
+    "Id": "0065G00000w5hfxQAA",
+    "Ability_to_Learn_Quickly__c": "sounds challenging - loves this though - wants the experience - feels this is super valuable. Fits her well."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5htVQAQ"
+    },
+    "Id": "0065G00000w5htVQAQ",
+    "Ability_to_Learn_Quickly__c": "having to learn sql and html"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hvNQAQ"
+    },
+    "Id": "0065G00000w5hvNQAQ",
+    "Ability_to_Learn_Quickly__c": "the entire bootcamp."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hcfQAA"
+    },
+    "Id": "0065G00000w5hcfQAA",
+    "Ability_to_Learn_Quickly__c": "her bootcamp is very similar - loves this -"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hbKQAQ"
+    },
+    "Id": "0065G00000w5hbKQAQ",
+    "Ability_to_Learn_Quickly__c": "doable - some of his classes were pretty rigorous - used"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5i1wQAA"
+    },
+    "Id": "0065G00000w5i1wQAA",
+    "Ability_to_Learn_Quickly__c": "4th week into the bootcamp, had to learn a new language which he had never interacted with before."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hbaQAA"
+    },
+    "Id": "0065G00000w5hbaQAA",
+    "Ability_to_Learn_Quickly__c": "with his job at home depot his training was super fast paced and intense - he feels up for the challenge and prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hbrQAA"
+    },
+    "Id": "0065G00000w5hbrQAA",
+    "Ability_to_Learn_Quickly__c": "Sounds challenging but doable - he feels prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iDBQAY"
+    },
+    "Id": "0065G00000w5iDBQAY",
+    "Ability_to_Learn_Quickly__c": "sounds doable / challenging - school has prepared him for this - likes the classroom style of Smoothstack"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5haDQAQ"
+    },
+    "Id": "0065G00000w5haDQAQ",
+    "Ability_to_Learn_Quickly__c": "almost exactly the same as his bootcamp experience - feels very prepared"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iVnQAI"
+    },
+    "Id": "0065G00000w5iVnQAI",
+    "Ability_to_Learn_Quickly__c": "feels comfortable - said it will mimic real life work - loves to learn and can't wait to dive into industry style training/work"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hcIQAQ"
+    },
+    "Id": "0065G00000w5hcIQAQ",
+    "Ability_to_Learn_Quickly__c": "bootcamp is similar - worked west coast hours - 12pm PST to 1am. Put in crazy hours and feels prepared for Smoothstack. Maintained a 3.8 GPA."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hs0QAA"
+    },
+    "Id": "0065G00000w5hs0QAA",
+    "Ability_to_Learn_Quickly__c": "I have worked a semesters work in 2 weeks and ready to dedicate 8 o 10 hours a day to my studies"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hq8QAA"
+    },
+    "Id": "0065G00000w5hq8QAA",
+    "Ability_to_Learn_Quickly__c": "I would love to dive head first and give it my all and I like to get indepth with things and I strive for perfectionism and always give it my all."
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iiuQAA"
+    },
+    "Id": "0065G00000w5iiuQAA",
+    "Ability_to_Learn_Quickly__c": "sounds doable - welcomes the challenging"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5hsfQAA"
+    },
+    "Id": "0065G00000w5hsfQAA",
+    "Ability_to_Learn_Quickly__c": "the entire bootcamp"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ifAQAQ"
+    },
+    "Id": "0065G00000w5ifAQAQ",
+    "Ability_to_Learn_Quickly__c": "I learn quickly on my own and I am not lazy so I stay focused to learn faster"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5idWQAQ"
+    },
+    "Id": "0065G00000w5idWQAQ",
+    "Ability_to_Learn_Quickly__c": "sounds challenging but doable - nothing is stopping him from diving in"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5iZKQAY"
+    },
+    "Id": "0065G00000w5iZKQAY",
+    "Ability_to_Learn_Quickly__c": "bootcamp did it from ground up"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ibHQAQ"
+    },
+    "Id": "0065G00000w5ibHQAQ",
+    "Ability_to_Learn_Quickly__c": "capstone project - didn't know Python and had to learn very quickly to"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5ibXQAQ"
+    },
+    "Id": "0065G00000w5ibXQAQ",
+    "Ability_to_Learn_Quickly__c": "loves to learn -"
+  },
+  {
+    "attributes": {
+      "type": "Opportunity",
+      "url": "/services/data/v50.0/sobjects/Opportunity/0065G00000w5XlRQAU"
+    },
+    "Id": "0065G00000w5XlRQAU",
+    "Ability_to_Learn_Quickly__c": "I have no problem with that and gave several examples of why"
+  }
+]

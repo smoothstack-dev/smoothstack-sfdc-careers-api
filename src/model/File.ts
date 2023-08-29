@@ -2,9 +2,10 @@ import { Fields$ContentVersion } from './smoothstack.schema';
 
 export interface FileUpload {
   type: string;
-  contentType: string;
+  contentType?: string;
   fileContent: string;
   name: string;
+  bhId?: string;
 }
 
 export interface SFDCFile extends Fields$ContentVersion {

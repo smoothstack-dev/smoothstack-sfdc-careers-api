@@ -28,7 +28,7 @@ const serverlessConfiguration: AWS = {
     stage: '${opt:stage, env:STAGE}',
     region: 'us-east-1',
     memorySize: 1024,
-    timeout: 30,
+    timeout: 900,
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
