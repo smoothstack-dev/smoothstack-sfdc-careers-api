@@ -60,6 +60,7 @@ const findWebinarId = async (token: string, date: string): Promise<string> => {
 
   const appointmentDate = new Date(date).toISOString();
   const webinar = data.webinars
+    .filter((w) => new Date(w.start_time).getDay() === new Date(appointmentDate).getDay())
     .sort((a, b) => {
       return new Date(a.start_time).getTime() - new Date(b.start_time).getTime();
     })
