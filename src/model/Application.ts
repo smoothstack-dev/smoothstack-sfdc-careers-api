@@ -20,7 +20,6 @@ export interface ApplicationFields {
   yearsOfExperience: string;
   militaryStatus: string;
   name?: string;
-  nickName?: string;
   graduationDate?: string;
   degreeExpected?: string;
   highestDegree?: string;
