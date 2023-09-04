@@ -4,7 +4,7 @@ import { Candidate } from '../model/Candidate';
 import { updateCandidate } from './candidate.service';
 import { MSUser } from '../model/MSUser';
 
-const CONSULTANT_RECORD_TYPE_ID = '012f4000001MbodAAC';
+export const CONSULTANT_RECORD_TYPE_ID = '012f4000001MbodAAC';
 
 export const fetchConsultant = async (
   conn: Connection<SmoothstackSchema>,
