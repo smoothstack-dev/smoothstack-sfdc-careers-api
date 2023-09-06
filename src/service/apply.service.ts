@@ -4,7 +4,6 @@ import { Knockout, KNOCKOUT_NOTE, KNOCKOUT_STATUS } from '../model/Knockout';
 import { toTitleCase } from '../util/misc.util';
 import { resolveJobByKnockout } from '../util/job.util';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
-import { findCandidateByEmailOrPhone } from './candidate.service';
 import { findActiveKOJobs } from './jobs.service';
 import { calculateKnockout } from '../util/knockout.util';
 import { createApplication } from './application.service';
@@ -14,6 +13,7 @@ import { Application } from '../model/Application';
 import { saveNote } from './notes.service';
 import { generateApplicationNote } from '../util/note.util';
 import { publishDataGenerationRequest } from './sns.service';
+import { findContactByEmailOrPhone } from './contact.service';
 
 const DAY_DIFF = 60;
 
@@ -43,8 +43,8 @@ export const apply = async (event: APIGatewayProxyEvent) => {
   const formattedLastName = toTitleCase(lastName);
   const formattedEmail = email.toLowerCase();
   const formattedPhone = phone.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-  const candidate = await findCandidateByEmailOrPhone(conn, formattedEmail, formattedPhone);
-  const existingApplications = candidate?.Applications__r?.records ?? [];
+  const existingCandidate = await findContactByEmailOrPhone(conn, formattedEmail, formattedPhone);
+  const existingApplications = existingCandidate?.Applications__r?.records ?? [];
 
   if (!hasRecentApplication(existingApplications)) {
     const {
@@ -118,6 +118,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
       },
       resume
     );
+
     const noteReqs = [
       saveNote(conn, candidateId, {
         title: 'Application Survey',
@@ -145,7 +146,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     };
   }
   console.log(`Candidate already has a job submission in the last ${DAY_DIFF} days, skipping creation...`);
-  return candidate;
+  return existingCandidate;
 };
 
 const hasRecentApplication = (applications: Application[]): boolean => {
