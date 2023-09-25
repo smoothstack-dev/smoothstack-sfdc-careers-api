@@ -374,3 +374,16 @@ export const findAppsByAbilitytoLearn = async (conn: Connection<SmoothstackSchem
     })
     .select('Id, Ability_to_Learn_Quickly__c');
 };
+
+export const findAppsByBhIdWithChallengeDate = async (
+  conn: Connection<SmoothstackSchema>,
+  bullhornIds: string[]
+): Promise<Application[]> => {
+  return await conn
+    .sobject('Opportunity')
+    .find({
+      Bullhorn_ID__c: { $in: bullhornIds },
+      $and: { $not: { Challenge_Date_Time__c: null } },
+    })
+    .select('Id, Bullhorn_ID__c');
+};

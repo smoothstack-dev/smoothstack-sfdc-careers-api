@@ -5,7 +5,13 @@ import { Connection, DateString } from 'jsforce';
 import { readFile, writeFile } from 'fs/promises';
 import { findCandidatesByEmail } from './candidate.service';
 import { deriveApplicationStatus } from '../util/application.util';
-import { findAppsByAbilitytoLearn, findAppsByBhId, updateApplication } from './application.service';
+import {
+  fetchApplication,
+  findAppsByAbilitytoLearn,
+  findAppsByBhId,
+  findAppsByBhIdWithChallengeDate,
+  updateApplication,
+} from './application.service';
 import { findFilesByBhId, saveSFDCFiles } from './files.service';
 import { FileUpload } from '../model/File';
 
@@ -89,7 +95,6 @@ export const migrateCandidates = async () => {
         Potential_Smoothstack_Email__c: c.potential_smoothstack_email,
       }),
       Candidate_Status__c: c.candidate_status,
-      // CreatedDate: new Date().toISOString() as DateString, // TODO: Remove
       MailingStreet: `${c.address1?.trim() ?? ''} ${c.address2?.trim() ?? ''}`.trim() || null,
       MailingCity: c.city?.trim() ?? null,
       MailingState: deriveMailingState(c.state),
@@ -188,7 +193,7 @@ export const migrateApplications = async () => {
       Candidate_on_Time_Prescreen__c: a.candidate_on_time_prescreen,
       Candidate_on_Time_Tech_Screen__c: a.candidate_on_time_techscreen,
       Dressed_Professionally__c: a.candidate_dressed_professionally,
-      ...(a.challenge_Date && { Challenge_Date_Time__c: new Date(a.challenge_date).toISOString() as DateString }),
+      ...(a.challenge_date && { Challenge_Date_Time__c: new Date(a.challenge_date).toISOString() as DateString }),
       Challenge_Score__c: isNumeric(a.challenge_score) ? +a.challenge_score : null,
       Challenge_Scheduling_Link__c: a.challenge_scheduling_link,
       Challenge_Result__c: ['Pass', 'Fail'].includes(a.challenge_result) ? a.challenge_result : null,
@@ -267,6 +272,62 @@ export const migrateApplications = async () => {
   for (const migratedBatch of migratedBatches) {
     const updates = migratedBatch.map((a) => {
       return query(`UPDATE BH_JobResponse SET sfdc_id = '${a.sfdcId}', migrated = 1 WHERE jobResponseID = ${a.bhId}`);
+    });
+
+    const batches = chunkArray(updates, 50);
+
+    for (const batch of batches) {
+      await Promise.all(batch);
+    }
+  }
+  console.log('Done persisting sfdcId in local DB');
+};
+
+export const migrateChallengeDate = async () => {
+  const conn = await getSFDCConnection();
+  await connect(SQL_CONFIG);
+  const result = await query(
+    "WITH RankedRecords AS (SELECT ci.*, u.userId, ROW_NUMBER() OVER (PARTITION BY u.userId ORDER BY ci.dateAdded DESC) AS rn FROM BH_UserCustomObjectInstance u JOIN BH_CustomObjectInstance ci ON u.instanceId = ci.instanceId), BH_PrescreenObject AS (SELECT * FROM RankedRecords WHERE rn = 1), RankedRecords2 AS (SELECT c.*, ROW_NUMBER() OVER (PARTITION BY buc.email ORDER BY c.candidateID DESC) AS rn FROM BH_Candidate c JOIN BH_UserContact buc on c.userID = buc.userID), BH_LatestCandidate AS (SELECT * FROM RankedRecords2 WHERE rn = 1) SELECT c.candidateID, jr.sfdc_id as app_sfdc_id, c.sfdc_id as candidate_sfdc_id, c.userID, uc.firstName, uc.lastName, uc.nickName, uc.address1, uc.address2, uc.city, cf.customText31 as county, uc.state, uc.zip, uc.email, uc.mobile, cf.customText39 as potential_smoothstack_email, cf.customText28 as potential_smoothstack_email_qc, c.dateAdded as candidate_date_added, jr.jobPostingID, jr.jobResponseID, jo.sfdc_id as job_sfdc_id, jr.dateAdded as app_date_added, c.status as candidate_status, jr.status as app_status, uc.customText4 as work_authorization, uc.customText9 as months_to_graduation, cf.customText25 as willing_to_relocate, uc.customText7 as coding_self_rank, uc.customText3 as years_of_exp_self, uc.customText14 as comm_skills_recruiter, uc.customText15 as comm_skills_tech, cf.customInt14 as candidate_rank_recruiter, uc.customText20 as candidate_on_time_techscreen, p.text1 as candidate_on_time_prescreen, cf.customText21 as candidate_dressed_professionally, uc.degreeList as expected_degree, uc.educationDegree as education_level, uc.customDate3 as expected_graduation_date, cf.customDate10 as graduation_date, cf.customText38 as major, jr.customDate1 as challenge_date, jr.customText12 as challenge_score, jr.customTextBlock1 as challenge_scheduling_link, jr.customText10 as challenge_result, jr.customText11 as challenge_appointment_status, jr.customText13 as challenge_similarity_flag, jr.customTextBlock4 as challenge_link, cf.customDate13 as webinar_date, cf.customText30 as webinar_appointment_status, uc.customTextBlock3 as webinar_scheduling_link, uc.customText12 as webinar_attended, uc.customTextBlock4 as webinar_link, uc.customText13 as webinar_poll_response, cf.customText23 as opportunity_rank, cf.customText24 as two_year_commitment, cf.customTextBlock9 as additional_questions, uc.customTextBlock5 as about_yourself, p.text3 as refer_a_friend, uc.customText11 as external_applications, uc.customTextBlock2 as projects, p.textBlock4 as responsive_notes, cf.customText26 as months_project_experience, cf.customText27 as prescreen_result, cf.customText33 as good_fit, p.textBlock1 as ability_to_learn_quickly, p.textBlock2 as challenging_situation, uc.customText8 as vaccination_status, p.text4 as vaccination_notes, p.text7 as drug_screen_notes, p.text2 as background_check_notes, jr.customDate2 as tech_screen_date, uc.customText16 as total_technical_score, jr.customText22 as tech_screen_appointment_status, uc.customText18 as total_project_score, jr.customTextBlock2 as tech_screen_scheduling_link, uc.customText17 as total_behavioral_score, jr.customTextBlock3 as tech_screen_cancellation_link, jr.customText18 as tech_screen_result, cf.customText22 as screener_determination, jr.comments as application_device, jr.customText25 as utm_term, jr.source as utm_source, jr.customText24 as utm_medium, jr.customText6 as utm_campaign, uc.customText2 as military_status, uc.customText10 as military_branch FROM BH_UserContact uc JOIN BH_UserAdditionalCustomFields cf ON cf.userID = uc.userID LEFT JOIN BH_PrescreenObject p ON p.userID = uc.userID JOIN BH_LatestCandidate c ON uc.userID = c.userID JOIN BH_JobResponse jr ON jr.userID = c.userID JOIN BH_JobOpportunity jo ON jr.jobPostingID = jo.jobPostingID WHERE c.status IN ('Active', 'DNU', 'Engaged', 'Snooze', 'Rejected') AND c.migrated = 1 AND jr.migrated = 1 AND jr.challenge_date_migrated = 0 AND c.isDeleted = 0 AND jr.isDeleted = 0 AND jr.customDate1 IS NOT NULL AND c.dateAdded > '2021-08-20' AND uc.userID NOT IN (SELECT userID FROM BH_UserContact uc WHERE LOWER(name) LIKE '%test' OR LOWER(name) LIKE '%tester' OR LOWER(name) LIKE '%testing' OR LOWER(firstName) LIKE '%test' OR LOWER(firstName) LIKE '%tester' OR LOWER(firstName) LIKE '%testing' OR LOWER(lastName) LIKE '%test' OR LOWER(lastName) LIKE '%tester' OR LOWER(lastName) LIKE '%testing') AND jo.jobPostingID NOT IN (1, 2, 3, 14, 16) AND uc.isDeleted = 0 ORDER BY C.candidateID ASC"
+  );
+  console.log(result.recordset.length);
+  const slicedApps = result.recordset;
+  const appsToMigrate = await removeDupeAppsChalllenge(conn, slicedApps);
+  const sfdcApplications = appsToMigrate.map((a) => {
+    const applicationRecord: Partial<Fields$Opportunity> = {
+      Id: a.app_sfdc_id,
+      Challenge_Date_Time__c: new Date(a.challenge_date).toISOString() as DateString,
+    };
+    return applicationRecord;
+  });
+  console.log(sfdcApplications);
+
+  const appIDs = appsToMigrate.map((c) => c.jobResponseID);
+  const res = await conn._updateMany('Opportunity', sfdcApplications, {
+    allOrNone: true,
+    allowRecursive: true,
+  });
+  if (res.some((r) => !!r.errors.length)) {
+    console.log(
+      'Found errors: ',
+      res
+        .filter(
+          (r) => !!r.errors.length && r.errors.some((e: any) => e.statusCode !== 'ALL_OR_NONE_OPERATION_ROLLED_BACK')
+        )
+        .map((r) => r.errors)
+    );
+    return;
+  }
+
+  const migratedApps = sfdcApplications.map((a, i) => ({ ...a, sfdcId: res[i].id, bhId: appIDs[i] }));
+  const jsonData = JSON.stringify(migratedApps, null, 2);
+  await writeFile('apps.json', jsonData);
+  console.log('Done migrating and writing to file: apps.json');
+
+  // Generate SQL updates
+  const migratedBatches = chunkArray(migratedApps, 1000);
+  for (const migratedBatch of migratedBatches) {
+    const updates = migratedBatch.map((a) => {
+      return query(`UPDATE BH_JobResponse SET challenge_date_migrated = 1 WHERE jobResponseID = ${a.bhId}`);
     });
 
     const batches = chunkArray(updates, 50);
@@ -523,6 +584,38 @@ export const removeDupeApplications = async (conn: Connection<SmoothstackSchema>
       return query(
         `UPDATE BH_JobResponse SET sfdc_id = '${d.Id}', migrated = 1 WHERE jobResponseID = ${d.Bullhorn_ID__c}`
       );
+    });
+
+    const chunks = chunkArray(queries, 50);
+
+    for (const batch of chunks) {
+      await Promise.all(batch);
+    }
+  }
+  console.log('Done updating dupes in local DB and removing them from applicationList to migrate');
+  return appsToMigrate;
+};
+
+export const removeDupeAppsChalllenge = async (conn: Connection<SmoothstackSchema>, applicationList: any) => {
+  // Find Dupe Applications
+  const chunkApplications = chunkArray(applicationList, 200);
+  let dupes = [];
+  for (const chunk of chunkApplications) {
+    console.log('Fetching new dupe batch');
+    dupes.push(
+      ...(await findAppsByBhIdWithChallengeDate(
+        conn,
+        chunk.map((c) => `${c.jobResponseID}`)
+      ))
+    );
+  }
+  const foundDupeApps = new Set(dupes.map((d) => +d.Bullhorn_ID__c));
+  const appsToMigrate = applicationList.filter((c) => !foundDupeApps.has(c.jobResponseID));
+  console.log('Dupe Apps', dupes);
+  const dupeBatches = chunkArray(dupes, 1000);
+  for (const dupeBatch of dupeBatches) {
+    const queries = dupeBatch.map((d) => {
+      return query(`UPDATE BH_JobResponse SET challenge_date_migrated = 1 WHERE jobResponseID = ${d.Bullhorn_ID__c}`);
     });
 
     const chunks = chunkArray(queries, 50);

@@ -5,11 +5,11 @@ import { createContact } from './sms.service';
 import { getTextusSecrets } from './secrets.service';
 import { fetchApplication } from './application.service';
 import { DataGenerationRequest } from '../model/ApplicationData';
-import { migrateJobs, migrateCandidates, migrateApplications, migrateFiles } from './bh.service';
+import { migrateJobs, migrateCandidates, migrateApplications, migrateFiles, migrateChallengeDate } from './bh.service';
 
 export const generateData = async (event: SNSEvent) => {
   console.log('Received Data Generation Request.');
-  await migrateFiles();
+  await migrateChallengeDate();
   // const request: DataGenerationRequest = JSON.parse(event.Records[0].Sns.Message);
   // const conn = await getSFDCConnection();
   // switch (request.type) {
