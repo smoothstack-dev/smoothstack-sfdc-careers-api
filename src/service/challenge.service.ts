@@ -16,6 +16,10 @@ const BASE_URL = `https://www.hackerrank.com/x/api/v3/tests`;
 
 const getChallengeDetails = async (name: string, token: string) => {
   const { data } = await axios.get(BASE_URL, {
+    params: {
+      limit: 100,
+      offset: 0,
+    },
     headers: {
       Authorization: `Bearer ${token}`,
     },
