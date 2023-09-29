@@ -10,7 +10,6 @@ import {
 } from '../model/smoothstack.schema';
 import { calculateMonthsToGrad } from '../util/apply.util';
 import { createCandidate } from './candidate.service';
-import { saveSFDCFiles } from './files.service';
 import { Appointment } from '../model/Appointment';
 import { SchedulingType } from '../model/SchedulingType';
 import { deriveApplicationStatus } from '../util/application.util';
@@ -24,8 +23,7 @@ const APPLICATION_RECORD_TYPE_ID = '0125G000000feaeQAA';
 export const createApplication = async (
   conn: Connection<SmoothstackSchema>,
   jobId: string,
-  application: { candidateFields: CandidateFields; applicationFields: ApplicationFields },
-  resume: any
+  application: { candidateFields: CandidateFields; applicationFields: ApplicationFields }
 ): Promise<{ candidateId: string; applicationId: string }> => {
   const { candidateFields, applicationFields } = application;
 
@@ -72,16 +70,6 @@ export const createApplication = async (
     },
     {}
   );
-  resume &&
-    (await saveSFDCFiles(conn, applicationId, [
-      {
-        type: 'Application Resume',
-        contentType: resume.contentType,
-        fileContent: Buffer.from(resume.content).toString('base64'),
-        name: resume.filename,
-      },
-    ]));
-
   return { applicationId, candidateId };
 };
 
