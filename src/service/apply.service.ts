@@ -14,6 +14,7 @@ import { saveNote } from './notes.service';
 import { generateApplicationNote } from '../util/note.util';
 import { publishDataGenerationRequest } from './sns.service';
 import { findContactByEmailOrPhone } from './contact.service';
+import { saveSFDCFiles } from './files.service';
 
 const DAY_DIFF = 60;
 
@@ -109,15 +110,10 @@ export const apply = async (event: APIGatewayProxyEvent) => {
       ...extraFields,
     } as any;
 
-    const { applicationId, candidateId } = await createApplication(
-      conn,
-      job.Id,
-      {
-        candidateFields,
-        applicationFields,
-      },
-      resume
-    );
+    const { applicationId, candidateId } = await createApplication(conn, job.Id, {
+      candidateFields,
+      applicationFields,
+    });
 
     const noteReqs = [
       saveNote(conn, candidateId, {
@@ -130,7 +126,28 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     await publishDataGenerationRequest(applicationId, 'INITIAL_LINKS');
     await publishDataGenerationRequest(applicationId, 'SMS_CONTACT');
 
+    if (resume) {
+      try {
+        const resumeFile = resume as any;
+        await saveSFDCFiles(conn, applicationId, [
+          {
+            type: 'Application Resume',
+            contentType: resumeFile.contentType,
+            fileContent: Buffer.from(resumeFile.content).toString('base64'),
+            name: resumeFile.filename,
+          },
+        ]);
+      } catch (e) {
+        await saveNote(conn, candidateId, {
+          title: 'Resume Upload Error',
+          content:
+            'Error uploading Application Resume. Please collect file manually from candidate at a later stage in the recruiting process.',
+        });
+      }
+    }
+
     console.log('Successfully created new Candidate.');
+
     return {
       ...(knockout === Knockout.PASS && {
         schedulingLink: getSchedulingLink(
