@@ -1,7 +1,7 @@
 import { SNSEvent } from 'aws-lambda';
 import axios from 'axios';
 import { Appointment } from '../model/Appointment';
-import { generateZoomToken } from './auth/zoom.jwt.service';
+import { generateZoomToken } from './auth/zoom.oauth.service';
 import { WebinarEvent, WebinarRegistration } from '../model/Webinar';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { updateApplication } from './application.service';
