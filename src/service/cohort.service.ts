@@ -54,6 +54,7 @@ export const insertCohortParticipant = async (
     MSMembershipId__c: membershipId,
     Cohort__c: cohortId,
     Participant__c: userId,
+    Is_Latest__c: true,
   });
 };
 
