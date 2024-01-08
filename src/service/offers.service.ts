@@ -1,8 +1,3 @@
-import createHttpError from 'http-errors';
-
-export const sendOffer = async (offerType: 'RELO' | 'NO-RELO') => {
-  if (!['RELO', 'NO-RELO'].includes(offerType)) {
-    throw createHttpError(400, 'Invalid offer type. Valid options: RELO, NO-RELO');
-  }
-  return 'Successfully sent offer to consultant';
+export const sendOffer = async (consultantId: string, offerType: 'RELO' | 'NO-RELO') => {
+  return `Successfully sent ${offerType} offer to consultant with id: ${consultantId}`;
 };
