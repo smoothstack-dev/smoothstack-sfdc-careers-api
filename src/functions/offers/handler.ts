@@ -13,6 +13,7 @@ const validateReqBody = (body: any) => {
     'expirationDate',
     'year1Salary',
     'year2Salary',
+    'minWage',
   ];
   const bodyFields = Object.keys(body);
   if (!requiredFields.every((f) => bodyFields.includes(f))) {
