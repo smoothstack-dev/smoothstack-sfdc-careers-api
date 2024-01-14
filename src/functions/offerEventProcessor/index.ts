@@ -5,7 +5,7 @@ export default {
   events: [
     {
       sns: {
-        arn: { Ref: 'OfferventProcessingTopic' },
+        arn: { Ref: 'OfferEventProcessingTopic' },
         topicName: 'smoothstack-offer-event-processing-sns-topic-v2',
       },
     },
