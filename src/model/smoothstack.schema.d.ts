@@ -353,6 +353,16 @@ type Fields$Account = {
   UTM_Medium__c: string | null;
   UTM_Source__c: string | null;
   Last_Email_or_Meeting_Date__c: DateString | null;
+  SBA_Designation__c: string | null;
+  Govt_Agency__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  INPT_GOV_Entity_ID__c: string | null;
+  INPT_Government_Entity__c: string | null;
+  INPT_Profile_URL__c: string | null;
 };
 
 type ParentReferences$Account = {
@@ -366,6 +376,7 @@ type ParentReferences$Account = {
   ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup | null;
   DSCORGPKG__Conflict__r: SObjectDefinition$DSCORGPKG__Conflict__c | null;
   DSCORGPKG__Locked_By_User__r: SObjectDefinition$User | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Account = {
@@ -516,6 +527,16 @@ type Fields$AccountChangeEvent = {
   UTM_Medium__c: string | null;
   UTM_Source__c: string | null;
   Last_Email_or_Meeting_Date__c: DateString | null;
+  SBA_Designation__c: string | null;
+  Govt_Agency__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  INPT_GOV_Entity_ID__c: string | null;
+  INPT_Government_Entity__c: string | null;
+  INPT_Profile_URL__c: string | null;
 };
 
 type ParentReferences$AccountChangeEvent = {
@@ -909,6 +930,11 @@ type Fields$ActivityHistory = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$ActivityHistory = {
@@ -922,6 +948,7 @@ type ParentReferences$ActivityHistory = {
   PrimaryWho: SObjectDefinition$Name | null;
   PrimaryAccount: SObjectDefinition$Account | null;
   AlternateDetail: SObjectDefinition$EmailMessage | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$ActivityHistory = {
@@ -2646,6 +2673,8 @@ type ParentReferences$AssociatedLocation = {
 type ChildRelationships$AssociatedLocation = {
   //
   Histories: SObjectDefinition$AssociatedLocationHistory;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
   RecordActions: SObjectDefinition$RecordAction;
   RecordActionHistories: SObjectDefinition$RecordActionHistory;
 };
@@ -3990,6 +4019,85 @@ interface SObjectDefinition$BusinessProcess extends SObjectDefinition<'BusinessP
     Fields: Fields$BusinessProcess;
     ParentReferences: ParentReferences$BusinessProcess;
     ChildRelationships: ChildRelationships$BusinessProcess;
+  }
+
+type Fields$CTH_Terms__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Deal__c: string | null;
+};
+
+type ParentReferences$CTH_Terms__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$CTH_Terms__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$CTH_Terms__ChangeEvent extends SObjectDefinition<'CTH_Terms__ChangeEvent'> {
+    Name: 'CTH_Terms__ChangeEvent';
+    Fields: Fields$CTH_Terms__ChangeEvent;
+    ParentReferences: ParentReferences$CTH_Terms__ChangeEvent;
+    ChildRelationships: ChildRelationships$CTH_Terms__ChangeEvent;
+  }
+
+type Fields$CTH_Terms__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Deal__c: string;
+};
+
+type ParentReferences$CTH_Terms__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Deal__r: SObjectDefinition$Deal__c;
+};
+
+type ChildRelationships$CTH_Terms__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$CTH_Terms__c extends SObjectDefinition<'CTH_Terms__c'> {
+    Name: 'CTH_Terms__c';
+    Fields: Fields$CTH_Terms__c;
+    ParentReferences: ParentReferences$CTH_Terms__c;
+    ChildRelationships: ChildRelationships$CTH_Terms__c;
   }
 
 type Fields$Calendar = {
@@ -5431,6 +5539,181 @@ interface SObjectDefinition$ChatterExtensionConfig extends SObjectDefinition<'Ch
     ChildRelationships: ChildRelationships$ChatterExtensionConfig;
   }
 
+type Fields$Check_In_Answers__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Check_In__c: string | null;
+  Contact__c: string | null;
+  Data__c: string | null;
+  Status__c: string | null;
+  Self_Completion_Date__c: DateString | null;
+};
+
+type ParentReferences$Check_In_Answers__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Check_In_Answers__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Check_In_Answers__ChangeEvent extends SObjectDefinition<'Check_In_Answers__ChangeEvent'> {
+    Name: 'Check_In_Answers__ChangeEvent';
+    Fields: Fields$Check_In_Answers__ChangeEvent;
+    ParentReferences: ParentReferences$Check_In_Answers__ChangeEvent;
+    ChildRelationships: ChildRelationships$Check_In_Answers__ChangeEvent;
+  }
+
+type Fields$Check_In_Answers__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Check_In__c: string;
+  Contact__c: string;
+  Data__c: string | null;
+  Status__c: string | null;
+  Self_Completion_Date__c: DateString | null;
+};
+
+type ParentReferences$Check_In_Answers__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Check_In__r: SObjectDefinition$Check_In__c;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$Check_In_Answers__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Check_In_Answers__c extends SObjectDefinition<'Check_In_Answers__c'> {
+    Name: 'Check_In_Answers__c';
+    Fields: Fields$Check_In_Answers__c;
+    ParentReferences: ParentReferences$Check_In_Answers__c;
+    ChildRelationships: ChildRelationships$Check_In_Answers__c;
+  }
+
+type Fields$Check_In__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Data__c: string | null;
+  Order__c: number | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Check_In__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Check_In__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Check_In__ChangeEvent extends SObjectDefinition<'Check_In__ChangeEvent'> {
+    Name: 'Check_In__ChangeEvent';
+    Fields: Fields$Check_In__ChangeEvent;
+    ParentReferences: ParentReferences$Check_In__ChangeEvent;
+    ChildRelationships: ChildRelationships$Check_In__ChangeEvent;
+  }
+
+type Fields$Check_In__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Data__c: string | null;
+  Order__c: number | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Check_In__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Check_In__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Check_In__c extends SObjectDefinition<'Check_In__c'> {
+    Name: 'Check_In__c';
+    Fields: Fields$Check_In__c;
+    ParentReferences: ParentReferences$Check_In__c;
+    ChildRelationships: ChildRelationships$Check_In__c;
+  }
+
 type Fields$ClientBrowser = {
   //
   Id: string;
@@ -5477,6 +5760,8 @@ type Fields$Cohort_Participant_Ranking__ChangeEvent = {
   Tech_Skills__c: number | null;
   Avg_Ranking__c: number | null;
   Meta__c: string | null;
+  Comment__c: string | null;
+  Email_Report_Sent_At__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant_Ranking__ChangeEvent = {
@@ -5514,6 +5799,8 @@ type Fields$Cohort_Participant_Ranking__c = {
   Tech_Skills__c: number | null;
   Avg_Ranking__c: number | null;
   Meta__c: string | null;
+  Comment__c: string | null;
+  Email_Report_Sent_At__c: DateString | null;
 };
 
 type ParentReferences$Cohort_Participant_Ranking__c = {
@@ -5765,6 +6052,7 @@ type Fields$Cohort__ChangeEvent = {
   Revise_Target_Completion_Date_Reason__c: string | null;
   Current_Training_Completion_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Job_ID__c: string | null;
 };
 
 type ParentReferences$Cohort__ChangeEvent = {
@@ -5868,6 +6156,7 @@ type Fields$Cohort__c = {
   Revise_Target_Completion_Date_Reason__c: string | null;
   Current_Training_Completion_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Job_ID__c: string | null;
 };
 
 type ParentReferences$Cohort__c = {
@@ -5879,6 +6168,7 @@ type ParentReferences$Cohort__c = {
   Pilot_Opportunity_2__r: SObjectDefinition$Opportunity | null;
   Primary_Anchor_Opportunity__r: SObjectDefinition$Opportunity | null;
   Secondary_Anchor_Opportunity__r: SObjectDefinition$Opportunity | null;
+  Job_ID__r: SObjectDefinition$Job__c | null;
 };
 
 type ChildRelationships$Cohort__c = {
@@ -6854,6 +7144,363 @@ interface SObjectDefinition$CommSubscriptionTimingHistory extends SObjectDefinit
     ChildRelationships: ChildRelationships$CommSubscriptionTimingHistory;
   }
 
+type Fields$Commission_Report_Result_Line__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Commission_Report_Result__c: string | null;
+};
+
+type ParentReferences$Commission_Report_Result_Line__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Commission_Report_Result_Line__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Commission_Report_Result_Line__ChangeEvent extends SObjectDefinition<'Commission_Report_Result_Line__ChangeEvent'> {
+    Name: 'Commission_Report_Result_Line__ChangeEvent';
+    Fields: Fields$Commission_Report_Result_Line__ChangeEvent;
+    ParentReferences: ParentReferences$Commission_Report_Result_Line__ChangeEvent;
+    ChildRelationships: ChildRelationships$Commission_Report_Result_Line__ChangeEvent;
+  }
+
+type Fields$Commission_Report_Result_Line__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Commission_Report_Result__c: string;
+};
+
+type ParentReferences$Commission_Report_Result_Line__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Commission_Report_Result__r: SObjectDefinition$Commission_Report_Result__c;
+};
+
+type ChildRelationships$Commission_Report_Result_Line__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Commission_Report_Result_Line__c extends SObjectDefinition<'Commission_Report_Result_Line__c'> {
+    Name: 'Commission_Report_Result_Line__c';
+    Fields: Fields$Commission_Report_Result_Line__c;
+    ParentReferences: ParentReferences$Commission_Report_Result_Line__c;
+    ChildRelationships: ChildRelationships$Commission_Report_Result_Line__c;
+  }
+
+type Fields$Commission_Report_Result__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+};
+
+type ParentReferences$Commission_Report_Result__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Commission_Report_Result__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Commission_Report_Result__ChangeEvent extends SObjectDefinition<'Commission_Report_Result__ChangeEvent'> {
+    Name: 'Commission_Report_Result__ChangeEvent';
+    Fields: Fields$Commission_Report_Result__ChangeEvent;
+    ParentReferences: ParentReferences$Commission_Report_Result__ChangeEvent;
+    ChildRelationships: ChildRelationships$Commission_Report_Result__ChangeEvent;
+  }
+
+type Fields$Commission_Report_Result__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+};
+
+type ParentReferences$Commission_Report_Result__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Commission_Report_Result__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Commission_Report_Result__c extends SObjectDefinition<'Commission_Report_Result__c'> {
+    Name: 'Commission_Report_Result__c';
+    Fields: Fields$Commission_Report_Result__c;
+    ParentReferences: ParentReferences$Commission_Report_Result__c;
+    ChildRelationships: ChildRelationships$Commission_Report_Result__c;
+  }
+
+type Fields$Commission_Table_Line__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Commission_Table__c: string | null;
+};
+
+type ParentReferences$Commission_Table_Line__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Commission_Table_Line__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Commission_Table_Line__ChangeEvent extends SObjectDefinition<'Commission_Table_Line__ChangeEvent'> {
+    Name: 'Commission_Table_Line__ChangeEvent';
+    Fields: Fields$Commission_Table_Line__ChangeEvent;
+    ParentReferences: ParentReferences$Commission_Table_Line__ChangeEvent;
+    ChildRelationships: ChildRelationships$Commission_Table_Line__ChangeEvent;
+  }
+
+type Fields$Commission_Table_Line__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Commission_Table__c: string;
+};
+
+type ParentReferences$Commission_Table_Line__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Commission_Table__r: SObjectDefinition$Commission_Table__c;
+};
+
+type ChildRelationships$Commission_Table_Line__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Commission_Table_Line__c extends SObjectDefinition<'Commission_Table_Line__c'> {
+    Name: 'Commission_Table_Line__c';
+    Fields: Fields$Commission_Table_Line__c;
+    ParentReferences: ParentReferences$Commission_Table_Line__c;
+    ChildRelationships: ChildRelationships$Commission_Table_Line__c;
+  }
+
+type Fields$Commission_Table__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Effective_Date__c: DateString | null;
+  Placement_Type__c: string | null;
+};
+
+type ParentReferences$Commission_Table__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Commission_Table__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Commission_Table__ChangeEvent extends SObjectDefinition<'Commission_Table__ChangeEvent'> {
+    Name: 'Commission_Table__ChangeEvent';
+    Fields: Fields$Commission_Table__ChangeEvent;
+    ParentReferences: ParentReferences$Commission_Table__ChangeEvent;
+    ChildRelationships: ChildRelationships$Commission_Table__ChangeEvent;
+  }
+
+type Fields$Commission_Table__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Commission_Table__History = {
+  //
+  Parent: SObjectDefinition$Commission_Table__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Commission_Table__History = {
+  //
+};
+
+interface SObjectDefinition$Commission_Table__History extends SObjectDefinition<'Commission_Table__History'> {
+    Name: 'Commission_Table__History';
+    Fields: Fields$Commission_Table__History;
+    ParentReferences: ParentReferences$Commission_Table__History;
+    ChildRelationships: ChildRelationships$Commission_Table__History;
+  }
+
+type Fields$Commission_Table__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  Effective_Date__c: DateString;
+  Placement_Type__c: string;
+};
+
+type ParentReferences$Commission_Table__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Commission_Table__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  Histories: SObjectDefinition$Commission_Table__History;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Commission_Table__c extends SObjectDefinition<'Commission_Table__c'> {
+    Name: 'Commission_Table__c';
+    Fields: Fields$Commission_Table__c;
+    ParentReferences: ParentReferences$Commission_Table__c;
+    ChildRelationships: ChildRelationships$Commission_Table__c;
+  }
+
 type Fields$Community = {
   //
   Id: string;
@@ -6899,6 +7546,8 @@ type Fields$Compensation_Policy__ChangeEvent = {
   Effective_Date__c: DateString | null;
   End_Date__c: DateString | null;
   Holidays__c: string | null;
+  Work_Classification__c: string | null;
+  Employee_Type__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
   Home_Address__PostalCode__s: string | null;
@@ -6908,7 +7557,6 @@ type Fields$Compensation_Policy__ChangeEvent = {
   Home_Address__Longitude__s: number | null;
   Home_Address__GeocodeAccuracy__s: string | null;
   Home_Address__c: Address | null;
-  PTO_Carry_Over__c: number | null;
   Is_Latest__c: boolean;
   Hourly_Rate__c: number | null;
   State_Sick_Leave_Hours__c: string | null;
@@ -6916,7 +7564,6 @@ type Fields$Compensation_Policy__ChangeEvent = {
   PTO_Hours__c: string | null;
   County__c: string | null;
   Policy_Event__c: string | null;
-  Employee_Type__c: string | null;
   Min_Wage__c: string | null;
   Min_Wage_Rate__c: number | null;
   Min_Wage_Issue__c: string | null;
@@ -6947,12 +7594,12 @@ type Fields$Compensation_Policy__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
-  LastViewedDate: DateString | null;
-  LastReferencedDate: DateString | null;
   Contact__c: string;
   Effective_Date__c: DateString;
   End_Date__c: DateString | null;
   Holidays__c: string | null;
+  Work_Classification__c: string | null;
+  Employee_Type__c: string | null;
   Home_Address__Street__s: string | null;
   Home_Address__City__s: string | null;
   Home_Address__PostalCode__s: string | null;
@@ -6962,7 +7609,6 @@ type Fields$Compensation_Policy__c = {
   Home_Address__Longitude__s: number | null;
   Home_Address__GeocodeAccuracy__s: string | null;
   Home_Address__c: Address | null;
-  PTO_Carry_Over__c: number | null;
   Is_Latest__c: boolean;
   Hourly_Rate__c: number | null;
   State_Sick_Leave_Hours__c: string | null;
@@ -6970,7 +7616,6 @@ type Fields$Compensation_Policy__c = {
   PTO_Hours__c: string | null;
   County__c: string | null;
   Policy_Event__c: string | null;
-  Employee_Type__c: string | null;
   Min_Wage__c: string | null;
   Min_Wage_Rate__c: number | null;
   Min_Wage_Issue__c: string | null;
@@ -7163,7 +7808,7 @@ type Fields$Contact = {
   ActivityMetricId: string | null;
   ActivityMetricRollupId: string | null;
   Linkedin__c: string | null;
-  Home_email__c: string | null;
+  Is_Migrated__c: boolean;
   Type__c: string | null;
   Internal_Advocate__c: boolean;
   DSCORGPKG__Company_HQ_Address__c: string | null;
@@ -7272,7 +7917,7 @@ type Fields$Contact = {
   Recruiter_2_Email__c: string | null;
   Recruiter_1__c: string | null;
   Recruiter_2__c: string | null;
-  Github_Set_to_Private__c: boolean;
+  Open_to_Opportunities__c: string | null;
   Behavioral_Result__c: string | null;
   Project_Score_Result__c: string | null;
   Recruiter_1_Commission_Percentage__c: number | null;
@@ -7312,7 +7957,7 @@ type Fields$Contact = {
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
   sansancard__CreatedByScanToSalesforce__c: boolean;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Vaccination_Status__c: string | null;
   Sstack_CC__Offshore_Total_Hours__c: number | null;
   Sstack_CC__Staff_Aug_Total_Hours__c: number | null;
@@ -7345,6 +7990,29 @@ type Fields$Contact = {
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
   Smoothstack_Email__c: string | null;
+  Hubspot_Account__c: string | null;
+  Unpublish_TalentBench__c: boolean;
+  Public_Trust_Agency__c: string | null;
+  Events__c: string | null;
+  vfirst__Initiate_Background_Check__c: boolean;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report_m__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  No_Longer_With_Company__c: boolean;
+  Delete__c: boolean;
+  INPT_ContactId__c: string | null;
+  INPT_Contact_Type__c: string | null;
+  INPT_Contact_URL__c: string | null;
+  INPT_Government_Level_1__c: string | null;
+  INPT_Government_Level_2__c: string | null;
+  INPUT_Update_Date__c: DateString | null;
+  Public_Trust_Status__c: string | null;
+  Employment_Offer_Sent__c: DateString | null;
+  Employment_Offer_Signed__c: DateString | null;
+  Employment_Offer_Status__c: string | null;
+  Smoothstack_Manager__c: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -7372,6 +8040,7 @@ type ParentReferences$Contact = {
   Opportunity_3__r: SObjectDefinition$Opportunity | null;
   Opportunity_4__r: SObjectDefinition$Opportunity | null;
   Candidate__r: SObjectDefinition$Contact | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Contact = {
@@ -7504,7 +8173,7 @@ type Fields$ContactChangeEvent = {
   JigsawContactId: string | null;
   IndividualId: string | null;
   Linkedin__c: string | null;
-  Home_email__c: string | null;
+  Is_Migrated__c: boolean;
   Type__c: string | null;
   Internal_Advocate__c: boolean;
   DSCORGPKG__Company_HQ_Address__c: string | null;
@@ -7613,7 +8282,7 @@ type Fields$ContactChangeEvent = {
   Recruiter_2_Email__c: string | null;
   Recruiter_1__c: string | null;
   Recruiter_2__c: string | null;
-  Github_Set_to_Private__c: boolean;
+  Open_to_Opportunities__c: string | null;
   Behavioral_Result__c: string | null;
   Project_Score_Result__c: string | null;
   Recruiter_1_Commission_Percentage__c: number | null;
@@ -7653,7 +8322,7 @@ type Fields$ContactChangeEvent = {
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
   sansancard__CreatedByScanToSalesforce__c: boolean;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Vaccination_Status__c: string | null;
   Sstack_CC__Offshore_Total_Hours__c: number | null;
   Sstack_CC__Staff_Aug_Total_Hours__c: number | null;
@@ -7686,6 +8355,29 @@ type Fields$ContactChangeEvent = {
   Last_Email_or_Meeting_Date__c: DateString | null;
   Relationship_Status__c: string | null;
   Smoothstack_Email__c: string | null;
+  Hubspot_Account__c: string | null;
+  Unpublish_TalentBench__c: boolean;
+  Public_Trust_Agency__c: string | null;
+  Events__c: string | null;
+  vfirst__Initiate_Background_Check__c: boolean;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report_m__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  No_Longer_With_Company__c: boolean;
+  Delete__c: boolean;
+  INPT_ContactId__c: string | null;
+  INPT_Contact_Type__c: string | null;
+  INPT_Contact_URL__c: string | null;
+  INPT_Government_Level_1__c: string | null;
+  INPT_Government_Level_2__c: string | null;
+  INPUT_Update_Date__c: DateString | null;
+  Public_Trust_Status__c: string | null;
+  Employment_Offer_Sent__c: DateString | null;
+  Employment_Offer_Signed__c: DateString | null;
+  Employment_Offer_Status__c: string | null;
+  Smoothstack_Manager__c: string | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -9276,6 +9968,7 @@ type Fields$ContentVersion = {
   IsMajorVersion: boolean;
   IsAssetEnabled: boolean;
   Type__c: string | null;
+  Bullhorn_ID__c: string | null;
 };
 
 type ParentReferences$ContentVersion = {
@@ -10336,6 +11029,143 @@ interface SObjectDefinition$CustomPermissionDependency extends SObjectDefinition
     Fields: Fields$CustomPermissionDependency;
     ParentReferences: ParentReferences$CustomPermissionDependency;
     ChildRelationships: ChildRelationships$CustomPermissionDependency;
+  }
+
+type Fields$Custom_Note__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Note__c: string | null;
+  Contact__c: string | null;
+  Account__c: string | null;
+  Content_Document_Link_ID__c: string | null;
+  Initially_Created_By__c: string | null;
+  Preview__c: string | null;
+  Note_Source__c: string | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Custom_Note__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Custom_Note__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Custom_Note__ChangeEvent extends SObjectDefinition<'Custom_Note__ChangeEvent'> {
+    Name: 'Custom_Note__ChangeEvent';
+    Fields: Fields$Custom_Note__ChangeEvent;
+    ParentReferences: ParentReferences$Custom_Note__ChangeEvent;
+    ChildRelationships: ChildRelationships$Custom_Note__ChangeEvent;
+  }
+
+type Fields$Custom_Note__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Custom_Note__History = {
+  //
+  Parent: SObjectDefinition$Custom_Note__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Custom_Note__History = {
+  //
+};
+
+interface SObjectDefinition$Custom_Note__History extends SObjectDefinition<'Custom_Note__History'> {
+    Name: 'Custom_Note__History';
+    Fields: Fields$Custom_Note__History;
+    ParentReferences: ParentReferences$Custom_Note__History;
+    ChildRelationships: ChildRelationships$Custom_Note__History;
+  }
+
+type Fields$Custom_Note__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Note__c: string | null;
+  Contact__c: string | null;
+  Account__c: string | null;
+  Content_Document_Link_ID__c: string | null;
+  Initially_Created_By__c: string | null;
+  Preview__c: string | null;
+  Note_Source__c: string | null;
+  Type__c: string | null;
+};
+
+type ParentReferences$Custom_Note__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Contact__r: SObjectDefinition$Contact | null;
+  Account__r: SObjectDefinition$Account | null;
+  Initially_Created_By__r: SObjectDefinition$User | null;
+};
+
+type ChildRelationships$Custom_Note__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  Histories: SObjectDefinition$Custom_Note__History;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Custom_Note__c extends SObjectDefinition<'Custom_Note__c'> {
+    Name: 'Custom_Note__c';
+    Fields: Fields$Custom_Note__c;
+    ParentReferences: ParentReferences$Custom_Note__c;
+    ChildRelationships: ChildRelationships$Custom_Note__c;
   }
 
 type Fields$DSCORGPKG__AutoUpdateSettings__ChangeEvent = {
@@ -12774,6 +13604,87 @@ interface SObjectDefinition$DatacloudAddress extends SObjectDefinition<'Dataclou
     ChildRelationships: ChildRelationships$DatacloudAddress;
   }
 
+type Fields$Deal__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Standard_CHT__c: string | null;
+};
+
+type ParentReferences$Deal__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Deal__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Deal__ChangeEvent extends SObjectDefinition<'Deal__ChangeEvent'> {
+    Name: 'Deal__ChangeEvent';
+    Fields: Fields$Deal__ChangeEvent;
+    ParentReferences: ParentReferences$Deal__ChangeEvent;
+    ChildRelationships: ChildRelationships$Deal__ChangeEvent;
+  }
+
+type Fields$Deal__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Standard_CHT__c: string;
+};
+
+type ParentReferences$Deal__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Deal__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Deal__c extends SObjectDefinition<'Deal__c'> {
+    Name: 'Deal__c';
+    Fields: Fields$Deal__c;
+    ParentReferences: ParentReferences$Deal__c;
+    ChildRelationships: ChildRelationships$Deal__c;
+  }
+
 type Fields$Debug_Log__ChangeEvent = {
   //
   Id: string | null;
@@ -13762,6 +14673,84 @@ interface SObjectDefinition$EmbeddedServiceLabel extends SObjectDefinition<'Embe
     ChildRelationships: ChildRelationships$EmbeddedServiceLabel;
   }
 
+type Fields$Employment_Offer_Endpoint__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Endpoint__c: string | null;
+};
+
+type ParentReferences$Employment_Offer_Endpoint__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Employment_Offer_Endpoint__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Employment_Offer_Endpoint__ChangeEvent extends SObjectDefinition<'Employment_Offer_Endpoint__ChangeEvent'> {
+    Name: 'Employment_Offer_Endpoint__ChangeEvent';
+    Fields: Fields$Employment_Offer_Endpoint__ChangeEvent;
+    ParentReferences: ParentReferences$Employment_Offer_Endpoint__ChangeEvent;
+    ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__ChangeEvent;
+  }
+
+type Fields$Employment_Offer_Endpoint__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Endpoint__c: string | null;
+};
+
+type ParentReferences$Employment_Offer_Endpoint__c = {
+  //
+  SetupOwner: SObjectDefinition$Name | null;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Employment_Offer_Endpoint__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Employment_Offer_Endpoint__c extends SObjectDefinition<'Employment_Offer_Endpoint__c'> {
+    Name: 'Employment_Offer_Endpoint__c';
+    Fields: Fields$Employment_Offer_Endpoint__c;
+    ParentReferences: ParentReferences$Employment_Offer_Endpoint__c;
+    ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__c;
+  }
+
 type Fields$EngagementChannelType = {
   //
   Id: string;
@@ -14249,6 +15238,11 @@ type Fields$Event = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$Event = {
@@ -14260,6 +15254,7 @@ type ParentReferences$Event = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Event = {
@@ -14373,6 +15368,11 @@ type Fields$EventChangeEvent = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$EventChangeEvent = {
@@ -16949,6 +17949,91 @@ interface SObjectDefinition$Funding_Submission__c extends SObjectDefinition<'Fun
     ChildRelationships: ChildRelationships$Funding_Submission__c;
   }
 
+type Fields$Governent_Agency_Department__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Govt_Agency__c: string | null;
+};
+
+type ParentReferences$Governent_Agency_Department__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Governent_Agency_Department__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Governent_Agency_Department__ChangeEvent extends SObjectDefinition<'Governent_Agency_Department__ChangeEvent'> {
+    Name: 'Governent_Agency_Department__ChangeEvent';
+    Fields: Fields$Governent_Agency_Department__ChangeEvent;
+    ParentReferences: ParentReferences$Governent_Agency_Department__ChangeEvent;
+    ChildRelationships: ChildRelationships$Governent_Agency_Department__ChangeEvent;
+  }
+
+type Fields$Governent_Agency_Department__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  Govt_Agency__c: string;
+};
+
+type ParentReferences$Governent_Agency_Department__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Govt_Agency__r: SObjectDefinition$Account;
+};
+
+type ChildRelationships$Governent_Agency_Department__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Governent_Agency_Department__c extends SObjectDefinition<'Governent_Agency_Department__c'> {
+    Name: 'Governent_Agency_Department__c';
+    Fields: Fields$Governent_Agency_Department__c;
+    ParentReferences: ParentReferences$Governent_Agency_Department__c;
+    ChildRelationships: ChildRelationships$Governent_Agency_Department__c;
+  }
+
 type Fields$GrantedByLicense = {
   //
   Id: string;
@@ -17573,6 +18658,334 @@ interface SObjectDefinition$InstalledMobileApp extends SObjectDefinition<'Instal
     ChildRelationships: ChildRelationships$InstalledMobileApp;
   }
 
+type Fields$Insurance_Cost_Table__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Data__c: string | null;
+  Effective_Date__c: DateString | null;
+  Medical_Employer_Contribution__c: number | null;
+};
+
+type ParentReferences$Insurance_Cost_Table__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Insurance_Cost_Table__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Insurance_Cost_Table__ChangeEvent extends SObjectDefinition<'Insurance_Cost_Table__ChangeEvent'> {
+    Name: 'Insurance_Cost_Table__ChangeEvent';
+    Fields: Fields$Insurance_Cost_Table__ChangeEvent;
+    ParentReferences: ParentReferences$Insurance_Cost_Table__ChangeEvent;
+    ChildRelationships: ChildRelationships$Insurance_Cost_Table__ChangeEvent;
+  }
+
+type Fields$Insurance_Cost_Table__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Data__c: string | null;
+  Effective_Date__c: DateString | null;
+  Medical_Employer_Contribution__c: number | null;
+};
+
+type ParentReferences$Insurance_Cost_Table__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Insurance_Cost_Table__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Insurance_Cost_Table__c extends SObjectDefinition<'Insurance_Cost_Table__c'> {
+    Name: 'Insurance_Cost_Table__c';
+    Fields: Fields$Insurance_Cost_Table__c;
+    ParentReferences: ParentReferences$Insurance_Cost_Table__c;
+    ChildRelationships: ChildRelationships$Insurance_Cost_Table__c;
+  }
+
+type Fields$Insurance_Monthly_Summary__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Insurance__c: string | null;
+  Dental_Deduction__c: number | null;
+  Medical_Deduction__c: number | null;
+  Month_Start_Date__c: DateString | null;
+  Vision_Deduction__c: number | null;
+  Voluntary_Life_Deduction__c: number | null;
+  Month__c: string | null;
+};
+
+type ParentReferences$Insurance_Monthly_Summary__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Insurance_Monthly_Summary__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Insurance_Monthly_Summary__ChangeEvent extends SObjectDefinition<'Insurance_Monthly_Summary__ChangeEvent'> {
+    Name: 'Insurance_Monthly_Summary__ChangeEvent';
+    Fields: Fields$Insurance_Monthly_Summary__ChangeEvent;
+    ParentReferences: ParentReferences$Insurance_Monthly_Summary__ChangeEvent;
+    ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__ChangeEvent;
+  }
+
+type Fields$Insurance_Monthly_Summary__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Insurance__c: string;
+  Dental_Deduction__c: number | null;
+  Medical_Deduction__c: number | null;
+  Month_Start_Date__c: DateString | null;
+  Vision_Deduction__c: number | null;
+  Voluntary_Life_Deduction__c: number | null;
+  Month__c: string | null;
+};
+
+type ParentReferences$Insurance_Monthly_Summary__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Insurance__r: SObjectDefinition$Insurance__c;
+};
+
+type ChildRelationships$Insurance_Monthly_Summary__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Insurance_Monthly_Summary__c extends SObjectDefinition<'Insurance_Monthly_Summary__c'> {
+    Name: 'Insurance_Monthly_Summary__c';
+    Fields: Fields$Insurance_Monthly_Summary__c;
+    ParentReferences: ParentReferences$Insurance_Monthly_Summary__c;
+    ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__c;
+  }
+
+type Fields$Insurance_Settings__mdt = {
+  //
+  Id: string;
+  DeveloperName: string;
+  MasterLabel: string;
+  Language: string;
+  NamespacePrefix: string | null;
+  Label: string | null;
+  QualifiedApiName: string | null;
+  Insurance_Cost__c: string | null;
+};
+
+type ParentReferences$Insurance_Settings__mdt = {
+  //
+};
+
+type ChildRelationships$Insurance_Settings__mdt = {
+  //
+};
+
+interface SObjectDefinition$Insurance_Settings__mdt extends SObjectDefinition<'Insurance_Settings__mdt'> {
+    Name: 'Insurance_Settings__mdt';
+    Fields: Fields$Insurance_Settings__mdt;
+    ParentReferences: ParentReferences$Insurance_Settings__mdt;
+    ChildRelationships: ChildRelationships$Insurance_Settings__mdt;
+  }
+
+type Fields$Insurance__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Compensation_Policy__c: string | null;
+  Contact__c: string | null;
+  Dental_Coverage_Level__c: string | null;
+  Dental_Plan_Name__c: string | null;
+  Dental_Premium__c: number | null;
+  Effective_Date__c: DateString | null;
+  End_Date__c: DateString | null;
+  Event_Date__c: DateString | null;
+  Insurance_Event__c: string | null;
+  Medical_Coverage_Level__c: string | null;
+  Medical_Insurance_Employer_Contribution__c: number | null;
+  Medical_Plan_Name__c: string | null;
+  Medical_Premium__c: number | null;
+  Vision_Coverage_Level__c: string | null;
+  Vision_Plan_Name__c: string | null;
+  Vision_Premium__c: number | null;
+  Voluntary_Life_Coverage_Level__c: string | null;
+  Voluntary_Life_Plan_Name__c: string | null;
+  Voluntary_Life_Premium__c: number | null;
+  Import_Data__c: string | null;
+  Qualifying_Event_Type__c: string | null;
+};
+
+type ParentReferences$Insurance__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Insurance__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Insurance__ChangeEvent extends SObjectDefinition<'Insurance__ChangeEvent'> {
+    Name: 'Insurance__ChangeEvent';
+    Fields: Fields$Insurance__ChangeEvent;
+    ParentReferences: ParentReferences$Insurance__ChangeEvent;
+    ChildRelationships: ChildRelationships$Insurance__ChangeEvent;
+  }
+
+type Fields$Insurance__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Compensation_Policy__c: string | null;
+  Contact__c: string;
+  Dental_Coverage_Level__c: string | null;
+  Dental_Plan_Name__c: string | null;
+  Dental_Premium__c: number | null;
+  Effective_Date__c: DateString;
+  End_Date__c: DateString;
+  Event_Date__c: DateString | null;
+  Insurance_Event__c: string;
+  Medical_Coverage_Level__c: string | null;
+  Medical_Insurance_Employer_Contribution__c: number | null;
+  Medical_Plan_Name__c: string | null;
+  Medical_Premium__c: number | null;
+  Vision_Coverage_Level__c: string | null;
+  Vision_Plan_Name__c: string | null;
+  Vision_Premium__c: number | null;
+  Voluntary_Life_Coverage_Level__c: string | null;
+  Voluntary_Life_Plan_Name__c: string | null;
+  Voluntary_Life_Premium__c: number | null;
+  Import_Data__c: string | null;
+  Qualifying_Event_Type__c: string | null;
+};
+
+type ParentReferences$Insurance__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Compensation_Policy__r: SObjectDefinition$Compensation_Policy__c | null;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$Insurance__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Insurance__c extends SObjectDefinition<'Insurance__c'> {
+    Name: 'Insurance__c';
+    Fields: Fields$Insurance__c;
+    ParentReferences: ParentReferences$Insurance__c;
+    ChildRelationships: ChildRelationships$Insurance__c;
+  }
+
 type Fields$Invoice_History__ChangeEvent = {
   //
   Id: string | null;
@@ -17990,6 +19403,43 @@ interface SObjectDefinition$Invoice_Payment__c extends SObjectDefinition<'Invoic
     Fields: Fields$Invoice_Payment__c;
     ParentReferences: ParentReferences$Invoice_Payment__c;
     ChildRelationships: ChildRelationships$Invoice_Payment__c;
+  }
+
+type Fields$Invoice_Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Company_Name__c: string | null;
+  Email_Sender_Display_Name__c: string | null;
+  From_Address_Line_1__c: string | null;
+  From_Address_Line_2__c: string | null;
+  From_Address_Line_3__c: string | null;
+  Invoices_CC_Email__c: string | null;
+  Invoices_Debug_Email__c: string | null;
+  Invoices_From_Email__c: string | null;
+  Company_Account_Name__c: string | null;
+};
+
+type ParentReferences$Invoice_Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Invoice_Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Invoice_Settings__ChangeEvent extends SObjectDefinition<'Invoice_Settings__ChangeEvent'> {
+    Name: 'Invoice_Settings__ChangeEvent';
+    Fields: Fields$Invoice_Settings__ChangeEvent;
+    ParentReferences: ParentReferences$Invoice_Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$Invoice_Settings__ChangeEvent;
   }
 
 type Fields$Invoice_Settings__c = {
@@ -18416,6 +19866,407 @@ interface SObjectDefinition$Invoiced_Hours__c extends SObjectDefinition<'Invoice
     ChildRelationships: ChildRelationships$Invoiced_Hours__c;
   }
 
+type Fields$JP_Information__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Job_Placement__c: string | null;
+};
+
+type ParentReferences$JP_Information__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$JP_Information__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$JP_Information__ChangeEvent extends SObjectDefinition<'JP_Information__ChangeEvent'> {
+    Name: 'JP_Information__ChangeEvent';
+    Fields: Fields$JP_Information__ChangeEvent;
+    ParentReferences: ParentReferences$JP_Information__ChangeEvent;
+    ChildRelationships: ChildRelationships$JP_Information__ChangeEvent;
+  }
+
+type Fields$JP_Information__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$JP_Information__History = {
+  //
+  Parent: SObjectDefinition$JP_Information__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$JP_Information__History = {
+  //
+};
+
+interface SObjectDefinition$JP_Information__History extends SObjectDefinition<'JP_Information__History'> {
+    Name: 'JP_Information__History';
+    Fields: Fields$JP_Information__History;
+    ParentReferences: ParentReferences$JP_Information__History;
+    ChildRelationships: ChildRelationships$JP_Information__History;
+  }
+
+type Fields$JP_Information__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  Job_Placement__c: string;
+};
+
+type ParentReferences$JP_Information__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Job_Placement__r: SObjectDefinition$Job_Placement__c;
+};
+
+type ChildRelationships$JP_Information__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Histories: SObjectDefinition$JP_Information__History;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$JP_Information__c extends SObjectDefinition<'JP_Information__c'> {
+    Name: 'JP_Information__c';
+    Fields: Fields$JP_Information__c;
+    ParentReferences: ParentReferences$JP_Information__c;
+    ChildRelationships: ChildRelationships$JP_Information__c;
+  }
+
+type Fields$Job_Placement_AM__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Job_Placement__c: string | null;
+  Account_Manager_Role__c: string | null;
+  Commission_Rate__c: number | null;
+};
+
+type ParentReferences$Job_Placement_AM__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Job_Placement_AM__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Job_Placement_AM__ChangeEvent extends SObjectDefinition<'Job_Placement_AM__ChangeEvent'> {
+    Name: 'Job_Placement_AM__ChangeEvent';
+    Fields: Fields$Job_Placement_AM__ChangeEvent;
+    ParentReferences: ParentReferences$Job_Placement_AM__ChangeEvent;
+    ChildRelationships: ChildRelationships$Job_Placement_AM__ChangeEvent;
+  }
+
+type Fields$Job_Placement_AM__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Job_Placement__c: string;
+  Account_Manager_Role__c: string;
+  Commission_Rate__c: number;
+};
+
+type ParentReferences$Job_Placement_AM__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Job_Placement__r: SObjectDefinition$Job_Placement__c;
+};
+
+type ChildRelationships$Job_Placement_AM__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Job_Placement_AM__c extends SObjectDefinition<'Job_Placement_AM__c'> {
+    Name: 'Job_Placement_AM__c';
+    Fields: Fields$Job_Placement_AM__c;
+    ParentReferences: ParentReferences$Job_Placement_AM__c;
+    ChildRelationships: ChildRelationships$Job_Placement_AM__c;
+  }
+
+type Fields$Job_Placement_Recruiter__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Job_Placement__c: string | null;
+  Commission_Rate__c: number | null;
+  Contact__c: string | null;
+  Recruiter_Role__c: string | null;
+};
+
+type ParentReferences$Job_Placement_Recruiter__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Job_Placement_Recruiter__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Job_Placement_Recruiter__ChangeEvent extends SObjectDefinition<'Job_Placement_Recruiter__ChangeEvent'> {
+    Name: 'Job_Placement_Recruiter__ChangeEvent';
+    Fields: Fields$Job_Placement_Recruiter__ChangeEvent;
+    ParentReferences: ParentReferences$Job_Placement_Recruiter__ChangeEvent;
+    ChildRelationships: ChildRelationships$Job_Placement_Recruiter__ChangeEvent;
+  }
+
+type Fields$Job_Placement_Recruiter__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Job_Placement__c: string;
+  Commission_Rate__c: number;
+  Contact__c: string;
+  Recruiter_Role__c: string;
+};
+
+type ParentReferences$Job_Placement_Recruiter__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Job_Placement__r: SObjectDefinition$Job_Placement__c;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$Job_Placement_Recruiter__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Job_Placement_Recruiter__c extends SObjectDefinition<'Job_Placement_Recruiter__c'> {
+    Name: 'Job_Placement_Recruiter__c';
+    Fields: Fields$Job_Placement_Recruiter__c;
+    ParentReferences: ParentReferences$Job_Placement_Recruiter__c;
+    ChildRelationships: ChildRelationships$Job_Placement_Recruiter__c;
+  }
+
+type Fields$Job_Placement__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+};
+
+type ParentReferences$Job_Placement__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Job_Placement__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Job_Placement__ChangeEvent extends SObjectDefinition<'Job_Placement__ChangeEvent'> {
+    Name: 'Job_Placement__ChangeEvent';
+    Fields: Fields$Job_Placement__ChangeEvent;
+    ParentReferences: ParentReferences$Job_Placement__ChangeEvent;
+    ChildRelationships: ChildRelationships$Job_Placement__ChangeEvent;
+  }
+
+type Fields$Job_Placement__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Job_Placement__History = {
+  //
+  Parent: SObjectDefinition$Job_Placement__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Job_Placement__History = {
+  //
+};
+
+interface SObjectDefinition$Job_Placement__History extends SObjectDefinition<'Job_Placement__History'> {
+    Name: 'Job_Placement__History';
+    Fields: Fields$Job_Placement__History;
+    ParentReferences: ParentReferences$Job_Placement__History;
+    ChildRelationships: ChildRelationships$Job_Placement__History;
+  }
+
+type Fields$Job_Placement__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+};
+
+type ParentReferences$Job_Placement__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Job_Placement__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Histories: SObjectDefinition$Job_Placement__History;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Job_Placement__c extends SObjectDefinition<'Job_Placement__c'> {
+    Name: 'Job_Placement__c';
+    Fields: Fields$Job_Placement__c;
+    ParentReferences: ParentReferences$Job_Placement__c;
+    ChildRelationships: ChildRelationships$Job_Placement__c;
+  }
+
 type Fields$Job_Portal_Settings__mdt = {
   //
   Id: string;
@@ -18761,6 +20612,12 @@ type Fields$Lead = {
   Appointment_Status__c: string | null;
   Appointment_Date_Time__c: DateString | null;
   Teams_Meeting_ID__c: string | null;
+  vfirst__Initiate_Background_Check__c: boolean;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report_m__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$Lead = {
@@ -18778,6 +20635,7 @@ type ParentReferences$Lead = {
   DSCORGPKG__Conflict__r: SObjectDefinition$DSCORGPKG__Conflict__c | null;
   DSCORGPKG__Locked_By_User__r: SObjectDefinition$User | null;
   AccountId__r: SObjectDefinition$Account | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Lead = {
@@ -18947,6 +20805,12 @@ type Fields$LeadChangeEvent = {
   Appointment_Status__c: string | null;
   Appointment_Date_Time__c: DateString | null;
   Teams_Meeting_ID__c: string | null;
+  vfirst__Initiate_Background_Check__c: boolean;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report_m__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$LeadChangeEvent = {
@@ -20172,6 +22036,11 @@ type Fields$LookedUpFromActivity = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$LookedUpFromActivity = {
@@ -20184,6 +22053,7 @@ type ParentReferences$LookedUpFromActivity = {
   LastModifiedBy: SObjectDefinition$User;
   PrimaryWho: SObjectDefinition$Name | null;
   PrimaryAccount: SObjectDefinition$Account | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$LookedUpFromActivity = {
@@ -20964,8 +22834,6 @@ type Fields$Min_Wage__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
-  LastViewedDate: DateString | null;
-  LastReferencedDate: DateString | null;
   State__c: string | null;
   Authority__c: string | null;
   Authority_Type__c: string | null;
@@ -21227,7 +23095,10 @@ type Fields$MutingPermissionSet = {
   PermissionsSendAnnouncementEmails: boolean;
   PermissionsChatterEditOwnPost: boolean;
   PermissionsChatterEditOwnRecordPost: boolean;
+  PermissionsCreateAuditFields: boolean;
+  PermissionsUpdateWithInactiveOwner: boolean;
   PermissionsWaveTabularDownload: boolean;
+  PermissionsWaveCommunityUser: boolean;
   PermissionsManageSandboxes: boolean;
   PermissionsAutomaticActivityCapture: boolean;
   PermissionsImportCustomObjects: boolean;
@@ -21247,7 +23118,6 @@ type Fields$MutingPermissionSet = {
   PermissionsCanApproveFeedPost: boolean;
   PermissionsAddDirectMessageMembers: boolean;
   PermissionsAllowViewEditConvertedLeads: boolean;
-  PermissionsSocialInsightsLogoAdmin: boolean;
   PermissionsShowCompanyNameAsUserBadge: boolean;
   PermissionsAccessCMC: boolean;
   PermissionsViewHealthCheck: boolean;
@@ -21282,10 +23152,13 @@ type Fields$MutingPermissionSet = {
   PermissionsCreateLtngTempFolder: boolean;
   PermissionsApexRestServices: boolean;
   PermissionsGiveRecognitionBadge: boolean;
+  PermissionsAllowObjectDetection: boolean;
+  PermissionsSalesforceIQInternal: boolean;
   PermissionsUseMySearch: boolean;
   PermissionsLtngPromoReserved01UserPerm: boolean;
   PermissionsManageSubscriptions: boolean;
   PermissionsWaveManagePrivateAssetsUser: boolean;
+  PermissionsAllowObjectDetectionTraining: boolean;
   PermissionsCanEditDataPrepRecipe: boolean;
   PermissionsAddAnalyticsRemoteConnections: boolean;
   PermissionsManageSurveys: boolean;
@@ -21876,6 +23749,11 @@ type Fields$OpenActivity = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$OpenActivity = {
@@ -21889,6 +23767,7 @@ type ParentReferences$OpenActivity = {
   PrimaryWho: SObjectDefinition$Name | null;
   PrimaryAccount: SObjectDefinition$Account | null;
   AlternateDetail: SObjectDefinition$EmailMessage | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$OpenActivity = {
@@ -22204,6 +24083,7 @@ type Fields$Opportunity = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
+  Is_Migrated__c: boolean;
   Coding_Self_Rank__c: number | null;
   BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
@@ -22252,6 +24132,8 @@ type Fields$Opportunity = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
+  Bullhorn_ID__c: string | null;
+  Wrong_Owner__c: boolean;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -22306,6 +24188,36 @@ type Fields$Opportunity = {
   Candidate_Phone_Number__c: string | null;
   External_Tech_Screen_Link__c: string | null;
   Rejection_Stage__c: string | null;
+  Govt_Agency_Department__c: string | null;
+  Contract_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  Additional_Comments__c: string | null;
+  INPT_Award_Date__c: DateString | null;
+  INPT_Award_Type__c: string | null;
+  INPT_Competition_Type__c: string | null;
+  INPT_Contract_Type__c: string | null;
+  INPT_Contract_Vehicles__c: string | null;
+  INPT_Duration__c: string | null;
+  INPT_Estimated_Value__c: number | null;
+  INPT_Government_Level_1__c: string | null;
+  INPT_Government_Level_2__c: string | null;
+  INPT_Government_Site__c: string | null;
+  INPT_Opportunity_Type__c: string | null;
+  INPT_Opportunity_URL__c: string | null;
+  INPT_Primary_NAICS_Code__c: string | null;
+  INPT_Primary_NAICS_Description__c: string | null;
+  INPT_Primary_Requirement__c: string | null;
+  INPT_RFP_Date__c: DateString | null;
+  INPT_RFP_Number__c: string | null;
+  INPT_Response_Date__c: DateString | null;
+  INPUT_LastModifiedDate__c: DateString | null;
+  INPUT_Opportunity_ID__c: string | null;
+  INPUT_Status__c: string | null;
+  INPUT_Update_Date__c: DateString | null;
 };
 
 type ParentReferences$Opportunity = {
@@ -22327,6 +24239,8 @@ type ParentReferences$Opportunity = {
   Candidate__r: SObjectDefinition$Contact | null;
   Job__r: SObjectDefinition$Job__c | null;
   Tech_Screener__r: SObjectDefinition$User | null;
+  Govt_Agency_Department__r: SObjectDefinition$Governent_Agency_Department__c | null;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Opportunity = {
@@ -22485,6 +24399,7 @@ type Fields$OpportunityChangeEvent = {
   Challenge_Score__c: number | null;
   Challenge_Similarity_Flag__c: string | null;
   Challenging_Situation__c: string | null;
+  Is_Migrated__c: boolean;
   Coding_Self_Rank__c: number | null;
   BA_Adaptability_Answer__c: string | null;
   Communication_Rank_Recruiter__c: number | null;
@@ -22533,6 +24448,8 @@ type Fields$OpportunityChangeEvent = {
   Tech_Screen_Raw_Data__c: string | null;
   Tech_Screen_Result__c: string | null;
   Tech_Screen_Scheduling_Link__c: string | null;
+  Bullhorn_ID__c: string | null;
+  Wrong_Owner__c: boolean;
   Total_Behavioral_Score__c: string | null;
   Total_Project_Score__c: string | null;
   Total_Technical_Score__c: string | null;
@@ -22587,6 +24504,36 @@ type Fields$OpportunityChangeEvent = {
   Candidate_Phone_Number__c: string | null;
   External_Tech_Screen_Link__c: string | null;
   Rejection_Stage__c: string | null;
+  Govt_Agency_Department__c: string | null;
+  Contract_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+  Additional_Comments__c: string | null;
+  INPT_Award_Date__c: DateString | null;
+  INPT_Award_Type__c: string | null;
+  INPT_Competition_Type__c: string | null;
+  INPT_Contract_Type__c: string | null;
+  INPT_Contract_Vehicles__c: string | null;
+  INPT_Duration__c: string | null;
+  INPT_Estimated_Value__c: number | null;
+  INPT_Government_Level_1__c: string | null;
+  INPT_Government_Level_2__c: string | null;
+  INPT_Government_Site__c: string | null;
+  INPT_Opportunity_Type__c: string | null;
+  INPT_Opportunity_URL__c: string | null;
+  INPT_Primary_NAICS_Code__c: string | null;
+  INPT_Primary_NAICS_Description__c: string | null;
+  INPT_Primary_Requirement__c: string | null;
+  INPT_RFP_Date__c: DateString | null;
+  INPT_RFP_Number__c: string | null;
+  INPT_Response_Date__c: DateString | null;
+  INPUT_LastModifiedDate__c: DateString | null;
+  INPUT_Opportunity_ID__c: string | null;
+  INPUT_Status__c: string | null;
+  INPUT_Update_Date__c: DateString | null;
 };
 
 type ParentReferences$OpportunityChangeEvent = {
@@ -22987,6 +24934,7 @@ type ParentReferences$OpportunityTeamMember = {
 
 type ChildRelationships$OpportunityTeamMember = {
   //
+  Histories: SObjectDefinition$OpportunityTeamMemberHistory;
 };
 
 interface SObjectDefinition$OpportunityTeamMember extends SObjectDefinition<'OpportunityTeamMember'> {
@@ -22994,6 +24942,36 @@ interface SObjectDefinition$OpportunityTeamMember extends SObjectDefinition<'Opp
     Fields: Fields$OpportunityTeamMember;
     ParentReferences: ParentReferences$OpportunityTeamMember;
     ChildRelationships: ChildRelationships$OpportunityTeamMember;
+  }
+
+type Fields$OpportunityTeamMemberHistory = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  OpportunityTeamMemberId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$OpportunityTeamMemberHistory = {
+  //
+  OpportunityTeamMember: SObjectDefinition$OpportunityTeamMember;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$OpportunityTeamMemberHistory = {
+  //
+};
+
+interface SObjectDefinition$OpportunityTeamMemberHistory extends SObjectDefinition<'OpportunityTeamMemberHistory'> {
+    Name: 'OpportunityTeamMemberHistory';
+    Fields: Fields$OpportunityTeamMemberHistory;
+    ParentReferences: ParentReferences$OpportunityTeamMemberHistory;
+    ChildRelationships: ChildRelationships$OpportunityTeamMemberHistory;
   }
 
 type Fields$Order = {
@@ -23858,6 +25836,93 @@ interface SObjectDefinition$OwnerChangeOptionInfo extends SObjectDefinition<'Own
     ChildRelationships: ChildRelationships$OwnerChangeOptionInfo;
   }
 
+type Fields$PTO_Carryover__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Effective_Year__c: string | null;
+  Max_PTO_Carryover__c: string | null;
+  State__c: string | null;
+};
+
+type ParentReferences$PTO_Carryover__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$PTO_Carryover__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$PTO_Carryover__ChangeEvent extends SObjectDefinition<'PTO_Carryover__ChangeEvent'> {
+    Name: 'PTO_Carryover__ChangeEvent';
+    Fields: Fields$PTO_Carryover__ChangeEvent;
+    ParentReferences: ParentReferences$PTO_Carryover__ChangeEvent;
+    ChildRelationships: ChildRelationships$PTO_Carryover__ChangeEvent;
+  }
+
+type Fields$PTO_Carryover__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Effective_Year__c: string | null;
+  Max_PTO_Carryover__c: string | null;
+  State__c: string | null;
+};
+
+type ParentReferences$PTO_Carryover__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$PTO_Carryover__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$PTO_Carryover__c extends SObjectDefinition<'PTO_Carryover__c'> {
+    Name: 'PTO_Carryover__c';
+    Fields: Fields$PTO_Carryover__c;
+    ParentReferences: ParentReferences$PTO_Carryover__c;
+    ChildRelationships: ChildRelationships$PTO_Carryover__c;
+  }
+
 type Fields$PTO_Request__ChangeEvent = {
   //
   Id: string | null;
@@ -23874,6 +25939,7 @@ type Fields$PTO_Request__ChangeEvent = {
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number | null;
+  Request_Initiated_By__c: string | null;
   Start_Date__c: DateString | null;
   Status__c: string | null;
   Dates__c: string | null;
@@ -23915,6 +25981,7 @@ type Fields$PTO_Request__c = {
   Approval_Status__c: string | null;
   Contact__c: string | null;
   Hours__c: number;
+  Request_Initiated_By__c: string | null;
   Start_Date__c: DateString;
   Status__c: string | null;
   Dates__c: string | null;
@@ -24277,6 +26344,8 @@ type Fields$Pay_Period_Year__ChangeEvent = {
   PTO_Pending_Approval__c: number | null;
   PTO_Scheduled__c: number | null;
   PTO_Taken__c: number | null;
+  PTO_Earned_Override__c: number | null;
+  Total_Pay_Periods__c: number | null;
 };
 
 type ParentReferences$Pay_Period_Year__ChangeEvent = {
@@ -24318,6 +26387,8 @@ type Fields$Pay_Period_Year__c = {
   PTO_Pending_Approval__c: number | null;
   PTO_Scheduled__c: number | null;
   PTO_Taken__c: number | null;
+  PTO_Earned_Override__c: number | null;
+  Total_Pay_Periods__c: number | null;
 };
 
 type ParentReferences$Pay_Period_Year__c = {
@@ -24384,6 +26455,15 @@ type Fields$Pay_Period__ChangeEvent = {
   Pay_Period_Year__c: string | null;
   PTO_Balance_wo_Carryover__c: number | null;
   Status__c: string | null;
+  PTO_Earned_Override__c: number | null;
+  PTO_Earned_Final__c: number | null;
+  Dental_Deduction__c: number | null;
+  Medical_Deduction__c: number | null;
+  Medical_Employer_Contribution__c: number | null;
+  Vision_Deduction__c: number | null;
+  Voluntary_Life_Deduction__c: number | null;
+  Pay_Date_Status__c: string | null;
+  Pay_Date__c: DateString | null;
 };
 
 type ParentReferences$Pay_Period__ChangeEvent = {
@@ -24428,6 +26508,15 @@ type Fields$Pay_Period__c = {
   Pay_Period_Year__c: string;
   PTO_Balance_wo_Carryover__c: number | null;
   Status__c: string | null;
+  PTO_Earned_Override__c: number | null;
+  PTO_Earned_Final__c: number | null;
+  Dental_Deduction__c: number | null;
+  Medical_Deduction__c: number | null;
+  Medical_Employer_Contribution__c: number | null;
+  Vision_Deduction__c: number | null;
+  Voluntary_Life_Deduction__c: number | null;
+  Pay_Date_Status__c: string | null;
+  Pay_Date__c: DateString | null;
 };
 
 type ParentReferences$Pay_Period__c = {
@@ -25005,7 +27094,10 @@ type Fields$PermissionSet = {
   PermissionsSendAnnouncementEmails: boolean;
   PermissionsChatterEditOwnPost: boolean;
   PermissionsChatterEditOwnRecordPost: boolean;
+  PermissionsCreateAuditFields: boolean;
+  PermissionsUpdateWithInactiveOwner: boolean;
   PermissionsWaveTabularDownload: boolean;
+  PermissionsWaveCommunityUser: boolean;
   PermissionsManageSandboxes: boolean;
   PermissionsAutomaticActivityCapture: boolean;
   PermissionsImportCustomObjects: boolean;
@@ -25025,7 +27117,6 @@ type Fields$PermissionSet = {
   PermissionsCanApproveFeedPost: boolean;
   PermissionsAddDirectMessageMembers: boolean;
   PermissionsAllowViewEditConvertedLeads: boolean;
-  PermissionsSocialInsightsLogoAdmin: boolean;
   PermissionsShowCompanyNameAsUserBadge: boolean;
   PermissionsAccessCMC: boolean;
   PermissionsViewHealthCheck: boolean;
@@ -25060,10 +27151,13 @@ type Fields$PermissionSet = {
   PermissionsCreateLtngTempFolder: boolean;
   PermissionsApexRestServices: boolean;
   PermissionsGiveRecognitionBadge: boolean;
+  PermissionsAllowObjectDetection: boolean;
+  PermissionsSalesforceIQInternal: boolean;
   PermissionsUseMySearch: boolean;
   PermissionsLtngPromoReserved01UserPerm: boolean;
   PermissionsManageSubscriptions: boolean;
   PermissionsWaveManagePrivateAssetsUser: boolean;
+  PermissionsAllowObjectDetectionTraining: boolean;
   PermissionsCanEditDataPrepRecipe: boolean;
   PermissionsAddAnalyticsRemoteConnections: boolean;
   PermissionsManageSurveys: boolean;
@@ -25420,7 +27514,10 @@ type Fields$PermissionSetLicense = {
   MaximumPermissionsSendAnnouncementEmails: boolean;
   MaximumPermissionsChatterEditOwnPost: boolean;
   MaximumPermissionsChatterEditOwnRecordPost: boolean;
+  MaximumPermissionsCreateAuditFields: boolean;
+  MaximumPermissionsUpdateWithInactiveOwner: boolean;
   MaximumPermissionsWaveTabularDownload: boolean;
+  MaximumPermissionsWaveCommunityUser: boolean;
   MaximumPermissionsManageSandboxes: boolean;
   MaximumPermissionsAutomaticActivityCapture: boolean;
   MaximumPermissionsImportCustomObjects: boolean;
@@ -25440,7 +27537,6 @@ type Fields$PermissionSetLicense = {
   MaximumPermissionsCanApproveFeedPost: boolean;
   MaximumPermissionsAddDirectMessageMembers: boolean;
   MaximumPermissionsAllowViewEditConvertedLeads: boolean;
-  MaximumPermissionsSocialInsightsLogoAdmin: boolean;
   MaximumPermissionsShowCompanyNameAsUserBadge: boolean;
   MaximumPermissionsAccessCMC: boolean;
   MaximumPermissionsViewHealthCheck: boolean;
@@ -25475,10 +27571,13 @@ type Fields$PermissionSetLicense = {
   MaximumPermissionsCreateLtngTempFolder: boolean;
   MaximumPermissionsApexRestServices: boolean;
   MaximumPermissionsGiveRecognitionBadge: boolean;
+  MaximumPermissionsAllowObjectDetection: boolean;
+  MaximumPermissionsSalesforceIQInternal: boolean;
   MaximumPermissionsUseMySearch: boolean;
   MaximumPermissionsLtngPromoReserved01UserPerm: boolean;
   MaximumPermissionsManageSubscriptions: boolean;
   MaximumPermissionsWaveManagePrivateAssetsUser: boolean;
+  MaximumPermissionsAllowObjectDetectionTraining: boolean;
   MaximumPermissionsCanEditDataPrepRecipe: boolean;
   MaximumPermissionsAddAnalyticsRemoteConnections: boolean;
   MaximumPermissionsManageSurveys: boolean;
@@ -26822,7 +28921,10 @@ type Fields$Profile = {
   PermissionsSendAnnouncementEmails: boolean;
   PermissionsChatterEditOwnPost: boolean;
   PermissionsChatterEditOwnRecordPost: boolean;
+  PermissionsCreateAuditFields: boolean;
+  PermissionsUpdateWithInactiveOwner: boolean;
   PermissionsWaveTabularDownload: boolean;
+  PermissionsWaveCommunityUser: boolean;
   PermissionsManageSandboxes: boolean;
   PermissionsAutomaticActivityCapture: boolean;
   PermissionsImportCustomObjects: boolean;
@@ -26842,7 +28944,6 @@ type Fields$Profile = {
   PermissionsCanApproveFeedPost: boolean;
   PermissionsAddDirectMessageMembers: boolean;
   PermissionsAllowViewEditConvertedLeads: boolean;
-  PermissionsSocialInsightsLogoAdmin: boolean;
   PermissionsShowCompanyNameAsUserBadge: boolean;
   PermissionsAccessCMC: boolean;
   PermissionsViewHealthCheck: boolean;
@@ -26877,10 +28978,13 @@ type Fields$Profile = {
   PermissionsCreateLtngTempFolder: boolean;
   PermissionsApexRestServices: boolean;
   PermissionsGiveRecognitionBadge: boolean;
+  PermissionsAllowObjectDetection: boolean;
+  PermissionsSalesforceIQInternal: boolean;
   PermissionsUseMySearch: boolean;
   PermissionsLtngPromoReserved01UserPerm: boolean;
   PermissionsManageSubscriptions: boolean;
   PermissionsWaveManagePrivateAssetsUser: boolean;
+  PermissionsAllowObjectDetectionTraining: boolean;
   PermissionsCanEditDataPrepRecipe: boolean;
   PermissionsAddAnalyticsRemoteConnections: boolean;
   PermissionsManageSurveys: boolean;
@@ -27570,6 +29674,7 @@ type Fields$Purchase_Order_Line__ChangeEvent = {
   End_Client__c: string | null;
   Conversion_Fee__c: number | null;
   Hiring_Manager__c: string | null;
+  Billable_Client__c: string | null;
   Project_Name__c: string | null;
   Company_Name__c: string | null;
   PO_Number__c: string | null;
@@ -27643,6 +29748,7 @@ type Fields$Purchase_Order_Line__c = {
   End_Client__c: string | null;
   Conversion_Fee__c: number | null;
   Hiring_Manager__c: string | null;
+  Billable_Client__c: string | null;
   Project_Name__c: string | null;
   Company_Name__c: string | null;
   PO_Number__c: string | null;
@@ -27655,6 +29761,7 @@ type ParentReferences$Purchase_Order_Line__c = {
   Purchase_Order__r: SObjectDefinition$Purchase_Order__c;
   Resource__r: SObjectDefinition$Contact | null;
   Hiring_Manager__r: SObjectDefinition$Contact | null;
+  Billable_Client__r: SObjectDefinition$Account | null;
 };
 
 type ChildRelationships$Purchase_Order_Line__c = {
@@ -28819,6 +30926,92 @@ interface SObjectDefinition$RedirectWhitelistUrl extends SObjectDefinition<'Redi
     ChildRelationships: ChildRelationships$RedirectWhitelistUrl;
   }
 
+type Fields$Referrer__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Job_Placement__c: string | null;
+  Contact__c: string | null;
+  Frequency__c: string | null;
+  Referral_Fee__c: number | null;
+};
+
+type ParentReferences$Referrer__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Referrer__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Referrer__ChangeEvent extends SObjectDefinition<'Referrer__ChangeEvent'> {
+    Name: 'Referrer__ChangeEvent';
+    Fields: Fields$Referrer__ChangeEvent;
+    ParentReferences: ParentReferences$Referrer__ChangeEvent;
+    ChildRelationships: ChildRelationships$Referrer__ChangeEvent;
+  }
+
+type Fields$Referrer__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Job_Placement__c: string;
+  Contact__c: string;
+  Frequency__c: string;
+  Referral_Fee__c: number;
+};
+
+type ParentReferences$Referrer__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Job_Placement__r: SObjectDefinition$Job_Placement__c;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$Referrer__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Referrer__c extends SObjectDefinition<'Referrer__c'> {
+    Name: 'Referrer__c';
+    Fields: Fields$Referrer__c;
+    ParentReferences: ParentReferences$Referrer__c;
+    ChildRelationships: ChildRelationships$Referrer__c;
+  }
+
 type Fields$RelationshipDomain = {
   //
   Id: string;
@@ -29831,6 +32024,87 @@ interface SObjectDefinition$SiteIframeWhiteListUrl extends SObjectDefinition<'Si
     Fields: Fields$SiteIframeWhiteListUrl;
     ParentReferences: ParentReferences$SiteIframeWhiteListUrl;
     ChildRelationships: ChildRelationships$SiteIframeWhiteListUrl;
+  }
+
+type Fields$Smoothstack_Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+};
+
+type ParentReferences$Smoothstack_Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Smoothstack_Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Smoothstack_Settings__ChangeEvent extends SObjectDefinition<'Smoothstack_Settings__ChangeEvent'> {
+    Name: 'Smoothstack_Settings__ChangeEvent';
+    Fields: Fields$Smoothstack_Settings__ChangeEvent;
+    ParentReferences: ParentReferences$Smoothstack_Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$Smoothstack_Settings__ChangeEvent;
+  }
+
+type Fields$Smoothstack_Settings__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+};
+
+type ParentReferences$Smoothstack_Settings__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Smoothstack_Settings__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Smoothstack_Settings__c extends SObjectDefinition<'Smoothstack_Settings__c'> {
+    Name: 'Smoothstack_Settings__c';
+    Fields: Fields$Smoothstack_Settings__c;
+    ParentReferences: ParentReferences$Smoothstack_Settings__c;
+    ChildRelationships: ChildRelationships$Smoothstack_Settings__c;
   }
 
 type Fields$SocialPersona = {
@@ -32035,6 +34309,107 @@ interface SObjectDefinition$Sstack_CC__Trigger_Settings__mdt extends SObjectDefi
     ChildRelationships: ChildRelationships$Sstack_CC__Trigger_Settings__mdt;
   }
 
+type Fields$Staff_Aug_Commission_Variables__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Daily_Bill_Rate_Conversion_Factor__c: number | null;
+  Effective_Date__c: DateString | null;
+  Federal_Sick_Leave_Hours__c: number | null;
+  Health_Benefit_Cost__c: number | null;
+  Hours_in_a_Year__c: number | null;
+  Medicare_Tax__c: number | null;
+  Number_Of_Federal_Holidays__c: number | null;
+  Social_Security_Tax__c: number | null;
+  W2_Burden__c: number | null;
+  X1099_C2C_Burden__c: number | null;
+  X401K__c: number | null;
+};
+
+type ParentReferences$Staff_Aug_Commission_Variables__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Staff_Aug_Commission_Variables__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Staff_Aug_Commission_Variables__ChangeEvent extends SObjectDefinition<'Staff_Aug_Commission_Variables__ChangeEvent'> {
+    Name: 'Staff_Aug_Commission_Variables__ChangeEvent';
+    Fields: Fields$Staff_Aug_Commission_Variables__ChangeEvent;
+    ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__ChangeEvent;
+    ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__ChangeEvent;
+  }
+
+type Fields$Staff_Aug_Commission_Variables__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Daily_Bill_Rate_Conversion_Factor__c: number;
+  Effective_Date__c: DateString;
+  Federal_Sick_Leave_Hours__c: number;
+  Health_Benefit_Cost__c: number;
+  Hours_in_a_Year__c: number;
+  Medicare_Tax__c: number;
+  Number_Of_Federal_Holidays__c: number;
+  Social_Security_Tax__c: number;
+  W2_Burden__c: number;
+  X1099_C2C_Burden__c: number;
+  X401K__c: number;
+};
+
+type ParentReferences$Staff_Aug_Commission_Variables__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Staff_Aug_Commission_Variables__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Staff_Aug_Commission_Variables__c extends SObjectDefinition<'Staff_Aug_Commission_Variables__c'> {
+    Name: 'Staff_Aug_Commission_Variables__c';
+    Fields: Fields$Staff_Aug_Commission_Variables__c;
+    ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__c;
+    ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__c;
+  }
+
 type Fields$Stamp = {
   //
   Id: string;
@@ -33032,6 +35407,11 @@ type Fields$Task = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$Task = {
@@ -33043,6 +35423,7 @@ type ParentReferences$Task = {
   Account: SObjectDefinition$Account | null;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
 };
 
 type ChildRelationships$Task = {
@@ -33121,6 +35502,11 @@ type Fields$TaskChangeEvent = {
   DB_Activity_Type__c: string | null;
   task_type__c: string | null;
   Outreach_Task_Type__c: string | null;
+  vfirst__Site_Guest_Access_Helper__c: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__Verification_Report__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
 };
 
 type ParentReferences$TaskChangeEvent = {
@@ -33345,6 +35731,223 @@ interface SObjectDefinition$TaskWhoRelation extends SObjectDefinition<'TaskWhoRe
     Fields: Fields$TaskWhoRelation;
     ParentReferences: ParentReferences$TaskWhoRelation;
     ChildRelationships: ChildRelationships$TaskWhoRelation;
+  }
+
+type Fields$Team_Member_Rep__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Team_Member__c: string | null;
+  Contact__c: string | null;
+  Title__c: string | null;
+  Department__c: string | null;
+  Nickname__c: string | null;
+};
+
+type ParentReferences$Team_Member_Rep__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Team_Member_Rep__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Team_Member_Rep__ChangeEvent extends SObjectDefinition<'Team_Member_Rep__ChangeEvent'> {
+    Name: 'Team_Member_Rep__ChangeEvent';
+    Fields: Fields$Team_Member_Rep__ChangeEvent;
+    ParentReferences: ParentReferences$Team_Member_Rep__ChangeEvent;
+    ChildRelationships: ChildRelationships$Team_Member_Rep__ChangeEvent;
+  }
+
+type Fields$Team_Member_Rep__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  Team_Member__c: string | null;
+  Contact__c: string;
+  Title__c: string | null;
+  Department__c: string | null;
+  Nickname__c: string | null;
+};
+
+type ParentReferences$Team_Member_Rep__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Team_Member__r: SObjectDefinition$Teaming_Partner__c | null;
+  Contact__r: SObjectDefinition$Contact;
+};
+
+type ChildRelationships$Team_Member_Rep__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Team_Member_Rep__c extends SObjectDefinition<'Team_Member_Rep__c'> {
+    Name: 'Team_Member_Rep__c';
+    Fields: Fields$Team_Member_Rep__c;
+    ParentReferences: ParentReferences$Team_Member_Rep__c;
+    ChildRelationships: ChildRelationships$Team_Member_Rep__c;
+  }
+
+type Fields$Teaming_Partner__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Account__c: string | null;
+  Opportunity__c: string | null;
+  Workshare_Percentage__c: number | null;
+  Teaming_Status__c: string | null;
+};
+
+type ParentReferences$Teaming_Partner__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Teaming_Partner__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Teaming_Partner__ChangeEvent extends SObjectDefinition<'Teaming_Partner__ChangeEvent'> {
+    Name: 'Teaming_Partner__ChangeEvent';
+    Fields: Fields$Teaming_Partner__ChangeEvent;
+    ParentReferences: ParentReferences$Teaming_Partner__ChangeEvent;
+    ChildRelationships: ChildRelationships$Teaming_Partner__ChangeEvent;
+  }
+
+type Fields$Teaming_Partner__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$Teaming_Partner__History = {
+  //
+  Parent: SObjectDefinition$Teaming_Partner__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Teaming_Partner__History = {
+  //
+};
+
+interface SObjectDefinition$Teaming_Partner__History extends SObjectDefinition<'Teaming_Partner__History'> {
+    Name: 'Teaming_Partner__History';
+    Fields: Fields$Teaming_Partner__History;
+    ParentReferences: ParentReferences$Teaming_Partner__History;
+    ChildRelationships: ChildRelationships$Teaming_Partner__History;
+  }
+
+type Fields$Teaming_Partner__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  Account__c: string;
+  Opportunity__c: string;
+  Workshare_Percentage__c: number | null;
+  Teaming_Status__c: string | null;
+};
+
+type ParentReferences$Teaming_Partner__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Account__r: SObjectDefinition$Account;
+  Opportunity__r: SObjectDefinition$Opportunity;
+};
+
+type ChildRelationships$Teaming_Partner__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  Histories: SObjectDefinition$Teaming_Partner__History;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Teaming_Partner__c extends SObjectDefinition<'Teaming_Partner__c'> {
+    Name: 'Teaming_Partner__c';
+    Fields: Fields$Teaming_Partner__c;
+    ParentReferences: ParentReferences$Teaming_Partner__c;
+    ChildRelationships: ChildRelationships$Teaming_Partner__c;
   }
 
 type Fields$TenantUsageEntitlement = {
@@ -33858,6 +36461,38 @@ interface SObjectDefinition$Timesheet_Settings_2__mdt extends SObjectDefinition<
     ChildRelationships: ChildRelationships$Timesheet_Settings_2__mdt;
   }
 
+type Fields$Timesheet_Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  CC_Email__c: string | null;
+  Email_Sender_Display_Name__c: string | null;
+  Redirect_All_to_Email__c: string | null;
+  Username_Prefix__c: string | null;
+};
+
+type ParentReferences$Timesheet_Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Timesheet_Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Timesheet_Settings__ChangeEvent extends SObjectDefinition<'Timesheet_Settings__ChangeEvent'> {
+    Name: 'Timesheet_Settings__ChangeEvent';
+    Fields: Fields$Timesheet_Settings__ChangeEvent;
+    ParentReferences: ParentReferences$Timesheet_Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$Timesheet_Settings__ChangeEvent;
+  }
+
 type Fields$Timesheet_Settings__c = {
   //
   Id: string;
@@ -34015,10 +36650,12 @@ type Fields$Timesheet__ChangeEvent = {
   Paid_Sick_Leave_Total_Hours__c: number | null;
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
   PTO_Total_Hours__c: number | null;
   TS_Submission_Aging__c: number | null;
+  Survey_Submission_Date__c: DateString | null;
+  Has_Survey_Results__c: boolean;
 };
 
 type ParentReferences$Timesheet__ChangeEvent = {
@@ -34065,10 +36702,12 @@ type Fields$Timesheet__c = {
   Paid_Sick_Leave_Total_Hours__c: number | null;
   Training_Bench_Override_Total_Hours__c: number | null;
   Training_Bench_Total_Hours__c: number | null;
-  Unexcused_Absences_Total_Hours__c: number | null;
+  Unexcused_LWP_Total_Hours__c: number | null;
   Survey_Results__c: string | null;
   PTO_Total_Hours__c: number | null;
   TS_Submission_Aging__c: number | null;
+  Survey_Submission_Date__c: DateString | null;
+  Has_Survey_Results__c: boolean;
 };
 
 type ParentReferences$Timesheet__c = {
@@ -35509,7 +38148,10 @@ type Fields$UserPermissionAccess = {
   PermissionsSendAnnouncementEmails: boolean;
   PermissionsChatterEditOwnPost: boolean;
   PermissionsChatterEditOwnRecordPost: boolean;
+  PermissionsCreateAuditFields: boolean;
+  PermissionsUpdateWithInactiveOwner: boolean;
   PermissionsWaveTabularDownload: boolean;
+  PermissionsWaveCommunityUser: boolean;
   PermissionsManageSandboxes: boolean;
   PermissionsAutomaticActivityCapture: boolean;
   PermissionsImportCustomObjects: boolean;
@@ -35529,7 +38171,6 @@ type Fields$UserPermissionAccess = {
   PermissionsCanApproveFeedPost: boolean;
   PermissionsAddDirectMessageMembers: boolean;
   PermissionsAllowViewEditConvertedLeads: boolean;
-  PermissionsSocialInsightsLogoAdmin: boolean;
   PermissionsShowCompanyNameAsUserBadge: boolean;
   PermissionsAccessCMC: boolean;
   PermissionsViewHealthCheck: boolean;
@@ -35564,10 +38205,13 @@ type Fields$UserPermissionAccess = {
   PermissionsCreateLtngTempFolder: boolean;
   PermissionsApexRestServices: boolean;
   PermissionsGiveRecognitionBadge: boolean;
+  PermissionsAllowObjectDetection: boolean;
+  PermissionsSalesforceIQInternal: boolean;
   PermissionsUseMySearch: boolean;
   PermissionsLtngPromoReserved01UserPerm: boolean;
   PermissionsManageSubscriptions: boolean;
   PermissionsWaveManagePrivateAssetsUser: boolean;
+  PermissionsAllowObjectDetectionTraining: boolean;
   PermissionsCanEditDataPrepRecipe: boolean;
   PermissionsAddAnalyticsRemoteConnections: boolean;
   PermissionsManageSurveys: boolean;
@@ -36756,6 +39400,839 @@ interface SObjectDefinition$WorkThanksShare extends SObjectDefinition<'WorkThank
     ChildRelationships: ChildRelationships$WorkThanksShare;
   }
 
+type Fields$myV2MOM__Measure_Team__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  myV2MOM__Measure__c: string | null;
+  myV2MOM__Current_Value__c: number | null;
+  myV2MOM__MeasureTeamChatFeedId__c: string | null;
+  myV2MOM__Member__c: string | null;
+  myV2MOM__Percentage__c: number | null;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__Type__c: string | null;
+  myV2MOM__Target_Value__c: number | null;
+};
+
+type ParentReferences$myV2MOM__Measure_Team__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$myV2MOM__Measure_Team__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Measure_Team__ChangeEvent extends SObjectDefinition<'myV2MOM__Measure_Team__ChangeEvent'> {
+    Name: 'myV2MOM__Measure_Team__ChangeEvent';
+    Fields: Fields$myV2MOM__Measure_Team__ChangeEvent;
+    ParentReferences: ParentReferences$myV2MOM__Measure_Team__ChangeEvent;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__ChangeEvent;
+  }
+
+type Fields$myV2MOM__Measure_Team__Feed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$myV2MOM__Measure_Team__Feed = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Measure_Team__c;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$myV2MOM__Measure_Team__Feed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$myV2MOM__Measure_Team__Feed extends SObjectDefinition<'myV2MOM__Measure_Team__Feed'> {
+    Name: 'myV2MOM__Measure_Team__Feed';
+    Fields: Fields$myV2MOM__Measure_Team__Feed;
+    ParentReferences: ParentReferences$myV2MOM__Measure_Team__Feed;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__Feed;
+  }
+
+type Fields$myV2MOM__Measure_Team__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$myV2MOM__Measure_Team__History = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Measure_Team__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__Measure_Team__History = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Measure_Team__History extends SObjectDefinition<'myV2MOM__Measure_Team__History'> {
+    Name: 'myV2MOM__Measure_Team__History';
+    Fields: Fields$myV2MOM__Measure_Team__History;
+    ParentReferences: ParentReferences$myV2MOM__Measure_Team__History;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__History;
+  }
+
+type Fields$myV2MOM__Measure_Team__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  myV2MOM__Measure__c: string;
+  myV2MOM__Current_Value__c: number | null;
+  myV2MOM__MeasureTeamChatFeedId__c: string | null;
+  myV2MOM__Member__c: string | null;
+  myV2MOM__Percentage__c: number | null;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__Type__c: string | null;
+  myV2MOM__Target_Value__c: number | null;
+};
+
+type ParentReferences$myV2MOM__Measure_Team__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  myV2MOM__Measure__r: SObjectDefinition$myV2MOM__Measure__c;
+  myV2MOM__Member__r: SObjectDefinition$User | null;
+};
+
+type ChildRelationships$myV2MOM__Measure_Team__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+  Feeds: SObjectDefinition$myV2MOM__Measure_Team__Feed;
+  Histories: SObjectDefinition$myV2MOM__Measure_Team__History;
+};
+
+interface SObjectDefinition$myV2MOM__Measure_Team__c extends SObjectDefinition<'myV2MOM__Measure_Team__c'> {
+    Name: 'myV2MOM__Measure_Team__c';
+    Fields: Fields$myV2MOM__Measure_Team__c;
+    ParentReferences: ParentReferences$myV2MOM__Measure_Team__c;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__c;
+  }
+
+type Fields$myV2MOM__Measure__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  myV2MOM__Comments__c: string | null;
+  myV2MOM__Completion_By_Date__c: DateString | null;
+  myV2MOM__Completion_By_Quarter__c: string | null;
+  myV2MOM__Current_Value__c: number | null;
+  myV2MOM__MeasureChatFeedId__c: string | null;
+  myV2MOM__Method__c: string | null;
+  myV2MOM__Obstacles__c: string | null;
+  myV2MOM__Priority__c: string | null;
+  myV2MOM__Q1_Target__c: number | null;
+  myV2MOM__Q1__c: number | null;
+  myV2MOM__Q2_Target__c: number | null;
+  myV2MOM__Q2__c: number | null;
+  myV2MOM__Q3_Target__c: number | null;
+  myV2MOM__Q3__c: number | null;
+  myV2MOM__Q4_Target__c: number | null;
+  myV2MOM__Q4__c: number | null;
+  myV2MOM__Split_By_Quarter__c: boolean;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__Target_Value__c: number | null;
+  myV2MOM__Track_Progress_By__c: string | null;
+  myV2MOM__Assigned_Current_Value__c: number | null;
+  myV2MOM__Measure_Team_Member_Count__c: number | null;
+  myV2MOM__Q1_Completion__c: number | null;
+  myV2MOM__Q2_Completion__c: number | null;
+  myV2MOM__Q3_Completion__c: number | null;
+  myV2MOM__Q4_Completion__c: number | null;
+  myV2MOM__Total_Current_Value__c: number | null;
+};
+
+type ParentReferences$myV2MOM__Measure__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$myV2MOM__Measure__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Measure__ChangeEvent extends SObjectDefinition<'myV2MOM__Measure__ChangeEvent'> {
+    Name: 'myV2MOM__Measure__ChangeEvent';
+    Fields: Fields$myV2MOM__Measure__ChangeEvent;
+    ParentReferences: ParentReferences$myV2MOM__Measure__ChangeEvent;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure__ChangeEvent;
+  }
+
+type Fields$myV2MOM__Measure__Feed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$myV2MOM__Measure__Feed = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Measure__c;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$myV2MOM__Measure__Feed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$myV2MOM__Measure__Feed extends SObjectDefinition<'myV2MOM__Measure__Feed'> {
+    Name: 'myV2MOM__Measure__Feed';
+    Fields: Fields$myV2MOM__Measure__Feed;
+    ParentReferences: ParentReferences$myV2MOM__Measure__Feed;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure__Feed;
+  }
+
+type Fields$myV2MOM__Measure__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$myV2MOM__Measure__History = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Measure__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__Measure__History = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Measure__History extends SObjectDefinition<'myV2MOM__Measure__History'> {
+    Name: 'myV2MOM__Measure__History';
+    Fields: Fields$myV2MOM__Measure__History;
+    ParentReferences: ParentReferences$myV2MOM__Measure__History;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure__History;
+  }
+
+type Fields$myV2MOM__Measure__Share = {
+  //
+  Id: string;
+  ParentId: string;
+  UserOrGroupId: string;
+  AccessLevel: string;
+  RowCause: string | null;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$myV2MOM__Measure__Share = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Measure__c;
+  UserOrGroup: SObjectDefinition$Name;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__Measure__Share = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Measure__Share extends SObjectDefinition<'myV2MOM__Measure__Share'> {
+    Name: 'myV2MOM__Measure__Share';
+    Fields: Fields$myV2MOM__Measure__Share;
+    ParentReferences: ParentReferences$myV2MOM__Measure__Share;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure__Share;
+  }
+
+type Fields$myV2MOM__Measure__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  myV2MOM__Comments__c: string | null;
+  myV2MOM__Completion_By_Date__c: DateString | null;
+  myV2MOM__Completion_By_Quarter__c: string | null;
+  myV2MOM__Current_Value__c: number | null;
+  myV2MOM__MeasureChatFeedId__c: string | null;
+  myV2MOM__Method__c: string | null;
+  myV2MOM__Obstacles__c: string | null;
+  myV2MOM__Priority__c: string | null;
+  myV2MOM__Q1_Target__c: number | null;
+  myV2MOM__Q1__c: number | null;
+  myV2MOM__Q2_Target__c: number | null;
+  myV2MOM__Q2__c: number | null;
+  myV2MOM__Q3_Target__c: number | null;
+  myV2MOM__Q3__c: number | null;
+  myV2MOM__Q4_Target__c: number | null;
+  myV2MOM__Q4__c: number | null;
+  myV2MOM__Split_By_Quarter__c: boolean;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__Target_Value__c: number | null;
+  myV2MOM__Track_Progress_By__c: string | null;
+  myV2MOM__Assigned_Current_Value__c: number | null;
+  myV2MOM__Measure_Team_Member_Count__c: number | null;
+  myV2MOM__Q1_Completion__c: number | null;
+  myV2MOM__Q2_Completion__c: number | null;
+  myV2MOM__Q3_Completion__c: number | null;
+  myV2MOM__Q4_Completion__c: number | null;
+  myV2MOM__Total_Current_Value__c: number | null;
+};
+
+type ParentReferences$myV2MOM__Measure__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  myV2MOM__Method__r: SObjectDefinition$myV2MOM__Method__c | null;
+};
+
+type ChildRelationships$myV2MOM__Measure__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+  Feeds: SObjectDefinition$myV2MOM__Measure__Feed;
+  Histories: SObjectDefinition$myV2MOM__Measure__History;
+  Shares: SObjectDefinition$myV2MOM__Measure__Share;
+};
+
+interface SObjectDefinition$myV2MOM__Measure__c extends SObjectDefinition<'myV2MOM__Measure__c'> {
+    Name: 'myV2MOM__Measure__c';
+    Fields: Fields$myV2MOM__Measure__c;
+    ParentReferences: ParentReferences$myV2MOM__Measure__c;
+    ChildRelationships: ChildRelationships$myV2MOM__Measure__c;
+  }
+
+type Fields$myV2MOM__Method__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  myV2MOM__Description__c: string | null;
+  myV2MOM__Order__c: number | null;
+  myV2MOM__V2MOM__c: string | null;
+};
+
+type ParentReferences$myV2MOM__Method__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$myV2MOM__Method__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Method__ChangeEvent extends SObjectDefinition<'myV2MOM__Method__ChangeEvent'> {
+    Name: 'myV2MOM__Method__ChangeEvent';
+    Fields: Fields$myV2MOM__Method__ChangeEvent;
+    ParentReferences: ParentReferences$myV2MOM__Method__ChangeEvent;
+    ChildRelationships: ChildRelationships$myV2MOM__Method__ChangeEvent;
+  }
+
+type Fields$myV2MOM__Method__Feed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$myV2MOM__Method__Feed = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Method__c;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$myV2MOM__Method__Feed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$myV2MOM__Method__Feed extends SObjectDefinition<'myV2MOM__Method__Feed'> {
+    Name: 'myV2MOM__Method__Feed';
+    Fields: Fields$myV2MOM__Method__Feed;
+    ParentReferences: ParentReferences$myV2MOM__Method__Feed;
+    ChildRelationships: ChildRelationships$myV2MOM__Method__Feed;
+  }
+
+type Fields$myV2MOM__Method__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$myV2MOM__Method__History = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Method__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__Method__History = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Method__History extends SObjectDefinition<'myV2MOM__Method__History'> {
+    Name: 'myV2MOM__Method__History';
+    Fields: Fields$myV2MOM__Method__History;
+    ParentReferences: ParentReferences$myV2MOM__Method__History;
+    ChildRelationships: ChildRelationships$myV2MOM__Method__History;
+  }
+
+type Fields$myV2MOM__Method__Share = {
+  //
+  Id: string;
+  ParentId: string;
+  UserOrGroupId: string;
+  AccessLevel: string;
+  RowCause: string | null;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$myV2MOM__Method__Share = {
+  //
+  Parent: SObjectDefinition$myV2MOM__Method__c;
+  UserOrGroup: SObjectDefinition$Name;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__Method__Share = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__Method__Share extends SObjectDefinition<'myV2MOM__Method__Share'> {
+    Name: 'myV2MOM__Method__Share';
+    Fields: Fields$myV2MOM__Method__Share;
+    ParentReferences: ParentReferences$myV2MOM__Method__Share;
+    ChildRelationships: ChildRelationships$myV2MOM__Method__Share;
+  }
+
+type Fields$myV2MOM__Method__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  myV2MOM__Description__c: string | null;
+  myV2MOM__Order__c: number | null;
+  myV2MOM__V2MOM__c: string | null;
+};
+
+type ParentReferences$myV2MOM__Method__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  myV2MOM__V2MOM__r: SObjectDefinition$myV2MOM__V2MOM__c | null;
+};
+
+type ChildRelationships$myV2MOM__Method__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+  Feeds: SObjectDefinition$myV2MOM__Method__Feed;
+  Histories: SObjectDefinition$myV2MOM__Method__History;
+  Shares: SObjectDefinition$myV2MOM__Method__Share;
+};
+
+interface SObjectDefinition$myV2MOM__Method__c extends SObjectDefinition<'myV2MOM__Method__c'> {
+    Name: 'myV2MOM__Method__c';
+    Fields: Fields$myV2MOM__Method__c;
+    ParentReferences: ParentReferences$myV2MOM__Method__c;
+    ChildRelationships: ChildRelationships$myV2MOM__Method__c;
+  }
+
+type Fields$myV2MOM__V2MOM__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  myV2MOM__FY_Year__c: string | null;
+  myV2MOM__Published_Date__c: DateString | null;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__User__c: string | null;
+  myV2MOM__Values__c: string | null;
+  myV2MOM__Vision__c: string | null;
+};
+
+type ParentReferences$myV2MOM__V2MOM__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$myV2MOM__V2MOM__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__V2MOM__ChangeEvent extends SObjectDefinition<'myV2MOM__V2MOM__ChangeEvent'> {
+    Name: 'myV2MOM__V2MOM__ChangeEvent';
+    Fields: Fields$myV2MOM__V2MOM__ChangeEvent;
+    ParentReferences: ParentReferences$myV2MOM__V2MOM__ChangeEvent;
+    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__ChangeEvent;
+  }
+
+type Fields$myV2MOM__V2MOM__Feed = {
+  //
+  Id: string;
+  ParentId: string;
+  Type: string | null;
+  CreatedById: string;
+  CreatedDate: DateString;
+  IsDeleted: boolean;
+  LastModifiedDate: DateString;
+  SystemModstamp: DateString;
+  CommentCount: number;
+  LikeCount: number;
+  Title: string | null;
+  Body: string | null;
+  LinkUrl: string | null;
+  IsRichText: boolean;
+  RelatedRecordId: string | null;
+  InsertedById: string | null;
+  BestCommentId: string | null;
+};
+
+type ParentReferences$myV2MOM__V2MOM__Feed = {
+  //
+  Parent: SObjectDefinition$myV2MOM__V2MOM__c;
+  CreatedBy: SObjectDefinition$User;
+  InsertedBy: SObjectDefinition$User | null;
+  BestComment: SObjectDefinition$FeedComment | null;
+};
+
+type ChildRelationships$myV2MOM__V2MOM__Feed = {
+  //
+  FeedAttachments: SObjectDefinition$FeedAttachment;
+  FeedComments: SObjectDefinition$FeedComment;
+  FeedLikes: SObjectDefinition$FeedLike;
+  FeedSignals: SObjectDefinition$FeedSignal;
+  FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
+};
+
+interface SObjectDefinition$myV2MOM__V2MOM__Feed extends SObjectDefinition<'myV2MOM__V2MOM__Feed'> {
+    Name: 'myV2MOM__V2MOM__Feed';
+    Fields: Fields$myV2MOM__V2MOM__Feed;
+    ParentReferences: ParentReferences$myV2MOM__V2MOM__Feed;
+    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Feed;
+  }
+
+type Fields$myV2MOM__V2MOM__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$myV2MOM__V2MOM__History = {
+  //
+  Parent: SObjectDefinition$myV2MOM__V2MOM__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__V2MOM__History = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__V2MOM__History extends SObjectDefinition<'myV2MOM__V2MOM__History'> {
+    Name: 'myV2MOM__V2MOM__History';
+    Fields: Fields$myV2MOM__V2MOM__History;
+    ParentReferences: ParentReferences$myV2MOM__V2MOM__History;
+    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__History;
+  }
+
+type Fields$myV2MOM__V2MOM__Share = {
+  //
+  Id: string;
+  ParentId: string;
+  UserOrGroupId: string;
+  AccessLevel: string;
+  RowCause: string | null;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$myV2MOM__V2MOM__Share = {
+  //
+  Parent: SObjectDefinition$myV2MOM__V2MOM__c;
+  UserOrGroup: SObjectDefinition$Name;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$myV2MOM__V2MOM__Share = {
+  //
+};
+
+interface SObjectDefinition$myV2MOM__V2MOM__Share extends SObjectDefinition<'myV2MOM__V2MOM__Share'> {
+    Name: 'myV2MOM__V2MOM__Share';
+    Fields: Fields$myV2MOM__V2MOM__Share;
+    ParentReferences: ParentReferences$myV2MOM__V2MOM__Share;
+    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Share;
+  }
+
+type Fields$myV2MOM__V2MOM__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  myV2MOM__FY_Year__c: string | null;
+  myV2MOM__Published_Date__c: DateString | null;
+  myV2MOM__Status__c: string | null;
+  myV2MOM__User__c: string | null;
+  myV2MOM__Values__c: string | null;
+  myV2MOM__Vision__c: string | null;
+};
+
+type ParentReferences$myV2MOM__V2MOM__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  myV2MOM__User__r: SObjectDefinition$User | null;
+};
+
+type ChildRelationships$myV2MOM__V2MOM__c = {
+  //
+  ActivityHistories: SObjectDefinition$ActivityHistory;
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  Emails: SObjectDefinition$EmailMessage;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  Events: SObjectDefinition$Event;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  OpenActivities: SObjectDefinition$OpenActivity;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  Tasks: SObjectDefinition$Task;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+  Feeds: SObjectDefinition$myV2MOM__V2MOM__Feed;
+  Histories: SObjectDefinition$myV2MOM__V2MOM__History;
+  Shares: SObjectDefinition$myV2MOM__V2MOM__Share;
+};
+
+interface SObjectDefinition$myV2MOM__V2MOM__c extends SObjectDefinition<'myV2MOM__V2MOM__c'> {
+    Name: 'myV2MOM__V2MOM__c';
+    Fields: Fields$myV2MOM__V2MOM__c;
+    ParentReferences: ParentReferences$myV2MOM__V2MOM__c;
+    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__c;
+  }
+
 type Fields$pandadoc__DocStatus__ChangeEvent = {
   //
   Id: string | null;
@@ -37120,6 +40597,41 @@ interface SObjectDefinition$pandadoc__PandaDocLog__c extends SObjectDefinition<'
     ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
   }
 
+type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Document_Name__c: string | null;
+  pandadoc__JsonBuilder_Class_Name__c: string | null;
+  pandadoc__ReferencedRecipients__c: string | null;
+  pandadoc__Related_Pricing_Items__c: string | null;
+  pandadoc__Related_Recipients__c: string | null;
+  pandadoc__Send_Itself_As_Recipient__c: boolean;
+  pandadoc__Use_Standard_Builder__c: boolean;
+};
+
+type ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
+    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
+    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+  }
+
 type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
   //
   Id: string;
@@ -37337,6 +40849,35 @@ interface SObjectDefinition$pandadoc__Recipient_Map__c extends SObjectDefinition
     ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
   }
 
+type Fields$pandadoc__Settings__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  pandadoc__Value__c: string | null;
+};
+
+type ParentReferences$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$pandadoc__Settings__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$pandadoc__Settings__ChangeEvent extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
+    Name: 'pandadoc__Settings__ChangeEvent';
+    Fields: Fields$pandadoc__Settings__ChangeEvent;
+    ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
+    ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
+  }
+
 type Fields$pandadoc__Settings__c = {
   //
   Id: string;
@@ -37473,6 +41014,45 @@ interface SObjectDefinition$pandadoc__TriggerSetting__c extends SObjectDefinitio
     Fields: Fields$pandadoc__TriggerSetting__c;
     ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
     ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
+  }
+
+type Fields$rcsfl__AdminSetting__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  rcsfl__AutoFill__c: boolean;
+  rcsfl__AutoSave__c: boolean;
+  rcsfl__HvsDispositionField__c: string | null;
+  rcsfl__HvsMode__c: boolean;
+  rcsfl__IsUnMandatory__c: boolean;
+  rcsfl__ToVoiceMail__c: boolean;
+  rcsfl__accountRelatedTo__c: boolean;
+  rcsfl__autoSelect__c: boolean;
+  rcsfl__fieldOrder__c: number | null;
+  rcsfl__popOnRinging__c: boolean;
+  rcsfl__saveOnRinging__c: boolean;
+};
+
+type ParentReferences$rcsfl__AdminSetting__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$rcsfl__AdminSetting__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$rcsfl__AdminSetting__ChangeEvent extends SObjectDefinition<'rcsfl__AdminSetting__ChangeEvent'> {
+    Name: 'rcsfl__AdminSetting__ChangeEvent';
+    Fields: Fields$rcsfl__AdminSetting__ChangeEvent;
+    ParentReferences: ParentReferences$rcsfl__AdminSetting__ChangeEvent;
+    ChildRelationships: ChildRelationships$rcsfl__AdminSetting__ChangeEvent;
   }
 
 type Fields$rcsfl__AdminSetting__c = {
@@ -37651,6 +41231,49 @@ interface SObjectDefinition$sansancard__SSCard__c extends SObjectDefinition<'san
     ChildRelationships: ChildRelationships$sansancard__SSCard__c;
   }
 
+type Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  sansancard__AccountRecordType__c: string | null;
+  sansancard__AccountValue__c: string | null;
+  sansancard__ContactRecordType__c: string | null;
+  sansancard__ContactValue__c: string | null;
+  sansancard__DisableAllCards__c: boolean;
+  sansancard__DisableDisplayReport__c: boolean;
+  sansancard__DisplayAllDeleteCards__c: boolean;
+  sansancard__DisplayReportId__c: string | null;
+  sansancard__DisplayReportName__c: string | null;
+  sansancard__EnableNotification__c: boolean;
+  sansancard__Enable_Contact__c: boolean;
+  sansancard__Enable_EditFields__c: boolean;
+  sansancard__LeadRecordType__c: string | null;
+  sansancard__LeadValue__c: string | null;
+  sansancard__TransferDest__c: string | null;
+};
+
+type ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__ChangeEvent'> {
+    Name: 'sansancard__ScanToSalesforce_Setting__ChangeEvent';
+    Fields: Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+    ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+    ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+  }
+
 type Fields$sansancard__ScanToSalesforce_Setting__c = {
   //
   Id: string;
@@ -37801,6 +41424,1408 @@ interface SObjectDefinition$sansancard__TransferMeta__c extends SObjectDefinitio
     ChildRelationships: ChildRelationships$sansancard__TransferMeta__c;
   }
 
+type Fields$vfirst__Config__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Auto_Order_Account__c: string | null;
+  vfirst__Auto_Order_Method__c: string | null;
+  vfirst__Auto_Order_Package__c: string | null;
+  vfirst__Auto_Order_Process__c: string | null;
+  vfirst__Auto_Order_Reference_Code_2__c: string | null;
+  vfirst__Auto_Order_Reference_Code_3__c: string | null;
+  vfirst__Auto_Order_Reference_Code_4__c: string | null;
+  vfirst__Auto_Order_Reference_Code__c: string | null;
+  vfirst__Auto_Order_User__c: string | null;
+  vfirst__Save_PDF_Report__c: boolean;
+  vfirst__Save_PDF_Report_on_Record__c: boolean;
+  vfirst__Used_OAuth_before_Cognito__c: boolean;
+};
+
+type ParentReferences$vfirst__Config__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Config__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Config__ChangeEvent extends SObjectDefinition<'vfirst__Config__ChangeEvent'> {
+    Name: 'vfirst__Config__ChangeEvent';
+    Fields: Fields$vfirst__Config__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Config__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Config__ChangeEvent;
+  }
+
+type Fields$vfirst__Config__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Auto_Order_Account__c: string | null;
+  vfirst__Auto_Order_Method__c: string | null;
+  vfirst__Auto_Order_Package__c: string | null;
+  vfirst__Auto_Order_Process__c: string | null;
+  vfirst__Auto_Order_Reference_Code_2__c: string | null;
+  vfirst__Auto_Order_Reference_Code_3__c: string | null;
+  vfirst__Auto_Order_Reference_Code_4__c: string | null;
+  vfirst__Auto_Order_Reference_Code__c: string | null;
+  vfirst__Auto_Order_User__c: string | null;
+  vfirst__Save_PDF_Report__c: boolean;
+  vfirst__Save_PDF_Report_on_Record__c: boolean;
+  vfirst__Used_OAuth_before_Cognito__c: boolean;
+};
+
+type ParentReferences$vfirst__Config__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$vfirst__Config__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Config__c extends SObjectDefinition<'vfirst__Config__c'> {
+    Name: 'vfirst__Config__c';
+    Fields: Fields$vfirst__Config__c;
+    ParentReferences: ParentReferences$vfirst__Config__c;
+    ChildRelationships: ChildRelationships$vfirst__Config__c;
+  }
+
+type Fields$vfirst__Site_Guest_Access_Helper__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Archived_By__c: string | null;
+  vfirst__Archived__c: boolean;
+  vfirst__File_Processing__c: boolean;
+  vfirst__Invite_Send_Error__c: boolean;
+  vfirst__ObjectId__c: string | null;
+  vfirst__Status__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+};
+
+type ParentReferences$vfirst__Site_Guest_Access_Helper__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Site_Guest_Access_Helper__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__ChangeEvent extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__ChangeEvent'> {
+    Name: 'vfirst__Site_Guest_Access_Helper__ChangeEvent';
+    Fields: Fields$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+  }
+
+type Fields$vfirst__Site_Guest_Access_Helper__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Adjudication__c: string | null;
+  vfirst__Archived_By__c: string | null;
+  vfirst__Archived__c: boolean;
+  vfirst__File_Processing__c: boolean;
+  vfirst__Invite_Send_Error__c: boolean;
+  vfirst__ObjectId__c: string | null;
+  vfirst__Status__c: string | null;
+  vfirst__of_Background_Checks_Ordered__c: number | null;
+};
+
+type ParentReferences$vfirst__Site_Guest_Access_Helper__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$vfirst__Site_Guest_Access_Helper__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__c extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__c'> {
+    Name: 'vfirst__Site_Guest_Access_Helper__c';
+    Fields: Fields$vfirst__Site_Guest_Access_Helper__c;
+    ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__c;
+    ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__c;
+  }
+
+type Fields$vfirst__Verified_First_Alias__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Report__c: string | null;
+  vfirst__firstname__c: string | null;
+  vfirst__generation__c: string | null;
+  vfirst__lastname__c: string | null;
+  vfirst__middlename__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Alias__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Alias__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Alias__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Alias__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Alias__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Alias__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Alias__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Alias__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Report__c: string;
+  vfirst__firstname__c: string | null;
+  vfirst__generation__c: string | null;
+  vfirst__lastname__c: string | null;
+  vfirst__middlename__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Alias__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Report__r: SObjectDefinition$vfirst__Verified_First_Report__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Alias__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Alias__c extends SObjectDefinition<'vfirst__Verified_First_Alias__c'> {
+    Name: 'vfirst__Verified_First_Alias__c';
+    Fields: Fields$vfirst__Verified_First_Alias__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Alias__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__c;
+  }
+
+type Fields$vfirst__Verified_First_Object_Address__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Report__c: string | null;
+  vfirst__address__c: string | null;
+  vfirst__city__c: string | null;
+  vfirst__country__c: string | null;
+  vfirst__dom_int__c: string | null;
+  vfirst__state__c: string | null;
+  vfirst__type__c: string | null;
+  vfirst__zip__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Object_Address__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Object_Address__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Object_Address__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Object_Address__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Object_Address__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Object_Address__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Object_Address__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Report__c: string;
+  vfirst__address__c: string | null;
+  vfirst__city__c: string | null;
+  vfirst__country__c: string | null;
+  vfirst__dom_int__c: string | null;
+  vfirst__state__c: string | null;
+  vfirst__type__c: string | null;
+  vfirst__zip__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Object_Address__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Report__r: SObjectDefinition$vfirst__Verified_First_Report__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Object_Address__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Object_Address__c extends SObjectDefinition<'vfirst__Verified_First_Object_Address__c'> {
+    Name: 'vfirst__Verified_First_Object_Address__c';
+    Fields: Fields$vfirst__Verified_First_Object_Address__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field_Set__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Product__c: string | null;
+  vfirst__Helper__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field_Set__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field_Set__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Field_Set__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field_Set__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Product__c: string;
+  vfirst__Helper__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field_Set__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Product__r: SObjectDefinition$vfirst__Verified_First_Order_Product__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field_Set__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__c'> {
+    Name: 'vfirst__Verified_First_Order_Field_Set__c';
+    Fields: Fields$vfirst__Verified_First_Order_Field_Set__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field_Value__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Field__c: string | null;
+  vfirst__value__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field_Value__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field_Value__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Field_Value__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field_Value__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Field__c: string | null;
+  vfirst__value__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field_Value__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Field__r: SObjectDefinition$vfirst__Verified_First_Order_Field__c | null;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field_Value__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__c'> {
+    Name: 'vfirst__Verified_First_Order_Field_Value__c';
+    Fields: Fields$vfirst__Verified_First_Order_Field_Value__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Field_Set__c: string | null;
+  vfirst__Helper__c: string | null;
+  vfirst__field_id__c: string | null;
+  vfirst__field_value__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Field__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Field__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Field__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Field_Set__c: string;
+  vfirst__Helper__c: string | null;
+  vfirst__field_id__c: string | null;
+  vfirst__field_value__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Field__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Field_Set__r: SObjectDefinition$vfirst__Verified_First_Order_Field_Set__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Field__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Field__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field__c'> {
+    Name: 'vfirst__Verified_First_Order_Field__c';
+    Fields: Fields$vfirst__Verified_First_Order_Field__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Product__c: string | null;
+  vfirst__Helper__c: string | null;
+  vfirst__residence__c: boolean;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Jurisdiction_Data__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Product__c: string;
+  vfirst__Helper__c: string | null;
+  vfirst__residence__c: boolean;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Product__r: SObjectDefinition$vfirst__Verified_First_Order_Product__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__c extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__c'> {
+    Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__c';
+    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Jurisdiction_Data__c: string | null;
+  vfirst__Helper__c: string | null;
+  vfirst__country_code__c: string | null;
+  vfirst__county__c: string | null;
+  vfirst__federal_jurisdiction__c: string | null;
+  vfirst__state__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Jurisdiction__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Jurisdiction_Data__c: string;
+  vfirst__Helper__c: string | null;
+  vfirst__country_code__c: string | null;
+  vfirst__county__c: string | null;
+  vfirst__federal_jurisdiction__c: string | null;
+  vfirst__state__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Jurisdiction__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Jurisdiction_Data__r: SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__c extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__c'> {
+    Name: 'vfirst__Verified_First_Order_Jurisdiction__c';
+    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Product__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Report__c: string | null;
+  vfirst__product_id__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Product__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Product__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Product__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Product__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Product__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Product__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Product__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Report__c: string;
+  vfirst__product_id__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Product__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Report__r: SObjectDefinition$vfirst__Verified_First_Report__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Product__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Product__c extends SObjectDefinition<'vfirst__Verified_First_Order_Product__c'> {
+    Name: 'vfirst__Verified_First_Order_Product__c';
+    Fields: Fields$vfirst__Verified_First_Order_Product__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_Status__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Report__c: string | null;
+  vfirst__Status__c: string | null;
+  vfirst__timestamp__c: DateString | null;
+  vfirst__Stage__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Status__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Status__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Status__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Status__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_Status__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_Status__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_Status__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Report__c: string;
+  vfirst__Status__c: string | null;
+  vfirst__timestamp__c: DateString | null;
+  vfirst__Stage__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_Status__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Report__r: SObjectDefinition$vfirst__Verified_First_Report__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_Status__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_Status__c extends SObjectDefinition<'vfirst__Verified_First_Order_Status__c'> {
+    Name: 'vfirst__Verified_First_Order_Status__c';
+    Fields: Fields$vfirst__Verified_First_Order_Status__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__c;
+  }
+
+type Fields$vfirst__Verified_First_Order_XML_Block__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Verified_First_Order_Product__c: string | null;
+  vfirst__xml_block_id__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_XML_Block__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_XML_Block__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Order_XML_Block__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Order_XML_Block__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Verified_First_Order_Product__c: string;
+  vfirst__xml_block_id__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Order_XML_Block__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Verified_First_Order_Product__r: SObjectDefinition$vfirst__Verified_First_Order_Product__c;
+};
+
+type ChildRelationships$vfirst__Verified_First_Order_XML_Block__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__c extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__c'> {
+    Name: 'vfirst__Verified_First_Order_XML_Block__c';
+    Fields: Fields$vfirst__Verified_First_Order_XML_Block__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__c;
+  }
+
+type Fields$vfirst__Verified_First_Package__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Name__c: string | null;
+  vfirst__Portal_ID__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Package__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Package__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Package__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Package__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Package__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Package__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Package__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Package__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Name__c: string | null;
+  vfirst__Portal_ID__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Package__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$vfirst__Verified_First_Package__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Package__c extends SObjectDefinition<'vfirst__Verified_First_Package__c'> {
+    Name: 'vfirst__Verified_First_Package__c';
+    Fields: Fields$vfirst__Verified_First_Package__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Package__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__c;
+  }
+
+type Fields$vfirst__Verified_First_Report__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Account__c: string | null;
+  vfirst__Archived_By__c: string | null;
+  vfirst__Completed_Date__c: DateString | null;
+  vfirst__Contact__c: string | null;
+  vfirst__Invite_Send_Error__c: boolean;
+  vfirst__Lead__c: string | null;
+  vfirst__Object_Email__c: string | null;
+  vfirst__Object_Id__c: string | null;
+  vfirst__Opportunity__c: string | null;
+  vfirst__OrderId__c: string | null;
+  vfirst__Public_Report_URL__c: string | null;
+  vfirst__Reference_Code_2__c: string | null;
+  vfirst__Reference_Code_3__c: string | null;
+  vfirst__Reference_Code_4__c: string | null;
+  vfirst__Report_Decision__c: string | null;
+  vfirst__Status__c: string | null;
+  vfirst__Task__c: string | null;
+  vfirst__User__c: string | null;
+  vfirst__Verified_First_Package__c: string | null;
+  vfirst__accountId__c: string | null;
+  vfirst__annual_salary__c: string | null;
+  vfirst__archive__c: boolean;
+  vfirst__archived_at__c: DateString | null;
+  vfirst__complete_adversed__c: DateString | null;
+  vfirst__complete_adversed_by__c: string | null;
+  vfirst__complete_approved__c: DateString | null;
+  vfirst__complete_approved_by__c: string | null;
+  vfirst__complete_completed__c: DateString | null;
+  vfirst__complete_completed_by__c: string | null;
+  vfirst__complete_preadversed__c: DateString | null;
+  vfirst__complete_preadversed_by__c: string | null;
+  vfirst__complete_status__c: string | null;
+  vfirst__created__c: DateString | null;
+  vfirst__file_processing__c: boolean;
+  vfirst__firstname__c: string | null;
+  vfirst__flag__c: boolean;
+  vfirst__generation__c: string | null;
+  vfirst__id__c: string | null;
+  vfirst__job_state__c: string | null;
+  vfirst__lastname__c: string | null;
+  vfirst__middlename__c: string | null;
+  vfirst__order_comments__c: string | null;
+  vfirst__ordered_via__c: string | null;
+  vfirst__package__c: string | null;
+  vfirst__reference_code__c: string | null;
+  vfirst__searchType__c: string | null;
+  vfirst__user_id__c: string | null;
+  vfirst__user_orderer_id__c: string | null;
+  vfirst__Package_Name__c: string | null;
+  vfirst__Public_Report_Link__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__View_Report_m__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Report__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Report__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Report__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Report__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Report__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Report__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Report__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Report__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  vfirst__Account__c: string | null;
+  vfirst__Archived_By__c: string | null;
+  vfirst__Completed_Date__c: DateString | null;
+  vfirst__Contact__c: string | null;
+  vfirst__Invite_Send_Error__c: boolean;
+  vfirst__Lead__c: string | null;
+  vfirst__Object_Email__c: string | null;
+  vfirst__Object_Id__c: string | null;
+  vfirst__Opportunity__c: string | null;
+  vfirst__OrderId__c: string | null;
+  vfirst__Public_Report_URL__c: string | null;
+  vfirst__Reference_Code_2__c: string | null;
+  vfirst__Reference_Code_3__c: string | null;
+  vfirst__Reference_Code_4__c: string | null;
+  vfirst__Report_Decision__c: string | null;
+  vfirst__Status__c: string | null;
+  vfirst__Task__c: string | null;
+  vfirst__User__c: string | null;
+  vfirst__Verified_First_Package__c: string | null;
+  vfirst__accountId__c: string | null;
+  vfirst__annual_salary__c: string | null;
+  vfirst__archive__c: boolean;
+  vfirst__archived_at__c: DateString | null;
+  vfirst__complete_adversed__c: DateString | null;
+  vfirst__complete_adversed_by__c: string | null;
+  vfirst__complete_approved__c: DateString | null;
+  vfirst__complete_approved_by__c: string | null;
+  vfirst__complete_completed__c: DateString | null;
+  vfirst__complete_completed_by__c: string | null;
+  vfirst__complete_preadversed__c: DateString | null;
+  vfirst__complete_preadversed_by__c: string | null;
+  vfirst__complete_status__c: string | null;
+  vfirst__created__c: DateString | null;
+  vfirst__file_processing__c: boolean;
+  vfirst__firstname__c: string | null;
+  vfirst__flag__c: boolean;
+  vfirst__generation__c: string | null;
+  vfirst__id__c: string | null;
+  vfirst__job_state__c: string | null;
+  vfirst__lastname__c: string | null;
+  vfirst__middlename__c: string | null;
+  vfirst__order_comments__c: string | null;
+  vfirst__ordered_via__c: string | null;
+  vfirst__package__c: string | null;
+  vfirst__reference_code__c: string | null;
+  vfirst__searchType__c: string | null;
+  vfirst__user_id__c: string | null;
+  vfirst__user_orderer_id__c: string | null;
+  vfirst__Package_Name__c: string | null;
+  vfirst__Public_Report_Link__c: string | null;
+  vfirst__Stage__c: string | null;
+  vfirst__View_Report_m__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Report__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  vfirst__Account__r: SObjectDefinition$Account | null;
+  vfirst__Contact__r: SObjectDefinition$Contact | null;
+  vfirst__Lead__r: SObjectDefinition$Lead | null;
+  vfirst__Opportunity__r: SObjectDefinition$Opportunity | null;
+  vfirst__User__r: SObjectDefinition$User | null;
+  vfirst__Verified_First_Package__r: SObjectDefinition$vfirst__Verified_First_Package__c | null;
+};
+
+type ChildRelationships$vfirst__Verified_First_Report__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Report__c extends SObjectDefinition<'vfirst__Verified_First_Report__c'> {
+    Name: 'vfirst__Verified_First_Report__c';
+    Fields: Fields$vfirst__Verified_First_Report__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Report__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__c;
+  }
+
+type Fields$vfirst__Verified_First_Subscriber__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  vfirst__Email__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Subscriber__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$vfirst__Verified_First_Subscriber__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Subscriber__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Subscriber__ChangeEvent'> {
+    Name: 'vfirst__Verified_First_Subscriber__ChangeEvent';
+    Fields: Fields$vfirst__Verified_First_Subscriber__ChangeEvent;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__ChangeEvent;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__ChangeEvent;
+  }
+
+type Fields$vfirst__Verified_First_Subscriber__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  vfirst__Email__c: string | null;
+};
+
+type ParentReferences$vfirst__Verified_First_Subscriber__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$vfirst__Verified_First_Subscriber__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$vfirst__Verified_First_Subscriber__c extends SObjectDefinition<'vfirst__Verified_First_Subscriber__c'> {
+    Name: 'vfirst__Verified_First_Subscriber__c';
+    Fields: Fields$vfirst__Verified_First_Subscriber__c;
+    ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__c;
+    ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__c;
+  }
+
 
 export interface SmoothstackSchema extends Schema {
   SObjects: {
@@ -37904,6 +42929,8 @@ export interface SmoothstackSchema extends Schema {
     BriefcaseRuleFilter: SObjectDefinition$BriefcaseRuleFilter;
     BusinessHours: SObjectDefinition$BusinessHours;
     BusinessProcess: SObjectDefinition$BusinessProcess;
+    CTH_Terms__ChangeEvent: SObjectDefinition$CTH_Terms__ChangeEvent;
+    CTH_Terms__c: SObjectDefinition$CTH_Terms__c;
     Calendar: SObjectDefinition$Calendar;
     CalendarView: SObjectDefinition$CalendarView;
     CalendarViewShare: SObjectDefinition$CalendarViewShare;
@@ -37941,6 +42968,10 @@ export interface SmoothstackSchema extends Schema {
     ChatterActivity: SObjectDefinition$ChatterActivity;
     ChatterExtension: SObjectDefinition$ChatterExtension;
     ChatterExtensionConfig: SObjectDefinition$ChatterExtensionConfig;
+    Check_In_Answers__ChangeEvent: SObjectDefinition$Check_In_Answers__ChangeEvent;
+    Check_In_Answers__c: SObjectDefinition$Check_In_Answers__c;
+    Check_In__ChangeEvent: SObjectDefinition$Check_In__ChangeEvent;
+    Check_In__c: SObjectDefinition$Check_In__c;
     ClientBrowser: SObjectDefinition$ClientBrowser;
     Cohort_Participant_Ranking__ChangeEvent: SObjectDefinition$Cohort_Participant_Ranking__ChangeEvent;
     Cohort_Participant_Ranking__c: SObjectDefinition$Cohort_Participant_Ranking__c;
@@ -37974,6 +43005,15 @@ export interface SmoothstackSchema extends Schema {
     CommSubscriptionTiming: SObjectDefinition$CommSubscriptionTiming;
     CommSubscriptionTimingFeed: SObjectDefinition$CommSubscriptionTimingFeed;
     CommSubscriptionTimingHistory: SObjectDefinition$CommSubscriptionTimingHistory;
+    Commission_Report_Result_Line__ChangeEvent: SObjectDefinition$Commission_Report_Result_Line__ChangeEvent;
+    Commission_Report_Result_Line__c: SObjectDefinition$Commission_Report_Result_Line__c;
+    Commission_Report_Result__ChangeEvent: SObjectDefinition$Commission_Report_Result__ChangeEvent;
+    Commission_Report_Result__c: SObjectDefinition$Commission_Report_Result__c;
+    Commission_Table_Line__ChangeEvent: SObjectDefinition$Commission_Table_Line__ChangeEvent;
+    Commission_Table_Line__c: SObjectDefinition$Commission_Table_Line__c;
+    Commission_Table__ChangeEvent: SObjectDefinition$Commission_Table__ChangeEvent;
+    Commission_Table__History: SObjectDefinition$Commission_Table__History;
+    Commission_Table__c: SObjectDefinition$Commission_Table__c;
     Community: SObjectDefinition$Community;
     Compensation_Policy__ChangeEvent: SObjectDefinition$Compensation_Policy__ChangeEvent;
     Compensation_Policy__c: SObjectDefinition$Compensation_Policy__c;
@@ -38052,6 +43092,9 @@ export interface SmoothstackSchema extends Schema {
     CustomObjectUserLicenseMetrics: SObjectDefinition$CustomObjectUserLicenseMetrics;
     CustomPermission: SObjectDefinition$CustomPermission;
     CustomPermissionDependency: SObjectDefinition$CustomPermissionDependency;
+    Custom_Note__ChangeEvent: SObjectDefinition$Custom_Note__ChangeEvent;
+    Custom_Note__History: SObjectDefinition$Custom_Note__History;
+    Custom_Note__c: SObjectDefinition$Custom_Note__c;
     DSCORGPKG__AutoUpdateSettings__ChangeEvent: SObjectDefinition$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
     DSCORGPKG__AutoUpdateSettings__c: SObjectDefinition$DSCORGPKG__AutoUpdateSettings__c;
     DSCORGPKG__ConflictField__ChangeEvent: SObjectDefinition$DSCORGPKG__ConflictField__ChangeEvent;
@@ -38105,6 +43148,8 @@ export interface SmoothstackSchema extends Schema {
     DataUsePurposeHistory: SObjectDefinition$DataUsePurposeHistory;
     DataUsePurposeShare: SObjectDefinition$DataUsePurposeShare;
     DatacloudAddress: SObjectDefinition$DatacloudAddress;
+    Deal__ChangeEvent: SObjectDefinition$Deal__ChangeEvent;
+    Deal__c: SObjectDefinition$Deal__c;
     Debug_Log__ChangeEvent: SObjectDefinition$Debug_Log__ChangeEvent;
     Debug_Log__c: SObjectDefinition$Debug_Log__c;
     DeclinedEventRelation: SObjectDefinition$DeclinedEventRelation;
@@ -38130,6 +43175,8 @@ export interface SmoothstackSchema extends Schema {
     EmailTemplateChangeEvent: SObjectDefinition$EmailTemplateChangeEvent;
     EmbeddedServiceDetail: SObjectDefinition$EmbeddedServiceDetail;
     EmbeddedServiceLabel: SObjectDefinition$EmbeddedServiceLabel;
+    Employment_Offer_Endpoint__ChangeEvent: SObjectDefinition$Employment_Offer_Endpoint__ChangeEvent;
+    Employment_Offer_Endpoint__c: SObjectDefinition$Employment_Offer_Endpoint__c;
     EngagementChannelType: SObjectDefinition$EngagementChannelType;
     EngagementChannelTypeFeed: SObjectDefinition$EngagementChannelTypeFeed;
     EngagementChannelTypeHistory: SObjectDefinition$EngagementChannelTypeHistory;
@@ -38210,6 +43257,8 @@ export interface SmoothstackSchema extends Schema {
     Funding_Submission__ChangeEvent: SObjectDefinition$Funding_Submission__ChangeEvent;
     Funding_Submission__History: SObjectDefinition$Funding_Submission__History;
     Funding_Submission__c: SObjectDefinition$Funding_Submission__c;
+    Governent_Agency_Department__ChangeEvent: SObjectDefinition$Governent_Agency_Department__ChangeEvent;
+    Governent_Agency_Department__c: SObjectDefinition$Governent_Agency_Department__c;
     GrantedByLicense: SObjectDefinition$GrantedByLicense;
     Group: SObjectDefinition$Group;
     GroupMember: SObjectDefinition$GroupMember;
@@ -38226,6 +43275,13 @@ export interface SmoothstackSchema extends Schema {
     IndividualHistory: SObjectDefinition$IndividualHistory;
     IndividualShare: SObjectDefinition$IndividualShare;
     InstalledMobileApp: SObjectDefinition$InstalledMobileApp;
+    Insurance_Cost_Table__ChangeEvent: SObjectDefinition$Insurance_Cost_Table__ChangeEvent;
+    Insurance_Cost_Table__c: SObjectDefinition$Insurance_Cost_Table__c;
+    Insurance_Monthly_Summary__ChangeEvent: SObjectDefinition$Insurance_Monthly_Summary__ChangeEvent;
+    Insurance_Monthly_Summary__c: SObjectDefinition$Insurance_Monthly_Summary__c;
+    Insurance_Settings__mdt: SObjectDefinition$Insurance_Settings__mdt;
+    Insurance__ChangeEvent: SObjectDefinition$Insurance__ChangeEvent;
+    Insurance__c: SObjectDefinition$Insurance__c;
     Invoice_History__ChangeEvent: SObjectDefinition$Invoice_History__ChangeEvent;
     Invoice_History__c: SObjectDefinition$Invoice_History__c;
     Invoice_Line__ChangeEvent: SObjectDefinition$Invoice_Line__ChangeEvent;
@@ -38234,6 +43290,7 @@ export interface SmoothstackSchema extends Schema {
     Invoice_Payment_Line__c: SObjectDefinition$Invoice_Payment_Line__c;
     Invoice_Payment__ChangeEvent: SObjectDefinition$Invoice_Payment__ChangeEvent;
     Invoice_Payment__c: SObjectDefinition$Invoice_Payment__c;
+    Invoice_Settings__ChangeEvent: SObjectDefinition$Invoice_Settings__ChangeEvent;
     Invoice_Settings__c: SObjectDefinition$Invoice_Settings__c;
     Invoice__ChangeEvent: SObjectDefinition$Invoice__ChangeEvent;
     Invoice__History: SObjectDefinition$Invoice__History;
@@ -38242,6 +43299,16 @@ export interface SmoothstackSchema extends Schema {
     Invoiced_Expense__c: SObjectDefinition$Invoiced_Expense__c;
     Invoiced_Hours__ChangeEvent: SObjectDefinition$Invoiced_Hours__ChangeEvent;
     Invoiced_Hours__c: SObjectDefinition$Invoiced_Hours__c;
+    JP_Information__ChangeEvent: SObjectDefinition$JP_Information__ChangeEvent;
+    JP_Information__History: SObjectDefinition$JP_Information__History;
+    JP_Information__c: SObjectDefinition$JP_Information__c;
+    Job_Placement_AM__ChangeEvent: SObjectDefinition$Job_Placement_AM__ChangeEvent;
+    Job_Placement_AM__c: SObjectDefinition$Job_Placement_AM__c;
+    Job_Placement_Recruiter__ChangeEvent: SObjectDefinition$Job_Placement_Recruiter__ChangeEvent;
+    Job_Placement_Recruiter__c: SObjectDefinition$Job_Placement_Recruiter__c;
+    Job_Placement__ChangeEvent: SObjectDefinition$Job_Placement__ChangeEvent;
+    Job_Placement__History: SObjectDefinition$Job_Placement__History;
+    Job_Placement__c: SObjectDefinition$Job_Placement__c;
     Job_Portal_Settings__mdt: SObjectDefinition$Job_Portal_Settings__mdt;
     Job__ChangeEvent: SObjectDefinition$Job__ChangeEvent;
     Job__History: SObjectDefinition$Job__History;
@@ -38332,6 +43399,7 @@ export interface SmoothstackSchema extends Schema {
     OpportunityShare: SObjectDefinition$OpportunityShare;
     OpportunityStage: SObjectDefinition$OpportunityStage;
     OpportunityTeamMember: SObjectDefinition$OpportunityTeamMember;
+    OpportunityTeamMemberHistory: SObjectDefinition$OpportunityTeamMemberHistory;
     Order: SObjectDefinition$Order;
     OrderChangeEvent: SObjectDefinition$OrderChangeEvent;
     OrderFeed: SObjectDefinition$OrderFeed;
@@ -38352,6 +43420,8 @@ export interface SmoothstackSchema extends Schema {
     OutgoingEmailRelation: SObjectDefinition$OutgoingEmailRelation;
     OwnedContentDocument: SObjectDefinition$OwnedContentDocument;
     OwnerChangeOptionInfo: SObjectDefinition$OwnerChangeOptionInfo;
+    PTO_Carryover__ChangeEvent: SObjectDefinition$PTO_Carryover__ChangeEvent;
+    PTO_Carryover__c: SObjectDefinition$PTO_Carryover__c;
     PTO_Request__ChangeEvent: SObjectDefinition$PTO_Request__ChangeEvent;
     PTO_Request__c: SObjectDefinition$PTO_Request__c;
     PackageLicense: SObjectDefinition$PackageLicense;
@@ -38454,6 +43524,8 @@ export interface SmoothstackSchema extends Schema {
     RecordActionHistory: SObjectDefinition$RecordActionHistory;
     RecordType: SObjectDefinition$RecordType;
     RedirectWhitelistUrl: SObjectDefinition$RedirectWhitelistUrl;
+    Referrer__ChangeEvent: SObjectDefinition$Referrer__ChangeEvent;
+    Referrer__c: SObjectDefinition$Referrer__c;
     RelationshipDomain: SObjectDefinition$RelationshipDomain;
     RelationshipInfo: SObjectDefinition$RelationshipInfo;
     Report: SObjectDefinition$Report;
@@ -38480,6 +43552,8 @@ export interface SmoothstackSchema extends Schema {
     SiteFeed: SObjectDefinition$SiteFeed;
     SiteHistory: SObjectDefinition$SiteHistory;
     SiteIframeWhiteListUrl: SObjectDefinition$SiteIframeWhiteListUrl;
+    Smoothstack_Settings__ChangeEvent: SObjectDefinition$Smoothstack_Settings__ChangeEvent;
+    Smoothstack_Settings__c: SObjectDefinition$Smoothstack_Settings__c;
     SocialPersona: SObjectDefinition$SocialPersona;
     SocialPersonaHistory: SObjectDefinition$SocialPersonaHistory;
     SocialPost: SObjectDefinition$SocialPost;
@@ -38525,6 +43599,8 @@ export interface SmoothstackSchema extends Schema {
     Sstack_CC__Total_Hours__History: SObjectDefinition$Sstack_CC__Total_Hours__History;
     Sstack_CC__Total_Hours__c: SObjectDefinition$Sstack_CC__Total_Hours__c;
     Sstack_CC__Trigger_Settings__mdt: SObjectDefinition$Sstack_CC__Trigger_Settings__mdt;
+    Staff_Aug_Commission_Variables__ChangeEvent: SObjectDefinition$Staff_Aug_Commission_Variables__ChangeEvent;
+    Staff_Aug_Commission_Variables__c: SObjectDefinition$Staff_Aug_Commission_Variables__c;
     Stamp: SObjectDefinition$Stamp;
     StampAssignment: SObjectDefinition$StampAssignment;
     StaticResource: SObjectDefinition$StaticResource;
@@ -38556,6 +43632,11 @@ export interface SmoothstackSchema extends Schema {
     TaskRelationChangeEvent: SObjectDefinition$TaskRelationChangeEvent;
     TaskStatus: SObjectDefinition$TaskStatus;
     TaskWhoRelation: SObjectDefinition$TaskWhoRelation;
+    Team_Member_Rep__ChangeEvent: SObjectDefinition$Team_Member_Rep__ChangeEvent;
+    Team_Member_Rep__c: SObjectDefinition$Team_Member_Rep__c;
+    Teaming_Partner__ChangeEvent: SObjectDefinition$Teaming_Partner__ChangeEvent;
+    Teaming_Partner__History: SObjectDefinition$Teaming_Partner__History;
+    Teaming_Partner__c: SObjectDefinition$Teaming_Partner__c;
     TenantUsageEntitlement: SObjectDefinition$TenantUsageEntitlement;
     TestSuiteMembership: SObjectDefinition$TestSuiteMembership;
     ThirdPartyAccountLink: SObjectDefinition$ThirdPartyAccountLink;
@@ -38567,6 +43648,7 @@ export interface SmoothstackSchema extends Schema {
     Timesheet_Note__ChangeEvent: SObjectDefinition$Timesheet_Note__ChangeEvent;
     Timesheet_Note__c: SObjectDefinition$Timesheet_Note__c;
     Timesheet_Settings_2__mdt: SObjectDefinition$Timesheet_Settings_2__mdt;
+    Timesheet_Settings__ChangeEvent: SObjectDefinition$Timesheet_Settings__ChangeEvent;
     Timesheet_Settings__c: SObjectDefinition$Timesheet_Settings__c;
     Timesheet_Survey_Settings__ChangeEvent: SObjectDefinition$Timesheet_Survey_Settings__ChangeEvent;
     Timesheet_Survey_Settings__c: SObjectDefinition$Timesheet_Survey_Settings__c;
@@ -38630,6 +43712,25 @@ export interface SmoothstackSchema extends Schema {
     WorkBadgeDefinitionShare: SObjectDefinition$WorkBadgeDefinitionShare;
     WorkThanks: SObjectDefinition$WorkThanks;
     WorkThanksShare: SObjectDefinition$WorkThanksShare;
+    myV2MOM__Measure_Team__ChangeEvent: SObjectDefinition$myV2MOM__Measure_Team__ChangeEvent;
+    myV2MOM__Measure_Team__Feed: SObjectDefinition$myV2MOM__Measure_Team__Feed;
+    myV2MOM__Measure_Team__History: SObjectDefinition$myV2MOM__Measure_Team__History;
+    myV2MOM__Measure_Team__c: SObjectDefinition$myV2MOM__Measure_Team__c;
+    myV2MOM__Measure__ChangeEvent: SObjectDefinition$myV2MOM__Measure__ChangeEvent;
+    myV2MOM__Measure__Feed: SObjectDefinition$myV2MOM__Measure__Feed;
+    myV2MOM__Measure__History: SObjectDefinition$myV2MOM__Measure__History;
+    myV2MOM__Measure__Share: SObjectDefinition$myV2MOM__Measure__Share;
+    myV2MOM__Measure__c: SObjectDefinition$myV2MOM__Measure__c;
+    myV2MOM__Method__ChangeEvent: SObjectDefinition$myV2MOM__Method__ChangeEvent;
+    myV2MOM__Method__Feed: SObjectDefinition$myV2MOM__Method__Feed;
+    myV2MOM__Method__History: SObjectDefinition$myV2MOM__Method__History;
+    myV2MOM__Method__Share: SObjectDefinition$myV2MOM__Method__Share;
+    myV2MOM__Method__c: SObjectDefinition$myV2MOM__Method__c;
+    myV2MOM__V2MOM__ChangeEvent: SObjectDefinition$myV2MOM__V2MOM__ChangeEvent;
+    myV2MOM__V2MOM__Feed: SObjectDefinition$myV2MOM__V2MOM__Feed;
+    myV2MOM__V2MOM__History: SObjectDefinition$myV2MOM__V2MOM__History;
+    myV2MOM__V2MOM__Share: SObjectDefinition$myV2MOM__V2MOM__Share;
+    myV2MOM__V2MOM__c: SObjectDefinition$myV2MOM__V2MOM__c;
     pandadoc__DocStatus__ChangeEvent: SObjectDefinition$pandadoc__DocStatus__ChangeEvent;
     pandadoc__DocStatus__c: SObjectDefinition$pandadoc__DocStatus__c;
     pandadoc__Object_Tokens__ChangeEvent: SObjectDefinition$pandadoc__Object_Tokens__ChangeEvent;
@@ -38638,19 +43739,53 @@ export interface SmoothstackSchema extends Schema {
     pandadoc__PandaDocDocument__c: SObjectDefinition$pandadoc__PandaDocDocument__c;
     pandadoc__PandaDocLog__ChangeEvent: SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent;
     pandadoc__PandaDocLog__c: SObjectDefinition$pandadoc__PandaDocLog__c;
+    pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
     pandadoc__PandaDoc_JsonBulder_Mapping__c: SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c;
     pandadoc__Pricing_Item_Mapping__ChangeEvent: SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent;
     pandadoc__Pricing_Item_Mapping__c: SObjectDefinition$pandadoc__Pricing_Item_Mapping__c;
     pandadoc__Recipient_Map__ChangeEvent: SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent;
     pandadoc__Recipient_Map__c: SObjectDefinition$pandadoc__Recipient_Map__c;
+    pandadoc__Settings__ChangeEvent: SObjectDefinition$pandadoc__Settings__ChangeEvent;
     pandadoc__Settings__c: SObjectDefinition$pandadoc__Settings__c;
     pandadoc__TriggerSetting__ChangeEvent: SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent;
     pandadoc__TriggerSetting__c: SObjectDefinition$pandadoc__TriggerSetting__c;
+    rcsfl__AdminSetting__ChangeEvent: SObjectDefinition$rcsfl__AdminSetting__ChangeEvent;
     rcsfl__AdminSetting__c: SObjectDefinition$rcsfl__AdminSetting__c;
     sansancard__SSCard__ChangeEvent: SObjectDefinition$sansancard__SSCard__ChangeEvent;
     sansancard__SSCard__c: SObjectDefinition$sansancard__SSCard__c;
+    sansancard__ScanToSalesforce_Setting__ChangeEvent: SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent;
     sansancard__ScanToSalesforce_Setting__c: SObjectDefinition$sansancard__ScanToSalesforce_Setting__c;
     sansancard__TransferMeta__ChangeEvent: SObjectDefinition$sansancard__TransferMeta__ChangeEvent;
     sansancard__TransferMeta__c: SObjectDefinition$sansancard__TransferMeta__c;
+    vfirst__Config__ChangeEvent: SObjectDefinition$vfirst__Config__ChangeEvent;
+    vfirst__Config__c: SObjectDefinition$vfirst__Config__c;
+    vfirst__Site_Guest_Access_Helper__ChangeEvent: SObjectDefinition$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+    vfirst__Site_Guest_Access_Helper__c: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c;
+    vfirst__Verified_First_Alias__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Alias__ChangeEvent;
+    vfirst__Verified_First_Alias__c: SObjectDefinition$vfirst__Verified_First_Alias__c;
+    vfirst__Verified_First_Object_Address__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Object_Address__ChangeEvent;
+    vfirst__Verified_First_Object_Address__c: SObjectDefinition$vfirst__Verified_First_Object_Address__c;
+    vfirst__Verified_First_Order_Field_Set__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+    vfirst__Verified_First_Order_Field_Set__c: SObjectDefinition$vfirst__Verified_First_Order_Field_Set__c;
+    vfirst__Verified_First_Order_Field_Value__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+    vfirst__Verified_First_Order_Field_Value__c: SObjectDefinition$vfirst__Verified_First_Order_Field_Value__c;
+    vfirst__Verified_First_Order_Field__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Field__ChangeEvent;
+    vfirst__Verified_First_Order_Field__c: SObjectDefinition$vfirst__Verified_First_Order_Field__c;
+    vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+    vfirst__Verified_First_Order_Jurisdiction_Data__c: SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+    vfirst__Verified_First_Order_Jurisdiction__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+    vfirst__Verified_First_Order_Jurisdiction__c: SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__c;
+    vfirst__Verified_First_Order_Product__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Product__ChangeEvent;
+    vfirst__Verified_First_Order_Product__c: SObjectDefinition$vfirst__Verified_First_Order_Product__c;
+    vfirst__Verified_First_Order_Status__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_Status__ChangeEvent;
+    vfirst__Verified_First_Order_Status__c: SObjectDefinition$vfirst__Verified_First_Order_Status__c;
+    vfirst__Verified_First_Order_XML_Block__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+    vfirst__Verified_First_Order_XML_Block__c: SObjectDefinition$vfirst__Verified_First_Order_XML_Block__c;
+    vfirst__Verified_First_Package__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Package__ChangeEvent;
+    vfirst__Verified_First_Package__c: SObjectDefinition$vfirst__Verified_First_Package__c;
+    vfirst__Verified_First_Report__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Report__ChangeEvent;
+    vfirst__Verified_First_Report__c: SObjectDefinition$vfirst__Verified_First_Report__c;
+    vfirst__Verified_First_Subscriber__ChangeEvent: SObjectDefinition$vfirst__Verified_First_Subscriber__ChangeEvent;
+    vfirst__Verified_First_Subscriber__c: SObjectDefinition$vfirst__Verified_First_Subscriber__c;
   };
 }

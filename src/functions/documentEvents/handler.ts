@@ -26,7 +26,10 @@ const documentEvents = async (event: APIGatewayEvent) => {
           case 'POST': {
             const body = event.body as any;
             if (body?.applicationId) {
-              await publishDocumentGenerationRequest(body.applicationId);
+              await publishDocumentGenerationRequest({
+                type: 'QUICK_COURSE',
+                params: { applicationId: body.applicationId },
+              });
             } else {
               throw createHttpError(400, 'applicationId missing in request body.');
             }

@@ -18,7 +18,6 @@ import cohortUserGenerator from './src/functions/cohortUserGenerator';
 import jobEventProcessor from './src/functions/jobEventProcessor';
 import jobEvents from './src/functions/jobEvents';
 import offers from './src/functions/offers';
-import offerEventProcessor from './src/functions/offerEventProcessor';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -92,7 +91,6 @@ const serverlessConfiguration: AWS = {
     jobEvents,
     jobEventProcessor,
     offers,
-    offerEventProcessor,
   },
   resources: {
     Resources: {

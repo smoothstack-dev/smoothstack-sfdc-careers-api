@@ -2,7 +2,7 @@ import { middyfy } from '@libs/lambda';
 import { APIGatewayEvent } from 'aws-lambda';
 import createHttpError from 'http-errors';
 import { OfferParams } from '../../model/Offer';
-import { publishOfferEvent } from '../../service/sns.service';
+import { publishDocumentGenerationRequest } from '../../service/sns.service';
 
 const validateReqBody = (body: any) => {
   const requiredFields = [
@@ -34,7 +34,7 @@ const offers = async (event: APIGatewayEvent) => {
         }
         const offerEvents = offerList.map((offer) => {
           validateReqBody(offer);
-          return publishOfferEvent(offer);
+          return publishDocumentGenerationRequest({ type: 'OFFER_LETTER', params: offer });
         });
         await Promise.all(offerEvents);
         return `Successfully processed ${offerList.length} offer/s in request`;
