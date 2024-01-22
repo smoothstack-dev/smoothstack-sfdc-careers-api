@@ -1,5 +1,4 @@
-import { salaryFormatter } from '../util/misc.util';
-import { updateApplication } from './application.service';
+import { rateFormatter, salaryFormatter } from '../util/misc.util';
 import { fetchApplication } from './application.service';
 import { getPandaDocConfig } from './auth/pandadoc.auth.service';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
@@ -9,10 +8,18 @@ import {
   DocumentsApiDownloadDocumentRequest,
   DocumentsApiSendDocumentRequest,
 } from 'pandadoc-node-client';
-import { saveSFDCFiles } from './files.service';
-import { publishMSUserGenerationRequest } from './sns.service';
+import { fetchConsultant } from './consultant.service';
+import { OfferParams, isSPOffer } from '../model/Offer';
 
-export const generateDocument = async (applicationId: string) => {
+const QUICK_COURSE_TEMPLATE_ID = 'e7pDooH4o9KqdwBQcdQt7g';
+const OFFER_TEMPLATE_IDS = {
+  'RELO/R': 'BA5q2CoffK9xoLqNCDm6bL',
+  'NO-RELO/R': '',
+  'RELO/SP': '',
+  'NO-RELO/SP': '',
+};
+
+export const generateQuickCourseDoc = async (applicationId: string) => {
   const conn = await getSFDCConnection();
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const application = await fetchApplication(conn, applicationId);
@@ -20,7 +27,7 @@ export const generateDocument = async (applicationId: string) => {
   const body: DocumentsApiCreateDocumentRequest = {
     documentCreateRequest: {
       name: 'Smoothstack Document Signature Request',
-      templateUuid: 'e7pDooH4o9KqdwBQcdQt7g',
+      templateUuid: QUICK_COURSE_TEMPLATE_ID,
       recipients: [
         {
           email: application.Candidate__r.Email,
@@ -81,22 +88,93 @@ export const generateDocument = async (applicationId: string) => {
         },
         {
           name: 'year1Salary',
-          value: `${salaryFormatter().format(application.Job__r.Year_1_Salary__c)}`,
+          value: salaryFormatter().format(application.Job__r.Year_1_Salary__c),
         },
         {
           name: 'year2Salary',
-          value: `${salaryFormatter().format(application.Job__r.Year_2_Salary__c)}`,
+          value: salaryFormatter().format(application.Job__r.Year_2_Salary__c),
         },
       ],
-      metadata: { applicationId },
+      metadata: { applicationId, type: 'QUICK_COURSE'},
     },
   };
 
   await pDoc.createDocument(body);
 };
 
-export const sendDocument = async (documentId: string, applicationId:string) => {
+export const generateOfferDoc = async (offerParams: OfferParams) => {
   const conn = await getSFDCConnection();
+  const pDoc = new DocumentsApi(await getPandaDocConfig());
+  const consultant = await fetchConsultant(conn, offerParams.consultantId);
+
+  const body: DocumentsApiCreateDocumentRequest = {
+    documentCreateRequest: {
+      name: 'Smoothstack Document Signature Request',
+      templateUuid:
+        OFFER_TEMPLATE_IDS[`${offerParams.offerType}/${isSPOffer(consultant.MailingStateCode) ? 'SP' : 'R'}`],
+      recipients: [
+        {
+          email: consultant.Smoothstack_Email__c,
+          firstName: consultant.FirstName,
+          lastName: consultant.LastName,
+          role: 'Client',
+          signingOrder: 1,
+        },
+      ],
+      tokens: [
+        {
+          name: 'email',
+          value: consultant.Smoothstack_Email__c,
+        },
+        {
+          name: 'firstName',
+          value: consultant.FirstName,
+        },
+        {
+          name: 'lastName',
+          value: consultant.LastName,
+        },
+        {
+          name: 'reportsTo',
+          value: offerParams.reportsTo,
+        },
+        {
+          name: 'startDate',
+          value: offerParams.startDate,
+        },
+        {
+          name: 'minWage',
+          value: rateFormatter().format(offerParams.minWage),
+        },
+        {
+          name: 'year1Hourly',
+          value: rateFormatter().format(offerParams.year1Salary / 2080),
+        },
+        {
+          name: 'year2Hourly',
+          value: rateFormatter().format(offerParams.year2Salary / 2080),
+        },
+        {
+          name: 'year1Salary',
+          value: salaryFormatter().format(offerParams.year1Salary),
+        },
+        {
+          name: 'year2Salary',
+          value: salaryFormatter().format(offerParams.year2Salary),
+        },
+        {
+          name: 'expirationDate',
+          value: offerParams.expirationDate,
+        },
+      ],
+      metadata: { consultantId: offerParams.consultantId, type: 'OFFER_LETTER' },
+    },
+  };
+
+  await pDoc.createDocument(body);
+};
+
+export const sendDocument = async (documentId: string) => {
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const body: DocumentsApiSendDocumentRequest = {
     id: documentId,
@@ -109,36 +187,12 @@ export const sendDocument = async (documentId: string, applicationId:string) => 
     },
   };
   await pDoc.sendDocument(body);
-  await updateApplication(
-    conn,
-    { id: applicationId },
-    {
-      StageName: 'Quick Course Offered',
-    }
-  );
 };
 
-export const processSignedDocument = async (documentId: string, applicationId: string) => {
-  const conn = await getSFDCConnection();
+export const downloadSignedDocument = async (documentId: string) => {
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const body: DocumentsApiDownloadDocumentRequest = {
     id: documentId,
   };
-  const docFile = await pDoc.downloadDocument(body);
-  await updateApplication(
-    conn,
-    { id: applicationId },
-    {
-      StageName: 'Quick Course Signed',
-    }
-  );
-  await saveSFDCFiles(conn, applicationId, [
-    {
-      type: 'Quick Course Offer',
-      contentType: 'application/pdf',
-      fileContent: docFile.data.toString('base64'),
-      name: 'Signed_Quick_Course_Offer.pdf',
-    },
-  ]);
-  await publishMSUserGenerationRequest(applicationId);
+  return await pDoc.downloadDocument(body);
 };

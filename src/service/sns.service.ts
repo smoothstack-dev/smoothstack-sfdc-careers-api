@@ -9,7 +9,7 @@ import {
 } from '../model/AppointmentGenerationRequest';
 import { WEBINAR_TOPIC, WEBINAR_TYPE } from './webinar.service';
 import { WebinarEvent } from '../model/Webinar';
-import { DocumentEvent } from '../model/Document';
+import { DocGenerationMsg, DocumentEvent } from '../model/Document';
 import { DataGenerationRequest, GenerationType } from '../model/ApplicationData';
 import { ConsultantGenerationRequest } from '../model/Consultant';
 import { MSUser } from '../model/MSUser';
@@ -71,14 +71,11 @@ export const publishWebinarProcessingRequest = async (data: any) => {
   }
 };
 
-export const publishDocumentGenerationRequest = async (applicationId: string) => {
+export const publishDocumentGenerationRequest = async (msg: DocGenerationMsg) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
   const topic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-document-generation-sns-topic-v2`;
-  const request = {
-    applicationId,
-  };
   const message: PublishInput = {
-    Message: JSON.stringify(request),
+    Message: JSON.stringify(msg),
     TopicArn: topic,
   };
 
@@ -145,17 +142,6 @@ export const publishJobProcessingRequest = async (request: JobEventProcessingReq
   const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-job-event-processing-sns-topic-v2`;
   const message: PublishInput = {
     Message: JSON.stringify(request),
-    TopicArn: snsTopic,
-  };
-
-  await sns.publish(message).promise();
-};
-
-export const publishOfferEvent = async (offer: OfferParams) => {
-  const sns = new SNS(getSNSConfig(process.env.ENV));
-  const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-offer-event-processing-sns-topic-v2`;
-  const message: PublishInput = {
-    Message: JSON.stringify(offer),
     TopicArn: snsTopic,
   };
 

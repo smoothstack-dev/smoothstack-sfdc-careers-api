@@ -16,6 +16,14 @@ export const fetchConsultant = async (
   });
 };
 
+export const updateConsultant = async (
+  conn: Connection<SmoothstackSchema>,
+  consultantId: string,
+  updateFields: Partial<Fields$Contact>
+) => {
+  await conn.sobject('Contact').update({ Id: consultantId, ...updateFields });
+};
+
 export const findConsultantBySmoothstackEmail = async (
   conn: Connection<SmoothstackSchema>,
   email: string
