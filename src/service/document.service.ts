@@ -14,9 +14,9 @@ import { OfferParams, isSPOffer } from '../model/Offer';
 const QUICK_COURSE_TEMPLATE_ID = 'e7pDooH4o9KqdwBQcdQt7g';
 const OFFER_TEMPLATE_IDS = {
   'RELO/R': 'BA5q2CoffK9xoLqNCDm6bL',
-  'NO-RELO/R': '',
-  'RELO/SP': '',
-  'NO-RELO/SP': '',
+  'NO-RELO/R': 'fbpQ77GDUf5bT5TVrci2GF',
+  'RELO/SP': 'jUyhgnXA3UxktXr5zLUKgQ',
+  'NO-RELO/SP': 'pbxpyJsJ3Cp3ohHAZKvQfE',
 };
 
 export const generateQuickCourseDoc = async (applicationId: string) => {
