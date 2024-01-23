@@ -84,20 +84,12 @@ const updateConsultantData = async (consultantId: string, eventType: 'SENT' | 'S
   switch (eventType) {
     case 'SENT':
       await updateConsultant(conn, consultantId, {
-        Employment_Offer_Sent__c: new Date(
-          new Date().toLocaleString('en-US', {
-            timeZone: 'America/New_York',
-          })
-        ).toISOString() as DateString,
+        Employment_Offer_Sent__c: new Date().toISOString().split('T')[0] as DateString,
       });
       break;
     case 'SIGNED':
       await updateConsultant(conn, consultantId, {
-        Employment_Offer_Signed__c: new Date(
-          new Date().toLocaleString('en-US', {
-            timeZone: 'America/New_York',
-          })
-        ).toISOString() as DateString,
+        Employment_Offer_Signed__c: new Date().toISOString().split('T')[0] as DateString,
         Candidate_Primary_Status__c: 'Training',
       });
       break;
