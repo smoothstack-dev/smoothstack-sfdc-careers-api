@@ -140,7 +140,7 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
         },
         {
           name: 'sentDate',
-          value: new Date().toLocaleDateString('en-US'),
+          value: new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' }),
         },
         {
           name: 'startDate',
