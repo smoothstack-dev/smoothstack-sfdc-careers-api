@@ -95,7 +95,7 @@ export const generateQuickCourseDoc = async (applicationId: string) => {
           value: salaryFormatter().format(application.Job__r.Year_2_Salary__c),
         },
       ],
-      metadata: { applicationId, type: 'QUICK_COURSE'},
+      metadata: { applicationId, type: 'QUICK_COURSE' },
     },
   };
 
@@ -139,8 +139,12 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
           value: offerParams.reportsTo,
         },
         {
+          name: 'sentDate',
+          value: new Date().toLocaleDateString('en-US'),
+        },
+        {
           name: 'startDate',
-          value: offerParams.startDate,
+          value: new Date(offerParams.startDate).toLocaleDateString('en-US'),
         },
         {
           name: 'minWage',
@@ -164,7 +168,7 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
         },
         {
           name: 'expirationDate',
-          value: offerParams.expirationDate,
+          value: new Date(offerParams.expirationDate).toLocaleDateString('en-US'),
         },
       ],
       metadata: { consultantId: offerParams.consultantId, type: 'OFFER_LETTER' },
