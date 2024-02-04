@@ -32,7 +32,9 @@ export const createApplication = async (
   const applicationRecord: Partial<Fields$Opportunity> = {
     RecordTypeId: APPLICATION_RECORD_TYPE_ID,
     Name: uuidv4(),
-    CloseDate: new Date().toISOString() as DateString,
+    CloseDate: new Date(new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' }))
+      .toISOString()
+      .split('T')[0] as DateString,
     Application_Date__c: new Date().toISOString() as DateString,
     StageName: stageName,
     ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
