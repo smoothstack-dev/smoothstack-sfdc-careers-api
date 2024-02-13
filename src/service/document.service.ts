@@ -120,6 +120,13 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
           role: 'Client',
           signingOrder: 1,
         },
+        {
+          email: 'oscar.cedano@smoosthack.com',
+          firstName: 'Oscar',
+          lastName: 'Cedano',
+          role: 'HR',
+          signingOrder: 2,
+        },
       ],
       tokens: [
         {
@@ -178,13 +185,13 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
   await pDoc.createDocument(body);
 };
 
-export const sendDocument = async (documentId: string) => {
+export const sendDocument = async (documentId: string, docParams: { subject: string; message: string }) => {
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const body: DocumentsApiSendDocumentRequest = {
     id: documentId,
     documentSendRequest: {
-      subject: 'Smoothstack Document Signature Request',
-      message: 'Please sign the following document to confirm enrollment.',
+      subject: docParams.subject,
+      message: docParams.message,
       sender: {
         email: 'info@smoothstack.com',
       },

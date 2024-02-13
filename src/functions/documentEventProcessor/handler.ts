@@ -16,12 +16,19 @@ const documentEventProcessor = async (event: SNSEvent) => {
     switch (docEvent.event) {
       case 'document_state_changed':
         if (docEvent.data.status === 'document.draft') {
-          await sendDocument(docEvent.data.id);
           switch (docEvent.data.metadata.type) {
             case 'QUICK_COURSE':
+              await sendDocument(docEvent.data.id, {
+                subject: 'Smoothstack Document Signature Request',
+                message: 'Please sign the following document to confirm enrollment.',
+              });
               await updateApplicationData(docEvent.data.metadata.applicationId, 'SENT');
               break;
             case 'OFFER_LETTER':
+              await sendDocument(docEvent.data.id, {
+                subject: 'Smoothstack Offer Letter',
+                message: 'See attached Employment Offer Letter from Smoothstack.',
+              });
               await updateConsultantData(docEvent.data.metadata.consultantId, 'SENT');
               break;
           }
