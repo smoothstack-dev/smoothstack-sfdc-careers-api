@@ -109,7 +109,7 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
 
   const body: DocumentsApiCreateDocumentRequest = {
     documentCreateRequest: {
-      name: 'Smoothstack Document Signature Request',
+      name: 'Smoothstack Offer Letter and Employment Agreement',
       templateUuid:
         OFFER_TEMPLATE_IDS[`${offerParams.offerType}/${isSPOffer(consultant.MailingStateCode) ? 'SP' : 'R'}`],
       recipients: [
@@ -121,9 +121,9 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
           signingOrder: 1,
         },
         {
-          email: 'oscar.cedano@smoothstack.com',
-          firstName: 'Oscar',
-          lastName: 'Cedano',
+          email: 'hr@smoothstack.com',
+          firstName: 'Gabriela',
+          lastName: 'Hower',
           role: 'HR',
           signingOrder: 2,
         },

@@ -41,8 +41,9 @@ const documentEventProcessor = async (event: SNSEvent) => {
             await updateApplicationData(docEvent.data.metadata.applicationId, 'SIGNED', docFile);
             break;
           case 'OFFER_LETTER':
-            console.log(docEvent)
-            await updateConsultantData(docEvent.data.metadata.consultantId, 'SIGNED');
+            if (docEvent.data.action_by.email !== 'hr@smoothstack.com') {
+              await updateConsultantData(docEvent.data.metadata.consultantId, 'SIGNED');
+            }
             break;
         }
         break;

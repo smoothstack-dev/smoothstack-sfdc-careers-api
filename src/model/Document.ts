@@ -13,8 +13,18 @@ interface DocSignedEvent {
 }
 
 type DocEventData =
-  | { id: string; status: string; metadata: { type: 'QUICK_COURSE'; applicationId: string } }
-  | { id: string; status: string; metadata: { type: 'OFFER_LETTER'; consultantId: string } };
+  | {
+      id: string;
+      status: string;
+      metadata: { type: 'QUICK_COURSE'; applicationId: string };
+      action_by: { email: string };
+    }
+  | {
+      id: string;
+      status: string;
+      metadata: { type: 'OFFER_LETTER'; consultantId: string };
+      action_by: { email: string };
+    };
 
 export type DocGenerationMsg = OfferDocMsg | QuickCourseDocMsg;
 
