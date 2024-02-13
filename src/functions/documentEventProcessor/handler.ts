@@ -35,12 +35,13 @@ const documentEventProcessor = async (event: SNSEvent) => {
         }
         break;
       case 'recipient_completed':
-        const docFile = await downloadSignedDocument(docEvent.data.id);
         switch (docEvent.data.metadata.type) {
           case 'QUICK_COURSE':
+            const docFile = await downloadSignedDocument(docEvent.data.id);
             await updateApplicationData(docEvent.data.metadata.applicationId, 'SIGNED', docFile);
             break;
           case 'OFFER_LETTER':
+            console.log(docEvent)
             await updateConsultantData(docEvent.data.metadata.consultantId, 'SIGNED');
             break;
         }
