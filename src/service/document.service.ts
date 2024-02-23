@@ -11,12 +11,12 @@ import {
 import { fetchConsultant } from './consultant.service';
 import { OfferParams, isSPOffer } from '../model/Offer';
 
-const QUICK_COURSE_TEMPLATE_ID = 'e7pDooH4o9KqdwBQcdQt7g';
+const QUICK_COURSE_TEMPLATE_ID = 'Y6R59eHG5TiaFaBeahQE5R';
 const OFFER_TEMPLATE_IDS = {
-  'RELO/R': 'BA5q2CoffK9xoLqNCDm6bL',
-  'NO-RELO/R': 'fbpQ77GDUf5bT5TVrci2GF',
-  'RELO/SP': 'jUyhgnXA3UxktXr5zLUKgQ',
-  'NO-RELO/SP': 'pbxpyJsJ3Cp3ohHAZKvQfE',
+  'RELO/R': 'fBVyepV5U7sfyGmM9wSjBk',
+  'NO-RELO/R': '8jVeGKtN2HcjGS87G9Sf38',
+  'RELO/SP': 'HhgtCCegUxZ43EaXmBZ53M',
+  'NO-RELO/SP': '6rRaGPHeanV2y2fFddWGEP',
 };
 
 export const generateQuickCourseDoc = async (applicationId: string) => {
@@ -27,6 +27,7 @@ export const generateQuickCourseDoc = async (applicationId: string) => {
   const body: DocumentsApiCreateDocumentRequest = {
     documentCreateRequest: {
       name: 'Smoothstack Document Signature Request',
+      folderUuid: '4dgo8Rwrpsrxft42RBn9SN',
       templateUuid: QUICK_COURSE_TEMPLATE_ID,
       recipients: [
         {
@@ -110,6 +111,7 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
   const body: DocumentsApiCreateDocumentRequest = {
     documentCreateRequest: {
       name: 'Smoothstack Offer Letter and Employment Agreement',
+      folderUuid: 'QCwQxsbj49AdFRYFygq8jK',
       templateUuid:
         OFFER_TEMPLATE_IDS[`${offerParams.offerType}/${isSPOffer(consultant.MailingStateCode) ? 'SP' : 'R'}`],
       recipients: [
