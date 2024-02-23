@@ -123,7 +123,7 @@ export const generateOfferDoc = async (offerParams: OfferParams) => {
           signingOrder: 1,
         },
         {
-          email: 'oscar.cedano@smoothstack.com',
+          email: 'hr@smoothstack.com',
           firstName: 'Gabriela',
           lastName: 'Hower',
           role: 'HR',
