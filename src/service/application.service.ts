@@ -23,11 +23,12 @@ const APPLICATION_RECORD_TYPE_ID = '0125G000000feaeQAA';
 export const createApplication = async (
   conn: Connection<SmoothstackSchema>,
   jobId: string,
-  application: { candidateFields: CandidateFields; applicationFields: ApplicationFields }
+  application: { candidateFields: CandidateFields; applicationFields: ApplicationFields },
+  existingCandidateId?: string
 ): Promise<{ candidateId: string; applicationId: string }> => {
   const { candidateFields, applicationFields } = application;
 
-  const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmTerm);
+  const candidateId = await createCandidate(conn, candidateFields, applicationFields.utmTerm, existingCandidateId);
   const { stageName, rejectionReason, snoozeReason } = deriveApplicationStatus(applicationFields.status);
   const applicationRecord: Partial<Fields$Opportunity> = {
     RecordTypeId: APPLICATION_RECORD_TYPE_ID,

@@ -110,10 +110,15 @@ export const apply = async (event: APIGatewayProxyEvent) => {
       ...extraFields,
     } as any;
 
-    const { applicationId, candidateId } = await createApplication(conn, job.Id, {
-      candidateFields,
-      applicationFields,
-    });
+    const { applicationId, candidateId } = await createApplication(
+      conn,
+      job.Id,
+      {
+        candidateFields,
+        applicationFields,
+      },
+      existingCandidate?.Id
+    );
 
     const noteReqs = [
       saveNote(conn, candidateId, {

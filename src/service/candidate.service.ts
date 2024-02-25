@@ -19,7 +19,8 @@ export const fetchCandidate = async (conn: Connection<SmoothstackSchema>, candid
 export const createCandidate = async (
   conn: Connection<SmoothstackSchema>,
   candidateFields: CandidateFields,
-  utmTerm: string
+  utmTerm: string,
+  existingId?: string
 ): Promise<string> => {
   const candidateOwner = await deriveCandidateOwner(conn, utmTerm);
   const candidateRecord: Partial<Fields$Contact> = {
@@ -37,7 +38,10 @@ export const createCandidate = async (
     Potential_Smoothstack_Email__c: derivePotentialEmail(candidateFields.firstName, candidateFields.lastName),
     OwnerId: candidateOwner?.Id,
   };
-  const candidateRes = await conn.upsert('Contact', candidateRecord, 'Email');
+
+  const candidateRes = existingId
+    ? await conn.update('Contact', { Id: existingId, ...candidateRecord })
+    : await conn.insert('Contact', candidateRecord);
   return candidateRes.id;
 };
 
