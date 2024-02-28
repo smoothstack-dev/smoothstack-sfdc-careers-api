@@ -30,7 +30,7 @@ export const createCandidate = async (
     FirstName: candidateFields.firstName,
     LastName: candidateFields.lastName,
     ...(candidateFields.nickName && { Nickname__c: candidateFields.nickName }),
-    Candidate_Status__c: candidateFields.status,
+    ...(candidateFields.status && { Candidate_Status__c: candidateFields.status }),
     MailingCity: candidateFields.city,
     MailingStateCode: getStateCode(candidateFields.state),
     MailingCountryCode: 'US',

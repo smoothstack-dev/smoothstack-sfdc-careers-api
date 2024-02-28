@@ -1,5 +1,5 @@
 import { Knockout, KnockoutFields, KnockoutRequirements } from '../model/Knockout';
-import { calculateMonthsToGrad, hasMinDegree, hasMinYearsOfExperience } from './apply.util';
+import { calculateMonthsToGrad, hasMinDegree, hasMinYearsOfExperience, hasRecentApplication } from './apply.util';
 
 export const calculateKnockout = (knockoutReqs: KnockoutRequirements, fields: KnockoutFields): Knockout => {
   const {
@@ -18,8 +18,12 @@ export const calculateKnockout = (knockoutReqs: KnockoutRequirements, fields: Kn
     educationDegree,
     degreeExpected,
     codingAbility,
+    existingApplications,
   } = fields;
   const monthsToGraduation = graduationDate ? calculateMonthsToGrad(new Date(graduationDate)) : 0;
+  if (hasRecentApplication(existingApplications)) {
+    return Knockout.RECENTLY_APPLIED;
+  }
   if (!requiredWorkAuthorization.includes(workAuthorization)) {
     return Knockout.WORK_AUTH;
   }

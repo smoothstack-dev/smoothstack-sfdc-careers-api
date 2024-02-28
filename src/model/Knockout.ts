@@ -1,3 +1,5 @@
+import { Application } from './Application';
+
 export interface KnockoutRequirements {
   requiredWorkAuthorization: string[];
   jobLocation: string;
@@ -18,6 +20,7 @@ export interface KnockoutFields {
   techSelection?: string;
   hardwareDesign?: string;
   hardwareSkills?: string;
+  existingApplications: Application[];
 }
 
 export enum Knockout {
@@ -28,6 +31,7 @@ export enum Knockout {
   YEARS_OF_EXP = 'YEARS_OF_EXP',
   DEGREE = 'DEGREE',
   SELF_RANK = 'SELF_RANK',
+  RECENTLY_APPLIED = 'RECENTLY_APPLIED',
 }
 
 export const KNOCKOUT_STATUS = {
@@ -38,6 +42,7 @@ export const KNOCKOUT_STATUS = {
   [Knockout.YEARS_OF_EXP]: { applicationStatus: 'R-Years of Experience', candidateStatus: 'Rejected' },
   [Knockout.DEGREE]: { applicationStatus: 'R-Education', candidateStatus: 'Rejected' },
   [Knockout.SELF_RANK]: { applicationStatus: 'R-Self Rank', candidateStatus: 'Rejected' },
+  [Knockout.RECENTLY_APPLIED]: { applicationStatus: 'R-Recently Applied', candidateStatus: null },
 };
 
 export const KNOCKOUT_NOTE = {
@@ -49,4 +54,5 @@ export const KNOCKOUT_NOTE = {
   [Knockout.YEARS_OF_EXP]: 'Candidate rejected for years of experience. Potentially eligible for another role.',
   [Knockout.DEGREE]: 'Candidate rejected for education. Potentially eligible for another role.',
   [Knockout.SELF_RANK]: 'Candidate rejected for coding self rank ability.',
+  [Knockout.RECENTLY_APPLIED]: 'Candidate rejected because they have another application within the last 60 days',
 };

@@ -1,3 +1,7 @@
+import { Application } from '../model/Application';
+
+const DAY_DIFF = 60;
+
 export const calculateMonthsToGrad = (graduationDate: Date): number => {
   const today = new Date(
     new Date().toLocaleDateString('en-US', {
@@ -26,4 +30,14 @@ export const hasMinDegree = (minDegree: string, educationDegree: string) => {
   const validDegreeList = ['Not Specifed', "Associate's", "Bachelor's", "Master's", 'PhD'];
   const degree = noDegreeList.includes(educationDegree) ? 'Not Specified' : educationDegree;
   return validDegreeList.indexOf(degree) >= validDegreeList.indexOf(minDegree);
+};
+
+export const hasRecentApplication = (applications: Application[]): boolean => {
+  return applications
+    .filter((a) => a.Rejection_Reason__c !== 'Recently Applied')
+    .some((a) => {
+      const timeDiff = new Date().getTime() - new Date(a.CreatedDate).getTime();
+      const dayDiff = timeDiff / (1000 * 3600 * 24);
+      return dayDiff < DAY_DIFF;
+    });
 };
