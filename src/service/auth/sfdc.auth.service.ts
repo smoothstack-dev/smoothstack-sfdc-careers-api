@@ -5,7 +5,7 @@ import { getSFDCSecrets } from '../secrets.service';
 
 const INSTANCE_URL = 'https://smoothstack.my.salesforce.com';
 
-export const getSFDCConnection = async () => {
+export const getSFDCConnection = async (version?: string) => {
   const { CONSUMER_KEY, USER_NAME, PRIVATE_KEY } = await getSFDCSecrets();
   const options = {
     iss: CONSUMER_KEY,
@@ -18,5 +18,6 @@ export const getSFDCConnection = async () => {
   return new Connection<SmoothstackSchema>({
     instanceUrl: INSTANCE_URL,
     accessToken: access_token,
+    version,
   });
 };

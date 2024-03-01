@@ -55,8 +55,6 @@ export const createApplication = async (
     }),
     ...(applicationFields.degreeExpected && { Expected_Degree__c: applicationFields.degreeExpected }),
     ...(applicationFields.highestDegree && { Education_Level__c: applicationFields.highestDegree }),
-    Military_Status__c: applicationFields.militaryStatus,
-    ...(applicationFields.militaryBranch && { Military_Branch__c: applicationFields.militaryBranch }),
     ...(applicationFields.major && { Major__c: applicationFields.major }),
     ...(applicationFields.linkedin && { LinkedIn_URL__c: applicationFields.linkedin }),
     ...(applicationFields.instagram && { Instagram_URL__c: applicationFields.instagram }),

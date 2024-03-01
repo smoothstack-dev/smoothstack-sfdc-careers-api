@@ -14,6 +14,7 @@ import { generateApplicationNote } from '../util/note.util';
 import { publishDataGenerationRequest } from './sns.service';
 import { findContactByEmailOrPhone } from './contact.service';
 import { saveSFDCFiles } from './files.service';
+import { CandidateFields } from '../model/Candidate';
 
 export const apply = async (event: APIGatewayProxyEvent) => {
   console.log('Received Candidate Application Request: ', event.queryStringParameters);
@@ -32,10 +33,15 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     city,
     state,
     zip,
+    gender,
+    race,
+    disability,
+    militaryStatus,
+    militaryBranch,
     ...extraFields
   } = event.queryStringParameters;
   const { resume } = parse(event, true);
-  const conn = await getSFDCConnection();
+  const conn = await getSFDCConnection('57.0');
 
   const formattedFirstName = toTitleCase(firstName);
   const formattedLastName = toTitleCase(lastName);
@@ -85,7 +91,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     knockoutFields
   );
 
-  const candidateFields = {
+  const candidateFields: CandidateFields = {
     firstName: formattedFirstName,
     lastName: formattedLastName,
     nickName,
@@ -95,6 +101,11 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     state,
     zip,
     status: KNOCKOUT_STATUS[knockout].candidateStatus,
+    gender,
+    race,
+    disability,
+    militaryStatus,
+    militaryBranch,
   };
 
   const applicationFields = {
