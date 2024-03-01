@@ -17,4 +17,9 @@ export interface CandidateFields {
   city: string;
   state: string;
   zip: string;
+  race: string;
+  gender: string;
+  disability: string;
+  militaryStatus: string;
+  militaryBranch: string;
 }

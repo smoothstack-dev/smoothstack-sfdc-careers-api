@@ -32,11 +32,11 @@ type ChildRelationships$AIInsightAction = {
 };
 
 interface SObjectDefinition$AIInsightAction extends SObjectDefinition<'AIInsightAction'> {
-    Name: 'AIInsightAction';
-    Fields: Fields$AIInsightAction;
-    ParentReferences: ParentReferences$AIInsightAction;
-    ChildRelationships: ChildRelationships$AIInsightAction;
-  }
+  Name: 'AIInsightAction';
+  Fields: Fields$AIInsightAction;
+  ParentReferences: ParentReferences$AIInsightAction;
+  ChildRelationships: ChildRelationships$AIInsightAction;
+}
 
 type Fields$AIInsightFeedback = {
   //
@@ -69,11 +69,11 @@ type ChildRelationships$AIInsightFeedback = {
 };
 
 interface SObjectDefinition$AIInsightFeedback extends SObjectDefinition<'AIInsightFeedback'> {
-    Name: 'AIInsightFeedback';
-    Fields: Fields$AIInsightFeedback;
-    ParentReferences: ParentReferences$AIInsightFeedback;
-    ChildRelationships: ChildRelationships$AIInsightFeedback;
-  }
+  Name: 'AIInsightFeedback';
+  Fields: Fields$AIInsightFeedback;
+  ParentReferences: ParentReferences$AIInsightFeedback;
+  ChildRelationships: ChildRelationships$AIInsightFeedback;
+}
 
 type Fields$AIInsightReason = {
   //
@@ -108,11 +108,11 @@ type ChildRelationships$AIInsightReason = {
 };
 
 interface SObjectDefinition$AIInsightReason extends SObjectDefinition<'AIInsightReason'> {
-    Name: 'AIInsightReason';
-    Fields: Fields$AIInsightReason;
-    ParentReferences: ParentReferences$AIInsightReason;
-    ChildRelationships: ChildRelationships$AIInsightReason;
-  }
+  Name: 'AIInsightReason';
+  Fields: Fields$AIInsightReason;
+  ParentReferences: ParentReferences$AIInsightReason;
+  ChildRelationships: ChildRelationships$AIInsightReason;
+}
 
 type Fields$AIInsightValue = {
   //
@@ -152,11 +152,11 @@ type ChildRelationships$AIInsightValue = {
 };
 
 interface SObjectDefinition$AIInsightValue extends SObjectDefinition<'AIInsightValue'> {
-    Name: 'AIInsightValue';
-    Fields: Fields$AIInsightValue;
-    ParentReferences: ParentReferences$AIInsightValue;
-    ChildRelationships: ChildRelationships$AIInsightValue;
-  }
+  Name: 'AIInsightValue';
+  Fields: Fields$AIInsightValue;
+  ParentReferences: ParentReferences$AIInsightValue;
+  ChildRelationships: ChildRelationships$AIInsightValue;
+}
 
 type Fields$AIPredictionEvent = {
   //
@@ -181,11 +181,11 @@ type ChildRelationships$AIPredictionEvent = {
 };
 
 interface SObjectDefinition$AIPredictionEvent extends SObjectDefinition<'AIPredictionEvent'> {
-    Name: 'AIPredictionEvent';
-    Fields: Fields$AIPredictionEvent;
-    ParentReferences: ParentReferences$AIPredictionEvent;
-    ChildRelationships: ChildRelationships$AIPredictionEvent;
-  }
+  Name: 'AIPredictionEvent';
+  Fields: Fields$AIPredictionEvent;
+  ParentReferences: ParentReferences$AIPredictionEvent;
+  ChildRelationships: ChildRelationships$AIPredictionEvent;
+}
 
 type Fields$AIRecordInsight = {
   //
@@ -197,7 +197,7 @@ type Fields$AIRecordInsight = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
-  TargetId: string;
+  TargetId: string | null;
   TargetSobjectType: string;
   Type: string;
   RunGuid: string;
@@ -213,7 +213,7 @@ type ParentReferences$AIRecordInsight = {
   //
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
-  Target: SObjectDefinition$Name;
+  Target: SObjectDefinition$Name | null;
 };
 
 type ChildRelationships$AIRecordInsight = {
@@ -224,11 +224,11 @@ type ChildRelationships$AIRecordInsight = {
 };
 
 interface SObjectDefinition$AIRecordInsight extends SObjectDefinition<'AIRecordInsight'> {
-    Name: 'AIRecordInsight';
-    Fields: Fields$AIRecordInsight;
-    ParentReferences: ParentReferences$AIRecordInsight;
-    ChildRelationships: ChildRelationships$AIRecordInsight;
-  }
+  Name: 'AIRecordInsight';
+  Fields: Fields$AIRecordInsight;
+  ParentReferences: ParentReferences$AIRecordInsight;
+  ChildRelationships: ChildRelationships$AIRecordInsight;
+}
 
 type Fields$AcceptedEventRelation = {
   //
@@ -261,11 +261,11 @@ type ChildRelationships$AcceptedEventRelation = {
 };
 
 interface SObjectDefinition$AcceptedEventRelation extends SObjectDefinition<'AcceptedEventRelation'> {
-    Name: 'AcceptedEventRelation';
-    Fields: Fields$AcceptedEventRelation;
-    ParentReferences: ParentReferences$AcceptedEventRelation;
-    ChildRelationships: ChildRelationships$AcceptedEventRelation;
-  }
+  Name: 'AcceptedEventRelation';
+  Fields: Fields$AcceptedEventRelation;
+  ParentReferences: ParentReferences$AcceptedEventRelation;
+  ChildRelationships: ChildRelationships$AcceptedEventRelation;
+}
 
 type Fields$Account = {
   //
@@ -437,11 +437,11 @@ type ChildRelationships$Account = {
 };
 
 interface SObjectDefinition$Account extends SObjectDefinition<'Account'> {
-    Name: 'Account';
-    Fields: Fields$Account;
-    ParentReferences: ParentReferences$Account;
-    ChildRelationships: ChildRelationships$Account;
-  }
+  Name: 'Account';
+  Fields: Fields$Account;
+  ParentReferences: ParentReferences$Account;
+  ChildRelationships: ChildRelationships$Account;
+}
 
 type Fields$AccountChangeEvent = {
   //
@@ -548,11 +548,11 @@ type ChildRelationships$AccountChangeEvent = {
 };
 
 interface SObjectDefinition$AccountChangeEvent extends SObjectDefinition<'AccountChangeEvent'> {
-    Name: 'AccountChangeEvent';
-    Fields: Fields$AccountChangeEvent;
-    ParentReferences: ParentReferences$AccountChangeEvent;
-    ChildRelationships: ChildRelationships$AccountChangeEvent;
-  }
+  Name: 'AccountChangeEvent';
+  Fields: Fields$AccountChangeEvent;
+  ParentReferences: ParentReferences$AccountChangeEvent;
+  ChildRelationships: ChildRelationships$AccountChangeEvent;
+}
 
 type Fields$AccountContactRelation = {
   //
@@ -586,11 +586,11 @@ type ChildRelationships$AccountContactRelation = {
 };
 
 interface SObjectDefinition$AccountContactRelation extends SObjectDefinition<'AccountContactRelation'> {
-    Name: 'AccountContactRelation';
-    Fields: Fields$AccountContactRelation;
-    ParentReferences: ParentReferences$AccountContactRelation;
-    ChildRelationships: ChildRelationships$AccountContactRelation;
-  }
+  Name: 'AccountContactRelation';
+  Fields: Fields$AccountContactRelation;
+  ParentReferences: ParentReferences$AccountContactRelation;
+  ChildRelationships: ChildRelationships$AccountContactRelation;
+}
 
 type Fields$AccountContactRole = {
   //
@@ -620,11 +620,11 @@ type ChildRelationships$AccountContactRole = {
 };
 
 interface SObjectDefinition$AccountContactRole extends SObjectDefinition<'AccountContactRole'> {
-    Name: 'AccountContactRole';
-    Fields: Fields$AccountContactRole;
-    ParentReferences: ParentReferences$AccountContactRole;
-    ChildRelationships: ChildRelationships$AccountContactRole;
-  }
+  Name: 'AccountContactRole';
+  Fields: Fields$AccountContactRole;
+  ParentReferences: ParentReferences$AccountContactRole;
+  ChildRelationships: ChildRelationships$AccountContactRole;
+}
 
 type Fields$AccountContactRoleChangeEvent = {
   //
@@ -650,11 +650,11 @@ type ChildRelationships$AccountContactRoleChangeEvent = {
 };
 
 interface SObjectDefinition$AccountContactRoleChangeEvent extends SObjectDefinition<'AccountContactRoleChangeEvent'> {
-    Name: 'AccountContactRoleChangeEvent';
-    Fields: Fields$AccountContactRoleChangeEvent;
-    ParentReferences: ParentReferences$AccountContactRoleChangeEvent;
-    ChildRelationships: ChildRelationships$AccountContactRoleChangeEvent;
-  }
+  Name: 'AccountContactRoleChangeEvent';
+  Fields: Fields$AccountContactRoleChangeEvent;
+  ParentReferences: ParentReferences$AccountContactRoleChangeEvent;
+  ChildRelationships: ChildRelationships$AccountContactRoleChangeEvent;
+}
 
 type Fields$AccountFeed = {
   //
@@ -695,11 +695,11 @@ type ChildRelationships$AccountFeed = {
 };
 
 interface SObjectDefinition$AccountFeed extends SObjectDefinition<'AccountFeed'> {
-    Name: 'AccountFeed';
-    Fields: Fields$AccountFeed;
-    ParentReferences: ParentReferences$AccountFeed;
-    ChildRelationships: ChildRelationships$AccountFeed;
-  }
+  Name: 'AccountFeed';
+  Fields: Fields$AccountFeed;
+  ParentReferences: ParentReferences$AccountFeed;
+  ChildRelationships: ChildRelationships$AccountFeed;
+}
 
 type Fields$AccountHistory = {
   //
@@ -725,11 +725,11 @@ type ChildRelationships$AccountHistory = {
 };
 
 interface SObjectDefinition$AccountHistory extends SObjectDefinition<'AccountHistory'> {
-    Name: 'AccountHistory';
-    Fields: Fields$AccountHistory;
-    ParentReferences: ParentReferences$AccountHistory;
-    ChildRelationships: ChildRelationships$AccountHistory;
-  }
+  Name: 'AccountHistory';
+  Fields: Fields$AccountHistory;
+  ParentReferences: ParentReferences$AccountHistory;
+  ChildRelationships: ChildRelationships$AccountHistory;
+}
 
 type Fields$AccountPartner = {
   //
@@ -762,11 +762,11 @@ type ChildRelationships$AccountPartner = {
 };
 
 interface SObjectDefinition$AccountPartner extends SObjectDefinition<'AccountPartner'> {
-    Name: 'AccountPartner';
-    Fields: Fields$AccountPartner;
-    ParentReferences: ParentReferences$AccountPartner;
-    ChildRelationships: ChildRelationships$AccountPartner;
-  }
+  Name: 'AccountPartner';
+  Fields: Fields$AccountPartner;
+  ParentReferences: ParentReferences$AccountPartner;
+  ChildRelationships: ChildRelationships$AccountPartner;
+}
 
 type Fields$AccountShare = {
   //
@@ -795,11 +795,11 @@ type ChildRelationships$AccountShare = {
 };
 
 interface SObjectDefinition$AccountShare extends SObjectDefinition<'AccountShare'> {
-    Name: 'AccountShare';
-    Fields: Fields$AccountShare;
-    ParentReferences: ParentReferences$AccountShare;
-    ChildRelationships: ChildRelationships$AccountShare;
-  }
+  Name: 'AccountShare';
+  Fields: Fields$AccountShare;
+  ParentReferences: ParentReferences$AccountShare;
+  ChildRelationships: ChildRelationships$AccountShare;
+}
 
 type Fields$ActionLinkGroupTemplate = {
   //
@@ -832,11 +832,11 @@ type ChildRelationships$ActionLinkGroupTemplate = {
 };
 
 interface SObjectDefinition$ActionLinkGroupTemplate extends SObjectDefinition<'ActionLinkGroupTemplate'> {
-    Name: 'ActionLinkGroupTemplate';
-    Fields: Fields$ActionLinkGroupTemplate;
-    ParentReferences: ParentReferences$ActionLinkGroupTemplate;
-    ChildRelationships: ChildRelationships$ActionLinkGroupTemplate;
-  }
+  Name: 'ActionLinkGroupTemplate';
+  Fields: Fields$ActionLinkGroupTemplate;
+  ParentReferences: ParentReferences$ActionLinkGroupTemplate;
+  ChildRelationships: ChildRelationships$ActionLinkGroupTemplate;
+}
 
 type Fields$ActionLinkTemplate = {
   //
@@ -874,11 +874,11 @@ type ChildRelationships$ActionLinkTemplate = {
 };
 
 interface SObjectDefinition$ActionLinkTemplate extends SObjectDefinition<'ActionLinkTemplate'> {
-    Name: 'ActionLinkTemplate';
-    Fields: Fields$ActionLinkTemplate;
-    ParentReferences: ParentReferences$ActionLinkTemplate;
-    ChildRelationships: ChildRelationships$ActionLinkTemplate;
-  }
+  Name: 'ActionLinkTemplate';
+  Fields: Fields$ActionLinkTemplate;
+  ParentReferences: ParentReferences$ActionLinkTemplate;
+  ChildRelationships: ChildRelationships$ActionLinkTemplate;
+}
 
 type Fields$ActivityHistory = {
   //
@@ -956,11 +956,11 @@ type ChildRelationships$ActivityHistory = {
 };
 
 interface SObjectDefinition$ActivityHistory extends SObjectDefinition<'ActivityHistory'> {
-    Name: 'ActivityHistory';
-    Fields: Fields$ActivityHistory;
-    ParentReferences: ParentReferences$ActivityHistory;
-    ChildRelationships: ChildRelationships$ActivityHistory;
-  }
+  Name: 'ActivityHistory';
+  Fields: Fields$ActivityHistory;
+  ParentReferences: ParentReferences$ActivityHistory;
+  ChildRelationships: ChildRelationships$ActivityHistory;
+}
 
 type Fields$ActivityMetric = {
   //
@@ -1000,11 +1000,11 @@ type ChildRelationships$ActivityMetric = {
 };
 
 interface SObjectDefinition$ActivityMetric extends SObjectDefinition<'ActivityMetric'> {
-    Name: 'ActivityMetric';
-    Fields: Fields$ActivityMetric;
-    ParentReferences: ParentReferences$ActivityMetric;
-    ChildRelationships: ChildRelationships$ActivityMetric;
-  }
+  Name: 'ActivityMetric';
+  Fields: Fields$ActivityMetric;
+  ParentReferences: ParentReferences$ActivityMetric;
+  ChildRelationships: ChildRelationships$ActivityMetric;
+}
 
 type Fields$ActivityMetricRollup = {
   //
@@ -1035,11 +1035,11 @@ type ChildRelationships$ActivityMetricRollup = {
 };
 
 interface SObjectDefinition$ActivityMetricRollup extends SObjectDefinition<'ActivityMetricRollup'> {
-    Name: 'ActivityMetricRollup';
-    Fields: Fields$ActivityMetricRollup;
-    ParentReferences: ParentReferences$ActivityMetricRollup;
-    ChildRelationships: ChildRelationships$ActivityMetricRollup;
-  }
+  Name: 'ActivityMetricRollup';
+  Fields: Fields$ActivityMetricRollup;
+  ParentReferences: ParentReferences$ActivityMetricRollup;
+  ChildRelationships: ChildRelationships$ActivityMetricRollup;
+}
 
 type Fields$AdditionalNumber = {
   //
@@ -1067,11 +1067,90 @@ type ChildRelationships$AdditionalNumber = {
 };
 
 interface SObjectDefinition$AdditionalNumber extends SObjectDefinition<'AdditionalNumber'> {
-    Name: 'AdditionalNumber';
-    Fields: Fields$AdditionalNumber;
-    ParentReferences: ParentReferences$AdditionalNumber;
-    ChildRelationships: ChildRelationships$AdditionalNumber;
-  }
+  Name: 'AdditionalNumber';
+  Fields: Fields$AdditionalNumber;
+  ParentReferences: ParentReferences$AdditionalNumber;
+  ChildRelationships: ChildRelationships$AdditionalNumber;
+}
+
+type Fields$Address_Autocomplete__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Google_Key__c: string | null;
+};
+
+type ParentReferences$Address_Autocomplete__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Address_Autocomplete__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Address_Autocomplete__ChangeEvent
+  extends SObjectDefinition<'Address_Autocomplete__ChangeEvent'> {
+  Name: 'Address_Autocomplete__ChangeEvent';
+  Fields: Fields$Address_Autocomplete__ChangeEvent;
+  ParentReferences: ParentReferences$Address_Autocomplete__ChangeEvent;
+  ChildRelationships: ChildRelationships$Address_Autocomplete__ChangeEvent;
+}
+
+type Fields$Address_Autocomplete__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string | null;
+  SetupOwnerId: string | null;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Google_Key__c: string | null;
+};
+
+type ParentReferences$Address_Autocomplete__c = {
+  //
+  SetupOwner: SObjectDefinition$Name | null;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$Address_Autocomplete__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Address_Autocomplete__c extends SObjectDefinition<'Address_Autocomplete__c'> {
+  Name: 'Address_Autocomplete__c';
+  Fields: Fields$Address_Autocomplete__c;
+  ParentReferences: ParentReferences$Address_Autocomplete__c;
+  ChildRelationships: ChildRelationships$Address_Autocomplete__c;
+}
 
 type Fields$AggregateResult = {
   //
@@ -1087,11 +1166,11 @@ type ChildRelationships$AggregateResult = {
 };
 
 interface SObjectDefinition$AggregateResult extends SObjectDefinition<'AggregateResult'> {
-    Name: 'AggregateResult';
-    Fields: Fields$AggregateResult;
-    ParentReferences: ParentReferences$AggregateResult;
-    ChildRelationships: ChildRelationships$AggregateResult;
-  }
+  Name: 'AggregateResult';
+  Fields: Fields$AggregateResult;
+  ParentReferences: ParentReferences$AggregateResult;
+  ChildRelationships: ChildRelationships$AggregateResult;
+}
 
 type Fields$Announcement = {
   //
@@ -1122,11 +1201,11 @@ type ChildRelationships$Announcement = {
 };
 
 interface SObjectDefinition$Announcement extends SObjectDefinition<'Announcement'> {
-    Name: 'Announcement';
-    Fields: Fields$Announcement;
-    ParentReferences: ParentReferences$Announcement;
-    ChildRelationships: ChildRelationships$Announcement;
-  }
+  Name: 'Announcement';
+  Fields: Fields$Announcement;
+  ParentReferences: ParentReferences$Announcement;
+  ChildRelationships: ChildRelationships$Announcement;
+}
 
 type Fields$Anticipated_Revenue__ChangeEvent = {
   //
@@ -1153,12 +1232,13 @@ type ChildRelationships$Anticipated_Revenue__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Anticipated_Revenue__ChangeEvent extends SObjectDefinition<'Anticipated_Revenue__ChangeEvent'> {
-    Name: 'Anticipated_Revenue__ChangeEvent';
-    Fields: Fields$Anticipated_Revenue__ChangeEvent;
-    ParentReferences: ParentReferences$Anticipated_Revenue__ChangeEvent;
-    ChildRelationships: ChildRelationships$Anticipated_Revenue__ChangeEvent;
-  }
+interface SObjectDefinition$Anticipated_Revenue__ChangeEvent
+  extends SObjectDefinition<'Anticipated_Revenue__ChangeEvent'> {
+  Name: 'Anticipated_Revenue__ChangeEvent';
+  Fields: Fields$Anticipated_Revenue__ChangeEvent;
+  ParentReferences: ParentReferences$Anticipated_Revenue__ChangeEvent;
+  ChildRelationships: ChildRelationships$Anticipated_Revenue__ChangeEvent;
+}
 
 type Fields$Anticipated_Revenue__c = {
   //
@@ -1209,11 +1289,11 @@ type ChildRelationships$Anticipated_Revenue__c = {
 };
 
 interface SObjectDefinition$Anticipated_Revenue__c extends SObjectDefinition<'Anticipated_Revenue__c'> {
-    Name: 'Anticipated_Revenue__c';
-    Fields: Fields$Anticipated_Revenue__c;
-    ParentReferences: ParentReferences$Anticipated_Revenue__c;
-    ChildRelationships: ChildRelationships$Anticipated_Revenue__c;
-  }
+  Name: 'Anticipated_Revenue__c';
+  Fields: Fields$Anticipated_Revenue__c;
+  ParentReferences: ParentReferences$Anticipated_Revenue__c;
+  ChildRelationships: ChildRelationships$Anticipated_Revenue__c;
+}
 
 type Fields$ApexClass = {
   //
@@ -1245,11 +1325,11 @@ type ChildRelationships$ApexClass = {
 };
 
 interface SObjectDefinition$ApexClass extends SObjectDefinition<'ApexClass'> {
-    Name: 'ApexClass';
-    Fields: Fields$ApexClass;
-    ParentReferences: ParentReferences$ApexClass;
-    ChildRelationships: ChildRelationships$ApexClass;
-  }
+  Name: 'ApexClass';
+  Fields: Fields$ApexClass;
+  ParentReferences: ParentReferences$ApexClass;
+  ChildRelationships: ChildRelationships$ApexClass;
+}
 
 type Fields$ApexComponent = {
   //
@@ -1280,11 +1360,11 @@ type ChildRelationships$ApexComponent = {
 };
 
 interface SObjectDefinition$ApexComponent extends SObjectDefinition<'ApexComponent'> {
-    Name: 'ApexComponent';
-    Fields: Fields$ApexComponent;
-    ParentReferences: ParentReferences$ApexComponent;
-    ChildRelationships: ChildRelationships$ApexComponent;
-  }
+  Name: 'ApexComponent';
+  Fields: Fields$ApexComponent;
+  ParentReferences: ParentReferences$ApexComponent;
+  ChildRelationships: ChildRelationships$ApexComponent;
+}
 
 type Fields$ApexEmailNotification = {
   //
@@ -1311,11 +1391,11 @@ type ChildRelationships$ApexEmailNotification = {
 };
 
 interface SObjectDefinition$ApexEmailNotification extends SObjectDefinition<'ApexEmailNotification'> {
-    Name: 'ApexEmailNotification';
-    Fields: Fields$ApexEmailNotification;
-    ParentReferences: ParentReferences$ApexEmailNotification;
-    ChildRelationships: ChildRelationships$ApexEmailNotification;
-  }
+  Name: 'ApexEmailNotification';
+  Fields: Fields$ApexEmailNotification;
+  ParentReferences: ParentReferences$ApexEmailNotification;
+  ChildRelationships: ChildRelationships$ApexEmailNotification;
+}
 
 type Fields$ApexLog = {
   //
@@ -1344,11 +1424,11 @@ type ChildRelationships$ApexLog = {
 };
 
 interface SObjectDefinition$ApexLog extends SObjectDefinition<'ApexLog'> {
-    Name: 'ApexLog';
-    Fields: Fields$ApexLog;
-    ParentReferences: ParentReferences$ApexLog;
-    ChildRelationships: ChildRelationships$ApexLog;
-  }
+  Name: 'ApexLog';
+  Fields: Fields$ApexLog;
+  ParentReferences: ParentReferences$ApexLog;
+  ChildRelationships: ChildRelationships$ApexLog;
+}
 
 type Fields$ApexPage = {
   //
@@ -1382,11 +1462,11 @@ type ChildRelationships$ApexPage = {
 };
 
 interface SObjectDefinition$ApexPage extends SObjectDefinition<'ApexPage'> {
-    Name: 'ApexPage';
-    Fields: Fields$ApexPage;
-    ParentReferences: ParentReferences$ApexPage;
-    ChildRelationships: ChildRelationships$ApexPage;
-  }
+  Name: 'ApexPage';
+  Fields: Fields$ApexPage;
+  ParentReferences: ParentReferences$ApexPage;
+  ChildRelationships: ChildRelationships$ApexPage;
+}
 
 type Fields$ApexPageInfo = {
   //
@@ -1411,11 +1491,11 @@ type ChildRelationships$ApexPageInfo = {
 };
 
 interface SObjectDefinition$ApexPageInfo extends SObjectDefinition<'ApexPageInfo'> {
-    Name: 'ApexPageInfo';
-    Fields: Fields$ApexPageInfo;
-    ParentReferences: ParentReferences$ApexPageInfo;
-    ChildRelationships: ChildRelationships$ApexPageInfo;
-  }
+  Name: 'ApexPageInfo';
+  Fields: Fields$ApexPageInfo;
+  ParentReferences: ParentReferences$ApexPageInfo;
+  ChildRelationships: ChildRelationships$ApexPageInfo;
+}
 
 type Fields$ApexTestQueueItem = {
   //
@@ -1442,11 +1522,11 @@ type ChildRelationships$ApexTestQueueItem = {
 };
 
 interface SObjectDefinition$ApexTestQueueItem extends SObjectDefinition<'ApexTestQueueItem'> {
-    Name: 'ApexTestQueueItem';
-    Fields: Fields$ApexTestQueueItem;
-    ParentReferences: ParentReferences$ApexTestQueueItem;
-    ChildRelationships: ChildRelationships$ApexTestQueueItem;
-  }
+  Name: 'ApexTestQueueItem';
+  Fields: Fields$ApexTestQueueItem;
+  ParentReferences: ParentReferences$ApexTestQueueItem;
+  ChildRelationships: ChildRelationships$ApexTestQueueItem;
+}
 
 type Fields$ApexTestResult = {
   //
@@ -1480,11 +1560,11 @@ type ChildRelationships$ApexTestResult = {
 };
 
 interface SObjectDefinition$ApexTestResult extends SObjectDefinition<'ApexTestResult'> {
-    Name: 'ApexTestResult';
-    Fields: Fields$ApexTestResult;
-    ParentReferences: ParentReferences$ApexTestResult;
-    ChildRelationships: ChildRelationships$ApexTestResult;
-  }
+  Name: 'ApexTestResult';
+  Fields: Fields$ApexTestResult;
+  ParentReferences: ParentReferences$ApexTestResult;
+  ChildRelationships: ChildRelationships$ApexTestResult;
+}
 
 type Fields$ApexTestResultLimits = {
   //
@@ -1522,11 +1602,11 @@ type ChildRelationships$ApexTestResultLimits = {
 };
 
 interface SObjectDefinition$ApexTestResultLimits extends SObjectDefinition<'ApexTestResultLimits'> {
-    Name: 'ApexTestResultLimits';
-    Fields: Fields$ApexTestResultLimits;
-    ParentReferences: ParentReferences$ApexTestResultLimits;
-    ChildRelationships: ChildRelationships$ApexTestResultLimits;
-  }
+  Name: 'ApexTestResultLimits';
+  Fields: Fields$ApexTestResultLimits;
+  ParentReferences: ParentReferences$ApexTestResultLimits;
+  ChildRelationships: ChildRelationships$ApexTestResultLimits;
+}
 
 type Fields$ApexTestRunResult = {
   //
@@ -1566,11 +1646,11 @@ type ChildRelationships$ApexTestRunResult = {
 };
 
 interface SObjectDefinition$ApexTestRunResult extends SObjectDefinition<'ApexTestRunResult'> {
-    Name: 'ApexTestRunResult';
-    Fields: Fields$ApexTestRunResult;
-    ParentReferences: ParentReferences$ApexTestRunResult;
-    ChildRelationships: ChildRelationships$ApexTestRunResult;
-  }
+  Name: 'ApexTestRunResult';
+  Fields: Fields$ApexTestRunResult;
+  ParentReferences: ParentReferences$ApexTestRunResult;
+  ChildRelationships: ChildRelationships$ApexTestRunResult;
+}
 
 type Fields$ApexTestSuite = {
   //
@@ -1596,11 +1676,11 @@ type ChildRelationships$ApexTestSuite = {
 };
 
 interface SObjectDefinition$ApexTestSuite extends SObjectDefinition<'ApexTestSuite'> {
-    Name: 'ApexTestSuite';
-    Fields: Fields$ApexTestSuite;
-    ParentReferences: ParentReferences$ApexTestSuite;
-    ChildRelationships: ChildRelationships$ApexTestSuite;
-  }
+  Name: 'ApexTestSuite';
+  Fields: Fields$ApexTestSuite;
+  ParentReferences: ParentReferences$ApexTestSuite;
+  ChildRelationships: ChildRelationships$ApexTestSuite;
+}
 
 type Fields$ApexTrigger = {
   //
@@ -1640,11 +1720,11 @@ type ChildRelationships$ApexTrigger = {
 };
 
 interface SObjectDefinition$ApexTrigger extends SObjectDefinition<'ApexTrigger'> {
-    Name: 'ApexTrigger';
-    Fields: Fields$ApexTrigger;
-    ParentReferences: ParentReferences$ApexTrigger;
-    ChildRelationships: ChildRelationships$ApexTrigger;
-  }
+  Name: 'ApexTrigger';
+  Fields: Fields$ApexTrigger;
+  ParentReferences: ParentReferences$ApexTrigger;
+  ChildRelationships: ChildRelationships$ApexTrigger;
+}
 
 type Fields$AppAnalyticsQueryRequest = {
   //
@@ -1681,11 +1761,11 @@ type ChildRelationships$AppAnalyticsQueryRequest = {
 };
 
 interface SObjectDefinition$AppAnalyticsQueryRequest extends SObjectDefinition<'AppAnalyticsQueryRequest'> {
-    Name: 'AppAnalyticsQueryRequest';
-    Fields: Fields$AppAnalyticsQueryRequest;
-    ParentReferences: ParentReferences$AppAnalyticsQueryRequest;
-    ChildRelationships: ChildRelationships$AppAnalyticsQueryRequest;
-  }
+  Name: 'AppAnalyticsQueryRequest';
+  Fields: Fields$AppAnalyticsQueryRequest;
+  ParentReferences: ParentReferences$AppAnalyticsQueryRequest;
+  ChildRelationships: ChildRelationships$AppAnalyticsQueryRequest;
+}
 
 type Fields$AppDefinition = {
   //
@@ -1719,11 +1799,11 @@ type ChildRelationships$AppDefinition = {
 };
 
 interface SObjectDefinition$AppDefinition extends SObjectDefinition<'AppDefinition'> {
-    Name: 'AppDefinition';
-    Fields: Fields$AppDefinition;
-    ParentReferences: ParentReferences$AppDefinition;
-    ChildRelationships: ChildRelationships$AppDefinition;
-  }
+  Name: 'AppDefinition';
+  Fields: Fields$AppDefinition;
+  ParentReferences: ParentReferences$AppDefinition;
+  ChildRelationships: ChildRelationships$AppDefinition;
+}
 
 type Fields$AppMenuItem = {
   //
@@ -1778,11 +1858,11 @@ type ChildRelationships$AppMenuItem = {
 };
 
 interface SObjectDefinition$AppMenuItem extends SObjectDefinition<'AppMenuItem'> {
-    Name: 'AppMenuItem';
-    Fields: Fields$AppMenuItem;
-    ParentReferences: ParentReferences$AppMenuItem;
-    ChildRelationships: ChildRelationships$AppMenuItem;
-  }
+  Name: 'AppMenuItem';
+  Fields: Fields$AppMenuItem;
+  ParentReferences: ParentReferences$AppMenuItem;
+  ChildRelationships: ChildRelationships$AppMenuItem;
+}
 
 type Fields$AppTabMember = {
   //
@@ -1803,11 +1883,11 @@ type ChildRelationships$AppTabMember = {
 };
 
 interface SObjectDefinition$AppTabMember extends SObjectDefinition<'AppTabMember'> {
-    Name: 'AppTabMember';
-    Fields: Fields$AppTabMember;
-    ParentReferences: ParentReferences$AppTabMember;
-    ChildRelationships: ChildRelationships$AppTabMember;
-  }
+  Name: 'AppTabMember';
+  Fields: Fields$AppTabMember;
+  ParentReferences: ParentReferences$AppTabMember;
+  ChildRelationships: ChildRelationships$AppTabMember;
+}
 
 type Fields$AppleDomainVerification = {
   //
@@ -1837,11 +1917,11 @@ type ChildRelationships$AppleDomainVerification = {
 };
 
 interface SObjectDefinition$AppleDomainVerification extends SObjectDefinition<'AppleDomainVerification'> {
-    Name: 'AppleDomainVerification';
-    Fields: Fields$AppleDomainVerification;
-    ParentReferences: ParentReferences$AppleDomainVerification;
-    ChildRelationships: ChildRelationships$AppleDomainVerification;
-  }
+  Name: 'AppleDomainVerification';
+  Fields: Fields$AppleDomainVerification;
+  ParentReferences: ParentReferences$AppleDomainVerification;
+  ChildRelationships: ChildRelationships$AppleDomainVerification;
+}
 
 type Fields$Applicant__ChangeEvent = {
   //
@@ -1886,11 +1966,11 @@ type ChildRelationships$Applicant__ChangeEvent = {
 };
 
 interface SObjectDefinition$Applicant__ChangeEvent extends SObjectDefinition<'Applicant__ChangeEvent'> {
-    Name: 'Applicant__ChangeEvent';
-    Fields: Fields$Applicant__ChangeEvent;
-    ParentReferences: ParentReferences$Applicant__ChangeEvent;
-    ChildRelationships: ChildRelationships$Applicant__ChangeEvent;
-  }
+  Name: 'Applicant__ChangeEvent';
+  Fields: Fields$Applicant__ChangeEvent;
+  ParentReferences: ParentReferences$Applicant__ChangeEvent;
+  ChildRelationships: ChildRelationships$Applicant__ChangeEvent;
+}
 
 type Fields$Applicant__History = {
   //
@@ -1916,11 +1996,11 @@ type ChildRelationships$Applicant__History = {
 };
 
 interface SObjectDefinition$Applicant__History extends SObjectDefinition<'Applicant__History'> {
-    Name: 'Applicant__History';
-    Fields: Fields$Applicant__History;
-    ParentReferences: ParentReferences$Applicant__History;
-    ChildRelationships: ChildRelationships$Applicant__History;
-  }
+  Name: 'Applicant__History';
+  Fields: Fields$Applicant__History;
+  ParentReferences: ParentReferences$Applicant__History;
+  ChildRelationships: ChildRelationships$Applicant__History;
+}
 
 type Fields$Applicant__c = {
   //
@@ -1991,11 +2071,11 @@ type ChildRelationships$Applicant__c = {
 };
 
 interface SObjectDefinition$Applicant__c extends SObjectDefinition<'Applicant__c'> {
-    Name: 'Applicant__c';
-    Fields: Fields$Applicant__c;
-    ParentReferences: ParentReferences$Applicant__c;
-    ChildRelationships: ChildRelationships$Applicant__c;
-  }
+  Name: 'Applicant__c';
+  Fields: Fields$Applicant__c;
+  ParentReferences: ParentReferences$Applicant__c;
+  ChildRelationships: ChildRelationships$Applicant__c;
+}
 
 type Fields$Approval = {
   //
@@ -2026,11 +2106,11 @@ type ChildRelationships$Approval = {
 };
 
 interface SObjectDefinition$Approval extends SObjectDefinition<'Approval'> {
-    Name: 'Approval';
-    Fields: Fields$Approval;
-    ParentReferences: ParentReferences$Approval;
-    ChildRelationships: ChildRelationships$Approval;
-  }
+  Name: 'Approval';
+  Fields: Fields$Approval;
+  ParentReferences: ParentReferences$Approval;
+  ChildRelationships: ChildRelationships$Approval;
+}
 
 type Fields$Asset = {
   //
@@ -2113,11 +2193,11 @@ type ChildRelationships$Asset = {
 };
 
 interface SObjectDefinition$Asset extends SObjectDefinition<'Asset'> {
-    Name: 'Asset';
-    Fields: Fields$Asset;
-    ParentReferences: ParentReferences$Asset;
-    ChildRelationships: ChildRelationships$Asset;
-  }
+  Name: 'Asset';
+  Fields: Fields$Asset;
+  ParentReferences: ParentReferences$Asset;
+  ChildRelationships: ChildRelationships$Asset;
+}
 
 type Fields$AssetChangeEvent = {
   //
@@ -2158,11 +2238,11 @@ type ChildRelationships$AssetChangeEvent = {
 };
 
 interface SObjectDefinition$AssetChangeEvent extends SObjectDefinition<'AssetChangeEvent'> {
-    Name: 'AssetChangeEvent';
-    Fields: Fields$AssetChangeEvent;
-    ParentReferences: ParentReferences$AssetChangeEvent;
-    ChildRelationships: ChildRelationships$AssetChangeEvent;
-  }
+  Name: 'AssetChangeEvent';
+  Fields: Fields$AssetChangeEvent;
+  ParentReferences: ParentReferences$AssetChangeEvent;
+  ChildRelationships: ChildRelationships$AssetChangeEvent;
+}
 
 type Fields$AssetFeed = {
   //
@@ -2203,11 +2283,11 @@ type ChildRelationships$AssetFeed = {
 };
 
 interface SObjectDefinition$AssetFeed extends SObjectDefinition<'AssetFeed'> {
-    Name: 'AssetFeed';
-    Fields: Fields$AssetFeed;
-    ParentReferences: ParentReferences$AssetFeed;
-    ChildRelationships: ChildRelationships$AssetFeed;
-  }
+  Name: 'AssetFeed';
+  Fields: Fields$AssetFeed;
+  ParentReferences: ParentReferences$AssetFeed;
+  ChildRelationships: ChildRelationships$AssetFeed;
+}
 
 type Fields$AssetHistory = {
   //
@@ -2233,11 +2313,11 @@ type ChildRelationships$AssetHistory = {
 };
 
 interface SObjectDefinition$AssetHistory extends SObjectDefinition<'AssetHistory'> {
-    Name: 'AssetHistory';
-    Fields: Fields$AssetHistory;
-    ParentReferences: ParentReferences$AssetHistory;
-    ChildRelationships: ChildRelationships$AssetHistory;
-  }
+  Name: 'AssetHistory';
+  Fields: Fields$AssetHistory;
+  ParentReferences: ParentReferences$AssetHistory;
+  ChildRelationships: ChildRelationships$AssetHistory;
+}
 
 type Fields$AssetRelationship = {
   //
@@ -2289,11 +2369,11 @@ type ChildRelationships$AssetRelationship = {
 };
 
 interface SObjectDefinition$AssetRelationship extends SObjectDefinition<'AssetRelationship'> {
-    Name: 'AssetRelationship';
-    Fields: Fields$AssetRelationship;
-    ParentReferences: ParentReferences$AssetRelationship;
-    ChildRelationships: ChildRelationships$AssetRelationship;
-  }
+  Name: 'AssetRelationship';
+  Fields: Fields$AssetRelationship;
+  ParentReferences: ParentReferences$AssetRelationship;
+  ChildRelationships: ChildRelationships$AssetRelationship;
+}
 
 type Fields$AssetRelationshipFeed = {
   //
@@ -2334,11 +2414,11 @@ type ChildRelationships$AssetRelationshipFeed = {
 };
 
 interface SObjectDefinition$AssetRelationshipFeed extends SObjectDefinition<'AssetRelationshipFeed'> {
-    Name: 'AssetRelationshipFeed';
-    Fields: Fields$AssetRelationshipFeed;
-    ParentReferences: ParentReferences$AssetRelationshipFeed;
-    ChildRelationships: ChildRelationships$AssetRelationshipFeed;
-  }
+  Name: 'AssetRelationshipFeed';
+  Fields: Fields$AssetRelationshipFeed;
+  ParentReferences: ParentReferences$AssetRelationshipFeed;
+  ChildRelationships: ChildRelationships$AssetRelationshipFeed;
+}
 
 type Fields$AssetRelationshipHistory = {
   //
@@ -2364,11 +2444,11 @@ type ChildRelationships$AssetRelationshipHistory = {
 };
 
 interface SObjectDefinition$AssetRelationshipHistory extends SObjectDefinition<'AssetRelationshipHistory'> {
-    Name: 'AssetRelationshipHistory';
-    Fields: Fields$AssetRelationshipHistory;
-    ParentReferences: ParentReferences$AssetRelationshipHistory;
-    ChildRelationships: ChildRelationships$AssetRelationshipHistory;
-  }
+  Name: 'AssetRelationshipHistory';
+  Fields: Fields$AssetRelationshipHistory;
+  ParentReferences: ParentReferences$AssetRelationshipHistory;
+  ChildRelationships: ChildRelationships$AssetRelationshipHistory;
+}
 
 type Fields$AssetShare = {
   //
@@ -2394,11 +2474,11 @@ type ChildRelationships$AssetShare = {
 };
 
 interface SObjectDefinition$AssetShare extends SObjectDefinition<'AssetShare'> {
-    Name: 'AssetShare';
-    Fields: Fields$AssetShare;
-    ParentReferences: ParentReferences$AssetShare;
-    ChildRelationships: ChildRelationships$AssetShare;
-  }
+  Name: 'AssetShare';
+  Fields: Fields$AssetShare;
+  ParentReferences: ParentReferences$AssetShare;
+  ChildRelationships: ChildRelationships$AssetShare;
+}
 
 type Fields$AssetTokenEvent = {
   //
@@ -2430,11 +2510,11 @@ type ChildRelationships$AssetTokenEvent = {
 };
 
 interface SObjectDefinition$AssetTokenEvent extends SObjectDefinition<'AssetTokenEvent'> {
-    Name: 'AssetTokenEvent';
-    Fields: Fields$AssetTokenEvent;
-    ParentReferences: ParentReferences$AssetTokenEvent;
-    ChildRelationships: ChildRelationships$AssetTokenEvent;
-  }
+  Name: 'AssetTokenEvent';
+  Fields: Fields$AssetTokenEvent;
+  ParentReferences: ParentReferences$AssetTokenEvent;
+  ChildRelationships: ChildRelationships$AssetTokenEvent;
+}
 
 type Fields$AssignmentRule = {
   //
@@ -2460,11 +2540,11 @@ type ChildRelationships$AssignmentRule = {
 };
 
 interface SObjectDefinition$AssignmentRule extends SObjectDefinition<'AssignmentRule'> {
-    Name: 'AssignmentRule';
-    Fields: Fields$AssignmentRule;
-    ParentReferences: ParentReferences$AssignmentRule;
-    ChildRelationships: ChildRelationships$AssignmentRule;
-  }
+  Name: 'AssignmentRule';
+  Fields: Fields$AssignmentRule;
+  ParentReferences: ParentReferences$AssignmentRule;
+  ChildRelationships: ChildRelationships$AssignmentRule;
+}
 
 type Fields$Assignment_Group_Member__ChangeEvent = {
   //
@@ -2492,12 +2572,13 @@ type ChildRelationships$Assignment_Group_Member__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Assignment_Group_Member__ChangeEvent extends SObjectDefinition<'Assignment_Group_Member__ChangeEvent'> {
-    Name: 'Assignment_Group_Member__ChangeEvent';
-    Fields: Fields$Assignment_Group_Member__ChangeEvent;
-    ParentReferences: ParentReferences$Assignment_Group_Member__ChangeEvent;
-    ChildRelationships: ChildRelationships$Assignment_Group_Member__ChangeEvent;
-  }
+interface SObjectDefinition$Assignment_Group_Member__ChangeEvent
+  extends SObjectDefinition<'Assignment_Group_Member__ChangeEvent'> {
+  Name: 'Assignment_Group_Member__ChangeEvent';
+  Fields: Fields$Assignment_Group_Member__ChangeEvent;
+  ParentReferences: ParentReferences$Assignment_Group_Member__ChangeEvent;
+  ChildRelationships: ChildRelationships$Assignment_Group_Member__ChangeEvent;
+}
 
 type Fields$Assignment_Group_Member__c = {
   //
@@ -2552,11 +2633,11 @@ type ChildRelationships$Assignment_Group_Member__c = {
 };
 
 interface SObjectDefinition$Assignment_Group_Member__c extends SObjectDefinition<'Assignment_Group_Member__c'> {
-    Name: 'Assignment_Group_Member__c';
-    Fields: Fields$Assignment_Group_Member__c;
-    ParentReferences: ParentReferences$Assignment_Group_Member__c;
-    ChildRelationships: ChildRelationships$Assignment_Group_Member__c;
-  }
+  Name: 'Assignment_Group_Member__c';
+  Fields: Fields$Assignment_Group_Member__c;
+  ParentReferences: ParentReferences$Assignment_Group_Member__c;
+  ChildRelationships: ChildRelationships$Assignment_Group_Member__c;
+}
 
 type Fields$Assignment_Group__ChangeEvent = {
   //
@@ -2582,11 +2663,11 @@ type ChildRelationships$Assignment_Group__ChangeEvent = {
 };
 
 interface SObjectDefinition$Assignment_Group__ChangeEvent extends SObjectDefinition<'Assignment_Group__ChangeEvent'> {
-    Name: 'Assignment_Group__ChangeEvent';
-    Fields: Fields$Assignment_Group__ChangeEvent;
-    ParentReferences: ParentReferences$Assignment_Group__ChangeEvent;
-    ChildRelationships: ChildRelationships$Assignment_Group__ChangeEvent;
-  }
+  Name: 'Assignment_Group__ChangeEvent';
+  Fields: Fields$Assignment_Group__ChangeEvent;
+  ParentReferences: ParentReferences$Assignment_Group__ChangeEvent;
+  ChildRelationships: ChildRelationships$Assignment_Group__ChangeEvent;
+}
 
 type Fields$Assignment_Group__c = {
   //
@@ -2637,11 +2718,11 @@ type ChildRelationships$Assignment_Group__c = {
 };
 
 interface SObjectDefinition$Assignment_Group__c extends SObjectDefinition<'Assignment_Group__c'> {
-    Name: 'Assignment_Group__c';
-    Fields: Fields$Assignment_Group__c;
-    ParentReferences: ParentReferences$Assignment_Group__c;
-    ChildRelationships: ChildRelationships$Assignment_Group__c;
-  }
+  Name: 'Assignment_Group__c';
+  Fields: Fields$Assignment_Group__c;
+  ParentReferences: ParentReferences$Assignment_Group__c;
+  ChildRelationships: ChildRelationships$Assignment_Group__c;
+}
 
 type Fields$AssociatedLocation = {
   //
@@ -2680,11 +2761,11 @@ type ChildRelationships$AssociatedLocation = {
 };
 
 interface SObjectDefinition$AssociatedLocation extends SObjectDefinition<'AssociatedLocation'> {
-    Name: 'AssociatedLocation';
-    Fields: Fields$AssociatedLocation;
-    ParentReferences: ParentReferences$AssociatedLocation;
-    ChildRelationships: ChildRelationships$AssociatedLocation;
-  }
+  Name: 'AssociatedLocation';
+  Fields: Fields$AssociatedLocation;
+  ParentReferences: ParentReferences$AssociatedLocation;
+  ChildRelationships: ChildRelationships$AssociatedLocation;
+}
 
 type Fields$AssociatedLocationHistory = {
   //
@@ -2710,11 +2791,11 @@ type ChildRelationships$AssociatedLocationHistory = {
 };
 
 interface SObjectDefinition$AssociatedLocationHistory extends SObjectDefinition<'AssociatedLocationHistory'> {
-    Name: 'AssociatedLocationHistory';
-    Fields: Fields$AssociatedLocationHistory;
-    ParentReferences: ParentReferences$AssociatedLocationHistory;
-    ChildRelationships: ChildRelationships$AssociatedLocationHistory;
-  }
+  Name: 'AssociatedLocationHistory';
+  Fields: Fields$AssociatedLocationHistory;
+  ParentReferences: ParentReferences$AssociatedLocationHistory;
+  ChildRelationships: ChildRelationships$AssociatedLocationHistory;
+}
 
 type Fields$AsyncApexJob = {
   //
@@ -2747,11 +2828,11 @@ type ChildRelationships$AsyncApexJob = {
 };
 
 interface SObjectDefinition$AsyncApexJob extends SObjectDefinition<'AsyncApexJob'> {
-    Name: 'AsyncApexJob';
-    Fields: Fields$AsyncApexJob;
-    ParentReferences: ParentReferences$AsyncApexJob;
-    ChildRelationships: ChildRelationships$AsyncApexJob;
-  }
+  Name: 'AsyncApexJob';
+  Fields: Fields$AsyncApexJob;
+  ParentReferences: ParentReferences$AsyncApexJob;
+  ChildRelationships: ChildRelationships$AsyncApexJob;
+}
 
 type Fields$AsyncOperationEvent = {
   //
@@ -2773,11 +2854,11 @@ type ChildRelationships$AsyncOperationEvent = {
 };
 
 interface SObjectDefinition$AsyncOperationEvent extends SObjectDefinition<'AsyncOperationEvent'> {
-    Name: 'AsyncOperationEvent';
-    Fields: Fields$AsyncOperationEvent;
-    ParentReferences: ParentReferences$AsyncOperationEvent;
-    ChildRelationships: ChildRelationships$AsyncOperationEvent;
-  }
+  Name: 'AsyncOperationEvent';
+  Fields: Fields$AsyncOperationEvent;
+  ParentReferences: ParentReferences$AsyncOperationEvent;
+  ChildRelationships: ChildRelationships$AsyncOperationEvent;
+}
 
 type Fields$AsyncOperationStatus = {
   //
@@ -2800,11 +2881,11 @@ type ChildRelationships$AsyncOperationStatus = {
 };
 
 interface SObjectDefinition$AsyncOperationStatus extends SObjectDefinition<'AsyncOperationStatus'> {
-    Name: 'AsyncOperationStatus';
-    Fields: Fields$AsyncOperationStatus;
-    ParentReferences: ParentReferences$AsyncOperationStatus;
-    ChildRelationships: ChildRelationships$AsyncOperationStatus;
-  }
+  Name: 'AsyncOperationStatus';
+  Fields: Fields$AsyncOperationStatus;
+  ParentReferences: ParentReferences$AsyncOperationStatus;
+  ChildRelationships: ChildRelationships$AsyncOperationStatus;
+}
 
 type Fields$AttachedContentDocument = {
   //
@@ -2839,11 +2920,11 @@ type ChildRelationships$AttachedContentDocument = {
 };
 
 interface SObjectDefinition$AttachedContentDocument extends SObjectDefinition<'AttachedContentDocument'> {
-    Name: 'AttachedContentDocument';
-    Fields: Fields$AttachedContentDocument;
-    ParentReferences: ParentReferences$AttachedContentDocument;
-    ChildRelationships: ChildRelationships$AttachedContentDocument;
-  }
+  Name: 'AttachedContentDocument';
+  Fields: Fields$AttachedContentDocument;
+  ParentReferences: ParentReferences$AttachedContentDocument;
+  ChildRelationships: ChildRelationships$AttachedContentDocument;
+}
 
 type Fields$AttachedContentNote = {
   //
@@ -2875,11 +2956,11 @@ type ChildRelationships$AttachedContentNote = {
 };
 
 interface SObjectDefinition$AttachedContentNote extends SObjectDefinition<'AttachedContentNote'> {
-    Name: 'AttachedContentNote';
-    Fields: Fields$AttachedContentNote;
-    ParentReferences: ParentReferences$AttachedContentNote;
-    ChildRelationships: ChildRelationships$AttachedContentNote;
-  }
+  Name: 'AttachedContentNote';
+  Fields: Fields$AttachedContentNote;
+  ParentReferences: ParentReferences$AttachedContentNote;
+  ChildRelationships: ChildRelationships$AttachedContentNote;
+}
 
 type Fields$Attachment = {
   //
@@ -2913,11 +2994,11 @@ type ChildRelationships$Attachment = {
 };
 
 interface SObjectDefinition$Attachment extends SObjectDefinition<'Attachment'> {
-    Name: 'Attachment';
-    Fields: Fields$Attachment;
-    ParentReferences: ParentReferences$Attachment;
-    ChildRelationships: ChildRelationships$Attachment;
-  }
+  Name: 'Attachment';
+  Fields: Fields$Attachment;
+  ParentReferences: ParentReferences$Attachment;
+  ChildRelationships: ChildRelationships$Attachment;
+}
 
 type Fields$AuraDefinition = {
   //
@@ -2946,11 +3027,11 @@ type ChildRelationships$AuraDefinition = {
 };
 
 interface SObjectDefinition$AuraDefinition extends SObjectDefinition<'AuraDefinition'> {
-    Name: 'AuraDefinition';
-    Fields: Fields$AuraDefinition;
-    ParentReferences: ParentReferences$AuraDefinition;
-    ChildRelationships: ChildRelationships$AuraDefinition;
-  }
+  Name: 'AuraDefinition';
+  Fields: Fields$AuraDefinition;
+  ParentReferences: ParentReferences$AuraDefinition;
+  ChildRelationships: ChildRelationships$AuraDefinition;
+}
 
 type Fields$AuraDefinitionBundle = {
   //
@@ -2980,11 +3061,11 @@ type ChildRelationships$AuraDefinitionBundle = {
 };
 
 interface SObjectDefinition$AuraDefinitionBundle extends SObjectDefinition<'AuraDefinitionBundle'> {
-    Name: 'AuraDefinitionBundle';
-    Fields: Fields$AuraDefinitionBundle;
-    ParentReferences: ParentReferences$AuraDefinitionBundle;
-    ChildRelationships: ChildRelationships$AuraDefinitionBundle;
-  }
+  Name: 'AuraDefinitionBundle';
+  Fields: Fields$AuraDefinitionBundle;
+  ParentReferences: ParentReferences$AuraDefinitionBundle;
+  ChildRelationships: ChildRelationships$AuraDefinitionBundle;
+}
 
 type Fields$AuraDefinitionBundleInfo = {
   //
@@ -3006,11 +3087,11 @@ type ChildRelationships$AuraDefinitionBundleInfo = {
 };
 
 interface SObjectDefinition$AuraDefinitionBundleInfo extends SObjectDefinition<'AuraDefinitionBundleInfo'> {
-    Name: 'AuraDefinitionBundleInfo';
-    Fields: Fields$AuraDefinitionBundleInfo;
-    ParentReferences: ParentReferences$AuraDefinitionBundleInfo;
-    ChildRelationships: ChildRelationships$AuraDefinitionBundleInfo;
-  }
+  Name: 'AuraDefinitionBundleInfo';
+  Fields: Fields$AuraDefinitionBundleInfo;
+  ParentReferences: ParentReferences$AuraDefinitionBundleInfo;
+  ChildRelationships: ChildRelationships$AuraDefinitionBundleInfo;
+}
 
 type Fields$AuraDefinitionInfo = {
   //
@@ -3035,11 +3116,11 @@ type ChildRelationships$AuraDefinitionInfo = {
 };
 
 interface SObjectDefinition$AuraDefinitionInfo extends SObjectDefinition<'AuraDefinitionInfo'> {
-    Name: 'AuraDefinitionInfo';
-    Fields: Fields$AuraDefinitionInfo;
-    ParentReferences: ParentReferences$AuraDefinitionInfo;
-    ChildRelationships: ChildRelationships$AuraDefinitionInfo;
-  }
+  Name: 'AuraDefinitionInfo';
+  Fields: Fields$AuraDefinitionInfo;
+  ParentReferences: ParentReferences$AuraDefinitionInfo;
+  ChildRelationships: ChildRelationships$AuraDefinitionInfo;
+}
 
 type Fields$AuthConfig = {
   //
@@ -3075,11 +3156,11 @@ type ChildRelationships$AuthConfig = {
 };
 
 interface SObjectDefinition$AuthConfig extends SObjectDefinition<'AuthConfig'> {
-    Name: 'AuthConfig';
-    Fields: Fields$AuthConfig;
-    ParentReferences: ParentReferences$AuthConfig;
-    ChildRelationships: ChildRelationships$AuthConfig;
-  }
+  Name: 'AuthConfig';
+  Fields: Fields$AuthConfig;
+  ParentReferences: ParentReferences$AuthConfig;
+  ChildRelationships: ChildRelationships$AuthConfig;
+}
 
 type Fields$AuthConfigProviders = {
   //
@@ -3107,11 +3188,11 @@ type ChildRelationships$AuthConfigProviders = {
 };
 
 interface SObjectDefinition$AuthConfigProviders extends SObjectDefinition<'AuthConfigProviders'> {
-    Name: 'AuthConfigProviders';
-    Fields: Fields$AuthConfigProviders;
-    ParentReferences: ParentReferences$AuthConfigProviders;
-    ChildRelationships: ChildRelationships$AuthConfigProviders;
-  }
+  Name: 'AuthConfigProviders';
+  Fields: Fields$AuthConfigProviders;
+  ParentReferences: ParentReferences$AuthConfigProviders;
+  ChildRelationships: ChildRelationships$AuthConfigProviders;
+}
 
 type Fields$AuthProvider = {
   //
@@ -3154,11 +3235,11 @@ type ChildRelationships$AuthProvider = {
 };
 
 interface SObjectDefinition$AuthProvider extends SObjectDefinition<'AuthProvider'> {
-    Name: 'AuthProvider';
-    Fields: Fields$AuthProvider;
-    ParentReferences: ParentReferences$AuthProvider;
-    ChildRelationships: ChildRelationships$AuthProvider;
-  }
+  Name: 'AuthProvider';
+  Fields: Fields$AuthProvider;
+  ParentReferences: ParentReferences$AuthProvider;
+  ChildRelationships: ChildRelationships$AuthProvider;
+}
 
 type Fields$AuthSession = {
   //
@@ -3192,11 +3273,11 @@ type ChildRelationships$AuthSession = {
 };
 
 interface SObjectDefinition$AuthSession extends SObjectDefinition<'AuthSession'> {
-    Name: 'AuthSession';
-    Fields: Fields$AuthSession;
-    ParentReferences: ParentReferences$AuthSession;
-    ChildRelationships: ChildRelationships$AuthSession;
-  }
+  Name: 'AuthSession';
+  Fields: Fields$AuthSession;
+  ParentReferences: ParentReferences$AuthSession;
+  ChildRelationships: ChildRelationships$AuthSession;
+}
 
 type Fields$AuthorizationForm = {
   //
@@ -3236,11 +3317,11 @@ type ChildRelationships$AuthorizationForm = {
 };
 
 interface SObjectDefinition$AuthorizationForm extends SObjectDefinition<'AuthorizationForm'> {
-    Name: 'AuthorizationForm';
-    Fields: Fields$AuthorizationForm;
-    ParentReferences: ParentReferences$AuthorizationForm;
-    ChildRelationships: ChildRelationships$AuthorizationForm;
-  }
+  Name: 'AuthorizationForm';
+  Fields: Fields$AuthorizationForm;
+  ParentReferences: ParentReferences$AuthorizationForm;
+  ChildRelationships: ChildRelationships$AuthorizationForm;
+}
 
 type Fields$AuthorizationFormConsent = {
   //
@@ -3285,11 +3366,11 @@ type ChildRelationships$AuthorizationFormConsent = {
 };
 
 interface SObjectDefinition$AuthorizationFormConsent extends SObjectDefinition<'AuthorizationFormConsent'> {
-    Name: 'AuthorizationFormConsent';
-    Fields: Fields$AuthorizationFormConsent;
-    ParentReferences: ParentReferences$AuthorizationFormConsent;
-    ChildRelationships: ChildRelationships$AuthorizationFormConsent;
-  }
+  Name: 'AuthorizationFormConsent';
+  Fields: Fields$AuthorizationFormConsent;
+  ParentReferences: ParentReferences$AuthorizationFormConsent;
+  ChildRelationships: ChildRelationships$AuthorizationFormConsent;
+}
 
 type Fields$AuthorizationFormConsentChangeEvent = {
   //
@@ -3320,12 +3401,13 @@ type ChildRelationships$AuthorizationFormConsentChangeEvent = {
   //
 };
 
-interface SObjectDefinition$AuthorizationFormConsentChangeEvent extends SObjectDefinition<'AuthorizationFormConsentChangeEvent'> {
-    Name: 'AuthorizationFormConsentChangeEvent';
-    Fields: Fields$AuthorizationFormConsentChangeEvent;
-    ParentReferences: ParentReferences$AuthorizationFormConsentChangeEvent;
-    ChildRelationships: ChildRelationships$AuthorizationFormConsentChangeEvent;
-  }
+interface SObjectDefinition$AuthorizationFormConsentChangeEvent
+  extends SObjectDefinition<'AuthorizationFormConsentChangeEvent'> {
+  Name: 'AuthorizationFormConsentChangeEvent';
+  Fields: Fields$AuthorizationFormConsentChangeEvent;
+  ParentReferences: ParentReferences$AuthorizationFormConsentChangeEvent;
+  ChildRelationships: ChildRelationships$AuthorizationFormConsentChangeEvent;
+}
 
 type Fields$AuthorizationFormConsentHistory = {
   //
@@ -3350,12 +3432,13 @@ type ChildRelationships$AuthorizationFormConsentHistory = {
   //
 };
 
-interface SObjectDefinition$AuthorizationFormConsentHistory extends SObjectDefinition<'AuthorizationFormConsentHistory'> {
-    Name: 'AuthorizationFormConsentHistory';
-    Fields: Fields$AuthorizationFormConsentHistory;
-    ParentReferences: ParentReferences$AuthorizationFormConsentHistory;
-    ChildRelationships: ChildRelationships$AuthorizationFormConsentHistory;
-  }
+interface SObjectDefinition$AuthorizationFormConsentHistory
+  extends SObjectDefinition<'AuthorizationFormConsentHistory'> {
+  Name: 'AuthorizationFormConsentHistory';
+  Fields: Fields$AuthorizationFormConsentHistory;
+  ParentReferences: ParentReferences$AuthorizationFormConsentHistory;
+  ChildRelationships: ChildRelationships$AuthorizationFormConsentHistory;
+}
 
 type Fields$AuthorizationFormConsentShare = {
   //
@@ -3381,11 +3464,11 @@ type ChildRelationships$AuthorizationFormConsentShare = {
 };
 
 interface SObjectDefinition$AuthorizationFormConsentShare extends SObjectDefinition<'AuthorizationFormConsentShare'> {
-    Name: 'AuthorizationFormConsentShare';
-    Fields: Fields$AuthorizationFormConsentShare;
-    ParentReferences: ParentReferences$AuthorizationFormConsentShare;
-    ChildRelationships: ChildRelationships$AuthorizationFormConsentShare;
-  }
+  Name: 'AuthorizationFormConsentShare';
+  Fields: Fields$AuthorizationFormConsentShare;
+  ParentReferences: ParentReferences$AuthorizationFormConsentShare;
+  ChildRelationships: ChildRelationships$AuthorizationFormConsentShare;
+}
 
 type Fields$AuthorizationFormDataUse = {
   //
@@ -3422,11 +3505,11 @@ type ChildRelationships$AuthorizationFormDataUse = {
 };
 
 interface SObjectDefinition$AuthorizationFormDataUse extends SObjectDefinition<'AuthorizationFormDataUse'> {
-    Name: 'AuthorizationFormDataUse';
-    Fields: Fields$AuthorizationFormDataUse;
-    ParentReferences: ParentReferences$AuthorizationFormDataUse;
-    ChildRelationships: ChildRelationships$AuthorizationFormDataUse;
-  }
+  Name: 'AuthorizationFormDataUse';
+  Fields: Fields$AuthorizationFormDataUse;
+  ParentReferences: ParentReferences$AuthorizationFormDataUse;
+  ChildRelationships: ChildRelationships$AuthorizationFormDataUse;
+}
 
 type Fields$AuthorizationFormDataUseHistory = {
   //
@@ -3451,12 +3534,13 @@ type ChildRelationships$AuthorizationFormDataUseHistory = {
   //
 };
 
-interface SObjectDefinition$AuthorizationFormDataUseHistory extends SObjectDefinition<'AuthorizationFormDataUseHistory'> {
-    Name: 'AuthorizationFormDataUseHistory';
-    Fields: Fields$AuthorizationFormDataUseHistory;
-    ParentReferences: ParentReferences$AuthorizationFormDataUseHistory;
-    ChildRelationships: ChildRelationships$AuthorizationFormDataUseHistory;
-  }
+interface SObjectDefinition$AuthorizationFormDataUseHistory
+  extends SObjectDefinition<'AuthorizationFormDataUseHistory'> {
+  Name: 'AuthorizationFormDataUseHistory';
+  Fields: Fields$AuthorizationFormDataUseHistory;
+  ParentReferences: ParentReferences$AuthorizationFormDataUseHistory;
+  ChildRelationships: ChildRelationships$AuthorizationFormDataUseHistory;
+}
 
 type Fields$AuthorizationFormDataUseShare = {
   //
@@ -3482,11 +3566,11 @@ type ChildRelationships$AuthorizationFormDataUseShare = {
 };
 
 interface SObjectDefinition$AuthorizationFormDataUseShare extends SObjectDefinition<'AuthorizationFormDataUseShare'> {
-    Name: 'AuthorizationFormDataUseShare';
-    Fields: Fields$AuthorizationFormDataUseShare;
-    ParentReferences: ParentReferences$AuthorizationFormDataUseShare;
-    ChildRelationships: ChildRelationships$AuthorizationFormDataUseShare;
-  }
+  Name: 'AuthorizationFormDataUseShare';
+  Fields: Fields$AuthorizationFormDataUseShare;
+  ParentReferences: ParentReferences$AuthorizationFormDataUseShare;
+  ChildRelationships: ChildRelationships$AuthorizationFormDataUseShare;
+}
 
 type Fields$AuthorizationFormHistory = {
   //
@@ -3512,11 +3596,11 @@ type ChildRelationships$AuthorizationFormHistory = {
 };
 
 interface SObjectDefinition$AuthorizationFormHistory extends SObjectDefinition<'AuthorizationFormHistory'> {
-    Name: 'AuthorizationFormHistory';
-    Fields: Fields$AuthorizationFormHistory;
-    ParentReferences: ParentReferences$AuthorizationFormHistory;
-    ChildRelationships: ChildRelationships$AuthorizationFormHistory;
-  }
+  Name: 'AuthorizationFormHistory';
+  Fields: Fields$AuthorizationFormHistory;
+  ParentReferences: ParentReferences$AuthorizationFormHistory;
+  ChildRelationships: ChildRelationships$AuthorizationFormHistory;
+}
 
 type Fields$AuthorizationFormShare = {
   //
@@ -3542,11 +3626,11 @@ type ChildRelationships$AuthorizationFormShare = {
 };
 
 interface SObjectDefinition$AuthorizationFormShare extends SObjectDefinition<'AuthorizationFormShare'> {
-    Name: 'AuthorizationFormShare';
-    Fields: Fields$AuthorizationFormShare;
-    ParentReferences: ParentReferences$AuthorizationFormShare;
-    ChildRelationships: ChildRelationships$AuthorizationFormShare;
-  }
+  Name: 'AuthorizationFormShare';
+  Fields: Fields$AuthorizationFormShare;
+  ParentReferences: ParentReferences$AuthorizationFormShare;
+  ChildRelationships: ChildRelationships$AuthorizationFormShare;
+}
 
 type Fields$AuthorizationFormText = {
   //
@@ -3590,11 +3674,11 @@ type ChildRelationships$AuthorizationFormText = {
 };
 
 interface SObjectDefinition$AuthorizationFormText extends SObjectDefinition<'AuthorizationFormText'> {
-    Name: 'AuthorizationFormText';
-    Fields: Fields$AuthorizationFormText;
-    ParentReferences: ParentReferences$AuthorizationFormText;
-    ChildRelationships: ChildRelationships$AuthorizationFormText;
-  }
+  Name: 'AuthorizationFormText';
+  Fields: Fields$AuthorizationFormText;
+  ParentReferences: ParentReferences$AuthorizationFormText;
+  ChildRelationships: ChildRelationships$AuthorizationFormText;
+}
 
 type Fields$AuthorizationFormTextHistory = {
   //
@@ -3620,11 +3704,11 @@ type ChildRelationships$AuthorizationFormTextHistory = {
 };
 
 interface SObjectDefinition$AuthorizationFormTextHistory extends SObjectDefinition<'AuthorizationFormTextHistory'> {
-    Name: 'AuthorizationFormTextHistory';
-    Fields: Fields$AuthorizationFormTextHistory;
-    ParentReferences: ParentReferences$AuthorizationFormTextHistory;
-    ChildRelationships: ChildRelationships$AuthorizationFormTextHistory;
-  }
+  Name: 'AuthorizationFormTextHistory';
+  Fields: Fields$AuthorizationFormTextHistory;
+  ParentReferences: ParentReferences$AuthorizationFormTextHistory;
+  ChildRelationships: ChildRelationships$AuthorizationFormTextHistory;
+}
 
 type Fields$BackgroundOperation = {
   //
@@ -3669,11 +3753,11 @@ type ChildRelationships$BackgroundOperation = {
 };
 
 interface SObjectDefinition$BackgroundOperation extends SObjectDefinition<'BackgroundOperation'> {
-    Name: 'BackgroundOperation';
-    Fields: Fields$BackgroundOperation;
-    ParentReferences: ParentReferences$BackgroundOperation;
-    ChildRelationships: ChildRelationships$BackgroundOperation;
-  }
+  Name: 'BackgroundOperation';
+  Fields: Fields$BackgroundOperation;
+  ParentReferences: ParentReferences$BackgroundOperation;
+  ChildRelationships: ChildRelationships$BackgroundOperation;
+}
 
 type Fields$BatchApexErrorEvent = {
   //
@@ -3700,11 +3784,11 @@ type ChildRelationships$BatchApexErrorEvent = {
 };
 
 interface SObjectDefinition$BatchApexErrorEvent extends SObjectDefinition<'BatchApexErrorEvent'> {
-    Name: 'BatchApexErrorEvent';
-    Fields: Fields$BatchApexErrorEvent;
-    ParentReferences: ParentReferences$BatchApexErrorEvent;
-    ChildRelationships: ChildRelationships$BatchApexErrorEvent;
-  }
+  Name: 'BatchApexErrorEvent';
+  Fields: Fields$BatchApexErrorEvent;
+  ParentReferences: ParentReferences$BatchApexErrorEvent;
+  ChildRelationships: ChildRelationships$BatchApexErrorEvent;
+}
 
 type Fields$BrandTemplate = {
   //
@@ -3733,11 +3817,11 @@ type ChildRelationships$BrandTemplate = {
 };
 
 interface SObjectDefinition$BrandTemplate extends SObjectDefinition<'BrandTemplate'> {
-    Name: 'BrandTemplate';
-    Fields: Fields$BrandTemplate;
-    ParentReferences: ParentReferences$BrandTemplate;
-    ChildRelationships: ChildRelationships$BrandTemplate;
-  }
+  Name: 'BrandTemplate';
+  Fields: Fields$BrandTemplate;
+  ParentReferences: ParentReferences$BrandTemplate;
+  ChildRelationships: ChildRelationships$BrandTemplate;
+}
 
 type Fields$BrandingSet = {
   //
@@ -3766,11 +3850,11 @@ type ChildRelationships$BrandingSet = {
 };
 
 interface SObjectDefinition$BrandingSet extends SObjectDefinition<'BrandingSet'> {
-    Name: 'BrandingSet';
-    Fields: Fields$BrandingSet;
-    ParentReferences: ParentReferences$BrandingSet;
-    ChildRelationships: ChildRelationships$BrandingSet;
-  }
+  Name: 'BrandingSet';
+  Fields: Fields$BrandingSet;
+  ParentReferences: ParentReferences$BrandingSet;
+  ChildRelationships: ChildRelationships$BrandingSet;
+}
 
 type Fields$BrandingSetProperty = {
   //
@@ -3798,11 +3882,11 @@ type ChildRelationships$BrandingSetProperty = {
 };
 
 interface SObjectDefinition$BrandingSetProperty extends SObjectDefinition<'BrandingSetProperty'> {
-    Name: 'BrandingSetProperty';
-    Fields: Fields$BrandingSetProperty;
-    ParentReferences: ParentReferences$BrandingSetProperty;
-    ChildRelationships: ChildRelationships$BrandingSetProperty;
-  }
+  Name: 'BrandingSetProperty';
+  Fields: Fields$BrandingSetProperty;
+  ParentReferences: ParentReferences$BrandingSetProperty;
+  ChildRelationships: ChildRelationships$BrandingSetProperty;
+}
 
 type Fields$BriefcaseAssignment = {
   //
@@ -3830,11 +3914,11 @@ type ChildRelationships$BriefcaseAssignment = {
 };
 
 interface SObjectDefinition$BriefcaseAssignment extends SObjectDefinition<'BriefcaseAssignment'> {
-    Name: 'BriefcaseAssignment';
-    Fields: Fields$BriefcaseAssignment;
-    ParentReferences: ParentReferences$BriefcaseAssignment;
-    ChildRelationships: ChildRelationships$BriefcaseAssignment;
-  }
+  Name: 'BriefcaseAssignment';
+  Fields: Fields$BriefcaseAssignment;
+  ParentReferences: ParentReferences$BriefcaseAssignment;
+  ChildRelationships: ChildRelationships$BriefcaseAssignment;
+}
 
 type Fields$BriefcaseDefinition = {
   //
@@ -3866,11 +3950,11 @@ type ChildRelationships$BriefcaseDefinition = {
 };
 
 interface SObjectDefinition$BriefcaseDefinition extends SObjectDefinition<'BriefcaseDefinition'> {
-    Name: 'BriefcaseDefinition';
-    Fields: Fields$BriefcaseDefinition;
-    ParentReferences: ParentReferences$BriefcaseDefinition;
-    ChildRelationships: ChildRelationships$BriefcaseDefinition;
-  }
+  Name: 'BriefcaseDefinition';
+  Fields: Fields$BriefcaseDefinition;
+  ParentReferences: ParentReferences$BriefcaseDefinition;
+  ChildRelationships: ChildRelationships$BriefcaseDefinition;
+}
 
 type Fields$BriefcaseRule = {
   //
@@ -3903,11 +3987,11 @@ type ChildRelationships$BriefcaseRule = {
 };
 
 interface SObjectDefinition$BriefcaseRule extends SObjectDefinition<'BriefcaseRule'> {
-    Name: 'BriefcaseRule';
-    Fields: Fields$BriefcaseRule;
-    ParentReferences: ParentReferences$BriefcaseRule;
-    ChildRelationships: ChildRelationships$BriefcaseRule;
-  }
+  Name: 'BriefcaseRule';
+  Fields: Fields$BriefcaseRule;
+  ParentReferences: ParentReferences$BriefcaseRule;
+  ChildRelationships: ChildRelationships$BriefcaseRule;
+}
 
 type Fields$BriefcaseRuleFilter = {
   //
@@ -3937,11 +4021,11 @@ type ChildRelationships$BriefcaseRuleFilter = {
 };
 
 interface SObjectDefinition$BriefcaseRuleFilter extends SObjectDefinition<'BriefcaseRuleFilter'> {
-    Name: 'BriefcaseRuleFilter';
-    Fields: Fields$BriefcaseRuleFilter;
-    ParentReferences: ParentReferences$BriefcaseRuleFilter;
-    ChildRelationships: ChildRelationships$BriefcaseRuleFilter;
-  }
+  Name: 'BriefcaseRuleFilter';
+  Fields: Fields$BriefcaseRuleFilter;
+  ParentReferences: ParentReferences$BriefcaseRuleFilter;
+  ChildRelationships: ChildRelationships$BriefcaseRuleFilter;
+}
 
 type Fields$BusinessHours = {
   //
@@ -3983,11 +4067,11 @@ type ChildRelationships$BusinessHours = {
 };
 
 interface SObjectDefinition$BusinessHours extends SObjectDefinition<'BusinessHours'> {
-    Name: 'BusinessHours';
-    Fields: Fields$BusinessHours;
-    ParentReferences: ParentReferences$BusinessHours;
-    ChildRelationships: ChildRelationships$BusinessHours;
-  }
+  Name: 'BusinessHours';
+  Fields: Fields$BusinessHours;
+  ParentReferences: ParentReferences$BusinessHours;
+  ChildRelationships: ChildRelationships$BusinessHours;
+}
 
 type Fields$BusinessProcess = {
   //
@@ -4015,11 +4099,11 @@ type ChildRelationships$BusinessProcess = {
 };
 
 interface SObjectDefinition$BusinessProcess extends SObjectDefinition<'BusinessProcess'> {
-    Name: 'BusinessProcess';
-    Fields: Fields$BusinessProcess;
-    ParentReferences: ParentReferences$BusinessProcess;
-    ChildRelationships: ChildRelationships$BusinessProcess;
-  }
+  Name: 'BusinessProcess';
+  Fields: Fields$BusinessProcess;
+  ParentReferences: ParentReferences$BusinessProcess;
+  ChildRelationships: ChildRelationships$BusinessProcess;
+}
 
 type Fields$CTH_Terms__ChangeEvent = {
   //
@@ -4032,6 +4116,10 @@ type Fields$CTH_Terms__ChangeEvent = {
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
   Deal__c: string | null;
+  Buyout_Amount__c: number | null;
+  Buyout_Hours__c: number | null;
+  Buyout_Month__c: number | null;
+  Buyout_Percentage__c: number | null;
 };
 
 type ParentReferences$CTH_Terms__ChangeEvent = {
@@ -4043,11 +4131,11 @@ type ChildRelationships$CTH_Terms__ChangeEvent = {
 };
 
 interface SObjectDefinition$CTH_Terms__ChangeEvent extends SObjectDefinition<'CTH_Terms__ChangeEvent'> {
-    Name: 'CTH_Terms__ChangeEvent';
-    Fields: Fields$CTH_Terms__ChangeEvent;
-    ParentReferences: ParentReferences$CTH_Terms__ChangeEvent;
-    ChildRelationships: ChildRelationships$CTH_Terms__ChangeEvent;
-  }
+  Name: 'CTH_Terms__ChangeEvent';
+  Fields: Fields$CTH_Terms__ChangeEvent;
+  ParentReferences: ParentReferences$CTH_Terms__ChangeEvent;
+  ChildRelationships: ChildRelationships$CTH_Terms__ChangeEvent;
+}
 
 type Fields$CTH_Terms__c = {
   //
@@ -4060,6 +4148,10 @@ type Fields$CTH_Terms__c = {
   LastModifiedById: string;
   SystemModstamp: DateString;
   Deal__c: string;
+  Buyout_Amount__c: number | null;
+  Buyout_Hours__c: number | null;
+  Buyout_Month__c: number | null;
+  Buyout_Percentage__c: number | null;
 };
 
 type ParentReferences$CTH_Terms__c = {
@@ -4094,11 +4186,11 @@ type ChildRelationships$CTH_Terms__c = {
 };
 
 interface SObjectDefinition$CTH_Terms__c extends SObjectDefinition<'CTH_Terms__c'> {
-    Name: 'CTH_Terms__c';
-    Fields: Fields$CTH_Terms__c;
-    ParentReferences: ParentReferences$CTH_Terms__c;
-    ChildRelationships: ChildRelationships$CTH_Terms__c;
-  }
+  Name: 'CTH_Terms__c';
+  Fields: Fields$CTH_Terms__c;
+  ParentReferences: ParentReferences$CTH_Terms__c;
+  ChildRelationships: ChildRelationships$CTH_Terms__c;
+}
 
 type Fields$Calendar = {
   //
@@ -4129,11 +4221,11 @@ type ChildRelationships$Calendar = {
 };
 
 interface SObjectDefinition$Calendar extends SObjectDefinition<'Calendar'> {
-    Name: 'Calendar';
-    Fields: Fields$Calendar;
-    ParentReferences: ParentReferences$Calendar;
-    ChildRelationships: ChildRelationships$Calendar;
-  }
+  Name: 'Calendar';
+  Fields: Fields$Calendar;
+  ParentReferences: ParentReferences$Calendar;
+  ChildRelationships: ChildRelationships$Calendar;
+}
 
 type Fields$CalendarView = {
   //
@@ -4171,11 +4263,11 @@ type ChildRelationships$CalendarView = {
 };
 
 interface SObjectDefinition$CalendarView extends SObjectDefinition<'CalendarView'> {
-    Name: 'CalendarView';
-    Fields: Fields$CalendarView;
-    ParentReferences: ParentReferences$CalendarView;
-    ChildRelationships: ChildRelationships$CalendarView;
-  }
+  Name: 'CalendarView';
+  Fields: Fields$CalendarView;
+  ParentReferences: ParentReferences$CalendarView;
+  ChildRelationships: ChildRelationships$CalendarView;
+}
 
 type Fields$CalendarViewShare = {
   //
@@ -4201,11 +4293,11 @@ type ChildRelationships$CalendarViewShare = {
 };
 
 interface SObjectDefinition$CalendarViewShare extends SObjectDefinition<'CalendarViewShare'> {
-    Name: 'CalendarViewShare';
-    Fields: Fields$CalendarViewShare;
-    ParentReferences: ParentReferences$CalendarViewShare;
-    ChildRelationships: ChildRelationships$CalendarViewShare;
-  }
+  Name: 'CalendarViewShare';
+  Fields: Fields$CalendarViewShare;
+  ParentReferences: ParentReferences$CalendarViewShare;
+  ChildRelationships: ChildRelationships$CalendarViewShare;
+}
 
 type Fields$CallCenter = {
   //
@@ -4233,11 +4325,11 @@ type ChildRelationships$CallCenter = {
 };
 
 interface SObjectDefinition$CallCenter extends SObjectDefinition<'CallCenter'> {
-    Name: 'CallCenter';
-    Fields: Fields$CallCenter;
-    ParentReferences: ParentReferences$CallCenter;
-    ChildRelationships: ChildRelationships$CallCenter;
-  }
+  Name: 'CallCenter';
+  Fields: Fields$CallCenter;
+  ParentReferences: ParentReferences$CallCenter;
+  ChildRelationships: ChildRelationships$CallCenter;
+}
 
 type Fields$CallCoachingMediaProvider = {
   //
@@ -4264,11 +4356,11 @@ type ChildRelationships$CallCoachingMediaProvider = {
 };
 
 interface SObjectDefinition$CallCoachingMediaProvider extends SObjectDefinition<'CallCoachingMediaProvider'> {
-    Name: 'CallCoachingMediaProvider';
-    Fields: Fields$CallCoachingMediaProvider;
-    ParentReferences: ParentReferences$CallCoachingMediaProvider;
-    ChildRelationships: ChildRelationships$CallCoachingMediaProvider;
-  }
+  Name: 'CallCoachingMediaProvider';
+  Fields: Fields$CallCoachingMediaProvider;
+  ParentReferences: ParentReferences$CallCoachingMediaProvider;
+  ChildRelationships: ChildRelationships$CallCoachingMediaProvider;
+}
 
 type Fields$Campaign = {
   //
@@ -4352,11 +4444,11 @@ type ChildRelationships$Campaign = {
 };
 
 interface SObjectDefinition$Campaign extends SObjectDefinition<'Campaign'> {
-    Name: 'Campaign';
-    Fields: Fields$Campaign;
-    ParentReferences: ParentReferences$Campaign;
-    ChildRelationships: ChildRelationships$Campaign;
-  }
+  Name: 'Campaign';
+  Fields: Fields$Campaign;
+  ParentReferences: ParentReferences$Campaign;
+  ChildRelationships: ChildRelationships$Campaign;
+}
 
 type Fields$CampaignChangeEvent = {
   //
@@ -4403,11 +4495,11 @@ type ChildRelationships$CampaignChangeEvent = {
 };
 
 interface SObjectDefinition$CampaignChangeEvent extends SObjectDefinition<'CampaignChangeEvent'> {
-    Name: 'CampaignChangeEvent';
-    Fields: Fields$CampaignChangeEvent;
-    ParentReferences: ParentReferences$CampaignChangeEvent;
-    ChildRelationships: ChildRelationships$CampaignChangeEvent;
-  }
+  Name: 'CampaignChangeEvent';
+  Fields: Fields$CampaignChangeEvent;
+  ParentReferences: ParentReferences$CampaignChangeEvent;
+  ChildRelationships: ChildRelationships$CampaignChangeEvent;
+}
 
 type Fields$CampaignFeed = {
   //
@@ -4448,11 +4540,11 @@ type ChildRelationships$CampaignFeed = {
 };
 
 interface SObjectDefinition$CampaignFeed extends SObjectDefinition<'CampaignFeed'> {
-    Name: 'CampaignFeed';
-    Fields: Fields$CampaignFeed;
-    ParentReferences: ParentReferences$CampaignFeed;
-    ChildRelationships: ChildRelationships$CampaignFeed;
-  }
+  Name: 'CampaignFeed';
+  Fields: Fields$CampaignFeed;
+  ParentReferences: ParentReferences$CampaignFeed;
+  ChildRelationships: ChildRelationships$CampaignFeed;
+}
 
 type Fields$CampaignHistory = {
   //
@@ -4478,11 +4570,11 @@ type ChildRelationships$CampaignHistory = {
 };
 
 interface SObjectDefinition$CampaignHistory extends SObjectDefinition<'CampaignHistory'> {
-    Name: 'CampaignHistory';
-    Fields: Fields$CampaignHistory;
-    ParentReferences: ParentReferences$CampaignHistory;
-    ChildRelationships: ChildRelationships$CampaignHistory;
-  }
+  Name: 'CampaignHistory';
+  Fields: Fields$CampaignHistory;
+  ParentReferences: ParentReferences$CampaignHistory;
+  ChildRelationships: ChildRelationships$CampaignHistory;
+}
 
 type Fields$CampaignInfluenceModel = {
   //
@@ -4516,11 +4608,11 @@ type ChildRelationships$CampaignInfluenceModel = {
 };
 
 interface SObjectDefinition$CampaignInfluenceModel extends SObjectDefinition<'CampaignInfluenceModel'> {
-    Name: 'CampaignInfluenceModel';
-    Fields: Fields$CampaignInfluenceModel;
-    ParentReferences: ParentReferences$CampaignInfluenceModel;
-    ChildRelationships: ChildRelationships$CampaignInfluenceModel;
-  }
+  Name: 'CampaignInfluenceModel';
+  Fields: Fields$CampaignInfluenceModel;
+  ParentReferences: ParentReferences$CampaignInfluenceModel;
+  ChildRelationships: ChildRelationships$CampaignInfluenceModel;
+}
 
 type Fields$CampaignMember = {
   //
@@ -4580,11 +4672,11 @@ type ChildRelationships$CampaignMember = {
 };
 
 interface SObjectDefinition$CampaignMember extends SObjectDefinition<'CampaignMember'> {
-    Name: 'CampaignMember';
-    Fields: Fields$CampaignMember;
-    ParentReferences: ParentReferences$CampaignMember;
-    ChildRelationships: ChildRelationships$CampaignMember;
-  }
+  Name: 'CampaignMember';
+  Fields: Fields$CampaignMember;
+  ParentReferences: ParentReferences$CampaignMember;
+  ChildRelationships: ChildRelationships$CampaignMember;
+}
 
 type Fields$CampaignMemberChangeEvent = {
   //
@@ -4612,11 +4704,11 @@ type ChildRelationships$CampaignMemberChangeEvent = {
 };
 
 interface SObjectDefinition$CampaignMemberChangeEvent extends SObjectDefinition<'CampaignMemberChangeEvent'> {
-    Name: 'CampaignMemberChangeEvent';
-    Fields: Fields$CampaignMemberChangeEvent;
-    ParentReferences: ParentReferences$CampaignMemberChangeEvent;
-    ChildRelationships: ChildRelationships$CampaignMemberChangeEvent;
-  }
+  Name: 'CampaignMemberChangeEvent';
+  Fields: Fields$CampaignMemberChangeEvent;
+  ParentReferences: ParentReferences$CampaignMemberChangeEvent;
+  ChildRelationships: ChildRelationships$CampaignMemberChangeEvent;
+}
 
 type Fields$CampaignMemberStatus = {
   //
@@ -4645,11 +4737,11 @@ type ChildRelationships$CampaignMemberStatus = {
 };
 
 interface SObjectDefinition$CampaignMemberStatus extends SObjectDefinition<'CampaignMemberStatus'> {
-    Name: 'CampaignMemberStatus';
-    Fields: Fields$CampaignMemberStatus;
-    ParentReferences: ParentReferences$CampaignMemberStatus;
-    ChildRelationships: ChildRelationships$CampaignMemberStatus;
-  }
+  Name: 'CampaignMemberStatus';
+  Fields: Fields$CampaignMemberStatus;
+  ParentReferences: ParentReferences$CampaignMemberStatus;
+  ChildRelationships: ChildRelationships$CampaignMemberStatus;
+}
 
 type Fields$CampaignMemberStatusChangeEvent = {
   //
@@ -4674,12 +4766,13 @@ type ChildRelationships$CampaignMemberStatusChangeEvent = {
   //
 };
 
-interface SObjectDefinition$CampaignMemberStatusChangeEvent extends SObjectDefinition<'CampaignMemberStatusChangeEvent'> {
-    Name: 'CampaignMemberStatusChangeEvent';
-    Fields: Fields$CampaignMemberStatusChangeEvent;
-    ParentReferences: ParentReferences$CampaignMemberStatusChangeEvent;
-    ChildRelationships: ChildRelationships$CampaignMemberStatusChangeEvent;
-  }
+interface SObjectDefinition$CampaignMemberStatusChangeEvent
+  extends SObjectDefinition<'CampaignMemberStatusChangeEvent'> {
+  Name: 'CampaignMemberStatusChangeEvent';
+  Fields: Fields$CampaignMemberStatusChangeEvent;
+  ParentReferences: ParentReferences$CampaignMemberStatusChangeEvent;
+  ChildRelationships: ChildRelationships$CampaignMemberStatusChangeEvent;
+}
 
 type Fields$CampaignShare = {
   //
@@ -4705,11 +4798,11 @@ type ChildRelationships$CampaignShare = {
 };
 
 interface SObjectDefinition$CampaignShare extends SObjectDefinition<'CampaignShare'> {
-    Name: 'CampaignShare';
-    Fields: Fields$CampaignShare;
-    ParentReferences: ParentReferences$CampaignShare;
-    ChildRelationships: ChildRelationships$CampaignShare;
-  }
+  Name: 'CampaignShare';
+  Fields: Fields$CampaignShare;
+  ParentReferences: ParentReferences$CampaignShare;
+  ChildRelationships: ChildRelationships$CampaignShare;
+}
 
 type Fields$Case = {
   //
@@ -4798,11 +4891,11 @@ type ChildRelationships$Case = {
 };
 
 interface SObjectDefinition$Case extends SObjectDefinition<'Case'> {
-    Name: 'Case';
-    Fields: Fields$Case;
-    ParentReferences: ParentReferences$Case;
-    ChildRelationships: ChildRelationships$Case;
-  }
+  Name: 'Case';
+  Fields: Fields$Case;
+  ParentReferences: ParentReferences$Case;
+  ChildRelationships: ChildRelationships$Case;
+}
 
 type Fields$CaseChangeEvent = {
   //
@@ -4843,11 +4936,11 @@ type ChildRelationships$CaseChangeEvent = {
 };
 
 interface SObjectDefinition$CaseChangeEvent extends SObjectDefinition<'CaseChangeEvent'> {
-    Name: 'CaseChangeEvent';
-    Fields: Fields$CaseChangeEvent;
-    ParentReferences: ParentReferences$CaseChangeEvent;
-    ChildRelationships: ChildRelationships$CaseChangeEvent;
-  }
+  Name: 'CaseChangeEvent';
+  Fields: Fields$CaseChangeEvent;
+  ParentReferences: ParentReferences$CaseChangeEvent;
+  ChildRelationships: ChildRelationships$CaseChangeEvent;
+}
 
 type Fields$CaseComment = {
   //
@@ -4875,11 +4968,11 @@ type ChildRelationships$CaseComment = {
 };
 
 interface SObjectDefinition$CaseComment extends SObjectDefinition<'CaseComment'> {
-    Name: 'CaseComment';
-    Fields: Fields$CaseComment;
-    ParentReferences: ParentReferences$CaseComment;
-    ChildRelationships: ChildRelationships$CaseComment;
-  }
+  Name: 'CaseComment';
+  Fields: Fields$CaseComment;
+  ParentReferences: ParentReferences$CaseComment;
+  ChildRelationships: ChildRelationships$CaseComment;
+}
 
 type Fields$CaseContactRole = {
   //
@@ -4908,11 +5001,11 @@ type ChildRelationships$CaseContactRole = {
 };
 
 interface SObjectDefinition$CaseContactRole extends SObjectDefinition<'CaseContactRole'> {
-    Name: 'CaseContactRole';
-    Fields: Fields$CaseContactRole;
-    ParentReferences: ParentReferences$CaseContactRole;
-    ChildRelationships: ChildRelationships$CaseContactRole;
-  }
+  Name: 'CaseContactRole';
+  Fields: Fields$CaseContactRole;
+  ParentReferences: ParentReferences$CaseContactRole;
+  ChildRelationships: ChildRelationships$CaseContactRole;
+}
 
 type Fields$CaseFeed = {
   //
@@ -4953,11 +5046,11 @@ type ChildRelationships$CaseFeed = {
 };
 
 interface SObjectDefinition$CaseFeed extends SObjectDefinition<'CaseFeed'> {
-    Name: 'CaseFeed';
-    Fields: Fields$CaseFeed;
-    ParentReferences: ParentReferences$CaseFeed;
-    ChildRelationships: ChildRelationships$CaseFeed;
-  }
+  Name: 'CaseFeed';
+  Fields: Fields$CaseFeed;
+  ParentReferences: ParentReferences$CaseFeed;
+  ChildRelationships: ChildRelationships$CaseFeed;
+}
 
 type Fields$CaseHistory = {
   //
@@ -4983,11 +5076,11 @@ type ChildRelationships$CaseHistory = {
 };
 
 interface SObjectDefinition$CaseHistory extends SObjectDefinition<'CaseHistory'> {
-    Name: 'CaseHistory';
-    Fields: Fields$CaseHistory;
-    ParentReferences: ParentReferences$CaseHistory;
-    ChildRelationships: ChildRelationships$CaseHistory;
-  }
+  Name: 'CaseHistory';
+  Fields: Fields$CaseHistory;
+  ParentReferences: ParentReferences$CaseHistory;
+  ChildRelationships: ChildRelationships$CaseHistory;
+}
 
 type Fields$CaseShare = {
   //
@@ -5013,11 +5106,11 @@ type ChildRelationships$CaseShare = {
 };
 
 interface SObjectDefinition$CaseShare extends SObjectDefinition<'CaseShare'> {
-    Name: 'CaseShare';
-    Fields: Fields$CaseShare;
-    ParentReferences: ParentReferences$CaseShare;
-    ChildRelationships: ChildRelationships$CaseShare;
-  }
+  Name: 'CaseShare';
+  Fields: Fields$CaseShare;
+  ParentReferences: ParentReferences$CaseShare;
+  ChildRelationships: ChildRelationships$CaseShare;
+}
 
 type Fields$CaseSolution = {
   //
@@ -5042,11 +5135,11 @@ type ChildRelationships$CaseSolution = {
 };
 
 interface SObjectDefinition$CaseSolution extends SObjectDefinition<'CaseSolution'> {
-    Name: 'CaseSolution';
-    Fields: Fields$CaseSolution;
-    ParentReferences: ParentReferences$CaseSolution;
-    ChildRelationships: ChildRelationships$CaseSolution;
-  }
+  Name: 'CaseSolution';
+  Fields: Fields$CaseSolution;
+  ParentReferences: ParentReferences$CaseSolution;
+  ChildRelationships: ChildRelationships$CaseSolution;
+}
 
 type Fields$CaseStatus = {
   //
@@ -5074,11 +5167,11 @@ type ChildRelationships$CaseStatus = {
 };
 
 interface SObjectDefinition$CaseStatus extends SObjectDefinition<'CaseStatus'> {
-    Name: 'CaseStatus';
-    Fields: Fields$CaseStatus;
-    ParentReferences: ParentReferences$CaseStatus;
-    ChildRelationships: ChildRelationships$CaseStatus;
-  }
+  Name: 'CaseStatus';
+  Fields: Fields$CaseStatus;
+  ParentReferences: ParentReferences$CaseStatus;
+  ChildRelationships: ChildRelationships$CaseStatus;
+}
 
 type Fields$CaseSubjectParticle = {
   //
@@ -5108,11 +5201,11 @@ type ChildRelationships$CaseSubjectParticle = {
 };
 
 interface SObjectDefinition$CaseSubjectParticle extends SObjectDefinition<'CaseSubjectParticle'> {
-    Name: 'CaseSubjectParticle';
-    Fields: Fields$CaseSubjectParticle;
-    ParentReferences: ParentReferences$CaseSubjectParticle;
-    ChildRelationships: ChildRelationships$CaseSubjectParticle;
-  }
+  Name: 'CaseSubjectParticle';
+  Fields: Fields$CaseSubjectParticle;
+  ParentReferences: ParentReferences$CaseSubjectParticle;
+  ChildRelationships: ChildRelationships$CaseSubjectParticle;
+}
 
 type Fields$CaseTeamMember = {
   //
@@ -5145,11 +5238,11 @@ type ChildRelationships$CaseTeamMember = {
 };
 
 interface SObjectDefinition$CaseTeamMember extends SObjectDefinition<'CaseTeamMember'> {
-    Name: 'CaseTeamMember';
-    Fields: Fields$CaseTeamMember;
-    ParentReferences: ParentReferences$CaseTeamMember;
-    ChildRelationships: ChildRelationships$CaseTeamMember;
-  }
+  Name: 'CaseTeamMember';
+  Fields: Fields$CaseTeamMember;
+  ParentReferences: ParentReferences$CaseTeamMember;
+  ChildRelationships: ChildRelationships$CaseTeamMember;
+}
 
 type Fields$CaseTeamRole = {
   //
@@ -5175,11 +5268,11 @@ type ChildRelationships$CaseTeamRole = {
 };
 
 interface SObjectDefinition$CaseTeamRole extends SObjectDefinition<'CaseTeamRole'> {
-    Name: 'CaseTeamRole';
-    Fields: Fields$CaseTeamRole;
-    ParentReferences: ParentReferences$CaseTeamRole;
-    ChildRelationships: ChildRelationships$CaseTeamRole;
-  }
+  Name: 'CaseTeamRole';
+  Fields: Fields$CaseTeamRole;
+  ParentReferences: ParentReferences$CaseTeamRole;
+  ChildRelationships: ChildRelationships$CaseTeamRole;
+}
 
 type Fields$CaseTeamTemplate = {
   //
@@ -5204,11 +5297,11 @@ type ChildRelationships$CaseTeamTemplate = {
 };
 
 interface SObjectDefinition$CaseTeamTemplate extends SObjectDefinition<'CaseTeamTemplate'> {
-    Name: 'CaseTeamTemplate';
-    Fields: Fields$CaseTeamTemplate;
-    ParentReferences: ParentReferences$CaseTeamTemplate;
-    ChildRelationships: ChildRelationships$CaseTeamTemplate;
-  }
+  Name: 'CaseTeamTemplate';
+  Fields: Fields$CaseTeamTemplate;
+  ParentReferences: ParentReferences$CaseTeamTemplate;
+  ChildRelationships: ChildRelationships$CaseTeamTemplate;
+}
 
 type Fields$CaseTeamTemplateMember = {
   //
@@ -5234,11 +5327,11 @@ type ChildRelationships$CaseTeamTemplateMember = {
 };
 
 interface SObjectDefinition$CaseTeamTemplateMember extends SObjectDefinition<'CaseTeamTemplateMember'> {
-    Name: 'CaseTeamTemplateMember';
-    Fields: Fields$CaseTeamTemplateMember;
-    ParentReferences: ParentReferences$CaseTeamTemplateMember;
-    ChildRelationships: ChildRelationships$CaseTeamTemplateMember;
-  }
+  Name: 'CaseTeamTemplateMember';
+  Fields: Fields$CaseTeamTemplateMember;
+  ParentReferences: ParentReferences$CaseTeamTemplateMember;
+  ChildRelationships: ChildRelationships$CaseTeamTemplateMember;
+}
 
 type Fields$CaseTeamTemplateRecord = {
   //
@@ -5262,11 +5355,11 @@ type ChildRelationships$CaseTeamTemplateRecord = {
 };
 
 interface SObjectDefinition$CaseTeamTemplateRecord extends SObjectDefinition<'CaseTeamTemplateRecord'> {
-    Name: 'CaseTeamTemplateRecord';
-    Fields: Fields$CaseTeamTemplateRecord;
-    ParentReferences: ParentReferences$CaseTeamTemplateRecord;
-    ChildRelationships: ChildRelationships$CaseTeamTemplateRecord;
-  }
+  Name: 'CaseTeamTemplateRecord';
+  Fields: Fields$CaseTeamTemplateRecord;
+  ParentReferences: ParentReferences$CaseTeamTemplateRecord;
+  ChildRelationships: ChildRelationships$CaseTeamTemplateRecord;
+}
 
 type Fields$CategoryData = {
   //
@@ -5292,11 +5385,11 @@ type ChildRelationships$CategoryData = {
 };
 
 interface SObjectDefinition$CategoryData extends SObjectDefinition<'CategoryData'> {
-    Name: 'CategoryData';
-    Fields: Fields$CategoryData;
-    ParentReferences: ParentReferences$CategoryData;
-    ChildRelationships: ChildRelationships$CategoryData;
-  }
+  Name: 'CategoryData';
+  Fields: Fields$CategoryData;
+  ParentReferences: ParentReferences$CategoryData;
+  ChildRelationships: ChildRelationships$CategoryData;
+}
 
 type Fields$CategoryNode = {
   //
@@ -5323,11 +5416,11 @@ type ChildRelationships$CategoryNode = {
 };
 
 interface SObjectDefinition$CategoryNode extends SObjectDefinition<'CategoryNode'> {
-    Name: 'CategoryNode';
-    Fields: Fields$CategoryNode;
-    ParentReferences: ParentReferences$CategoryNode;
-    ChildRelationships: ChildRelationships$CategoryNode;
-  }
+  Name: 'CategoryNode';
+  Fields: Fields$CategoryNode;
+  ParentReferences: ParentReferences$CategoryNode;
+  ChildRelationships: ChildRelationships$CategoryNode;
+}
 
 type Fields$Certification__ChangeEvent = {
   //
@@ -5361,11 +5454,11 @@ type ChildRelationships$Certification__ChangeEvent = {
 };
 
 interface SObjectDefinition$Certification__ChangeEvent extends SObjectDefinition<'Certification__ChangeEvent'> {
-    Name: 'Certification__ChangeEvent';
-    Fields: Fields$Certification__ChangeEvent;
-    ParentReferences: ParentReferences$Certification__ChangeEvent;
-    ChildRelationships: ChildRelationships$Certification__ChangeEvent;
-  }
+  Name: 'Certification__ChangeEvent';
+  Fields: Fields$Certification__ChangeEvent;
+  ParentReferences: ParentReferences$Certification__ChangeEvent;
+  ChildRelationships: ChildRelationships$Certification__ChangeEvent;
+}
 
 type Fields$Certification__c = {
   //
@@ -5431,11 +5524,11 @@ type ChildRelationships$Certification__c = {
 };
 
 interface SObjectDefinition$Certification__c extends SObjectDefinition<'Certification__c'> {
-    Name: 'Certification__c';
-    Fields: Fields$Certification__c;
-    ParentReferences: ParentReferences$Certification__c;
-    ChildRelationships: ChildRelationships$Certification__c;
-  }
+  Name: 'Certification__c';
+  Fields: Fields$Certification__c;
+  ParentReferences: ParentReferences$Certification__c;
+  ChildRelationships: ChildRelationships$Certification__c;
+}
 
 type Fields$ChatterActivity = {
   //
@@ -5458,11 +5551,11 @@ type ChildRelationships$ChatterActivity = {
 };
 
 interface SObjectDefinition$ChatterActivity extends SObjectDefinition<'ChatterActivity'> {
-    Name: 'ChatterActivity';
-    Fields: Fields$ChatterActivity;
-    ParentReferences: ParentReferences$ChatterActivity;
-    ChildRelationships: ChildRelationships$ChatterActivity;
-  }
+  Name: 'ChatterActivity';
+  Fields: Fields$ChatterActivity;
+  ParentReferences: ParentReferences$ChatterActivity;
+  ChildRelationships: ChildRelationships$ChatterActivity;
+}
 
 type Fields$ChatterExtension = {
   //
@@ -5500,11 +5593,11 @@ type ChildRelationships$ChatterExtension = {
 };
 
 interface SObjectDefinition$ChatterExtension extends SObjectDefinition<'ChatterExtension'> {
-    Name: 'ChatterExtension';
-    Fields: Fields$ChatterExtension;
-    ParentReferences: ParentReferences$ChatterExtension;
-    ChildRelationships: ChildRelationships$ChatterExtension;
-  }
+  Name: 'ChatterExtension';
+  Fields: Fields$ChatterExtension;
+  ParentReferences: ParentReferences$ChatterExtension;
+  ChildRelationships: ChildRelationships$ChatterExtension;
+}
 
 type Fields$ChatterExtensionConfig = {
   //
@@ -5533,11 +5626,11 @@ type ChildRelationships$ChatterExtensionConfig = {
 };
 
 interface SObjectDefinition$ChatterExtensionConfig extends SObjectDefinition<'ChatterExtensionConfig'> {
-    Name: 'ChatterExtensionConfig';
-    Fields: Fields$ChatterExtensionConfig;
-    ParentReferences: ParentReferences$ChatterExtensionConfig;
-    ChildRelationships: ChildRelationships$ChatterExtensionConfig;
-  }
+  Name: 'ChatterExtensionConfig';
+  Fields: Fields$ChatterExtensionConfig;
+  ParentReferences: ParentReferences$ChatterExtensionConfig;
+  ChildRelationships: ChildRelationships$ChatterExtensionConfig;
+}
 
 type Fields$Check_In_Answers__ChangeEvent = {
   //
@@ -5565,11 +5658,11 @@ type ChildRelationships$Check_In_Answers__ChangeEvent = {
 };
 
 interface SObjectDefinition$Check_In_Answers__ChangeEvent extends SObjectDefinition<'Check_In_Answers__ChangeEvent'> {
-    Name: 'Check_In_Answers__ChangeEvent';
-    Fields: Fields$Check_In_Answers__ChangeEvent;
-    ParentReferences: ParentReferences$Check_In_Answers__ChangeEvent;
-    ChildRelationships: ChildRelationships$Check_In_Answers__ChangeEvent;
-  }
+  Name: 'Check_In_Answers__ChangeEvent';
+  Fields: Fields$Check_In_Answers__ChangeEvent;
+  ParentReferences: ParentReferences$Check_In_Answers__ChangeEvent;
+  ChildRelationships: ChildRelationships$Check_In_Answers__ChangeEvent;
+}
 
 type Fields$Check_In_Answers__c = {
   //
@@ -5621,11 +5714,11 @@ type ChildRelationships$Check_In_Answers__c = {
 };
 
 interface SObjectDefinition$Check_In_Answers__c extends SObjectDefinition<'Check_In_Answers__c'> {
-    Name: 'Check_In_Answers__c';
-    Fields: Fields$Check_In_Answers__c;
-    ParentReferences: ParentReferences$Check_In_Answers__c;
-    ChildRelationships: ChildRelationships$Check_In_Answers__c;
-  }
+  Name: 'Check_In_Answers__c';
+  Fields: Fields$Check_In_Answers__c;
+  ParentReferences: ParentReferences$Check_In_Answers__c;
+  ChildRelationships: ChildRelationships$Check_In_Answers__c;
+}
 
 type Fields$Check_In__ChangeEvent = {
   //
@@ -5652,11 +5745,11 @@ type ChildRelationships$Check_In__ChangeEvent = {
 };
 
 interface SObjectDefinition$Check_In__ChangeEvent extends SObjectDefinition<'Check_In__ChangeEvent'> {
-    Name: 'Check_In__ChangeEvent';
-    Fields: Fields$Check_In__ChangeEvent;
-    ParentReferences: ParentReferences$Check_In__ChangeEvent;
-    ChildRelationships: ChildRelationships$Check_In__ChangeEvent;
-  }
+  Name: 'Check_In__ChangeEvent';
+  Fields: Fields$Check_In__ChangeEvent;
+  ParentReferences: ParentReferences$Check_In__ChangeEvent;
+  ChildRelationships: ChildRelationships$Check_In__ChangeEvent;
+}
 
 type Fields$Check_In__c = {
   //
@@ -5708,11 +5801,11 @@ type ChildRelationships$Check_In__c = {
 };
 
 interface SObjectDefinition$Check_In__c extends SObjectDefinition<'Check_In__c'> {
-    Name: 'Check_In__c';
-    Fields: Fields$Check_In__c;
-    ParentReferences: ParentReferences$Check_In__c;
-    ChildRelationships: ChildRelationships$Check_In__c;
-  }
+  Name: 'Check_In__c';
+  Fields: Fields$Check_In__c;
+  ParentReferences: ParentReferences$Check_In__c;
+  ChildRelationships: ChildRelationships$Check_In__c;
+}
 
 type Fields$ClientBrowser = {
   //
@@ -5734,11 +5827,11 @@ type ChildRelationships$ClientBrowser = {
 };
 
 interface SObjectDefinition$ClientBrowser extends SObjectDefinition<'ClientBrowser'> {
-    Name: 'ClientBrowser';
-    Fields: Fields$ClientBrowser;
-    ParentReferences: ParentReferences$ClientBrowser;
-    ChildRelationships: ChildRelationships$ClientBrowser;
-  }
+  Name: 'ClientBrowser';
+  Fields: Fields$ClientBrowser;
+  ParentReferences: ParentReferences$ClientBrowser;
+  ChildRelationships: ChildRelationships$ClientBrowser;
+}
 
 type Fields$Cohort_Participant_Ranking__ChangeEvent = {
   //
@@ -5772,12 +5865,13 @@ type ChildRelationships$Cohort_Participant_Ranking__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Cohort_Participant_Ranking__ChangeEvent extends SObjectDefinition<'Cohort_Participant_Ranking__ChangeEvent'> {
-    Name: 'Cohort_Participant_Ranking__ChangeEvent';
-    Fields: Fields$Cohort_Participant_Ranking__ChangeEvent;
-    ParentReferences: ParentReferences$Cohort_Participant_Ranking__ChangeEvent;
-    ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__ChangeEvent;
-  }
+interface SObjectDefinition$Cohort_Participant_Ranking__ChangeEvent
+  extends SObjectDefinition<'Cohort_Participant_Ranking__ChangeEvent'> {
+  Name: 'Cohort_Participant_Ranking__ChangeEvent';
+  Fields: Fields$Cohort_Participant_Ranking__ChangeEvent;
+  ParentReferences: ParentReferences$Cohort_Participant_Ranking__ChangeEvent;
+  ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__ChangeEvent;
+}
 
 type Fields$Cohort_Participant_Ranking__c = {
   //
@@ -5836,11 +5930,11 @@ type ChildRelationships$Cohort_Participant_Ranking__c = {
 };
 
 interface SObjectDefinition$Cohort_Participant_Ranking__c extends SObjectDefinition<'Cohort_Participant_Ranking__c'> {
-    Name: 'Cohort_Participant_Ranking__c';
-    Fields: Fields$Cohort_Participant_Ranking__c;
-    ParentReferences: ParentReferences$Cohort_Participant_Ranking__c;
-    ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__c;
-  }
+  Name: 'Cohort_Participant_Ranking__c';
+  Fields: Fields$Cohort_Participant_Ranking__c;
+  ParentReferences: ParentReferences$Cohort_Participant_Ranking__c;
+  ChildRelationships: ChildRelationships$Cohort_Participant_Ranking__c;
+}
 
 type Fields$Cohort_Participant__ChangeEvent = {
   //
@@ -5882,12 +5976,13 @@ type ChildRelationships$Cohort_Participant__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Cohort_Participant__ChangeEvent extends SObjectDefinition<'Cohort_Participant__ChangeEvent'> {
-    Name: 'Cohort_Participant__ChangeEvent';
-    Fields: Fields$Cohort_Participant__ChangeEvent;
-    ParentReferences: ParentReferences$Cohort_Participant__ChangeEvent;
-    ChildRelationships: ChildRelationships$Cohort_Participant__ChangeEvent;
-  }
+interface SObjectDefinition$Cohort_Participant__ChangeEvent
+  extends SObjectDefinition<'Cohort_Participant__ChangeEvent'> {
+  Name: 'Cohort_Participant__ChangeEvent';
+  Fields: Fields$Cohort_Participant__ChangeEvent;
+  ParentReferences: ParentReferences$Cohort_Participant__ChangeEvent;
+  ChildRelationships: ChildRelationships$Cohort_Participant__ChangeEvent;
+}
 
 type Fields$Cohort_Participant__History = {
   //
@@ -5913,11 +6008,11 @@ type ChildRelationships$Cohort_Participant__History = {
 };
 
 interface SObjectDefinition$Cohort_Participant__History extends SObjectDefinition<'Cohort_Participant__History'> {
-    Name: 'Cohort_Participant__History';
-    Fields: Fields$Cohort_Participant__History;
-    ParentReferences: ParentReferences$Cohort_Participant__History;
-    ChildRelationships: ChildRelationships$Cohort_Participant__History;
-  }
+  Name: 'Cohort_Participant__History';
+  Fields: Fields$Cohort_Participant__History;
+  ParentReferences: ParentReferences$Cohort_Participant__History;
+  ChildRelationships: ChildRelationships$Cohort_Participant__History;
+}
 
 type Fields$Cohort_Participant__c = {
   //
@@ -5993,11 +6088,11 @@ type ChildRelationships$Cohort_Participant__c = {
 };
 
 interface SObjectDefinition$Cohort_Participant__c extends SObjectDefinition<'Cohort_Participant__c'> {
-    Name: 'Cohort_Participant__c';
-    Fields: Fields$Cohort_Participant__c;
-    ParentReferences: ParentReferences$Cohort_Participant__c;
-    ChildRelationships: ChildRelationships$Cohort_Participant__c;
-  }
+  Name: 'Cohort_Participant__c';
+  Fields: Fields$Cohort_Participant__c;
+  ParentReferences: ParentReferences$Cohort_Participant__c;
+  ChildRelationships: ChildRelationships$Cohort_Participant__c;
+}
 
 type Fields$Cohort__ChangeEvent = {
   //
@@ -6064,11 +6159,11 @@ type ChildRelationships$Cohort__ChangeEvent = {
 };
 
 interface SObjectDefinition$Cohort__ChangeEvent extends SObjectDefinition<'Cohort__ChangeEvent'> {
-    Name: 'Cohort__ChangeEvent';
-    Fields: Fields$Cohort__ChangeEvent;
-    ParentReferences: ParentReferences$Cohort__ChangeEvent;
-    ChildRelationships: ChildRelationships$Cohort__ChangeEvent;
-  }
+  Name: 'Cohort__ChangeEvent';
+  Fields: Fields$Cohort__ChangeEvent;
+  ParentReferences: ParentReferences$Cohort__ChangeEvent;
+  ChildRelationships: ChildRelationships$Cohort__ChangeEvent;
+}
 
 type Fields$Cohort__History = {
   //
@@ -6094,11 +6189,11 @@ type ChildRelationships$Cohort__History = {
 };
 
 interface SObjectDefinition$Cohort__History extends SObjectDefinition<'Cohort__History'> {
-    Name: 'Cohort__History';
-    Fields: Fields$Cohort__History;
-    ParentReferences: ParentReferences$Cohort__History;
-    ChildRelationships: ChildRelationships$Cohort__History;
-  }
+  Name: 'Cohort__History';
+  Fields: Fields$Cohort__History;
+  ParentReferences: ParentReferences$Cohort__History;
+  ChildRelationships: ChildRelationships$Cohort__History;
+}
 
 type Fields$Cohort__c = {
   //
@@ -6202,11 +6297,11 @@ type ChildRelationships$Cohort__c = {
 };
 
 interface SObjectDefinition$Cohort__c extends SObjectDefinition<'Cohort__c'> {
-    Name: 'Cohort__c';
-    Fields: Fields$Cohort__c;
-    ParentReferences: ParentReferences$Cohort__c;
-    ChildRelationships: ChildRelationships$Cohort__c;
-  }
+  Name: 'Cohort__c';
+  Fields: Fields$Cohort__c;
+  ParentReferences: ParentReferences$Cohort__c;
+  ChildRelationships: ChildRelationships$Cohort__c;
+}
 
 type Fields$CollaborationGroup = {
   //
@@ -6265,11 +6360,11 @@ type ChildRelationships$CollaborationGroup = {
 };
 
 interface SObjectDefinition$CollaborationGroup extends SObjectDefinition<'CollaborationGroup'> {
-    Name: 'CollaborationGroup';
-    Fields: Fields$CollaborationGroup;
-    ParentReferences: ParentReferences$CollaborationGroup;
-    ChildRelationships: ChildRelationships$CollaborationGroup;
-  }
+  Name: 'CollaborationGroup';
+  Fields: Fields$CollaborationGroup;
+  ParentReferences: ParentReferences$CollaborationGroup;
+  ChildRelationships: ChildRelationships$CollaborationGroup;
+}
 
 type Fields$CollaborationGroupFeed = {
   //
@@ -6310,11 +6405,11 @@ type ChildRelationships$CollaborationGroupFeed = {
 };
 
 interface SObjectDefinition$CollaborationGroupFeed extends SObjectDefinition<'CollaborationGroupFeed'> {
-    Name: 'CollaborationGroupFeed';
-    Fields: Fields$CollaborationGroupFeed;
-    ParentReferences: ParentReferences$CollaborationGroupFeed;
-    ChildRelationships: ChildRelationships$CollaborationGroupFeed;
-  }
+  Name: 'CollaborationGroupFeed';
+  Fields: Fields$CollaborationGroupFeed;
+  ParentReferences: ParentReferences$CollaborationGroupFeed;
+  ChildRelationships: ChildRelationships$CollaborationGroupFeed;
+}
 
 type Fields$CollaborationGroupMember = {
   //
@@ -6345,11 +6440,11 @@ type ChildRelationships$CollaborationGroupMember = {
 };
 
 interface SObjectDefinition$CollaborationGroupMember extends SObjectDefinition<'CollaborationGroupMember'> {
-    Name: 'CollaborationGroupMember';
-    Fields: Fields$CollaborationGroupMember;
-    ParentReferences: ParentReferences$CollaborationGroupMember;
-    ChildRelationships: ChildRelationships$CollaborationGroupMember;
-  }
+  Name: 'CollaborationGroupMember';
+  Fields: Fields$CollaborationGroupMember;
+  ParentReferences: ParentReferences$CollaborationGroupMember;
+  ChildRelationships: ChildRelationships$CollaborationGroupMember;
+}
 
 type Fields$CollaborationGroupMemberRequest = {
   //
@@ -6377,12 +6472,13 @@ type ChildRelationships$CollaborationGroupMemberRequest = {
   //
 };
 
-interface SObjectDefinition$CollaborationGroupMemberRequest extends SObjectDefinition<'CollaborationGroupMemberRequest'> {
-    Name: 'CollaborationGroupMemberRequest';
-    Fields: Fields$CollaborationGroupMemberRequest;
-    ParentReferences: ParentReferences$CollaborationGroupMemberRequest;
-    ChildRelationships: ChildRelationships$CollaborationGroupMemberRequest;
-  }
+interface SObjectDefinition$CollaborationGroupMemberRequest
+  extends SObjectDefinition<'CollaborationGroupMemberRequest'> {
+  Name: 'CollaborationGroupMemberRequest';
+  Fields: Fields$CollaborationGroupMemberRequest;
+  ParentReferences: ParentReferences$CollaborationGroupMemberRequest;
+  ChildRelationships: ChildRelationships$CollaborationGroupMemberRequest;
+}
 
 type Fields$CollaborationGroupRecord = {
   //
@@ -6410,11 +6506,11 @@ type ChildRelationships$CollaborationGroupRecord = {
 };
 
 interface SObjectDefinition$CollaborationGroupRecord extends SObjectDefinition<'CollaborationGroupRecord'> {
-    Name: 'CollaborationGroupRecord';
-    Fields: Fields$CollaborationGroupRecord;
-    ParentReferences: ParentReferences$CollaborationGroupRecord;
-    ChildRelationships: ChildRelationships$CollaborationGroupRecord;
-  }
+  Name: 'CollaborationGroupRecord';
+  Fields: Fields$CollaborationGroupRecord;
+  ParentReferences: ParentReferences$CollaborationGroupRecord;
+  ChildRelationships: ChildRelationships$CollaborationGroupRecord;
+}
 
 type Fields$CollaborationInvitation = {
   //
@@ -6444,11 +6540,11 @@ type ChildRelationships$CollaborationInvitation = {
 };
 
 interface SObjectDefinition$CollaborationInvitation extends SObjectDefinition<'CollaborationInvitation'> {
-    Name: 'CollaborationInvitation';
-    Fields: Fields$CollaborationInvitation;
-    ParentReferences: ParentReferences$CollaborationInvitation;
-    ChildRelationships: ChildRelationships$CollaborationInvitation;
-  }
+  Name: 'CollaborationInvitation';
+  Fields: Fields$CollaborationInvitation;
+  ParentReferences: ParentReferences$CollaborationInvitation;
+  ChildRelationships: ChildRelationships$CollaborationInvitation;
+}
 
 type Fields$ColorDefinition = {
   //
@@ -6469,11 +6565,11 @@ type ChildRelationships$ColorDefinition = {
 };
 
 interface SObjectDefinition$ColorDefinition extends SObjectDefinition<'ColorDefinition'> {
-    Name: 'ColorDefinition';
-    Fields: Fields$ColorDefinition;
-    ParentReferences: ParentReferences$ColorDefinition;
-    ChildRelationships: ChildRelationships$ColorDefinition;
-  }
+  Name: 'ColorDefinition';
+  Fields: Fields$ColorDefinition;
+  ParentReferences: ParentReferences$ColorDefinition;
+  ChildRelationships: ChildRelationships$ColorDefinition;
+}
 
 type Fields$CombinedAttachment = {
   //
@@ -6507,11 +6603,11 @@ type ChildRelationships$CombinedAttachment = {
 };
 
 interface SObjectDefinition$CombinedAttachment extends SObjectDefinition<'CombinedAttachment'> {
-    Name: 'CombinedAttachment';
-    Fields: Fields$CombinedAttachment;
-    ParentReferences: ParentReferences$CombinedAttachment;
-    ChildRelationships: ChildRelationships$CombinedAttachment;
-  }
+  Name: 'CombinedAttachment';
+  Fields: Fields$CombinedAttachment;
+  ParentReferences: ParentReferences$CombinedAttachment;
+  ChildRelationships: ChildRelationships$CombinedAttachment;
+}
 
 type Fields$CommSubscription = {
   //
@@ -6554,11 +6650,11 @@ type ChildRelationships$CommSubscription = {
 };
 
 interface SObjectDefinition$CommSubscription extends SObjectDefinition<'CommSubscription'> {
-    Name: 'CommSubscription';
-    Fields: Fields$CommSubscription;
-    ParentReferences: ParentReferences$CommSubscription;
-    ChildRelationships: ChildRelationships$CommSubscription;
-  }
+  Name: 'CommSubscription';
+  Fields: Fields$CommSubscription;
+  ParentReferences: ParentReferences$CommSubscription;
+  ChildRelationships: ChildRelationships$CommSubscription;
+}
 
 type Fields$CommSubscriptionChannelType = {
   //
@@ -6605,11 +6701,11 @@ type ChildRelationships$CommSubscriptionChannelType = {
 };
 
 interface SObjectDefinition$CommSubscriptionChannelType extends SObjectDefinition<'CommSubscriptionChannelType'> {
-    Name: 'CommSubscriptionChannelType';
-    Fields: Fields$CommSubscriptionChannelType;
-    ParentReferences: ParentReferences$CommSubscriptionChannelType;
-    ChildRelationships: ChildRelationships$CommSubscriptionChannelType;
-  }
+  Name: 'CommSubscriptionChannelType';
+  Fields: Fields$CommSubscriptionChannelType;
+  ParentReferences: ParentReferences$CommSubscriptionChannelType;
+  ChildRelationships: ChildRelationships$CommSubscriptionChannelType;
+}
 
 type Fields$CommSubscriptionChannelTypeFeed = {
   //
@@ -6649,12 +6745,13 @@ type ChildRelationships$CommSubscriptionChannelTypeFeed = {
   FeedTrackedChanges: SObjectDefinition$FeedTrackedChange;
 };
 
-interface SObjectDefinition$CommSubscriptionChannelTypeFeed extends SObjectDefinition<'CommSubscriptionChannelTypeFeed'> {
-    Name: 'CommSubscriptionChannelTypeFeed';
-    Fields: Fields$CommSubscriptionChannelTypeFeed;
-    ParentReferences: ParentReferences$CommSubscriptionChannelTypeFeed;
-    ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeFeed;
-  }
+interface SObjectDefinition$CommSubscriptionChannelTypeFeed
+  extends SObjectDefinition<'CommSubscriptionChannelTypeFeed'> {
+  Name: 'CommSubscriptionChannelTypeFeed';
+  Fields: Fields$CommSubscriptionChannelTypeFeed;
+  ParentReferences: ParentReferences$CommSubscriptionChannelTypeFeed;
+  ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeFeed;
+}
 
 type Fields$CommSubscriptionChannelTypeHistory = {
   //
@@ -6679,12 +6776,13 @@ type ChildRelationships$CommSubscriptionChannelTypeHistory = {
   //
 };
 
-interface SObjectDefinition$CommSubscriptionChannelTypeHistory extends SObjectDefinition<'CommSubscriptionChannelTypeHistory'> {
-    Name: 'CommSubscriptionChannelTypeHistory';
-    Fields: Fields$CommSubscriptionChannelTypeHistory;
-    ParentReferences: ParentReferences$CommSubscriptionChannelTypeHistory;
-    ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeHistory;
-  }
+interface SObjectDefinition$CommSubscriptionChannelTypeHistory
+  extends SObjectDefinition<'CommSubscriptionChannelTypeHistory'> {
+  Name: 'CommSubscriptionChannelTypeHistory';
+  Fields: Fields$CommSubscriptionChannelTypeHistory;
+  ParentReferences: ParentReferences$CommSubscriptionChannelTypeHistory;
+  ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeHistory;
+}
 
 type Fields$CommSubscriptionChannelTypeShare = {
   //
@@ -6709,12 +6807,13 @@ type ChildRelationships$CommSubscriptionChannelTypeShare = {
   //
 };
 
-interface SObjectDefinition$CommSubscriptionChannelTypeShare extends SObjectDefinition<'CommSubscriptionChannelTypeShare'> {
-    Name: 'CommSubscriptionChannelTypeShare';
-    Fields: Fields$CommSubscriptionChannelTypeShare;
-    ParentReferences: ParentReferences$CommSubscriptionChannelTypeShare;
-    ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeShare;
-  }
+interface SObjectDefinition$CommSubscriptionChannelTypeShare
+  extends SObjectDefinition<'CommSubscriptionChannelTypeShare'> {
+  Name: 'CommSubscriptionChannelTypeShare';
+  Fields: Fields$CommSubscriptionChannelTypeShare;
+  ParentReferences: ParentReferences$CommSubscriptionChannelTypeShare;
+  ChildRelationships: ChildRelationships$CommSubscriptionChannelTypeShare;
+}
 
 type Fields$CommSubscriptionConsent = {
   //
@@ -6773,11 +6872,11 @@ type ChildRelationships$CommSubscriptionConsent = {
 };
 
 interface SObjectDefinition$CommSubscriptionConsent extends SObjectDefinition<'CommSubscriptionConsent'> {
-    Name: 'CommSubscriptionConsent';
-    Fields: Fields$CommSubscriptionConsent;
-    ParentReferences: ParentReferences$CommSubscriptionConsent;
-    ChildRelationships: ChildRelationships$CommSubscriptionConsent;
-  }
+  Name: 'CommSubscriptionConsent';
+  Fields: Fields$CommSubscriptionConsent;
+  ParentReferences: ParentReferences$CommSubscriptionConsent;
+  ChildRelationships: ChildRelationships$CommSubscriptionConsent;
+}
 
 type Fields$CommSubscriptionConsentChangeEvent = {
   //
@@ -6806,12 +6905,13 @@ type ChildRelationships$CommSubscriptionConsentChangeEvent = {
   //
 };
 
-interface SObjectDefinition$CommSubscriptionConsentChangeEvent extends SObjectDefinition<'CommSubscriptionConsentChangeEvent'> {
-    Name: 'CommSubscriptionConsentChangeEvent';
-    Fields: Fields$CommSubscriptionConsentChangeEvent;
-    ParentReferences: ParentReferences$CommSubscriptionConsentChangeEvent;
-    ChildRelationships: ChildRelationships$CommSubscriptionConsentChangeEvent;
-  }
+interface SObjectDefinition$CommSubscriptionConsentChangeEvent
+  extends SObjectDefinition<'CommSubscriptionConsentChangeEvent'> {
+  Name: 'CommSubscriptionConsentChangeEvent';
+  Fields: Fields$CommSubscriptionConsentChangeEvent;
+  ParentReferences: ParentReferences$CommSubscriptionConsentChangeEvent;
+  ChildRelationships: ChildRelationships$CommSubscriptionConsentChangeEvent;
+}
 
 type Fields$CommSubscriptionConsentFeed = {
   //
@@ -6852,11 +6952,11 @@ type ChildRelationships$CommSubscriptionConsentFeed = {
 };
 
 interface SObjectDefinition$CommSubscriptionConsentFeed extends SObjectDefinition<'CommSubscriptionConsentFeed'> {
-    Name: 'CommSubscriptionConsentFeed';
-    Fields: Fields$CommSubscriptionConsentFeed;
-    ParentReferences: ParentReferences$CommSubscriptionConsentFeed;
-    ChildRelationships: ChildRelationships$CommSubscriptionConsentFeed;
-  }
+  Name: 'CommSubscriptionConsentFeed';
+  Fields: Fields$CommSubscriptionConsentFeed;
+  ParentReferences: ParentReferences$CommSubscriptionConsentFeed;
+  ChildRelationships: ChildRelationships$CommSubscriptionConsentFeed;
+}
 
 type Fields$CommSubscriptionConsentHistory = {
   //
@@ -6882,11 +6982,11 @@ type ChildRelationships$CommSubscriptionConsentHistory = {
 };
 
 interface SObjectDefinition$CommSubscriptionConsentHistory extends SObjectDefinition<'CommSubscriptionConsentHistory'> {
-    Name: 'CommSubscriptionConsentHistory';
-    Fields: Fields$CommSubscriptionConsentHistory;
-    ParentReferences: ParentReferences$CommSubscriptionConsentHistory;
-    ChildRelationships: ChildRelationships$CommSubscriptionConsentHistory;
-  }
+  Name: 'CommSubscriptionConsentHistory';
+  Fields: Fields$CommSubscriptionConsentHistory;
+  ParentReferences: ParentReferences$CommSubscriptionConsentHistory;
+  ChildRelationships: ChildRelationships$CommSubscriptionConsentHistory;
+}
 
 type Fields$CommSubscriptionConsentShare = {
   //
@@ -6912,11 +7012,11 @@ type ChildRelationships$CommSubscriptionConsentShare = {
 };
 
 interface SObjectDefinition$CommSubscriptionConsentShare extends SObjectDefinition<'CommSubscriptionConsentShare'> {
-    Name: 'CommSubscriptionConsentShare';
-    Fields: Fields$CommSubscriptionConsentShare;
-    ParentReferences: ParentReferences$CommSubscriptionConsentShare;
-    ChildRelationships: ChildRelationships$CommSubscriptionConsentShare;
-  }
+  Name: 'CommSubscriptionConsentShare';
+  Fields: Fields$CommSubscriptionConsentShare;
+  ParentReferences: ParentReferences$CommSubscriptionConsentShare;
+  ChildRelationships: ChildRelationships$CommSubscriptionConsentShare;
+}
 
 type Fields$CommSubscriptionFeed = {
   //
@@ -6957,11 +7057,11 @@ type ChildRelationships$CommSubscriptionFeed = {
 };
 
 interface SObjectDefinition$CommSubscriptionFeed extends SObjectDefinition<'CommSubscriptionFeed'> {
-    Name: 'CommSubscriptionFeed';
-    Fields: Fields$CommSubscriptionFeed;
-    ParentReferences: ParentReferences$CommSubscriptionFeed;
-    ChildRelationships: ChildRelationships$CommSubscriptionFeed;
-  }
+  Name: 'CommSubscriptionFeed';
+  Fields: Fields$CommSubscriptionFeed;
+  ParentReferences: ParentReferences$CommSubscriptionFeed;
+  ChildRelationships: ChildRelationships$CommSubscriptionFeed;
+}
 
 type Fields$CommSubscriptionHistory = {
   //
@@ -6987,11 +7087,11 @@ type ChildRelationships$CommSubscriptionHistory = {
 };
 
 interface SObjectDefinition$CommSubscriptionHistory extends SObjectDefinition<'CommSubscriptionHistory'> {
-    Name: 'CommSubscriptionHistory';
-    Fields: Fields$CommSubscriptionHistory;
-    ParentReferences: ParentReferences$CommSubscriptionHistory;
-    ChildRelationships: ChildRelationships$CommSubscriptionHistory;
-  }
+  Name: 'CommSubscriptionHistory';
+  Fields: Fields$CommSubscriptionHistory;
+  ParentReferences: ParentReferences$CommSubscriptionHistory;
+  ChildRelationships: ChildRelationships$CommSubscriptionHistory;
+}
 
 type Fields$CommSubscriptionShare = {
   //
@@ -7017,11 +7117,11 @@ type ChildRelationships$CommSubscriptionShare = {
 };
 
 interface SObjectDefinition$CommSubscriptionShare extends SObjectDefinition<'CommSubscriptionShare'> {
-    Name: 'CommSubscriptionShare';
-    Fields: Fields$CommSubscriptionShare;
-    ParentReferences: ParentReferences$CommSubscriptionShare;
-    ChildRelationships: ChildRelationships$CommSubscriptionShare;
-  }
+  Name: 'CommSubscriptionShare';
+  Fields: Fields$CommSubscriptionShare;
+  ParentReferences: ParentReferences$CommSubscriptionShare;
+  ChildRelationships: ChildRelationships$CommSubscriptionShare;
+}
 
 type Fields$CommSubscriptionTiming = {
   //
@@ -7063,11 +7163,11 @@ type ChildRelationships$CommSubscriptionTiming = {
 };
 
 interface SObjectDefinition$CommSubscriptionTiming extends SObjectDefinition<'CommSubscriptionTiming'> {
-    Name: 'CommSubscriptionTiming';
-    Fields: Fields$CommSubscriptionTiming;
-    ParentReferences: ParentReferences$CommSubscriptionTiming;
-    ChildRelationships: ChildRelationships$CommSubscriptionTiming;
-  }
+  Name: 'CommSubscriptionTiming';
+  Fields: Fields$CommSubscriptionTiming;
+  ParentReferences: ParentReferences$CommSubscriptionTiming;
+  ChildRelationships: ChildRelationships$CommSubscriptionTiming;
+}
 
 type Fields$CommSubscriptionTimingFeed = {
   //
@@ -7108,11 +7208,11 @@ type ChildRelationships$CommSubscriptionTimingFeed = {
 };
 
 interface SObjectDefinition$CommSubscriptionTimingFeed extends SObjectDefinition<'CommSubscriptionTimingFeed'> {
-    Name: 'CommSubscriptionTimingFeed';
-    Fields: Fields$CommSubscriptionTimingFeed;
-    ParentReferences: ParentReferences$CommSubscriptionTimingFeed;
-    ChildRelationships: ChildRelationships$CommSubscriptionTimingFeed;
-  }
+  Name: 'CommSubscriptionTimingFeed';
+  Fields: Fields$CommSubscriptionTimingFeed;
+  ParentReferences: ParentReferences$CommSubscriptionTimingFeed;
+  ChildRelationships: ChildRelationships$CommSubscriptionTimingFeed;
+}
 
 type Fields$CommSubscriptionTimingHistory = {
   //
@@ -7138,11 +7238,11 @@ type ChildRelationships$CommSubscriptionTimingHistory = {
 };
 
 interface SObjectDefinition$CommSubscriptionTimingHistory extends SObjectDefinition<'CommSubscriptionTimingHistory'> {
-    Name: 'CommSubscriptionTimingHistory';
-    Fields: Fields$CommSubscriptionTimingHistory;
-    ParentReferences: ParentReferences$CommSubscriptionTimingHistory;
-    ChildRelationships: ChildRelationships$CommSubscriptionTimingHistory;
-  }
+  Name: 'CommSubscriptionTimingHistory';
+  Fields: Fields$CommSubscriptionTimingHistory;
+  ParentReferences: ParentReferences$CommSubscriptionTimingHistory;
+  ChildRelationships: ChildRelationships$CommSubscriptionTimingHistory;
+}
 
 type Fields$Commission_Report_Result_Line__ChangeEvent = {
   //
@@ -7165,12 +7265,13 @@ type ChildRelationships$Commission_Report_Result_Line__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Commission_Report_Result_Line__ChangeEvent extends SObjectDefinition<'Commission_Report_Result_Line__ChangeEvent'> {
-    Name: 'Commission_Report_Result_Line__ChangeEvent';
-    Fields: Fields$Commission_Report_Result_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Commission_Report_Result_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Commission_Report_Result_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Commission_Report_Result_Line__ChangeEvent
+  extends SObjectDefinition<'Commission_Report_Result_Line__ChangeEvent'> {
+  Name: 'Commission_Report_Result_Line__ChangeEvent';
+  Fields: Fields$Commission_Report_Result_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Commission_Report_Result_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Commission_Report_Result_Line__ChangeEvent;
+}
 
 type Fields$Commission_Report_Result_Line__c = {
   //
@@ -7216,12 +7317,13 @@ type ChildRelationships$Commission_Report_Result_Line__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Commission_Report_Result_Line__c extends SObjectDefinition<'Commission_Report_Result_Line__c'> {
-    Name: 'Commission_Report_Result_Line__c';
-    Fields: Fields$Commission_Report_Result_Line__c;
-    ParentReferences: ParentReferences$Commission_Report_Result_Line__c;
-    ChildRelationships: ChildRelationships$Commission_Report_Result_Line__c;
-  }
+interface SObjectDefinition$Commission_Report_Result_Line__c
+  extends SObjectDefinition<'Commission_Report_Result_Line__c'> {
+  Name: 'Commission_Report_Result_Line__c';
+  Fields: Fields$Commission_Report_Result_Line__c;
+  ParentReferences: ParentReferences$Commission_Report_Result_Line__c;
+  ChildRelationships: ChildRelationships$Commission_Report_Result_Line__c;
+}
 
 type Fields$Commission_Report_Result__ChangeEvent = {
   //
@@ -7244,12 +7346,13 @@ type ChildRelationships$Commission_Report_Result__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Commission_Report_Result__ChangeEvent extends SObjectDefinition<'Commission_Report_Result__ChangeEvent'> {
-    Name: 'Commission_Report_Result__ChangeEvent';
-    Fields: Fields$Commission_Report_Result__ChangeEvent;
-    ParentReferences: ParentReferences$Commission_Report_Result__ChangeEvent;
-    ChildRelationships: ChildRelationships$Commission_Report_Result__ChangeEvent;
-  }
+interface SObjectDefinition$Commission_Report_Result__ChangeEvent
+  extends SObjectDefinition<'Commission_Report_Result__ChangeEvent'> {
+  Name: 'Commission_Report_Result__ChangeEvent';
+  Fields: Fields$Commission_Report_Result__ChangeEvent;
+  ParentReferences: ParentReferences$Commission_Report_Result__ChangeEvent;
+  ChildRelationships: ChildRelationships$Commission_Report_Result__ChangeEvent;
+}
 
 type Fields$Commission_Report_Result__c = {
   //
@@ -7296,11 +7399,11 @@ type ChildRelationships$Commission_Report_Result__c = {
 };
 
 interface SObjectDefinition$Commission_Report_Result__c extends SObjectDefinition<'Commission_Report_Result__c'> {
-    Name: 'Commission_Report_Result__c';
-    Fields: Fields$Commission_Report_Result__c;
-    ParentReferences: ParentReferences$Commission_Report_Result__c;
-    ChildRelationships: ChildRelationships$Commission_Report_Result__c;
-  }
+  Name: 'Commission_Report_Result__c';
+  Fields: Fields$Commission_Report_Result__c;
+  ParentReferences: ParentReferences$Commission_Report_Result__c;
+  ChildRelationships: ChildRelationships$Commission_Report_Result__c;
+}
 
 type Fields$Commission_Table_Line__ChangeEvent = {
   //
@@ -7313,6 +7416,18 @@ type Fields$Commission_Table_Line__ChangeEvent = {
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
   Commission_Table__c: string | null;
+  AM_Commission_Amount__c: number | null;
+  AM_Commission_Rate_2__c: number | null;
+  AM_Commission_Rate__c: number | null;
+  CTH_1_Amount__c: number | null;
+  CTH_2_Amount__c: number | null;
+  CTH_3_Amount__c: number | null;
+  CTH_4_Amount__c: number | null;
+  Lower_Limit__c: number | null;
+  Recruiter_Commission_Amount__c: number | null;
+  Recruiter_Commission_Rate_2__c: number | null;
+  Recruiter_Commission_Rate__c: number | null;
+  Upper_Limit__c: number | null;
 };
 
 type ParentReferences$Commission_Table_Line__ChangeEvent = {
@@ -7323,12 +7438,13 @@ type ChildRelationships$Commission_Table_Line__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Commission_Table_Line__ChangeEvent extends SObjectDefinition<'Commission_Table_Line__ChangeEvent'> {
-    Name: 'Commission_Table_Line__ChangeEvent';
-    Fields: Fields$Commission_Table_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Commission_Table_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Commission_Table_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Commission_Table_Line__ChangeEvent
+  extends SObjectDefinition<'Commission_Table_Line__ChangeEvent'> {
+  Name: 'Commission_Table_Line__ChangeEvent';
+  Fields: Fields$Commission_Table_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Commission_Table_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Commission_Table_Line__ChangeEvent;
+}
 
 type Fields$Commission_Table_Line__c = {
   //
@@ -7341,6 +7457,18 @@ type Fields$Commission_Table_Line__c = {
   LastModifiedById: string;
   SystemModstamp: DateString;
   Commission_Table__c: string;
+  AM_Commission_Amount__c: number | null;
+  AM_Commission_Rate_2__c: number | null;
+  AM_Commission_Rate__c: number | null;
+  CTH_1_Amount__c: number | null;
+  CTH_2_Amount__c: number | null;
+  CTH_3_Amount__c: number | null;
+  CTH_4_Amount__c: number | null;
+  Lower_Limit__c: number | null;
+  Recruiter_Commission_Amount__c: number | null;
+  Recruiter_Commission_Rate_2__c: number | null;
+  Recruiter_Commission_Rate__c: number | null;
+  Upper_Limit__c: number | null;
 };
 
 type ParentReferences$Commission_Table_Line__c = {
@@ -7375,11 +7503,11 @@ type ChildRelationships$Commission_Table_Line__c = {
 };
 
 interface SObjectDefinition$Commission_Table_Line__c extends SObjectDefinition<'Commission_Table_Line__c'> {
-    Name: 'Commission_Table_Line__c';
-    Fields: Fields$Commission_Table_Line__c;
-    ParentReferences: ParentReferences$Commission_Table_Line__c;
-    ChildRelationships: ChildRelationships$Commission_Table_Line__c;
-  }
+  Name: 'Commission_Table_Line__c';
+  Fields: Fields$Commission_Table_Line__c;
+  ParentReferences: ParentReferences$Commission_Table_Line__c;
+  ChildRelationships: ChildRelationships$Commission_Table_Line__c;
+}
 
 type Fields$Commission_Table__ChangeEvent = {
   //
@@ -7392,8 +7520,12 @@ type Fields$Commission_Table__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Discount__c: number | null;
   Effective_Date__c: DateString | null;
   Placement_Type__c: string | null;
+  Standard_Buyout_Term_Commission__c: number | null;
+  Name__c: string | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Commission_Table__ChangeEvent = {
@@ -7405,11 +7537,11 @@ type ChildRelationships$Commission_Table__ChangeEvent = {
 };
 
 interface SObjectDefinition$Commission_Table__ChangeEvent extends SObjectDefinition<'Commission_Table__ChangeEvent'> {
-    Name: 'Commission_Table__ChangeEvent';
-    Fields: Fields$Commission_Table__ChangeEvent;
-    ParentReferences: ParentReferences$Commission_Table__ChangeEvent;
-    ChildRelationships: ChildRelationships$Commission_Table__ChangeEvent;
-  }
+  Name: 'Commission_Table__ChangeEvent';
+  Fields: Fields$Commission_Table__ChangeEvent;
+  ParentReferences: ParentReferences$Commission_Table__ChangeEvent;
+  ChildRelationships: ChildRelationships$Commission_Table__ChangeEvent;
+}
 
 type Fields$Commission_Table__History = {
   //
@@ -7435,11 +7567,11 @@ type ChildRelationships$Commission_Table__History = {
 };
 
 interface SObjectDefinition$Commission_Table__History extends SObjectDefinition<'Commission_Table__History'> {
-    Name: 'Commission_Table__History';
-    Fields: Fields$Commission_Table__History;
-    ParentReferences: ParentReferences$Commission_Table__History;
-    ChildRelationships: ChildRelationships$Commission_Table__History;
-  }
+  Name: 'Commission_Table__History';
+  Fields: Fields$Commission_Table__History;
+  ParentReferences: ParentReferences$Commission_Table__History;
+  ChildRelationships: ChildRelationships$Commission_Table__History;
+}
 
 type Fields$Commission_Table__c = {
   //
@@ -7453,8 +7585,14 @@ type Fields$Commission_Table__c = {
   LastModifiedById: string;
   SystemModstamp: DateString;
   LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Discount__c: number | null;
   Effective_Date__c: DateString;
   Placement_Type__c: string;
+  Standard_Buyout_Term_Commission__c: number | null;
+  Name__c: string | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Commission_Table__c = {
@@ -7495,11 +7633,11 @@ type ChildRelationships$Commission_Table__c = {
 };
 
 interface SObjectDefinition$Commission_Table__c extends SObjectDefinition<'Commission_Table__c'> {
-    Name: 'Commission_Table__c';
-    Fields: Fields$Commission_Table__c;
-    ParentReferences: ParentReferences$Commission_Table__c;
-    ChildRelationships: ChildRelationships$Commission_Table__c;
-  }
+  Name: 'Commission_Table__c';
+  Fields: Fields$Commission_Table__c;
+  ParentReferences: ParentReferences$Commission_Table__c;
+  ChildRelationships: ChildRelationships$Commission_Table__c;
+}
 
 type Fields$Community = {
   //
@@ -7526,11 +7664,11 @@ type ChildRelationships$Community = {
 };
 
 interface SObjectDefinition$Community extends SObjectDefinition<'Community'> {
-    Name: 'Community';
-    Fields: Fields$Community;
-    ParentReferences: ParentReferences$Community;
-    ChildRelationships: ChildRelationships$Community;
-  }
+  Name: 'Community';
+  Fields: Fields$Community;
+  ParentReferences: ParentReferences$Community;
+  ChildRelationships: ChildRelationships$Community;
+}
 
 type Fields$Compensation_Policy__ChangeEvent = {
   //
@@ -7577,12 +7715,13 @@ type ChildRelationships$Compensation_Policy__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Compensation_Policy__ChangeEvent extends SObjectDefinition<'Compensation_Policy__ChangeEvent'> {
-    Name: 'Compensation_Policy__ChangeEvent';
-    Fields: Fields$Compensation_Policy__ChangeEvent;
-    ParentReferences: ParentReferences$Compensation_Policy__ChangeEvent;
-    ChildRelationships: ChildRelationships$Compensation_Policy__ChangeEvent;
-  }
+interface SObjectDefinition$Compensation_Policy__ChangeEvent
+  extends SObjectDefinition<'Compensation_Policy__ChangeEvent'> {
+  Name: 'Compensation_Policy__ChangeEvent';
+  Fields: Fields$Compensation_Policy__ChangeEvent;
+  ParentReferences: ParentReferences$Compensation_Policy__ChangeEvent;
+  ChildRelationships: ChildRelationships$Compensation_Policy__ChangeEvent;
+}
 
 type Fields$Compensation_Policy__c = {
   //
@@ -7654,11 +7793,11 @@ type ChildRelationships$Compensation_Policy__c = {
 };
 
 interface SObjectDefinition$Compensation_Policy__c extends SObjectDefinition<'Compensation_Policy__c'> {
-    Name: 'Compensation_Policy__c';
-    Fields: Fields$Compensation_Policy__c;
-    ParentReferences: ParentReferences$Compensation_Policy__c;
-    ChildRelationships: ChildRelationships$Compensation_Policy__c;
-  }
+  Name: 'Compensation_Policy__c';
+  Fields: Fields$Compensation_Policy__c;
+  ParentReferences: ParentReferences$Compensation_Policy__c;
+  ChildRelationships: ChildRelationships$Compensation_Policy__c;
+}
 
 type Fields$ConferenceNumber = {
   //
@@ -7689,11 +7828,11 @@ type ChildRelationships$ConferenceNumber = {
 };
 
 interface SObjectDefinition$ConferenceNumber extends SObjectDefinition<'ConferenceNumber'> {
-    Name: 'ConferenceNumber';
-    Fields: Fields$ConferenceNumber;
-    ParentReferences: ParentReferences$ConferenceNumber;
-    ChildRelationships: ChildRelationships$ConferenceNumber;
-  }
+  Name: 'ConferenceNumber';
+  Fields: Fields$ConferenceNumber;
+  ParentReferences: ParentReferences$ConferenceNumber;
+  ChildRelationships: ChildRelationships$ConferenceNumber;
+}
 
 type Fields$ConnectedApplication = {
   //
@@ -7729,11 +7868,11 @@ type ChildRelationships$ConnectedApplication = {
 };
 
 interface SObjectDefinition$ConnectedApplication extends SObjectDefinition<'ConnectedApplication'> {
-    Name: 'ConnectedApplication';
-    Fields: Fields$ConnectedApplication;
-    ParentReferences: ParentReferences$ConnectedApplication;
-    ChildRelationships: ChildRelationships$ConnectedApplication;
-  }
+  Name: 'ConnectedApplication';
+  Fields: Fields$ConnectedApplication;
+  ParentReferences: ParentReferences$ConnectedApplication;
+  ChildRelationships: ChildRelationships$ConnectedApplication;
+}
 
 type Fields$Contact = {
   //
@@ -7902,7 +8041,6 @@ type Fields$Contact = {
   Department_1__c: string | null;
   Military_Service_Type__c: string | null;
   Military_Job_Code__c: string | null;
-  Military_Status__c: string | null;
   Military_Service_Start_Date__c: DateString | null;
   Military_Service_End_Date__c: DateString | null;
   Military_Separation_Date_5Y__c: boolean;
@@ -8013,6 +8151,13 @@ type Fields$Contact = {
   Employment_Offer_Signed__c: DateString | null;
   Employment_Offer_Status__c: string | null;
   Smoothstack_Manager__c: string | null;
+  Race__c: string | null;
+  GenderIdentity: string | null;
+  Num_of_Applications__c: number | null;
+  Disability__c: string | null;
+  Duplicate_Of__c: string | null;
+  Military_Branch__c: string | null;
+  Military_Status__c: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -8041,6 +8186,7 @@ type ParentReferences$Contact = {
   Opportunity_4__r: SObjectDefinition$Opportunity | null;
   Candidate__r: SObjectDefinition$Contact | null;
   vfirst__Site_Guest_Access_Helper__r: SObjectDefinition$vfirst__Site_Guest_Access_Helper__c | null;
+  Duplicate_Of__r: SObjectDefinition$Contact | null;
 };
 
 type ChildRelationships$Contact = {
@@ -8102,11 +8248,11 @@ type ChildRelationships$Contact = {
 };
 
 interface SObjectDefinition$Contact extends SObjectDefinition<'Contact'> {
-    Name: 'Contact';
-    Fields: Fields$Contact;
-    ParentReferences: ParentReferences$Contact;
-    ChildRelationships: ChildRelationships$Contact;
-  }
+  Name: 'Contact';
+  Fields: Fields$Contact;
+  ParentReferences: ParentReferences$Contact;
+  ChildRelationships: ChildRelationships$Contact;
+}
 
 type Fields$ContactChangeEvent = {
   //
@@ -8267,7 +8413,6 @@ type Fields$ContactChangeEvent = {
   Department_1__c: string | null;
   Military_Service_Type__c: string | null;
   Military_Job_Code__c: string | null;
-  Military_Status__c: string | null;
   Military_Service_Start_Date__c: DateString | null;
   Military_Service_End_Date__c: DateString | null;
   Military_Separation_Date_5Y__c: boolean;
@@ -8378,6 +8523,12 @@ type Fields$ContactChangeEvent = {
   Employment_Offer_Signed__c: DateString | null;
   Employment_Offer_Status__c: string | null;
   Smoothstack_Manager__c: string | null;
+  Race__c: string | null;
+  Num_of_Applications__c: number | null;
+  Disability__c: string | null;
+  Duplicate_Of__c: string | null;
+  Military_Branch__c: string | null;
+  Military_Status__c: string | null;
 };
 
 type ParentReferences$ContactChangeEvent = {
@@ -8389,11 +8540,11 @@ type ChildRelationships$ContactChangeEvent = {
 };
 
 interface SObjectDefinition$ContactChangeEvent extends SObjectDefinition<'ContactChangeEvent'> {
-    Name: 'ContactChangeEvent';
-    Fields: Fields$ContactChangeEvent;
-    ParentReferences: ParentReferences$ContactChangeEvent;
-    ChildRelationships: ChildRelationships$ContactChangeEvent;
-  }
+  Name: 'ContactChangeEvent';
+  Fields: Fields$ContactChangeEvent;
+  ParentReferences: ParentReferences$ContactChangeEvent;
+  ChildRelationships: ChildRelationships$ContactChangeEvent;
+}
 
 type Fields$ContactFeed = {
   //
@@ -8434,11 +8585,11 @@ type ChildRelationships$ContactFeed = {
 };
 
 interface SObjectDefinition$ContactFeed extends SObjectDefinition<'ContactFeed'> {
-    Name: 'ContactFeed';
-    Fields: Fields$ContactFeed;
-    ParentReferences: ParentReferences$ContactFeed;
-    ChildRelationships: ChildRelationships$ContactFeed;
-  }
+  Name: 'ContactFeed';
+  Fields: Fields$ContactFeed;
+  ParentReferences: ParentReferences$ContactFeed;
+  ChildRelationships: ChildRelationships$ContactFeed;
+}
 
 type Fields$ContactHistory = {
   //
@@ -8464,11 +8615,11 @@ type ChildRelationships$ContactHistory = {
 };
 
 interface SObjectDefinition$ContactHistory extends SObjectDefinition<'ContactHistory'> {
-    Name: 'ContactHistory';
-    Fields: Fields$ContactHistory;
-    ParentReferences: ParentReferences$ContactHistory;
-    ChildRelationships: ChildRelationships$ContactHistory;
-  }
+  Name: 'ContactHistory';
+  Fields: Fields$ContactHistory;
+  ParentReferences: ParentReferences$ContactHistory;
+  ChildRelationships: ChildRelationships$ContactHistory;
+}
 
 type Fields$ContactPointAddress = {
   //
@@ -8526,11 +8677,11 @@ type ChildRelationships$ContactPointAddress = {
 };
 
 interface SObjectDefinition$ContactPointAddress extends SObjectDefinition<'ContactPointAddress'> {
-    Name: 'ContactPointAddress';
-    Fields: Fields$ContactPointAddress;
-    ParentReferences: ParentReferences$ContactPointAddress;
-    ChildRelationships: ChildRelationships$ContactPointAddress;
-  }
+  Name: 'ContactPointAddress';
+  Fields: Fields$ContactPointAddress;
+  ParentReferences: ParentReferences$ContactPointAddress;
+  ChildRelationships: ChildRelationships$ContactPointAddress;
+}
 
 type Fields$ContactPointAddressChangeEvent = {
   //
@@ -8575,11 +8726,11 @@ type ChildRelationships$ContactPointAddressChangeEvent = {
 };
 
 interface SObjectDefinition$ContactPointAddressChangeEvent extends SObjectDefinition<'ContactPointAddressChangeEvent'> {
-    Name: 'ContactPointAddressChangeEvent';
-    Fields: Fields$ContactPointAddressChangeEvent;
-    ParentReferences: ParentReferences$ContactPointAddressChangeEvent;
-    ChildRelationships: ChildRelationships$ContactPointAddressChangeEvent;
-  }
+  Name: 'ContactPointAddressChangeEvent';
+  Fields: Fields$ContactPointAddressChangeEvent;
+  ParentReferences: ParentReferences$ContactPointAddressChangeEvent;
+  ChildRelationships: ChildRelationships$ContactPointAddressChangeEvent;
+}
 
 type Fields$ContactPointAddressHistory = {
   //
@@ -8605,11 +8756,11 @@ type ChildRelationships$ContactPointAddressHistory = {
 };
 
 interface SObjectDefinition$ContactPointAddressHistory extends SObjectDefinition<'ContactPointAddressHistory'> {
-    Name: 'ContactPointAddressHistory';
-    Fields: Fields$ContactPointAddressHistory;
-    ParentReferences: ParentReferences$ContactPointAddressHistory;
-    ChildRelationships: ChildRelationships$ContactPointAddressHistory;
-  }
+  Name: 'ContactPointAddressHistory';
+  Fields: Fields$ContactPointAddressHistory;
+  ParentReferences: ParentReferences$ContactPointAddressHistory;
+  ChildRelationships: ChildRelationships$ContactPointAddressHistory;
+}
 
 type Fields$ContactPointAddressShare = {
   //
@@ -8635,11 +8786,11 @@ type ChildRelationships$ContactPointAddressShare = {
 };
 
 interface SObjectDefinition$ContactPointAddressShare extends SObjectDefinition<'ContactPointAddressShare'> {
-    Name: 'ContactPointAddressShare';
-    Fields: Fields$ContactPointAddressShare;
-    ParentReferences: ParentReferences$ContactPointAddressShare;
-    ChildRelationships: ChildRelationships$ContactPointAddressShare;
-  }
+  Name: 'ContactPointAddressShare';
+  Fields: Fields$ContactPointAddressShare;
+  ParentReferences: ParentReferences$ContactPointAddressShare;
+  ChildRelationships: ChildRelationships$ContactPointAddressShare;
+}
 
 type Fields$ContactPointConsent = {
   //
@@ -8683,11 +8834,11 @@ type ChildRelationships$ContactPointConsent = {
 };
 
 interface SObjectDefinition$ContactPointConsent extends SObjectDefinition<'ContactPointConsent'> {
-    Name: 'ContactPointConsent';
-    Fields: Fields$ContactPointConsent;
-    ParentReferences: ParentReferences$ContactPointConsent;
-    ChildRelationships: ChildRelationships$ContactPointConsent;
-  }
+  Name: 'ContactPointConsent';
+  Fields: Fields$ContactPointConsent;
+  ParentReferences: ParentReferences$ContactPointConsent;
+  ChildRelationships: ChildRelationships$ContactPointConsent;
+}
 
 type Fields$ContactPointConsentChangeEvent = {
   //
@@ -8720,11 +8871,11 @@ type ChildRelationships$ContactPointConsentChangeEvent = {
 };
 
 interface SObjectDefinition$ContactPointConsentChangeEvent extends SObjectDefinition<'ContactPointConsentChangeEvent'> {
-    Name: 'ContactPointConsentChangeEvent';
-    Fields: Fields$ContactPointConsentChangeEvent;
-    ParentReferences: ParentReferences$ContactPointConsentChangeEvent;
-    ChildRelationships: ChildRelationships$ContactPointConsentChangeEvent;
-  }
+  Name: 'ContactPointConsentChangeEvent';
+  Fields: Fields$ContactPointConsentChangeEvent;
+  ParentReferences: ParentReferences$ContactPointConsentChangeEvent;
+  ChildRelationships: ChildRelationships$ContactPointConsentChangeEvent;
+}
 
 type Fields$ContactPointConsentHistory = {
   //
@@ -8750,11 +8901,11 @@ type ChildRelationships$ContactPointConsentHistory = {
 };
 
 interface SObjectDefinition$ContactPointConsentHistory extends SObjectDefinition<'ContactPointConsentHistory'> {
-    Name: 'ContactPointConsentHistory';
-    Fields: Fields$ContactPointConsentHistory;
-    ParentReferences: ParentReferences$ContactPointConsentHistory;
-    ChildRelationships: ChildRelationships$ContactPointConsentHistory;
-  }
+  Name: 'ContactPointConsentHistory';
+  Fields: Fields$ContactPointConsentHistory;
+  ParentReferences: ParentReferences$ContactPointConsentHistory;
+  ChildRelationships: ChildRelationships$ContactPointConsentHistory;
+}
 
 type Fields$ContactPointConsentShare = {
   //
@@ -8780,11 +8931,11 @@ type ChildRelationships$ContactPointConsentShare = {
 };
 
 interface SObjectDefinition$ContactPointConsentShare extends SObjectDefinition<'ContactPointConsentShare'> {
-    Name: 'ContactPointConsentShare';
-    Fields: Fields$ContactPointConsentShare;
-    ParentReferences: ParentReferences$ContactPointConsentShare;
-    ChildRelationships: ChildRelationships$ContactPointConsentShare;
-  }
+  Name: 'ContactPointConsentShare';
+  Fields: Fields$ContactPointConsentShare;
+  ParentReferences: ParentReferences$ContactPointConsentShare;
+  ChildRelationships: ChildRelationships$ContactPointConsentShare;
+}
 
 type Fields$ContactPointEmail = {
   //
@@ -8832,11 +8983,11 @@ type ChildRelationships$ContactPointEmail = {
 };
 
 interface SObjectDefinition$ContactPointEmail extends SObjectDefinition<'ContactPointEmail'> {
-    Name: 'ContactPointEmail';
-    Fields: Fields$ContactPointEmail;
-    ParentReferences: ParentReferences$ContactPointEmail;
-    ChildRelationships: ChildRelationships$ContactPointEmail;
-  }
+  Name: 'ContactPointEmail';
+  Fields: Fields$ContactPointEmail;
+  ParentReferences: ParentReferences$ContactPointEmail;
+  ChildRelationships: ChildRelationships$ContactPointEmail;
+}
 
 type Fields$ContactPointEmailChangeEvent = {
   //
@@ -8872,11 +9023,11 @@ type ChildRelationships$ContactPointEmailChangeEvent = {
 };
 
 interface SObjectDefinition$ContactPointEmailChangeEvent extends SObjectDefinition<'ContactPointEmailChangeEvent'> {
-    Name: 'ContactPointEmailChangeEvent';
-    Fields: Fields$ContactPointEmailChangeEvent;
-    ParentReferences: ParentReferences$ContactPointEmailChangeEvent;
-    ChildRelationships: ChildRelationships$ContactPointEmailChangeEvent;
-  }
+  Name: 'ContactPointEmailChangeEvent';
+  Fields: Fields$ContactPointEmailChangeEvent;
+  ParentReferences: ParentReferences$ContactPointEmailChangeEvent;
+  ChildRelationships: ChildRelationships$ContactPointEmailChangeEvent;
+}
 
 type Fields$ContactPointEmailHistory = {
   //
@@ -8902,11 +9053,11 @@ type ChildRelationships$ContactPointEmailHistory = {
 };
 
 interface SObjectDefinition$ContactPointEmailHistory extends SObjectDefinition<'ContactPointEmailHistory'> {
-    Name: 'ContactPointEmailHistory';
-    Fields: Fields$ContactPointEmailHistory;
-    ParentReferences: ParentReferences$ContactPointEmailHistory;
-    ChildRelationships: ChildRelationships$ContactPointEmailHistory;
-  }
+  Name: 'ContactPointEmailHistory';
+  Fields: Fields$ContactPointEmailHistory;
+  ParentReferences: ParentReferences$ContactPointEmailHistory;
+  ChildRelationships: ChildRelationships$ContactPointEmailHistory;
+}
 
 type Fields$ContactPointEmailShare = {
   //
@@ -8932,11 +9083,11 @@ type ChildRelationships$ContactPointEmailShare = {
 };
 
 interface SObjectDefinition$ContactPointEmailShare extends SObjectDefinition<'ContactPointEmailShare'> {
-    Name: 'ContactPointEmailShare';
-    Fields: Fields$ContactPointEmailShare;
-    ParentReferences: ParentReferences$ContactPointEmailShare;
-    ChildRelationships: ChildRelationships$ContactPointEmailShare;
-  }
+  Name: 'ContactPointEmailShare';
+  Fields: Fields$ContactPointEmailShare;
+  ParentReferences: ParentReferences$ContactPointEmailShare;
+  ChildRelationships: ChildRelationships$ContactPointEmailShare;
+}
 
 type Fields$ContactPointPhone = {
   //
@@ -8990,11 +9141,11 @@ type ChildRelationships$ContactPointPhone = {
 };
 
 interface SObjectDefinition$ContactPointPhone extends SObjectDefinition<'ContactPointPhone'> {
-    Name: 'ContactPointPhone';
-    Fields: Fields$ContactPointPhone;
-    ParentReferences: ParentReferences$ContactPointPhone;
-    ChildRelationships: ChildRelationships$ContactPointPhone;
-  }
+  Name: 'ContactPointPhone';
+  Fields: Fields$ContactPointPhone;
+  ParentReferences: ParentReferences$ContactPointPhone;
+  ChildRelationships: ChildRelationships$ContactPointPhone;
+}
 
 type Fields$ContactPointPhoneChangeEvent = {
   //
@@ -9035,11 +9186,11 @@ type ChildRelationships$ContactPointPhoneChangeEvent = {
 };
 
 interface SObjectDefinition$ContactPointPhoneChangeEvent extends SObjectDefinition<'ContactPointPhoneChangeEvent'> {
-    Name: 'ContactPointPhoneChangeEvent';
-    Fields: Fields$ContactPointPhoneChangeEvent;
-    ParentReferences: ParentReferences$ContactPointPhoneChangeEvent;
-    ChildRelationships: ChildRelationships$ContactPointPhoneChangeEvent;
-  }
+  Name: 'ContactPointPhoneChangeEvent';
+  Fields: Fields$ContactPointPhoneChangeEvent;
+  ParentReferences: ParentReferences$ContactPointPhoneChangeEvent;
+  ChildRelationships: ChildRelationships$ContactPointPhoneChangeEvent;
+}
 
 type Fields$ContactPointPhoneHistory = {
   //
@@ -9065,11 +9216,11 @@ type ChildRelationships$ContactPointPhoneHistory = {
 };
 
 interface SObjectDefinition$ContactPointPhoneHistory extends SObjectDefinition<'ContactPointPhoneHistory'> {
-    Name: 'ContactPointPhoneHistory';
-    Fields: Fields$ContactPointPhoneHistory;
-    ParentReferences: ParentReferences$ContactPointPhoneHistory;
-    ChildRelationships: ChildRelationships$ContactPointPhoneHistory;
-  }
+  Name: 'ContactPointPhoneHistory';
+  Fields: Fields$ContactPointPhoneHistory;
+  ParentReferences: ParentReferences$ContactPointPhoneHistory;
+  ChildRelationships: ChildRelationships$ContactPointPhoneHistory;
+}
 
 type Fields$ContactPointPhoneShare = {
   //
@@ -9095,11 +9246,11 @@ type ChildRelationships$ContactPointPhoneShare = {
 };
 
 interface SObjectDefinition$ContactPointPhoneShare extends SObjectDefinition<'ContactPointPhoneShare'> {
-    Name: 'ContactPointPhoneShare';
-    Fields: Fields$ContactPointPhoneShare;
-    ParentReferences: ParentReferences$ContactPointPhoneShare;
-    ChildRelationships: ChildRelationships$ContactPointPhoneShare;
-  }
+  Name: 'ContactPointPhoneShare';
+  Fields: Fields$ContactPointPhoneShare;
+  ParentReferences: ParentReferences$ContactPointPhoneShare;
+  ChildRelationships: ChildRelationships$ContactPointPhoneShare;
+}
 
 type Fields$ContactPointTypeConsent = {
   //
@@ -9144,11 +9295,11 @@ type ChildRelationships$ContactPointTypeConsent = {
 };
 
 interface SObjectDefinition$ContactPointTypeConsent extends SObjectDefinition<'ContactPointTypeConsent'> {
-    Name: 'ContactPointTypeConsent';
-    Fields: Fields$ContactPointTypeConsent;
-    ParentReferences: ParentReferences$ContactPointTypeConsent;
-    ChildRelationships: ChildRelationships$ContactPointTypeConsent;
-  }
+  Name: 'ContactPointTypeConsent';
+  Fields: Fields$ContactPointTypeConsent;
+  ParentReferences: ParentReferences$ContactPointTypeConsent;
+  ChildRelationships: ChildRelationships$ContactPointTypeConsent;
+}
 
 type Fields$ContactPointTypeConsentChangeEvent = {
   //
@@ -9181,12 +9332,13 @@ type ChildRelationships$ContactPointTypeConsentChangeEvent = {
   //
 };
 
-interface SObjectDefinition$ContactPointTypeConsentChangeEvent extends SObjectDefinition<'ContactPointTypeConsentChangeEvent'> {
-    Name: 'ContactPointTypeConsentChangeEvent';
-    Fields: Fields$ContactPointTypeConsentChangeEvent;
-    ParentReferences: ParentReferences$ContactPointTypeConsentChangeEvent;
-    ChildRelationships: ChildRelationships$ContactPointTypeConsentChangeEvent;
-  }
+interface SObjectDefinition$ContactPointTypeConsentChangeEvent
+  extends SObjectDefinition<'ContactPointTypeConsentChangeEvent'> {
+  Name: 'ContactPointTypeConsentChangeEvent';
+  Fields: Fields$ContactPointTypeConsentChangeEvent;
+  ParentReferences: ParentReferences$ContactPointTypeConsentChangeEvent;
+  ChildRelationships: ChildRelationships$ContactPointTypeConsentChangeEvent;
+}
 
 type Fields$ContactPointTypeConsentHistory = {
   //
@@ -9212,11 +9364,11 @@ type ChildRelationships$ContactPointTypeConsentHistory = {
 };
 
 interface SObjectDefinition$ContactPointTypeConsentHistory extends SObjectDefinition<'ContactPointTypeConsentHistory'> {
-    Name: 'ContactPointTypeConsentHistory';
-    Fields: Fields$ContactPointTypeConsentHistory;
-    ParentReferences: ParentReferences$ContactPointTypeConsentHistory;
-    ChildRelationships: ChildRelationships$ContactPointTypeConsentHistory;
-  }
+  Name: 'ContactPointTypeConsentHistory';
+  Fields: Fields$ContactPointTypeConsentHistory;
+  ParentReferences: ParentReferences$ContactPointTypeConsentHistory;
+  ChildRelationships: ChildRelationships$ContactPointTypeConsentHistory;
+}
 
 type Fields$ContactPointTypeConsentShare = {
   //
@@ -9242,11 +9394,11 @@ type ChildRelationships$ContactPointTypeConsentShare = {
 };
 
 interface SObjectDefinition$ContactPointTypeConsentShare extends SObjectDefinition<'ContactPointTypeConsentShare'> {
-    Name: 'ContactPointTypeConsentShare';
-    Fields: Fields$ContactPointTypeConsentShare;
-    ParentReferences: ParentReferences$ContactPointTypeConsentShare;
-    ChildRelationships: ChildRelationships$ContactPointTypeConsentShare;
-  }
+  Name: 'ContactPointTypeConsentShare';
+  Fields: Fields$ContactPointTypeConsentShare;
+  ParentReferences: ParentReferences$ContactPointTypeConsentShare;
+  ChildRelationships: ChildRelationships$ContactPointTypeConsentShare;
+}
 
 type Fields$ContactRequest = {
   //
@@ -9294,11 +9446,11 @@ type ChildRelationships$ContactRequest = {
 };
 
 interface SObjectDefinition$ContactRequest extends SObjectDefinition<'ContactRequest'> {
-    Name: 'ContactRequest';
-    Fields: Fields$ContactRequest;
-    ParentReferences: ParentReferences$ContactRequest;
-    ChildRelationships: ChildRelationships$ContactRequest;
-  }
+  Name: 'ContactRequest';
+  Fields: Fields$ContactRequest;
+  ParentReferences: ParentReferences$ContactRequest;
+  ChildRelationships: ChildRelationships$ContactRequest;
+}
 
 type Fields$ContactRequestShare = {
   //
@@ -9324,11 +9476,11 @@ type ChildRelationships$ContactRequestShare = {
 };
 
 interface SObjectDefinition$ContactRequestShare extends SObjectDefinition<'ContactRequestShare'> {
-    Name: 'ContactRequestShare';
-    Fields: Fields$ContactRequestShare;
-    ParentReferences: ParentReferences$ContactRequestShare;
-    ChildRelationships: ChildRelationships$ContactRequestShare;
-  }
+  Name: 'ContactRequestShare';
+  Fields: Fields$ContactRequestShare;
+  ParentReferences: ParentReferences$ContactRequestShare;
+  ChildRelationships: ChildRelationships$ContactRequestShare;
+}
 
 type Fields$ContactShare = {
   //
@@ -9354,11 +9506,11 @@ type ChildRelationships$ContactShare = {
 };
 
 interface SObjectDefinition$ContactShare extends SObjectDefinition<'ContactShare'> {
-    Name: 'ContactShare';
-    Fields: Fields$ContactShare;
-    ParentReferences: ParentReferences$ContactShare;
-    ChildRelationships: ChildRelationships$ContactShare;
-  }
+  Name: 'ContactShare';
+  Fields: Fields$ContactShare;
+  ParentReferences: ParentReferences$ContactShare;
+  ChildRelationships: ChildRelationships$ContactShare;
+}
 
 type Fields$ContentAsset = {
   //
@@ -9389,11 +9541,11 @@ type ChildRelationships$ContentAsset = {
 };
 
 interface SObjectDefinition$ContentAsset extends SObjectDefinition<'ContentAsset'> {
-    Name: 'ContentAsset';
-    Fields: Fields$ContentAsset;
-    ParentReferences: ParentReferences$ContentAsset;
-    ChildRelationships: ChildRelationships$ContentAsset;
-  }
+  Name: 'ContentAsset';
+  Fields: Fields$ContentAsset;
+  ParentReferences: ParentReferences$ContentAsset;
+  ChildRelationships: ChildRelationships$ContentAsset;
+}
 
 type Fields$ContentBody = {
   //
@@ -9409,11 +9561,11 @@ type ChildRelationships$ContentBody = {
 };
 
 interface SObjectDefinition$ContentBody extends SObjectDefinition<'ContentBody'> {
-    Name: 'ContentBody';
-    Fields: Fields$ContentBody;
-    ParentReferences: ParentReferences$ContentBody;
-    ChildRelationships: ChildRelationships$ContentBody;
-  }
+  Name: 'ContentBody';
+  Fields: Fields$ContentBody;
+  ParentReferences: ParentReferences$ContentBody;
+  ChildRelationships: ChildRelationships$ContentBody;
+}
 
 type Fields$ContentDistribution = {
   //
@@ -9462,11 +9614,11 @@ type ChildRelationships$ContentDistribution = {
 };
 
 interface SObjectDefinition$ContentDistribution extends SObjectDefinition<'ContentDistribution'> {
-    Name: 'ContentDistribution';
-    Fields: Fields$ContentDistribution;
-    ParentReferences: ParentReferences$ContentDistribution;
-    ChildRelationships: ChildRelationships$ContentDistribution;
-  }
+  Name: 'ContentDistribution';
+  Fields: Fields$ContentDistribution;
+  ParentReferences: ParentReferences$ContentDistribution;
+  ChildRelationships: ChildRelationships$ContentDistribution;
+}
 
 type Fields$ContentDistributionView = {
   //
@@ -9492,11 +9644,11 @@ type ChildRelationships$ContentDistributionView = {
 };
 
 interface SObjectDefinition$ContentDistributionView extends SObjectDefinition<'ContentDistributionView'> {
-    Name: 'ContentDistributionView';
-    Fields: Fields$ContentDistributionView;
-    ParentReferences: ParentReferences$ContentDistributionView;
-    ChildRelationships: ChildRelationships$ContentDistributionView;
-  }
+  Name: 'ContentDistributionView';
+  Fields: Fields$ContentDistributionView;
+  ParentReferences: ParentReferences$ContentDistributionView;
+  ChildRelationships: ChildRelationships$ContentDistributionView;
+}
 
 type Fields$ContentDocument = {
   //
@@ -9549,11 +9701,11 @@ type ChildRelationships$ContentDocument = {
 };
 
 interface SObjectDefinition$ContentDocument extends SObjectDefinition<'ContentDocument'> {
-    Name: 'ContentDocument';
-    Fields: Fields$ContentDocument;
-    ParentReferences: ParentReferences$ContentDocument;
-    ChildRelationships: ChildRelationships$ContentDocument;
-  }
+  Name: 'ContentDocument';
+  Fields: Fields$ContentDocument;
+  ParentReferences: ParentReferences$ContentDocument;
+  ChildRelationships: ChildRelationships$ContentDocument;
+}
 
 type Fields$ContentDocumentFeed = {
   //
@@ -9594,11 +9746,11 @@ type ChildRelationships$ContentDocumentFeed = {
 };
 
 interface SObjectDefinition$ContentDocumentFeed extends SObjectDefinition<'ContentDocumentFeed'> {
-    Name: 'ContentDocumentFeed';
-    Fields: Fields$ContentDocumentFeed;
-    ParentReferences: ParentReferences$ContentDocumentFeed;
-    ChildRelationships: ChildRelationships$ContentDocumentFeed;
-  }
+  Name: 'ContentDocumentFeed';
+  Fields: Fields$ContentDocumentFeed;
+  ParentReferences: ParentReferences$ContentDocumentFeed;
+  ChildRelationships: ChildRelationships$ContentDocumentFeed;
+}
 
 type Fields$ContentDocumentHistory = {
   //
@@ -9624,11 +9776,11 @@ type ChildRelationships$ContentDocumentHistory = {
 };
 
 interface SObjectDefinition$ContentDocumentHistory extends SObjectDefinition<'ContentDocumentHistory'> {
-    Name: 'ContentDocumentHistory';
-    Fields: Fields$ContentDocumentHistory;
-    ParentReferences: ParentReferences$ContentDocumentHistory;
-    ChildRelationships: ChildRelationships$ContentDocumentHistory;
-  }
+  Name: 'ContentDocumentHistory';
+  Fields: Fields$ContentDocumentHistory;
+  ParentReferences: ParentReferences$ContentDocumentHistory;
+  ChildRelationships: ChildRelationships$ContentDocumentHistory;
+}
 
 type Fields$ContentDocumentLink = {
   //
@@ -9652,11 +9804,11 @@ type ChildRelationships$ContentDocumentLink = {
 };
 
 interface SObjectDefinition$ContentDocumentLink extends SObjectDefinition<'ContentDocumentLink'> {
-    Name: 'ContentDocumentLink';
-    Fields: Fields$ContentDocumentLink;
-    ParentReferences: ParentReferences$ContentDocumentLink;
-    ChildRelationships: ChildRelationships$ContentDocumentLink;
-  }
+  Name: 'ContentDocumentLink';
+  Fields: Fields$ContentDocumentLink;
+  ParentReferences: ParentReferences$ContentDocumentLink;
+  ChildRelationships: ChildRelationships$ContentDocumentLink;
+}
 
 type Fields$ContentDocumentSubscription = {
   //
@@ -9678,11 +9830,11 @@ type ChildRelationships$ContentDocumentSubscription = {
 };
 
 interface SObjectDefinition$ContentDocumentSubscription extends SObjectDefinition<'ContentDocumentSubscription'> {
-    Name: 'ContentDocumentSubscription';
-    Fields: Fields$ContentDocumentSubscription;
-    ParentReferences: ParentReferences$ContentDocumentSubscription;
-    ChildRelationships: ChildRelationships$ContentDocumentSubscription;
-  }
+  Name: 'ContentDocumentSubscription';
+  Fields: Fields$ContentDocumentSubscription;
+  ParentReferences: ParentReferences$ContentDocumentSubscription;
+  ChildRelationships: ChildRelationships$ContentDocumentSubscription;
+}
 
 type Fields$ContentFolder = {
   //
@@ -9710,11 +9862,11 @@ type ChildRelationships$ContentFolder = {
 };
 
 interface SObjectDefinition$ContentFolder extends SObjectDefinition<'ContentFolder'> {
-    Name: 'ContentFolder';
-    Fields: Fields$ContentFolder;
-    ParentReferences: ParentReferences$ContentFolder;
-    ChildRelationships: ChildRelationships$ContentFolder;
-  }
+  Name: 'ContentFolder';
+  Fields: Fields$ContentFolder;
+  ParentReferences: ParentReferences$ContentFolder;
+  ChildRelationships: ChildRelationships$ContentFolder;
+}
 
 type Fields$ContentFolderItem = {
   //
@@ -9745,11 +9897,11 @@ type ChildRelationships$ContentFolderItem = {
 };
 
 interface SObjectDefinition$ContentFolderItem extends SObjectDefinition<'ContentFolderItem'> {
-    Name: 'ContentFolderItem';
-    Fields: Fields$ContentFolderItem;
-    ParentReferences: ParentReferences$ContentFolderItem;
-    ChildRelationships: ChildRelationships$ContentFolderItem;
-  }
+  Name: 'ContentFolderItem';
+  Fields: Fields$ContentFolderItem;
+  ParentReferences: ParentReferences$ContentFolderItem;
+  ChildRelationships: ChildRelationships$ContentFolderItem;
+}
 
 type Fields$ContentFolderLink = {
   //
@@ -9770,11 +9922,11 @@ type ChildRelationships$ContentFolderLink = {
 };
 
 interface SObjectDefinition$ContentFolderLink extends SObjectDefinition<'ContentFolderLink'> {
-    Name: 'ContentFolderLink';
-    Fields: Fields$ContentFolderLink;
-    ParentReferences: ParentReferences$ContentFolderLink;
-    ChildRelationships: ChildRelationships$ContentFolderLink;
-  }
+  Name: 'ContentFolderLink';
+  Fields: Fields$ContentFolderLink;
+  ParentReferences: ParentReferences$ContentFolderLink;
+  ChildRelationships: ChildRelationships$ContentFolderLink;
+}
 
 type Fields$ContentFolderMember = {
   //
@@ -9802,11 +9954,11 @@ type ChildRelationships$ContentFolderMember = {
 };
 
 interface SObjectDefinition$ContentFolderMember extends SObjectDefinition<'ContentFolderMember'> {
-    Name: 'ContentFolderMember';
-    Fields: Fields$ContentFolderMember;
-    ParentReferences: ParentReferences$ContentFolderMember;
-    ChildRelationships: ChildRelationships$ContentFolderMember;
-  }
+  Name: 'ContentFolderMember';
+  Fields: Fields$ContentFolderMember;
+  ParentReferences: ParentReferences$ContentFolderMember;
+  ChildRelationships: ChildRelationships$ContentFolderMember;
+}
 
 type Fields$ContentNote = {
   //
@@ -9843,11 +9995,11 @@ type ChildRelationships$ContentNote = {
 };
 
 interface SObjectDefinition$ContentNote extends SObjectDefinition<'ContentNote'> {
-    Name: 'ContentNote';
-    Fields: Fields$ContentNote;
-    ParentReferences: ParentReferences$ContentNote;
-    ChildRelationships: ChildRelationships$ContentNote;
-  }
+  Name: 'ContentNote';
+  Fields: Fields$ContentNote;
+  ParentReferences: ParentReferences$ContentNote;
+  ChildRelationships: ChildRelationships$ContentNote;
+}
 
 type Fields$ContentNotification = {
   //
@@ -9871,11 +10023,11 @@ type ChildRelationships$ContentNotification = {
 };
 
 interface SObjectDefinition$ContentNotification extends SObjectDefinition<'ContentNotification'> {
-    Name: 'ContentNotification';
-    Fields: Fields$ContentNotification;
-    ParentReferences: ParentReferences$ContentNotification;
-    ChildRelationships: ChildRelationships$ContentNotification;
-  }
+  Name: 'ContentNotification';
+  Fields: Fields$ContentNotification;
+  ParentReferences: ParentReferences$ContentNotification;
+  ChildRelationships: ChildRelationships$ContentNotification;
+}
 
 type Fields$ContentTagSubscription = {
   //
@@ -9893,11 +10045,11 @@ type ChildRelationships$ContentTagSubscription = {
 };
 
 interface SObjectDefinition$ContentTagSubscription extends SObjectDefinition<'ContentTagSubscription'> {
-    Name: 'ContentTagSubscription';
-    Fields: Fields$ContentTagSubscription;
-    ParentReferences: ParentReferences$ContentTagSubscription;
-    ChildRelationships: ChildRelationships$ContentTagSubscription;
-  }
+  Name: 'ContentTagSubscription';
+  Fields: Fields$ContentTagSubscription;
+  ParentReferences: ParentReferences$ContentTagSubscription;
+  ChildRelationships: ChildRelationships$ContentTagSubscription;
+}
 
 type Fields$ContentUserSubscription = {
   //
@@ -9917,11 +10069,11 @@ type ChildRelationships$ContentUserSubscription = {
 };
 
 interface SObjectDefinition$ContentUserSubscription extends SObjectDefinition<'ContentUserSubscription'> {
-    Name: 'ContentUserSubscription';
-    Fields: Fields$ContentUserSubscription;
-    ParentReferences: ParentReferences$ContentUserSubscription;
-    ChildRelationships: ChildRelationships$ContentUserSubscription;
-  }
+  Name: 'ContentUserSubscription';
+  Fields: Fields$ContentUserSubscription;
+  ParentReferences: ParentReferences$ContentUserSubscription;
+  ChildRelationships: ChildRelationships$ContentUserSubscription;
+}
 
 type Fields$ContentVersion = {
   //
@@ -9990,11 +10142,11 @@ type ChildRelationships$ContentVersion = {
 };
 
 interface SObjectDefinition$ContentVersion extends SObjectDefinition<'ContentVersion'> {
-    Name: 'ContentVersion';
-    Fields: Fields$ContentVersion;
-    ParentReferences: ParentReferences$ContentVersion;
-    ChildRelationships: ChildRelationships$ContentVersion;
-  }
+  Name: 'ContentVersion';
+  Fields: Fields$ContentVersion;
+  ParentReferences: ParentReferences$ContentVersion;
+  ChildRelationships: ChildRelationships$ContentVersion;
+}
 
 type Fields$ContentVersionComment = {
   //
@@ -10016,11 +10168,11 @@ type ChildRelationships$ContentVersionComment = {
 };
 
 interface SObjectDefinition$ContentVersionComment extends SObjectDefinition<'ContentVersionComment'> {
-    Name: 'ContentVersionComment';
-    Fields: Fields$ContentVersionComment;
-    ParentReferences: ParentReferences$ContentVersionComment;
-    ChildRelationships: ChildRelationships$ContentVersionComment;
-  }
+  Name: 'ContentVersionComment';
+  Fields: Fields$ContentVersionComment;
+  ParentReferences: ParentReferences$ContentVersionComment;
+  ChildRelationships: ChildRelationships$ContentVersionComment;
+}
 
 type Fields$ContentVersionHistory = {
   //
@@ -10046,11 +10198,11 @@ type ChildRelationships$ContentVersionHistory = {
 };
 
 interface SObjectDefinition$ContentVersionHistory extends SObjectDefinition<'ContentVersionHistory'> {
-    Name: 'ContentVersionHistory';
-    Fields: Fields$ContentVersionHistory;
-    ParentReferences: ParentReferences$ContentVersionHistory;
-    ChildRelationships: ChildRelationships$ContentVersionHistory;
-  }
+  Name: 'ContentVersionHistory';
+  Fields: Fields$ContentVersionHistory;
+  ParentReferences: ParentReferences$ContentVersionHistory;
+  ChildRelationships: ChildRelationships$ContentVersionHistory;
+}
 
 type Fields$ContentVersionRating = {
   //
@@ -10073,11 +10225,11 @@ type ChildRelationships$ContentVersionRating = {
 };
 
 interface SObjectDefinition$ContentVersionRating extends SObjectDefinition<'ContentVersionRating'> {
-    Name: 'ContentVersionRating';
-    Fields: Fields$ContentVersionRating;
-    ParentReferences: ParentReferences$ContentVersionRating;
-    ChildRelationships: ChildRelationships$ContentVersionRating;
-  }
+  Name: 'ContentVersionRating';
+  Fields: Fields$ContentVersionRating;
+  ParentReferences: ParentReferences$ContentVersionRating;
+  ChildRelationships: ChildRelationships$ContentVersionRating;
+}
 
 type Fields$ContentWorkspace = {
   //
@@ -10120,11 +10272,11 @@ type ChildRelationships$ContentWorkspace = {
 };
 
 interface SObjectDefinition$ContentWorkspace extends SObjectDefinition<'ContentWorkspace'> {
-    Name: 'ContentWorkspace';
-    Fields: Fields$ContentWorkspace;
-    ParentReferences: ParentReferences$ContentWorkspace;
-    ChildRelationships: ChildRelationships$ContentWorkspace;
-  }
+  Name: 'ContentWorkspace';
+  Fields: Fields$ContentWorkspace;
+  ParentReferences: ParentReferences$ContentWorkspace;
+  ChildRelationships: ChildRelationships$ContentWorkspace;
+}
 
 type Fields$ContentWorkspaceDoc = {
   //
@@ -10148,11 +10300,11 @@ type ChildRelationships$ContentWorkspaceDoc = {
 };
 
 interface SObjectDefinition$ContentWorkspaceDoc extends SObjectDefinition<'ContentWorkspaceDoc'> {
-    Name: 'ContentWorkspaceDoc';
-    Fields: Fields$ContentWorkspaceDoc;
-    ParentReferences: ParentReferences$ContentWorkspaceDoc;
-    ChildRelationships: ChildRelationships$ContentWorkspaceDoc;
-  }
+  Name: 'ContentWorkspaceDoc';
+  Fields: Fields$ContentWorkspaceDoc;
+  ParentReferences: ParentReferences$ContentWorkspaceDoc;
+  ChildRelationships: ChildRelationships$ContentWorkspaceDoc;
+}
 
 type Fields$ContentWorkspaceMember = {
   //
@@ -10178,11 +10330,11 @@ type ChildRelationships$ContentWorkspaceMember = {
 };
 
 interface SObjectDefinition$ContentWorkspaceMember extends SObjectDefinition<'ContentWorkspaceMember'> {
-    Name: 'ContentWorkspaceMember';
-    Fields: Fields$ContentWorkspaceMember;
-    ParentReferences: ParentReferences$ContentWorkspaceMember;
-    ChildRelationships: ChildRelationships$ContentWorkspaceMember;
-  }
+  Name: 'ContentWorkspaceMember';
+  Fields: Fields$ContentWorkspaceMember;
+  ParentReferences: ParentReferences$ContentWorkspaceMember;
+  ChildRelationships: ChildRelationships$ContentWorkspaceMember;
+}
 
 type Fields$ContentWorkspacePermission = {
   //
@@ -10221,11 +10373,11 @@ type ChildRelationships$ContentWorkspacePermission = {
 };
 
 interface SObjectDefinition$ContentWorkspacePermission extends SObjectDefinition<'ContentWorkspacePermission'> {
-    Name: 'ContentWorkspacePermission';
-    Fields: Fields$ContentWorkspacePermission;
-    ParentReferences: ParentReferences$ContentWorkspacePermission;
-    ChildRelationships: ChildRelationships$ContentWorkspacePermission;
-  }
+  Name: 'ContentWorkspacePermission';
+  Fields: Fields$ContentWorkspacePermission;
+  ParentReferences: ParentReferences$ContentWorkspacePermission;
+  ChildRelationships: ChildRelationships$ContentWorkspacePermission;
+}
 
 type Fields$ContentWorkspaceSubscription = {
   //
@@ -10245,11 +10397,11 @@ type ChildRelationships$ContentWorkspaceSubscription = {
 };
 
 interface SObjectDefinition$ContentWorkspaceSubscription extends SObjectDefinition<'ContentWorkspaceSubscription'> {
-    Name: 'ContentWorkspaceSubscription';
-    Fields: Fields$ContentWorkspaceSubscription;
-    ParentReferences: ParentReferences$ContentWorkspaceSubscription;
-    ChildRelationships: ChildRelationships$ContentWorkspaceSubscription;
-  }
+  Name: 'ContentWorkspaceSubscription';
+  Fields: Fields$ContentWorkspaceSubscription;
+  ParentReferences: ParentReferences$ContentWorkspaceSubscription;
+  ChildRelationships: ChildRelationships$ContentWorkspaceSubscription;
+}
 
 type Fields$Contract = {
   //
@@ -10357,11 +10509,11 @@ type ChildRelationships$Contract = {
 };
 
 interface SObjectDefinition$Contract extends SObjectDefinition<'Contract'> {
-    Name: 'Contract';
-    Fields: Fields$Contract;
-    ParentReferences: ParentReferences$Contract;
-    ChildRelationships: ChildRelationships$Contract;
-  }
+  Name: 'Contract';
+  Fields: Fields$Contract;
+  ParentReferences: ParentReferences$Contract;
+  ChildRelationships: ChildRelationships$Contract;
+}
 
 type Fields$ContractChangeEvent = {
   //
@@ -10426,11 +10578,11 @@ type ChildRelationships$ContractChangeEvent = {
 };
 
 interface SObjectDefinition$ContractChangeEvent extends SObjectDefinition<'ContractChangeEvent'> {
-    Name: 'ContractChangeEvent';
-    Fields: Fields$ContractChangeEvent;
-    ParentReferences: ParentReferences$ContractChangeEvent;
-    ChildRelationships: ChildRelationships$ContractChangeEvent;
-  }
+  Name: 'ContractChangeEvent';
+  Fields: Fields$ContractChangeEvent;
+  ParentReferences: ParentReferences$ContractChangeEvent;
+  ChildRelationships: ChildRelationships$ContractChangeEvent;
+}
 
 type Fields$ContractContactRole = {
   //
@@ -10460,11 +10612,11 @@ type ChildRelationships$ContractContactRole = {
 };
 
 interface SObjectDefinition$ContractContactRole extends SObjectDefinition<'ContractContactRole'> {
-    Name: 'ContractContactRole';
-    Fields: Fields$ContractContactRole;
-    ParentReferences: ParentReferences$ContractContactRole;
-    ChildRelationships: ChildRelationships$ContractContactRole;
-  }
+  Name: 'ContractContactRole';
+  Fields: Fields$ContractContactRole;
+  ParentReferences: ParentReferences$ContractContactRole;
+  ChildRelationships: ChildRelationships$ContractContactRole;
+}
 
 type Fields$ContractFeed = {
   //
@@ -10505,11 +10657,11 @@ type ChildRelationships$ContractFeed = {
 };
 
 interface SObjectDefinition$ContractFeed extends SObjectDefinition<'ContractFeed'> {
-    Name: 'ContractFeed';
-    Fields: Fields$ContractFeed;
-    ParentReferences: ParentReferences$ContractFeed;
-    ChildRelationships: ChildRelationships$ContractFeed;
-  }
+  Name: 'ContractFeed';
+  Fields: Fields$ContractFeed;
+  ParentReferences: ParentReferences$ContractFeed;
+  ChildRelationships: ChildRelationships$ContractFeed;
+}
 
 type Fields$ContractHistory = {
   //
@@ -10535,11 +10687,11 @@ type ChildRelationships$ContractHistory = {
 };
 
 interface SObjectDefinition$ContractHistory extends SObjectDefinition<'ContractHistory'> {
-    Name: 'ContractHistory';
-    Fields: Fields$ContractHistory;
-    ParentReferences: ParentReferences$ContractHistory;
-    ChildRelationships: ChildRelationships$ContractHistory;
-  }
+  Name: 'ContractHistory';
+  Fields: Fields$ContractHistory;
+  ParentReferences: ParentReferences$ContractHistory;
+  ChildRelationships: ChildRelationships$ContractHistory;
+}
 
 type Fields$ContractStatus = {
   //
@@ -10567,11 +10719,11 @@ type ChildRelationships$ContractStatus = {
 };
 
 interface SObjectDefinition$ContractStatus extends SObjectDefinition<'ContractStatus'> {
-    Name: 'ContractStatus';
-    Fields: Fields$ContractStatus;
-    ParentReferences: ParentReferences$ContractStatus;
-    ChildRelationships: ChildRelationships$ContractStatus;
-  }
+  Name: 'ContractStatus';
+  Fields: Fields$ContractStatus;
+  ParentReferences: ParentReferences$ContractStatus;
+  ChildRelationships: ChildRelationships$ContractStatus;
+}
 
 type Fields$Contractor_Xchange_Portal_Settings__mdt = {
   //
@@ -10599,12 +10751,13 @@ type ChildRelationships$Contractor_Xchange_Portal_Settings__mdt = {
   //
 };
 
-interface SObjectDefinition$Contractor_Xchange_Portal_Settings__mdt extends SObjectDefinition<'Contractor_Xchange_Portal_Settings__mdt'> {
-    Name: 'Contractor_Xchange_Portal_Settings__mdt';
-    Fields: Fields$Contractor_Xchange_Portal_Settings__mdt;
-    ParentReferences: ParentReferences$Contractor_Xchange_Portal_Settings__mdt;
-    ChildRelationships: ChildRelationships$Contractor_Xchange_Portal_Settings__mdt;
-  }
+interface SObjectDefinition$Contractor_Xchange_Portal_Settings__mdt
+  extends SObjectDefinition<'Contractor_Xchange_Portal_Settings__mdt'> {
+  Name: 'Contractor_Xchange_Portal_Settings__mdt';
+  Fields: Fields$Contractor_Xchange_Portal_Settings__mdt;
+  ParentReferences: ParentReferences$Contractor_Xchange_Portal_Settings__mdt;
+  ChildRelationships: ChildRelationships$Contractor_Xchange_Portal_Settings__mdt;
+}
 
 type Fields$CorsWhitelistEntry = {
   //
@@ -10633,11 +10786,11 @@ type ChildRelationships$CorsWhitelistEntry = {
 };
 
 interface SObjectDefinition$CorsWhitelistEntry extends SObjectDefinition<'CorsWhitelistEntry'> {
-    Name: 'CorsWhitelistEntry';
-    Fields: Fields$CorsWhitelistEntry;
-    ParentReferences: ParentReferences$CorsWhitelistEntry;
-    ChildRelationships: ChildRelationships$CorsWhitelistEntry;
-  }
+  Name: 'CorsWhitelistEntry';
+  Fields: Fields$CorsWhitelistEntry;
+  ParentReferences: ParentReferences$CorsWhitelistEntry;
+  ChildRelationships: ChildRelationships$CorsWhitelistEntry;
+}
 
 type Fields$CronJobDetail = {
   //
@@ -10655,11 +10808,11 @@ type ChildRelationships$CronJobDetail = {
 };
 
 interface SObjectDefinition$CronJobDetail extends SObjectDefinition<'CronJobDetail'> {
-    Name: 'CronJobDetail';
-    Fields: Fields$CronJobDetail;
-    ParentReferences: ParentReferences$CronJobDetail;
-    ChildRelationships: ChildRelationships$CronJobDetail;
-  }
+  Name: 'CronJobDetail';
+  Fields: Fields$CronJobDetail;
+  ParentReferences: ParentReferences$CronJobDetail;
+  ChildRelationships: ChildRelationships$CronJobDetail;
+}
 
 type Fields$CronTrigger = {
   //
@@ -10691,11 +10844,11 @@ type ChildRelationships$CronTrigger = {
 };
 
 interface SObjectDefinition$CronTrigger extends SObjectDefinition<'CronTrigger'> {
-    Name: 'CronTrigger';
-    Fields: Fields$CronTrigger;
-    ParentReferences: ParentReferences$CronTrigger;
-    ChildRelationships: ChildRelationships$CronTrigger;
-  }
+  Name: 'CronTrigger';
+  Fields: Fields$CronTrigger;
+  ParentReferences: ParentReferences$CronTrigger;
+  ChildRelationships: ChildRelationships$CronTrigger;
+}
 
 type Fields$CspTrustedSite = {
   //
@@ -10733,11 +10886,11 @@ type ChildRelationships$CspTrustedSite = {
 };
 
 interface SObjectDefinition$CspTrustedSite extends SObjectDefinition<'CspTrustedSite'> {
-    Name: 'CspTrustedSite';
-    Fields: Fields$CspTrustedSite;
-    ParentReferences: ParentReferences$CspTrustedSite;
-    ChildRelationships: ChildRelationships$CspTrustedSite;
-  }
+  Name: 'CspTrustedSite';
+  Fields: Fields$CspTrustedSite;
+  ParentReferences: ParentReferences$CspTrustedSite;
+  ChildRelationships: ChildRelationships$CspTrustedSite;
+}
 
 type Fields$CustomBrand = {
   //
@@ -10761,11 +10914,11 @@ type ChildRelationships$CustomBrand = {
 };
 
 interface SObjectDefinition$CustomBrand extends SObjectDefinition<'CustomBrand'> {
-    Name: 'CustomBrand';
-    Fields: Fields$CustomBrand;
-    ParentReferences: ParentReferences$CustomBrand;
-    ChildRelationships: ChildRelationships$CustomBrand;
-  }
+  Name: 'CustomBrand';
+  Fields: Fields$CustomBrand;
+  ParentReferences: ParentReferences$CustomBrand;
+  ChildRelationships: ChildRelationships$CustomBrand;
+}
 
 type Fields$CustomBrandAsset = {
   //
@@ -10792,11 +10945,11 @@ type ChildRelationships$CustomBrandAsset = {
 };
 
 interface SObjectDefinition$CustomBrandAsset extends SObjectDefinition<'CustomBrandAsset'> {
-    Name: 'CustomBrandAsset';
-    Fields: Fields$CustomBrandAsset;
-    ParentReferences: ParentReferences$CustomBrandAsset;
-    ChildRelationships: ChildRelationships$CustomBrandAsset;
-  }
+  Name: 'CustomBrandAsset';
+  Fields: Fields$CustomBrandAsset;
+  ParentReferences: ParentReferences$CustomBrandAsset;
+  ChildRelationships: ChildRelationships$CustomBrandAsset;
+}
 
 type Fields$CustomHelpMenuItem = {
   //
@@ -10825,11 +10978,11 @@ type ChildRelationships$CustomHelpMenuItem = {
 };
 
 interface SObjectDefinition$CustomHelpMenuItem extends SObjectDefinition<'CustomHelpMenuItem'> {
-    Name: 'CustomHelpMenuItem';
-    Fields: Fields$CustomHelpMenuItem;
-    ParentReferences: ParentReferences$CustomHelpMenuItem;
-    ChildRelationships: ChildRelationships$CustomHelpMenuItem;
-  }
+  Name: 'CustomHelpMenuItem';
+  Fields: Fields$CustomHelpMenuItem;
+  ParentReferences: ParentReferences$CustomHelpMenuItem;
+  ChildRelationships: ChildRelationships$CustomHelpMenuItem;
+}
 
 type Fields$CustomHelpMenuSection = {
   //
@@ -10857,11 +11010,11 @@ type ChildRelationships$CustomHelpMenuSection = {
 };
 
 interface SObjectDefinition$CustomHelpMenuSection extends SObjectDefinition<'CustomHelpMenuSection'> {
-    Name: 'CustomHelpMenuSection';
-    Fields: Fields$CustomHelpMenuSection;
-    ParentReferences: ParentReferences$CustomHelpMenuSection;
-    ChildRelationships: ChildRelationships$CustomHelpMenuSection;
-  }
+  Name: 'CustomHelpMenuSection';
+  Fields: Fields$CustomHelpMenuSection;
+  ParentReferences: ParentReferences$CustomHelpMenuSection;
+  ChildRelationships: ChildRelationships$CustomHelpMenuSection;
+}
 
 type Fields$CustomHttpHeader = {
   //
@@ -10890,11 +11043,11 @@ type ChildRelationships$CustomHttpHeader = {
 };
 
 interface SObjectDefinition$CustomHttpHeader extends SObjectDefinition<'CustomHttpHeader'> {
-    Name: 'CustomHttpHeader';
-    Fields: Fields$CustomHttpHeader;
-    ParentReferences: ParentReferences$CustomHttpHeader;
-    ChildRelationships: ChildRelationships$CustomHttpHeader;
-  }
+  Name: 'CustomHttpHeader';
+  Fields: Fields$CustomHttpHeader;
+  ParentReferences: ParentReferences$CustomHttpHeader;
+  ChildRelationships: ChildRelationships$CustomHttpHeader;
+}
 
 type Fields$CustomNotificationType = {
   //
@@ -10926,11 +11079,11 @@ type ChildRelationships$CustomNotificationType = {
 };
 
 interface SObjectDefinition$CustomNotificationType extends SObjectDefinition<'CustomNotificationType'> {
-    Name: 'CustomNotificationType';
-    Fields: Fields$CustomNotificationType;
-    ParentReferences: ParentReferences$CustomNotificationType;
-    ChildRelationships: ChildRelationships$CustomNotificationType;
-  }
+  Name: 'CustomNotificationType';
+  Fields: Fields$CustomNotificationType;
+  ParentReferences: ParentReferences$CustomNotificationType;
+  ChildRelationships: ChildRelationships$CustomNotificationType;
+}
 
 type Fields$CustomObjectUserLicenseMetrics = {
   //
@@ -10954,11 +11107,11 @@ type ChildRelationships$CustomObjectUserLicenseMetrics = {
 };
 
 interface SObjectDefinition$CustomObjectUserLicenseMetrics extends SObjectDefinition<'CustomObjectUserLicenseMetrics'> {
-    Name: 'CustomObjectUserLicenseMetrics';
-    Fields: Fields$CustomObjectUserLicenseMetrics;
-    ParentReferences: ParentReferences$CustomObjectUserLicenseMetrics;
-    ChildRelationships: ChildRelationships$CustomObjectUserLicenseMetrics;
-  }
+  Name: 'CustomObjectUserLicenseMetrics';
+  Fields: Fields$CustomObjectUserLicenseMetrics;
+  ParentReferences: ParentReferences$CustomObjectUserLicenseMetrics;
+  ChildRelationships: ChildRelationships$CustomObjectUserLicenseMetrics;
+}
 
 type Fields$CustomPermission = {
   //
@@ -10993,11 +11146,11 @@ type ChildRelationships$CustomPermission = {
 };
 
 interface SObjectDefinition$CustomPermission extends SObjectDefinition<'CustomPermission'> {
-    Name: 'CustomPermission';
-    Fields: Fields$CustomPermission;
-    ParentReferences: ParentReferences$CustomPermission;
-    ChildRelationships: ChildRelationships$CustomPermission;
-  }
+  Name: 'CustomPermission';
+  Fields: Fields$CustomPermission;
+  ParentReferences: ParentReferences$CustomPermission;
+  ChildRelationships: ChildRelationships$CustomPermission;
+}
 
 type Fields$CustomPermissionDependency = {
   //
@@ -11025,11 +11178,11 @@ type ChildRelationships$CustomPermissionDependency = {
 };
 
 interface SObjectDefinition$CustomPermissionDependency extends SObjectDefinition<'CustomPermissionDependency'> {
-    Name: 'CustomPermissionDependency';
-    Fields: Fields$CustomPermissionDependency;
-    ParentReferences: ParentReferences$CustomPermissionDependency;
-    ChildRelationships: ChildRelationships$CustomPermissionDependency;
-  }
+  Name: 'CustomPermissionDependency';
+  Fields: Fields$CustomPermissionDependency;
+  ParentReferences: ParentReferences$CustomPermissionDependency;
+  ChildRelationships: ChildRelationships$CustomPermissionDependency;
+}
 
 type Fields$Custom_Note__ChangeEvent = {
   //
@@ -11061,11 +11214,11 @@ type ChildRelationships$Custom_Note__ChangeEvent = {
 };
 
 interface SObjectDefinition$Custom_Note__ChangeEvent extends SObjectDefinition<'Custom_Note__ChangeEvent'> {
-    Name: 'Custom_Note__ChangeEvent';
-    Fields: Fields$Custom_Note__ChangeEvent;
-    ParentReferences: ParentReferences$Custom_Note__ChangeEvent;
-    ChildRelationships: ChildRelationships$Custom_Note__ChangeEvent;
-  }
+  Name: 'Custom_Note__ChangeEvent';
+  Fields: Fields$Custom_Note__ChangeEvent;
+  ParentReferences: ParentReferences$Custom_Note__ChangeEvent;
+  ChildRelationships: ChildRelationships$Custom_Note__ChangeEvent;
+}
 
 type Fields$Custom_Note__History = {
   //
@@ -11091,11 +11244,11 @@ type ChildRelationships$Custom_Note__History = {
 };
 
 interface SObjectDefinition$Custom_Note__History extends SObjectDefinition<'Custom_Note__History'> {
-    Name: 'Custom_Note__History';
-    Fields: Fields$Custom_Note__History;
-    ParentReferences: ParentReferences$Custom_Note__History;
-    ChildRelationships: ChildRelationships$Custom_Note__History;
-  }
+  Name: 'Custom_Note__History';
+  Fields: Fields$Custom_Note__History;
+  ParentReferences: ParentReferences$Custom_Note__History;
+  ChildRelationships: ChildRelationships$Custom_Note__History;
+}
 
 type Fields$Custom_Note__c = {
   //
@@ -11162,11 +11315,11 @@ type ChildRelationships$Custom_Note__c = {
 };
 
 interface SObjectDefinition$Custom_Note__c extends SObjectDefinition<'Custom_Note__c'> {
-    Name: 'Custom_Note__c';
-    Fields: Fields$Custom_Note__c;
-    ParentReferences: ParentReferences$Custom_Note__c;
-    ChildRelationships: ChildRelationships$Custom_Note__c;
-  }
+  Name: 'Custom_Note__c';
+  Fields: Fields$Custom_Note__c;
+  ParentReferences: ParentReferences$Custom_Note__c;
+  ChildRelationships: ChildRelationships$Custom_Note__c;
+}
 
 type Fields$DSCORGPKG__AutoUpdateSettings__ChangeEvent = {
   //
@@ -11247,12 +11400,13 @@ type ChildRelationships$DSCORGPKG__AutoUpdateSettings__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__AutoUpdateSettings__ChangeEvent extends SObjectDefinition<'DSCORGPKG__AutoUpdateSettings__ChangeEvent'> {
-    Name: 'DSCORGPKG__AutoUpdateSettings__ChangeEvent';
-    Fields: Fields$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__AutoUpdateSettings__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__AutoUpdateSettings__ChangeEvent'> {
+  Name: 'DSCORGPKG__AutoUpdateSettings__ChangeEvent';
+  Fields: Fields$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__AutoUpdateSettings__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__AutoUpdateSettings__c = {
   //
@@ -11356,12 +11510,13 @@ type ChildRelationships$DSCORGPKG__AutoUpdateSettings__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__AutoUpdateSettings__c extends SObjectDefinition<'DSCORGPKG__AutoUpdateSettings__c'> {
-    Name: 'DSCORGPKG__AutoUpdateSettings__c';
-    Fields: Fields$DSCORGPKG__AutoUpdateSettings__c;
-    ParentReferences: ParentReferences$DSCORGPKG__AutoUpdateSettings__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__AutoUpdateSettings__c;
-  }
+interface SObjectDefinition$DSCORGPKG__AutoUpdateSettings__c
+  extends SObjectDefinition<'DSCORGPKG__AutoUpdateSettings__c'> {
+  Name: 'DSCORGPKG__AutoUpdateSettings__c';
+  Fields: Fields$DSCORGPKG__AutoUpdateSettings__c;
+  ParentReferences: ParentReferences$DSCORGPKG__AutoUpdateSettings__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__AutoUpdateSettings__c;
+}
 
 type Fields$DSCORGPKG__ConflictField__ChangeEvent = {
   //
@@ -11390,12 +11545,13 @@ type ChildRelationships$DSCORGPKG__ConflictField__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__ConflictField__ChangeEvent extends SObjectDefinition<'DSCORGPKG__ConflictField__ChangeEvent'> {
-    Name: 'DSCORGPKG__ConflictField__ChangeEvent';
-    Fields: Fields$DSCORGPKG__ConflictField__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__ConflictField__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__ConflictField__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__ConflictField__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__ConflictField__ChangeEvent'> {
+  Name: 'DSCORGPKG__ConflictField__ChangeEvent';
+  Fields: Fields$DSCORGPKG__ConflictField__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__ConflictField__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__ConflictField__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__ConflictField__c = {
   //
@@ -11449,11 +11605,11 @@ type ChildRelationships$DSCORGPKG__ConflictField__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__ConflictField__c extends SObjectDefinition<'DSCORGPKG__ConflictField__c'> {
-    Name: 'DSCORGPKG__ConflictField__c';
-    Fields: Fields$DSCORGPKG__ConflictField__c;
-    ParentReferences: ParentReferences$DSCORGPKG__ConflictField__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__ConflictField__c;
-  }
+  Name: 'DSCORGPKG__ConflictField__c';
+  Fields: Fields$DSCORGPKG__ConflictField__c;
+  ParentReferences: ParentReferences$DSCORGPKG__ConflictField__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__ConflictField__c;
+}
 
 type Fields$DSCORGPKG__Conflict__ChangeEvent = {
   //
@@ -11480,12 +11636,13 @@ type ChildRelationships$DSCORGPKG__Conflict__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__Conflict__ChangeEvent extends SObjectDefinition<'DSCORGPKG__Conflict__ChangeEvent'> {
-    Name: 'DSCORGPKG__Conflict__ChangeEvent';
-    Fields: Fields$DSCORGPKG__Conflict__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__Conflict__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Conflict__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__Conflict__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__Conflict__ChangeEvent'> {
+  Name: 'DSCORGPKG__Conflict__ChangeEvent';
+  Fields: Fields$DSCORGPKG__Conflict__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__Conflict__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Conflict__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__Conflict__c = {
   //
@@ -11542,11 +11699,11 @@ type ChildRelationships$DSCORGPKG__Conflict__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__Conflict__c extends SObjectDefinition<'DSCORGPKG__Conflict__c'> {
-    Name: 'DSCORGPKG__Conflict__c';
-    Fields: Fields$DSCORGPKG__Conflict__c;
-    ParentReferences: ParentReferences$DSCORGPKG__Conflict__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Conflict__c;
-  }
+  Name: 'DSCORGPKG__Conflict__c';
+  Fields: Fields$DSCORGPKG__Conflict__c;
+  ParentReferences: ParentReferences$DSCORGPKG__Conflict__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Conflict__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrgResults__ChangeEvent = {
   //
@@ -11573,12 +11730,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrgResults__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrgResults__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrgResults__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrgResults__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrgResults__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrgResults__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrgResults__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrgResults__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrgResults__c = {
   //
@@ -11628,12 +11786,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrgResults__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrgResults__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrgResults__c'> {
-    Name: 'DSCORGPKG__DiscoverOrgResults__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrgResults__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrgResults__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrgResults__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrgResults__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrgResults__c'> {
+  Name: 'DSCORGPKG__DiscoverOrgResults__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrgResults__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrgResults__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrgResults__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent = {
   //
@@ -11661,12 +11820,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c = {
   //
@@ -11717,12 +11877,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_AutoUpdate_Log__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent = {
   //
@@ -11756,12 +11917,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__c = {
   //
@@ -11818,12 +11980,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Custom_Mapping__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Custom_Mapping__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Custom_Mapping__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Custom_Mapping__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Custom_Mapping__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Custom_Mapping__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Custom_Mapping__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent = {
   //
@@ -11852,12 +12015,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Metadata__c = {
   //
@@ -11909,12 +12073,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Metadata__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Metadata__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Metadata__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Metadata__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Metadata__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Metadata__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Metadata__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Metadata__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Metadata__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Metadata__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Metadata__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent = {
   //
@@ -11974,12 +12139,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Operation__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Operation__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Operation__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Operation__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Operation__c = {
   //
@@ -12063,12 +12229,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Operation__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Operation__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Operation__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Operation__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Operation__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Operation__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Operation__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Operation__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Operation__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Operation__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Operation__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Search__ChangeEvent = {
   //
@@ -12099,12 +12266,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Search__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Search__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Search__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Search__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Search__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Search__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Search__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Search__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Search__c = {
   //
@@ -12158,12 +12326,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Search__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Search__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Search__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Search__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Search__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Search__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Search__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Search__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Search__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Search__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Search__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Search__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Search__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent = {
   //
@@ -12193,12 +12362,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Technologies__c = {
   //
@@ -12254,12 +12424,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Technologies__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Technologies__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Technologies__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Technologies__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Technologies__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Technologies__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Technologies__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Technologies__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Technologies__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Technologies__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Technologies__c;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent = {
   //
@@ -12288,12 +12459,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__DiscoverOrg_Update_History__c = {
   //
@@ -12350,12 +12522,13 @@ type ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Update_History__c extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Update_History__c'> {
-    Name: 'DSCORGPKG__DiscoverOrg_Update_History__c';
-    Fields: Fields$DSCORGPKG__DiscoverOrg_Update_History__c;
-    ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Update_History__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__c;
-  }
+interface SObjectDefinition$DSCORGPKG__DiscoverOrg_Update_History__c
+  extends SObjectDefinition<'DSCORGPKG__DiscoverOrg_Update_History__c'> {
+  Name: 'DSCORGPKG__DiscoverOrg_Update_History__c';
+  Fields: Fields$DSCORGPKG__DiscoverOrg_Update_History__c;
+  ParentReferences: ParentReferences$DSCORGPKG__DiscoverOrg_Update_History__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__DiscoverOrg_Update_History__c;
+}
 
 type Fields$DSCORGPKG__FieldMapping__ChangeEvent = {
   //
@@ -12385,12 +12558,13 @@ type ChildRelationships$DSCORGPKG__FieldMapping__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__FieldMapping__ChangeEvent extends SObjectDefinition<'DSCORGPKG__FieldMapping__ChangeEvent'> {
-    Name: 'DSCORGPKG__FieldMapping__ChangeEvent';
-    Fields: Fields$DSCORGPKG__FieldMapping__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__FieldMapping__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__FieldMapping__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__FieldMapping__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__FieldMapping__ChangeEvent'> {
+  Name: 'DSCORGPKG__FieldMapping__ChangeEvent';
+  Fields: Fields$DSCORGPKG__FieldMapping__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__FieldMapping__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__FieldMapping__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__FieldMapping__c = {
   //
@@ -12444,11 +12618,11 @@ type ChildRelationships$DSCORGPKG__FieldMapping__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__FieldMapping__c extends SObjectDefinition<'DSCORGPKG__FieldMapping__c'> {
-    Name: 'DSCORGPKG__FieldMapping__c';
-    Fields: Fields$DSCORGPKG__FieldMapping__c;
-    ParentReferences: ParentReferences$DSCORGPKG__FieldMapping__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__FieldMapping__c;
-  }
+  Name: 'DSCORGPKG__FieldMapping__c';
+  Fields: Fields$DSCORGPKG__FieldMapping__c;
+  ParentReferences: ParentReferences$DSCORGPKG__FieldMapping__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__FieldMapping__c;
+}
 
 type Fields$DSCORGPKG__MaintainOperation__ChangeEvent = {
   //
@@ -12477,12 +12651,13 @@ type ChildRelationships$DSCORGPKG__MaintainOperation__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__MaintainOperation__ChangeEvent extends SObjectDefinition<'DSCORGPKG__MaintainOperation__ChangeEvent'> {
-    Name: 'DSCORGPKG__MaintainOperation__ChangeEvent';
-    Fields: Fields$DSCORGPKG__MaintainOperation__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__MaintainOperation__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__MaintainOperation__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__MaintainOperation__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__MaintainOperation__ChangeEvent'> {
+  Name: 'DSCORGPKG__MaintainOperation__ChangeEvent';
+  Fields: Fields$DSCORGPKG__MaintainOperation__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__MaintainOperation__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__MaintainOperation__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__MaintainOperation__c = {
   //
@@ -12534,12 +12709,13 @@ type ChildRelationships$DSCORGPKG__MaintainOperation__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__MaintainOperation__c extends SObjectDefinition<'DSCORGPKG__MaintainOperation__c'> {
-    Name: 'DSCORGPKG__MaintainOperation__c';
-    Fields: Fields$DSCORGPKG__MaintainOperation__c;
-    ParentReferences: ParentReferences$DSCORGPKG__MaintainOperation__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__MaintainOperation__c;
-  }
+interface SObjectDefinition$DSCORGPKG__MaintainOperation__c
+  extends SObjectDefinition<'DSCORGPKG__MaintainOperation__c'> {
+  Name: 'DSCORGPKG__MaintainOperation__c';
+  Fields: Fields$DSCORGPKG__MaintainOperation__c;
+  ParentReferences: ParentReferences$DSCORGPKG__MaintainOperation__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__MaintainOperation__c;
+}
 
 type Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent = {
   //
@@ -12565,12 +12741,13 @@ type ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent 
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent extends SObjectDefinition<'DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent'> {
-    Name: 'DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent';
-    Fields: Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent'> {
+  Name: 'DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent';
+  Fields: Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__c = {
   //
@@ -12619,12 +12796,13 @@ type ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__Maintain_Triggered_Append_Clean__c extends SObjectDefinition<'DSCORGPKG__Maintain_Triggered_Append_Clean__c'> {
-    Name: 'DSCORGPKG__Maintain_Triggered_Append_Clean__c';
-    Fields: Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
-    ParentReferences: ParentReferences$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
-  }
+interface SObjectDefinition$DSCORGPKG__Maintain_Triggered_Append_Clean__c
+  extends SObjectDefinition<'DSCORGPKG__Maintain_Triggered_Append_Clean__c'> {
+  Name: 'DSCORGPKG__Maintain_Triggered_Append_Clean__c';
+  Fields: Fields$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
+  ParentReferences: ParentReferences$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Maintain_Triggered_Append_Clean__c;
+}
 
 type Fields$DSCORGPKG__Nightly_Debug__ChangeEvent = {
   //
@@ -12649,12 +12827,13 @@ type ChildRelationships$DSCORGPKG__Nightly_Debug__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__Nightly_Debug__ChangeEvent extends SObjectDefinition<'DSCORGPKG__Nightly_Debug__ChangeEvent'> {
-    Name: 'DSCORGPKG__Nightly_Debug__ChangeEvent';
-    Fields: Fields$DSCORGPKG__Nightly_Debug__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__Nightly_Debug__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Nightly_Debug__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__Nightly_Debug__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__Nightly_Debug__ChangeEvent'> {
+  Name: 'DSCORGPKG__Nightly_Debug__ChangeEvent';
+  Fields: Fields$DSCORGPKG__Nightly_Debug__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__Nightly_Debug__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Nightly_Debug__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__Nightly_Debug__c = {
   //
@@ -12705,11 +12884,11 @@ type ChildRelationships$DSCORGPKG__Nightly_Debug__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__Nightly_Debug__c extends SObjectDefinition<'DSCORGPKG__Nightly_Debug__c'> {
-    Name: 'DSCORGPKG__Nightly_Debug__c';
-    Fields: Fields$DSCORGPKG__Nightly_Debug__c;
-    ParentReferences: ParentReferences$DSCORGPKG__Nightly_Debug__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Nightly_Debug__c;
-  }
+  Name: 'DSCORGPKG__Nightly_Debug__c';
+  Fields: Fields$DSCORGPKG__Nightly_Debug__c;
+  ParentReferences: ParentReferences$DSCORGPKG__Nightly_Debug__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Nightly_Debug__c;
+}
 
 type Fields$DSCORGPKG__OppAlert__ChangeEvent = {
   //
@@ -12742,12 +12921,13 @@ type ChildRelationships$DSCORGPKG__OppAlert__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__OppAlert__ChangeEvent extends SObjectDefinition<'DSCORGPKG__OppAlert__ChangeEvent'> {
-    Name: 'DSCORGPKG__OppAlert__ChangeEvent';
-    Fields: Fields$DSCORGPKG__OppAlert__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__OppAlert__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__OppAlert__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__OppAlert__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__OppAlert__ChangeEvent'> {
+  Name: 'DSCORGPKG__OppAlert__ChangeEvent';
+  Fields: Fields$DSCORGPKG__OppAlert__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__OppAlert__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__OppAlert__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__OppAlert__c = {
   //
@@ -12805,11 +12985,11 @@ type ChildRelationships$DSCORGPKG__OppAlert__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__OppAlert__c extends SObjectDefinition<'DSCORGPKG__OppAlert__c'> {
-    Name: 'DSCORGPKG__OppAlert__c';
-    Fields: Fields$DSCORGPKG__OppAlert__c;
-    ParentReferences: ParentReferences$DSCORGPKG__OppAlert__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__OppAlert__c;
-  }
+  Name: 'DSCORGPKG__OppAlert__c';
+  Fields: Fields$DSCORGPKG__OppAlert__c;
+  ParentReferences: ParentReferences$DSCORGPKG__OppAlert__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__OppAlert__c;
+}
 
 type Fields$DSCORGPKG__Trigger__ChangeEvent = {
   //
@@ -12841,12 +13021,13 @@ type ChildRelationships$DSCORGPKG__Trigger__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__Trigger__ChangeEvent extends SObjectDefinition<'DSCORGPKG__Trigger__ChangeEvent'> {
-    Name: 'DSCORGPKG__Trigger__ChangeEvent';
-    Fields: Fields$DSCORGPKG__Trigger__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__Trigger__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Trigger__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__Trigger__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__Trigger__ChangeEvent'> {
+  Name: 'DSCORGPKG__Trigger__ChangeEvent';
+  Fields: Fields$DSCORGPKG__Trigger__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__Trigger__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Trigger__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__Trigger__c = {
   //
@@ -12905,11 +13086,11 @@ type ChildRelationships$DSCORGPKG__Trigger__c = {
 };
 
 interface SObjectDefinition$DSCORGPKG__Trigger__c extends SObjectDefinition<'DSCORGPKG__Trigger__c'> {
-    Name: 'DSCORGPKG__Trigger__c';
-    Fields: Fields$DSCORGPKG__Trigger__c;
-    ParentReferences: ParentReferences$DSCORGPKG__Trigger__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Trigger__c;
-  }
+  Name: 'DSCORGPKG__Trigger__c';
+  Fields: Fields$DSCORGPKG__Trigger__c;
+  ParentReferences: ParentReferences$DSCORGPKG__Trigger__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Trigger__c;
+}
 
 type Fields$DSCORGPKG__Triggered_Append_Clean__ChangeEvent = {
   //
@@ -12938,12 +13119,13 @@ type ChildRelationships$DSCORGPKG__Triggered_Append_Clean__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$DSCORGPKG__Triggered_Append_Clean__ChangeEvent extends SObjectDefinition<'DSCORGPKG__Triggered_Append_Clean__ChangeEvent'> {
-    Name: 'DSCORGPKG__Triggered_Append_Clean__ChangeEvent';
-    Fields: Fields$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
-    ParentReferences: ParentReferences$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
-  }
+interface SObjectDefinition$DSCORGPKG__Triggered_Append_Clean__ChangeEvent
+  extends SObjectDefinition<'DSCORGPKG__Triggered_Append_Clean__ChangeEvent'> {
+  Name: 'DSCORGPKG__Triggered_Append_Clean__ChangeEvent';
+  Fields: Fields$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
+  ParentReferences: ParentReferences$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Triggered_Append_Clean__ChangeEvent;
+}
 
 type Fields$DSCORGPKG__Triggered_Append_Clean__c = {
   //
@@ -12995,12 +13177,13 @@ type ChildRelationships$DSCORGPKG__Triggered_Append_Clean__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$DSCORGPKG__Triggered_Append_Clean__c extends SObjectDefinition<'DSCORGPKG__Triggered_Append_Clean__c'> {
-    Name: 'DSCORGPKG__Triggered_Append_Clean__c';
-    Fields: Fields$DSCORGPKG__Triggered_Append_Clean__c;
-    ParentReferences: ParentReferences$DSCORGPKG__Triggered_Append_Clean__c;
-    ChildRelationships: ChildRelationships$DSCORGPKG__Triggered_Append_Clean__c;
-  }
+interface SObjectDefinition$DSCORGPKG__Triggered_Append_Clean__c
+  extends SObjectDefinition<'DSCORGPKG__Triggered_Append_Clean__c'> {
+  Name: 'DSCORGPKG__Triggered_Append_Clean__c';
+  Fields: Fields$DSCORGPKG__Triggered_Append_Clean__c;
+  ParentReferences: ParentReferences$DSCORGPKG__Triggered_Append_Clean__c;
+  ChildRelationships: ChildRelationships$DSCORGPKG__Triggered_Append_Clean__c;
+}
 
 type Fields$Dashboard = {
   //
@@ -13056,11 +13239,11 @@ type ChildRelationships$Dashboard = {
 };
 
 interface SObjectDefinition$Dashboard extends SObjectDefinition<'Dashboard'> {
-    Name: 'Dashboard';
-    Fields: Fields$Dashboard;
-    ParentReferences: ParentReferences$Dashboard;
-    ChildRelationships: ChildRelationships$Dashboard;
-  }
+  Name: 'Dashboard';
+  Fields: Fields$Dashboard;
+  ParentReferences: ParentReferences$Dashboard;
+  ChildRelationships: ChildRelationships$Dashboard;
+}
 
 type Fields$DashboardComponent = {
   //
@@ -13086,11 +13269,11 @@ type ChildRelationships$DashboardComponent = {
 };
 
 interface SObjectDefinition$DashboardComponent extends SObjectDefinition<'DashboardComponent'> {
-    Name: 'DashboardComponent';
-    Fields: Fields$DashboardComponent;
-    ParentReferences: ParentReferences$DashboardComponent;
-    ChildRelationships: ChildRelationships$DashboardComponent;
-  }
+  Name: 'DashboardComponent';
+  Fields: Fields$DashboardComponent;
+  ParentReferences: ParentReferences$DashboardComponent;
+  ChildRelationships: ChildRelationships$DashboardComponent;
+}
 
 type Fields$DashboardComponentFeed = {
   //
@@ -13131,11 +13314,11 @@ type ChildRelationships$DashboardComponentFeed = {
 };
 
 interface SObjectDefinition$DashboardComponentFeed extends SObjectDefinition<'DashboardComponentFeed'> {
-    Name: 'DashboardComponentFeed';
-    Fields: Fields$DashboardComponentFeed;
-    ParentReferences: ParentReferences$DashboardComponentFeed;
-    ChildRelationships: ChildRelationships$DashboardComponentFeed;
-  }
+  Name: 'DashboardComponentFeed';
+  Fields: Fields$DashboardComponentFeed;
+  ParentReferences: ParentReferences$DashboardComponentFeed;
+  ChildRelationships: ChildRelationships$DashboardComponentFeed;
+}
 
 type Fields$DashboardFeed = {
   //
@@ -13176,11 +13359,11 @@ type ChildRelationships$DashboardFeed = {
 };
 
 interface SObjectDefinition$DashboardFeed extends SObjectDefinition<'DashboardFeed'> {
-    Name: 'DashboardFeed';
-    Fields: Fields$DashboardFeed;
-    ParentReferences: ParentReferences$DashboardFeed;
-    ChildRelationships: ChildRelationships$DashboardFeed;
-  }
+  Name: 'DashboardFeed';
+  Fields: Fields$DashboardFeed;
+  ParentReferences: ParentReferences$DashboardFeed;
+  ChildRelationships: ChildRelationships$DashboardFeed;
+}
 
 type Fields$DataAssessmentFieldMetric = {
   //
@@ -13213,11 +13396,11 @@ type ChildRelationships$DataAssessmentFieldMetric = {
 };
 
 interface SObjectDefinition$DataAssessmentFieldMetric extends SObjectDefinition<'DataAssessmentFieldMetric'> {
-    Name: 'DataAssessmentFieldMetric';
-    Fields: Fields$DataAssessmentFieldMetric;
-    ParentReferences: ParentReferences$DataAssessmentFieldMetric;
-    ChildRelationships: ChildRelationships$DataAssessmentFieldMetric;
-  }
+  Name: 'DataAssessmentFieldMetric';
+  Fields: Fields$DataAssessmentFieldMetric;
+  ParentReferences: ParentReferences$DataAssessmentFieldMetric;
+  ChildRelationships: ChildRelationships$DataAssessmentFieldMetric;
+}
 
 type Fields$DataAssessmentMetric = {
   //
@@ -13249,11 +13432,11 @@ type ChildRelationships$DataAssessmentMetric = {
 };
 
 interface SObjectDefinition$DataAssessmentMetric extends SObjectDefinition<'DataAssessmentMetric'> {
-    Name: 'DataAssessmentMetric';
-    Fields: Fields$DataAssessmentMetric;
-    ParentReferences: ParentReferences$DataAssessmentMetric;
-    ChildRelationships: ChildRelationships$DataAssessmentMetric;
-  }
+  Name: 'DataAssessmentMetric';
+  Fields: Fields$DataAssessmentMetric;
+  ParentReferences: ParentReferences$DataAssessmentMetric;
+  ChildRelationships: ChildRelationships$DataAssessmentMetric;
+}
 
 type Fields$DataAssessmentValueMetric = {
   //
@@ -13282,11 +13465,11 @@ type ChildRelationships$DataAssessmentValueMetric = {
 };
 
 interface SObjectDefinition$DataAssessmentValueMetric extends SObjectDefinition<'DataAssessmentValueMetric'> {
-    Name: 'DataAssessmentValueMetric';
-    Fields: Fields$DataAssessmentValueMetric;
-    ParentReferences: ParentReferences$DataAssessmentValueMetric;
-    ChildRelationships: ChildRelationships$DataAssessmentValueMetric;
-  }
+  Name: 'DataAssessmentValueMetric';
+  Fields: Fields$DataAssessmentValueMetric;
+  ParentReferences: ParentReferences$DataAssessmentValueMetric;
+  ChildRelationships: ChildRelationships$DataAssessmentValueMetric;
+}
 
 type Fields$DataIntegrationRecordPurchasePermission = {
   //
@@ -13313,12 +13496,13 @@ type ChildRelationships$DataIntegrationRecordPurchasePermission = {
   //
 };
 
-interface SObjectDefinition$DataIntegrationRecordPurchasePermission extends SObjectDefinition<'DataIntegrationRecordPurchasePermission'> {
-    Name: 'DataIntegrationRecordPurchasePermission';
-    Fields: Fields$DataIntegrationRecordPurchasePermission;
-    ParentReferences: ParentReferences$DataIntegrationRecordPurchasePermission;
-    ChildRelationships: ChildRelationships$DataIntegrationRecordPurchasePermission;
-  }
+interface SObjectDefinition$DataIntegrationRecordPurchasePermission
+  extends SObjectDefinition<'DataIntegrationRecordPurchasePermission'> {
+  Name: 'DataIntegrationRecordPurchasePermission';
+  Fields: Fields$DataIntegrationRecordPurchasePermission;
+  ParentReferences: ParentReferences$DataIntegrationRecordPurchasePermission;
+  ChildRelationships: ChildRelationships$DataIntegrationRecordPurchasePermission;
+}
 
 type Fields$DataStatistics = {
   //
@@ -13340,11 +13524,11 @@ type ChildRelationships$DataStatistics = {
 };
 
 interface SObjectDefinition$DataStatistics extends SObjectDefinition<'DataStatistics'> {
-    Name: 'DataStatistics';
-    Fields: Fields$DataStatistics;
-    ParentReferences: ParentReferences$DataStatistics;
-    ChildRelationships: ChildRelationships$DataStatistics;
-  }
+  Name: 'DataStatistics';
+  Fields: Fields$DataStatistics;
+  ParentReferences: ParentReferences$DataStatistics;
+  ChildRelationships: ChildRelationships$DataStatistics;
+}
 
 type Fields$DataType = {
   //
@@ -13365,11 +13549,11 @@ type ChildRelationships$DataType = {
 };
 
 interface SObjectDefinition$DataType extends SObjectDefinition<'DataType'> {
-    Name: 'DataType';
-    Fields: Fields$DataType;
-    ParentReferences: ParentReferences$DataType;
-    ChildRelationships: ChildRelationships$DataType;
-  }
+  Name: 'DataType';
+  Fields: Fields$DataType;
+  ParentReferences: ParentReferences$DataType;
+  ChildRelationships: ChildRelationships$DataType;
+}
 
 type Fields$DataUseLegalBasis = {
   //
@@ -13405,11 +13589,11 @@ type ChildRelationships$DataUseLegalBasis = {
 };
 
 interface SObjectDefinition$DataUseLegalBasis extends SObjectDefinition<'DataUseLegalBasis'> {
-    Name: 'DataUseLegalBasis';
-    Fields: Fields$DataUseLegalBasis;
-    ParentReferences: ParentReferences$DataUseLegalBasis;
-    ChildRelationships: ChildRelationships$DataUseLegalBasis;
-  }
+  Name: 'DataUseLegalBasis';
+  Fields: Fields$DataUseLegalBasis;
+  ParentReferences: ParentReferences$DataUseLegalBasis;
+  ChildRelationships: ChildRelationships$DataUseLegalBasis;
+}
 
 type Fields$DataUseLegalBasisHistory = {
   //
@@ -13435,11 +13619,11 @@ type ChildRelationships$DataUseLegalBasisHistory = {
 };
 
 interface SObjectDefinition$DataUseLegalBasisHistory extends SObjectDefinition<'DataUseLegalBasisHistory'> {
-    Name: 'DataUseLegalBasisHistory';
-    Fields: Fields$DataUseLegalBasisHistory;
-    ParentReferences: ParentReferences$DataUseLegalBasisHistory;
-    ChildRelationships: ChildRelationships$DataUseLegalBasisHistory;
-  }
+  Name: 'DataUseLegalBasisHistory';
+  Fields: Fields$DataUseLegalBasisHistory;
+  ParentReferences: ParentReferences$DataUseLegalBasisHistory;
+  ChildRelationships: ChildRelationships$DataUseLegalBasisHistory;
+}
 
 type Fields$DataUseLegalBasisShare = {
   //
@@ -13465,11 +13649,11 @@ type ChildRelationships$DataUseLegalBasisShare = {
 };
 
 interface SObjectDefinition$DataUseLegalBasisShare extends SObjectDefinition<'DataUseLegalBasisShare'> {
-    Name: 'DataUseLegalBasisShare';
-    Fields: Fields$DataUseLegalBasisShare;
-    ParentReferences: ParentReferences$DataUseLegalBasisShare;
-    ChildRelationships: ChildRelationships$DataUseLegalBasisShare;
-  }
+  Name: 'DataUseLegalBasisShare';
+  Fields: Fields$DataUseLegalBasisShare;
+  ParentReferences: ParentReferences$DataUseLegalBasisShare;
+  ChildRelationships: ChildRelationships$DataUseLegalBasisShare;
+}
 
 type Fields$DataUsePurpose = {
   //
@@ -13507,11 +13691,11 @@ type ChildRelationships$DataUsePurpose = {
 };
 
 interface SObjectDefinition$DataUsePurpose extends SObjectDefinition<'DataUsePurpose'> {
-    Name: 'DataUsePurpose';
-    Fields: Fields$DataUsePurpose;
-    ParentReferences: ParentReferences$DataUsePurpose;
-    ChildRelationships: ChildRelationships$DataUsePurpose;
-  }
+  Name: 'DataUsePurpose';
+  Fields: Fields$DataUsePurpose;
+  ParentReferences: ParentReferences$DataUsePurpose;
+  ChildRelationships: ChildRelationships$DataUsePurpose;
+}
 
 type Fields$DataUsePurposeHistory = {
   //
@@ -13537,11 +13721,11 @@ type ChildRelationships$DataUsePurposeHistory = {
 };
 
 interface SObjectDefinition$DataUsePurposeHistory extends SObjectDefinition<'DataUsePurposeHistory'> {
-    Name: 'DataUsePurposeHistory';
-    Fields: Fields$DataUsePurposeHistory;
-    ParentReferences: ParentReferences$DataUsePurposeHistory;
-    ChildRelationships: ChildRelationships$DataUsePurposeHistory;
-  }
+  Name: 'DataUsePurposeHistory';
+  Fields: Fields$DataUsePurposeHistory;
+  ParentReferences: ParentReferences$DataUsePurposeHistory;
+  ChildRelationships: ChildRelationships$DataUsePurposeHistory;
+}
 
 type Fields$DataUsePurposeShare = {
   //
@@ -13567,11 +13751,11 @@ type ChildRelationships$DataUsePurposeShare = {
 };
 
 interface SObjectDefinition$DataUsePurposeShare extends SObjectDefinition<'DataUsePurposeShare'> {
-    Name: 'DataUsePurposeShare';
-    Fields: Fields$DataUsePurposeShare;
-    ParentReferences: ParentReferences$DataUsePurposeShare;
-    ChildRelationships: ChildRelationships$DataUsePurposeShare;
-  }
+  Name: 'DataUsePurposeShare';
+  Fields: Fields$DataUsePurposeShare;
+  ParentReferences: ParentReferences$DataUsePurposeShare;
+  ChildRelationships: ChildRelationships$DataUsePurposeShare;
+}
 
 type Fields$DatacloudAddress = {
   //
@@ -13598,11 +13782,11 @@ type ChildRelationships$DatacloudAddress = {
 };
 
 interface SObjectDefinition$DatacloudAddress extends SObjectDefinition<'DatacloudAddress'> {
-    Name: 'DatacloudAddress';
-    Fields: Fields$DatacloudAddress;
-    ParentReferences: ParentReferences$DatacloudAddress;
-    ChildRelationships: ChildRelationships$DatacloudAddress;
-  }
+  Name: 'DatacloudAddress';
+  Fields: Fields$DatacloudAddress;
+  ParentReferences: ParentReferences$DatacloudAddress;
+  ChildRelationships: ChildRelationships$DatacloudAddress;
+}
 
 type Fields$Deal__ChangeEvent = {
   //
@@ -13615,7 +13799,13 @@ type Fields$Deal__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Associated_Resources__c: number | null;
+  CTH_Terms_For_Commission__c: string | null;
+  Client__c: string | null;
+  Effective_Date__c: DateString | null;
+  Special_Deal_Terms__c: string | null;
   Standard_CHT__c: string | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Deal__ChangeEvent = {
@@ -13627,11 +13817,11 @@ type ChildRelationships$Deal__ChangeEvent = {
 };
 
 interface SObjectDefinition$Deal__ChangeEvent extends SObjectDefinition<'Deal__ChangeEvent'> {
-    Name: 'Deal__ChangeEvent';
-    Fields: Fields$Deal__ChangeEvent;
-    ParentReferences: ParentReferences$Deal__ChangeEvent;
-    ChildRelationships: ChildRelationships$Deal__ChangeEvent;
-  }
+  Name: 'Deal__ChangeEvent';
+  Fields: Fields$Deal__ChangeEvent;
+  ParentReferences: ParentReferences$Deal__ChangeEvent;
+  ChildRelationships: ChildRelationships$Deal__ChangeEvent;
+}
 
 type Fields$Deal__c = {
   //
@@ -13644,7 +13834,15 @@ type Fields$Deal__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Associated_Resources__c: number | null;
+  CTH_Terms_For_Commission__c: string | null;
+  Client__c: string | null;
+  Effective_Date__c: DateString | null;
+  Special_Deal_Terms__c: string | null;
   Standard_CHT__c: string;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Deal__c = {
@@ -13652,6 +13850,7 @@ type ParentReferences$Deal__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  Client__r: SObjectDefinition$Account | null;
 };
 
 type ChildRelationships$Deal__c = {
@@ -13679,11 +13878,11 @@ type ChildRelationships$Deal__c = {
 };
 
 interface SObjectDefinition$Deal__c extends SObjectDefinition<'Deal__c'> {
-    Name: 'Deal__c';
-    Fields: Fields$Deal__c;
-    ParentReferences: ParentReferences$Deal__c;
-    ChildRelationships: ChildRelationships$Deal__c;
-  }
+  Name: 'Deal__c';
+  Fields: Fields$Deal__c;
+  ParentReferences: ParentReferences$Deal__c;
+  ChildRelationships: ChildRelationships$Deal__c;
+}
 
 type Fields$Debug_Log__ChangeEvent = {
   //
@@ -13711,11 +13910,11 @@ type ChildRelationships$Debug_Log__ChangeEvent = {
 };
 
 interface SObjectDefinition$Debug_Log__ChangeEvent extends SObjectDefinition<'Debug_Log__ChangeEvent'> {
-    Name: 'Debug_Log__ChangeEvent';
-    Fields: Fields$Debug_Log__ChangeEvent;
-    ParentReferences: ParentReferences$Debug_Log__ChangeEvent;
-    ChildRelationships: ChildRelationships$Debug_Log__ChangeEvent;
-  }
+  Name: 'Debug_Log__ChangeEvent';
+  Fields: Fields$Debug_Log__ChangeEvent;
+  ParentReferences: ParentReferences$Debug_Log__ChangeEvent;
+  ChildRelationships: ChildRelationships$Debug_Log__ChangeEvent;
+}
 
 type Fields$Debug_Log__c = {
   //
@@ -13768,11 +13967,11 @@ type ChildRelationships$Debug_Log__c = {
 };
 
 interface SObjectDefinition$Debug_Log__c extends SObjectDefinition<'Debug_Log__c'> {
-    Name: 'Debug_Log__c';
-    Fields: Fields$Debug_Log__c;
-    ParentReferences: ParentReferences$Debug_Log__c;
-    ChildRelationships: ChildRelationships$Debug_Log__c;
-  }
+  Name: 'Debug_Log__c';
+  Fields: Fields$Debug_Log__c;
+  ParentReferences: ParentReferences$Debug_Log__c;
+  ChildRelationships: ChildRelationships$Debug_Log__c;
+}
 
 type Fields$DeclinedEventRelation = {
   //
@@ -13805,11 +14004,11 @@ type ChildRelationships$DeclinedEventRelation = {
 };
 
 interface SObjectDefinition$DeclinedEventRelation extends SObjectDefinition<'DeclinedEventRelation'> {
-    Name: 'DeclinedEventRelation';
-    Fields: Fields$DeclinedEventRelation;
-    ParentReferences: ParentReferences$DeclinedEventRelation;
-    ChildRelationships: ChildRelationships$DeclinedEventRelation;
-  }
+  Name: 'DeclinedEventRelation';
+  Fields: Fields$DeclinedEventRelation;
+  ParentReferences: ParentReferences$DeclinedEventRelation;
+  ChildRelationships: ChildRelationships$DeclinedEventRelation;
+}
 
 type Fields$DeleteEvent = {
   //
@@ -13832,11 +14031,11 @@ type ChildRelationships$DeleteEvent = {
 };
 
 interface SObjectDefinition$DeleteEvent extends SObjectDefinition<'DeleteEvent'> {
-    Name: 'DeleteEvent';
-    Fields: Fields$DeleteEvent;
-    ParentReferences: ParentReferences$DeleteEvent;
-    ChildRelationships: ChildRelationships$DeleteEvent;
-  }
+  Name: 'DeleteEvent';
+  Fields: Fields$DeleteEvent;
+  ParentReferences: ParentReferences$DeleteEvent;
+  ChildRelationships: ChildRelationships$DeleteEvent;
+}
 
 type Fields$Document = {
   //
@@ -13879,11 +14078,11 @@ type ChildRelationships$Document = {
 };
 
 interface SObjectDefinition$Document extends SObjectDefinition<'Document'> {
-    Name: 'Document';
-    Fields: Fields$Document;
-    ParentReferences: ParentReferences$Document;
-    ChildRelationships: ChildRelationships$Document;
-  }
+  Name: 'Document';
+  Fields: Fields$Document;
+  ParentReferences: ParentReferences$Document;
+  ChildRelationships: ChildRelationships$Document;
+}
 
 type Fields$DocumentAttachmentMap = {
   //
@@ -13905,11 +14104,11 @@ type ChildRelationships$DocumentAttachmentMap = {
 };
 
 interface SObjectDefinition$DocumentAttachmentMap extends SObjectDefinition<'DocumentAttachmentMap'> {
-    Name: 'DocumentAttachmentMap';
-    Fields: Fields$DocumentAttachmentMap;
-    ParentReferences: ParentReferences$DocumentAttachmentMap;
-    ChildRelationships: ChildRelationships$DocumentAttachmentMap;
-  }
+  Name: 'DocumentAttachmentMap';
+  Fields: Fields$DocumentAttachmentMap;
+  ParentReferences: ParentReferences$DocumentAttachmentMap;
+  ChildRelationships: ChildRelationships$DocumentAttachmentMap;
+}
 
 type Fields$Domain = {
   //
@@ -13938,11 +14137,11 @@ type ChildRelationships$Domain = {
 };
 
 interface SObjectDefinition$Domain extends SObjectDefinition<'Domain'> {
-    Name: 'Domain';
-    Fields: Fields$Domain;
-    ParentReferences: ParentReferences$Domain;
-    ChildRelationships: ChildRelationships$Domain;
-  }
+  Name: 'Domain';
+  Fields: Fields$Domain;
+  ParentReferences: ParentReferences$Domain;
+  ChildRelationships: ChildRelationships$Domain;
+}
 
 type Fields$DomainSite = {
   //
@@ -13970,11 +14169,11 @@ type ChildRelationships$DomainSite = {
 };
 
 interface SObjectDefinition$DomainSite extends SObjectDefinition<'DomainSite'> {
-    Name: 'DomainSite';
-    Fields: Fields$DomainSite;
-    ParentReferences: ParentReferences$DomainSite;
-    ChildRelationships: ChildRelationships$DomainSite;
-  }
+  Name: 'DomainSite';
+  Fields: Fields$DomainSite;
+  ParentReferences: ParentReferences$DomainSite;
+  ChildRelationships: ChildRelationships$DomainSite;
+}
 
 type Fields$DuplicateRecordItem = {
   //
@@ -14005,11 +14204,11 @@ type ChildRelationships$DuplicateRecordItem = {
 };
 
 interface SObjectDefinition$DuplicateRecordItem extends SObjectDefinition<'DuplicateRecordItem'> {
-    Name: 'DuplicateRecordItem';
-    Fields: Fields$DuplicateRecordItem;
-    ParentReferences: ParentReferences$DuplicateRecordItem;
-    ChildRelationships: ChildRelationships$DuplicateRecordItem;
-  }
+  Name: 'DuplicateRecordItem';
+  Fields: Fields$DuplicateRecordItem;
+  ParentReferences: ParentReferences$DuplicateRecordItem;
+  ChildRelationships: ChildRelationships$DuplicateRecordItem;
+}
 
 type Fields$DuplicateRecordSet = {
   //
@@ -14042,11 +14241,11 @@ type ChildRelationships$DuplicateRecordSet = {
 };
 
 interface SObjectDefinition$DuplicateRecordSet extends SObjectDefinition<'DuplicateRecordSet'> {
-    Name: 'DuplicateRecordSet';
-    Fields: Fields$DuplicateRecordSet;
-    ParentReferences: ParentReferences$DuplicateRecordSet;
-    ChildRelationships: ChildRelationships$DuplicateRecordSet;
-  }
+  Name: 'DuplicateRecordSet';
+  Fields: Fields$DuplicateRecordSet;
+  ParentReferences: ParentReferences$DuplicateRecordSet;
+  ChildRelationships: ChildRelationships$DuplicateRecordSet;
+}
 
 type Fields$DuplicateRule = {
   //
@@ -14079,11 +14278,11 @@ type ChildRelationships$DuplicateRule = {
 };
 
 interface SObjectDefinition$DuplicateRule extends SObjectDefinition<'DuplicateRule'> {
-    Name: 'DuplicateRule';
-    Fields: Fields$DuplicateRule;
-    ParentReferences: ParentReferences$DuplicateRule;
-    ChildRelationships: ChildRelationships$DuplicateRule;
-  }
+  Name: 'DuplicateRule';
+  Fields: Fields$DuplicateRule;
+  ParentReferences: ParentReferences$DuplicateRule;
+  ChildRelationships: ChildRelationships$DuplicateRule;
+}
 
 type Fields$EmailCapture = {
   //
@@ -14115,11 +14314,11 @@ type ChildRelationships$EmailCapture = {
 };
 
 interface SObjectDefinition$EmailCapture extends SObjectDefinition<'EmailCapture'> {
-    Name: 'EmailCapture';
-    Fields: Fields$EmailCapture;
-    ParentReferences: ParentReferences$EmailCapture;
-    ChildRelationships: ChildRelationships$EmailCapture;
-  }
+  Name: 'EmailCapture';
+  Fields: Fields$EmailCapture;
+  ParentReferences: ParentReferences$EmailCapture;
+  ChildRelationships: ChildRelationships$EmailCapture;
+}
 
 type Fields$EmailDomainFilter = {
   //
@@ -14149,11 +14348,11 @@ type ChildRelationships$EmailDomainFilter = {
 };
 
 interface SObjectDefinition$EmailDomainFilter extends SObjectDefinition<'EmailDomainFilter'> {
-    Name: 'EmailDomainFilter';
-    Fields: Fields$EmailDomainFilter;
-    ParentReferences: ParentReferences$EmailDomainFilter;
-    ChildRelationships: ChildRelationships$EmailDomainFilter;
-  }
+  Name: 'EmailDomainFilter';
+  Fields: Fields$EmailDomainFilter;
+  ParentReferences: ParentReferences$EmailDomainFilter;
+  ChildRelationships: ChildRelationships$EmailDomainFilter;
+}
 
 type Fields$EmailDomainKey = {
   //
@@ -14188,11 +14387,11 @@ type ChildRelationships$EmailDomainKey = {
 };
 
 interface SObjectDefinition$EmailDomainKey extends SObjectDefinition<'EmailDomainKey'> {
-    Name: 'EmailDomainKey';
-    Fields: Fields$EmailDomainKey;
-    ParentReferences: ParentReferences$EmailDomainKey;
-    ChildRelationships: ChildRelationships$EmailDomainKey;
-  }
+  Name: 'EmailDomainKey';
+  Fields: Fields$EmailDomainKey;
+  ParentReferences: ParentReferences$EmailDomainKey;
+  ChildRelationships: ChildRelationships$EmailDomainKey;
+}
 
 type Fields$EmailMessage = {
   //
@@ -14256,11 +14455,11 @@ type ChildRelationships$EmailMessage = {
 };
 
 interface SObjectDefinition$EmailMessage extends SObjectDefinition<'EmailMessage'> {
-    Name: 'EmailMessage';
-    Fields: Fields$EmailMessage;
-    ParentReferences: ParentReferences$EmailMessage;
-    ChildRelationships: ChildRelationships$EmailMessage;
-  }
+  Name: 'EmailMessage';
+  Fields: Fields$EmailMessage;
+  ParentReferences: ParentReferences$EmailMessage;
+  ChildRelationships: ChildRelationships$EmailMessage;
+}
 
 type Fields$EmailMessageChangeEvent = {
   //
@@ -14308,11 +14507,11 @@ type ChildRelationships$EmailMessageChangeEvent = {
 };
 
 interface SObjectDefinition$EmailMessageChangeEvent extends SObjectDefinition<'EmailMessageChangeEvent'> {
-    Name: 'EmailMessageChangeEvent';
-    Fields: Fields$EmailMessageChangeEvent;
-    ParentReferences: ParentReferences$EmailMessageChangeEvent;
-    ChildRelationships: ChildRelationships$EmailMessageChangeEvent;
-  }
+  Name: 'EmailMessageChangeEvent';
+  Fields: Fields$EmailMessageChangeEvent;
+  ParentReferences: ParentReferences$EmailMessageChangeEvent;
+  ChildRelationships: ChildRelationships$EmailMessageChangeEvent;
+}
 
 type Fields$EmailMessageRelation = {
   //
@@ -14340,11 +14539,11 @@ type ChildRelationships$EmailMessageRelation = {
 };
 
 interface SObjectDefinition$EmailMessageRelation extends SObjectDefinition<'EmailMessageRelation'> {
-    Name: 'EmailMessageRelation';
-    Fields: Fields$EmailMessageRelation;
-    ParentReferences: ParentReferences$EmailMessageRelation;
-    ChildRelationships: ChildRelationships$EmailMessageRelation;
-  }
+  Name: 'EmailMessageRelation';
+  Fields: Fields$EmailMessageRelation;
+  ParentReferences: ParentReferences$EmailMessageRelation;
+  ChildRelationships: ChildRelationships$EmailMessageRelation;
+}
 
 type Fields$EmailRelay = {
   //
@@ -14375,11 +14574,11 @@ type ChildRelationships$EmailRelay = {
 };
 
 interface SObjectDefinition$EmailRelay extends SObjectDefinition<'EmailRelay'> {
-    Name: 'EmailRelay';
-    Fields: Fields$EmailRelay;
-    ParentReferences: ParentReferences$EmailRelay;
-    ChildRelationships: ChildRelationships$EmailRelay;
-  }
+  Name: 'EmailRelay';
+  Fields: Fields$EmailRelay;
+  ParentReferences: ParentReferences$EmailRelay;
+  ChildRelationships: ChildRelationships$EmailRelay;
+}
 
 type Fields$EmailServicesAddress = {
   //
@@ -14410,11 +14609,11 @@ type ChildRelationships$EmailServicesAddress = {
 };
 
 interface SObjectDefinition$EmailServicesAddress extends SObjectDefinition<'EmailServicesAddress'> {
-    Name: 'EmailServicesAddress';
-    Fields: Fields$EmailServicesAddress;
-    ParentReferences: ParentReferences$EmailServicesAddress;
-    ChildRelationships: ChildRelationships$EmailServicesAddress;
-  }
+  Name: 'EmailServicesAddress';
+  Fields: Fields$EmailServicesAddress;
+  ParentReferences: ParentReferences$EmailServicesAddress;
+  ChildRelationships: ChildRelationships$EmailServicesAddress;
+}
 
 type Fields$EmailServicesFunction = {
   //
@@ -14453,11 +14652,11 @@ type ChildRelationships$EmailServicesFunction = {
 };
 
 interface SObjectDefinition$EmailServicesFunction extends SObjectDefinition<'EmailServicesFunction'> {
-    Name: 'EmailServicesFunction';
-    Fields: Fields$EmailServicesFunction;
-    ParentReferences: ParentReferences$EmailServicesFunction;
-    ChildRelationships: ChildRelationships$EmailServicesFunction;
-  }
+  Name: 'EmailServicesFunction';
+  Fields: Fields$EmailServicesFunction;
+  ParentReferences: ParentReferences$EmailServicesFunction;
+  ChildRelationships: ChildRelationships$EmailServicesFunction;
+}
 
 type Fields$EmailStatus = {
   //
@@ -14487,11 +14686,11 @@ type ChildRelationships$EmailStatus = {
 };
 
 interface SObjectDefinition$EmailStatus extends SObjectDefinition<'EmailStatus'> {
-    Name: 'EmailStatus';
-    Fields: Fields$EmailStatus;
-    ParentReferences: ParentReferences$EmailStatus;
-    ChildRelationships: ChildRelationships$EmailStatus;
-  }
+  Name: 'EmailStatus';
+  Fields: Fields$EmailStatus;
+  ParentReferences: ParentReferences$EmailStatus;
+  ChildRelationships: ChildRelationships$EmailStatus;
+}
 
 type Fields$EmailTemplate = {
   //
@@ -14545,11 +14744,11 @@ type ChildRelationships$EmailTemplate = {
 };
 
 interface SObjectDefinition$EmailTemplate extends SObjectDefinition<'EmailTemplate'> {
-    Name: 'EmailTemplate';
-    Fields: Fields$EmailTemplate;
-    ParentReferences: ParentReferences$EmailTemplate;
-    ChildRelationships: ChildRelationships$EmailTemplate;
-  }
+  Name: 'EmailTemplate';
+  Fields: Fields$EmailTemplate;
+  ParentReferences: ParentReferences$EmailTemplate;
+  ChildRelationships: ChildRelationships$EmailTemplate;
+}
 
 type Fields$EmailTemplateChangeEvent = {
   //
@@ -14592,11 +14791,11 @@ type ChildRelationships$EmailTemplateChangeEvent = {
 };
 
 interface SObjectDefinition$EmailTemplateChangeEvent extends SObjectDefinition<'EmailTemplateChangeEvent'> {
-    Name: 'EmailTemplateChangeEvent';
-    Fields: Fields$EmailTemplateChangeEvent;
-    ParentReferences: ParentReferences$EmailTemplateChangeEvent;
-    ChildRelationships: ChildRelationships$EmailTemplateChangeEvent;
-  }
+  Name: 'EmailTemplateChangeEvent';
+  Fields: Fields$EmailTemplateChangeEvent;
+  ParentReferences: ParentReferences$EmailTemplateChangeEvent;
+  ChildRelationships: ChildRelationships$EmailTemplateChangeEvent;
+}
 
 type Fields$EmbeddedServiceDetail = {
   //
@@ -14643,11 +14842,11 @@ type ChildRelationships$EmbeddedServiceDetail = {
 };
 
 interface SObjectDefinition$EmbeddedServiceDetail extends SObjectDefinition<'EmbeddedServiceDetail'> {
-    Name: 'EmbeddedServiceDetail';
-    Fields: Fields$EmbeddedServiceDetail;
-    ParentReferences: ParentReferences$EmbeddedServiceDetail;
-    ChildRelationships: ChildRelationships$EmbeddedServiceDetail;
-  }
+  Name: 'EmbeddedServiceDetail';
+  Fields: Fields$EmbeddedServiceDetail;
+  ParentReferences: ParentReferences$EmbeddedServiceDetail;
+  ChildRelationships: ChildRelationships$EmbeddedServiceDetail;
+}
 
 type Fields$EmbeddedServiceLabel = {
   //
@@ -14667,11 +14866,11 @@ type ChildRelationships$EmbeddedServiceLabel = {
 };
 
 interface SObjectDefinition$EmbeddedServiceLabel extends SObjectDefinition<'EmbeddedServiceLabel'> {
-    Name: 'EmbeddedServiceLabel';
-    Fields: Fields$EmbeddedServiceLabel;
-    ParentReferences: ParentReferences$EmbeddedServiceLabel;
-    ChildRelationships: ChildRelationships$EmbeddedServiceLabel;
-  }
+  Name: 'EmbeddedServiceLabel';
+  Fields: Fields$EmbeddedServiceLabel;
+  ParentReferences: ParentReferences$EmbeddedServiceLabel;
+  ChildRelationships: ChildRelationships$EmbeddedServiceLabel;
+}
 
 type Fields$Employment_Offer_Endpoint__ChangeEvent = {
   //
@@ -14695,12 +14894,13 @@ type ChildRelationships$Employment_Offer_Endpoint__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Employment_Offer_Endpoint__ChangeEvent extends SObjectDefinition<'Employment_Offer_Endpoint__ChangeEvent'> {
-    Name: 'Employment_Offer_Endpoint__ChangeEvent';
-    Fields: Fields$Employment_Offer_Endpoint__ChangeEvent;
-    ParentReferences: ParentReferences$Employment_Offer_Endpoint__ChangeEvent;
-    ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__ChangeEvent;
-  }
+interface SObjectDefinition$Employment_Offer_Endpoint__ChangeEvent
+  extends SObjectDefinition<'Employment_Offer_Endpoint__ChangeEvent'> {
+  Name: 'Employment_Offer_Endpoint__ChangeEvent';
+  Fields: Fields$Employment_Offer_Endpoint__ChangeEvent;
+  ParentReferences: ParentReferences$Employment_Offer_Endpoint__ChangeEvent;
+  ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__ChangeEvent;
+}
 
 type Fields$Employment_Offer_Endpoint__c = {
   //
@@ -14745,11 +14945,11 @@ type ChildRelationships$Employment_Offer_Endpoint__c = {
 };
 
 interface SObjectDefinition$Employment_Offer_Endpoint__c extends SObjectDefinition<'Employment_Offer_Endpoint__c'> {
-    Name: 'Employment_Offer_Endpoint__c';
-    Fields: Fields$Employment_Offer_Endpoint__c;
-    ParentReferences: ParentReferences$Employment_Offer_Endpoint__c;
-    ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__c;
-  }
+  Name: 'Employment_Offer_Endpoint__c';
+  Fields: Fields$Employment_Offer_Endpoint__c;
+  ParentReferences: ParentReferences$Employment_Offer_Endpoint__c;
+  ChildRelationships: ChildRelationships$Employment_Offer_Endpoint__c;
+}
 
 type Fields$EngagementChannelType = {
   //
@@ -14793,11 +14993,11 @@ type ChildRelationships$EngagementChannelType = {
 };
 
 interface SObjectDefinition$EngagementChannelType extends SObjectDefinition<'EngagementChannelType'> {
-    Name: 'EngagementChannelType';
-    Fields: Fields$EngagementChannelType;
-    ParentReferences: ParentReferences$EngagementChannelType;
-    ChildRelationships: ChildRelationships$EngagementChannelType;
-  }
+  Name: 'EngagementChannelType';
+  Fields: Fields$EngagementChannelType;
+  ParentReferences: ParentReferences$EngagementChannelType;
+  ChildRelationships: ChildRelationships$EngagementChannelType;
+}
 
 type Fields$EngagementChannelTypeFeed = {
   //
@@ -14838,11 +15038,11 @@ type ChildRelationships$EngagementChannelTypeFeed = {
 };
 
 interface SObjectDefinition$EngagementChannelTypeFeed extends SObjectDefinition<'EngagementChannelTypeFeed'> {
-    Name: 'EngagementChannelTypeFeed';
-    Fields: Fields$EngagementChannelTypeFeed;
-    ParentReferences: ParentReferences$EngagementChannelTypeFeed;
-    ChildRelationships: ChildRelationships$EngagementChannelTypeFeed;
-  }
+  Name: 'EngagementChannelTypeFeed';
+  Fields: Fields$EngagementChannelTypeFeed;
+  ParentReferences: ParentReferences$EngagementChannelTypeFeed;
+  ChildRelationships: ChildRelationships$EngagementChannelTypeFeed;
+}
 
 type Fields$EngagementChannelTypeHistory = {
   //
@@ -14868,11 +15068,11 @@ type ChildRelationships$EngagementChannelTypeHistory = {
 };
 
 interface SObjectDefinition$EngagementChannelTypeHistory extends SObjectDefinition<'EngagementChannelTypeHistory'> {
-    Name: 'EngagementChannelTypeHistory';
-    Fields: Fields$EngagementChannelTypeHistory;
-    ParentReferences: ParentReferences$EngagementChannelTypeHistory;
-    ChildRelationships: ChildRelationships$EngagementChannelTypeHistory;
-  }
+  Name: 'EngagementChannelTypeHistory';
+  Fields: Fields$EngagementChannelTypeHistory;
+  ParentReferences: ParentReferences$EngagementChannelTypeHistory;
+  ChildRelationships: ChildRelationships$EngagementChannelTypeHistory;
+}
 
 type Fields$EngagementChannelTypeShare = {
   //
@@ -14898,11 +15098,11 @@ type ChildRelationships$EngagementChannelTypeShare = {
 };
 
 interface SObjectDefinition$EngagementChannelTypeShare extends SObjectDefinition<'EngagementChannelTypeShare'> {
-    Name: 'EngagementChannelTypeShare';
-    Fields: Fields$EngagementChannelTypeShare;
-    ParentReferences: ParentReferences$EngagementChannelTypeShare;
-    ChildRelationships: ChildRelationships$EngagementChannelTypeShare;
-  }
+  Name: 'EngagementChannelTypeShare';
+  Fields: Fields$EngagementChannelTypeShare;
+  ParentReferences: ParentReferences$EngagementChannelTypeShare;
+  ChildRelationships: ChildRelationships$EngagementChannelTypeShare;
+}
 
 type Fields$EnhancedLetterhead = {
   //
@@ -14940,11 +15140,11 @@ type ChildRelationships$EnhancedLetterhead = {
 };
 
 interface SObjectDefinition$EnhancedLetterhead extends SObjectDefinition<'EnhancedLetterhead'> {
-    Name: 'EnhancedLetterhead';
-    Fields: Fields$EnhancedLetterhead;
-    ParentReferences: ParentReferences$EnhancedLetterhead;
-    ChildRelationships: ChildRelationships$EnhancedLetterhead;
-  }
+  Name: 'EnhancedLetterhead';
+  Fields: Fields$EnhancedLetterhead;
+  ParentReferences: ParentReferences$EnhancedLetterhead;
+  ChildRelationships: ChildRelationships$EnhancedLetterhead;
+}
 
 type Fields$EnhancedLetterheadFeed = {
   //
@@ -14985,11 +15185,11 @@ type ChildRelationships$EnhancedLetterheadFeed = {
 };
 
 interface SObjectDefinition$EnhancedLetterheadFeed extends SObjectDefinition<'EnhancedLetterheadFeed'> {
-    Name: 'EnhancedLetterheadFeed';
-    Fields: Fields$EnhancedLetterheadFeed;
-    ParentReferences: ParentReferences$EnhancedLetterheadFeed;
-    ChildRelationships: ChildRelationships$EnhancedLetterheadFeed;
-  }
+  Name: 'EnhancedLetterheadFeed';
+  Fields: Fields$EnhancedLetterheadFeed;
+  ParentReferences: ParentReferences$EnhancedLetterheadFeed;
+  ChildRelationships: ChildRelationships$EnhancedLetterheadFeed;
+}
 
 type Fields$EntityDefinition = {
   //
@@ -15063,11 +15263,11 @@ type ChildRelationships$EntityDefinition = {
 };
 
 interface SObjectDefinition$EntityDefinition extends SObjectDefinition<'EntityDefinition'> {
-    Name: 'EntityDefinition';
-    Fields: Fields$EntityDefinition;
-    ParentReferences: ParentReferences$EntityDefinition;
-    ChildRelationships: ChildRelationships$EntityDefinition;
-  }
+  Name: 'EntityDefinition';
+  Fields: Fields$EntityDefinition;
+  ParentReferences: ParentReferences$EntityDefinition;
+  ChildRelationships: ChildRelationships$EntityDefinition;
+}
 
 type Fields$EntityParticle = {
   //
@@ -15139,11 +15339,11 @@ type ChildRelationships$EntityParticle = {
 };
 
 interface SObjectDefinition$EntityParticle extends SObjectDefinition<'EntityParticle'> {
-    Name: 'EntityParticle';
-    Fields: Fields$EntityParticle;
-    ParentReferences: ParentReferences$EntityParticle;
-    ChildRelationships: ChildRelationships$EntityParticle;
-  }
+  Name: 'EntityParticle';
+  Fields: Fields$EntityParticle;
+  ParentReferences: ParentReferences$EntityParticle;
+  ChildRelationships: ChildRelationships$EntityParticle;
+}
 
 type Fields$EntitySubscription = {
   //
@@ -15167,11 +15367,11 @@ type ChildRelationships$EntitySubscription = {
 };
 
 interface SObjectDefinition$EntitySubscription extends SObjectDefinition<'EntitySubscription'> {
-    Name: 'EntitySubscription';
-    Fields: Fields$EntitySubscription;
-    ParentReferences: ParentReferences$EntitySubscription;
-    ChildRelationships: ChildRelationships$EntitySubscription;
-  }
+  Name: 'EntitySubscription';
+  Fields: Fields$EntitySubscription;
+  ParentReferences: ParentReferences$EntitySubscription;
+  ChildRelationships: ChildRelationships$EntitySubscription;
+}
 
 type Fields$Event = {
   //
@@ -15277,11 +15477,11 @@ type ChildRelationships$Event = {
 };
 
 interface SObjectDefinition$Event extends SObjectDefinition<'Event'> {
-    Name: 'Event';
-    Fields: Fields$Event;
-    ParentReferences: ParentReferences$Event;
-    ChildRelationships: ChildRelationships$Event;
-  }
+  Name: 'Event';
+  Fields: Fields$Event;
+  ParentReferences: ParentReferences$Event;
+  ChildRelationships: ChildRelationships$Event;
+}
 
 type Fields$EventBusSubscriber = {
   //
@@ -15306,11 +15506,11 @@ type ChildRelationships$EventBusSubscriber = {
 };
 
 interface SObjectDefinition$EventBusSubscriber extends SObjectDefinition<'EventBusSubscriber'> {
-    Name: 'EventBusSubscriber';
-    Fields: Fields$EventBusSubscriber;
-    ParentReferences: ParentReferences$EventBusSubscriber;
-    ChildRelationships: ChildRelationships$EventBusSubscriber;
-  }
+  Name: 'EventBusSubscriber';
+  Fields: Fields$EventBusSubscriber;
+  ParentReferences: ParentReferences$EventBusSubscriber;
+  ChildRelationships: ChildRelationships$EventBusSubscriber;
+}
 
 type Fields$EventChangeEvent = {
   //
@@ -15384,11 +15584,11 @@ type ChildRelationships$EventChangeEvent = {
 };
 
 interface SObjectDefinition$EventChangeEvent extends SObjectDefinition<'EventChangeEvent'> {
-    Name: 'EventChangeEvent';
-    Fields: Fields$EventChangeEvent;
-    ParentReferences: ParentReferences$EventChangeEvent;
-    ChildRelationships: ChildRelationships$EventChangeEvent;
-  }
+  Name: 'EventChangeEvent';
+  Fields: Fields$EventChangeEvent;
+  ParentReferences: ParentReferences$EventChangeEvent;
+  ChildRelationships: ChildRelationships$EventChangeEvent;
+}
 
 type Fields$EventFeed = {
   //
@@ -15429,11 +15629,11 @@ type ChildRelationships$EventFeed = {
 };
 
 interface SObjectDefinition$EventFeed extends SObjectDefinition<'EventFeed'> {
-    Name: 'EventFeed';
-    Fields: Fields$EventFeed;
-    ParentReferences: ParentReferences$EventFeed;
-    ChildRelationships: ChildRelationships$EventFeed;
-  }
+  Name: 'EventFeed';
+  Fields: Fields$EventFeed;
+  ParentReferences: ParentReferences$EventFeed;
+  ChildRelationships: ChildRelationships$EventFeed;
+}
 
 type Fields$EventLogFile = {
   //
@@ -15465,11 +15665,11 @@ type ChildRelationships$EventLogFile = {
 };
 
 interface SObjectDefinition$EventLogFile extends SObjectDefinition<'EventLogFile'> {
-    Name: 'EventLogFile';
-    Fields: Fields$EventLogFile;
-    ParentReferences: ParentReferences$EventLogFile;
-    ChildRelationships: ChildRelationships$EventLogFile;
-  }
+  Name: 'EventLogFile';
+  Fields: Fields$EventLogFile;
+  ParentReferences: ParentReferences$EventLogFile;
+  ChildRelationships: ChildRelationships$EventLogFile;
+}
 
 type Fields$EventRelation = {
   //
@@ -15505,11 +15705,11 @@ type ChildRelationships$EventRelation = {
 };
 
 interface SObjectDefinition$EventRelation extends SObjectDefinition<'EventRelation'> {
-    Name: 'EventRelation';
-    Fields: Fields$EventRelation;
-    ParentReferences: ParentReferences$EventRelation;
-    ChildRelationships: ChildRelationships$EventRelation;
-  }
+  Name: 'EventRelation';
+  Fields: Fields$EventRelation;
+  ParentReferences: ParentReferences$EventRelation;
+  ChildRelationships: ChildRelationships$EventRelation;
+}
 
 type Fields$EventRelationChangeEvent = {
   //
@@ -15540,11 +15740,11 @@ type ChildRelationships$EventRelationChangeEvent = {
 };
 
 interface SObjectDefinition$EventRelationChangeEvent extends SObjectDefinition<'EventRelationChangeEvent'> {
-    Name: 'EventRelationChangeEvent';
-    Fields: Fields$EventRelationChangeEvent;
-    ParentReferences: ParentReferences$EventRelationChangeEvent;
-    ChildRelationships: ChildRelationships$EventRelationChangeEvent;
-  }
+  Name: 'EventRelationChangeEvent';
+  Fields: Fields$EventRelationChangeEvent;
+  ParentReferences: ParentReferences$EventRelationChangeEvent;
+  ChildRelationships: ChildRelationships$EventRelationChangeEvent;
+}
 
 type Fields$EventWhoRelation = {
   //
@@ -15575,11 +15775,11 @@ type ChildRelationships$EventWhoRelation = {
 };
 
 interface SObjectDefinition$EventWhoRelation extends SObjectDefinition<'EventWhoRelation'> {
-    Name: 'EventWhoRelation';
-    Fields: Fields$EventWhoRelation;
-    ParentReferences: ParentReferences$EventWhoRelation;
-    ChildRelationships: ChildRelationships$EventWhoRelation;
-  }
+  Name: 'EventWhoRelation';
+  Fields: Fields$EventWhoRelation;
+  ParentReferences: ParentReferences$EventWhoRelation;
+  ChildRelationships: ChildRelationships$EventWhoRelation;
+}
 
 type Fields$Expense__ChangeEvent = {
   //
@@ -15610,11 +15810,11 @@ type ChildRelationships$Expense__ChangeEvent = {
 };
 
 interface SObjectDefinition$Expense__ChangeEvent extends SObjectDefinition<'Expense__ChangeEvent'> {
-    Name: 'Expense__ChangeEvent';
-    Fields: Fields$Expense__ChangeEvent;
-    ParentReferences: ParentReferences$Expense__ChangeEvent;
-    ChildRelationships: ChildRelationships$Expense__ChangeEvent;
-  }
+  Name: 'Expense__ChangeEvent';
+  Fields: Fields$Expense__ChangeEvent;
+  ParentReferences: ParentReferences$Expense__ChangeEvent;
+  ChildRelationships: ChildRelationships$Expense__ChangeEvent;
+}
 
 type Fields$Expense__c = {
   //
@@ -15672,11 +15872,11 @@ type ChildRelationships$Expense__c = {
 };
 
 interface SObjectDefinition$Expense__c extends SObjectDefinition<'Expense__c'> {
-    Name: 'Expense__c';
-    Fields: Fields$Expense__c;
-    ParentReferences: ParentReferences$Expense__c;
-    ChildRelationships: ChildRelationships$Expense__c;
-  }
+  Name: 'Expense__c';
+  Fields: Fields$Expense__c;
+  ParentReferences: ParentReferences$Expense__c;
+  ChildRelationships: ChildRelationships$Expense__c;
+}
 
 type Fields$ExpressionFilter = {
   //
@@ -15705,11 +15905,11 @@ type ChildRelationships$ExpressionFilter = {
 };
 
 interface SObjectDefinition$ExpressionFilter extends SObjectDefinition<'ExpressionFilter'> {
-    Name: 'ExpressionFilter';
-    Fields: Fields$ExpressionFilter;
-    ParentReferences: ParentReferences$ExpressionFilter;
-    ChildRelationships: ChildRelationships$ExpressionFilter;
-  }
+  Name: 'ExpressionFilter';
+  Fields: Fields$ExpressionFilter;
+  ParentReferences: ParentReferences$ExpressionFilter;
+  ChildRelationships: ChildRelationships$ExpressionFilter;
+}
 
 type Fields$ExpressionFilterCriteria = {
   //
@@ -15740,11 +15940,11 @@ type ChildRelationships$ExpressionFilterCriteria = {
 };
 
 interface SObjectDefinition$ExpressionFilterCriteria extends SObjectDefinition<'ExpressionFilterCriteria'> {
-    Name: 'ExpressionFilterCriteria';
-    Fields: Fields$ExpressionFilterCriteria;
-    ParentReferences: ParentReferences$ExpressionFilterCriteria;
-    ChildRelationships: ChildRelationships$ExpressionFilterCriteria;
-  }
+  Name: 'ExpressionFilterCriteria';
+  Fields: Fields$ExpressionFilterCriteria;
+  ParentReferences: ParentReferences$ExpressionFilterCriteria;
+  ChildRelationships: ChildRelationships$ExpressionFilterCriteria;
+}
 
 type Fields$ExternalDataSource = {
   //
@@ -15788,11 +15988,11 @@ type ChildRelationships$ExternalDataSource = {
 };
 
 interface SObjectDefinition$ExternalDataSource extends SObjectDefinition<'ExternalDataSource'> {
-    Name: 'ExternalDataSource';
-    Fields: Fields$ExternalDataSource;
-    ParentReferences: ParentReferences$ExternalDataSource;
-    ChildRelationships: ChildRelationships$ExternalDataSource;
-  }
+  Name: 'ExternalDataSource';
+  Fields: Fields$ExternalDataSource;
+  ParentReferences: ParentReferences$ExternalDataSource;
+  ChildRelationships: ChildRelationships$ExternalDataSource;
+}
 
 type Fields$ExternalDataUserAuth = {
   //
@@ -15825,11 +16025,11 @@ type ChildRelationships$ExternalDataUserAuth = {
 };
 
 interface SObjectDefinition$ExternalDataUserAuth extends SObjectDefinition<'ExternalDataUserAuth'> {
-    Name: 'ExternalDataUserAuth';
-    Fields: Fields$ExternalDataUserAuth;
-    ParentReferences: ParentReferences$ExternalDataUserAuth;
-    ChildRelationships: ChildRelationships$ExternalDataUserAuth;
-  }
+  Name: 'ExternalDataUserAuth';
+  Fields: Fields$ExternalDataUserAuth;
+  ParentReferences: ParentReferences$ExternalDataUserAuth;
+  ChildRelationships: ChildRelationships$ExternalDataUserAuth;
+}
 
 type Fields$ExternalEvent = {
   //
@@ -15860,11 +16060,11 @@ type ChildRelationships$ExternalEvent = {
 };
 
 interface SObjectDefinition$ExternalEvent extends SObjectDefinition<'ExternalEvent'> {
-    Name: 'ExternalEvent';
-    Fields: Fields$ExternalEvent;
-    ParentReferences: ParentReferences$ExternalEvent;
-    ChildRelationships: ChildRelationships$ExternalEvent;
-  }
+  Name: 'ExternalEvent';
+  Fields: Fields$ExternalEvent;
+  ParentReferences: ParentReferences$ExternalEvent;
+  ChildRelationships: ChildRelationships$ExternalEvent;
+}
 
 type Fields$ExternalEventMapping = {
   //
@@ -15900,11 +16100,11 @@ type ChildRelationships$ExternalEventMapping = {
 };
 
 interface SObjectDefinition$ExternalEventMapping extends SObjectDefinition<'ExternalEventMapping'> {
-    Name: 'ExternalEventMapping';
-    Fields: Fields$ExternalEventMapping;
-    ParentReferences: ParentReferences$ExternalEventMapping;
-    ChildRelationships: ChildRelationships$ExternalEventMapping;
-  }
+  Name: 'ExternalEventMapping';
+  Fields: Fields$ExternalEventMapping;
+  ParentReferences: ParentReferences$ExternalEventMapping;
+  ChildRelationships: ChildRelationships$ExternalEventMapping;
+}
 
 type Fields$ExternalEventMappingShare = {
   //
@@ -15930,11 +16130,11 @@ type ChildRelationships$ExternalEventMappingShare = {
 };
 
 interface SObjectDefinition$ExternalEventMappingShare extends SObjectDefinition<'ExternalEventMappingShare'> {
-    Name: 'ExternalEventMappingShare';
-    Fields: Fields$ExternalEventMappingShare;
-    ParentReferences: ParentReferences$ExternalEventMappingShare;
-    ChildRelationships: ChildRelationships$ExternalEventMappingShare;
-  }
+  Name: 'ExternalEventMappingShare';
+  Fields: Fields$ExternalEventMappingShare;
+  ParentReferences: ParentReferences$ExternalEventMappingShare;
+  ChildRelationships: ChildRelationships$ExternalEventMappingShare;
+}
 
 type Fields$ExternalSocialAccount = {
   //
@@ -15980,11 +16180,11 @@ type ChildRelationships$ExternalSocialAccount = {
 };
 
 interface SObjectDefinition$ExternalSocialAccount extends SObjectDefinition<'ExternalSocialAccount'> {
-    Name: 'ExternalSocialAccount';
-    Fields: Fields$ExternalSocialAccount;
-    ParentReferences: ParentReferences$ExternalSocialAccount;
-    ChildRelationships: ChildRelationships$ExternalSocialAccount;
-  }
+  Name: 'ExternalSocialAccount';
+  Fields: Fields$ExternalSocialAccount;
+  ParentReferences: ParentReferences$ExternalSocialAccount;
+  ChildRelationships: ChildRelationships$ExternalSocialAccount;
+}
 
 type Fields$FeedAttachment = {
   //
@@ -16006,11 +16206,11 @@ type ChildRelationships$FeedAttachment = {
 };
 
 interface SObjectDefinition$FeedAttachment extends SObjectDefinition<'FeedAttachment'> {
-    Name: 'FeedAttachment';
-    Fields: Fields$FeedAttachment;
-    ParentReferences: ParentReferences$FeedAttachment;
-    ChildRelationships: ChildRelationships$FeedAttachment;
-  }
+  Name: 'FeedAttachment';
+  Fields: Fields$FeedAttachment;
+  ParentReferences: ParentReferences$FeedAttachment;
+  ChildRelationships: ChildRelationships$FeedAttachment;
+}
 
 type Fields$FeedComment = {
   //
@@ -16053,11 +16253,11 @@ type ChildRelationships$FeedComment = {
 };
 
 interface SObjectDefinition$FeedComment extends SObjectDefinition<'FeedComment'> {
-    Name: 'FeedComment';
-    Fields: Fields$FeedComment;
-    ParentReferences: ParentReferences$FeedComment;
-    ChildRelationships: ChildRelationships$FeedComment;
-  }
+  Name: 'FeedComment';
+  Fields: Fields$FeedComment;
+  ParentReferences: ParentReferences$FeedComment;
+  ChildRelationships: ChildRelationships$FeedComment;
+}
 
 type Fields$FeedItem = {
   //
@@ -16110,11 +16310,11 @@ type ChildRelationships$FeedItem = {
 };
 
 interface SObjectDefinition$FeedItem extends SObjectDefinition<'FeedItem'> {
-    Name: 'FeedItem';
-    Fields: Fields$FeedItem;
-    ParentReferences: ParentReferences$FeedItem;
-    ChildRelationships: ChildRelationships$FeedItem;
-  }
+  Name: 'FeedItem';
+  Fields: Fields$FeedItem;
+  ParentReferences: ParentReferences$FeedItem;
+  ChildRelationships: ChildRelationships$FeedItem;
+}
 
 type Fields$FeedLike = {
   //
@@ -16138,11 +16338,11 @@ type ChildRelationships$FeedLike = {
 };
 
 interface SObjectDefinition$FeedLike extends SObjectDefinition<'FeedLike'> {
-    Name: 'FeedLike';
-    Fields: Fields$FeedLike;
-    ParentReferences: ParentReferences$FeedLike;
-    ChildRelationships: ChildRelationships$FeedLike;
-  }
+  Name: 'FeedLike';
+  Fields: Fields$FeedLike;
+  ParentReferences: ParentReferences$FeedLike;
+  ChildRelationships: ChildRelationships$FeedLike;
+}
 
 type Fields$FeedPollChoice = {
   //
@@ -16166,11 +16366,11 @@ type ChildRelationships$FeedPollChoice = {
 };
 
 interface SObjectDefinition$FeedPollChoice extends SObjectDefinition<'FeedPollChoice'> {
-    Name: 'FeedPollChoice';
-    Fields: Fields$FeedPollChoice;
-    ParentReferences: ParentReferences$FeedPollChoice;
-    ChildRelationships: ChildRelationships$FeedPollChoice;
-  }
+  Name: 'FeedPollChoice';
+  Fields: Fields$FeedPollChoice;
+  ParentReferences: ParentReferences$FeedPollChoice;
+  ChildRelationships: ChildRelationships$FeedPollChoice;
+}
 
 type Fields$FeedPollVote = {
   //
@@ -16194,11 +16394,11 @@ type ChildRelationships$FeedPollVote = {
 };
 
 interface SObjectDefinition$FeedPollVote extends SObjectDefinition<'FeedPollVote'> {
-    Name: 'FeedPollVote';
-    Fields: Fields$FeedPollVote;
-    ParentReferences: ParentReferences$FeedPollVote;
-    ChildRelationships: ChildRelationships$FeedPollVote;
-  }
+  Name: 'FeedPollVote';
+  Fields: Fields$FeedPollVote;
+  ParentReferences: ParentReferences$FeedPollVote;
+  ChildRelationships: ChildRelationships$FeedPollVote;
+}
 
 type Fields$FeedRevision = {
   //
@@ -16225,11 +16425,11 @@ type ChildRelationships$FeedRevision = {
 };
 
 interface SObjectDefinition$FeedRevision extends SObjectDefinition<'FeedRevision'> {
-    Name: 'FeedRevision';
-    Fields: Fields$FeedRevision;
-    ParentReferences: ParentReferences$FeedRevision;
-    ChildRelationships: ChildRelationships$FeedRevision;
-  }
+  Name: 'FeedRevision';
+  Fields: Fields$FeedRevision;
+  ParentReferences: ParentReferences$FeedRevision;
+  ChildRelationships: ChildRelationships$FeedRevision;
+}
 
 type Fields$FeedSignal = {
   //
@@ -16255,11 +16455,11 @@ type ChildRelationships$FeedSignal = {
 };
 
 interface SObjectDefinition$FeedSignal extends SObjectDefinition<'FeedSignal'> {
-    Name: 'FeedSignal';
-    Fields: Fields$FeedSignal;
-    ParentReferences: ParentReferences$FeedSignal;
-    ChildRelationships: ChildRelationships$FeedSignal;
-  }
+  Name: 'FeedSignal';
+  Fields: Fields$FeedSignal;
+  ParentReferences: ParentReferences$FeedSignal;
+  ChildRelationships: ChildRelationships$FeedSignal;
+}
 
 type Fields$FeedTrackedChange = {
   //
@@ -16279,11 +16479,11 @@ type ChildRelationships$FeedTrackedChange = {
 };
 
 interface SObjectDefinition$FeedTrackedChange extends SObjectDefinition<'FeedTrackedChange'> {
-    Name: 'FeedTrackedChange';
-    Fields: Fields$FeedTrackedChange;
-    ParentReferences: ParentReferences$FeedTrackedChange;
-    ChildRelationships: ChildRelationships$FeedTrackedChange;
-  }
+  Name: 'FeedTrackedChange';
+  Fields: Fields$FeedTrackedChange;
+  ParentReferences: ParentReferences$FeedTrackedChange;
+  ChildRelationships: ChildRelationships$FeedTrackedChange;
+}
 
 type Fields$FieldDefinition = {
   //
@@ -16347,11 +16547,11 @@ type ChildRelationships$FieldDefinition = {
 };
 
 interface SObjectDefinition$FieldDefinition extends SObjectDefinition<'FieldDefinition'> {
-    Name: 'FieldDefinition';
-    Fields: Fields$FieldDefinition;
-    ParentReferences: ParentReferences$FieldDefinition;
-    ChildRelationships: ChildRelationships$FieldDefinition;
-  }
+  Name: 'FieldDefinition';
+  Fields: Fields$FieldDefinition;
+  ParentReferences: ParentReferences$FieldDefinition;
+  ChildRelationships: ChildRelationships$FieldDefinition;
+}
 
 type Fields$FieldPermissions = {
   //
@@ -16374,11 +16574,11 @@ type ChildRelationships$FieldPermissions = {
 };
 
 interface SObjectDefinition$FieldPermissions extends SObjectDefinition<'FieldPermissions'> {
-    Name: 'FieldPermissions';
-    Fields: Fields$FieldPermissions;
-    ParentReferences: ParentReferences$FieldPermissions;
-    ChildRelationships: ChildRelationships$FieldPermissions;
-  }
+  Name: 'FieldPermissions';
+  Fields: Fields$FieldPermissions;
+  ParentReferences: ParentReferences$FieldPermissions;
+  ChildRelationships: ChildRelationships$FieldPermissions;
+}
 
 type Fields$FieldSecurityClassification = {
   //
@@ -16406,11 +16606,11 @@ type ChildRelationships$FieldSecurityClassification = {
 };
 
 interface SObjectDefinition$FieldSecurityClassification extends SObjectDefinition<'FieldSecurityClassification'> {
-    Name: 'FieldSecurityClassification';
-    Fields: Fields$FieldSecurityClassification;
-    ParentReferences: ParentReferences$FieldSecurityClassification;
-    ChildRelationships: ChildRelationships$FieldSecurityClassification;
-  }
+  Name: 'FieldSecurityClassification';
+  Fields: Fields$FieldSecurityClassification;
+  ParentReferences: ParentReferences$FieldSecurityClassification;
+  ChildRelationships: ChildRelationships$FieldSecurityClassification;
+}
 
 type Fields$FileSearchActivity = {
   //
@@ -16443,11 +16643,11 @@ type ChildRelationships$FileSearchActivity = {
 };
 
 interface SObjectDefinition$FileSearchActivity extends SObjectDefinition<'FileSearchActivity'> {
-    Name: 'FileSearchActivity';
-    Fields: Fields$FileSearchActivity;
-    ParentReferences: ParentReferences$FileSearchActivity;
-    ChildRelationships: ChildRelationships$FileSearchActivity;
-  }
+  Name: 'FileSearchActivity';
+  Fields: Fields$FileSearchActivity;
+  ParentReferences: ParentReferences$FileSearchActivity;
+  ChildRelationships: ChildRelationships$FileSearchActivity;
+}
 
 type Fields$FiscalYearSettings = {
   //
@@ -16478,11 +16678,11 @@ type ChildRelationships$FiscalYearSettings = {
 };
 
 interface SObjectDefinition$FiscalYearSettings extends SObjectDefinition<'FiscalYearSettings'> {
-    Name: 'FiscalYearSettings';
-    Fields: Fields$FiscalYearSettings;
-    ParentReferences: ParentReferences$FiscalYearSettings;
-    ChildRelationships: ChildRelationships$FiscalYearSettings;
-  }
+  Name: 'FiscalYearSettings';
+  Fields: Fields$FiscalYearSettings;
+  ParentReferences: ParentReferences$FiscalYearSettings;
+  ChildRelationships: ChildRelationships$FiscalYearSettings;
+}
 
 type Fields$FlexQueueItem = {
   //
@@ -16503,11 +16703,11 @@ type ChildRelationships$FlexQueueItem = {
 };
 
 interface SObjectDefinition$FlexQueueItem extends SObjectDefinition<'FlexQueueItem'> {
-    Name: 'FlexQueueItem';
-    Fields: Fields$FlexQueueItem;
-    ParentReferences: ParentReferences$FlexQueueItem;
-    ChildRelationships: ChildRelationships$FlexQueueItem;
-  }
+  Name: 'FlexQueueItem';
+  Fields: Fields$FlexQueueItem;
+  ParentReferences: ParentReferences$FlexQueueItem;
+  ChildRelationships: ChildRelationships$FlexQueueItem;
+}
 
 type Fields$FlowDefinitionView = {
   //
@@ -16543,11 +16743,11 @@ type ChildRelationships$FlowDefinitionView = {
 };
 
 interface SObjectDefinition$FlowDefinitionView extends SObjectDefinition<'FlowDefinitionView'> {
-    Name: 'FlowDefinitionView';
-    Fields: Fields$FlowDefinitionView;
-    ParentReferences: ParentReferences$FlowDefinitionView;
-    ChildRelationships: ChildRelationships$FlowDefinitionView;
-  }
+  Name: 'FlowDefinitionView';
+  Fields: Fields$FlowDefinitionView;
+  ParentReferences: ParentReferences$FlowDefinitionView;
+  ChildRelationships: ChildRelationships$FlowDefinitionView;
+}
 
 type Fields$FlowExecutionErrorEvent = {
   //
@@ -16595,11 +16795,11 @@ type ChildRelationships$FlowExecutionErrorEvent = {
 };
 
 interface SObjectDefinition$FlowExecutionErrorEvent extends SObjectDefinition<'FlowExecutionErrorEvent'> {
-    Name: 'FlowExecutionErrorEvent';
-    Fields: Fields$FlowExecutionErrorEvent;
-    ParentReferences: ParentReferences$FlowExecutionErrorEvent;
-    ChildRelationships: ChildRelationships$FlowExecutionErrorEvent;
-  }
+  Name: 'FlowExecutionErrorEvent';
+  Fields: Fields$FlowExecutionErrorEvent;
+  ParentReferences: ParentReferences$FlowExecutionErrorEvent;
+  ChildRelationships: ChildRelationships$FlowExecutionErrorEvent;
+}
 
 type Fields$FlowInterview = {
   //
@@ -16635,11 +16835,11 @@ type ChildRelationships$FlowInterview = {
 };
 
 interface SObjectDefinition$FlowInterview extends SObjectDefinition<'FlowInterview'> {
-    Name: 'FlowInterview';
-    Fields: Fields$FlowInterview;
-    ParentReferences: ParentReferences$FlowInterview;
-    ChildRelationships: ChildRelationships$FlowInterview;
-  }
+  Name: 'FlowInterview';
+  Fields: Fields$FlowInterview;
+  ParentReferences: ParentReferences$FlowInterview;
+  ChildRelationships: ChildRelationships$FlowInterview;
+}
 
 type Fields$FlowInterviewLog = {
   //
@@ -16677,11 +16877,11 @@ type ChildRelationships$FlowInterviewLog = {
 };
 
 interface SObjectDefinition$FlowInterviewLog extends SObjectDefinition<'FlowInterviewLog'> {
-    Name: 'FlowInterviewLog';
-    Fields: Fields$FlowInterviewLog;
-    ParentReferences: ParentReferences$FlowInterviewLog;
-    ChildRelationships: ChildRelationships$FlowInterviewLog;
-  }
+  Name: 'FlowInterviewLog';
+  Fields: Fields$FlowInterviewLog;
+  ParentReferences: ParentReferences$FlowInterviewLog;
+  ChildRelationships: ChildRelationships$FlowInterviewLog;
+}
 
 type Fields$FlowInterviewLogEntry = {
   //
@@ -16714,11 +16914,11 @@ type ChildRelationships$FlowInterviewLogEntry = {
 };
 
 interface SObjectDefinition$FlowInterviewLogEntry extends SObjectDefinition<'FlowInterviewLogEntry'> {
-    Name: 'FlowInterviewLogEntry';
-    Fields: Fields$FlowInterviewLogEntry;
-    ParentReferences: ParentReferences$FlowInterviewLogEntry;
-    ChildRelationships: ChildRelationships$FlowInterviewLogEntry;
-  }
+  Name: 'FlowInterviewLogEntry';
+  Fields: Fields$FlowInterviewLogEntry;
+  ParentReferences: ParentReferences$FlowInterviewLogEntry;
+  ChildRelationships: ChildRelationships$FlowInterviewLogEntry;
+}
 
 type Fields$FlowInterviewLogShare = {
   //
@@ -16744,11 +16944,11 @@ type ChildRelationships$FlowInterviewLogShare = {
 };
 
 interface SObjectDefinition$FlowInterviewLogShare extends SObjectDefinition<'FlowInterviewLogShare'> {
-    Name: 'FlowInterviewLogShare';
-    Fields: Fields$FlowInterviewLogShare;
-    ParentReferences: ParentReferences$FlowInterviewLogShare;
-    ChildRelationships: ChildRelationships$FlowInterviewLogShare;
-  }
+  Name: 'FlowInterviewLogShare';
+  Fields: Fields$FlowInterviewLogShare;
+  ParentReferences: ParentReferences$FlowInterviewLogShare;
+  ChildRelationships: ChildRelationships$FlowInterviewLogShare;
+}
 
 type Fields$FlowInterviewShare = {
   //
@@ -16774,11 +16974,11 @@ type ChildRelationships$FlowInterviewShare = {
 };
 
 interface SObjectDefinition$FlowInterviewShare extends SObjectDefinition<'FlowInterviewShare'> {
-    Name: 'FlowInterviewShare';
-    Fields: Fields$FlowInterviewShare;
-    ParentReferences: ParentReferences$FlowInterviewShare;
-    ChildRelationships: ChildRelationships$FlowInterviewShare;
-  }
+  Name: 'FlowInterviewShare';
+  Fields: Fields$FlowInterviewShare;
+  ParentReferences: ParentReferences$FlowInterviewShare;
+  ChildRelationships: ChildRelationships$FlowInterviewShare;
+}
 
 type Fields$FlowRecordRelation = {
   //
@@ -16807,11 +17007,11 @@ type ChildRelationships$FlowRecordRelation = {
 };
 
 interface SObjectDefinition$FlowRecordRelation extends SObjectDefinition<'FlowRecordRelation'> {
-    Name: 'FlowRecordRelation';
-    Fields: Fields$FlowRecordRelation;
-    ParentReferences: ParentReferences$FlowRecordRelation;
-    ChildRelationships: ChildRelationships$FlowRecordRelation;
-  }
+  Name: 'FlowRecordRelation';
+  Fields: Fields$FlowRecordRelation;
+  ParentReferences: ParentReferences$FlowRecordRelation;
+  ChildRelationships: ChildRelationships$FlowRecordRelation;
+}
 
 type Fields$FlowStageRelation = {
   //
@@ -16842,11 +17042,11 @@ type ChildRelationships$FlowStageRelation = {
 };
 
 interface SObjectDefinition$FlowStageRelation extends SObjectDefinition<'FlowStageRelation'> {
-    Name: 'FlowStageRelation';
-    Fields: Fields$FlowStageRelation;
-    ParentReferences: ParentReferences$FlowStageRelation;
-    ChildRelationships: ChildRelationships$FlowStageRelation;
-  }
+  Name: 'FlowStageRelation';
+  Fields: Fields$FlowStageRelation;
+  ParentReferences: ParentReferences$FlowStageRelation;
+  ChildRelationships: ChildRelationships$FlowStageRelation;
+}
 
 type Fields$FlowVariableView = {
   //
@@ -16871,11 +17071,11 @@ type ChildRelationships$FlowVariableView = {
 };
 
 interface SObjectDefinition$FlowVariableView extends SObjectDefinition<'FlowVariableView'> {
-    Name: 'FlowVariableView';
-    Fields: Fields$FlowVariableView;
-    ParentReferences: ParentReferences$FlowVariableView;
-    ChildRelationships: ChildRelationships$FlowVariableView;
-  }
+  Name: 'FlowVariableView';
+  Fields: Fields$FlowVariableView;
+  ParentReferences: ParentReferences$FlowVariableView;
+  ChildRelationships: ChildRelationships$FlowVariableView;
+}
 
 type Fields$FlowVersionView = {
   //
@@ -16905,11 +17105,11 @@ type ChildRelationships$FlowVersionView = {
 };
 
 interface SObjectDefinition$FlowVersionView extends SObjectDefinition<'FlowVersionView'> {
-    Name: 'FlowVersionView';
-    Fields: Fields$FlowVersionView;
-    ParentReferences: ParentReferences$FlowVersionView;
-    ChildRelationships: ChildRelationships$FlowVersionView;
-  }
+  Name: 'FlowVersionView';
+  Fields: Fields$FlowVersionView;
+  ParentReferences: ParentReferences$FlowVersionView;
+  ChildRelationships: ChildRelationships$FlowVersionView;
+}
 
 type Fields$Folder = {
   //
@@ -16940,11 +17140,11 @@ type ChildRelationships$Folder = {
 };
 
 interface SObjectDefinition$Folder extends SObjectDefinition<'Folder'> {
-    Name: 'Folder';
-    Fields: Fields$Folder;
-    ParentReferences: ParentReferences$Folder;
-    ChildRelationships: ChildRelationships$Folder;
-  }
+  Name: 'Folder';
+  Fields: Fields$Folder;
+  ParentReferences: ParentReferences$Folder;
+  ChildRelationships: ChildRelationships$Folder;
+}
 
 type Fields$FolderedContentDocument = {
   //
@@ -16977,11 +17177,11 @@ type ChildRelationships$FolderedContentDocument = {
 };
 
 interface SObjectDefinition$FolderedContentDocument extends SObjectDefinition<'FolderedContentDocument'> {
-    Name: 'FolderedContentDocument';
-    Fields: Fields$FolderedContentDocument;
-    ParentReferences: ParentReferences$FolderedContentDocument;
-    ChildRelationships: ChildRelationships$FolderedContentDocument;
-  }
+  Name: 'FolderedContentDocument';
+  Fields: Fields$FolderedContentDocument;
+  ParentReferences: ParentReferences$FolderedContentDocument;
+  ChildRelationships: ChildRelationships$FolderedContentDocument;
+}
 
 type Fields$ForecastingAdjustment = {
   //
@@ -17019,11 +17219,11 @@ type ChildRelationships$ForecastingAdjustment = {
 };
 
 interface SObjectDefinition$ForecastingAdjustment extends SObjectDefinition<'ForecastingAdjustment'> {
-    Name: 'ForecastingAdjustment';
-    Fields: Fields$ForecastingAdjustment;
-    ParentReferences: ParentReferences$ForecastingAdjustment;
-    ChildRelationships: ChildRelationships$ForecastingAdjustment;
-  }
+  Name: 'ForecastingAdjustment';
+  Fields: Fields$ForecastingAdjustment;
+  ParentReferences: ParentReferences$ForecastingAdjustment;
+  ChildRelationships: ChildRelationships$ForecastingAdjustment;
+}
 
 type Fields$ForecastingCategoryMapping = {
   //
@@ -17049,11 +17249,11 @@ type ChildRelationships$ForecastingCategoryMapping = {
 };
 
 interface SObjectDefinition$ForecastingCategoryMapping extends SObjectDefinition<'ForecastingCategoryMapping'> {
-    Name: 'ForecastingCategoryMapping';
-    Fields: Fields$ForecastingCategoryMapping;
-    ParentReferences: ParentReferences$ForecastingCategoryMapping;
-    ChildRelationships: ChildRelationships$ForecastingCategoryMapping;
-  }
+  Name: 'ForecastingCategoryMapping';
+  Fields: Fields$ForecastingCategoryMapping;
+  ParentReferences: ParentReferences$ForecastingCategoryMapping;
+  ChildRelationships: ChildRelationships$ForecastingCategoryMapping;
+}
 
 type Fields$ForecastingDisplayedFamily = {
   //
@@ -17079,11 +17279,11 @@ type ChildRelationships$ForecastingDisplayedFamily = {
 };
 
 interface SObjectDefinition$ForecastingDisplayedFamily extends SObjectDefinition<'ForecastingDisplayedFamily'> {
-    Name: 'ForecastingDisplayedFamily';
-    Fields: Fields$ForecastingDisplayedFamily;
-    ParentReferences: ParentReferences$ForecastingDisplayedFamily;
-    ChildRelationships: ChildRelationships$ForecastingDisplayedFamily;
-  }
+  Name: 'ForecastingDisplayedFamily';
+  Fields: Fields$ForecastingDisplayedFamily;
+  ParentReferences: ParentReferences$ForecastingDisplayedFamily;
+  ChildRelationships: ChildRelationships$ForecastingDisplayedFamily;
+}
 
 type Fields$ForecastingFact = {
   //
@@ -17110,11 +17310,11 @@ type ChildRelationships$ForecastingFact = {
 };
 
 interface SObjectDefinition$ForecastingFact extends SObjectDefinition<'ForecastingFact'> {
-    Name: 'ForecastingFact';
-    Fields: Fields$ForecastingFact;
-    ParentReferences: ParentReferences$ForecastingFact;
-    ChildRelationships: ChildRelationships$ForecastingFact;
-  }
+  Name: 'ForecastingFact';
+  Fields: Fields$ForecastingFact;
+  ParentReferences: ParentReferences$ForecastingFact;
+  ChildRelationships: ChildRelationships$ForecastingFact;
+}
 
 type Fields$ForecastingItem = {
   //
@@ -17159,11 +17359,11 @@ type ChildRelationships$ForecastingItem = {
 };
 
 interface SObjectDefinition$ForecastingItem extends SObjectDefinition<'ForecastingItem'> {
-    Name: 'ForecastingItem';
-    Fields: Fields$ForecastingItem;
-    ParentReferences: ParentReferences$ForecastingItem;
-    ChildRelationships: ChildRelationships$ForecastingItem;
-  }
+  Name: 'ForecastingItem';
+  Fields: Fields$ForecastingItem;
+  ParentReferences: ParentReferences$ForecastingItem;
+  ChildRelationships: ChildRelationships$ForecastingItem;
+}
 
 type Fields$ForecastingOwnerAdjustment = {
   //
@@ -17204,11 +17404,11 @@ type ChildRelationships$ForecastingOwnerAdjustment = {
 };
 
 interface SObjectDefinition$ForecastingOwnerAdjustment extends SObjectDefinition<'ForecastingOwnerAdjustment'> {
-    Name: 'ForecastingOwnerAdjustment';
-    Fields: Fields$ForecastingOwnerAdjustment;
-    ParentReferences: ParentReferences$ForecastingOwnerAdjustment;
-    ChildRelationships: ChildRelationships$ForecastingOwnerAdjustment;
-  }
+  Name: 'ForecastingOwnerAdjustment';
+  Fields: Fields$ForecastingOwnerAdjustment;
+  ParentReferences: ParentReferences$ForecastingOwnerAdjustment;
+  ChildRelationships: ChildRelationships$ForecastingOwnerAdjustment;
+}
 
 type Fields$ForecastingQuota = {
   //
@@ -17241,11 +17441,11 @@ type ChildRelationships$ForecastingQuota = {
 };
 
 interface SObjectDefinition$ForecastingQuota extends SObjectDefinition<'ForecastingQuota'> {
-    Name: 'ForecastingQuota';
-    Fields: Fields$ForecastingQuota;
-    ParentReferences: ParentReferences$ForecastingQuota;
-    ChildRelationships: ChildRelationships$ForecastingQuota;
-  }
+  Name: 'ForecastingQuota';
+  Fields: Fields$ForecastingQuota;
+  ParentReferences: ParentReferences$ForecastingQuota;
+  ChildRelationships: ChildRelationships$ForecastingQuota;
+}
 
 type Fields$ForecastingShare = {
   //
@@ -17275,11 +17475,11 @@ type ChildRelationships$ForecastingShare = {
 };
 
 interface SObjectDefinition$ForecastingShare extends SObjectDefinition<'ForecastingShare'> {
-    Name: 'ForecastingShare';
-    Fields: Fields$ForecastingShare;
-    ParentReferences: ParentReferences$ForecastingShare;
-    ChildRelationships: ChildRelationships$ForecastingShare;
-  }
+  Name: 'ForecastingShare';
+  Fields: Fields$ForecastingShare;
+  ParentReferences: ParentReferences$ForecastingShare;
+  ChildRelationships: ChildRelationships$ForecastingShare;
+}
 
 type Fields$ForecastingSourceDefinition = {
   //
@@ -17313,11 +17513,11 @@ type ChildRelationships$ForecastingSourceDefinition = {
 };
 
 interface SObjectDefinition$ForecastingSourceDefinition extends SObjectDefinition<'ForecastingSourceDefinition'> {
-    Name: 'ForecastingSourceDefinition';
-    Fields: Fields$ForecastingSourceDefinition;
-    ParentReferences: ParentReferences$ForecastingSourceDefinition;
-    ChildRelationships: ChildRelationships$ForecastingSourceDefinition;
-  }
+  Name: 'ForecastingSourceDefinition';
+  Fields: Fields$ForecastingSourceDefinition;
+  ParentReferences: ParentReferences$ForecastingSourceDefinition;
+  ChildRelationships: ChildRelationships$ForecastingSourceDefinition;
+}
 
 type Fields$ForecastingType = {
   //
@@ -17352,11 +17552,11 @@ type ChildRelationships$ForecastingType = {
 };
 
 interface SObjectDefinition$ForecastingType extends SObjectDefinition<'ForecastingType'> {
-    Name: 'ForecastingType';
-    Fields: Fields$ForecastingType;
-    ParentReferences: ParentReferences$ForecastingType;
-    ChildRelationships: ChildRelationships$ForecastingType;
-  }
+  Name: 'ForecastingType';
+  Fields: Fields$ForecastingType;
+  ParentReferences: ParentReferences$ForecastingType;
+  ChildRelationships: ChildRelationships$ForecastingType;
+}
 
 type Fields$ForecastingTypeSource = {
   //
@@ -17388,11 +17588,11 @@ type ChildRelationships$ForecastingTypeSource = {
 };
 
 interface SObjectDefinition$ForecastingTypeSource extends SObjectDefinition<'ForecastingTypeSource'> {
-    Name: 'ForecastingTypeSource';
-    Fields: Fields$ForecastingTypeSource;
-    ParentReferences: ParentReferences$ForecastingTypeSource;
-    ChildRelationships: ChildRelationships$ForecastingTypeSource;
-  }
+  Name: 'ForecastingTypeSource';
+  Fields: Fields$ForecastingTypeSource;
+  ParentReferences: ParentReferences$ForecastingTypeSource;
+  ChildRelationships: ChildRelationships$ForecastingTypeSource;
+}
 
 type Fields$ForecastingTypeToCategory = {
   //
@@ -17422,11 +17622,11 @@ type ChildRelationships$ForecastingTypeToCategory = {
 };
 
 interface SObjectDefinition$ForecastingTypeToCategory extends SObjectDefinition<'ForecastingTypeToCategory'> {
-    Name: 'ForecastingTypeToCategory';
-    Fields: Fields$ForecastingTypeToCategory;
-    ParentReferences: ParentReferences$ForecastingTypeToCategory;
-    ChildRelationships: ChildRelationships$ForecastingTypeToCategory;
-  }
+  Name: 'ForecastingTypeToCategory';
+  Fields: Fields$ForecastingTypeToCategory;
+  ParentReferences: ParentReferences$ForecastingTypeToCategory;
+  ChildRelationships: ChildRelationships$ForecastingTypeToCategory;
+}
 
 type Fields$ForecastingUserPreference = {
   //
@@ -17454,11 +17654,11 @@ type ChildRelationships$ForecastingUserPreference = {
 };
 
 interface SObjectDefinition$ForecastingUserPreference extends SObjectDefinition<'ForecastingUserPreference'> {
-    Name: 'ForecastingUserPreference';
-    Fields: Fields$ForecastingUserPreference;
-    ParentReferences: ParentReferences$ForecastingUserPreference;
-    ChildRelationships: ChildRelationships$ForecastingUserPreference;
-  }
+  Name: 'ForecastingUserPreference';
+  Fields: Fields$ForecastingUserPreference;
+  ParentReferences: ParentReferences$ForecastingUserPreference;
+  ChildRelationships: ChildRelationships$ForecastingUserPreference;
+}
 
 type Fields$FormulaFunction = {
   //
@@ -17481,11 +17681,11 @@ type ChildRelationships$FormulaFunction = {
 };
 
 interface SObjectDefinition$FormulaFunction extends SObjectDefinition<'FormulaFunction'> {
-    Name: 'FormulaFunction';
-    Fields: Fields$FormulaFunction;
-    ParentReferences: ParentReferences$FormulaFunction;
-    ChildRelationships: ChildRelationships$FormulaFunction;
-  }
+  Name: 'FormulaFunction';
+  Fields: Fields$FormulaFunction;
+  ParentReferences: ParentReferences$FormulaFunction;
+  ChildRelationships: ChildRelationships$FormulaFunction;
+}
 
 type Fields$FormulaFunctionAllowedType = {
   //
@@ -17504,11 +17704,11 @@ type ChildRelationships$FormulaFunctionAllowedType = {
 };
 
 interface SObjectDefinition$FormulaFunctionAllowedType extends SObjectDefinition<'FormulaFunctionAllowedType'> {
-    Name: 'FormulaFunctionAllowedType';
-    Fields: Fields$FormulaFunctionAllowedType;
-    ParentReferences: ParentReferences$FormulaFunctionAllowedType;
-    ChildRelationships: ChildRelationships$FormulaFunctionAllowedType;
-  }
+  Name: 'FormulaFunctionAllowedType';
+  Fields: Fields$FormulaFunctionAllowedType;
+  ParentReferences: ParentReferences$FormulaFunctionAllowedType;
+  ChildRelationships: ChildRelationships$FormulaFunctionAllowedType;
+}
 
 type Fields$FormulaFunctionCategory = {
   //
@@ -17528,11 +17728,11 @@ type ChildRelationships$FormulaFunctionCategory = {
 };
 
 interface SObjectDefinition$FormulaFunctionCategory extends SObjectDefinition<'FormulaFunctionCategory'> {
-    Name: 'FormulaFunctionCategory';
-    Fields: Fields$FormulaFunctionCategory;
-    ParentReferences: ParentReferences$FormulaFunctionCategory;
-    ChildRelationships: ChildRelationships$FormulaFunctionCategory;
-  }
+  Name: 'FormulaFunctionCategory';
+  Fields: Fields$FormulaFunctionCategory;
+  ParentReferences: ParentReferences$FormulaFunctionCategory;
+  ChildRelationships: ChildRelationships$FormulaFunctionCategory;
+}
 
 type Fields$Funding_Invoice__ChangeEvent = {
   //
@@ -17564,11 +17764,11 @@ type ChildRelationships$Funding_Invoice__ChangeEvent = {
 };
 
 interface SObjectDefinition$Funding_Invoice__ChangeEvent extends SObjectDefinition<'Funding_Invoice__ChangeEvent'> {
-    Name: 'Funding_Invoice__ChangeEvent';
-    Fields: Fields$Funding_Invoice__ChangeEvent;
-    ParentReferences: ParentReferences$Funding_Invoice__ChangeEvent;
-    ChildRelationships: ChildRelationships$Funding_Invoice__ChangeEvent;
-  }
+  Name: 'Funding_Invoice__ChangeEvent';
+  Fields: Fields$Funding_Invoice__ChangeEvent;
+  ParentReferences: ParentReferences$Funding_Invoice__ChangeEvent;
+  ChildRelationships: ChildRelationships$Funding_Invoice__ChangeEvent;
+}
 
 type Fields$Funding_Invoice__History = {
   //
@@ -17594,11 +17794,11 @@ type ChildRelationships$Funding_Invoice__History = {
 };
 
 interface SObjectDefinition$Funding_Invoice__History extends SObjectDefinition<'Funding_Invoice__History'> {
-    Name: 'Funding_Invoice__History';
-    Fields: Fields$Funding_Invoice__History;
-    ParentReferences: ParentReferences$Funding_Invoice__History;
-    ChildRelationships: ChildRelationships$Funding_Invoice__History;
-  }
+  Name: 'Funding_Invoice__History';
+  Fields: Fields$Funding_Invoice__History;
+  ParentReferences: ParentReferences$Funding_Invoice__History;
+  ChildRelationships: ChildRelationships$Funding_Invoice__History;
+}
 
 type Fields$Funding_Invoice__c = {
   //
@@ -17664,11 +17864,11 @@ type ChildRelationships$Funding_Invoice__c = {
 };
 
 interface SObjectDefinition$Funding_Invoice__c extends SObjectDefinition<'Funding_Invoice__c'> {
-    Name: 'Funding_Invoice__c';
-    Fields: Fields$Funding_Invoice__c;
-    ParentReferences: ParentReferences$Funding_Invoice__c;
-    ChildRelationships: ChildRelationships$Funding_Invoice__c;
-  }
+  Name: 'Funding_Invoice__c';
+  Fields: Fields$Funding_Invoice__c;
+  ParentReferences: ParentReferences$Funding_Invoice__c;
+  ChildRelationships: ChildRelationships$Funding_Invoice__c;
+}
 
 type Fields$Funding_Source__ChangeEvent = {
   //
@@ -17699,11 +17899,11 @@ type ChildRelationships$Funding_Source__ChangeEvent = {
 };
 
 interface SObjectDefinition$Funding_Source__ChangeEvent extends SObjectDefinition<'Funding_Source__ChangeEvent'> {
-    Name: 'Funding_Source__ChangeEvent';
-    Fields: Fields$Funding_Source__ChangeEvent;
-    ParentReferences: ParentReferences$Funding_Source__ChangeEvent;
-    ChildRelationships: ChildRelationships$Funding_Source__ChangeEvent;
-  }
+  Name: 'Funding_Source__ChangeEvent';
+  Fields: Fields$Funding_Source__ChangeEvent;
+  ParentReferences: ParentReferences$Funding_Source__ChangeEvent;
+  ChildRelationships: ChildRelationships$Funding_Source__ChangeEvent;
+}
 
 type Fields$Funding_Source__History = {
   //
@@ -17729,11 +17929,11 @@ type ChildRelationships$Funding_Source__History = {
 };
 
 interface SObjectDefinition$Funding_Source__History extends SObjectDefinition<'Funding_Source__History'> {
-    Name: 'Funding_Source__History';
-    Fields: Fields$Funding_Source__History;
-    ParentReferences: ParentReferences$Funding_Source__History;
-    ChildRelationships: ChildRelationships$Funding_Source__History;
-  }
+  Name: 'Funding_Source__History';
+  Fields: Fields$Funding_Source__History;
+  ParentReferences: ParentReferences$Funding_Source__History;
+  ChildRelationships: ChildRelationships$Funding_Source__History;
+}
 
 type Fields$Funding_Source__c = {
   //
@@ -17797,11 +17997,11 @@ type ChildRelationships$Funding_Source__c = {
 };
 
 interface SObjectDefinition$Funding_Source__c extends SObjectDefinition<'Funding_Source__c'> {
-    Name: 'Funding_Source__c';
-    Fields: Fields$Funding_Source__c;
-    ParentReferences: ParentReferences$Funding_Source__c;
-    ChildRelationships: ChildRelationships$Funding_Source__c;
-  }
+  Name: 'Funding_Source__c';
+  Fields: Fields$Funding_Source__c;
+  ParentReferences: ParentReferences$Funding_Source__c;
+  ChildRelationships: ChildRelationships$Funding_Source__c;
+}
 
 type Fields$Funding_Submission__ChangeEvent = {
   //
@@ -17837,12 +18037,13 @@ type ChildRelationships$Funding_Submission__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Funding_Submission__ChangeEvent extends SObjectDefinition<'Funding_Submission__ChangeEvent'> {
-    Name: 'Funding_Submission__ChangeEvent';
-    Fields: Fields$Funding_Submission__ChangeEvent;
-    ParentReferences: ParentReferences$Funding_Submission__ChangeEvent;
-    ChildRelationships: ChildRelationships$Funding_Submission__ChangeEvent;
-  }
+interface SObjectDefinition$Funding_Submission__ChangeEvent
+  extends SObjectDefinition<'Funding_Submission__ChangeEvent'> {
+  Name: 'Funding_Submission__ChangeEvent';
+  Fields: Fields$Funding_Submission__ChangeEvent;
+  ParentReferences: ParentReferences$Funding_Submission__ChangeEvent;
+  ChildRelationships: ChildRelationships$Funding_Submission__ChangeEvent;
+}
 
 type Fields$Funding_Submission__History = {
   //
@@ -17868,11 +18069,11 @@ type ChildRelationships$Funding_Submission__History = {
 };
 
 interface SObjectDefinition$Funding_Submission__History extends SObjectDefinition<'Funding_Submission__History'> {
-    Name: 'Funding_Submission__History';
-    Fields: Fields$Funding_Submission__History;
-    ParentReferences: ParentReferences$Funding_Submission__History;
-    ChildRelationships: ChildRelationships$Funding_Submission__History;
-  }
+  Name: 'Funding_Submission__History';
+  Fields: Fields$Funding_Submission__History;
+  ParentReferences: ParentReferences$Funding_Submission__History;
+  ChildRelationships: ChildRelationships$Funding_Submission__History;
+}
 
 type Fields$Funding_Submission__c = {
   //
@@ -17943,11 +18144,11 @@ type ChildRelationships$Funding_Submission__c = {
 };
 
 interface SObjectDefinition$Funding_Submission__c extends SObjectDefinition<'Funding_Submission__c'> {
-    Name: 'Funding_Submission__c';
-    Fields: Fields$Funding_Submission__c;
-    ParentReferences: ParentReferences$Funding_Submission__c;
-    ChildRelationships: ChildRelationships$Funding_Submission__c;
-  }
+  Name: 'Funding_Submission__c';
+  Fields: Fields$Funding_Submission__c;
+  ParentReferences: ParentReferences$Funding_Submission__c;
+  ChildRelationships: ChildRelationships$Funding_Submission__c;
+}
 
 type Fields$Governent_Agency_Department__ChangeEvent = {
   //
@@ -17970,12 +18171,13 @@ type ChildRelationships$Governent_Agency_Department__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Governent_Agency_Department__ChangeEvent extends SObjectDefinition<'Governent_Agency_Department__ChangeEvent'> {
-    Name: 'Governent_Agency_Department__ChangeEvent';
-    Fields: Fields$Governent_Agency_Department__ChangeEvent;
-    ParentReferences: ParentReferences$Governent_Agency_Department__ChangeEvent;
-    ChildRelationships: ChildRelationships$Governent_Agency_Department__ChangeEvent;
-  }
+interface SObjectDefinition$Governent_Agency_Department__ChangeEvent
+  extends SObjectDefinition<'Governent_Agency_Department__ChangeEvent'> {
+  Name: 'Governent_Agency_Department__ChangeEvent';
+  Fields: Fields$Governent_Agency_Department__ChangeEvent;
+  ParentReferences: ParentReferences$Governent_Agency_Department__ChangeEvent;
+  ChildRelationships: ChildRelationships$Governent_Agency_Department__ChangeEvent;
+}
 
 type Fields$Governent_Agency_Department__c = {
   //
@@ -18028,11 +18230,11 @@ type ChildRelationships$Governent_Agency_Department__c = {
 };
 
 interface SObjectDefinition$Governent_Agency_Department__c extends SObjectDefinition<'Governent_Agency_Department__c'> {
-    Name: 'Governent_Agency_Department__c';
-    Fields: Fields$Governent_Agency_Department__c;
-    ParentReferences: ParentReferences$Governent_Agency_Department__c;
-    ChildRelationships: ChildRelationships$Governent_Agency_Department__c;
-  }
+  Name: 'Governent_Agency_Department__c';
+  Fields: Fields$Governent_Agency_Department__c;
+  ParentReferences: ParentReferences$Governent_Agency_Department__c;
+  ChildRelationships: ChildRelationships$Governent_Agency_Department__c;
+}
 
 type Fields$GrantedByLicense = {
   //
@@ -18060,11 +18262,11 @@ type ChildRelationships$GrantedByLicense = {
 };
 
 interface SObjectDefinition$GrantedByLicense extends SObjectDefinition<'GrantedByLicense'> {
-    Name: 'GrantedByLicense';
-    Fields: Fields$GrantedByLicense;
-    ParentReferences: ParentReferences$GrantedByLicense;
-    ChildRelationships: ChildRelationships$GrantedByLicense;
-  }
+  Name: 'GrantedByLicense';
+  Fields: Fields$GrantedByLicense;
+  ParentReferences: ParentReferences$GrantedByLicense;
+  ChildRelationships: ChildRelationships$GrantedByLicense;
+}
 
 type Fields$Group = {
   //
@@ -18100,11 +18302,11 @@ type ChildRelationships$Group = {
 };
 
 interface SObjectDefinition$Group extends SObjectDefinition<'Group'> {
-    Name: 'Group';
-    Fields: Fields$Group;
-    ParentReferences: ParentReferences$Group;
-    ChildRelationships: ChildRelationships$Group;
-  }
+  Name: 'Group';
+  Fields: Fields$Group;
+  ParentReferences: ParentReferences$Group;
+  ChildRelationships: ChildRelationships$Group;
+}
 
 type Fields$GroupMember = {
   //
@@ -18124,11 +18326,11 @@ type ChildRelationships$GroupMember = {
 };
 
 interface SObjectDefinition$GroupMember extends SObjectDefinition<'GroupMember'> {
-    Name: 'GroupMember';
-    Fields: Fields$GroupMember;
-    ParentReferences: ParentReferences$GroupMember;
-    ChildRelationships: ChildRelationships$GroupMember;
-  }
+  Name: 'GroupMember';
+  Fields: Fields$GroupMember;
+  ParentReferences: ParentReferences$GroupMember;
+  ChildRelationships: ChildRelationships$GroupMember;
+}
 
 type Fields$Holiday = {
   //
@@ -18167,11 +18369,11 @@ type ChildRelationships$Holiday = {
 };
 
 interface SObjectDefinition$Holiday extends SObjectDefinition<'Holiday'> {
-    Name: 'Holiday';
-    Fields: Fields$Holiday;
-    ParentReferences: ParentReferences$Holiday;
-    ChildRelationships: ChildRelationships$Holiday;
-  }
+  Name: 'Holiday';
+  Fields: Fields$Holiday;
+  ParentReferences: ParentReferences$Holiday;
+  ChildRelationships: ChildRelationships$Holiday;
+}
 
 type Fields$IconDefinition = {
   //
@@ -18194,11 +18396,11 @@ type ChildRelationships$IconDefinition = {
 };
 
 interface SObjectDefinition$IconDefinition extends SObjectDefinition<'IconDefinition'> {
-    Name: 'IconDefinition';
-    Fields: Fields$IconDefinition;
-    ParentReferences: ParentReferences$IconDefinition;
-    ChildRelationships: ChildRelationships$IconDefinition;
-  }
+  Name: 'IconDefinition';
+  Fields: Fields$IconDefinition;
+  ParentReferences: ParentReferences$IconDefinition;
+  ChildRelationships: ChildRelationships$IconDefinition;
+}
 
 type Fields$Idea = {
   //
@@ -18247,11 +18449,11 @@ type ChildRelationships$Idea = {
 };
 
 interface SObjectDefinition$Idea extends SObjectDefinition<'Idea'> {
-    Name: 'Idea';
-    Fields: Fields$Idea;
-    ParentReferences: ParentReferences$Idea;
-    ChildRelationships: ChildRelationships$Idea;
-  }
+  Name: 'Idea';
+  Fields: Fields$Idea;
+  ParentReferences: ParentReferences$Idea;
+  ChildRelationships: ChildRelationships$Idea;
+}
 
 type Fields$IdeaComment = {
   //
@@ -18282,11 +18484,11 @@ type ChildRelationships$IdeaComment = {
 };
 
 interface SObjectDefinition$IdeaComment extends SObjectDefinition<'IdeaComment'> {
-    Name: 'IdeaComment';
-    Fields: Fields$IdeaComment;
-    ParentReferences: ParentReferences$IdeaComment;
-    ChildRelationships: ChildRelationships$IdeaComment;
-  }
+  Name: 'IdeaComment';
+  Fields: Fields$IdeaComment;
+  ParentReferences: ParentReferences$IdeaComment;
+  ChildRelationships: ChildRelationships$IdeaComment;
+}
 
 type Fields$IdpEventLog = {
   //
@@ -18312,11 +18514,11 @@ type ChildRelationships$IdpEventLog = {
 };
 
 interface SObjectDefinition$IdpEventLog extends SObjectDefinition<'IdpEventLog'> {
-    Name: 'IdpEventLog';
-    Fields: Fields$IdpEventLog;
-    ParentReferences: ParentReferences$IdpEventLog;
-    ChildRelationships: ChildRelationships$IdpEventLog;
-  }
+  Name: 'IdpEventLog';
+  Fields: Fields$IdpEventLog;
+  ParentReferences: ParentReferences$IdpEventLog;
+  ChildRelationships: ChildRelationships$IdpEventLog;
+}
 
 type Fields$IframeWhiteListUrl = {
   //
@@ -18342,11 +18544,11 @@ type ChildRelationships$IframeWhiteListUrl = {
 };
 
 interface SObjectDefinition$IframeWhiteListUrl extends SObjectDefinition<'IframeWhiteListUrl'> {
-    Name: 'IframeWhiteListUrl';
-    Fields: Fields$IframeWhiteListUrl;
-    ParentReferences: ParentReferences$IframeWhiteListUrl;
-    ChildRelationships: ChildRelationships$IframeWhiteListUrl;
-  }
+  Name: 'IframeWhiteListUrl';
+  Fields: Fields$IframeWhiteListUrl;
+  ParentReferences: ParentReferences$IframeWhiteListUrl;
+  ChildRelationships: ChildRelationships$IframeWhiteListUrl;
+}
 
 type Fields$Image = {
   //
@@ -18403,11 +18605,11 @@ type ChildRelationships$Image = {
 };
 
 interface SObjectDefinition$Image extends SObjectDefinition<'Image'> {
-    Name: 'Image';
-    Fields: Fields$Image;
-    ParentReferences: ParentReferences$Image;
-    ChildRelationships: ChildRelationships$Image;
-  }
+  Name: 'Image';
+  Fields: Fields$Image;
+  ParentReferences: ParentReferences$Image;
+  ChildRelationships: ChildRelationships$Image;
+}
 
 type Fields$ImageShare = {
   //
@@ -18433,11 +18635,11 @@ type ChildRelationships$ImageShare = {
 };
 
 interface SObjectDefinition$ImageShare extends SObjectDefinition<'ImageShare'> {
-    Name: 'ImageShare';
-    Fields: Fields$ImageShare;
-    ParentReferences: ParentReferences$ImageShare;
-    ChildRelationships: ChildRelationships$ImageShare;
-  }
+  Name: 'ImageShare';
+  Fields: Fields$ImageShare;
+  ParentReferences: ParentReferences$ImageShare;
+  ChildRelationships: ChildRelationships$ImageShare;
+}
 
 type Fields$Individual = {
   //
@@ -18504,11 +18706,11 @@ type ChildRelationships$Individual = {
 };
 
 interface SObjectDefinition$Individual extends SObjectDefinition<'Individual'> {
-    Name: 'Individual';
-    Fields: Fields$Individual;
-    ParentReferences: ParentReferences$Individual;
-    ChildRelationships: ChildRelationships$Individual;
-  }
+  Name: 'Individual';
+  Fields: Fields$Individual;
+  ParentReferences: ParentReferences$Individual;
+  ChildRelationships: ChildRelationships$Individual;
+}
 
 type Fields$IndividualChangeEvent = {
   //
@@ -18557,11 +18759,11 @@ type ChildRelationships$IndividualChangeEvent = {
 };
 
 interface SObjectDefinition$IndividualChangeEvent extends SObjectDefinition<'IndividualChangeEvent'> {
-    Name: 'IndividualChangeEvent';
-    Fields: Fields$IndividualChangeEvent;
-    ParentReferences: ParentReferences$IndividualChangeEvent;
-    ChildRelationships: ChildRelationships$IndividualChangeEvent;
-  }
+  Name: 'IndividualChangeEvent';
+  Fields: Fields$IndividualChangeEvent;
+  ParentReferences: ParentReferences$IndividualChangeEvent;
+  ChildRelationships: ChildRelationships$IndividualChangeEvent;
+}
 
 type Fields$IndividualHistory = {
   //
@@ -18587,11 +18789,11 @@ type ChildRelationships$IndividualHistory = {
 };
 
 interface SObjectDefinition$IndividualHistory extends SObjectDefinition<'IndividualHistory'> {
-    Name: 'IndividualHistory';
-    Fields: Fields$IndividualHistory;
-    ParentReferences: ParentReferences$IndividualHistory;
-    ChildRelationships: ChildRelationships$IndividualHistory;
-  }
+  Name: 'IndividualHistory';
+  Fields: Fields$IndividualHistory;
+  ParentReferences: ParentReferences$IndividualHistory;
+  ChildRelationships: ChildRelationships$IndividualHistory;
+}
 
 type Fields$IndividualShare = {
   //
@@ -18617,11 +18819,11 @@ type ChildRelationships$IndividualShare = {
 };
 
 interface SObjectDefinition$IndividualShare extends SObjectDefinition<'IndividualShare'> {
-    Name: 'IndividualShare';
-    Fields: Fields$IndividualShare;
-    ParentReferences: ParentReferences$IndividualShare;
-    ChildRelationships: ChildRelationships$IndividualShare;
-  }
+  Name: 'IndividualShare';
+  Fields: Fields$IndividualShare;
+  ParentReferences: ParentReferences$IndividualShare;
+  ChildRelationships: ChildRelationships$IndividualShare;
+}
 
 type Fields$InstalledMobileApp = {
   //
@@ -18652,11 +18854,11 @@ type ChildRelationships$InstalledMobileApp = {
 };
 
 interface SObjectDefinition$InstalledMobileApp extends SObjectDefinition<'InstalledMobileApp'> {
-    Name: 'InstalledMobileApp';
-    Fields: Fields$InstalledMobileApp;
-    ParentReferences: ParentReferences$InstalledMobileApp;
-    ChildRelationships: ChildRelationships$InstalledMobileApp;
-  }
+  Name: 'InstalledMobileApp';
+  Fields: Fields$InstalledMobileApp;
+  ParentReferences: ParentReferences$InstalledMobileApp;
+  ChildRelationships: ChildRelationships$InstalledMobileApp;
+}
 
 type Fields$Insurance_Cost_Table__ChangeEvent = {
   //
@@ -18682,12 +18884,13 @@ type ChildRelationships$Insurance_Cost_Table__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Insurance_Cost_Table__ChangeEvent extends SObjectDefinition<'Insurance_Cost_Table__ChangeEvent'> {
-    Name: 'Insurance_Cost_Table__ChangeEvent';
-    Fields: Fields$Insurance_Cost_Table__ChangeEvent;
-    ParentReferences: ParentReferences$Insurance_Cost_Table__ChangeEvent;
-    ChildRelationships: ChildRelationships$Insurance_Cost_Table__ChangeEvent;
-  }
+interface SObjectDefinition$Insurance_Cost_Table__ChangeEvent
+  extends SObjectDefinition<'Insurance_Cost_Table__ChangeEvent'> {
+  Name: 'Insurance_Cost_Table__ChangeEvent';
+  Fields: Fields$Insurance_Cost_Table__ChangeEvent;
+  ParentReferences: ParentReferences$Insurance_Cost_Table__ChangeEvent;
+  ChildRelationships: ChildRelationships$Insurance_Cost_Table__ChangeEvent;
+}
 
 type Fields$Insurance_Cost_Table__c = {
   //
@@ -18739,11 +18942,11 @@ type ChildRelationships$Insurance_Cost_Table__c = {
 };
 
 interface SObjectDefinition$Insurance_Cost_Table__c extends SObjectDefinition<'Insurance_Cost_Table__c'> {
-    Name: 'Insurance_Cost_Table__c';
-    Fields: Fields$Insurance_Cost_Table__c;
-    ParentReferences: ParentReferences$Insurance_Cost_Table__c;
-    ChildRelationships: ChildRelationships$Insurance_Cost_Table__c;
-  }
+  Name: 'Insurance_Cost_Table__c';
+  Fields: Fields$Insurance_Cost_Table__c;
+  ParentReferences: ParentReferences$Insurance_Cost_Table__c;
+  ChildRelationships: ChildRelationships$Insurance_Cost_Table__c;
+}
 
 type Fields$Insurance_Monthly_Summary__ChangeEvent = {
   //
@@ -18772,12 +18975,13 @@ type ChildRelationships$Insurance_Monthly_Summary__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Insurance_Monthly_Summary__ChangeEvent extends SObjectDefinition<'Insurance_Monthly_Summary__ChangeEvent'> {
-    Name: 'Insurance_Monthly_Summary__ChangeEvent';
-    Fields: Fields$Insurance_Monthly_Summary__ChangeEvent;
-    ParentReferences: ParentReferences$Insurance_Monthly_Summary__ChangeEvent;
-    ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__ChangeEvent;
-  }
+interface SObjectDefinition$Insurance_Monthly_Summary__ChangeEvent
+  extends SObjectDefinition<'Insurance_Monthly_Summary__ChangeEvent'> {
+  Name: 'Insurance_Monthly_Summary__ChangeEvent';
+  Fields: Fields$Insurance_Monthly_Summary__ChangeEvent;
+  ParentReferences: ParentReferences$Insurance_Monthly_Summary__ChangeEvent;
+  ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__ChangeEvent;
+}
 
 type Fields$Insurance_Monthly_Summary__c = {
   //
@@ -18830,11 +19034,11 @@ type ChildRelationships$Insurance_Monthly_Summary__c = {
 };
 
 interface SObjectDefinition$Insurance_Monthly_Summary__c extends SObjectDefinition<'Insurance_Monthly_Summary__c'> {
-    Name: 'Insurance_Monthly_Summary__c';
-    Fields: Fields$Insurance_Monthly_Summary__c;
-    ParentReferences: ParentReferences$Insurance_Monthly_Summary__c;
-    ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__c;
-  }
+  Name: 'Insurance_Monthly_Summary__c';
+  Fields: Fields$Insurance_Monthly_Summary__c;
+  ParentReferences: ParentReferences$Insurance_Monthly_Summary__c;
+  ChildRelationships: ChildRelationships$Insurance_Monthly_Summary__c;
+}
 
 type Fields$Insurance_Settings__mdt = {
   //
@@ -18857,11 +19061,11 @@ type ChildRelationships$Insurance_Settings__mdt = {
 };
 
 interface SObjectDefinition$Insurance_Settings__mdt extends SObjectDefinition<'Insurance_Settings__mdt'> {
-    Name: 'Insurance_Settings__mdt';
-    Fields: Fields$Insurance_Settings__mdt;
-    ParentReferences: ParentReferences$Insurance_Settings__mdt;
-    ChildRelationships: ChildRelationships$Insurance_Settings__mdt;
-  }
+  Name: 'Insurance_Settings__mdt';
+  Fields: Fields$Insurance_Settings__mdt;
+  ParentReferences: ParentReferences$Insurance_Settings__mdt;
+  ChildRelationships: ChildRelationships$Insurance_Settings__mdt;
+}
 
 type Fields$Insurance__ChangeEvent = {
   //
@@ -18906,11 +19110,11 @@ type ChildRelationships$Insurance__ChangeEvent = {
 };
 
 interface SObjectDefinition$Insurance__ChangeEvent extends SObjectDefinition<'Insurance__ChangeEvent'> {
-    Name: 'Insurance__ChangeEvent';
-    Fields: Fields$Insurance__ChangeEvent;
-    ParentReferences: ParentReferences$Insurance__ChangeEvent;
-    ChildRelationships: ChildRelationships$Insurance__ChangeEvent;
-  }
+  Name: 'Insurance__ChangeEvent';
+  Fields: Fields$Insurance__ChangeEvent;
+  ParentReferences: ParentReferences$Insurance__ChangeEvent;
+  ChildRelationships: ChildRelationships$Insurance__ChangeEvent;
+}
 
 type Fields$Insurance__c = {
   //
@@ -18980,11 +19184,11 @@ type ChildRelationships$Insurance__c = {
 };
 
 interface SObjectDefinition$Insurance__c extends SObjectDefinition<'Insurance__c'> {
-    Name: 'Insurance__c';
-    Fields: Fields$Insurance__c;
-    ParentReferences: ParentReferences$Insurance__c;
-    ChildRelationships: ChildRelationships$Insurance__c;
-  }
+  Name: 'Insurance__c';
+  Fields: Fields$Insurance__c;
+  ParentReferences: ParentReferences$Insurance__c;
+  ChildRelationships: ChildRelationships$Insurance__c;
+}
 
 type Fields$Invoice_History__ChangeEvent = {
   //
@@ -19011,11 +19215,11 @@ type ChildRelationships$Invoice_History__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoice_History__ChangeEvent extends SObjectDefinition<'Invoice_History__ChangeEvent'> {
-    Name: 'Invoice_History__ChangeEvent';
-    Fields: Fields$Invoice_History__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_History__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_History__ChangeEvent;
-  }
+  Name: 'Invoice_History__ChangeEvent';
+  Fields: Fields$Invoice_History__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice_History__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice_History__ChangeEvent;
+}
 
 type Fields$Invoice_History__c = {
   //
@@ -19067,11 +19271,11 @@ type ChildRelationships$Invoice_History__c = {
 };
 
 interface SObjectDefinition$Invoice_History__c extends SObjectDefinition<'Invoice_History__c'> {
-    Name: 'Invoice_History__c';
-    Fields: Fields$Invoice_History__c;
-    ParentReferences: ParentReferences$Invoice_History__c;
-    ChildRelationships: ChildRelationships$Invoice_History__c;
-  }
+  Name: 'Invoice_History__c';
+  Fields: Fields$Invoice_History__c;
+  ParentReferences: ParentReferences$Invoice_History__c;
+  ChildRelationships: ChildRelationships$Invoice_History__c;
+}
 
 type Fields$Invoice_Line__ChangeEvent = {
   //
@@ -19101,6 +19305,7 @@ type Fields$Invoice_Line__ChangeEvent = {
   Payment_Status__c: string | null;
   Amount_Due__c: number | null;
   Total_Payments__c: number | null;
+  Job_Placement_2__c: string | null;
 };
 
 type ParentReferences$Invoice_Line__ChangeEvent = {
@@ -19112,11 +19317,11 @@ type ChildRelationships$Invoice_Line__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoice_Line__ChangeEvent extends SObjectDefinition<'Invoice_Line__ChangeEvent'> {
-    Name: 'Invoice_Line__ChangeEvent';
-    Fields: Fields$Invoice_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_Line__ChangeEvent;
-  }
+  Name: 'Invoice_Line__ChangeEvent';
+  Fields: Fields$Invoice_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice_Line__ChangeEvent;
+}
 
 type Fields$Invoice_Line__c = {
   //
@@ -19146,6 +19351,7 @@ type Fields$Invoice_Line__c = {
   Payment_Status__c: string | null;
   Amount_Due__c: number | null;
   Total_Payments__c: number | null;
+  Job_Placement_2__c: string | null;
 };
 
 type ParentReferences$Invoice_Line__c = {
@@ -19158,6 +19364,7 @@ type ParentReferences$Invoice_Line__c = {
   Job_Placement_Details__r: SObjectDefinition$Sstack_CC__JP_Information__c | null;
   Settlement__r: SObjectDefinition$Settlement__c | null;
   Settlement_Fee__r: SObjectDefinition$Settlement_Fee__c | null;
+  Job_Placement_2__r: SObjectDefinition$Job_Placement__c | null;
 };
 
 type ChildRelationships$Invoice_Line__c = {
@@ -19185,11 +19392,11 @@ type ChildRelationships$Invoice_Line__c = {
 };
 
 interface SObjectDefinition$Invoice_Line__c extends SObjectDefinition<'Invoice_Line__c'> {
-    Name: 'Invoice_Line__c';
-    Fields: Fields$Invoice_Line__c;
-    ParentReferences: ParentReferences$Invoice_Line__c;
-    ChildRelationships: ChildRelationships$Invoice_Line__c;
-  }
+  Name: 'Invoice_Line__c';
+  Fields: Fields$Invoice_Line__c;
+  ParentReferences: ParentReferences$Invoice_Line__c;
+  ChildRelationships: ChildRelationships$Invoice_Line__c;
+}
 
 type Fields$Invoice_Payment_Line__ChangeEvent = {
   //
@@ -19236,12 +19443,13 @@ type ChildRelationships$Invoice_Payment_Line__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Invoice_Payment_Line__ChangeEvent extends SObjectDefinition<'Invoice_Payment_Line__ChangeEvent'> {
-    Name: 'Invoice_Payment_Line__ChangeEvent';
-    Fields: Fields$Invoice_Payment_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_Payment_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_Payment_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Invoice_Payment_Line__ChangeEvent
+  extends SObjectDefinition<'Invoice_Payment_Line__ChangeEvent'> {
+  Name: 'Invoice_Payment_Line__ChangeEvent';
+  Fields: Fields$Invoice_Payment_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice_Payment_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice_Payment_Line__ChangeEvent;
+}
 
 type Fields$Invoice_Payment_Line__c = {
   //
@@ -19314,11 +19522,11 @@ type ChildRelationships$Invoice_Payment_Line__c = {
 };
 
 interface SObjectDefinition$Invoice_Payment_Line__c extends SObjectDefinition<'Invoice_Payment_Line__c'> {
-    Name: 'Invoice_Payment_Line__c';
-    Fields: Fields$Invoice_Payment_Line__c;
-    ParentReferences: ParentReferences$Invoice_Payment_Line__c;
-    ChildRelationships: ChildRelationships$Invoice_Payment_Line__c;
-  }
+  Name: 'Invoice_Payment_Line__c';
+  Fields: Fields$Invoice_Payment_Line__c;
+  ParentReferences: ParentReferences$Invoice_Payment_Line__c;
+  ChildRelationships: ChildRelationships$Invoice_Payment_Line__c;
+}
 
 type Fields$Invoice_Payment__ChangeEvent = {
   //
@@ -19345,11 +19553,11 @@ type ChildRelationships$Invoice_Payment__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoice_Payment__ChangeEvent extends SObjectDefinition<'Invoice_Payment__ChangeEvent'> {
-    Name: 'Invoice_Payment__ChangeEvent';
-    Fields: Fields$Invoice_Payment__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_Payment__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_Payment__ChangeEvent;
-  }
+  Name: 'Invoice_Payment__ChangeEvent';
+  Fields: Fields$Invoice_Payment__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice_Payment__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice_Payment__ChangeEvent;
+}
 
 type Fields$Invoice_Payment__c = {
   //
@@ -19399,11 +19607,11 @@ type ChildRelationships$Invoice_Payment__c = {
 };
 
 interface SObjectDefinition$Invoice_Payment__c extends SObjectDefinition<'Invoice_Payment__c'> {
-    Name: 'Invoice_Payment__c';
-    Fields: Fields$Invoice_Payment__c;
-    ParentReferences: ParentReferences$Invoice_Payment__c;
-    ChildRelationships: ChildRelationships$Invoice_Payment__c;
-  }
+  Name: 'Invoice_Payment__c';
+  Fields: Fields$Invoice_Payment__c;
+  ParentReferences: ParentReferences$Invoice_Payment__c;
+  ChildRelationships: ChildRelationships$Invoice_Payment__c;
+}
 
 type Fields$Invoice_Settings__ChangeEvent = {
   //
@@ -19436,11 +19644,11 @@ type ChildRelationships$Invoice_Settings__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoice_Settings__ChangeEvent extends SObjectDefinition<'Invoice_Settings__ChangeEvent'> {
-    Name: 'Invoice_Settings__ChangeEvent';
-    Fields: Fields$Invoice_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice_Settings__ChangeEvent;
-  }
+  Name: 'Invoice_Settings__ChangeEvent';
+  Fields: Fields$Invoice_Settings__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice_Settings__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice_Settings__ChangeEvent;
+}
 
 type Fields$Invoice_Settings__c = {
   //
@@ -19493,11 +19701,11 @@ type ChildRelationships$Invoice_Settings__c = {
 };
 
 interface SObjectDefinition$Invoice_Settings__c extends SObjectDefinition<'Invoice_Settings__c'> {
-    Name: 'Invoice_Settings__c';
-    Fields: Fields$Invoice_Settings__c;
-    ParentReferences: ParentReferences$Invoice_Settings__c;
-    ChildRelationships: ChildRelationships$Invoice_Settings__c;
-  }
+  Name: 'Invoice_Settings__c';
+  Fields: Fields$Invoice_Settings__c;
+  ParentReferences: ParentReferences$Invoice_Settings__c;
+  ChildRelationships: ChildRelationships$Invoice_Settings__c;
+}
 
 type Fields$Invoice__ChangeEvent = {
   //
@@ -19556,11 +19764,11 @@ type ChildRelationships$Invoice__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoice__ChangeEvent extends SObjectDefinition<'Invoice__ChangeEvent'> {
-    Name: 'Invoice__ChangeEvent';
-    Fields: Fields$Invoice__ChangeEvent;
-    ParentReferences: ParentReferences$Invoice__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoice__ChangeEvent;
-  }
+  Name: 'Invoice__ChangeEvent';
+  Fields: Fields$Invoice__ChangeEvent;
+  ParentReferences: ParentReferences$Invoice__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoice__ChangeEvent;
+}
 
 type Fields$Invoice__History = {
   //
@@ -19586,11 +19794,11 @@ type ChildRelationships$Invoice__History = {
 };
 
 interface SObjectDefinition$Invoice__History extends SObjectDefinition<'Invoice__History'> {
-    Name: 'Invoice__History';
-    Fields: Fields$Invoice__History;
-    ParentReferences: ParentReferences$Invoice__History;
-    ChildRelationships: ChildRelationships$Invoice__History;
-  }
+  Name: 'Invoice__History';
+  Fields: Fields$Invoice__History;
+  ParentReferences: ParentReferences$Invoice__History;
+  ChildRelationships: ChildRelationships$Invoice__History;
+}
 
 type Fields$Invoice__c = {
   //
@@ -19684,11 +19892,11 @@ type ChildRelationships$Invoice__c = {
 };
 
 interface SObjectDefinition$Invoice__c extends SObjectDefinition<'Invoice__c'> {
-    Name: 'Invoice__c';
-    Fields: Fields$Invoice__c;
-    ParentReferences: ParentReferences$Invoice__c;
-    ChildRelationships: ChildRelationships$Invoice__c;
-  }
+  Name: 'Invoice__c';
+  Fields: Fields$Invoice__c;
+  ParentReferences: ParentReferences$Invoice__c;
+  ChildRelationships: ChildRelationships$Invoice__c;
+}
 
 type Fields$Invoiced_Expense__ChangeEvent = {
   //
@@ -19715,11 +19923,11 @@ type ChildRelationships$Invoiced_Expense__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoiced_Expense__ChangeEvent extends SObjectDefinition<'Invoiced_Expense__ChangeEvent'> {
-    Name: 'Invoiced_Expense__ChangeEvent';
-    Fields: Fields$Invoiced_Expense__ChangeEvent;
-    ParentReferences: ParentReferences$Invoiced_Expense__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoiced_Expense__ChangeEvent;
-  }
+  Name: 'Invoiced_Expense__ChangeEvent';
+  Fields: Fields$Invoiced_Expense__ChangeEvent;
+  ParentReferences: ParentReferences$Invoiced_Expense__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoiced_Expense__ChangeEvent;
+}
 
 type Fields$Invoiced_Expense__c = {
   //
@@ -19770,11 +19978,11 @@ type ChildRelationships$Invoiced_Expense__c = {
 };
 
 interface SObjectDefinition$Invoiced_Expense__c extends SObjectDefinition<'Invoiced_Expense__c'> {
-    Name: 'Invoiced_Expense__c';
-    Fields: Fields$Invoiced_Expense__c;
-    ParentReferences: ParentReferences$Invoiced_Expense__c;
-    ChildRelationships: ChildRelationships$Invoiced_Expense__c;
-  }
+  Name: 'Invoiced_Expense__c';
+  Fields: Fields$Invoiced_Expense__c;
+  ParentReferences: ParentReferences$Invoiced_Expense__c;
+  ChildRelationships: ChildRelationships$Invoiced_Expense__c;
+}
 
 type Fields$Invoiced_Hours__ChangeEvent = {
   //
@@ -19803,11 +20011,11 @@ type ChildRelationships$Invoiced_Hours__ChangeEvent = {
 };
 
 interface SObjectDefinition$Invoiced_Hours__ChangeEvent extends SObjectDefinition<'Invoiced_Hours__ChangeEvent'> {
-    Name: 'Invoiced_Hours__ChangeEvent';
-    Fields: Fields$Invoiced_Hours__ChangeEvent;
-    ParentReferences: ParentReferences$Invoiced_Hours__ChangeEvent;
-    ChildRelationships: ChildRelationships$Invoiced_Hours__ChangeEvent;
-  }
+  Name: 'Invoiced_Hours__ChangeEvent';
+  Fields: Fields$Invoiced_Hours__ChangeEvent;
+  ParentReferences: ParentReferences$Invoiced_Hours__ChangeEvent;
+  ChildRelationships: ChildRelationships$Invoiced_Hours__ChangeEvent;
+}
 
 type Fields$Invoiced_Hours__c = {
   //
@@ -19860,11 +20068,11 @@ type ChildRelationships$Invoiced_Hours__c = {
 };
 
 interface SObjectDefinition$Invoiced_Hours__c extends SObjectDefinition<'Invoiced_Hours__c'> {
-    Name: 'Invoiced_Hours__c';
-    Fields: Fields$Invoiced_Hours__c;
-    ParentReferences: ParentReferences$Invoiced_Hours__c;
-    ChildRelationships: ChildRelationships$Invoiced_Hours__c;
-  }
+  Name: 'Invoiced_Hours__c';
+  Fields: Fields$Invoiced_Hours__c;
+  ParentReferences: ParentReferences$Invoiced_Hours__c;
+  ChildRelationships: ChildRelationships$Invoiced_Hours__c;
+}
 
 type Fields$JP_Information__ChangeEvent = {
   //
@@ -19877,6 +20085,42 @@ type Fields$JP_Information__ChangeEvent = {
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
   Job_Placement__c: string | null;
+  Account_Fee_Expense__c: number | null;
+  Account_Fee_Revenue__c: number | null;
+  Bill_Rate_Effective_Date__c: DateString | null;
+  Bill_Rate__c: number | null;
+  Client_Payment_Date__c: DateString | null;
+  Commission_Amount__c: number | null;
+  Commission_Override__c: number | null;
+  Daily_Bill_Rate__c: number | null;
+  Deal__c: string | null;
+  Effective_Date__c: DateString | null;
+  Employee_Type__c: string | null;
+  Employer__c: string | null;
+  Federal_Holidays__c: string | null;
+  Federal_Sick_Leave__c: string | null;
+  Health_Benefits__c: string | null;
+  Manager__c: string | null;
+  Next_Effective_Record__c: string | null;
+  Number_Of_PTO_Weeks__c: number | null;
+  Opportunity__c: string | null;
+  Pay_Rate__c: number | null;
+  Placement_Fee_Amount__c: number | null;
+  Placement_Fee__c: number | null;
+  Project__c: string | null;
+  Purchase_Order_Line__c: string | null;
+  Salary_Amount__c: number | null;
+  X401K__c: string | null;
+  Bill_Rate_Aging__c: number | null;
+  Bill_Rate_Check__c: string | null;
+  Calculated_Placement_Fee__c: number | null;
+  Future_Bill_Rate__c: number | null;
+  Next_Effective_Date__c: DateString | null;
+  PO_Status__c: string | null;
+  Placement_Type__c: string | null;
+  Resource__c: string | null;
+  Start_Week_Day__c: DateString | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$JP_Information__ChangeEvent = {
@@ -19888,11 +20132,11 @@ type ChildRelationships$JP_Information__ChangeEvent = {
 };
 
 interface SObjectDefinition$JP_Information__ChangeEvent extends SObjectDefinition<'JP_Information__ChangeEvent'> {
-    Name: 'JP_Information__ChangeEvent';
-    Fields: Fields$JP_Information__ChangeEvent;
-    ParentReferences: ParentReferences$JP_Information__ChangeEvent;
-    ChildRelationships: ChildRelationships$JP_Information__ChangeEvent;
-  }
+  Name: 'JP_Information__ChangeEvent';
+  Fields: Fields$JP_Information__ChangeEvent;
+  ParentReferences: ParentReferences$JP_Information__ChangeEvent;
+  ChildRelationships: ChildRelationships$JP_Information__ChangeEvent;
+}
 
 type Fields$JP_Information__History = {
   //
@@ -19918,11 +20162,11 @@ type ChildRelationships$JP_Information__History = {
 };
 
 interface SObjectDefinition$JP_Information__History extends SObjectDefinition<'JP_Information__History'> {
-    Name: 'JP_Information__History';
-    Fields: Fields$JP_Information__History;
-    ParentReferences: ParentReferences$JP_Information__History;
-    ChildRelationships: ChildRelationships$JP_Information__History;
-  }
+  Name: 'JP_Information__History';
+  Fields: Fields$JP_Information__History;
+  ParentReferences: ParentReferences$JP_Information__History;
+  ChildRelationships: ChildRelationships$JP_Information__History;
+}
 
 type Fields$JP_Information__c = {
   //
@@ -19936,6 +20180,42 @@ type Fields$JP_Information__c = {
   SystemModstamp: DateString;
   LastActivityDate: DateString | null;
   Job_Placement__c: string;
+  Account_Fee_Expense__c: number | null;
+  Account_Fee_Revenue__c: number | null;
+  Bill_Rate_Effective_Date__c: DateString | null;
+  Bill_Rate__c: number | null;
+  Client_Payment_Date__c: DateString | null;
+  Commission_Amount__c: number | null;
+  Commission_Override__c: number | null;
+  Daily_Bill_Rate__c: number | null;
+  Deal__c: string | null;
+  Effective_Date__c: DateString | null;
+  Employee_Type__c: string | null;
+  Employer__c: string | null;
+  Federal_Holidays__c: string | null;
+  Federal_Sick_Leave__c: string | null;
+  Health_Benefits__c: string | null;
+  Manager__c: string | null;
+  Next_Effective_Record__c: string | null;
+  Number_Of_PTO_Weeks__c: number | null;
+  Opportunity__c: string | null;
+  Pay_Rate__c: number | null;
+  Placement_Fee_Amount__c: number | null;
+  Placement_Fee__c: number | null;
+  Project__c: string | null;
+  Purchase_Order_Line__c: string | null;
+  Salary_Amount__c: number | null;
+  X401K__c: string | null;
+  Bill_Rate_Aging__c: number | null;
+  Bill_Rate_Check__c: string | null;
+  Calculated_Placement_Fee__c: number | null;
+  Future_Bill_Rate__c: number | null;
+  Next_Effective_Date__c: DateString | null;
+  PO_Status__c: string | null;
+  Placement_Type__c: string | null;
+  Resource__c: string | null;
+  Start_Week_Day__c: DateString | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$JP_Information__c = {
@@ -19943,6 +20223,11 @@ type ParentReferences$JP_Information__c = {
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
   Job_Placement__r: SObjectDefinition$Job_Placement__c;
+  Deal__r: SObjectDefinition$Deal__c | null;
+  Manager__r: SObjectDefinition$Contact | null;
+  Next_Effective_Record__r: SObjectDefinition$JP_Information__c | null;
+  Opportunity__r: SObjectDefinition$Opportunity | null;
+  Purchase_Order_Line__r: SObjectDefinition$Purchase_Order_Line__c | null;
 };
 
 type ChildRelationships$JP_Information__c = {
@@ -19976,11 +20261,11 @@ type ChildRelationships$JP_Information__c = {
 };
 
 interface SObjectDefinition$JP_Information__c extends SObjectDefinition<'JP_Information__c'> {
-    Name: 'JP_Information__c';
-    Fields: Fields$JP_Information__c;
-    ParentReferences: ParentReferences$JP_Information__c;
-    ChildRelationships: ChildRelationships$JP_Information__c;
-  }
+  Name: 'JP_Information__c';
+  Fields: Fields$JP_Information__c;
+  ParentReferences: ParentReferences$JP_Information__c;
+  ChildRelationships: ChildRelationships$JP_Information__c;
+}
 
 type Fields$Job_Placement_AM__ChangeEvent = {
   //
@@ -19994,6 +20279,7 @@ type Fields$Job_Placement_AM__ChangeEvent = {
   LastModifiedById: string | null;
   Job_Placement__c: string | null;
   Account_Manager_Role__c: string | null;
+  Account_Manager__c: string | null;
   Commission_Rate__c: number | null;
 };
 
@@ -20006,11 +20292,11 @@ type ChildRelationships$Job_Placement_AM__ChangeEvent = {
 };
 
 interface SObjectDefinition$Job_Placement_AM__ChangeEvent extends SObjectDefinition<'Job_Placement_AM__ChangeEvent'> {
-    Name: 'Job_Placement_AM__ChangeEvent';
-    Fields: Fields$Job_Placement_AM__ChangeEvent;
-    ParentReferences: ParentReferences$Job_Placement_AM__ChangeEvent;
-    ChildRelationships: ChildRelationships$Job_Placement_AM__ChangeEvent;
-  }
+  Name: 'Job_Placement_AM__ChangeEvent';
+  Fields: Fields$Job_Placement_AM__ChangeEvent;
+  ParentReferences: ParentReferences$Job_Placement_AM__ChangeEvent;
+  ChildRelationships: ChildRelationships$Job_Placement_AM__ChangeEvent;
+}
 
 type Fields$Job_Placement_AM__c = {
   //
@@ -20024,6 +20310,7 @@ type Fields$Job_Placement_AM__c = {
   SystemModstamp: DateString;
   Job_Placement__c: string;
   Account_Manager_Role__c: string;
+  Account_Manager__c: string | null;
   Commission_Rate__c: number;
 };
 
@@ -20032,6 +20319,7 @@ type ParentReferences$Job_Placement_AM__c = {
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
   Job_Placement__r: SObjectDefinition$Job_Placement__c;
+  Account_Manager__r: SObjectDefinition$User | null;
 };
 
 type ChildRelationships$Job_Placement_AM__c = {
@@ -20059,11 +20347,11 @@ type ChildRelationships$Job_Placement_AM__c = {
 };
 
 interface SObjectDefinition$Job_Placement_AM__c extends SObjectDefinition<'Job_Placement_AM__c'> {
-    Name: 'Job_Placement_AM__c';
-    Fields: Fields$Job_Placement_AM__c;
-    ParentReferences: ParentReferences$Job_Placement_AM__c;
-    ChildRelationships: ChildRelationships$Job_Placement_AM__c;
-  }
+  Name: 'Job_Placement_AM__c';
+  Fields: Fields$Job_Placement_AM__c;
+  ParentReferences: ParentReferences$Job_Placement_AM__c;
+  ChildRelationships: ChildRelationships$Job_Placement_AM__c;
+}
 
 type Fields$Job_Placement_Recruiter__ChangeEvent = {
   //
@@ -20089,12 +20377,13 @@ type ChildRelationships$Job_Placement_Recruiter__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Job_Placement_Recruiter__ChangeEvent extends SObjectDefinition<'Job_Placement_Recruiter__ChangeEvent'> {
-    Name: 'Job_Placement_Recruiter__ChangeEvent';
-    Fields: Fields$Job_Placement_Recruiter__ChangeEvent;
-    ParentReferences: ParentReferences$Job_Placement_Recruiter__ChangeEvent;
-    ChildRelationships: ChildRelationships$Job_Placement_Recruiter__ChangeEvent;
-  }
+interface SObjectDefinition$Job_Placement_Recruiter__ChangeEvent
+  extends SObjectDefinition<'Job_Placement_Recruiter__ChangeEvent'> {
+  Name: 'Job_Placement_Recruiter__ChangeEvent';
+  Fields: Fields$Job_Placement_Recruiter__ChangeEvent;
+  ParentReferences: ParentReferences$Job_Placement_Recruiter__ChangeEvent;
+  ChildRelationships: ChildRelationships$Job_Placement_Recruiter__ChangeEvent;
+}
 
 type Fields$Job_Placement_Recruiter__c = {
   //
@@ -20145,11 +20434,11 @@ type ChildRelationships$Job_Placement_Recruiter__c = {
 };
 
 interface SObjectDefinition$Job_Placement_Recruiter__c extends SObjectDefinition<'Job_Placement_Recruiter__c'> {
-    Name: 'Job_Placement_Recruiter__c';
-    Fields: Fields$Job_Placement_Recruiter__c;
-    ParentReferences: ParentReferences$Job_Placement_Recruiter__c;
-    ChildRelationships: ChildRelationships$Job_Placement_Recruiter__c;
-  }
+  Name: 'Job_Placement_Recruiter__c';
+  Fields: Fields$Job_Placement_Recruiter__c;
+  ParentReferences: ParentReferences$Job_Placement_Recruiter__c;
+  ChildRelationships: ChildRelationships$Job_Placement_Recruiter__c;
+}
 
 type Fields$Job_Placement__ChangeEvent = {
   //
@@ -20162,6 +20451,37 @@ type Fields$Job_Placement__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Client_Address__Street__s: string | null;
+  Client_Address__City__s: string | null;
+  Client_Address__PostalCode__s: string | null;
+  Client_Address__StateCode__s: string | null;
+  Client_Address__CountryCode__s: string | null;
+  Client_Address__Latitude__s: number | null;
+  Client_Address__Longitude__s: number | null;
+  Client_Address__GeocodeAccuracy__s: string | null;
+  Client_Address__c: Address | null;
+  Client__c: string | null;
+  Contact__c: string | null;
+  Deal__c: string | null;
+  Discounted_Commission__c: boolean;
+  Do_not_Send_Notifications__c: boolean;
+  End_Date__c: DateString | null;
+  End_Reason__c: string | null;
+  Opportunity__c: string | null;
+  Placement_Type__c: string | null;
+  Ready_For_Marketing_Date__c: DateString | null;
+  Start_Date__c: DateString | null;
+  Target_Start_Date__c: DateString | null;
+  Work_Location__c: string | null;
+  AM_BD_Allocated_Commission__c: number | null;
+  Account_Manager_Allocated_Commission__c: number | null;
+  Delivery_Lead_Allocated_Commission__c: number | null;
+  Recruiter_Allocated_Commission__c: number | null;
+  Client_Name__c: string | null;
+  Cohort_Status__c: string | null;
+  Resource_Name__c: string | null;
+  Status__c: string | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Job_Placement__ChangeEvent = {
@@ -20173,11 +20493,11 @@ type ChildRelationships$Job_Placement__ChangeEvent = {
 };
 
 interface SObjectDefinition$Job_Placement__ChangeEvent extends SObjectDefinition<'Job_Placement__ChangeEvent'> {
-    Name: 'Job_Placement__ChangeEvent';
-    Fields: Fields$Job_Placement__ChangeEvent;
-    ParentReferences: ParentReferences$Job_Placement__ChangeEvent;
-    ChildRelationships: ChildRelationships$Job_Placement__ChangeEvent;
-  }
+  Name: 'Job_Placement__ChangeEvent';
+  Fields: Fields$Job_Placement__ChangeEvent;
+  ParentReferences: ParentReferences$Job_Placement__ChangeEvent;
+  ChildRelationships: ChildRelationships$Job_Placement__ChangeEvent;
+}
 
 type Fields$Job_Placement__History = {
   //
@@ -20203,11 +20523,11 @@ type ChildRelationships$Job_Placement__History = {
 };
 
 interface SObjectDefinition$Job_Placement__History extends SObjectDefinition<'Job_Placement__History'> {
-    Name: 'Job_Placement__History';
-    Fields: Fields$Job_Placement__History;
-    ParentReferences: ParentReferences$Job_Placement__History;
-    ChildRelationships: ChildRelationships$Job_Placement__History;
-  }
+  Name: 'Job_Placement__History';
+  Fields: Fields$Job_Placement__History;
+  ParentReferences: ParentReferences$Job_Placement__History;
+  ChildRelationships: ChildRelationships$Job_Placement__History;
+}
 
 type Fields$Job_Placement__c = {
   //
@@ -20221,6 +20541,39 @@ type Fields$Job_Placement__c = {
   LastModifiedById: string;
   SystemModstamp: DateString;
   LastActivityDate: DateString | null;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Client_Address__Street__s: string | null;
+  Client_Address__City__s: string | null;
+  Client_Address__PostalCode__s: string | null;
+  Client_Address__StateCode__s: string | null;
+  Client_Address__CountryCode__s: string | null;
+  Client_Address__Latitude__s: number | null;
+  Client_Address__Longitude__s: number | null;
+  Client_Address__GeocodeAccuracy__s: string | null;
+  Client_Address__c: Address | null;
+  Client__c: string | null;
+  Contact__c: string | null;
+  Deal__c: string | null;
+  Discounted_Commission__c: boolean;
+  Do_not_Send_Notifications__c: boolean;
+  End_Date__c: DateString | null;
+  End_Reason__c: string | null;
+  Opportunity__c: string | null;
+  Placement_Type__c: string | null;
+  Ready_For_Marketing_Date__c: DateString | null;
+  Start_Date__c: DateString | null;
+  Target_Start_Date__c: DateString | null;
+  Work_Location__c: string | null;
+  AM_BD_Allocated_Commission__c: number | null;
+  Account_Manager_Allocated_Commission__c: number | null;
+  Delivery_Lead_Allocated_Commission__c: number | null;
+  Recruiter_Allocated_Commission__c: number | null;
+  Client_Name__c: string | null;
+  Cohort_Status__c: string | null;
+  Resource_Name__c: string | null;
+  Status__c: string | null;
+  Legacy_Id__c: string | null;
 };
 
 type ParentReferences$Job_Placement__c = {
@@ -20228,6 +20581,10 @@ type ParentReferences$Job_Placement__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  Client__r: SObjectDefinition$Account | null;
+  Contact__r: SObjectDefinition$Contact | null;
+  Deal__r: SObjectDefinition$Deal__c | null;
+  Opportunity__r: SObjectDefinition$Opportunity | null;
 };
 
 type ChildRelationships$Job_Placement__c = {
@@ -20261,11 +20618,11 @@ type ChildRelationships$Job_Placement__c = {
 };
 
 interface SObjectDefinition$Job_Placement__c extends SObjectDefinition<'Job_Placement__c'> {
-    Name: 'Job_Placement__c';
-    Fields: Fields$Job_Placement__c;
-    ParentReferences: ParentReferences$Job_Placement__c;
-    ChildRelationships: ChildRelationships$Job_Placement__c;
-  }
+  Name: 'Job_Placement__c';
+  Fields: Fields$Job_Placement__c;
+  ParentReferences: ParentReferences$Job_Placement__c;
+  ChildRelationships: ChildRelationships$Job_Placement__c;
+}
 
 type Fields$Job_Portal_Settings__mdt = {
   //
@@ -20288,11 +20645,11 @@ type ChildRelationships$Job_Portal_Settings__mdt = {
 };
 
 interface SObjectDefinition$Job_Portal_Settings__mdt extends SObjectDefinition<'Job_Portal_Settings__mdt'> {
-    Name: 'Job_Portal_Settings__mdt';
-    Fields: Fields$Job_Portal_Settings__mdt;
-    ParentReferences: ParentReferences$Job_Portal_Settings__mdt;
-    ChildRelationships: ChildRelationships$Job_Portal_Settings__mdt;
-  }
+  Name: 'Job_Portal_Settings__mdt';
+  Fields: Fields$Job_Portal_Settings__mdt;
+  ParentReferences: ParentReferences$Job_Portal_Settings__mdt;
+  ChildRelationships: ChildRelationships$Job_Portal_Settings__mdt;
+}
 
 type Fields$Job__ChangeEvent = {
   //
@@ -20346,11 +20703,11 @@ type ChildRelationships$Job__ChangeEvent = {
 };
 
 interface SObjectDefinition$Job__ChangeEvent extends SObjectDefinition<'Job__ChangeEvent'> {
-    Name: 'Job__ChangeEvent';
-    Fields: Fields$Job__ChangeEvent;
-    ParentReferences: ParentReferences$Job__ChangeEvent;
-    ChildRelationships: ChildRelationships$Job__ChangeEvent;
-  }
+  Name: 'Job__ChangeEvent';
+  Fields: Fields$Job__ChangeEvent;
+  ParentReferences: ParentReferences$Job__ChangeEvent;
+  ChildRelationships: ChildRelationships$Job__ChangeEvent;
+}
 
 type Fields$Job__History = {
   //
@@ -20376,11 +20733,11 @@ type ChildRelationships$Job__History = {
 };
 
 interface SObjectDefinition$Job__History extends SObjectDefinition<'Job__History'> {
-    Name: 'Job__History';
-    Fields: Fields$Job__History;
-    ParentReferences: ParentReferences$Job__History;
-    ChildRelationships: ChildRelationships$Job__History;
-  }
+  Name: 'Job__History';
+  Fields: Fields$Job__History;
+  ParentReferences: ParentReferences$Job__History;
+  ChildRelationships: ChildRelationships$Job__History;
+}
 
 type Fields$Job__c = {
   //
@@ -20460,11 +20817,11 @@ type ChildRelationships$Job__c = {
 };
 
 interface SObjectDefinition$Job__c extends SObjectDefinition<'Job__c'> {
-    Name: 'Job__c';
-    Fields: Fields$Job__c;
-    ParentReferences: ParentReferences$Job__c;
-    ChildRelationships: ChildRelationships$Job__c;
-  }
+  Name: 'Job__c';
+  Fields: Fields$Job__c;
+  ParentReferences: ParentReferences$Job__c;
+  ChildRelationships: ChildRelationships$Job__c;
+}
 
 type Fields$KnowledgeableUser = {
   //
@@ -20484,11 +20841,11 @@ type ChildRelationships$KnowledgeableUser = {
 };
 
 interface SObjectDefinition$KnowledgeableUser extends SObjectDefinition<'KnowledgeableUser'> {
-    Name: 'KnowledgeableUser';
-    Fields: Fields$KnowledgeableUser;
-    ParentReferences: ParentReferences$KnowledgeableUser;
-    ChildRelationships: ChildRelationships$KnowledgeableUser;
-  }
+  Name: 'KnowledgeableUser';
+  Fields: Fields$KnowledgeableUser;
+  ParentReferences: ParentReferences$KnowledgeableUser;
+  ChildRelationships: ChildRelationships$KnowledgeableUser;
+}
 
 type Fields$Lead = {
   //
@@ -20684,11 +21041,11 @@ type ChildRelationships$Lead = {
 };
 
 interface SObjectDefinition$Lead extends SObjectDefinition<'Lead'> {
-    Name: 'Lead';
-    Fields: Fields$Lead;
-    ParentReferences: ParentReferences$Lead;
-    ChildRelationships: ChildRelationships$Lead;
-  }
+  Name: 'Lead';
+  Fields: Fields$Lead;
+  ParentReferences: ParentReferences$Lead;
+  ChildRelationships: ChildRelationships$Lead;
+}
 
 type Fields$LeadChangeEvent = {
   //
@@ -20822,11 +21179,11 @@ type ChildRelationships$LeadChangeEvent = {
 };
 
 interface SObjectDefinition$LeadChangeEvent extends SObjectDefinition<'LeadChangeEvent'> {
-    Name: 'LeadChangeEvent';
-    Fields: Fields$LeadChangeEvent;
-    ParentReferences: ParentReferences$LeadChangeEvent;
-    ChildRelationships: ChildRelationships$LeadChangeEvent;
-  }
+  Name: 'LeadChangeEvent';
+  Fields: Fields$LeadChangeEvent;
+  ParentReferences: ParentReferences$LeadChangeEvent;
+  ChildRelationships: ChildRelationships$LeadChangeEvent;
+}
 
 type Fields$LeadFeed = {
   //
@@ -20867,11 +21224,11 @@ type ChildRelationships$LeadFeed = {
 };
 
 interface SObjectDefinition$LeadFeed extends SObjectDefinition<'LeadFeed'> {
-    Name: 'LeadFeed';
-    Fields: Fields$LeadFeed;
-    ParentReferences: ParentReferences$LeadFeed;
-    ChildRelationships: ChildRelationships$LeadFeed;
-  }
+  Name: 'LeadFeed';
+  Fields: Fields$LeadFeed;
+  ParentReferences: ParentReferences$LeadFeed;
+  ChildRelationships: ChildRelationships$LeadFeed;
+}
 
 type Fields$LeadHistory = {
   //
@@ -20897,11 +21254,11 @@ type ChildRelationships$LeadHistory = {
 };
 
 interface SObjectDefinition$LeadHistory extends SObjectDefinition<'LeadHistory'> {
-    Name: 'LeadHistory';
-    Fields: Fields$LeadHistory;
-    ParentReferences: ParentReferences$LeadHistory;
-    ChildRelationships: ChildRelationships$LeadHistory;
-  }
+  Name: 'LeadHistory';
+  Fields: Fields$LeadHistory;
+  ParentReferences: ParentReferences$LeadHistory;
+  ChildRelationships: ChildRelationships$LeadHistory;
+}
 
 type Fields$LeadShare = {
   //
@@ -20927,11 +21284,11 @@ type ChildRelationships$LeadShare = {
 };
 
 interface SObjectDefinition$LeadShare extends SObjectDefinition<'LeadShare'> {
-    Name: 'LeadShare';
-    Fields: Fields$LeadShare;
-    ParentReferences: ParentReferences$LeadShare;
-    ChildRelationships: ChildRelationships$LeadShare;
-  }
+  Name: 'LeadShare';
+  Fields: Fields$LeadShare;
+  ParentReferences: ParentReferences$LeadShare;
+  ChildRelationships: ChildRelationships$LeadShare;
+}
 
 type Fields$LeadStatus = {
   //
@@ -20959,11 +21316,11 @@ type ChildRelationships$LeadStatus = {
 };
 
 interface SObjectDefinition$LeadStatus extends SObjectDefinition<'LeadStatus'> {
-    Name: 'LeadStatus';
-    Fields: Fields$LeadStatus;
-    ParentReferences: ParentReferences$LeadStatus;
-    ChildRelationships: ChildRelationships$LeadStatus;
-  }
+  Name: 'LeadStatus';
+  Fields: Fields$LeadStatus;
+  ParentReferences: ParentReferences$LeadStatus;
+  ChildRelationships: ChildRelationships$LeadStatus;
+}
 
 type Fields$LightningExitByPageMetrics = {
   //
@@ -20985,11 +21342,11 @@ type ChildRelationships$LightningExitByPageMetrics = {
 };
 
 interface SObjectDefinition$LightningExitByPageMetrics extends SObjectDefinition<'LightningExitByPageMetrics'> {
-    Name: 'LightningExitByPageMetrics';
-    Fields: Fields$LightningExitByPageMetrics;
-    ParentReferences: ParentReferences$LightningExitByPageMetrics;
-    ChildRelationships: ChildRelationships$LightningExitByPageMetrics;
-  }
+  Name: 'LightningExitByPageMetrics';
+  Fields: Fields$LightningExitByPageMetrics;
+  ParentReferences: ParentReferences$LightningExitByPageMetrics;
+  ChildRelationships: ChildRelationships$LightningExitByPageMetrics;
+}
 
 type Fields$LightningExperienceTheme = {
   //
@@ -21021,11 +21378,11 @@ type ChildRelationships$LightningExperienceTheme = {
 };
 
 interface SObjectDefinition$LightningExperienceTheme extends SObjectDefinition<'LightningExperienceTheme'> {
-    Name: 'LightningExperienceTheme';
-    Fields: Fields$LightningExperienceTheme;
-    ParentReferences: ParentReferences$LightningExperienceTheme;
-    ChildRelationships: ChildRelationships$LightningExperienceTheme;
-  }
+  Name: 'LightningExperienceTheme';
+  Fields: Fields$LightningExperienceTheme;
+  ParentReferences: ParentReferences$LightningExperienceTheme;
+  ChildRelationships: ChildRelationships$LightningExperienceTheme;
+}
 
 type Fields$LightningOnboardingConfig = {
   //
@@ -21059,11 +21416,11 @@ type ChildRelationships$LightningOnboardingConfig = {
 };
 
 interface SObjectDefinition$LightningOnboardingConfig extends SObjectDefinition<'LightningOnboardingConfig'> {
-    Name: 'LightningOnboardingConfig';
-    Fields: Fields$LightningOnboardingConfig;
-    ParentReferences: ParentReferences$LightningOnboardingConfig;
-    ChildRelationships: ChildRelationships$LightningOnboardingConfig;
-  }
+  Name: 'LightningOnboardingConfig';
+  Fields: Fields$LightningOnboardingConfig;
+  ParentReferences: ParentReferences$LightningOnboardingConfig;
+  ChildRelationships: ChildRelationships$LightningOnboardingConfig;
+}
 
 type Fields$LightningToggleMetrics = {
   //
@@ -21085,11 +21442,11 @@ type ChildRelationships$LightningToggleMetrics = {
 };
 
 interface SObjectDefinition$LightningToggleMetrics extends SObjectDefinition<'LightningToggleMetrics'> {
-    Name: 'LightningToggleMetrics';
-    Fields: Fields$LightningToggleMetrics;
-    ParentReferences: ParentReferences$LightningToggleMetrics;
-    ChildRelationships: ChildRelationships$LightningToggleMetrics;
-  }
+  Name: 'LightningToggleMetrics';
+  Fields: Fields$LightningToggleMetrics;
+  ParentReferences: ParentReferences$LightningToggleMetrics;
+  ChildRelationships: ChildRelationships$LightningToggleMetrics;
+}
 
 type Fields$LightningUsageByAppTypeMetrics = {
   //
@@ -21110,11 +21467,11 @@ type ChildRelationships$LightningUsageByAppTypeMetrics = {
 };
 
 interface SObjectDefinition$LightningUsageByAppTypeMetrics extends SObjectDefinition<'LightningUsageByAppTypeMetrics'> {
-    Name: 'LightningUsageByAppTypeMetrics';
-    Fields: Fields$LightningUsageByAppTypeMetrics;
-    ParentReferences: ParentReferences$LightningUsageByAppTypeMetrics;
-    ChildRelationships: ChildRelationships$LightningUsageByAppTypeMetrics;
-  }
+  Name: 'LightningUsageByAppTypeMetrics';
+  Fields: Fields$LightningUsageByAppTypeMetrics;
+  ParentReferences: ParentReferences$LightningUsageByAppTypeMetrics;
+  ChildRelationships: ChildRelationships$LightningUsageByAppTypeMetrics;
+}
 
 type Fields$LightningUsageByBrowserMetrics = {
   //
@@ -21142,11 +21499,11 @@ type ChildRelationships$LightningUsageByBrowserMetrics = {
 };
 
 interface SObjectDefinition$LightningUsageByBrowserMetrics extends SObjectDefinition<'LightningUsageByBrowserMetrics'> {
-    Name: 'LightningUsageByBrowserMetrics';
-    Fields: Fields$LightningUsageByBrowserMetrics;
-    ParentReferences: ParentReferences$LightningUsageByBrowserMetrics;
-    ChildRelationships: ChildRelationships$LightningUsageByBrowserMetrics;
-  }
+  Name: 'LightningUsageByBrowserMetrics';
+  Fields: Fields$LightningUsageByBrowserMetrics;
+  ParentReferences: ParentReferences$LightningUsageByBrowserMetrics;
+  ChildRelationships: ChildRelationships$LightningUsageByBrowserMetrics;
+}
 
 type Fields$LightningUsageByFlexiPageMetrics = {
   //
@@ -21186,12 +21543,13 @@ type ChildRelationships$LightningUsageByFlexiPageMetrics = {
   //
 };
 
-interface SObjectDefinition$LightningUsageByFlexiPageMetrics extends SObjectDefinition<'LightningUsageByFlexiPageMetrics'> {
-    Name: 'LightningUsageByFlexiPageMetrics';
-    Fields: Fields$LightningUsageByFlexiPageMetrics;
-    ParentReferences: ParentReferences$LightningUsageByFlexiPageMetrics;
-    ChildRelationships: ChildRelationships$LightningUsageByFlexiPageMetrics;
-  }
+interface SObjectDefinition$LightningUsageByFlexiPageMetrics
+  extends SObjectDefinition<'LightningUsageByFlexiPageMetrics'> {
+  Name: 'LightningUsageByFlexiPageMetrics';
+  Fields: Fields$LightningUsageByFlexiPageMetrics;
+  ParentReferences: ParentReferences$LightningUsageByFlexiPageMetrics;
+  ChildRelationships: ChildRelationships$LightningUsageByFlexiPageMetrics;
+}
 
 type Fields$LightningUsageByPageMetrics = {
   //
@@ -21232,11 +21590,11 @@ type ChildRelationships$LightningUsageByPageMetrics = {
 };
 
 interface SObjectDefinition$LightningUsageByPageMetrics extends SObjectDefinition<'LightningUsageByPageMetrics'> {
-    Name: 'LightningUsageByPageMetrics';
-    Fields: Fields$LightningUsageByPageMetrics;
-    ParentReferences: ParentReferences$LightningUsageByPageMetrics;
-    ChildRelationships: ChildRelationships$LightningUsageByPageMetrics;
-  }
+  Name: 'LightningUsageByPageMetrics';
+  Fields: Fields$LightningUsageByPageMetrics;
+  ParentReferences: ParentReferences$LightningUsageByPageMetrics;
+  ChildRelationships: ChildRelationships$LightningUsageByPageMetrics;
+}
 
 type Fields$ListEmail = {
   //
@@ -21289,11 +21647,11 @@ type ChildRelationships$ListEmail = {
 };
 
 interface SObjectDefinition$ListEmail extends SObjectDefinition<'ListEmail'> {
-    Name: 'ListEmail';
-    Fields: Fields$ListEmail;
-    ParentReferences: ParentReferences$ListEmail;
-    ChildRelationships: ChildRelationships$ListEmail;
-  }
+  Name: 'ListEmail';
+  Fields: Fields$ListEmail;
+  ParentReferences: ParentReferences$ListEmail;
+  ChildRelationships: ChildRelationships$ListEmail;
+}
 
 type Fields$ListEmailChangeEvent = {
   //
@@ -21328,11 +21686,11 @@ type ChildRelationships$ListEmailChangeEvent = {
 };
 
 interface SObjectDefinition$ListEmailChangeEvent extends SObjectDefinition<'ListEmailChangeEvent'> {
-    Name: 'ListEmailChangeEvent';
-    Fields: Fields$ListEmailChangeEvent;
-    ParentReferences: ParentReferences$ListEmailChangeEvent;
-    ChildRelationships: ChildRelationships$ListEmailChangeEvent;
-  }
+  Name: 'ListEmailChangeEvent';
+  Fields: Fields$ListEmailChangeEvent;
+  ParentReferences: ParentReferences$ListEmailChangeEvent;
+  ChildRelationships: ChildRelationships$ListEmailChangeEvent;
+}
 
 type Fields$ListEmailIndividualRecipient = {
   //
@@ -21361,11 +21719,11 @@ type ChildRelationships$ListEmailIndividualRecipient = {
 };
 
 interface SObjectDefinition$ListEmailIndividualRecipient extends SObjectDefinition<'ListEmailIndividualRecipient'> {
-    Name: 'ListEmailIndividualRecipient';
-    Fields: Fields$ListEmailIndividualRecipient;
-    ParentReferences: ParentReferences$ListEmailIndividualRecipient;
-    ChildRelationships: ChildRelationships$ListEmailIndividualRecipient;
-  }
+  Name: 'ListEmailIndividualRecipient';
+  Fields: Fields$ListEmailIndividualRecipient;
+  ParentReferences: ParentReferences$ListEmailIndividualRecipient;
+  ChildRelationships: ChildRelationships$ListEmailIndividualRecipient;
+}
 
 type Fields$ListEmailRecipientSource = {
   //
@@ -21395,11 +21753,11 @@ type ChildRelationships$ListEmailRecipientSource = {
 };
 
 interface SObjectDefinition$ListEmailRecipientSource extends SObjectDefinition<'ListEmailRecipientSource'> {
-    Name: 'ListEmailRecipientSource';
-    Fields: Fields$ListEmailRecipientSource;
-    ParentReferences: ParentReferences$ListEmailRecipientSource;
-    ChildRelationships: ChildRelationships$ListEmailRecipientSource;
-  }
+  Name: 'ListEmailRecipientSource';
+  Fields: Fields$ListEmailRecipientSource;
+  ParentReferences: ParentReferences$ListEmailRecipientSource;
+  ChildRelationships: ChildRelationships$ListEmailRecipientSource;
+}
 
 type Fields$ListEmailShare = {
   //
@@ -21425,11 +21783,11 @@ type ChildRelationships$ListEmailShare = {
 };
 
 interface SObjectDefinition$ListEmailShare extends SObjectDefinition<'ListEmailShare'> {
-    Name: 'ListEmailShare';
-    Fields: Fields$ListEmailShare;
-    ParentReferences: ParentReferences$ListEmailShare;
-    ChildRelationships: ChildRelationships$ListEmailShare;
-  }
+  Name: 'ListEmailShare';
+  Fields: Fields$ListEmailShare;
+  ParentReferences: ParentReferences$ListEmailShare;
+  ChildRelationships: ChildRelationships$ListEmailShare;
+}
 
 type Fields$ListView = {
   //
@@ -21460,11 +21818,11 @@ type ChildRelationships$ListView = {
 };
 
 interface SObjectDefinition$ListView extends SObjectDefinition<'ListView'> {
-    Name: 'ListView';
-    Fields: Fields$ListView;
-    ParentReferences: ParentReferences$ListView;
-    ChildRelationships: ChildRelationships$ListView;
-  }
+  Name: 'ListView';
+  Fields: Fields$ListView;
+  ParentReferences: ParentReferences$ListView;
+  ChildRelationships: ChildRelationships$ListView;
+}
 
 type Fields$ListViewChart = {
   //
@@ -21498,11 +21856,11 @@ type ChildRelationships$ListViewChart = {
 };
 
 interface SObjectDefinition$ListViewChart extends SObjectDefinition<'ListViewChart'> {
-    Name: 'ListViewChart';
-    Fields: Fields$ListViewChart;
-    ParentReferences: ParentReferences$ListViewChart;
-    ChildRelationships: ChildRelationships$ListViewChart;
-  }
+  Name: 'ListViewChart';
+  Fields: Fields$ListViewChart;
+  ParentReferences: ParentReferences$ListViewChart;
+  ChildRelationships: ChildRelationships$ListViewChart;
+}
 
 type Fields$ListViewChartInstance = {
   //
@@ -21535,11 +21893,11 @@ type ChildRelationships$ListViewChartInstance = {
 };
 
 interface SObjectDefinition$ListViewChartInstance extends SObjectDefinition<'ListViewChartInstance'> {
-    Name: 'ListViewChartInstance';
-    Fields: Fields$ListViewChartInstance;
-    ParentReferences: ParentReferences$ListViewChartInstance;
-    ChildRelationships: ChildRelationships$ListViewChartInstance;
-  }
+  Name: 'ListViewChartInstance';
+  Fields: Fields$ListViewChartInstance;
+  ParentReferences: ParentReferences$ListViewChartInstance;
+  ChildRelationships: ChildRelationships$ListViewChartInstance;
+}
 
 type Fields$Location = {
   //
@@ -21617,11 +21975,11 @@ type ChildRelationships$Location = {
 };
 
 interface SObjectDefinition$Location extends SObjectDefinition<'Location'> {
-    Name: 'Location';
-    Fields: Fields$Location;
-    ParentReferences: ParentReferences$Location;
-    ChildRelationships: ChildRelationships$Location;
-  }
+  Name: 'Location';
+  Fields: Fields$Location;
+  ParentReferences: ParentReferences$Location;
+  ChildRelationships: ChildRelationships$Location;
+}
 
 type Fields$LocationChangeEvent = {
   //
@@ -21666,11 +22024,11 @@ type ChildRelationships$LocationChangeEvent = {
 };
 
 interface SObjectDefinition$LocationChangeEvent extends SObjectDefinition<'LocationChangeEvent'> {
-    Name: 'LocationChangeEvent';
-    Fields: Fields$LocationChangeEvent;
-    ParentReferences: ParentReferences$LocationChangeEvent;
-    ChildRelationships: ChildRelationships$LocationChangeEvent;
-  }
+  Name: 'LocationChangeEvent';
+  Fields: Fields$LocationChangeEvent;
+  ParentReferences: ParentReferences$LocationChangeEvent;
+  ChildRelationships: ChildRelationships$LocationChangeEvent;
+}
 
 type Fields$LocationFeed = {
   //
@@ -21711,11 +22069,11 @@ type ChildRelationships$LocationFeed = {
 };
 
 interface SObjectDefinition$LocationFeed extends SObjectDefinition<'LocationFeed'> {
-    Name: 'LocationFeed';
-    Fields: Fields$LocationFeed;
-    ParentReferences: ParentReferences$LocationFeed;
-    ChildRelationships: ChildRelationships$LocationFeed;
-  }
+  Name: 'LocationFeed';
+  Fields: Fields$LocationFeed;
+  ParentReferences: ParentReferences$LocationFeed;
+  ChildRelationships: ChildRelationships$LocationFeed;
+}
 
 type Fields$LocationHistory = {
   //
@@ -21741,11 +22099,11 @@ type ChildRelationships$LocationHistory = {
 };
 
 interface SObjectDefinition$LocationHistory extends SObjectDefinition<'LocationHistory'> {
-    Name: 'LocationHistory';
-    Fields: Fields$LocationHistory;
-    ParentReferences: ParentReferences$LocationHistory;
-    ChildRelationships: ChildRelationships$LocationHistory;
-  }
+  Name: 'LocationHistory';
+  Fields: Fields$LocationHistory;
+  ParentReferences: ParentReferences$LocationHistory;
+  ChildRelationships: ChildRelationships$LocationHistory;
+}
 
 type Fields$LocationShare = {
   //
@@ -21771,11 +22129,11 @@ type ChildRelationships$LocationShare = {
 };
 
 interface SObjectDefinition$LocationShare extends SObjectDefinition<'LocationShare'> {
-    Name: 'LocationShare';
-    Fields: Fields$LocationShare;
-    ParentReferences: ParentReferences$LocationShare;
-    ChildRelationships: ChildRelationships$LocationShare;
-  }
+  Name: 'LocationShare';
+  Fields: Fields$LocationShare;
+  ParentReferences: ParentReferences$LocationShare;
+  ChildRelationships: ChildRelationships$LocationShare;
+}
 
 type Fields$LocationTrustMeasure = {
   //
@@ -21815,11 +22173,11 @@ type ChildRelationships$LocationTrustMeasure = {
 };
 
 interface SObjectDefinition$LocationTrustMeasure extends SObjectDefinition<'LocationTrustMeasure'> {
-    Name: 'LocationTrustMeasure';
-    Fields: Fields$LocationTrustMeasure;
-    ParentReferences: ParentReferences$LocationTrustMeasure;
-    ChildRelationships: ChildRelationships$LocationTrustMeasure;
-  }
+  Name: 'LocationTrustMeasure';
+  Fields: Fields$LocationTrustMeasure;
+  ParentReferences: ParentReferences$LocationTrustMeasure;
+  ChildRelationships: ChildRelationships$LocationTrustMeasure;
+}
 
 type Fields$LocationTrustMeasureShare = {
   //
@@ -21845,11 +22203,11 @@ type ChildRelationships$LocationTrustMeasureShare = {
 };
 
 interface SObjectDefinition$LocationTrustMeasureShare extends SObjectDefinition<'LocationTrustMeasureShare'> {
-    Name: 'LocationTrustMeasureShare';
-    Fields: Fields$LocationTrustMeasureShare;
-    ParentReferences: ParentReferences$LocationTrustMeasureShare;
-    ChildRelationships: ChildRelationships$LocationTrustMeasureShare;
-  }
+  Name: 'LocationTrustMeasureShare';
+  Fields: Fields$LocationTrustMeasureShare;
+  ParentReferences: ParentReferences$LocationTrustMeasureShare;
+  ChildRelationships: ChildRelationships$LocationTrustMeasureShare;
+}
 
 type Fields$LoginGeo = {
   //
@@ -21881,11 +22239,11 @@ type ChildRelationships$LoginGeo = {
 };
 
 interface SObjectDefinition$LoginGeo extends SObjectDefinition<'LoginGeo'> {
-    Name: 'LoginGeo';
-    Fields: Fields$LoginGeo;
-    ParentReferences: ParentReferences$LoginGeo;
-    ChildRelationships: ChildRelationships$LoginGeo;
-  }
+  Name: 'LoginGeo';
+  Fields: Fields$LoginGeo;
+  ParentReferences: ParentReferences$LoginGeo;
+  ChildRelationships: ChildRelationships$LoginGeo;
+}
 
 type Fields$LoginHistory = {
   //
@@ -21921,11 +22279,11 @@ type ChildRelationships$LoginHistory = {
 };
 
 interface SObjectDefinition$LoginHistory extends SObjectDefinition<'LoginHistory'> {
-    Name: 'LoginHistory';
-    Fields: Fields$LoginHistory;
-    ParentReferences: ParentReferences$LoginHistory;
-    ChildRelationships: ChildRelationships$LoginHistory;
-  }
+  Name: 'LoginHistory';
+  Fields: Fields$LoginHistory;
+  ParentReferences: ParentReferences$LoginHistory;
+  ChildRelationships: ChildRelationships$LoginHistory;
+}
 
 type Fields$LoginIp = {
   //
@@ -21948,11 +22306,11 @@ type ChildRelationships$LoginIp = {
 };
 
 interface SObjectDefinition$LoginIp extends SObjectDefinition<'LoginIp'> {
-    Name: 'LoginIp';
-    Fields: Fields$LoginIp;
-    ParentReferences: ParentReferences$LoginIp;
-    ChildRelationships: ChildRelationships$LoginIp;
-  }
+  Name: 'LoginIp';
+  Fields: Fields$LoginIp;
+  ParentReferences: ParentReferences$LoginIp;
+  ChildRelationships: ChildRelationships$LoginIp;
+}
 
 type Fields$LogoutEventStream = {
   //
@@ -21981,11 +22339,11 @@ type ChildRelationships$LogoutEventStream = {
 };
 
 interface SObjectDefinition$LogoutEventStream extends SObjectDefinition<'LogoutEventStream'> {
-    Name: 'LogoutEventStream';
-    Fields: Fields$LogoutEventStream;
-    ParentReferences: ParentReferences$LogoutEventStream;
-    ChildRelationships: ChildRelationships$LogoutEventStream;
-  }
+  Name: 'LogoutEventStream';
+  Fields: Fields$LogoutEventStream;
+  ParentReferences: ParentReferences$LogoutEventStream;
+  ChildRelationships: ChildRelationships$LogoutEventStream;
+}
 
 type Fields$LookedUpFromActivity = {
   //
@@ -22061,11 +22419,11 @@ type ChildRelationships$LookedUpFromActivity = {
 };
 
 interface SObjectDefinition$LookedUpFromActivity extends SObjectDefinition<'LookedUpFromActivity'> {
-    Name: 'LookedUpFromActivity';
-    Fields: Fields$LookedUpFromActivity;
-    ParentReferences: ParentReferences$LookedUpFromActivity;
-    ChildRelationships: ChildRelationships$LookedUpFromActivity;
-  }
+  Name: 'LookedUpFromActivity';
+  Fields: Fields$LookedUpFromActivity;
+  ParentReferences: ParentReferences$LookedUpFromActivity;
+  ChildRelationships: ChildRelationships$LookedUpFromActivity;
+}
 
 type Fields$Macro = {
   //
@@ -22100,11 +22458,11 @@ type ChildRelationships$Macro = {
 };
 
 interface SObjectDefinition$Macro extends SObjectDefinition<'Macro'> {
-    Name: 'Macro';
-    Fields: Fields$Macro;
-    ParentReferences: ParentReferences$Macro;
-    ChildRelationships: ChildRelationships$Macro;
-  }
+  Name: 'Macro';
+  Fields: Fields$Macro;
+  ParentReferences: ParentReferences$Macro;
+  ChildRelationships: ChildRelationships$Macro;
+}
 
 type Fields$MacroChangeEvent = {
   //
@@ -22132,11 +22490,11 @@ type ChildRelationships$MacroChangeEvent = {
 };
 
 interface SObjectDefinition$MacroChangeEvent extends SObjectDefinition<'MacroChangeEvent'> {
-    Name: 'MacroChangeEvent';
-    Fields: Fields$MacroChangeEvent;
-    ParentReferences: ParentReferences$MacroChangeEvent;
-    ChildRelationships: ChildRelationships$MacroChangeEvent;
-  }
+  Name: 'MacroChangeEvent';
+  Fields: Fields$MacroChangeEvent;
+  ParentReferences: ParentReferences$MacroChangeEvent;
+  ChildRelationships: ChildRelationships$MacroChangeEvent;
+}
 
 type Fields$MacroHistory = {
   //
@@ -22162,11 +22520,11 @@ type ChildRelationships$MacroHistory = {
 };
 
 interface SObjectDefinition$MacroHistory extends SObjectDefinition<'MacroHistory'> {
-    Name: 'MacroHistory';
-    Fields: Fields$MacroHistory;
-    ParentReferences: ParentReferences$MacroHistory;
-    ChildRelationships: ChildRelationships$MacroHistory;
-  }
+  Name: 'MacroHistory';
+  Fields: Fields$MacroHistory;
+  ParentReferences: ParentReferences$MacroHistory;
+  ChildRelationships: ChildRelationships$MacroHistory;
+}
 
 type Fields$MacroInstruction = {
   //
@@ -22198,11 +22556,11 @@ type ChildRelationships$MacroInstruction = {
 };
 
 interface SObjectDefinition$MacroInstruction extends SObjectDefinition<'MacroInstruction'> {
-    Name: 'MacroInstruction';
-    Fields: Fields$MacroInstruction;
-    ParentReferences: ParentReferences$MacroInstruction;
-    ChildRelationships: ChildRelationships$MacroInstruction;
-  }
+  Name: 'MacroInstruction';
+  Fields: Fields$MacroInstruction;
+  ParentReferences: ParentReferences$MacroInstruction;
+  ChildRelationships: ChildRelationships$MacroInstruction;
+}
 
 type Fields$MacroInstructionChangeEvent = {
   //
@@ -22231,11 +22589,11 @@ type ChildRelationships$MacroInstructionChangeEvent = {
 };
 
 interface SObjectDefinition$MacroInstructionChangeEvent extends SObjectDefinition<'MacroInstructionChangeEvent'> {
-    Name: 'MacroInstructionChangeEvent';
-    Fields: Fields$MacroInstructionChangeEvent;
-    ParentReferences: ParentReferences$MacroInstructionChangeEvent;
-    ChildRelationships: ChildRelationships$MacroInstructionChangeEvent;
-  }
+  Name: 'MacroInstructionChangeEvent';
+  Fields: Fields$MacroInstructionChangeEvent;
+  ParentReferences: ParentReferences$MacroInstructionChangeEvent;
+  ChildRelationships: ChildRelationships$MacroInstructionChangeEvent;
+}
 
 type Fields$MacroShare = {
   //
@@ -22261,11 +22619,11 @@ type ChildRelationships$MacroShare = {
 };
 
 interface SObjectDefinition$MacroShare extends SObjectDefinition<'MacroShare'> {
-    Name: 'MacroShare';
-    Fields: Fields$MacroShare;
-    ParentReferences: ParentReferences$MacroShare;
-    ChildRelationships: ChildRelationships$MacroShare;
-  }
+  Name: 'MacroShare';
+  Fields: Fields$MacroShare;
+  ParentReferences: ParentReferences$MacroShare;
+  ChildRelationships: ChildRelationships$MacroShare;
+}
 
 type Fields$MacroUsage = {
   //
@@ -22309,11 +22667,11 @@ type ChildRelationships$MacroUsage = {
 };
 
 interface SObjectDefinition$MacroUsage extends SObjectDefinition<'MacroUsage'> {
-    Name: 'MacroUsage';
-    Fields: Fields$MacroUsage;
-    ParentReferences: ParentReferences$MacroUsage;
-    ChildRelationships: ChildRelationships$MacroUsage;
-  }
+  Name: 'MacroUsage';
+  Fields: Fields$MacroUsage;
+  ParentReferences: ParentReferences$MacroUsage;
+  ChildRelationships: ChildRelationships$MacroUsage;
+}
 
 type Fields$MacroUsageShare = {
   //
@@ -22339,11 +22697,11 @@ type ChildRelationships$MacroUsageShare = {
 };
 
 interface SObjectDefinition$MacroUsageShare extends SObjectDefinition<'MacroUsageShare'> {
-    Name: 'MacroUsageShare';
-    Fields: Fields$MacroUsageShare;
-    ParentReferences: ParentReferences$MacroUsageShare;
-    ChildRelationships: ChildRelationships$MacroUsageShare;
-  }
+  Name: 'MacroUsageShare';
+  Fields: Fields$MacroUsageShare;
+  ParentReferences: ParentReferences$MacroUsageShare;
+  ChildRelationships: ChildRelationships$MacroUsageShare;
+}
 
 type Fields$MailmergeTemplate = {
   //
@@ -22377,11 +22735,11 @@ type ChildRelationships$MailmergeTemplate = {
 };
 
 interface SObjectDefinition$MailmergeTemplate extends SObjectDefinition<'MailmergeTemplate'> {
-    Name: 'MailmergeTemplate';
-    Fields: Fields$MailmergeTemplate;
-    ParentReferences: ParentReferences$MailmergeTemplate;
-    ChildRelationships: ChildRelationships$MailmergeTemplate;
-  }
+  Name: 'MailmergeTemplate';
+  Fields: Fields$MailmergeTemplate;
+  ParentReferences: ParentReferences$MailmergeTemplate;
+  ChildRelationships: ChildRelationships$MailmergeTemplate;
+}
 
 type Fields$Marketing__ChangeEvent = {
   //
@@ -22389,6 +22747,7 @@ type Fields$Marketing__ChangeEvent = {
   ReplayId: string | null;
   ChangeEventHeader: any;
   Name: string | null;
+  RecordTypeId: string | null;
   CreatedDate: DateString | null;
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
@@ -22430,6 +22789,25 @@ type Fields$Marketing__ChangeEvent = {
   Link_To_Resource__c: string | null;
   Interview_Readiness_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Rejection_Reason__c: string | null;
+  Source__c: string | null;
+  Desired_Pay_Rate_Hourly__c: number | null;
+  Referral_Fee_Hourly__c: number | null;
+  Referral_Fee_One_Time__c: number | null;
+  Willing_to_Relocate__c: string | null;
+  Years_Experience__c: string | null;
+  Work_Authorization__c: string | null;
+  Education_Level__c: string | null;
+  RTR_Status__c: string | null;
+  RTR_Sent__c: DateString | null;
+  RTR_Signed__c: DateString | null;
+  Federal_Project__c: string | null;
+  Sick_Leave_Hours__c: number | null;
+  Account_Fee__c: number | null;
+  Willing_to_Travel__c: string | null;
+  Target_Rate__c: number | null;
+  Target_NetRevenue_Percentage__c: number | null;
+  Target_Net_Revenue__c: number | null;
 };
 
 type ParentReferences$Marketing__ChangeEvent = {
@@ -22441,11 +22819,11 @@ type ChildRelationships$Marketing__ChangeEvent = {
 };
 
 interface SObjectDefinition$Marketing__ChangeEvent extends SObjectDefinition<'Marketing__ChangeEvent'> {
-    Name: 'Marketing__ChangeEvent';
-    Fields: Fields$Marketing__ChangeEvent;
-    ParentReferences: ParentReferences$Marketing__ChangeEvent;
-    ChildRelationships: ChildRelationships$Marketing__ChangeEvent;
-  }
+  Name: 'Marketing__ChangeEvent';
+  Fields: Fields$Marketing__ChangeEvent;
+  ParentReferences: ParentReferences$Marketing__ChangeEvent;
+  ChildRelationships: ChildRelationships$Marketing__ChangeEvent;
+}
 
 type Fields$Marketing__History = {
   //
@@ -22471,17 +22849,18 @@ type ChildRelationships$Marketing__History = {
 };
 
 interface SObjectDefinition$Marketing__History extends SObjectDefinition<'Marketing__History'> {
-    Name: 'Marketing__History';
-    Fields: Fields$Marketing__History;
-    ParentReferences: ParentReferences$Marketing__History;
-    ChildRelationships: ChildRelationships$Marketing__History;
-  }
+  Name: 'Marketing__History';
+  Fields: Fields$Marketing__History;
+  ParentReferences: ParentReferences$Marketing__History;
+  ChildRelationships: ChildRelationships$Marketing__History;
+}
 
 type Fields$Marketing__c = {
   //
   Id: string;
   IsDeleted: boolean;
   Name: string;
+  RecordTypeId: string | null;
   CreatedDate: DateString;
   CreatedById: string;
   LastModifiedDate: DateString;
@@ -22527,10 +22906,30 @@ type Fields$Marketing__c = {
   Link_To_Resource__c: string | null;
   Interview_Readiness_Date__c: DateString | null;
   Capstone_Readiness_Date__c: DateString | null;
+  Rejection_Reason__c: string | null;
+  Source__c: string | null;
+  Desired_Pay_Rate_Hourly__c: number | null;
+  Referral_Fee_Hourly__c: number | null;
+  Referral_Fee_One_Time__c: number | null;
+  Willing_to_Relocate__c: string | null;
+  Years_Experience__c: string | null;
+  Work_Authorization__c: string | null;
+  Education_Level__c: string | null;
+  RTR_Status__c: string | null;
+  RTR_Sent__c: DateString | null;
+  RTR_Signed__c: DateString | null;
+  Federal_Project__c: string | null;
+  Sick_Leave_Hours__c: number | null;
+  Account_Fee__c: number | null;
+  Willing_to_Travel__c: string | null;
+  Target_Rate__c: number | null;
+  Target_NetRevenue_Percentage__c: number | null;
+  Target_Net_Revenue__c: number | null;
 };
 
 type ParentReferences$Marketing__c = {
   //
+  RecordType: SObjectDefinition$RecordType | null;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
   Resource__r: SObjectDefinition$Contact;
@@ -22570,11 +22969,11 @@ type ChildRelationships$Marketing__c = {
 };
 
 interface SObjectDefinition$Marketing__c extends SObjectDefinition<'Marketing__c'> {
-    Name: 'Marketing__c';
-    Fields: Fields$Marketing__c;
-    ParentReferences: ParentReferences$Marketing__c;
-    ChildRelationships: ChildRelationships$Marketing__c;
-  }
+  Name: 'Marketing__c';
+  Fields: Fields$Marketing__c;
+  ParentReferences: ParentReferences$Marketing__c;
+  ChildRelationships: ChildRelationships$Marketing__c;
+}
 
 type Fields$MatchingInformation = {
   //
@@ -22607,11 +23006,11 @@ type ChildRelationships$MatchingInformation = {
 };
 
 interface SObjectDefinition$MatchingInformation extends SObjectDefinition<'MatchingInformation'> {
-    Name: 'MatchingInformation';
-    Fields: Fields$MatchingInformation;
-    ParentReferences: ParentReferences$MatchingInformation;
-    ChildRelationships: ChildRelationships$MatchingInformation;
-  }
+  Name: 'MatchingInformation';
+  Fields: Fields$MatchingInformation;
+  ParentReferences: ParentReferences$MatchingInformation;
+  ChildRelationships: ChildRelationships$MatchingInformation;
+}
 
 type Fields$MatchingRule = {
   //
@@ -22646,11 +23045,11 @@ type ChildRelationships$MatchingRule = {
 };
 
 interface SObjectDefinition$MatchingRule extends SObjectDefinition<'MatchingRule'> {
-    Name: 'MatchingRule';
-    Fields: Fields$MatchingRule;
-    ParentReferences: ParentReferences$MatchingRule;
-    ChildRelationships: ChildRelationships$MatchingRule;
-  }
+  Name: 'MatchingRule';
+  Fields: Fields$MatchingRule;
+  ParentReferences: ParentReferences$MatchingRule;
+  ChildRelationships: ChildRelationships$MatchingRule;
+}
 
 type Fields$MatchingRuleItem = {
   //
@@ -22680,11 +23079,11 @@ type ChildRelationships$MatchingRuleItem = {
 };
 
 interface SObjectDefinition$MatchingRuleItem extends SObjectDefinition<'MatchingRuleItem'> {
-    Name: 'MatchingRuleItem';
-    Fields: Fields$MatchingRuleItem;
-    ParentReferences: ParentReferences$MatchingRuleItem;
-    ChildRelationships: ChildRelationships$MatchingRuleItem;
-  }
+  Name: 'MatchingRuleItem';
+  Fields: Fields$MatchingRuleItem;
+  ParentReferences: ParentReferences$MatchingRuleItem;
+  ChildRelationships: ChildRelationships$MatchingRuleItem;
+}
 
 type Fields$Membership__ChangeEvent = {
   //
@@ -22714,11 +23113,11 @@ type ChildRelationships$Membership__ChangeEvent = {
 };
 
 interface SObjectDefinition$Membership__ChangeEvent extends SObjectDefinition<'Membership__ChangeEvent'> {
-    Name: 'Membership__ChangeEvent';
-    Fields: Fields$Membership__ChangeEvent;
-    ParentReferences: ParentReferences$Membership__ChangeEvent;
-    ChildRelationships: ChildRelationships$Membership__ChangeEvent;
-  }
+  Name: 'Membership__ChangeEvent';
+  Fields: Fields$Membership__ChangeEvent;
+  ParentReferences: ParentReferences$Membership__ChangeEvent;
+  ChildRelationships: ChildRelationships$Membership__ChangeEvent;
+}
 
 type Fields$Membership__c = {
   //
@@ -22780,11 +23179,11 @@ type ChildRelationships$Membership__c = {
 };
 
 interface SObjectDefinition$Membership__c extends SObjectDefinition<'Membership__c'> {
-    Name: 'Membership__c';
-    Fields: Fields$Membership__c;
-    ParentReferences: ParentReferences$Membership__c;
-    ChildRelationships: ChildRelationships$Membership__c;
-  }
+  Name: 'Membership__c';
+  Fields: Fields$Membership__c;
+  ParentReferences: ParentReferences$Membership__c;
+  ChildRelationships: ChildRelationships$Membership__c;
+}
 
 type Fields$Min_Wage__ChangeEvent = {
   //
@@ -22817,11 +23216,11 @@ type ChildRelationships$Min_Wage__ChangeEvent = {
 };
 
 interface SObjectDefinition$Min_Wage__ChangeEvent extends SObjectDefinition<'Min_Wage__ChangeEvent'> {
-    Name: 'Min_Wage__ChangeEvent';
-    Fields: Fields$Min_Wage__ChangeEvent;
-    ParentReferences: ParentReferences$Min_Wage__ChangeEvent;
-    ChildRelationships: ChildRelationships$Min_Wage__ChangeEvent;
-  }
+  Name: 'Min_Wage__ChangeEvent';
+  Fields: Fields$Min_Wage__ChangeEvent;
+  ParentReferences: ParentReferences$Min_Wage__ChangeEvent;
+  ChildRelationships: ChildRelationships$Min_Wage__ChangeEvent;
+}
 
 type Fields$Min_Wage__c = {
   //
@@ -22877,11 +23276,11 @@ type ChildRelationships$Min_Wage__c = {
 };
 
 interface SObjectDefinition$Min_Wage__c extends SObjectDefinition<'Min_Wage__c'> {
-    Name: 'Min_Wage__c';
-    Fields: Fields$Min_Wage__c;
-    ParentReferences: ParentReferences$Min_Wage__c;
-    ChildRelationships: ChildRelationships$Min_Wage__c;
-  }
+  Name: 'Min_Wage__c';
+  Fields: Fields$Min_Wage__c;
+  ParentReferences: ParentReferences$Min_Wage__c;
+  ChildRelationships: ChildRelationships$Min_Wage__c;
+}
 
 type Fields$MobileApplicationDetail = {
   //
@@ -22921,11 +23320,11 @@ type ChildRelationships$MobileApplicationDetail = {
 };
 
 interface SObjectDefinition$MobileApplicationDetail extends SObjectDefinition<'MobileApplicationDetail'> {
-    Name: 'MobileApplicationDetail';
-    Fields: Fields$MobileApplicationDetail;
-    ParentReferences: ParentReferences$MobileApplicationDetail;
-    ChildRelationships: ChildRelationships$MobileApplicationDetail;
-  }
+  Name: 'MobileApplicationDetail';
+  Fields: Fields$MobileApplicationDetail;
+  ParentReferences: ParentReferences$MobileApplicationDetail;
+  ChildRelationships: ChildRelationships$MobileApplicationDetail;
+}
 
 type Fields$MutingPermissionSet = {
   //
@@ -23223,11 +23622,11 @@ type ChildRelationships$MutingPermissionSet = {
 };
 
 interface SObjectDefinition$MutingPermissionSet extends SObjectDefinition<'MutingPermissionSet'> {
-    Name: 'MutingPermissionSet';
-    Fields: Fields$MutingPermissionSet;
-    ParentReferences: ParentReferences$MutingPermissionSet;
-    ChildRelationships: ChildRelationships$MutingPermissionSet;
-  }
+  Name: 'MutingPermissionSet';
+  Fields: Fields$MutingPermissionSet;
+  ParentReferences: ParentReferences$MutingPermissionSet;
+  ChildRelationships: ChildRelationships$MutingPermissionSet;
+}
 
 type Fields$MyDomainDiscoverableLogin = {
   //
@@ -23259,11 +23658,11 @@ type ChildRelationships$MyDomainDiscoverableLogin = {
 };
 
 interface SObjectDefinition$MyDomainDiscoverableLogin extends SObjectDefinition<'MyDomainDiscoverableLogin'> {
-    Name: 'MyDomainDiscoverableLogin';
-    Fields: Fields$MyDomainDiscoverableLogin;
-    ParentReferences: ParentReferences$MyDomainDiscoverableLogin;
-    ChildRelationships: ChildRelationships$MyDomainDiscoverableLogin;
-  }
+  Name: 'MyDomainDiscoverableLogin';
+  Fields: Fields$MyDomainDiscoverableLogin;
+  ParentReferences: ParentReferences$MyDomainDiscoverableLogin;
+  ChildRelationships: ChildRelationships$MyDomainDiscoverableLogin;
+}
 
 type Fields$Name = {
   //
@@ -23300,11 +23699,11 @@ type ChildRelationships$Name = {
 };
 
 interface SObjectDefinition$Name extends SObjectDefinition<'Name'> {
-    Name: 'Name';
-    Fields: Fields$Name;
-    ParentReferences: ParentReferences$Name;
-    ChildRelationships: ChildRelationships$Name;
-  }
+  Name: 'Name';
+  Fields: Fields$Name;
+  ParentReferences: ParentReferences$Name;
+  ChildRelationships: ChildRelationships$Name;
+}
 
 type Fields$NamedCredential = {
   //
@@ -23348,11 +23747,11 @@ type ChildRelationships$NamedCredential = {
 };
 
 interface SObjectDefinition$NamedCredential extends SObjectDefinition<'NamedCredential'> {
-    Name: 'NamedCredential';
-    Fields: Fields$NamedCredential;
-    ParentReferences: ParentReferences$NamedCredential;
-    ChildRelationships: ChildRelationships$NamedCredential;
-  }
+  Name: 'NamedCredential';
+  Fields: Fields$NamedCredential;
+  ParentReferences: ParentReferences$NamedCredential;
+  ChildRelationships: ChildRelationships$NamedCredential;
+}
 
 type Fields$Note = {
   //
@@ -23383,11 +23782,11 @@ type ChildRelationships$Note = {
 };
 
 interface SObjectDefinition$Note extends SObjectDefinition<'Note'> {
-    Name: 'Note';
-    Fields: Fields$Note;
-    ParentReferences: ParentReferences$Note;
-    ChildRelationships: ChildRelationships$Note;
-  }
+  Name: 'Note';
+  Fields: Fields$Note;
+  ParentReferences: ParentReferences$Note;
+  ChildRelationships: ChildRelationships$Note;
+}
 
 type Fields$NoteAndAttachment = {
   //
@@ -23418,11 +23817,11 @@ type ChildRelationships$NoteAndAttachment = {
 };
 
 interface SObjectDefinition$NoteAndAttachment extends SObjectDefinition<'NoteAndAttachment'> {
-    Name: 'NoteAndAttachment';
-    Fields: Fields$NoteAndAttachment;
-    ParentReferences: ParentReferences$NoteAndAttachment;
-    ChildRelationships: ChildRelationships$NoteAndAttachment;
-  }
+  Name: 'NoteAndAttachment';
+  Fields: Fields$NoteAndAttachment;
+  ParentReferences: ParentReferences$NoteAndAttachment;
+  ChildRelationships: ChildRelationships$NoteAndAttachment;
+}
 
 type Fields$OauthCustomScope = {
   //
@@ -23451,11 +23850,11 @@ type ChildRelationships$OauthCustomScope = {
 };
 
 interface SObjectDefinition$OauthCustomScope extends SObjectDefinition<'OauthCustomScope'> {
-    Name: 'OauthCustomScope';
-    Fields: Fields$OauthCustomScope;
-    ParentReferences: ParentReferences$OauthCustomScope;
-    ChildRelationships: ChildRelationships$OauthCustomScope;
-  }
+  Name: 'OauthCustomScope';
+  Fields: Fields$OauthCustomScope;
+  ParentReferences: ParentReferences$OauthCustomScope;
+  ChildRelationships: ChildRelationships$OauthCustomScope;
+}
 
 type Fields$OauthCustomScopeApp = {
   //
@@ -23481,11 +23880,11 @@ type ChildRelationships$OauthCustomScopeApp = {
 };
 
 interface SObjectDefinition$OauthCustomScopeApp extends SObjectDefinition<'OauthCustomScopeApp'> {
-    Name: 'OauthCustomScopeApp';
-    Fields: Fields$OauthCustomScopeApp;
-    ParentReferences: ParentReferences$OauthCustomScopeApp;
-    ChildRelationships: ChildRelationships$OauthCustomScopeApp;
-  }
+  Name: 'OauthCustomScopeApp';
+  Fields: Fields$OauthCustomScopeApp;
+  ParentReferences: ParentReferences$OauthCustomScopeApp;
+  ChildRelationships: ChildRelationships$OauthCustomScopeApp;
+}
 
 type Fields$OauthToken = {
   //
@@ -23512,11 +23911,11 @@ type ChildRelationships$OauthToken = {
 };
 
 interface SObjectDefinition$OauthToken extends SObjectDefinition<'OauthToken'> {
-    Name: 'OauthToken';
-    Fields: Fields$OauthToken;
-    ParentReferences: ParentReferences$OauthToken;
-    ChildRelationships: ChildRelationships$OauthToken;
-  }
+  Name: 'OauthToken';
+  Fields: Fields$OauthToken;
+  ParentReferences: ParentReferences$OauthToken;
+  ChildRelationships: ChildRelationships$OauthToken;
+}
 
 type Fields$ObjectPermissions = {
   //
@@ -23548,11 +23947,11 @@ type ChildRelationships$ObjectPermissions = {
 };
 
 interface SObjectDefinition$ObjectPermissions extends SObjectDefinition<'ObjectPermissions'> {
-    Name: 'ObjectPermissions';
-    Fields: Fields$ObjectPermissions;
-    ParentReferences: ParentReferences$ObjectPermissions;
-    ChildRelationships: ChildRelationships$ObjectPermissions;
-  }
+  Name: 'ObjectPermissions';
+  Fields: Fields$ObjectPermissions;
+  ParentReferences: ParentReferences$ObjectPermissions;
+  ChildRelationships: ChildRelationships$ObjectPermissions;
+}
 
 type Fields$OnboardingMetrics = {
   //
@@ -23580,11 +23979,11 @@ type ChildRelationships$OnboardingMetrics = {
 };
 
 interface SObjectDefinition$OnboardingMetrics extends SObjectDefinition<'OnboardingMetrics'> {
-    Name: 'OnboardingMetrics';
-    Fields: Fields$OnboardingMetrics;
-    ParentReferences: ParentReferences$OnboardingMetrics;
-    ChildRelationships: ChildRelationships$OnboardingMetrics;
-  }
+  Name: 'OnboardingMetrics';
+  Fields: Fields$OnboardingMetrics;
+  ParentReferences: ParentReferences$OnboardingMetrics;
+  ChildRelationships: ChildRelationships$OnboardingMetrics;
+}
 
 type Fields$Onboarding__ChangeEvent = {
   //
@@ -23623,11 +24022,11 @@ type ChildRelationships$Onboarding__ChangeEvent = {
 };
 
 interface SObjectDefinition$Onboarding__ChangeEvent extends SObjectDefinition<'Onboarding__ChangeEvent'> {
-    Name: 'Onboarding__ChangeEvent';
-    Fields: Fields$Onboarding__ChangeEvent;
-    ParentReferences: ParentReferences$Onboarding__ChangeEvent;
-    ChildRelationships: ChildRelationships$Onboarding__ChangeEvent;
-  }
+  Name: 'Onboarding__ChangeEvent';
+  Fields: Fields$Onboarding__ChangeEvent;
+  ParentReferences: ParentReferences$Onboarding__ChangeEvent;
+  ChildRelationships: ChildRelationships$Onboarding__ChangeEvent;
+}
 
 type Fields$Onboarding__c = {
   //
@@ -23693,11 +24092,11 @@ type ChildRelationships$Onboarding__c = {
 };
 
 interface SObjectDefinition$Onboarding__c extends SObjectDefinition<'Onboarding__c'> {
-    Name: 'Onboarding__c';
-    Fields: Fields$Onboarding__c;
-    ParentReferences: ParentReferences$Onboarding__c;
-    ChildRelationships: ChildRelationships$Onboarding__c;
-  }
+  Name: 'Onboarding__c';
+  Fields: Fields$Onboarding__c;
+  ParentReferences: ParentReferences$Onboarding__c;
+  ChildRelationships: ChildRelationships$Onboarding__c;
+}
 
 type Fields$OpenActivity = {
   //
@@ -23775,11 +24174,11 @@ type ChildRelationships$OpenActivity = {
 };
 
 interface SObjectDefinition$OpenActivity extends SObjectDefinition<'OpenActivity'> {
-    Name: 'OpenActivity';
-    Fields: Fields$OpenActivity;
-    ParentReferences: ParentReferences$OpenActivity;
-    ChildRelationships: ChildRelationships$OpenActivity;
-  }
+  Name: 'OpenActivity';
+  Fields: Fields$OpenActivity;
+  ParentReferences: ParentReferences$OpenActivity;
+  ChildRelationships: ChildRelationships$OpenActivity;
+}
 
 type Fields$OperatingHours = {
   //
@@ -23812,17 +24211,18 @@ type ChildRelationships$OperatingHours = {
   FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
   Feeds: SObjectDefinition$OperatingHoursFeed;
   OperatingHoursHolidays: SObjectDefinition$OperatingHoursHoliday;
+  Shares: SObjectDefinition$OperatingHoursShare;
   RecordActions: SObjectDefinition$RecordAction;
   RecordActionHistories: SObjectDefinition$RecordActionHistory;
   TimeSlots: SObjectDefinition$TimeSlot;
 };
 
 interface SObjectDefinition$OperatingHours extends SObjectDefinition<'OperatingHours'> {
-    Name: 'OperatingHours';
-    Fields: Fields$OperatingHours;
-    ParentReferences: ParentReferences$OperatingHours;
-    ChildRelationships: ChildRelationships$OperatingHours;
-  }
+  Name: 'OperatingHours';
+  Fields: Fields$OperatingHours;
+  ParentReferences: ParentReferences$OperatingHours;
+  ChildRelationships: ChildRelationships$OperatingHours;
+}
 
 type Fields$OperatingHoursFeed = {
   //
@@ -23863,11 +24263,11 @@ type ChildRelationships$OperatingHoursFeed = {
 };
 
 interface SObjectDefinition$OperatingHoursFeed extends SObjectDefinition<'OperatingHoursFeed'> {
-    Name: 'OperatingHoursFeed';
-    Fields: Fields$OperatingHoursFeed;
-    ParentReferences: ParentReferences$OperatingHoursFeed;
-    ChildRelationships: ChildRelationships$OperatingHoursFeed;
-  }
+  Name: 'OperatingHoursFeed';
+  Fields: Fields$OperatingHoursFeed;
+  ParentReferences: ParentReferences$OperatingHoursFeed;
+  ChildRelationships: ChildRelationships$OperatingHoursFeed;
+}
 
 type Fields$OperatingHoursHoliday = {
   //
@@ -23912,11 +24312,11 @@ type ChildRelationships$OperatingHoursHoliday = {
 };
 
 interface SObjectDefinition$OperatingHoursHoliday extends SObjectDefinition<'OperatingHoursHoliday'> {
-    Name: 'OperatingHoursHoliday';
-    Fields: Fields$OperatingHoursHoliday;
-    ParentReferences: ParentReferences$OperatingHoursHoliday;
-    ChildRelationships: ChildRelationships$OperatingHoursHoliday;
-  }
+  Name: 'OperatingHoursHoliday';
+  Fields: Fields$OperatingHoursHoliday;
+  ParentReferences: ParentReferences$OperatingHoursHoliday;
+  ChildRelationships: ChildRelationships$OperatingHoursHoliday;
+}
 
 type Fields$OperatingHoursHolidayFeed = {
   //
@@ -23957,11 +24357,41 @@ type ChildRelationships$OperatingHoursHolidayFeed = {
 };
 
 interface SObjectDefinition$OperatingHoursHolidayFeed extends SObjectDefinition<'OperatingHoursHolidayFeed'> {
-    Name: 'OperatingHoursHolidayFeed';
-    Fields: Fields$OperatingHoursHolidayFeed;
-    ParentReferences: ParentReferences$OperatingHoursHolidayFeed;
-    ChildRelationships: ChildRelationships$OperatingHoursHolidayFeed;
-  }
+  Name: 'OperatingHoursHolidayFeed';
+  Fields: Fields$OperatingHoursHolidayFeed;
+  ParentReferences: ParentReferences$OperatingHoursHolidayFeed;
+  ChildRelationships: ChildRelationships$OperatingHoursHolidayFeed;
+}
+
+type Fields$OperatingHoursShare = {
+  //
+  Id: string;
+  ParentId: string;
+  UserOrGroupId: string;
+  AccessLevel: string;
+  RowCause: string | null;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  IsDeleted: boolean;
+};
+
+type ParentReferences$OperatingHoursShare = {
+  //
+  Parent: SObjectDefinition$OperatingHours;
+  UserOrGroup: SObjectDefinition$Name;
+  LastModifiedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$OperatingHoursShare = {
+  //
+};
+
+interface SObjectDefinition$OperatingHoursShare extends SObjectDefinition<'OperatingHoursShare'> {
+  Name: 'OperatingHoursShare';
+  Fields: Fields$OperatingHoursShare;
+  ParentReferences: ParentReferences$OperatingHoursShare;
+  ChildRelationships: ChildRelationships$OperatingHoursShare;
+}
 
 type Fields$Opportunity = {
   //
@@ -24188,6 +24618,7 @@ type Fields$Opportunity = {
   Candidate_Phone_Number__c: string | null;
   External_Tech_Screen_Link__c: string | null;
   Rejection_Stage__c: string | null;
+  Previously_Applied__c: string | null;
   Govt_Agency_Department__c: string | null;
   Contract_Type__c: string | null;
   vfirst__Site_Guest_Access_Helper__c: string | null;
@@ -24218,6 +24649,8 @@ type Fields$Opportunity = {
   INPUT_Opportunity_ID__c: string | null;
   INPUT_Status__c: string | null;
   INPUT_Update_Date__c: DateString | null;
+  Previously_Applied_Notes__c: string | null;
+  Number_of_Applications__c: number | null;
 };
 
 type ParentReferences$Opportunity = {
@@ -24283,11 +24716,11 @@ type ChildRelationships$Opportunity = {
 };
 
 interface SObjectDefinition$Opportunity extends SObjectDefinition<'Opportunity'> {
-    Name: 'Opportunity';
-    Fields: Fields$Opportunity;
-    ParentReferences: ParentReferences$Opportunity;
-    ChildRelationships: ChildRelationships$Opportunity;
-  }
+  Name: 'Opportunity';
+  Fields: Fields$Opportunity;
+  ParentReferences: ParentReferences$Opportunity;
+  ChildRelationships: ChildRelationships$Opportunity;
+}
 
 type Fields$OpportunityChangeEvent = {
   //
@@ -24504,6 +24937,7 @@ type Fields$OpportunityChangeEvent = {
   Candidate_Phone_Number__c: string | null;
   External_Tech_Screen_Link__c: string | null;
   Rejection_Stage__c: string | null;
+  Previously_Applied__c: string | null;
   Govt_Agency_Department__c: string | null;
   Contract_Type__c: string | null;
   vfirst__Site_Guest_Access_Helper__c: string | null;
@@ -24534,6 +24968,8 @@ type Fields$OpportunityChangeEvent = {
   INPUT_Opportunity_ID__c: string | null;
   INPUT_Status__c: string | null;
   INPUT_Update_Date__c: DateString | null;
+  Previously_Applied_Notes__c: string | null;
+  Number_of_Applications__c: number | null;
 };
 
 type ParentReferences$OpportunityChangeEvent = {
@@ -24545,11 +24981,11 @@ type ChildRelationships$OpportunityChangeEvent = {
 };
 
 interface SObjectDefinition$OpportunityChangeEvent extends SObjectDefinition<'OpportunityChangeEvent'> {
-    Name: 'OpportunityChangeEvent';
-    Fields: Fields$OpportunityChangeEvent;
-    ParentReferences: ParentReferences$OpportunityChangeEvent;
-    ChildRelationships: ChildRelationships$OpportunityChangeEvent;
-  }
+  Name: 'OpportunityChangeEvent';
+  Fields: Fields$OpportunityChangeEvent;
+  ParentReferences: ParentReferences$OpportunityChangeEvent;
+  ChildRelationships: ChildRelationships$OpportunityChangeEvent;
+}
 
 type Fields$OpportunityCompetitor = {
   //
@@ -24578,11 +25014,11 @@ type ChildRelationships$OpportunityCompetitor = {
 };
 
 interface SObjectDefinition$OpportunityCompetitor extends SObjectDefinition<'OpportunityCompetitor'> {
-    Name: 'OpportunityCompetitor';
-    Fields: Fields$OpportunityCompetitor;
-    ParentReferences: ParentReferences$OpportunityCompetitor;
-    ChildRelationships: ChildRelationships$OpportunityCompetitor;
-  }
+  Name: 'OpportunityCompetitor';
+  Fields: Fields$OpportunityCompetitor;
+  ParentReferences: ParentReferences$OpportunityCompetitor;
+  ChildRelationships: ChildRelationships$OpportunityCompetitor;
+}
 
 type Fields$OpportunityContactRole = {
   //
@@ -24612,11 +25048,11 @@ type ChildRelationships$OpportunityContactRole = {
 };
 
 interface SObjectDefinition$OpportunityContactRole extends SObjectDefinition<'OpportunityContactRole'> {
-    Name: 'OpportunityContactRole';
-    Fields: Fields$OpportunityContactRole;
-    ParentReferences: ParentReferences$OpportunityContactRole;
-    ChildRelationships: ChildRelationships$OpportunityContactRole;
-  }
+  Name: 'OpportunityContactRole';
+  Fields: Fields$OpportunityContactRole;
+  ParentReferences: ParentReferences$OpportunityContactRole;
+  ChildRelationships: ChildRelationships$OpportunityContactRole;
+}
 
 type Fields$OpportunityContactRoleChangeEvent = {
   //
@@ -24640,12 +25076,13 @@ type ChildRelationships$OpportunityContactRoleChangeEvent = {
   //
 };
 
-interface SObjectDefinition$OpportunityContactRoleChangeEvent extends SObjectDefinition<'OpportunityContactRoleChangeEvent'> {
-    Name: 'OpportunityContactRoleChangeEvent';
-    Fields: Fields$OpportunityContactRoleChangeEvent;
-    ParentReferences: ParentReferences$OpportunityContactRoleChangeEvent;
-    ChildRelationships: ChildRelationships$OpportunityContactRoleChangeEvent;
-  }
+interface SObjectDefinition$OpportunityContactRoleChangeEvent
+  extends SObjectDefinition<'OpportunityContactRoleChangeEvent'> {
+  Name: 'OpportunityContactRoleChangeEvent';
+  Fields: Fields$OpportunityContactRoleChangeEvent;
+  ParentReferences: ParentReferences$OpportunityContactRoleChangeEvent;
+  ChildRelationships: ChildRelationships$OpportunityContactRoleChangeEvent;
+}
 
 type Fields$OpportunityFeed = {
   //
@@ -24686,11 +25123,11 @@ type ChildRelationships$OpportunityFeed = {
 };
 
 interface SObjectDefinition$OpportunityFeed extends SObjectDefinition<'OpportunityFeed'> {
-    Name: 'OpportunityFeed';
-    Fields: Fields$OpportunityFeed;
-    ParentReferences: ParentReferences$OpportunityFeed;
-    ChildRelationships: ChildRelationships$OpportunityFeed;
-  }
+  Name: 'OpportunityFeed';
+  Fields: Fields$OpportunityFeed;
+  ParentReferences: ParentReferences$OpportunityFeed;
+  ChildRelationships: ChildRelationships$OpportunityFeed;
+}
 
 type Fields$OpportunityFieldHistory = {
   //
@@ -24716,11 +25153,11 @@ type ChildRelationships$OpportunityFieldHistory = {
 };
 
 interface SObjectDefinition$OpportunityFieldHistory extends SObjectDefinition<'OpportunityFieldHistory'> {
-    Name: 'OpportunityFieldHistory';
-    Fields: Fields$OpportunityFieldHistory;
-    ParentReferences: ParentReferences$OpportunityFieldHistory;
-    ChildRelationships: ChildRelationships$OpportunityFieldHistory;
-  }
+  Name: 'OpportunityFieldHistory';
+  Fields: Fields$OpportunityFieldHistory;
+  ParentReferences: ParentReferences$OpportunityFieldHistory;
+  ChildRelationships: ChildRelationships$OpportunityFieldHistory;
+}
 
 type Fields$OpportunityHistory = {
   //
@@ -24753,11 +25190,11 @@ type ChildRelationships$OpportunityHistory = {
 };
 
 interface SObjectDefinition$OpportunityHistory extends SObjectDefinition<'OpportunityHistory'> {
-    Name: 'OpportunityHistory';
-    Fields: Fields$OpportunityHistory;
-    ParentReferences: ParentReferences$OpportunityHistory;
-    ChildRelationships: ChildRelationships$OpportunityHistory;
-  }
+  Name: 'OpportunityHistory';
+  Fields: Fields$OpportunityHistory;
+  ParentReferences: ParentReferences$OpportunityHistory;
+  ChildRelationships: ChildRelationships$OpportunityHistory;
+}
 
 type Fields$OpportunityLineItem = {
   //
@@ -24798,11 +25235,11 @@ type ChildRelationships$OpportunityLineItem = {
 };
 
 interface SObjectDefinition$OpportunityLineItem extends SObjectDefinition<'OpportunityLineItem'> {
-    Name: 'OpportunityLineItem';
-    Fields: Fields$OpportunityLineItem;
-    ParentReferences: ParentReferences$OpportunityLineItem;
-    ChildRelationships: ChildRelationships$OpportunityLineItem;
-  }
+  Name: 'OpportunityLineItem';
+  Fields: Fields$OpportunityLineItem;
+  ParentReferences: ParentReferences$OpportunityLineItem;
+  ChildRelationships: ChildRelationships$OpportunityLineItem;
+}
 
 type Fields$OpportunityPartner = {
   //
@@ -24833,11 +25270,11 @@ type ChildRelationships$OpportunityPartner = {
 };
 
 interface SObjectDefinition$OpportunityPartner extends SObjectDefinition<'OpportunityPartner'> {
-    Name: 'OpportunityPartner';
-    Fields: Fields$OpportunityPartner;
-    ParentReferences: ParentReferences$OpportunityPartner;
-    ChildRelationships: ChildRelationships$OpportunityPartner;
-  }
+  Name: 'OpportunityPartner';
+  Fields: Fields$OpportunityPartner;
+  ParentReferences: ParentReferences$OpportunityPartner;
+  ChildRelationships: ChildRelationships$OpportunityPartner;
+}
 
 type Fields$OpportunityShare = {
   //
@@ -24863,11 +25300,11 @@ type ChildRelationships$OpportunityShare = {
 };
 
 interface SObjectDefinition$OpportunityShare extends SObjectDefinition<'OpportunityShare'> {
-    Name: 'OpportunityShare';
-    Fields: Fields$OpportunityShare;
-    ParentReferences: ParentReferences$OpportunityShare;
-    ChildRelationships: ChildRelationships$OpportunityShare;
-  }
+  Name: 'OpportunityShare';
+  Fields: Fields$OpportunityShare;
+  ParentReferences: ParentReferences$OpportunityShare;
+  ChildRelationships: ChildRelationships$OpportunityShare;
+}
 
 type Fields$OpportunityStage = {
   //
@@ -24900,11 +25337,11 @@ type ChildRelationships$OpportunityStage = {
 };
 
 interface SObjectDefinition$OpportunityStage extends SObjectDefinition<'OpportunityStage'> {
-    Name: 'OpportunityStage';
-    Fields: Fields$OpportunityStage;
-    ParentReferences: ParentReferences$OpportunityStage;
-    ChildRelationships: ChildRelationships$OpportunityStage;
-  }
+  Name: 'OpportunityStage';
+  Fields: Fields$OpportunityStage;
+  ParentReferences: ParentReferences$OpportunityStage;
+  ChildRelationships: ChildRelationships$OpportunityStage;
+}
 
 type Fields$OpportunityTeamMember = {
   //
@@ -24938,11 +25375,11 @@ type ChildRelationships$OpportunityTeamMember = {
 };
 
 interface SObjectDefinition$OpportunityTeamMember extends SObjectDefinition<'OpportunityTeamMember'> {
-    Name: 'OpportunityTeamMember';
-    Fields: Fields$OpportunityTeamMember;
-    ParentReferences: ParentReferences$OpportunityTeamMember;
-    ChildRelationships: ChildRelationships$OpportunityTeamMember;
-  }
+  Name: 'OpportunityTeamMember';
+  Fields: Fields$OpportunityTeamMember;
+  ParentReferences: ParentReferences$OpportunityTeamMember;
+  ChildRelationships: ChildRelationships$OpportunityTeamMember;
+}
 
 type Fields$OpportunityTeamMemberHistory = {
   //
@@ -24968,11 +25405,11 @@ type ChildRelationships$OpportunityTeamMemberHistory = {
 };
 
 interface SObjectDefinition$OpportunityTeamMemberHistory extends SObjectDefinition<'OpportunityTeamMemberHistory'> {
-    Name: 'OpportunityTeamMemberHistory';
-    Fields: Fields$OpportunityTeamMemberHistory;
-    ParentReferences: ParentReferences$OpportunityTeamMemberHistory;
-    ChildRelationships: ChildRelationships$OpportunityTeamMemberHistory;
-  }
+  Name: 'OpportunityTeamMemberHistory';
+  Fields: Fields$OpportunityTeamMemberHistory;
+  ParentReferences: ParentReferences$OpportunityTeamMemberHistory;
+  ChildRelationships: ChildRelationships$OpportunityTeamMemberHistory;
+}
 
 type Fields$Order = {
   //
@@ -25073,11 +25510,11 @@ type ChildRelationships$Order = {
 };
 
 interface SObjectDefinition$Order extends SObjectDefinition<'Order'> {
-    Name: 'Order';
-    Fields: Fields$Order;
-    ParentReferences: ParentReferences$Order;
-    ChildRelationships: ChildRelationships$Order;
-  }
+  Name: 'Order';
+  Fields: Fields$Order;
+  ParentReferences: ParentReferences$Order;
+  ChildRelationships: ChildRelationships$Order;
+}
 
 type Fields$OrderChangeEvent = {
   //
@@ -25139,11 +25576,11 @@ type ChildRelationships$OrderChangeEvent = {
 };
 
 interface SObjectDefinition$OrderChangeEvent extends SObjectDefinition<'OrderChangeEvent'> {
-    Name: 'OrderChangeEvent';
-    Fields: Fields$OrderChangeEvent;
-    ParentReferences: ParentReferences$OrderChangeEvent;
-    ChildRelationships: ChildRelationships$OrderChangeEvent;
-  }
+  Name: 'OrderChangeEvent';
+  Fields: Fields$OrderChangeEvent;
+  ParentReferences: ParentReferences$OrderChangeEvent;
+  ChildRelationships: ChildRelationships$OrderChangeEvent;
+}
 
 type Fields$OrderFeed = {
   //
@@ -25184,11 +25621,11 @@ type ChildRelationships$OrderFeed = {
 };
 
 interface SObjectDefinition$OrderFeed extends SObjectDefinition<'OrderFeed'> {
-    Name: 'OrderFeed';
-    Fields: Fields$OrderFeed;
-    ParentReferences: ParentReferences$OrderFeed;
-    ChildRelationships: ChildRelationships$OrderFeed;
-  }
+  Name: 'OrderFeed';
+  Fields: Fields$OrderFeed;
+  ParentReferences: ParentReferences$OrderFeed;
+  ChildRelationships: ChildRelationships$OrderFeed;
+}
 
 type Fields$OrderHistory = {
   //
@@ -25214,11 +25651,11 @@ type ChildRelationships$OrderHistory = {
 };
 
 interface SObjectDefinition$OrderHistory extends SObjectDefinition<'OrderHistory'> {
-    Name: 'OrderHistory';
-    Fields: Fields$OrderHistory;
-    ParentReferences: ParentReferences$OrderHistory;
-    ChildRelationships: ChildRelationships$OrderHistory;
-  }
+  Name: 'OrderHistory';
+  Fields: Fields$OrderHistory;
+  ParentReferences: ParentReferences$OrderHistory;
+  ChildRelationships: ChildRelationships$OrderHistory;
+}
 
 type Fields$OrderItem = {
   //
@@ -25268,11 +25705,11 @@ type ChildRelationships$OrderItem = {
 };
 
 interface SObjectDefinition$OrderItem extends SObjectDefinition<'OrderItem'> {
-    Name: 'OrderItem';
-    Fields: Fields$OrderItem;
-    ParentReferences: ParentReferences$OrderItem;
-    ChildRelationships: ChildRelationships$OrderItem;
-  }
+  Name: 'OrderItem';
+  Fields: Fields$OrderItem;
+  ParentReferences: ParentReferences$OrderItem;
+  ChildRelationships: ChildRelationships$OrderItem;
+}
 
 type Fields$OrderItemChangeEvent = {
   //
@@ -25305,11 +25742,11 @@ type ChildRelationships$OrderItemChangeEvent = {
 };
 
 interface SObjectDefinition$OrderItemChangeEvent extends SObjectDefinition<'OrderItemChangeEvent'> {
-    Name: 'OrderItemChangeEvent';
-    Fields: Fields$OrderItemChangeEvent;
-    ParentReferences: ParentReferences$OrderItemChangeEvent;
-    ChildRelationships: ChildRelationships$OrderItemChangeEvent;
-  }
+  Name: 'OrderItemChangeEvent';
+  Fields: Fields$OrderItemChangeEvent;
+  ParentReferences: ParentReferences$OrderItemChangeEvent;
+  ChildRelationships: ChildRelationships$OrderItemChangeEvent;
+}
 
 type Fields$OrderItemFeed = {
   //
@@ -25350,11 +25787,11 @@ type ChildRelationships$OrderItemFeed = {
 };
 
 interface SObjectDefinition$OrderItemFeed extends SObjectDefinition<'OrderItemFeed'> {
-    Name: 'OrderItemFeed';
-    Fields: Fields$OrderItemFeed;
-    ParentReferences: ParentReferences$OrderItemFeed;
-    ChildRelationships: ChildRelationships$OrderItemFeed;
-  }
+  Name: 'OrderItemFeed';
+  Fields: Fields$OrderItemFeed;
+  ParentReferences: ParentReferences$OrderItemFeed;
+  ChildRelationships: ChildRelationships$OrderItemFeed;
+}
 
 type Fields$OrderItemHistory = {
   //
@@ -25380,11 +25817,11 @@ type ChildRelationships$OrderItemHistory = {
 };
 
 interface SObjectDefinition$OrderItemHistory extends SObjectDefinition<'OrderItemHistory'> {
-    Name: 'OrderItemHistory';
-    Fields: Fields$OrderItemHistory;
-    ParentReferences: ParentReferences$OrderItemHistory;
-    ChildRelationships: ChildRelationships$OrderItemHistory;
-  }
+  Name: 'OrderItemHistory';
+  Fields: Fields$OrderItemHistory;
+  ParentReferences: ParentReferences$OrderItemHistory;
+  ChildRelationships: ChildRelationships$OrderItemHistory;
+}
 
 type Fields$OrderShare = {
   //
@@ -25410,11 +25847,11 @@ type ChildRelationships$OrderShare = {
 };
 
 interface SObjectDefinition$OrderShare extends SObjectDefinition<'OrderShare'> {
-    Name: 'OrderShare';
-    Fields: Fields$OrderShare;
-    ParentReferences: ParentReferences$OrderShare;
-    ChildRelationships: ChildRelationships$OrderShare;
-  }
+  Name: 'OrderShare';
+  Fields: Fields$OrderShare;
+  ParentReferences: ParentReferences$OrderShare;
+  ChildRelationships: ChildRelationships$OrderShare;
+}
 
 type Fields$OrderStatus = {
   //
@@ -25442,11 +25879,11 @@ type ChildRelationships$OrderStatus = {
 };
 
 interface SObjectDefinition$OrderStatus extends SObjectDefinition<'OrderStatus'> {
-    Name: 'OrderStatus';
-    Fields: Fields$OrderStatus;
-    ParentReferences: ParentReferences$OrderStatus;
-    ChildRelationships: ChildRelationships$OrderStatus;
-  }
+  Name: 'OrderStatus';
+  Fields: Fields$OrderStatus;
+  ParentReferences: ParentReferences$OrderStatus;
+  ChildRelationships: ChildRelationships$OrderStatus;
+}
 
 type Fields$OrgLifecycleNotification = {
   //
@@ -25470,11 +25907,11 @@ type ChildRelationships$OrgLifecycleNotification = {
 };
 
 interface SObjectDefinition$OrgLifecycleNotification extends SObjectDefinition<'OrgLifecycleNotification'> {
-    Name: 'OrgLifecycleNotification';
-    Fields: Fields$OrgLifecycleNotification;
-    ParentReferences: ParentReferences$OrgLifecycleNotification;
-    ChildRelationships: ChildRelationships$OrgLifecycleNotification;
-  }
+  Name: 'OrgLifecycleNotification';
+  Fields: Fields$OrgLifecycleNotification;
+  ParentReferences: ParentReferences$OrgLifecycleNotification;
+  ChildRelationships: ChildRelationships$OrgLifecycleNotification;
+}
 
 type Fields$OrgMetric = {
   //
@@ -25504,11 +25941,11 @@ type ChildRelationships$OrgMetric = {
 };
 
 interface SObjectDefinition$OrgMetric extends SObjectDefinition<'OrgMetric'> {
-    Name: 'OrgMetric';
-    Fields: Fields$OrgMetric;
-    ParentReferences: ParentReferences$OrgMetric;
-    ChildRelationships: ChildRelationships$OrgMetric;
-  }
+  Name: 'OrgMetric';
+  Fields: Fields$OrgMetric;
+  ParentReferences: ParentReferences$OrgMetric;
+  ChildRelationships: ChildRelationships$OrgMetric;
+}
 
 type Fields$OrgMetricScanResult = {
   //
@@ -25546,11 +25983,11 @@ type ChildRelationships$OrgMetricScanResult = {
 };
 
 interface SObjectDefinition$OrgMetricScanResult extends SObjectDefinition<'OrgMetricScanResult'> {
-    Name: 'OrgMetricScanResult';
-    Fields: Fields$OrgMetricScanResult;
-    ParentReferences: ParentReferences$OrgMetricScanResult;
-    ChildRelationships: ChildRelationships$OrgMetricScanResult;
-  }
+  Name: 'OrgMetricScanResult';
+  Fields: Fields$OrgMetricScanResult;
+  ParentReferences: ParentReferences$OrgMetricScanResult;
+  ChildRelationships: ChildRelationships$OrgMetricScanResult;
+}
 
 type Fields$OrgMetricScanSummary = {
   //
@@ -25588,11 +26025,11 @@ type ChildRelationships$OrgMetricScanSummary = {
 };
 
 interface SObjectDefinition$OrgMetricScanSummary extends SObjectDefinition<'OrgMetricScanSummary'> {
-    Name: 'OrgMetricScanSummary';
-    Fields: Fields$OrgMetricScanSummary;
-    ParentReferences: ParentReferences$OrgMetricScanSummary;
-    ChildRelationships: ChildRelationships$OrgMetricScanSummary;
-  }
+  Name: 'OrgMetricScanSummary';
+  Fields: Fields$OrgMetricScanSummary;
+  ParentReferences: ParentReferences$OrgMetricScanSummary;
+  ChildRelationships: ChildRelationships$OrgMetricScanSummary;
+}
 
 type Fields$OrgWideEmailAddress = {
   //
@@ -25619,11 +26056,11 @@ type ChildRelationships$OrgWideEmailAddress = {
 };
 
 interface SObjectDefinition$OrgWideEmailAddress extends SObjectDefinition<'OrgWideEmailAddress'> {
-    Name: 'OrgWideEmailAddress';
-    Fields: Fields$OrgWideEmailAddress;
-    ParentReferences: ParentReferences$OrgWideEmailAddress;
-    ChildRelationships: ChildRelationships$OrgWideEmailAddress;
-  }
+  Name: 'OrgWideEmailAddress';
+  Fields: Fields$OrgWideEmailAddress;
+  ParentReferences: ParentReferences$OrgWideEmailAddress;
+  ChildRelationships: ChildRelationships$OrgWideEmailAddress;
+}
 
 type Fields$Organization = {
   //
@@ -25650,6 +26087,7 @@ type Fields$Organization = {
   ReceivesInfoEmails: boolean;
   ReceivesAdminInfoEmails: boolean;
   PreferencesRequireOpportunityProducts: boolean;
+  PreferencesEmailSenderIdCompliance: boolean;
   PreferencesConsentManagementEnabled: boolean;
   PreferencesAutoSelectIndividualOnMerge: boolean;
   PreferencesLightningLoginEnabled: boolean;
@@ -25700,11 +26138,11 @@ type ChildRelationships$Organization = {
 };
 
 interface SObjectDefinition$Organization extends SObjectDefinition<'Organization'> {
-    Name: 'Organization';
-    Fields: Fields$Organization;
-    ParentReferences: ParentReferences$Organization;
-    ChildRelationships: ChildRelationships$Organization;
-  }
+  Name: 'Organization';
+  Fields: Fields$Organization;
+  ParentReferences: ParentReferences$Organization;
+  ChildRelationships: ChildRelationships$Organization;
+}
 
 type Fields$OutgoingEmail = {
   //
@@ -25739,11 +26177,11 @@ type ChildRelationships$OutgoingEmail = {
 };
 
 interface SObjectDefinition$OutgoingEmail extends SObjectDefinition<'OutgoingEmail'> {
-    Name: 'OutgoingEmail';
-    Fields: Fields$OutgoingEmail;
-    ParentReferences: ParentReferences$OutgoingEmail;
-    ChildRelationships: ChildRelationships$OutgoingEmail;
-  }
+  Name: 'OutgoingEmail';
+  Fields: Fields$OutgoingEmail;
+  ParentReferences: ParentReferences$OutgoingEmail;
+  ChildRelationships: ChildRelationships$OutgoingEmail;
+}
 
 type Fields$OutgoingEmailRelation = {
   //
@@ -25764,11 +26202,11 @@ type ChildRelationships$OutgoingEmailRelation = {
 };
 
 interface SObjectDefinition$OutgoingEmailRelation extends SObjectDefinition<'OutgoingEmailRelation'> {
-    Name: 'OutgoingEmailRelation';
-    Fields: Fields$OutgoingEmailRelation;
-    ParentReferences: ParentReferences$OutgoingEmailRelation;
-    ChildRelationships: ChildRelationships$OutgoingEmailRelation;
-  }
+  Name: 'OutgoingEmailRelation';
+  Fields: Fields$OutgoingEmailRelation;
+  ParentReferences: ParentReferences$OutgoingEmailRelation;
+  ChildRelationships: ChildRelationships$OutgoingEmailRelation;
+}
 
 type Fields$OwnedContentDocument = {
   //
@@ -25802,11 +26240,11 @@ type ChildRelationships$OwnedContentDocument = {
 };
 
 interface SObjectDefinition$OwnedContentDocument extends SObjectDefinition<'OwnedContentDocument'> {
-    Name: 'OwnedContentDocument';
-    Fields: Fields$OwnedContentDocument;
-    ParentReferences: ParentReferences$OwnedContentDocument;
-    ChildRelationships: ChildRelationships$OwnedContentDocument;
-  }
+  Name: 'OwnedContentDocument';
+  Fields: Fields$OwnedContentDocument;
+  ParentReferences: ParentReferences$OwnedContentDocument;
+  ChildRelationships: ChildRelationships$OwnedContentDocument;
+}
 
 type Fields$OwnerChangeOptionInfo = {
   //
@@ -25830,11 +26268,11 @@ type ChildRelationships$OwnerChangeOptionInfo = {
 };
 
 interface SObjectDefinition$OwnerChangeOptionInfo extends SObjectDefinition<'OwnerChangeOptionInfo'> {
-    Name: 'OwnerChangeOptionInfo';
-    Fields: Fields$OwnerChangeOptionInfo;
-    ParentReferences: ParentReferences$OwnerChangeOptionInfo;
-    ChildRelationships: ChildRelationships$OwnerChangeOptionInfo;
-  }
+  Name: 'OwnerChangeOptionInfo';
+  Fields: Fields$OwnerChangeOptionInfo;
+  ParentReferences: ParentReferences$OwnerChangeOptionInfo;
+  ChildRelationships: ChildRelationships$OwnerChangeOptionInfo;
+}
 
 type Fields$PTO_Carryover__ChangeEvent = {
   //
@@ -25861,11 +26299,11 @@ type ChildRelationships$PTO_Carryover__ChangeEvent = {
 };
 
 interface SObjectDefinition$PTO_Carryover__ChangeEvent extends SObjectDefinition<'PTO_Carryover__ChangeEvent'> {
-    Name: 'PTO_Carryover__ChangeEvent';
-    Fields: Fields$PTO_Carryover__ChangeEvent;
-    ParentReferences: ParentReferences$PTO_Carryover__ChangeEvent;
-    ChildRelationships: ChildRelationships$PTO_Carryover__ChangeEvent;
-  }
+  Name: 'PTO_Carryover__ChangeEvent';
+  Fields: Fields$PTO_Carryover__ChangeEvent;
+  ParentReferences: ParentReferences$PTO_Carryover__ChangeEvent;
+  ChildRelationships: ChildRelationships$PTO_Carryover__ChangeEvent;
+}
 
 type Fields$PTO_Carryover__c = {
   //
@@ -25917,11 +26355,11 @@ type ChildRelationships$PTO_Carryover__c = {
 };
 
 interface SObjectDefinition$PTO_Carryover__c extends SObjectDefinition<'PTO_Carryover__c'> {
-    Name: 'PTO_Carryover__c';
-    Fields: Fields$PTO_Carryover__c;
-    ParentReferences: ParentReferences$PTO_Carryover__c;
-    ChildRelationships: ChildRelationships$PTO_Carryover__c;
-  }
+  Name: 'PTO_Carryover__c';
+  Fields: Fields$PTO_Carryover__c;
+  ParentReferences: ParentReferences$PTO_Carryover__c;
+  ChildRelationships: ChildRelationships$PTO_Carryover__c;
+}
 
 type Fields$PTO_Request__ChangeEvent = {
   //
@@ -25957,11 +26395,41 @@ type ChildRelationships$PTO_Request__ChangeEvent = {
 };
 
 interface SObjectDefinition$PTO_Request__ChangeEvent extends SObjectDefinition<'PTO_Request__ChangeEvent'> {
-    Name: 'PTO_Request__ChangeEvent';
-    Fields: Fields$PTO_Request__ChangeEvent;
-    ParentReferences: ParentReferences$PTO_Request__ChangeEvent;
-    ChildRelationships: ChildRelationships$PTO_Request__ChangeEvent;
-  }
+  Name: 'PTO_Request__ChangeEvent';
+  Fields: Fields$PTO_Request__ChangeEvent;
+  ParentReferences: ParentReferences$PTO_Request__ChangeEvent;
+  ChildRelationships: ChildRelationships$PTO_Request__ChangeEvent;
+}
+
+type Fields$PTO_Request__History = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  ParentId: string;
+  CreatedById: string;
+  CreatedDate: DateString;
+  Field: string;
+  DataType: string | null;
+  OldValue: string | null;
+  NewValue: string | null;
+};
+
+type ParentReferences$PTO_Request__History = {
+  //
+  Parent: SObjectDefinition$PTO_Request__c;
+  CreatedBy: SObjectDefinition$User;
+};
+
+type ChildRelationships$PTO_Request__History = {
+  //
+};
+
+interface SObjectDefinition$PTO_Request__History extends SObjectDefinition<'PTO_Request__History'> {
+  Name: 'PTO_Request__History';
+  Fields: Fields$PTO_Request__History;
+  ParentReferences: ParentReferences$PTO_Request__History;
+  ChildRelationships: ChildRelationships$PTO_Request__History;
+}
 
 type Fields$PTO_Request__c = {
   //
@@ -26012,6 +26480,7 @@ type ChildRelationships$PTO_Request__c = {
   EventRelations: SObjectDefinition$EventRelation;
   Notes: SObjectDefinition$Note;
   NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  Histories: SObjectDefinition$PTO_Request__History;
   ProcessExceptions: SObjectDefinition$ProcessException;
   ProcessInstances: SObjectDefinition$ProcessInstance;
   ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
@@ -26023,11 +26492,11 @@ type ChildRelationships$PTO_Request__c = {
 };
 
 interface SObjectDefinition$PTO_Request__c extends SObjectDefinition<'PTO_Request__c'> {
-    Name: 'PTO_Request__c';
-    Fields: Fields$PTO_Request__c;
-    ParentReferences: ParentReferences$PTO_Request__c;
-    ChildRelationships: ChildRelationships$PTO_Request__c;
-  }
+  Name: 'PTO_Request__c';
+  Fields: Fields$PTO_Request__c;
+  ParentReferences: ParentReferences$PTO_Request__c;
+  ChildRelationships: ChildRelationships$PTO_Request__c;
+}
 
 type Fields$PackageLicense = {
   //
@@ -26052,11 +26521,11 @@ type ChildRelationships$PackageLicense = {
 };
 
 interface SObjectDefinition$PackageLicense extends SObjectDefinition<'PackageLicense'> {
-    Name: 'PackageLicense';
-    Fields: Fields$PackageLicense;
-    ParentReferences: ParentReferences$PackageLicense;
-    ChildRelationships: ChildRelationships$PackageLicense;
-  }
+  Name: 'PackageLicense';
+  Fields: Fields$PackageLicense;
+  ParentReferences: ParentReferences$PackageLicense;
+  ChildRelationships: ChildRelationships$PackageLicense;
+}
 
 type Fields$Partner = {
   //
@@ -26089,11 +26558,11 @@ type ChildRelationships$Partner = {
 };
 
 interface SObjectDefinition$Partner extends SObjectDefinition<'Partner'> {
-    Name: 'Partner';
-    Fields: Fields$Partner;
-    ParentReferences: ParentReferences$Partner;
-    ChildRelationships: ChildRelationships$Partner;
-  }
+  Name: 'Partner';
+  Fields: Fields$Partner;
+  ParentReferences: ParentReferences$Partner;
+  ChildRelationships: ChildRelationships$Partner;
+}
 
 type Fields$PartnerRole = {
   //
@@ -26120,11 +26589,11 @@ type ChildRelationships$PartnerRole = {
 };
 
 interface SObjectDefinition$PartnerRole extends SObjectDefinition<'PartnerRole'> {
-    Name: 'PartnerRole';
-    Fields: Fields$PartnerRole;
-    ParentReferences: ParentReferences$PartnerRole;
-    ChildRelationships: ChildRelationships$PartnerRole;
-  }
+  Name: 'PartnerRole';
+  Fields: Fields$PartnerRole;
+  ParentReferences: ParentReferences$PartnerRole;
+  ChildRelationships: ChildRelationships$PartnerRole;
+}
 
 type Fields$PartyConsent = {
   //
@@ -26177,11 +26646,11 @@ type ChildRelationships$PartyConsent = {
 };
 
 interface SObjectDefinition$PartyConsent extends SObjectDefinition<'PartyConsent'> {
-    Name: 'PartyConsent';
-    Fields: Fields$PartyConsent;
-    ParentReferences: ParentReferences$PartyConsent;
-    ChildRelationships: ChildRelationships$PartyConsent;
-  }
+  Name: 'PartyConsent';
+  Fields: Fields$PartyConsent;
+  ParentReferences: ParentReferences$PartyConsent;
+  ChildRelationships: ChildRelationships$PartyConsent;
+}
 
 type Fields$PartyConsentChangeEvent = {
   //
@@ -26211,11 +26680,11 @@ type ChildRelationships$PartyConsentChangeEvent = {
 };
 
 interface SObjectDefinition$PartyConsentChangeEvent extends SObjectDefinition<'PartyConsentChangeEvent'> {
-    Name: 'PartyConsentChangeEvent';
-    Fields: Fields$PartyConsentChangeEvent;
-    ParentReferences: ParentReferences$PartyConsentChangeEvent;
-    ChildRelationships: ChildRelationships$PartyConsentChangeEvent;
-  }
+  Name: 'PartyConsentChangeEvent';
+  Fields: Fields$PartyConsentChangeEvent;
+  ParentReferences: ParentReferences$PartyConsentChangeEvent;
+  ChildRelationships: ChildRelationships$PartyConsentChangeEvent;
+}
 
 type Fields$PartyConsentFeed = {
   //
@@ -26256,11 +26725,11 @@ type ChildRelationships$PartyConsentFeed = {
 };
 
 interface SObjectDefinition$PartyConsentFeed extends SObjectDefinition<'PartyConsentFeed'> {
-    Name: 'PartyConsentFeed';
-    Fields: Fields$PartyConsentFeed;
-    ParentReferences: ParentReferences$PartyConsentFeed;
-    ChildRelationships: ChildRelationships$PartyConsentFeed;
-  }
+  Name: 'PartyConsentFeed';
+  Fields: Fields$PartyConsentFeed;
+  ParentReferences: ParentReferences$PartyConsentFeed;
+  ChildRelationships: ChildRelationships$PartyConsentFeed;
+}
 
 type Fields$PartyConsentHistory = {
   //
@@ -26286,11 +26755,11 @@ type ChildRelationships$PartyConsentHistory = {
 };
 
 interface SObjectDefinition$PartyConsentHistory extends SObjectDefinition<'PartyConsentHistory'> {
-    Name: 'PartyConsentHistory';
-    Fields: Fields$PartyConsentHistory;
-    ParentReferences: ParentReferences$PartyConsentHistory;
-    ChildRelationships: ChildRelationships$PartyConsentHistory;
-  }
+  Name: 'PartyConsentHistory';
+  Fields: Fields$PartyConsentHistory;
+  ParentReferences: ParentReferences$PartyConsentHistory;
+  ChildRelationships: ChildRelationships$PartyConsentHistory;
+}
 
 type Fields$PartyConsentShare = {
   //
@@ -26316,11 +26785,11 @@ type ChildRelationships$PartyConsentShare = {
 };
 
 interface SObjectDefinition$PartyConsentShare extends SObjectDefinition<'PartyConsentShare'> {
-    Name: 'PartyConsentShare';
-    Fields: Fields$PartyConsentShare;
-    ParentReferences: ParentReferences$PartyConsentShare;
-    ChildRelationships: ChildRelationships$PartyConsentShare;
-  }
+  Name: 'PartyConsentShare';
+  Fields: Fields$PartyConsentShare;
+  ParentReferences: ParentReferences$PartyConsentShare;
+  ChildRelationships: ChildRelationships$PartyConsentShare;
+}
 
 type Fields$Pay_Period_Year__ChangeEvent = {
   //
@@ -26357,11 +26826,11 @@ type ChildRelationships$Pay_Period_Year__ChangeEvent = {
 };
 
 interface SObjectDefinition$Pay_Period_Year__ChangeEvent extends SObjectDefinition<'Pay_Period_Year__ChangeEvent'> {
-    Name: 'Pay_Period_Year__ChangeEvent';
-    Fields: Fields$Pay_Period_Year__ChangeEvent;
-    ParentReferences: ParentReferences$Pay_Period_Year__ChangeEvent;
-    ChildRelationships: ChildRelationships$Pay_Period_Year__ChangeEvent;
-  }
+  Name: 'Pay_Period_Year__ChangeEvent';
+  Fields: Fields$Pay_Period_Year__ChangeEvent;
+  ParentReferences: ParentReferences$Pay_Period_Year__ChangeEvent;
+  ChildRelationships: ChildRelationships$Pay_Period_Year__ChangeEvent;
+}
 
 type Fields$Pay_Period_Year__c = {
   //
@@ -26424,11 +26893,11 @@ type ChildRelationships$Pay_Period_Year__c = {
 };
 
 interface SObjectDefinition$Pay_Period_Year__c extends SObjectDefinition<'Pay_Period_Year__c'> {
-    Name: 'Pay_Period_Year__c';
-    Fields: Fields$Pay_Period_Year__c;
-    ParentReferences: ParentReferences$Pay_Period_Year__c;
-    ChildRelationships: ChildRelationships$Pay_Period_Year__c;
-  }
+  Name: 'Pay_Period_Year__c';
+  Fields: Fields$Pay_Period_Year__c;
+  ParentReferences: ParentReferences$Pay_Period_Year__c;
+  ChildRelationships: ChildRelationships$Pay_Period_Year__c;
+}
 
 type Fields$Pay_Period__ChangeEvent = {
   //
@@ -26475,11 +26944,11 @@ type ChildRelationships$Pay_Period__ChangeEvent = {
 };
 
 interface SObjectDefinition$Pay_Period__ChangeEvent extends SObjectDefinition<'Pay_Period__ChangeEvent'> {
-    Name: 'Pay_Period__ChangeEvent';
-    Fields: Fields$Pay_Period__ChangeEvent;
-    ParentReferences: ParentReferences$Pay_Period__ChangeEvent;
-    ChildRelationships: ChildRelationships$Pay_Period__ChangeEvent;
-  }
+  Name: 'Pay_Period__ChangeEvent';
+  Fields: Fields$Pay_Period__ChangeEvent;
+  ParentReferences: ParentReferences$Pay_Period__ChangeEvent;
+  ChildRelationships: ChildRelationships$Pay_Period__ChangeEvent;
+}
 
 type Fields$Pay_Period__c = {
   //
@@ -26552,11 +27021,11 @@ type ChildRelationships$Pay_Period__c = {
 };
 
 interface SObjectDefinition$Pay_Period__c extends SObjectDefinition<'Pay_Period__c'> {
-    Name: 'Pay_Period__c';
-    Fields: Fields$Pay_Period__c;
-    ParentReferences: ParentReferences$Pay_Period__c;
-    ChildRelationships: ChildRelationships$Pay_Period__c;
-  }
+  Name: 'Pay_Period__c';
+  Fields: Fields$Pay_Period__c;
+  ParentReferences: ParentReferences$Pay_Period__c;
+  ChildRelationships: ChildRelationships$Pay_Period__c;
+}
 
 type Fields$Payroll_Config__ChangeEvent = {
   //
@@ -26581,11 +27050,11 @@ type ChildRelationships$Payroll_Config__ChangeEvent = {
 };
 
 interface SObjectDefinition$Payroll_Config__ChangeEvent extends SObjectDefinition<'Payroll_Config__ChangeEvent'> {
-    Name: 'Payroll_Config__ChangeEvent';
-    Fields: Fields$Payroll_Config__ChangeEvent;
-    ParentReferences: ParentReferences$Payroll_Config__ChangeEvent;
-    ChildRelationships: ChildRelationships$Payroll_Config__ChangeEvent;
-  }
+  Name: 'Payroll_Config__ChangeEvent';
+  Fields: Fields$Payroll_Config__ChangeEvent;
+  ParentReferences: ParentReferences$Payroll_Config__ChangeEvent;
+  ChildRelationships: ChildRelationships$Payroll_Config__ChangeEvent;
+}
 
 type Fields$Payroll_Config__c = {
   //
@@ -26633,11 +27102,11 @@ type ChildRelationships$Payroll_Config__c = {
 };
 
 interface SObjectDefinition$Payroll_Config__c extends SObjectDefinition<'Payroll_Config__c'> {
-    Name: 'Payroll_Config__c';
-    Fields: Fields$Payroll_Config__c;
-    ParentReferences: ParentReferences$Payroll_Config__c;
-    ChildRelationships: ChildRelationships$Payroll_Config__c;
-  }
+  Name: 'Payroll_Config__c';
+  Fields: Fields$Payroll_Config__c;
+  ParentReferences: ParentReferences$Payroll_Config__c;
+  ChildRelationships: ChildRelationships$Payroll_Config__c;
+}
 
 type Fields$Payroll_Period_Adjustment__ChangeEvent = {
   //
@@ -26665,12 +27134,13 @@ type ChildRelationships$Payroll_Period_Adjustment__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Payroll_Period_Adjustment__ChangeEvent extends SObjectDefinition<'Payroll_Period_Adjustment__ChangeEvent'> {
-    Name: 'Payroll_Period_Adjustment__ChangeEvent';
-    Fields: Fields$Payroll_Period_Adjustment__ChangeEvent;
-    ParentReferences: ParentReferences$Payroll_Period_Adjustment__ChangeEvent;
-    ChildRelationships: ChildRelationships$Payroll_Period_Adjustment__ChangeEvent;
-  }
+interface SObjectDefinition$Payroll_Period_Adjustment__ChangeEvent
+  extends SObjectDefinition<'Payroll_Period_Adjustment__ChangeEvent'> {
+  Name: 'Payroll_Period_Adjustment__ChangeEvent';
+  Fields: Fields$Payroll_Period_Adjustment__ChangeEvent;
+  ParentReferences: ParentReferences$Payroll_Period_Adjustment__ChangeEvent;
+  ChildRelationships: ChildRelationships$Payroll_Period_Adjustment__ChangeEvent;
+}
 
 type Fields$Payroll_Period_Adjustment__c = {
   //
@@ -26723,11 +27193,11 @@ type ChildRelationships$Payroll_Period_Adjustment__c = {
 };
 
 interface SObjectDefinition$Payroll_Period_Adjustment__c extends SObjectDefinition<'Payroll_Period_Adjustment__c'> {
-    Name: 'Payroll_Period_Adjustment__c';
-    Fields: Fields$Payroll_Period_Adjustment__c;
-    ParentReferences: ParentReferences$Payroll_Period_Adjustment__c;
-    ChildRelationships: ChildRelationships$Payroll_Period_Adjustment__c;
-  }
+  Name: 'Payroll_Period_Adjustment__c';
+  Fields: Fields$Payroll_Period_Adjustment__c;
+  ParentReferences: ParentReferences$Payroll_Period_Adjustment__c;
+  ChildRelationships: ChildRelationships$Payroll_Period_Adjustment__c;
+}
 
 type Fields$Payroll_Period_Snapshot__ChangeEvent = {
   //
@@ -26753,12 +27223,13 @@ type ChildRelationships$Payroll_Period_Snapshot__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Payroll_Period_Snapshot__ChangeEvent extends SObjectDefinition<'Payroll_Period_Snapshot__ChangeEvent'> {
-    Name: 'Payroll_Period_Snapshot__ChangeEvent';
-    Fields: Fields$Payroll_Period_Snapshot__ChangeEvent;
-    ParentReferences: ParentReferences$Payroll_Period_Snapshot__ChangeEvent;
-    ChildRelationships: ChildRelationships$Payroll_Period_Snapshot__ChangeEvent;
-  }
+interface SObjectDefinition$Payroll_Period_Snapshot__ChangeEvent
+  extends SObjectDefinition<'Payroll_Period_Snapshot__ChangeEvent'> {
+  Name: 'Payroll_Period_Snapshot__ChangeEvent';
+  Fields: Fields$Payroll_Period_Snapshot__ChangeEvent;
+  ParentReferences: ParentReferences$Payroll_Period_Snapshot__ChangeEvent;
+  ChildRelationships: ChildRelationships$Payroll_Period_Snapshot__ChangeEvent;
+}
 
 type Fields$Payroll_Period_Snapshot__c = {
   //
@@ -26809,11 +27280,11 @@ type ChildRelationships$Payroll_Period_Snapshot__c = {
 };
 
 interface SObjectDefinition$Payroll_Period_Snapshot__c extends SObjectDefinition<'Payroll_Period_Snapshot__c'> {
-    Name: 'Payroll_Period_Snapshot__c';
-    Fields: Fields$Payroll_Period_Snapshot__c;
-    ParentReferences: ParentReferences$Payroll_Period_Snapshot__c;
-    ChildRelationships: ChildRelationships$Payroll_Period_Snapshot__c;
-  }
+  Name: 'Payroll_Period_Snapshot__c';
+  Fields: Fields$Payroll_Period_Snapshot__c;
+  ParentReferences: ParentReferences$Payroll_Period_Snapshot__c;
+  ChildRelationships: ChildRelationships$Payroll_Period_Snapshot__c;
+}
 
 type Fields$Payroll_Period__ChangeEvent = {
   //
@@ -26838,11 +27309,11 @@ type ChildRelationships$Payroll_Period__ChangeEvent = {
 };
 
 interface SObjectDefinition$Payroll_Period__ChangeEvent extends SObjectDefinition<'Payroll_Period__ChangeEvent'> {
-    Name: 'Payroll_Period__ChangeEvent';
-    Fields: Fields$Payroll_Period__ChangeEvent;
-    ParentReferences: ParentReferences$Payroll_Period__ChangeEvent;
-    ChildRelationships: ChildRelationships$Payroll_Period__ChangeEvent;
-  }
+  Name: 'Payroll_Period__ChangeEvent';
+  Fields: Fields$Payroll_Period__ChangeEvent;
+  ParentReferences: ParentReferences$Payroll_Period__ChangeEvent;
+  ChildRelationships: ChildRelationships$Payroll_Period__ChangeEvent;
+}
 
 type Fields$Payroll_Period__c = {
   //
@@ -26892,11 +27363,11 @@ type ChildRelationships$Payroll_Period__c = {
 };
 
 interface SObjectDefinition$Payroll_Period__c extends SObjectDefinition<'Payroll_Period__c'> {
-    Name: 'Payroll_Period__c';
-    Fields: Fields$Payroll_Period__c;
-    ParentReferences: ParentReferences$Payroll_Period__c;
-    ChildRelationships: ChildRelationships$Payroll_Period__c;
-  }
+  Name: 'Payroll_Period__c';
+  Fields: Fields$Payroll_Period__c;
+  ParentReferences: ParentReferences$Payroll_Period__c;
+  ChildRelationships: ChildRelationships$Payroll_Period__c;
+}
 
 type Fields$Period = {
   //
@@ -26923,11 +27394,11 @@ type ChildRelationships$Period = {
 };
 
 interface SObjectDefinition$Period extends SObjectDefinition<'Period'> {
-    Name: 'Period';
-    Fields: Fields$Period;
-    ParentReferences: ParentReferences$Period;
-    ChildRelationships: ChildRelationships$Period;
-  }
+  Name: 'Period';
+  Fields: Fields$Period;
+  ParentReferences: ParentReferences$Period;
+  ChildRelationships: ChildRelationships$Period;
+}
 
 type Fields$PermissionSet = {
   //
@@ -27241,11 +27712,11 @@ type ChildRelationships$PermissionSet = {
 };
 
 interface SObjectDefinition$PermissionSet extends SObjectDefinition<'PermissionSet'> {
-    Name: 'PermissionSet';
-    Fields: Fields$PermissionSet;
-    ParentReferences: ParentReferences$PermissionSet;
-    ChildRelationships: ChildRelationships$PermissionSet;
-  }
+  Name: 'PermissionSet';
+  Fields: Fields$PermissionSet;
+  ParentReferences: ParentReferences$PermissionSet;
+  ChildRelationships: ChildRelationships$PermissionSet;
+}
 
 type Fields$PermissionSetAssignment = {
   //
@@ -27268,11 +27739,11 @@ type ChildRelationships$PermissionSetAssignment = {
 };
 
 interface SObjectDefinition$PermissionSetAssignment extends SObjectDefinition<'PermissionSetAssignment'> {
-    Name: 'PermissionSetAssignment';
-    Fields: Fields$PermissionSetAssignment;
-    ParentReferences: ParentReferences$PermissionSetAssignment;
-    ChildRelationships: ChildRelationships$PermissionSetAssignment;
-  }
+  Name: 'PermissionSetAssignment';
+  Fields: Fields$PermissionSetAssignment;
+  ParentReferences: ParentReferences$PermissionSetAssignment;
+  ChildRelationships: ChildRelationships$PermissionSetAssignment;
+}
 
 type Fields$PermissionSetGroup = {
   //
@@ -27304,11 +27775,11 @@ type ChildRelationships$PermissionSetGroup = {
 };
 
 interface SObjectDefinition$PermissionSetGroup extends SObjectDefinition<'PermissionSetGroup'> {
-    Name: 'PermissionSetGroup';
-    Fields: Fields$PermissionSetGroup;
-    ParentReferences: ParentReferences$PermissionSetGroup;
-    ChildRelationships: ChildRelationships$PermissionSetGroup;
-  }
+  Name: 'PermissionSetGroup';
+  Fields: Fields$PermissionSetGroup;
+  ParentReferences: ParentReferences$PermissionSetGroup;
+  ChildRelationships: ChildRelationships$PermissionSetGroup;
+}
 
 type Fields$PermissionSetGroupComponent = {
   //
@@ -27336,11 +27807,11 @@ type ChildRelationships$PermissionSetGroupComponent = {
 };
 
 interface SObjectDefinition$PermissionSetGroupComponent extends SObjectDefinition<'PermissionSetGroupComponent'> {
-    Name: 'PermissionSetGroupComponent';
-    Fields: Fields$PermissionSetGroupComponent;
-    ParentReferences: ParentReferences$PermissionSetGroupComponent;
-    ChildRelationships: ChildRelationships$PermissionSetGroupComponent;
-  }
+  Name: 'PermissionSetGroupComponent';
+  Fields: Fields$PermissionSetGroupComponent;
+  ParentReferences: ParentReferences$PermissionSetGroupComponent;
+  ChildRelationships: ChildRelationships$PermissionSetGroupComponent;
+}
 
 type Fields$PermissionSetLicense = {
   //
@@ -27645,11 +28116,11 @@ type ChildRelationships$PermissionSetLicense = {
 };
 
 interface SObjectDefinition$PermissionSetLicense extends SObjectDefinition<'PermissionSetLicense'> {
-    Name: 'PermissionSetLicense';
-    Fields: Fields$PermissionSetLicense;
-    ParentReferences: ParentReferences$PermissionSetLicense;
-    ChildRelationships: ChildRelationships$PermissionSetLicense;
-  }
+  Name: 'PermissionSetLicense';
+  Fields: Fields$PermissionSetLicense;
+  ParentReferences: ParentReferences$PermissionSetLicense;
+  ChildRelationships: ChildRelationships$PermissionSetLicense;
+}
 
 type Fields$PermissionSetLicenseAssign = {
   //
@@ -27677,11 +28148,11 @@ type ChildRelationships$PermissionSetLicenseAssign = {
 };
 
 interface SObjectDefinition$PermissionSetLicenseAssign extends SObjectDefinition<'PermissionSetLicenseAssign'> {
-    Name: 'PermissionSetLicenseAssign';
-    Fields: Fields$PermissionSetLicenseAssign;
-    ParentReferences: ParentReferences$PermissionSetLicenseAssign;
-    ChildRelationships: ChildRelationships$PermissionSetLicenseAssign;
-  }
+  Name: 'PermissionSetLicenseAssign';
+  Fields: Fields$PermissionSetLicenseAssign;
+  ParentReferences: ParentReferences$PermissionSetLicenseAssign;
+  ChildRelationships: ChildRelationships$PermissionSetLicenseAssign;
+}
 
 type Fields$PermissionSetTabSetting = {
   //
@@ -27702,11 +28173,11 @@ type ChildRelationships$PermissionSetTabSetting = {
 };
 
 interface SObjectDefinition$PermissionSetTabSetting extends SObjectDefinition<'PermissionSetTabSetting'> {
-    Name: 'PermissionSetTabSetting';
-    Fields: Fields$PermissionSetTabSetting;
-    ParentReferences: ParentReferences$PermissionSetTabSetting;
-    ChildRelationships: ChildRelationships$PermissionSetTabSetting;
-  }
+  Name: 'PermissionSetTabSetting';
+  Fields: Fields$PermissionSetTabSetting;
+  ParentReferences: ParentReferences$PermissionSetTabSetting;
+  ChildRelationships: ChildRelationships$PermissionSetTabSetting;
+}
 
 type Fields$PicklistValueInfo = {
   //
@@ -27729,11 +28200,11 @@ type ChildRelationships$PicklistValueInfo = {
 };
 
 interface SObjectDefinition$PicklistValueInfo extends SObjectDefinition<'PicklistValueInfo'> {
-    Name: 'PicklistValueInfo';
-    Fields: Fields$PicklistValueInfo;
-    ParentReferences: ParentReferences$PicklistValueInfo;
-    ChildRelationships: ChildRelationships$PicklistValueInfo;
-  }
+  Name: 'PicklistValueInfo';
+  Fields: Fields$PicklistValueInfo;
+  ParentReferences: ParentReferences$PicklistValueInfo;
+  ChildRelationships: ChildRelationships$PicklistValueInfo;
+}
 
 type Fields$PlatformAction = {
   //
@@ -27780,11 +28251,11 @@ type ChildRelationships$PlatformAction = {
 };
 
 interface SObjectDefinition$PlatformAction extends SObjectDefinition<'PlatformAction'> {
-    Name: 'PlatformAction';
-    Fields: Fields$PlatformAction;
-    ParentReferences: ParentReferences$PlatformAction;
-    ChildRelationships: ChildRelationships$PlatformAction;
-  }
+  Name: 'PlatformAction';
+  Fields: Fields$PlatformAction;
+  ParentReferences: ParentReferences$PlatformAction;
+  ChildRelationships: ChildRelationships$PlatformAction;
+}
 
 type Fields$PlatformCachePartition = {
   //
@@ -27815,11 +28286,11 @@ type ChildRelationships$PlatformCachePartition = {
 };
 
 interface SObjectDefinition$PlatformCachePartition extends SObjectDefinition<'PlatformCachePartition'> {
-    Name: 'PlatformCachePartition';
-    Fields: Fields$PlatformCachePartition;
-    ParentReferences: ParentReferences$PlatformCachePartition;
-    ChildRelationships: ChildRelationships$PlatformCachePartition;
-  }
+  Name: 'PlatformCachePartition';
+  Fields: Fields$PlatformCachePartition;
+  ParentReferences: ParentReferences$PlatformCachePartition;
+  ChildRelationships: ChildRelationships$PlatformCachePartition;
+}
 
 type Fields$PlatformCachePartitionType = {
   //
@@ -27850,11 +28321,11 @@ type ChildRelationships$PlatformCachePartitionType = {
 };
 
 interface SObjectDefinition$PlatformCachePartitionType extends SObjectDefinition<'PlatformCachePartitionType'> {
-    Name: 'PlatformCachePartitionType';
-    Fields: Fields$PlatformCachePartitionType;
-    ParentReferences: ParentReferences$PlatformCachePartitionType;
-    ChildRelationships: ChildRelationships$PlatformCachePartitionType;
-  }
+  Name: 'PlatformCachePartitionType';
+  Fields: Fields$PlatformCachePartitionType;
+  ParentReferences: ParentReferences$PlatformCachePartitionType;
+  ChildRelationships: ChildRelationships$PlatformCachePartitionType;
+}
 
 type Fields$PlatformEventUsageMetric = {
   //
@@ -27875,11 +28346,11 @@ type ChildRelationships$PlatformEventUsageMetric = {
 };
 
 interface SObjectDefinition$PlatformEventUsageMetric extends SObjectDefinition<'PlatformEventUsageMetric'> {
-    Name: 'PlatformEventUsageMetric';
-    Fields: Fields$PlatformEventUsageMetric;
-    ParentReferences: ParentReferences$PlatformEventUsageMetric;
-    ChildRelationships: ChildRelationships$PlatformEventUsageMetric;
-  }
+  Name: 'PlatformEventUsageMetric';
+  Fields: Fields$PlatformEventUsageMetric;
+  ParentReferences: ParentReferences$PlatformEventUsageMetric;
+  ChildRelationships: ChildRelationships$PlatformEventUsageMetric;
+}
 
 type Fields$PlatformStatusAlertEvent = {
   //
@@ -27913,11 +28384,11 @@ type ChildRelationships$PlatformStatusAlertEvent = {
 };
 
 interface SObjectDefinition$PlatformStatusAlertEvent extends SObjectDefinition<'PlatformStatusAlertEvent'> {
-    Name: 'PlatformStatusAlertEvent';
-    Fields: Fields$PlatformStatusAlertEvent;
-    ParentReferences: ParentReferences$PlatformStatusAlertEvent;
-    ChildRelationships: ChildRelationships$PlatformStatusAlertEvent;
-  }
+  Name: 'PlatformStatusAlertEvent';
+  Fields: Fields$PlatformStatusAlertEvent;
+  ParentReferences: ParentReferences$PlatformStatusAlertEvent;
+  ChildRelationships: ChildRelationships$PlatformStatusAlertEvent;
+}
 
 type Fields$Portal_User__ChangeEvent = {
   //
@@ -27956,11 +28427,11 @@ type ChildRelationships$Portal_User__ChangeEvent = {
 };
 
 interface SObjectDefinition$Portal_User__ChangeEvent extends SObjectDefinition<'Portal_User__ChangeEvent'> {
-    Name: 'Portal_User__ChangeEvent';
-    Fields: Fields$Portal_User__ChangeEvent;
-    ParentReferences: ParentReferences$Portal_User__ChangeEvent;
-    ChildRelationships: ChildRelationships$Portal_User__ChangeEvent;
-  }
+  Name: 'Portal_User__ChangeEvent';
+  Fields: Fields$Portal_User__ChangeEvent;
+  ParentReferences: ParentReferences$Portal_User__ChangeEvent;
+  ChildRelationships: ChildRelationships$Portal_User__ChangeEvent;
+}
 
 type Fields$Portal_User__c = {
   //
@@ -28025,11 +28496,11 @@ type ChildRelationships$Portal_User__c = {
 };
 
 interface SObjectDefinition$Portal_User__c extends SObjectDefinition<'Portal_User__c'> {
-    Name: 'Portal_User__c';
-    Fields: Fields$Portal_User__c;
-    ParentReferences: ParentReferences$Portal_User__c;
-    ChildRelationships: ChildRelationships$Portal_User__c;
-  }
+  Name: 'Portal_User__c';
+  Fields: Fields$Portal_User__c;
+  ParentReferences: ParentReferences$Portal_User__c;
+  ChildRelationships: ChildRelationships$Portal_User__c;
+}
 
 type Fields$Pricebook2 = {
   //
@@ -28068,11 +28539,11 @@ type ChildRelationships$Pricebook2 = {
 };
 
 interface SObjectDefinition$Pricebook2 extends SObjectDefinition<'Pricebook2'> {
-    Name: 'Pricebook2';
-    Fields: Fields$Pricebook2;
-    ParentReferences: ParentReferences$Pricebook2;
-    ChildRelationships: ChildRelationships$Pricebook2;
-  }
+  Name: 'Pricebook2';
+  Fields: Fields$Pricebook2;
+  ParentReferences: ParentReferences$Pricebook2;
+  ChildRelationships: ChildRelationships$Pricebook2;
+}
 
 type Fields$Pricebook2ChangeEvent = {
   //
@@ -28099,11 +28570,11 @@ type ChildRelationships$Pricebook2ChangeEvent = {
 };
 
 interface SObjectDefinition$Pricebook2ChangeEvent extends SObjectDefinition<'Pricebook2ChangeEvent'> {
-    Name: 'Pricebook2ChangeEvent';
-    Fields: Fields$Pricebook2ChangeEvent;
-    ParentReferences: ParentReferences$Pricebook2ChangeEvent;
-    ChildRelationships: ChildRelationships$Pricebook2ChangeEvent;
-  }
+  Name: 'Pricebook2ChangeEvent';
+  Fields: Fields$Pricebook2ChangeEvent;
+  ParentReferences: ParentReferences$Pricebook2ChangeEvent;
+  ChildRelationships: ChildRelationships$Pricebook2ChangeEvent;
+}
 
 type Fields$Pricebook2History = {
   //
@@ -28129,11 +28600,11 @@ type ChildRelationships$Pricebook2History = {
 };
 
 interface SObjectDefinition$Pricebook2History extends SObjectDefinition<'Pricebook2History'> {
-    Name: 'Pricebook2History';
-    Fields: Fields$Pricebook2History;
-    ParentReferences: ParentReferences$Pricebook2History;
-    ChildRelationships: ChildRelationships$Pricebook2History;
-  }
+  Name: 'Pricebook2History';
+  Fields: Fields$Pricebook2History;
+  ParentReferences: ParentReferences$Pricebook2History;
+  ChildRelationships: ChildRelationships$Pricebook2History;
+}
 
 type Fields$PricebookEntry = {
   //
@@ -28173,11 +28644,11 @@ type ChildRelationships$PricebookEntry = {
 };
 
 interface SObjectDefinition$PricebookEntry extends SObjectDefinition<'PricebookEntry'> {
-    Name: 'PricebookEntry';
-    Fields: Fields$PricebookEntry;
-    ParentReferences: ParentReferences$PricebookEntry;
-    ChildRelationships: ChildRelationships$PricebookEntry;
-  }
+  Name: 'PricebookEntry';
+  Fields: Fields$PricebookEntry;
+  ParentReferences: ParentReferences$PricebookEntry;
+  ChildRelationships: ChildRelationships$PricebookEntry;
+}
 
 type Fields$PricebookEntryHistory = {
   //
@@ -28203,11 +28674,11 @@ type ChildRelationships$PricebookEntryHistory = {
 };
 
 interface SObjectDefinition$PricebookEntryHistory extends SObjectDefinition<'PricebookEntryHistory'> {
-    Name: 'PricebookEntryHistory';
-    Fields: Fields$PricebookEntryHistory;
-    ParentReferences: ParentReferences$PricebookEntryHistory;
-    ChildRelationships: ChildRelationships$PricebookEntryHistory;
-  }
+  Name: 'PricebookEntryHistory';
+  Fields: Fields$PricebookEntryHistory;
+  ParentReferences: ParentReferences$PricebookEntryHistory;
+  ChildRelationships: ChildRelationships$PricebookEntryHistory;
+}
 
 type Fields$ProcessDefinition = {
   //
@@ -28237,11 +28708,11 @@ type ChildRelationships$ProcessDefinition = {
 };
 
 interface SObjectDefinition$ProcessDefinition extends SObjectDefinition<'ProcessDefinition'> {
-    Name: 'ProcessDefinition';
-    Fields: Fields$ProcessDefinition;
-    ParentReferences: ParentReferences$ProcessDefinition;
-    ChildRelationships: ChildRelationships$ProcessDefinition;
-  }
+  Name: 'ProcessDefinition';
+  Fields: Fields$ProcessDefinition;
+  ParentReferences: ParentReferences$ProcessDefinition;
+  ChildRelationships: ChildRelationships$ProcessDefinition;
+}
 
 type Fields$ProcessException = {
   //
@@ -28293,11 +28764,11 @@ type ChildRelationships$ProcessException = {
 };
 
 interface SObjectDefinition$ProcessException extends SObjectDefinition<'ProcessException'> {
-    Name: 'ProcessException';
-    Fields: Fields$ProcessException;
-    ParentReferences: ParentReferences$ProcessException;
-    ChildRelationships: ChildRelationships$ProcessException;
-  }
+  Name: 'ProcessException';
+  Fields: Fields$ProcessException;
+  ParentReferences: ParentReferences$ProcessException;
+  ChildRelationships: ChildRelationships$ProcessException;
+}
 
 type Fields$ProcessExceptionEvent = {
   //
@@ -28325,11 +28796,11 @@ type ChildRelationships$ProcessExceptionEvent = {
 };
 
 interface SObjectDefinition$ProcessExceptionEvent extends SObjectDefinition<'ProcessExceptionEvent'> {
-    Name: 'ProcessExceptionEvent';
-    Fields: Fields$ProcessExceptionEvent;
-    ParentReferences: ParentReferences$ProcessExceptionEvent;
-    ChildRelationships: ChildRelationships$ProcessExceptionEvent;
-  }
+  Name: 'ProcessExceptionEvent';
+  Fields: Fields$ProcessExceptionEvent;
+  ParentReferences: ParentReferences$ProcessExceptionEvent;
+  ChildRelationships: ChildRelationships$ProcessExceptionEvent;
+}
 
 type Fields$ProcessExceptionShare = {
   //
@@ -28355,11 +28826,11 @@ type ChildRelationships$ProcessExceptionShare = {
 };
 
 interface SObjectDefinition$ProcessExceptionShare extends SObjectDefinition<'ProcessExceptionShare'> {
-    Name: 'ProcessExceptionShare';
-    Fields: Fields$ProcessExceptionShare;
-    ParentReferences: ParentReferences$ProcessExceptionShare;
-    ChildRelationships: ChildRelationships$ProcessExceptionShare;
-  }
+  Name: 'ProcessExceptionShare';
+  Fields: Fields$ProcessExceptionShare;
+  ParentReferences: ParentReferences$ProcessExceptionShare;
+  ChildRelationships: ChildRelationships$ProcessExceptionShare;
+}
 
 type Fields$ProcessInstance = {
   //
@@ -28400,11 +28871,11 @@ type ChildRelationships$ProcessInstance = {
 };
 
 interface SObjectDefinition$ProcessInstance extends SObjectDefinition<'ProcessInstance'> {
-    Name: 'ProcessInstance';
-    Fields: Fields$ProcessInstance;
-    ParentReferences: ParentReferences$ProcessInstance;
-    ChildRelationships: ChildRelationships$ProcessInstance;
-  }
+  Name: 'ProcessInstance';
+  Fields: Fields$ProcessInstance;
+  ParentReferences: ParentReferences$ProcessInstance;
+  ChildRelationships: ChildRelationships$ProcessInstance;
+}
 
 type Fields$ProcessInstanceHistory = {
   //
@@ -28442,11 +28913,11 @@ type ChildRelationships$ProcessInstanceHistory = {
 };
 
 interface SObjectDefinition$ProcessInstanceHistory extends SObjectDefinition<'ProcessInstanceHistory'> {
-    Name: 'ProcessInstanceHistory';
-    Fields: Fields$ProcessInstanceHistory;
-    ParentReferences: ParentReferences$ProcessInstanceHistory;
-    ChildRelationships: ChildRelationships$ProcessInstanceHistory;
-  }
+  Name: 'ProcessInstanceHistory';
+  Fields: Fields$ProcessInstanceHistory;
+  ParentReferences: ParentReferences$ProcessInstanceHistory;
+  ChildRelationships: ChildRelationships$ProcessInstanceHistory;
+}
 
 type Fields$ProcessInstanceNode = {
   //
@@ -28482,11 +28953,11 @@ type ChildRelationships$ProcessInstanceNode = {
 };
 
 interface SObjectDefinition$ProcessInstanceNode extends SObjectDefinition<'ProcessInstanceNode'> {
-    Name: 'ProcessInstanceNode';
-    Fields: Fields$ProcessInstanceNode;
-    ParentReferences: ParentReferences$ProcessInstanceNode;
-    ChildRelationships: ChildRelationships$ProcessInstanceNode;
-  }
+  Name: 'ProcessInstanceNode';
+  Fields: Fields$ProcessInstanceNode;
+  ParentReferences: ParentReferences$ProcessInstanceNode;
+  ChildRelationships: ChildRelationships$ProcessInstanceNode;
+}
 
 type Fields$ProcessInstanceStep = {
   //
@@ -28518,11 +28989,11 @@ type ChildRelationships$ProcessInstanceStep = {
 };
 
 interface SObjectDefinition$ProcessInstanceStep extends SObjectDefinition<'ProcessInstanceStep'> {
-    Name: 'ProcessInstanceStep';
-    Fields: Fields$ProcessInstanceStep;
-    ParentReferences: ParentReferences$ProcessInstanceStep;
-    ChildRelationships: ChildRelationships$ProcessInstanceStep;
-  }
+  Name: 'ProcessInstanceStep';
+  Fields: Fields$ProcessInstanceStep;
+  ParentReferences: ParentReferences$ProcessInstanceStep;
+  ChildRelationships: ChildRelationships$ProcessInstanceStep;
+}
 
 type Fields$ProcessInstanceWorkitem = {
   //
@@ -28552,11 +29023,11 @@ type ChildRelationships$ProcessInstanceWorkitem = {
 };
 
 interface SObjectDefinition$ProcessInstanceWorkitem extends SObjectDefinition<'ProcessInstanceWorkitem'> {
-    Name: 'ProcessInstanceWorkitem';
-    Fields: Fields$ProcessInstanceWorkitem;
-    ParentReferences: ParentReferences$ProcessInstanceWorkitem;
-    ChildRelationships: ChildRelationships$ProcessInstanceWorkitem;
-  }
+  Name: 'ProcessInstanceWorkitem';
+  Fields: Fields$ProcessInstanceWorkitem;
+  ParentReferences: ParentReferences$ProcessInstanceWorkitem;
+  ChildRelationships: ChildRelationships$ProcessInstanceWorkitem;
+}
 
 type Fields$ProcessNode = {
   //
@@ -28578,11 +29049,11 @@ type ChildRelationships$ProcessNode = {
 };
 
 interface SObjectDefinition$ProcessNode extends SObjectDefinition<'ProcessNode'> {
-    Name: 'ProcessNode';
-    Fields: Fields$ProcessNode;
-    ParentReferences: ParentReferences$ProcessNode;
-    ChildRelationships: ChildRelationships$ProcessNode;
-  }
+  Name: 'ProcessNode';
+  Fields: Fields$ProcessNode;
+  ParentReferences: ParentReferences$ProcessNode;
+  ChildRelationships: ChildRelationships$ProcessNode;
+}
 
 type Fields$Product2 = {
   //
@@ -28643,11 +29114,11 @@ type ChildRelationships$Product2 = {
 };
 
 interface SObjectDefinition$Product2 extends SObjectDefinition<'Product2'> {
-    Name: 'Product2';
-    Fields: Fields$Product2;
-    ParentReferences: ParentReferences$Product2;
-    ChildRelationships: ChildRelationships$Product2;
-  }
+  Name: 'Product2';
+  Fields: Fields$Product2;
+  ParentReferences: ParentReferences$Product2;
+  ChildRelationships: ChildRelationships$Product2;
+}
 
 type Fields$Product2ChangeEvent = {
   //
@@ -28680,11 +29151,11 @@ type ChildRelationships$Product2ChangeEvent = {
 };
 
 interface SObjectDefinition$Product2ChangeEvent extends SObjectDefinition<'Product2ChangeEvent'> {
-    Name: 'Product2ChangeEvent';
-    Fields: Fields$Product2ChangeEvent;
-    ParentReferences: ParentReferences$Product2ChangeEvent;
-    ChildRelationships: ChildRelationships$Product2ChangeEvent;
-  }
+  Name: 'Product2ChangeEvent';
+  Fields: Fields$Product2ChangeEvent;
+  ParentReferences: ParentReferences$Product2ChangeEvent;
+  ChildRelationships: ChildRelationships$Product2ChangeEvent;
+}
 
 type Fields$Product2Feed = {
   //
@@ -28725,11 +29196,11 @@ type ChildRelationships$Product2Feed = {
 };
 
 interface SObjectDefinition$Product2Feed extends SObjectDefinition<'Product2Feed'> {
-    Name: 'Product2Feed';
-    Fields: Fields$Product2Feed;
-    ParentReferences: ParentReferences$Product2Feed;
-    ChildRelationships: ChildRelationships$Product2Feed;
-  }
+  Name: 'Product2Feed';
+  Fields: Fields$Product2Feed;
+  ParentReferences: ParentReferences$Product2Feed;
+  ChildRelationships: ChildRelationships$Product2Feed;
+}
 
 type Fields$Product2History = {
   //
@@ -28755,11 +29226,11 @@ type ChildRelationships$Product2History = {
 };
 
 interface SObjectDefinition$Product2History extends SObjectDefinition<'Product2History'> {
-    Name: 'Product2History';
-    Fields: Fields$Product2History;
-    ParentReferences: ParentReferences$Product2History;
-    ChildRelationships: ChildRelationships$Product2History;
-  }
+  Name: 'Product2History';
+  Fields: Fields$Product2History;
+  ParentReferences: ParentReferences$Product2History;
+  ChildRelationships: ChildRelationships$Product2History;
+}
 
 type Fields$Profile = {
   //
@@ -29061,11 +29532,11 @@ type ChildRelationships$Profile = {
 };
 
 interface SObjectDefinition$Profile extends SObjectDefinition<'Profile'> {
-    Name: 'Profile';
-    Fields: Fields$Profile;
-    ParentReferences: ParentReferences$Profile;
-    ChildRelationships: ChildRelationships$Profile;
-  }
+  Name: 'Profile';
+  Fields: Fields$Profile;
+  ParentReferences: ParentReferences$Profile;
+  ChildRelationships: ChildRelationships$Profile;
+}
 
 type Fields$ProfileSkill = {
   //
@@ -29107,11 +29578,11 @@ type ChildRelationships$ProfileSkill = {
 };
 
 interface SObjectDefinition$ProfileSkill extends SObjectDefinition<'ProfileSkill'> {
-    Name: 'ProfileSkill';
-    Fields: Fields$ProfileSkill;
-    ParentReferences: ParentReferences$ProfileSkill;
-    ChildRelationships: ChildRelationships$ProfileSkill;
-  }
+  Name: 'ProfileSkill';
+  Fields: Fields$ProfileSkill;
+  ParentReferences: ParentReferences$ProfileSkill;
+  ChildRelationships: ChildRelationships$ProfileSkill;
+}
 
 type Fields$ProfileSkillEndorsement = {
   //
@@ -29149,11 +29620,11 @@ type ChildRelationships$ProfileSkillEndorsement = {
 };
 
 interface SObjectDefinition$ProfileSkillEndorsement extends SObjectDefinition<'ProfileSkillEndorsement'> {
-    Name: 'ProfileSkillEndorsement';
-    Fields: Fields$ProfileSkillEndorsement;
-    ParentReferences: ParentReferences$ProfileSkillEndorsement;
-    ChildRelationships: ChildRelationships$ProfileSkillEndorsement;
-  }
+  Name: 'ProfileSkillEndorsement';
+  Fields: Fields$ProfileSkillEndorsement;
+  ParentReferences: ParentReferences$ProfileSkillEndorsement;
+  ChildRelationships: ChildRelationships$ProfileSkillEndorsement;
+}
 
 type Fields$ProfileSkillEndorsementFeed = {
   //
@@ -29194,11 +29665,11 @@ type ChildRelationships$ProfileSkillEndorsementFeed = {
 };
 
 interface SObjectDefinition$ProfileSkillEndorsementFeed extends SObjectDefinition<'ProfileSkillEndorsementFeed'> {
-    Name: 'ProfileSkillEndorsementFeed';
-    Fields: Fields$ProfileSkillEndorsementFeed;
-    ParentReferences: ParentReferences$ProfileSkillEndorsementFeed;
-    ChildRelationships: ChildRelationships$ProfileSkillEndorsementFeed;
-  }
+  Name: 'ProfileSkillEndorsementFeed';
+  Fields: Fields$ProfileSkillEndorsementFeed;
+  ParentReferences: ParentReferences$ProfileSkillEndorsementFeed;
+  ChildRelationships: ChildRelationships$ProfileSkillEndorsementFeed;
+}
 
 type Fields$ProfileSkillEndorsementHistory = {
   //
@@ -29224,11 +29695,11 @@ type ChildRelationships$ProfileSkillEndorsementHistory = {
 };
 
 interface SObjectDefinition$ProfileSkillEndorsementHistory extends SObjectDefinition<'ProfileSkillEndorsementHistory'> {
-    Name: 'ProfileSkillEndorsementHistory';
-    Fields: Fields$ProfileSkillEndorsementHistory;
-    ParentReferences: ParentReferences$ProfileSkillEndorsementHistory;
-    ChildRelationships: ChildRelationships$ProfileSkillEndorsementHistory;
-  }
+  Name: 'ProfileSkillEndorsementHistory';
+  Fields: Fields$ProfileSkillEndorsementHistory;
+  ParentReferences: ParentReferences$ProfileSkillEndorsementHistory;
+  ChildRelationships: ChildRelationships$ProfileSkillEndorsementHistory;
+}
 
 type Fields$ProfileSkillFeed = {
   //
@@ -29269,11 +29740,11 @@ type ChildRelationships$ProfileSkillFeed = {
 };
 
 interface SObjectDefinition$ProfileSkillFeed extends SObjectDefinition<'ProfileSkillFeed'> {
-    Name: 'ProfileSkillFeed';
-    Fields: Fields$ProfileSkillFeed;
-    ParentReferences: ParentReferences$ProfileSkillFeed;
-    ChildRelationships: ChildRelationships$ProfileSkillFeed;
-  }
+  Name: 'ProfileSkillFeed';
+  Fields: Fields$ProfileSkillFeed;
+  ParentReferences: ParentReferences$ProfileSkillFeed;
+  ChildRelationships: ChildRelationships$ProfileSkillFeed;
+}
 
 type Fields$ProfileSkillHistory = {
   //
@@ -29299,11 +29770,11 @@ type ChildRelationships$ProfileSkillHistory = {
 };
 
 interface SObjectDefinition$ProfileSkillHistory extends SObjectDefinition<'ProfileSkillHistory'> {
-    Name: 'ProfileSkillHistory';
-    Fields: Fields$ProfileSkillHistory;
-    ParentReferences: ParentReferences$ProfileSkillHistory;
-    ChildRelationships: ChildRelationships$ProfileSkillHistory;
-  }
+  Name: 'ProfileSkillHistory';
+  Fields: Fields$ProfileSkillHistory;
+  ParentReferences: ParentReferences$ProfileSkillHistory;
+  ChildRelationships: ChildRelationships$ProfileSkillHistory;
+}
 
 type Fields$ProfileSkillShare = {
   //
@@ -29329,11 +29800,11 @@ type ChildRelationships$ProfileSkillShare = {
 };
 
 interface SObjectDefinition$ProfileSkillShare extends SObjectDefinition<'ProfileSkillShare'> {
-    Name: 'ProfileSkillShare';
-    Fields: Fields$ProfileSkillShare;
-    ParentReferences: ParentReferences$ProfileSkillShare;
-    ChildRelationships: ChildRelationships$ProfileSkillShare;
-  }
+  Name: 'ProfileSkillShare';
+  Fields: Fields$ProfileSkillShare;
+  ParentReferences: ParentReferences$ProfileSkillShare;
+  ChildRelationships: ChildRelationships$ProfileSkillShare;
+}
 
 type Fields$ProfileSkillUser = {
   //
@@ -29373,11 +29844,11 @@ type ChildRelationships$ProfileSkillUser = {
 };
 
 interface SObjectDefinition$ProfileSkillUser extends SObjectDefinition<'ProfileSkillUser'> {
-    Name: 'ProfileSkillUser';
-    Fields: Fields$ProfileSkillUser;
-    ParentReferences: ParentReferences$ProfileSkillUser;
-    ChildRelationships: ChildRelationships$ProfileSkillUser;
-  }
+  Name: 'ProfileSkillUser';
+  Fields: Fields$ProfileSkillUser;
+  ParentReferences: ParentReferences$ProfileSkillUser;
+  ChildRelationships: ChildRelationships$ProfileSkillUser;
+}
 
 type Fields$ProfileSkillUserFeed = {
   //
@@ -29418,11 +29889,11 @@ type ChildRelationships$ProfileSkillUserFeed = {
 };
 
 interface SObjectDefinition$ProfileSkillUserFeed extends SObjectDefinition<'ProfileSkillUserFeed'> {
-    Name: 'ProfileSkillUserFeed';
-    Fields: Fields$ProfileSkillUserFeed;
-    ParentReferences: ParentReferences$ProfileSkillUserFeed;
-    ChildRelationships: ChildRelationships$ProfileSkillUserFeed;
-  }
+  Name: 'ProfileSkillUserFeed';
+  Fields: Fields$ProfileSkillUserFeed;
+  ParentReferences: ParentReferences$ProfileSkillUserFeed;
+  ChildRelationships: ChildRelationships$ProfileSkillUserFeed;
+}
 
 type Fields$ProfileSkillUserHistory = {
   //
@@ -29448,11 +29919,11 @@ type ChildRelationships$ProfileSkillUserHistory = {
 };
 
 interface SObjectDefinition$ProfileSkillUserHistory extends SObjectDefinition<'ProfileSkillUserHistory'> {
-    Name: 'ProfileSkillUserHistory';
-    Fields: Fields$ProfileSkillUserHistory;
-    ParentReferences: ParentReferences$ProfileSkillUserHistory;
-    ChildRelationships: ChildRelationships$ProfileSkillUserHistory;
-  }
+  Name: 'ProfileSkillUserHistory';
+  Fields: Fields$ProfileSkillUserHistory;
+  ParentReferences: ParentReferences$ProfileSkillUserHistory;
+  ChildRelationships: ChildRelationships$ProfileSkillUserHistory;
+}
 
 type Fields$Prompt = {
   //
@@ -29480,11 +29951,11 @@ type ChildRelationships$Prompt = {
 };
 
 interface SObjectDefinition$Prompt extends SObjectDefinition<'Prompt'> {
-    Name: 'Prompt';
-    Fields: Fields$Prompt;
-    ParentReferences: ParentReferences$Prompt;
-    ChildRelationships: ChildRelationships$Prompt;
-  }
+  Name: 'Prompt';
+  Fields: Fields$Prompt;
+  ParentReferences: ParentReferences$Prompt;
+  ChildRelationships: ChildRelationships$Prompt;
+}
 
 type Fields$PromptAction = {
   //
@@ -29526,11 +29997,11 @@ type ChildRelationships$PromptAction = {
 };
 
 interface SObjectDefinition$PromptAction extends SObjectDefinition<'PromptAction'> {
-    Name: 'PromptAction';
-    Fields: Fields$PromptAction;
-    ParentReferences: ParentReferences$PromptAction;
-    ChildRelationships: ChildRelationships$PromptAction;
-  }
+  Name: 'PromptAction';
+  Fields: Fields$PromptAction;
+  ParentReferences: ParentReferences$PromptAction;
+  ChildRelationships: ChildRelationships$PromptAction;
+}
 
 type Fields$PromptActionShare = {
   //
@@ -29556,11 +30027,11 @@ type ChildRelationships$PromptActionShare = {
 };
 
 interface SObjectDefinition$PromptActionShare extends SObjectDefinition<'PromptActionShare'> {
-    Name: 'PromptActionShare';
-    Fields: Fields$PromptActionShare;
-    ParentReferences: ParentReferences$PromptActionShare;
-    ChildRelationships: ChildRelationships$PromptActionShare;
-  }
+  Name: 'PromptActionShare';
+  Fields: Fields$PromptActionShare;
+  ParentReferences: ParentReferences$PromptActionShare;
+  ChildRelationships: ChildRelationships$PromptActionShare;
+}
 
 type Fields$PromptVersion = {
   //
@@ -29620,11 +30091,11 @@ type ChildRelationships$PromptVersion = {
 };
 
 interface SObjectDefinition$PromptVersion extends SObjectDefinition<'PromptVersion'> {
-    Name: 'PromptVersion';
-    Fields: Fields$PromptVersion;
-    ParentReferences: ParentReferences$PromptVersion;
-    ChildRelationships: ChildRelationships$PromptVersion;
-  }
+  Name: 'PromptVersion';
+  Fields: Fields$PromptVersion;
+  ParentReferences: ParentReferences$PromptVersion;
+  ChildRelationships: ChildRelationships$PromptVersion;
+}
 
 type Fields$Publisher = {
   //
@@ -29648,11 +30119,11 @@ type ChildRelationships$Publisher = {
 };
 
 interface SObjectDefinition$Publisher extends SObjectDefinition<'Publisher'> {
-    Name: 'Publisher';
-    Fields: Fields$Publisher;
-    ParentReferences: ParentReferences$Publisher;
-    ChildRelationships: ChildRelationships$Publisher;
-  }
+  Name: 'Publisher';
+  Fields: Fields$Publisher;
+  ParentReferences: ParentReferences$Publisher;
+  ChildRelationships: ChildRelationships$Publisher;
+}
 
 type Fields$Purchase_Order_Line__ChangeEvent = {
   //
@@ -29688,12 +30159,13 @@ type ChildRelationships$Purchase_Order_Line__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Purchase_Order_Line__ChangeEvent extends SObjectDefinition<'Purchase_Order_Line__ChangeEvent'> {
-    Name: 'Purchase_Order_Line__ChangeEvent';
-    Fields: Fields$Purchase_Order_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Purchase_Order_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Purchase_Order_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Purchase_Order_Line__ChangeEvent
+  extends SObjectDefinition<'Purchase_Order_Line__ChangeEvent'> {
+  Name: 'Purchase_Order_Line__ChangeEvent';
+  Fields: Fields$Purchase_Order_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Purchase_Order_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Purchase_Order_Line__ChangeEvent;
+}
 
 type Fields$Purchase_Order_Line__History = {
   //
@@ -29719,11 +30191,11 @@ type ChildRelationships$Purchase_Order_Line__History = {
 };
 
 interface SObjectDefinition$Purchase_Order_Line__History extends SObjectDefinition<'Purchase_Order_Line__History'> {
-    Name: 'Purchase_Order_Line__History';
-    Fields: Fields$Purchase_Order_Line__History;
-    ParentReferences: ParentReferences$Purchase_Order_Line__History;
-    ChildRelationships: ChildRelationships$Purchase_Order_Line__History;
-  }
+  Name: 'Purchase_Order_Line__History';
+  Fields: Fields$Purchase_Order_Line__History;
+  ParentReferences: ParentReferences$Purchase_Order_Line__History;
+  ChildRelationships: ChildRelationships$Purchase_Order_Line__History;
+}
 
 type Fields$Purchase_Order_Line__c = {
   //
@@ -29795,11 +30267,11 @@ type ChildRelationships$Purchase_Order_Line__c = {
 };
 
 interface SObjectDefinition$Purchase_Order_Line__c extends SObjectDefinition<'Purchase_Order_Line__c'> {
-    Name: 'Purchase_Order_Line__c';
-    Fields: Fields$Purchase_Order_Line__c;
-    ParentReferences: ParentReferences$Purchase_Order_Line__c;
-    ChildRelationships: ChildRelationships$Purchase_Order_Line__c;
-  }
+  Name: 'Purchase_Order_Line__c';
+  Fields: Fields$Purchase_Order_Line__c;
+  ParentReferences: ParentReferences$Purchase_Order_Line__c;
+  ChildRelationships: ChildRelationships$Purchase_Order_Line__c;
+}
 
 type Fields$Purchase_Order__ChangeEvent = {
   //
@@ -29834,11 +30306,11 @@ type ChildRelationships$Purchase_Order__ChangeEvent = {
 };
 
 interface SObjectDefinition$Purchase_Order__ChangeEvent extends SObjectDefinition<'Purchase_Order__ChangeEvent'> {
-    Name: 'Purchase_Order__ChangeEvent';
-    Fields: Fields$Purchase_Order__ChangeEvent;
-    ParentReferences: ParentReferences$Purchase_Order__ChangeEvent;
-    ChildRelationships: ChildRelationships$Purchase_Order__ChangeEvent;
-  }
+  Name: 'Purchase_Order__ChangeEvent';
+  Fields: Fields$Purchase_Order__ChangeEvent;
+  ParentReferences: ParentReferences$Purchase_Order__ChangeEvent;
+  ChildRelationships: ChildRelationships$Purchase_Order__ChangeEvent;
+}
 
 type Fields$Purchase_Order__History = {
   //
@@ -29864,11 +30336,11 @@ type ChildRelationships$Purchase_Order__History = {
 };
 
 interface SObjectDefinition$Purchase_Order__History extends SObjectDefinition<'Purchase_Order__History'> {
-    Name: 'Purchase_Order__History';
-    Fields: Fields$Purchase_Order__History;
-    ParentReferences: ParentReferences$Purchase_Order__History;
-    ChildRelationships: ChildRelationships$Purchase_Order__History;
-  }
+  Name: 'Purchase_Order__History';
+  Fields: Fields$Purchase_Order__History;
+  ParentReferences: ParentReferences$Purchase_Order__History;
+  ChildRelationships: ChildRelationships$Purchase_Order__History;
+}
 
 type Fields$Purchase_Order__c = {
   //
@@ -29938,11 +30410,11 @@ type ChildRelationships$Purchase_Order__c = {
 };
 
 interface SObjectDefinition$Purchase_Order__c extends SObjectDefinition<'Purchase_Order__c'> {
-    Name: 'Purchase_Order__c';
-    Fields: Fields$Purchase_Order__c;
-    ParentReferences: ParentReferences$Purchase_Order__c;
-    ChildRelationships: ChildRelationships$Purchase_Order__c;
-  }
+  Name: 'Purchase_Order__c';
+  Fields: Fields$Purchase_Order__c;
+  ParentReferences: ParentReferences$Purchase_Order__c;
+  ChildRelationships: ChildRelationships$Purchase_Order__c;
+}
 
 type Fields$PushTopic = {
   //
@@ -29977,11 +30449,11 @@ type ChildRelationships$PushTopic = {
 };
 
 interface SObjectDefinition$PushTopic extends SObjectDefinition<'PushTopic'> {
-    Name: 'PushTopic';
-    Fields: Fields$PushTopic;
-    ParentReferences: ParentReferences$PushTopic;
-    ChildRelationships: ChildRelationships$PushTopic;
-  }
+  Name: 'PushTopic';
+  Fields: Fields$PushTopic;
+  ParentReferences: ParentReferences$PushTopic;
+  ChildRelationships: ChildRelationships$PushTopic;
+}
 
 type Fields$QueueSobject = {
   //
@@ -30003,11 +30475,11 @@ type ChildRelationships$QueueSobject = {
 };
 
 interface SObjectDefinition$QueueSobject extends SObjectDefinition<'QueueSobject'> {
-    Name: 'QueueSobject';
-    Fields: Fields$QueueSobject;
-    ParentReferences: ParentReferences$QueueSobject;
-    ChildRelationships: ChildRelationships$QueueSobject;
-  }
+  Name: 'QueueSobject';
+  Fields: Fields$QueueSobject;
+  ParentReferences: ParentReferences$QueueSobject;
+  ChildRelationships: ChildRelationships$QueueSobject;
+}
 
 type Fields$QuickText = {
   //
@@ -30043,11 +30515,11 @@ type ChildRelationships$QuickText = {
 };
 
 interface SObjectDefinition$QuickText extends SObjectDefinition<'QuickText'> {
-    Name: 'QuickText';
-    Fields: Fields$QuickText;
-    ParentReferences: ParentReferences$QuickText;
-    ChildRelationships: ChildRelationships$QuickText;
-  }
+  Name: 'QuickText';
+  Fields: Fields$QuickText;
+  ParentReferences: ParentReferences$QuickText;
+  ChildRelationships: ChildRelationships$QuickText;
+}
 
 type Fields$QuickTextChangeEvent = {
   //
@@ -30076,11 +30548,11 @@ type ChildRelationships$QuickTextChangeEvent = {
 };
 
 interface SObjectDefinition$QuickTextChangeEvent extends SObjectDefinition<'QuickTextChangeEvent'> {
-    Name: 'QuickTextChangeEvent';
-    Fields: Fields$QuickTextChangeEvent;
-    ParentReferences: ParentReferences$QuickTextChangeEvent;
-    ChildRelationships: ChildRelationships$QuickTextChangeEvent;
-  }
+  Name: 'QuickTextChangeEvent';
+  Fields: Fields$QuickTextChangeEvent;
+  ParentReferences: ParentReferences$QuickTextChangeEvent;
+  ChildRelationships: ChildRelationships$QuickTextChangeEvent;
+}
 
 type Fields$QuickTextHistory = {
   //
@@ -30106,11 +30578,11 @@ type ChildRelationships$QuickTextHistory = {
 };
 
 interface SObjectDefinition$QuickTextHistory extends SObjectDefinition<'QuickTextHistory'> {
-    Name: 'QuickTextHistory';
-    Fields: Fields$QuickTextHistory;
-    ParentReferences: ParentReferences$QuickTextHistory;
-    ChildRelationships: ChildRelationships$QuickTextHistory;
-  }
+  Name: 'QuickTextHistory';
+  Fields: Fields$QuickTextHistory;
+  ParentReferences: ParentReferences$QuickTextHistory;
+  ChildRelationships: ChildRelationships$QuickTextHistory;
+}
 
 type Fields$QuickTextShare = {
   //
@@ -30136,11 +30608,11 @@ type ChildRelationships$QuickTextShare = {
 };
 
 interface SObjectDefinition$QuickTextShare extends SObjectDefinition<'QuickTextShare'> {
-    Name: 'QuickTextShare';
-    Fields: Fields$QuickTextShare;
-    ParentReferences: ParentReferences$QuickTextShare;
-    ChildRelationships: ChildRelationships$QuickTextShare;
-  }
+  Name: 'QuickTextShare';
+  Fields: Fields$QuickTextShare;
+  ParentReferences: ParentReferences$QuickTextShare;
+  ChildRelationships: ChildRelationships$QuickTextShare;
+}
 
 type Fields$QuickTextUsage = {
   //
@@ -30178,11 +30650,11 @@ type ChildRelationships$QuickTextUsage = {
 };
 
 interface SObjectDefinition$QuickTextUsage extends SObjectDefinition<'QuickTextUsage'> {
-    Name: 'QuickTextUsage';
-    Fields: Fields$QuickTextUsage;
-    ParentReferences: ParentReferences$QuickTextUsage;
-    ChildRelationships: ChildRelationships$QuickTextUsage;
-  }
+  Name: 'QuickTextUsage';
+  Fields: Fields$QuickTextUsage;
+  ParentReferences: ParentReferences$QuickTextUsage;
+  ChildRelationships: ChildRelationships$QuickTextUsage;
+}
 
 type Fields$QuickTextUsageShare = {
   //
@@ -30208,11 +30680,11 @@ type ChildRelationships$QuickTextUsageShare = {
 };
 
 interface SObjectDefinition$QuickTextUsageShare extends SObjectDefinition<'QuickTextUsageShare'> {
-    Name: 'QuickTextUsageShare';
-    Fields: Fields$QuickTextUsageShare;
-    ParentReferences: ParentReferences$QuickTextUsageShare;
-    ChildRelationships: ChildRelationships$QuickTextUsageShare;
-  }
+  Name: 'QuickTextUsageShare';
+  Fields: Fields$QuickTextUsageShare;
+  ParentReferences: ParentReferences$QuickTextUsageShare;
+  ChildRelationships: ChildRelationships$QuickTextUsageShare;
+}
 
 type Fields$Quote = {
   //
@@ -30338,11 +30810,11 @@ type ChildRelationships$Quote = {
 };
 
 interface SObjectDefinition$Quote extends SObjectDefinition<'Quote'> {
-    Name: 'Quote';
-    Fields: Fields$Quote;
-    ParentReferences: ParentReferences$Quote;
-    ChildRelationships: ChildRelationships$Quote;
-  }
+  Name: 'Quote';
+  Fields: Fields$Quote;
+  ParentReferences: ParentReferences$Quote;
+  ChildRelationships: ChildRelationships$Quote;
+}
 
 type Fields$QuoteChangeEvent = {
   //
@@ -30431,11 +30903,11 @@ type ChildRelationships$QuoteChangeEvent = {
 };
 
 interface SObjectDefinition$QuoteChangeEvent extends SObjectDefinition<'QuoteChangeEvent'> {
-    Name: 'QuoteChangeEvent';
-    Fields: Fields$QuoteChangeEvent;
-    ParentReferences: ParentReferences$QuoteChangeEvent;
-    ChildRelationships: ChildRelationships$QuoteChangeEvent;
-  }
+  Name: 'QuoteChangeEvent';
+  Fields: Fields$QuoteChangeEvent;
+  ParentReferences: ParentReferences$QuoteChangeEvent;
+  ChildRelationships: ChildRelationships$QuoteChangeEvent;
+}
 
 type Fields$QuoteDocument = {
   //
@@ -30466,11 +30938,11 @@ type ChildRelationships$QuoteDocument = {
 };
 
 interface SObjectDefinition$QuoteDocument extends SObjectDefinition<'QuoteDocument'> {
-    Name: 'QuoteDocument';
-    Fields: Fields$QuoteDocument;
-    ParentReferences: ParentReferences$QuoteDocument;
-    ChildRelationships: ChildRelationships$QuoteDocument;
-  }
+  Name: 'QuoteDocument';
+  Fields: Fields$QuoteDocument;
+  ParentReferences: ParentReferences$QuoteDocument;
+  ChildRelationships: ChildRelationships$QuoteDocument;
+}
 
 type Fields$QuoteFeed = {
   //
@@ -30511,11 +30983,11 @@ type ChildRelationships$QuoteFeed = {
 };
 
 interface SObjectDefinition$QuoteFeed extends SObjectDefinition<'QuoteFeed'> {
-    Name: 'QuoteFeed';
-    Fields: Fields$QuoteFeed;
-    ParentReferences: ParentReferences$QuoteFeed;
-    ChildRelationships: ChildRelationships$QuoteFeed;
-  }
+  Name: 'QuoteFeed';
+  Fields: Fields$QuoteFeed;
+  ParentReferences: ParentReferences$QuoteFeed;
+  ChildRelationships: ChildRelationships$QuoteFeed;
+}
 
 type Fields$QuoteLineItem = {
   //
@@ -30533,7 +31005,7 @@ type Fields$QuoteLineItem = {
   PricebookEntryId: string;
   OpportunityLineItemId: string | null;
   Quantity: number;
-  UnitPrice: number;
+  UnitPrice: number | null;
   Discount: number | null;
   Description: string | null;
   ServiceDate: DateString | null;
@@ -30561,11 +31033,11 @@ type ChildRelationships$QuoteLineItem = {
 };
 
 interface SObjectDefinition$QuoteLineItem extends SObjectDefinition<'QuoteLineItem'> {
-    Name: 'QuoteLineItem';
-    Fields: Fields$QuoteLineItem;
-    ParentReferences: ParentReferences$QuoteLineItem;
-    ChildRelationships: ChildRelationships$QuoteLineItem;
-  }
+  Name: 'QuoteLineItem';
+  Fields: Fields$QuoteLineItem;
+  ParentReferences: ParentReferences$QuoteLineItem;
+  ChildRelationships: ChildRelationships$QuoteLineItem;
+}
 
 type Fields$QuoteLineItemChangeEvent = {
   //
@@ -30598,11 +31070,11 @@ type ChildRelationships$QuoteLineItemChangeEvent = {
 };
 
 interface SObjectDefinition$QuoteLineItemChangeEvent extends SObjectDefinition<'QuoteLineItemChangeEvent'> {
-    Name: 'QuoteLineItemChangeEvent';
-    Fields: Fields$QuoteLineItemChangeEvent;
-    ParentReferences: ParentReferences$QuoteLineItemChangeEvent;
-    ChildRelationships: ChildRelationships$QuoteLineItemChangeEvent;
-  }
+  Name: 'QuoteLineItemChangeEvent';
+  Fields: Fields$QuoteLineItemChangeEvent;
+  ParentReferences: ParentReferences$QuoteLineItemChangeEvent;
+  ChildRelationships: ChildRelationships$QuoteLineItemChangeEvent;
+}
 
 type Fields$QuoteShare = {
   //
@@ -30628,11 +31100,11 @@ type ChildRelationships$QuoteShare = {
 };
 
 interface SObjectDefinition$QuoteShare extends SObjectDefinition<'QuoteShare'> {
-    Name: 'QuoteShare';
-    Fields: Fields$QuoteShare;
-    ParentReferences: ParentReferences$QuoteShare;
-    ChildRelationships: ChildRelationships$QuoteShare;
-  }
+  Name: 'QuoteShare';
+  Fields: Fields$QuoteShare;
+  ParentReferences: ParentReferences$QuoteShare;
+  ChildRelationships: ChildRelationships$QuoteShare;
+}
 
 type Fields$QuoteTemplateRichTextData = {
   //
@@ -30658,11 +31130,11 @@ type ChildRelationships$QuoteTemplateRichTextData = {
 };
 
 interface SObjectDefinition$QuoteTemplateRichTextData extends SObjectDefinition<'QuoteTemplateRichTextData'> {
-    Name: 'QuoteTemplateRichTextData';
-    Fields: Fields$QuoteTemplateRichTextData;
-    ParentReferences: ParentReferences$QuoteTemplateRichTextData;
-    ChildRelationships: ChildRelationships$QuoteTemplateRichTextData;
-  }
+  Name: 'QuoteTemplateRichTextData';
+  Fields: Fields$QuoteTemplateRichTextData;
+  ParentReferences: ParentReferences$QuoteTemplateRichTextData;
+  ChildRelationships: ChildRelationships$QuoteTemplateRichTextData;
+}
 
 type Fields$RecentlyViewed = {
   //
@@ -30699,11 +31171,11 @@ type ChildRelationships$RecentlyViewed = {
 };
 
 interface SObjectDefinition$RecentlyViewed extends SObjectDefinition<'RecentlyViewed'> {
-    Name: 'RecentlyViewed';
-    Fields: Fields$RecentlyViewed;
-    ParentReferences: ParentReferences$RecentlyViewed;
-    ChildRelationships: ChildRelationships$RecentlyViewed;
-  }
+  Name: 'RecentlyViewed';
+  Fields: Fields$RecentlyViewed;
+  ParentReferences: ParentReferences$RecentlyViewed;
+  ChildRelationships: ChildRelationships$RecentlyViewed;
+}
 
 type Fields$Recommendation = {
   //
@@ -30740,11 +31212,11 @@ type ChildRelationships$Recommendation = {
 };
 
 interface SObjectDefinition$Recommendation extends SObjectDefinition<'Recommendation'> {
-    Name: 'Recommendation';
-    Fields: Fields$Recommendation;
-    ParentReferences: ParentReferences$Recommendation;
-    ChildRelationships: ChildRelationships$Recommendation;
-  }
+  Name: 'Recommendation';
+  Fields: Fields$Recommendation;
+  ParentReferences: ParentReferences$Recommendation;
+  ChildRelationships: ChildRelationships$Recommendation;
+}
 
 type Fields$RecommendationChangeEvent = {
   //
@@ -30774,11 +31246,11 @@ type ChildRelationships$RecommendationChangeEvent = {
 };
 
 interface SObjectDefinition$RecommendationChangeEvent extends SObjectDefinition<'RecommendationChangeEvent'> {
-    Name: 'RecommendationChangeEvent';
-    Fields: Fields$RecommendationChangeEvent;
-    ParentReferences: ParentReferences$RecommendationChangeEvent;
-    ChildRelationships: ChildRelationships$RecommendationChangeEvent;
-  }
+  Name: 'RecommendationChangeEvent';
+  Fields: Fields$RecommendationChangeEvent;
+  ParentReferences: ParentReferences$RecommendationChangeEvent;
+  ChildRelationships: ChildRelationships$RecommendationChangeEvent;
+}
 
 type Fields$RecordAction = {
   //
@@ -30814,11 +31286,11 @@ type ChildRelationships$RecordAction = {
 };
 
 interface SObjectDefinition$RecordAction extends SObjectDefinition<'RecordAction'> {
-    Name: 'RecordAction';
-    Fields: Fields$RecordAction;
-    ParentReferences: ParentReferences$RecordAction;
-    ChildRelationships: ChildRelationships$RecordAction;
-  }
+  Name: 'RecordAction';
+  Fields: Fields$RecordAction;
+  ParentReferences: ParentReferences$RecordAction;
+  ChildRelationships: ChildRelationships$RecordAction;
+}
 
 type Fields$RecordActionHistory = {
   //
@@ -30853,11 +31325,11 @@ type ChildRelationships$RecordActionHistory = {
 };
 
 interface SObjectDefinition$RecordActionHistory extends SObjectDefinition<'RecordActionHistory'> {
-    Name: 'RecordActionHistory';
-    Fields: Fields$RecordActionHistory;
-    ParentReferences: ParentReferences$RecordActionHistory;
-    ChildRelationships: ChildRelationships$RecordActionHistory;
-  }
+  Name: 'RecordActionHistory';
+  Fields: Fields$RecordActionHistory;
+  ParentReferences: ParentReferences$RecordActionHistory;
+  ChildRelationships: ChildRelationships$RecordActionHistory;
+}
 
 type Fields$RecordType = {
   //
@@ -30887,11 +31359,11 @@ type ChildRelationships$RecordType = {
 };
 
 interface SObjectDefinition$RecordType extends SObjectDefinition<'RecordType'> {
-    Name: 'RecordType';
-    Fields: Fields$RecordType;
-    ParentReferences: ParentReferences$RecordType;
-    ChildRelationships: ChildRelationships$RecordType;
-  }
+  Name: 'RecordType';
+  Fields: Fields$RecordType;
+  ParentReferences: ParentReferences$RecordType;
+  ChildRelationships: ChildRelationships$RecordType;
+}
 
 type Fields$RedirectWhitelistUrl = {
   //
@@ -30920,11 +31392,11 @@ type ChildRelationships$RedirectWhitelistUrl = {
 };
 
 interface SObjectDefinition$RedirectWhitelistUrl extends SObjectDefinition<'RedirectWhitelistUrl'> {
-    Name: 'RedirectWhitelistUrl';
-    Fields: Fields$RedirectWhitelistUrl;
-    ParentReferences: ParentReferences$RedirectWhitelistUrl;
-    ChildRelationships: ChildRelationships$RedirectWhitelistUrl;
-  }
+  Name: 'RedirectWhitelistUrl';
+  Fields: Fields$RedirectWhitelistUrl;
+  ParentReferences: ParentReferences$RedirectWhitelistUrl;
+  ChildRelationships: ChildRelationships$RedirectWhitelistUrl;
+}
 
 type Fields$Referrer__ChangeEvent = {
   //
@@ -30940,6 +31412,11 @@ type Fields$Referrer__ChangeEvent = {
   Contact__c: string | null;
   Frequency__c: string | null;
   Referral_Fee__c: number | null;
+  Commission_End_Date__c: DateString | null;
+  Commission_Start_Date__c: DateString | null;
+  End_Date__c: DateString | null;
+  Payment_Cap__c: string | null;
+  Placement_Type__c: string | null;
 };
 
 type ParentReferences$Referrer__ChangeEvent = {
@@ -30951,11 +31428,11 @@ type ChildRelationships$Referrer__ChangeEvent = {
 };
 
 interface SObjectDefinition$Referrer__ChangeEvent extends SObjectDefinition<'Referrer__ChangeEvent'> {
-    Name: 'Referrer__ChangeEvent';
-    Fields: Fields$Referrer__ChangeEvent;
-    ParentReferences: ParentReferences$Referrer__ChangeEvent;
-    ChildRelationships: ChildRelationships$Referrer__ChangeEvent;
-  }
+  Name: 'Referrer__ChangeEvent';
+  Fields: Fields$Referrer__ChangeEvent;
+  ParentReferences: ParentReferences$Referrer__ChangeEvent;
+  ChildRelationships: ChildRelationships$Referrer__ChangeEvent;
+}
 
 type Fields$Referrer__c = {
   //
@@ -30971,6 +31448,11 @@ type Fields$Referrer__c = {
   Contact__c: string;
   Frequency__c: string;
   Referral_Fee__c: number;
+  Commission_End_Date__c: DateString | null;
+  Commission_Start_Date__c: DateString | null;
+  End_Date__c: DateString | null;
+  Payment_Cap__c: string | null;
+  Placement_Type__c: string | null;
 };
 
 type ParentReferences$Referrer__c = {
@@ -31006,11 +31488,11 @@ type ChildRelationships$Referrer__c = {
 };
 
 interface SObjectDefinition$Referrer__c extends SObjectDefinition<'Referrer__c'> {
-    Name: 'Referrer__c';
-    Fields: Fields$Referrer__c;
-    ParentReferences: ParentReferences$Referrer__c;
-    ChildRelationships: ChildRelationships$Referrer__c;
-  }
+  Name: 'Referrer__c';
+  Fields: Fields$Referrer__c;
+  ParentReferences: ParentReferences$Referrer__c;
+  ChildRelationships: ChildRelationships$Referrer__c;
+}
 
 type Fields$RelationshipDomain = {
   //
@@ -31036,11 +31518,11 @@ type ChildRelationships$RelationshipDomain = {
 };
 
 interface SObjectDefinition$RelationshipDomain extends SObjectDefinition<'RelationshipDomain'> {
-    Name: 'RelationshipDomain';
-    Fields: Fields$RelationshipDomain;
-    ParentReferences: ParentReferences$RelationshipDomain;
-    ChildRelationships: ChildRelationships$RelationshipDomain;
-  }
+  Name: 'RelationshipDomain';
+  Fields: Fields$RelationshipDomain;
+  ParentReferences: ParentReferences$RelationshipDomain;
+  ChildRelationships: ChildRelationships$RelationshipDomain;
+}
 
 type Fields$RelationshipInfo = {
   //
@@ -31064,11 +31546,11 @@ type ChildRelationships$RelationshipInfo = {
 };
 
 interface SObjectDefinition$RelationshipInfo extends SObjectDefinition<'RelationshipInfo'> {
-    Name: 'RelationshipInfo';
-    Fields: Fields$RelationshipInfo;
-    ParentReferences: ParentReferences$RelationshipInfo;
-    ChildRelationships: ChildRelationships$RelationshipInfo;
-  }
+  Name: 'RelationshipInfo';
+  Fields: Fields$RelationshipInfo;
+  ParentReferences: ParentReferences$RelationshipInfo;
+  ChildRelationships: ChildRelationships$RelationshipInfo;
+}
 
 type Fields$Report = {
   //
@@ -31109,11 +31591,11 @@ type ChildRelationships$Report = {
 };
 
 interface SObjectDefinition$Report extends SObjectDefinition<'Report'> {
-    Name: 'Report';
-    Fields: Fields$Report;
-    ParentReferences: ParentReferences$Report;
-    ChildRelationships: ChildRelationships$Report;
-  }
+  Name: 'Report';
+  Fields: Fields$Report;
+  ParentReferences: ParentReferences$Report;
+  ChildRelationships: ChildRelationships$Report;
+}
 
 type Fields$ReportFeed = {
   //
@@ -31154,11 +31636,11 @@ type ChildRelationships$ReportFeed = {
 };
 
 interface SObjectDefinition$ReportFeed extends SObjectDefinition<'ReportFeed'> {
-    Name: 'ReportFeed';
-    Fields: Fields$ReportFeed;
-    ParentReferences: ParentReferences$ReportFeed;
-    ChildRelationships: ChildRelationships$ReportFeed;
-  }
+  Name: 'ReportFeed';
+  Fields: Fields$ReportFeed;
+  ParentReferences: ParentReferences$ReportFeed;
+  ChildRelationships: ChildRelationships$ReportFeed;
+}
 
 type Fields$Resource__ChangeEvent = {
   //
@@ -31183,11 +31665,11 @@ type ChildRelationships$Resource__ChangeEvent = {
 };
 
 interface SObjectDefinition$Resource__ChangeEvent extends SObjectDefinition<'Resource__ChangeEvent'> {
-    Name: 'Resource__ChangeEvent';
-    Fields: Fields$Resource__ChangeEvent;
-    ParentReferences: ParentReferences$Resource__ChangeEvent;
-    ChildRelationships: ChildRelationships$Resource__ChangeEvent;
-  }
+  Name: 'Resource__ChangeEvent';
+  Fields: Fields$Resource__ChangeEvent;
+  ParentReferences: ParentReferences$Resource__ChangeEvent;
+  ChildRelationships: ChildRelationships$Resource__ChangeEvent;
+}
 
 type Fields$Resource__c = {
   //
@@ -31243,11 +31725,11 @@ type ChildRelationships$Resource__c = {
 };
 
 interface SObjectDefinition$Resource__c extends SObjectDefinition<'Resource__c'> {
-    Name: 'Resource__c';
-    Fields: Fields$Resource__c;
-    ParentReferences: ParentReferences$Resource__c;
-    ChildRelationships: ChildRelationships$Resource__c;
-  }
+  Name: 'Resource__c';
+  Fields: Fields$Resource__c;
+  ParentReferences: ParentReferences$Resource__c;
+  ChildRelationships: ChildRelationships$Resource__c;
+}
 
 type Fields$SPSamlAttributes = {
   //
@@ -31275,11 +31757,11 @@ type ChildRelationships$SPSamlAttributes = {
 };
 
 interface SObjectDefinition$SPSamlAttributes extends SObjectDefinition<'SPSamlAttributes'> {
-    Name: 'SPSamlAttributes';
-    Fields: Fields$SPSamlAttributes;
-    ParentReferences: ParentReferences$SPSamlAttributes;
-    ChildRelationships: ChildRelationships$SPSamlAttributes;
-  }
+  Name: 'SPSamlAttributes';
+  Fields: Fields$SPSamlAttributes;
+  ParentReferences: ParentReferences$SPSamlAttributes;
+  ChildRelationships: ChildRelationships$SPSamlAttributes;
+}
 
 type Fields$SamlSsoConfig = {
   //
@@ -31328,11 +31810,11 @@ type ChildRelationships$SamlSsoConfig = {
 };
 
 interface SObjectDefinition$SamlSsoConfig extends SObjectDefinition<'SamlSsoConfig'> {
-    Name: 'SamlSsoConfig';
-    Fields: Fields$SamlSsoConfig;
-    ParentReferences: ParentReferences$SamlSsoConfig;
-    ChildRelationships: ChildRelationships$SamlSsoConfig;
-  }
+  Name: 'SamlSsoConfig';
+  Fields: Fields$SamlSsoConfig;
+  ParentReferences: ParentReferences$SamlSsoConfig;
+  ChildRelationships: ChildRelationships$SamlSsoConfig;
+}
 
 type Fields$Scontrol = {
   //
@@ -31367,11 +31849,11 @@ type ChildRelationships$Scontrol = {
 };
 
 interface SObjectDefinition$Scontrol extends SObjectDefinition<'Scontrol'> {
-    Name: 'Scontrol';
-    Fields: Fields$Scontrol;
-    ParentReferences: ParentReferences$Scontrol;
-    ChildRelationships: ChildRelationships$Scontrol;
-  }
+  Name: 'Scontrol';
+  Fields: Fields$Scontrol;
+  ParentReferences: ParentReferences$Scontrol;
+  ChildRelationships: ChildRelationships$Scontrol;
+}
 
 type Fields$SearchLayout = {
   //
@@ -31399,11 +31881,11 @@ type ChildRelationships$SearchLayout = {
 };
 
 interface SObjectDefinition$SearchLayout extends SObjectDefinition<'SearchLayout'> {
-    Name: 'SearchLayout';
-    Fields: Fields$SearchLayout;
-    ParentReferences: ParentReferences$SearchLayout;
-    ChildRelationships: ChildRelationships$SearchLayout;
-  }
+  Name: 'SearchLayout';
+  Fields: Fields$SearchLayout;
+  ParentReferences: ParentReferences$SearchLayout;
+  ChildRelationships: ChildRelationships$SearchLayout;
+}
 
 type Fields$SecurityCustomBaseline = {
   //
@@ -31433,11 +31915,11 @@ type ChildRelationships$SecurityCustomBaseline = {
 };
 
 interface SObjectDefinition$SecurityCustomBaseline extends SObjectDefinition<'SecurityCustomBaseline'> {
-    Name: 'SecurityCustomBaseline';
-    Fields: Fields$SecurityCustomBaseline;
-    ParentReferences: ParentReferences$SecurityCustomBaseline;
-    ChildRelationships: ChildRelationships$SecurityCustomBaseline;
-  }
+  Name: 'SecurityCustomBaseline';
+  Fields: Fields$SecurityCustomBaseline;
+  ParentReferences: ParentReferences$SecurityCustomBaseline;
+  ChildRelationships: ChildRelationships$SecurityCustomBaseline;
+}
 
 type Fields$SessionPermSetActivation = {
   //
@@ -31468,11 +31950,11 @@ type ChildRelationships$SessionPermSetActivation = {
 };
 
 interface SObjectDefinition$SessionPermSetActivation extends SObjectDefinition<'SessionPermSetActivation'> {
-    Name: 'SessionPermSetActivation';
-    Fields: Fields$SessionPermSetActivation;
-    ParentReferences: ParentReferences$SessionPermSetActivation;
-    ChildRelationships: ChildRelationships$SessionPermSetActivation;
-  }
+  Name: 'SessionPermSetActivation';
+  Fields: Fields$SessionPermSetActivation;
+  ParentReferences: ParentReferences$SessionPermSetActivation;
+  ChildRelationships: ChildRelationships$SessionPermSetActivation;
+}
 
 type Fields$Settlement_Fee__ChangeEvent = {
   //
@@ -31498,11 +31980,11 @@ type ChildRelationships$Settlement_Fee__ChangeEvent = {
 };
 
 interface SObjectDefinition$Settlement_Fee__ChangeEvent extends SObjectDefinition<'Settlement_Fee__ChangeEvent'> {
-    Name: 'Settlement_Fee__ChangeEvent';
-    Fields: Fields$Settlement_Fee__ChangeEvent;
-    ParentReferences: ParentReferences$Settlement_Fee__ChangeEvent;
-    ChildRelationships: ChildRelationships$Settlement_Fee__ChangeEvent;
-  }
+  Name: 'Settlement_Fee__ChangeEvent';
+  Fields: Fields$Settlement_Fee__ChangeEvent;
+  ParentReferences: ParentReferences$Settlement_Fee__ChangeEvent;
+  ChildRelationships: ChildRelationships$Settlement_Fee__ChangeEvent;
+}
 
 type Fields$Settlement_Fee__c = {
   //
@@ -31551,11 +32033,11 @@ type ChildRelationships$Settlement_Fee__c = {
 };
 
 interface SObjectDefinition$Settlement_Fee__c extends SObjectDefinition<'Settlement_Fee__c'> {
-    Name: 'Settlement_Fee__c';
-    Fields: Fields$Settlement_Fee__c;
-    ParentReferences: ParentReferences$Settlement_Fee__c;
-    ChildRelationships: ChildRelationships$Settlement_Fee__c;
-  }
+  Name: 'Settlement_Fee__c';
+  Fields: Fields$Settlement_Fee__c;
+  ParentReferences: ParentReferences$Settlement_Fee__c;
+  ChildRelationships: ChildRelationships$Settlement_Fee__c;
+}
 
 type Fields$Settlement_Payment_Schedule__ChangeEvent = {
   //
@@ -31580,12 +32062,13 @@ type ChildRelationships$Settlement_Payment_Schedule__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Settlement_Payment_Schedule__ChangeEvent extends SObjectDefinition<'Settlement_Payment_Schedule__ChangeEvent'> {
-    Name: 'Settlement_Payment_Schedule__ChangeEvent';
-    Fields: Fields$Settlement_Payment_Schedule__ChangeEvent;
-    ParentReferences: ParentReferences$Settlement_Payment_Schedule__ChangeEvent;
-    ChildRelationships: ChildRelationships$Settlement_Payment_Schedule__ChangeEvent;
-  }
+interface SObjectDefinition$Settlement_Payment_Schedule__ChangeEvent
+  extends SObjectDefinition<'Settlement_Payment_Schedule__ChangeEvent'> {
+  Name: 'Settlement_Payment_Schedule__ChangeEvent';
+  Fields: Fields$Settlement_Payment_Schedule__ChangeEvent;
+  ParentReferences: ParentReferences$Settlement_Payment_Schedule__ChangeEvent;
+  ChildRelationships: ChildRelationships$Settlement_Payment_Schedule__ChangeEvent;
+}
 
 type Fields$Settlement_Payment_Schedule__c = {
   //
@@ -31634,11 +32117,11 @@ type ChildRelationships$Settlement_Payment_Schedule__c = {
 };
 
 interface SObjectDefinition$Settlement_Payment_Schedule__c extends SObjectDefinition<'Settlement_Payment_Schedule__c'> {
-    Name: 'Settlement_Payment_Schedule__c';
-    Fields: Fields$Settlement_Payment_Schedule__c;
-    ParentReferences: ParentReferences$Settlement_Payment_Schedule__c;
-    ChildRelationships: ChildRelationships$Settlement_Payment_Schedule__c;
-  }
+  Name: 'Settlement_Payment_Schedule__c';
+  Fields: Fields$Settlement_Payment_Schedule__c;
+  ParentReferences: ParentReferences$Settlement_Payment_Schedule__c;
+  ChildRelationships: ChildRelationships$Settlement_Payment_Schedule__c;
+}
 
 type Fields$Settlement__ChangeEvent = {
   //
@@ -31671,11 +32154,11 @@ type ChildRelationships$Settlement__ChangeEvent = {
 };
 
 interface SObjectDefinition$Settlement__ChangeEvent extends SObjectDefinition<'Settlement__ChangeEvent'> {
-    Name: 'Settlement__ChangeEvent';
-    Fields: Fields$Settlement__ChangeEvent;
-    ParentReferences: ParentReferences$Settlement__ChangeEvent;
-    ChildRelationships: ChildRelationships$Settlement__ChangeEvent;
-  }
+  Name: 'Settlement__ChangeEvent';
+  Fields: Fields$Settlement__ChangeEvent;
+  ParentReferences: ParentReferences$Settlement__ChangeEvent;
+  ChildRelationships: ChildRelationships$Settlement__ChangeEvent;
+}
 
 type Fields$Settlement__c = {
   //
@@ -31734,11 +32217,11 @@ type ChildRelationships$Settlement__c = {
 };
 
 interface SObjectDefinition$Settlement__c extends SObjectDefinition<'Settlement__c'> {
-    Name: 'Settlement__c';
-    Fields: Fields$Settlement__c;
-    ParentReferences: ParentReferences$Settlement__c;
-    ChildRelationships: ChildRelationships$Settlement__c;
-  }
+  Name: 'Settlement__c';
+  Fields: Fields$Settlement__c;
+  ParentReferences: ParentReferences$Settlement__c;
+  ChildRelationships: ChildRelationships$Settlement__c;
+}
 
 type Fields$SetupAssistantStep = {
   //
@@ -31765,11 +32248,11 @@ type ChildRelationships$SetupAssistantStep = {
 };
 
 interface SObjectDefinition$SetupAssistantStep extends SObjectDefinition<'SetupAssistantStep'> {
-    Name: 'SetupAssistantStep';
-    Fields: Fields$SetupAssistantStep;
-    ParentReferences: ParentReferences$SetupAssistantStep;
-    ChildRelationships: ChildRelationships$SetupAssistantStep;
-  }
+  Name: 'SetupAssistantStep';
+  Fields: Fields$SetupAssistantStep;
+  ParentReferences: ParentReferences$SetupAssistantStep;
+  ChildRelationships: ChildRelationships$SetupAssistantStep;
+}
 
 type Fields$SetupAuditTrail = {
   //
@@ -31795,11 +32278,11 @@ type ChildRelationships$SetupAuditTrail = {
 };
 
 interface SObjectDefinition$SetupAuditTrail extends SObjectDefinition<'SetupAuditTrail'> {
-    Name: 'SetupAuditTrail';
-    Fields: Fields$SetupAuditTrail;
-    ParentReferences: ParentReferences$SetupAuditTrail;
-    ChildRelationships: ChildRelationships$SetupAuditTrail;
-  }
+  Name: 'SetupAuditTrail';
+  Fields: Fields$SetupAuditTrail;
+  ParentReferences: ParentReferences$SetupAuditTrail;
+  ChildRelationships: ChildRelationships$SetupAuditTrail;
+}
 
 type Fields$SetupEntityAccess = {
   //
@@ -31820,11 +32303,11 @@ type ChildRelationships$SetupEntityAccess = {
 };
 
 interface SObjectDefinition$SetupEntityAccess extends SObjectDefinition<'SetupEntityAccess'> {
-    Name: 'SetupEntityAccess';
-    Fields: Fields$SetupEntityAccess;
-    ParentReferences: ParentReferences$SetupEntityAccess;
-    ChildRelationships: ChildRelationships$SetupEntityAccess;
-  }
+  Name: 'SetupEntityAccess';
+  Fields: Fields$SetupEntityAccess;
+  ParentReferences: ParentReferences$SetupEntityAccess;
+  ChildRelationships: ChildRelationships$SetupEntityAccess;
+}
 
 type Fields$Site = {
   //
@@ -31891,11 +32374,11 @@ type ChildRelationships$Site = {
 };
 
 interface SObjectDefinition$Site extends SObjectDefinition<'Site'> {
-    Name: 'Site';
-    Fields: Fields$Site;
-    ParentReferences: ParentReferences$Site;
-    ChildRelationships: ChildRelationships$Site;
-  }
+  Name: 'Site';
+  Fields: Fields$Site;
+  ParentReferences: ParentReferences$Site;
+  ChildRelationships: ChildRelationships$Site;
+}
 
 type Fields$SiteDetail = {
   //
@@ -31914,11 +32397,11 @@ type ChildRelationships$SiteDetail = {
 };
 
 interface SObjectDefinition$SiteDetail extends SObjectDefinition<'SiteDetail'> {
-    Name: 'SiteDetail';
-    Fields: Fields$SiteDetail;
-    ParentReferences: ParentReferences$SiteDetail;
-    ChildRelationships: ChildRelationships$SiteDetail;
-  }
+  Name: 'SiteDetail';
+  Fields: Fields$SiteDetail;
+  ParentReferences: ParentReferences$SiteDetail;
+  ChildRelationships: ChildRelationships$SiteDetail;
+}
 
 type Fields$SiteFeed = {
   //
@@ -31959,11 +32442,11 @@ type ChildRelationships$SiteFeed = {
 };
 
 interface SObjectDefinition$SiteFeed extends SObjectDefinition<'SiteFeed'> {
-    Name: 'SiteFeed';
-    Fields: Fields$SiteFeed;
-    ParentReferences: ParentReferences$SiteFeed;
-    ChildRelationships: ChildRelationships$SiteFeed;
-  }
+  Name: 'SiteFeed';
+  Fields: Fields$SiteFeed;
+  ParentReferences: ParentReferences$SiteFeed;
+  ChildRelationships: ChildRelationships$SiteFeed;
+}
 
 type Fields$SiteHistory = {
   //
@@ -31989,11 +32472,11 @@ type ChildRelationships$SiteHistory = {
 };
 
 interface SObjectDefinition$SiteHistory extends SObjectDefinition<'SiteHistory'> {
-    Name: 'SiteHistory';
-    Fields: Fields$SiteHistory;
-    ParentReferences: ParentReferences$SiteHistory;
-    ChildRelationships: ChildRelationships$SiteHistory;
-  }
+  Name: 'SiteHistory';
+  Fields: Fields$SiteHistory;
+  ParentReferences: ParentReferences$SiteHistory;
+  ChildRelationships: ChildRelationships$SiteHistory;
+}
 
 type Fields$SiteIframeWhiteListUrl = {
   //
@@ -32020,11 +32503,11 @@ type ChildRelationships$SiteIframeWhiteListUrl = {
 };
 
 interface SObjectDefinition$SiteIframeWhiteListUrl extends SObjectDefinition<'SiteIframeWhiteListUrl'> {
-    Name: 'SiteIframeWhiteListUrl';
-    Fields: Fields$SiteIframeWhiteListUrl;
-    ParentReferences: ParentReferences$SiteIframeWhiteListUrl;
-    ChildRelationships: ChildRelationships$SiteIframeWhiteListUrl;
-  }
+  Name: 'SiteIframeWhiteListUrl';
+  Fields: Fields$SiteIframeWhiteListUrl;
+  ParentReferences: ParentReferences$SiteIframeWhiteListUrl;
+  ChildRelationships: ChildRelationships$SiteIframeWhiteListUrl;
+}
 
 type Fields$Smoothstack_Settings__ChangeEvent = {
   //
@@ -32037,6 +32520,9 @@ type Fields$Smoothstack_Settings__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Disable_JPD_Trigger__c: boolean;
+  Disable_JP_Trigger__c: boolean;
+  Enable_Legacy_CC_Sync__c: boolean;
 };
 
 type ParentReferences$Smoothstack_Settings__ChangeEvent = {
@@ -32047,12 +32533,13 @@ type ChildRelationships$Smoothstack_Settings__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Smoothstack_Settings__ChangeEvent extends SObjectDefinition<'Smoothstack_Settings__ChangeEvent'> {
-    Name: 'Smoothstack_Settings__ChangeEvent';
-    Fields: Fields$Smoothstack_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Smoothstack_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Smoothstack_Settings__ChangeEvent;
-  }
+interface SObjectDefinition$Smoothstack_Settings__ChangeEvent
+  extends SObjectDefinition<'Smoothstack_Settings__ChangeEvent'> {
+  Name: 'Smoothstack_Settings__ChangeEvent';
+  Fields: Fields$Smoothstack_Settings__ChangeEvent;
+  ParentReferences: ParentReferences$Smoothstack_Settings__ChangeEvent;
+  ChildRelationships: ChildRelationships$Smoothstack_Settings__ChangeEvent;
+}
 
 type Fields$Smoothstack_Settings__c = {
   //
@@ -32067,6 +32554,9 @@ type Fields$Smoothstack_Settings__c = {
   SystemModstamp: DateString;
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
+  Disable_JPD_Trigger__c: boolean;
+  Disable_JP_Trigger__c: boolean;
+  Enable_Legacy_CC_Sync__c: boolean;
 };
 
 type ParentReferences$Smoothstack_Settings__c = {
@@ -32101,11 +32591,11 @@ type ChildRelationships$Smoothstack_Settings__c = {
 };
 
 interface SObjectDefinition$Smoothstack_Settings__c extends SObjectDefinition<'Smoothstack_Settings__c'> {
-    Name: 'Smoothstack_Settings__c';
-    Fields: Fields$Smoothstack_Settings__c;
-    ParentReferences: ParentReferences$Smoothstack_Settings__c;
-    ChildRelationships: ChildRelationships$Smoothstack_Settings__c;
-  }
+  Name: 'Smoothstack_Settings__c';
+  Fields: Fields$Smoothstack_Settings__c;
+  ParentReferences: ParentReferences$Smoothstack_Settings__c;
+  ChildRelationships: ChildRelationships$Smoothstack_Settings__c;
+}
 
 type Fields$SocialPersona = {
   //
@@ -32163,11 +32653,11 @@ type ChildRelationships$SocialPersona = {
 };
 
 interface SObjectDefinition$SocialPersona extends SObjectDefinition<'SocialPersona'> {
-    Name: 'SocialPersona';
-    Fields: Fields$SocialPersona;
-    ParentReferences: ParentReferences$SocialPersona;
-    ChildRelationships: ChildRelationships$SocialPersona;
-  }
+  Name: 'SocialPersona';
+  Fields: Fields$SocialPersona;
+  ParentReferences: ParentReferences$SocialPersona;
+  ChildRelationships: ChildRelationships$SocialPersona;
+}
 
 type Fields$SocialPersonaHistory = {
   //
@@ -32193,11 +32683,11 @@ type ChildRelationships$SocialPersonaHistory = {
 };
 
 interface SObjectDefinition$SocialPersonaHistory extends SObjectDefinition<'SocialPersonaHistory'> {
-    Name: 'SocialPersonaHistory';
-    Fields: Fields$SocialPersonaHistory;
-    ParentReferences: ParentReferences$SocialPersonaHistory;
-    ChildRelationships: ChildRelationships$SocialPersonaHistory;
-  }
+  Name: 'SocialPersonaHistory';
+  Fields: Fields$SocialPersonaHistory;
+  ParentReferences: ParentReferences$SocialPersonaHistory;
+  ChildRelationships: ChildRelationships$SocialPersonaHistory;
+}
 
 type Fields$SocialPost = {
   //
@@ -32304,11 +32794,11 @@ type ChildRelationships$SocialPost = {
 };
 
 interface SObjectDefinition$SocialPost extends SObjectDefinition<'SocialPost'> {
-    Name: 'SocialPost';
-    Fields: Fields$SocialPost;
-    ParentReferences: ParentReferences$SocialPost;
-    ChildRelationships: ChildRelationships$SocialPost;
-  }
+  Name: 'SocialPost';
+  Fields: Fields$SocialPost;
+  ParentReferences: ParentReferences$SocialPost;
+  ChildRelationships: ChildRelationships$SocialPost;
+}
 
 type Fields$SocialPostChangeEvent = {
   //
@@ -32386,11 +32876,11 @@ type ChildRelationships$SocialPostChangeEvent = {
 };
 
 interface SObjectDefinition$SocialPostChangeEvent extends SObjectDefinition<'SocialPostChangeEvent'> {
-    Name: 'SocialPostChangeEvent';
-    Fields: Fields$SocialPostChangeEvent;
-    ParentReferences: ParentReferences$SocialPostChangeEvent;
-    ChildRelationships: ChildRelationships$SocialPostChangeEvent;
-  }
+  Name: 'SocialPostChangeEvent';
+  Fields: Fields$SocialPostChangeEvent;
+  ParentReferences: ParentReferences$SocialPostChangeEvent;
+  ChildRelationships: ChildRelationships$SocialPostChangeEvent;
+}
 
 type Fields$SocialPostFeed = {
   //
@@ -32431,11 +32921,11 @@ type ChildRelationships$SocialPostFeed = {
 };
 
 interface SObjectDefinition$SocialPostFeed extends SObjectDefinition<'SocialPostFeed'> {
-    Name: 'SocialPostFeed';
-    Fields: Fields$SocialPostFeed;
-    ParentReferences: ParentReferences$SocialPostFeed;
-    ChildRelationships: ChildRelationships$SocialPostFeed;
-  }
+  Name: 'SocialPostFeed';
+  Fields: Fields$SocialPostFeed;
+  ParentReferences: ParentReferences$SocialPostFeed;
+  ChildRelationships: ChildRelationships$SocialPostFeed;
+}
 
 type Fields$SocialPostHistory = {
   //
@@ -32461,11 +32951,11 @@ type ChildRelationships$SocialPostHistory = {
 };
 
 interface SObjectDefinition$SocialPostHistory extends SObjectDefinition<'SocialPostHistory'> {
-    Name: 'SocialPostHistory';
-    Fields: Fields$SocialPostHistory;
-    ParentReferences: ParentReferences$SocialPostHistory;
-    ChildRelationships: ChildRelationships$SocialPostHistory;
-  }
+  Name: 'SocialPostHistory';
+  Fields: Fields$SocialPostHistory;
+  ParentReferences: ParentReferences$SocialPostHistory;
+  ChildRelationships: ChildRelationships$SocialPostHistory;
+}
 
 type Fields$SocialPostShare = {
   //
@@ -32491,11 +32981,11 @@ type ChildRelationships$SocialPostShare = {
 };
 
 interface SObjectDefinition$SocialPostShare extends SObjectDefinition<'SocialPostShare'> {
-    Name: 'SocialPostShare';
-    Fields: Fields$SocialPostShare;
-    ParentReferences: ParentReferences$SocialPostShare;
-    ChildRelationships: ChildRelationships$SocialPostShare;
-  }
+  Name: 'SocialPostShare';
+  Fields: Fields$SocialPostShare;
+  ParentReferences: ParentReferences$SocialPostShare;
+  ChildRelationships: ChildRelationships$SocialPostShare;
+}
 
 type Fields$Solution = {
   //
@@ -32553,11 +33043,11 @@ type ChildRelationships$Solution = {
 };
 
 interface SObjectDefinition$Solution extends SObjectDefinition<'Solution'> {
-    Name: 'Solution';
-    Fields: Fields$Solution;
-    ParentReferences: ParentReferences$Solution;
-    ChildRelationships: ChildRelationships$Solution;
-  }
+  Name: 'Solution';
+  Fields: Fields$Solution;
+  ParentReferences: ParentReferences$Solution;
+  ChildRelationships: ChildRelationships$Solution;
+}
 
 type Fields$SolutionFeed = {
   //
@@ -32598,11 +33088,11 @@ type ChildRelationships$SolutionFeed = {
 };
 
 interface SObjectDefinition$SolutionFeed extends SObjectDefinition<'SolutionFeed'> {
-    Name: 'SolutionFeed';
-    Fields: Fields$SolutionFeed;
-    ParentReferences: ParentReferences$SolutionFeed;
-    ChildRelationships: ChildRelationships$SolutionFeed;
-  }
+  Name: 'SolutionFeed';
+  Fields: Fields$SolutionFeed;
+  ParentReferences: ParentReferences$SolutionFeed;
+  ChildRelationships: ChildRelationships$SolutionFeed;
+}
 
 type Fields$SolutionHistory = {
   //
@@ -32628,11 +33118,11 @@ type ChildRelationships$SolutionHistory = {
 };
 
 interface SObjectDefinition$SolutionHistory extends SObjectDefinition<'SolutionHistory'> {
-    Name: 'SolutionHistory';
-    Fields: Fields$SolutionHistory;
-    ParentReferences: ParentReferences$SolutionHistory;
-    ChildRelationships: ChildRelationships$SolutionHistory;
-  }
+  Name: 'SolutionHistory';
+  Fields: Fields$SolutionHistory;
+  ParentReferences: ParentReferences$SolutionHistory;
+  ChildRelationships: ChildRelationships$SolutionHistory;
+}
 
 type Fields$SolutionStatus = {
   //
@@ -32660,11 +33150,11 @@ type ChildRelationships$SolutionStatus = {
 };
 
 interface SObjectDefinition$SolutionStatus extends SObjectDefinition<'SolutionStatus'> {
-    Name: 'SolutionStatus';
-    Fields: Fields$SolutionStatus;
-    ParentReferences: ParentReferences$SolutionStatus;
-    ChildRelationships: ChildRelationships$SolutionStatus;
-  }
+  Name: 'SolutionStatus';
+  Fields: Fields$SolutionStatus;
+  ParentReferences: ParentReferences$SolutionStatus;
+  ChildRelationships: ChildRelationships$SolutionStatus;
+}
 
 type Fields$Sstack_CC__Billing_Week__ChangeEvent = {
   //
@@ -32690,12 +33180,13 @@ type ChildRelationships$Sstack_CC__Billing_Week__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Billing_Week__ChangeEvent extends SObjectDefinition<'Sstack_CC__Billing_Week__ChangeEvent'> {
-    Name: 'Sstack_CC__Billing_Week__ChangeEvent';
-    Fields: Fields$Sstack_CC__Billing_Week__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Billing_Week__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Billing_Week__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Billing_Week__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Billing_Week__ChangeEvent'> {
+  Name: 'Sstack_CC__Billing_Week__ChangeEvent';
+  Fields: Fields$Sstack_CC__Billing_Week__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Billing_Week__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Billing_Week__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Billing_Week__c = {
   //
@@ -32745,11 +33236,11 @@ type ChildRelationships$Sstack_CC__Billing_Week__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Billing_Week__c extends SObjectDefinition<'Sstack_CC__Billing_Week__c'> {
-    Name: 'Sstack_CC__Billing_Week__c';
-    Fields: Fields$Sstack_CC__Billing_Week__c;
-    ParentReferences: ParentReferences$Sstack_CC__Billing_Week__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Billing_Week__c;
-  }
+  Name: 'Sstack_CC__Billing_Week__c';
+  Fields: Fields$Sstack_CC__Billing_Week__c;
+  ParentReferences: ParentReferences$Sstack_CC__Billing_Week__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Billing_Week__c;
+}
 
 type Fields$Sstack_CC__CTH_Terms__ChangeEvent = {
   //
@@ -32776,12 +33267,13 @@ type ChildRelationships$Sstack_CC__CTH_Terms__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__CTH_Terms__ChangeEvent extends SObjectDefinition<'Sstack_CC__CTH_Terms__ChangeEvent'> {
-    Name: 'Sstack_CC__CTH_Terms__ChangeEvent';
-    Fields: Fields$Sstack_CC__CTH_Terms__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__CTH_Terms__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__CTH_Terms__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__CTH_Terms__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__CTH_Terms__ChangeEvent'> {
+  Name: 'Sstack_CC__CTH_Terms__ChangeEvent';
+  Fields: Fields$Sstack_CC__CTH_Terms__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__CTH_Terms__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__CTH_Terms__ChangeEvent;
+}
 
 type Fields$Sstack_CC__CTH_Terms__c = {
   //
@@ -32832,11 +33324,11 @@ type ChildRelationships$Sstack_CC__CTH_Terms__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__CTH_Terms__c extends SObjectDefinition<'Sstack_CC__CTH_Terms__c'> {
-    Name: 'Sstack_CC__CTH_Terms__c';
-    Fields: Fields$Sstack_CC__CTH_Terms__c;
-    ParentReferences: ParentReferences$Sstack_CC__CTH_Terms__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__CTH_Terms__c;
-  }
+  Name: 'Sstack_CC__CTH_Terms__c';
+  Fields: Fields$Sstack_CC__CTH_Terms__c;
+  ParentReferences: ParentReferences$Sstack_CC__CTH_Terms__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__CTH_Terms__c;
+}
 
 type Fields$Sstack_CC__Commission_Calculator_Settings__mdt = {
   //
@@ -32859,12 +33351,13 @@ type ChildRelationships$Sstack_CC__Commission_Calculator_Settings__mdt = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Calculator_Settings__mdt extends SObjectDefinition<'Sstack_CC__Commission_Calculator_Settings__mdt'> {
-    Name: 'Sstack_CC__Commission_Calculator_Settings__mdt';
-    Fields: Fields$Sstack_CC__Commission_Calculator_Settings__mdt;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Calculator_Settings__mdt;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Calculator_Settings__mdt;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Calculator_Settings__mdt
+  extends SObjectDefinition<'Sstack_CC__Commission_Calculator_Settings__mdt'> {
+  Name: 'Sstack_CC__Commission_Calculator_Settings__mdt';
+  Fields: Fields$Sstack_CC__Commission_Calculator_Settings__mdt;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Calculator_Settings__mdt;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Calculator_Settings__mdt;
+}
 
 type Fields$Sstack_CC__Commission_Report_Result_Line__ChangeEvent = {
   //
@@ -32908,12 +33401,13 @@ type ChildRelationships$Sstack_CC__Commission_Report_Result_Line__ChangeEvent = 
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Report_Result_Line__ChangeEvent extends SObjectDefinition<'Sstack_CC__Commission_Report_Result_Line__ChangeEvent'> {
-    Name: 'Sstack_CC__Commission_Report_Result_Line__ChangeEvent';
-    Fields: Fields$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Report_Result_Line__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Commission_Report_Result_Line__ChangeEvent'> {
+  Name: 'Sstack_CC__Commission_Report_Result_Line__ChangeEvent';
+  Fields: Fields$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result_Line__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Commission_Report_Result_Line__c = {
   //
@@ -32983,12 +33477,13 @@ type ChildRelationships$Sstack_CC__Commission_Report_Result_Line__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Report_Result_Line__c extends SObjectDefinition<'Sstack_CC__Commission_Report_Result_Line__c'> {
-    Name: 'Sstack_CC__Commission_Report_Result_Line__c';
-    Fields: Fields$Sstack_CC__Commission_Report_Result_Line__c;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result_Line__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result_Line__c;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Report_Result_Line__c
+  extends SObjectDefinition<'Sstack_CC__Commission_Report_Result_Line__c'> {
+  Name: 'Sstack_CC__Commission_Report_Result_Line__c';
+  Fields: Fields$Sstack_CC__Commission_Report_Result_Line__c;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result_Line__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result_Line__c;
+}
 
 type Fields$Sstack_CC__Commission_Report_Result__ChangeEvent = {
   //
@@ -33017,12 +33512,13 @@ type ChildRelationships$Sstack_CC__Commission_Report_Result__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Report_Result__ChangeEvent extends SObjectDefinition<'Sstack_CC__Commission_Report_Result__ChangeEvent'> {
-    Name: 'Sstack_CC__Commission_Report_Result__ChangeEvent';
-    Fields: Fields$Sstack_CC__Commission_Report_Result__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Report_Result__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Commission_Report_Result__ChangeEvent'> {
+  Name: 'Sstack_CC__Commission_Report_Result__ChangeEvent';
+  Fields: Fields$Sstack_CC__Commission_Report_Result__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Commission_Report_Result__c = {
   //
@@ -33077,12 +33573,13 @@ type ChildRelationships$Sstack_CC__Commission_Report_Result__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Report_Result__c extends SObjectDefinition<'Sstack_CC__Commission_Report_Result__c'> {
-    Name: 'Sstack_CC__Commission_Report_Result__c';
-    Fields: Fields$Sstack_CC__Commission_Report_Result__c;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result__c;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Report_Result__c
+  extends SObjectDefinition<'Sstack_CC__Commission_Report_Result__c'> {
+  Name: 'Sstack_CC__Commission_Report_Result__c';
+  Fields: Fields$Sstack_CC__Commission_Report_Result__c;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Report_Result__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Report_Result__c;
+}
 
 type Fields$Sstack_CC__Commission_Table_Line__ChangeEvent = {
   //
@@ -33120,12 +33617,13 @@ type ChildRelationships$Sstack_CC__Commission_Table_Line__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Table_Line__ChangeEvent extends SObjectDefinition<'Sstack_CC__Commission_Table_Line__ChangeEvent'> {
-    Name: 'Sstack_CC__Commission_Table_Line__ChangeEvent';
-    Fields: Fields$Sstack_CC__Commission_Table_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Table_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table_Line__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Table_Line__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Commission_Table_Line__ChangeEvent'> {
+  Name: 'Sstack_CC__Commission_Table_Line__ChangeEvent';
+  Fields: Fields$Sstack_CC__Commission_Table_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Table_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table_Line__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Commission_Table_Line__c = {
   //
@@ -33186,12 +33684,13 @@ type ChildRelationships$Sstack_CC__Commission_Table_Line__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Table_Line__c extends SObjectDefinition<'Sstack_CC__Commission_Table_Line__c'> {
-    Name: 'Sstack_CC__Commission_Table_Line__c';
-    Fields: Fields$Sstack_CC__Commission_Table_Line__c;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Table_Line__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table_Line__c;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Table_Line__c
+  extends SObjectDefinition<'Sstack_CC__Commission_Table_Line__c'> {
+  Name: 'Sstack_CC__Commission_Table_Line__c';
+  Fields: Fields$Sstack_CC__Commission_Table_Line__c;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Table_Line__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table_Line__c;
+}
 
 type Fields$Sstack_CC__Commission_Table__ChangeEvent = {
   //
@@ -33219,12 +33718,13 @@ type ChildRelationships$Sstack_CC__Commission_Table__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Table__ChangeEvent extends SObjectDefinition<'Sstack_CC__Commission_Table__ChangeEvent'> {
-    Name: 'Sstack_CC__Commission_Table__ChangeEvent';
-    Fields: Fields$Sstack_CC__Commission_Table__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Table__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Table__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Commission_Table__ChangeEvent'> {
+  Name: 'Sstack_CC__Commission_Table__ChangeEvent';
+  Fields: Fields$Sstack_CC__Commission_Table__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Table__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Commission_Table__History = {
   //
@@ -33249,12 +33749,13 @@ type ChildRelationships$Sstack_CC__Commission_Table__History = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Commission_Table__History extends SObjectDefinition<'Sstack_CC__Commission_Table__History'> {
-    Name: 'Sstack_CC__Commission_Table__History';
-    Fields: Fields$Sstack_CC__Commission_Table__History;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Table__History;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__History;
-  }
+interface SObjectDefinition$Sstack_CC__Commission_Table__History
+  extends SObjectDefinition<'Sstack_CC__Commission_Table__History'> {
+  Name: 'Sstack_CC__Commission_Table__History';
+  Fields: Fields$Sstack_CC__Commission_Table__History;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Table__History;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__History;
+}
 
 type Fields$Sstack_CC__Commission_Table__c = {
   //
@@ -33315,11 +33816,11 @@ type ChildRelationships$Sstack_CC__Commission_Table__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Commission_Table__c extends SObjectDefinition<'Sstack_CC__Commission_Table__c'> {
-    Name: 'Sstack_CC__Commission_Table__c';
-    Fields: Fields$Sstack_CC__Commission_Table__c;
-    ParentReferences: ParentReferences$Sstack_CC__Commission_Table__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__c;
-  }
+  Name: 'Sstack_CC__Commission_Table__c';
+  Fields: Fields$Sstack_CC__Commission_Table__c;
+  ParentReferences: ParentReferences$Sstack_CC__Commission_Table__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Commission_Table__c;
+}
 
 type Fields$Sstack_CC__Deal__ChangeEvent = {
   //
@@ -33349,11 +33850,11 @@ type ChildRelationships$Sstack_CC__Deal__ChangeEvent = {
 };
 
 interface SObjectDefinition$Sstack_CC__Deal__ChangeEvent extends SObjectDefinition<'Sstack_CC__Deal__ChangeEvent'> {
-    Name: 'Sstack_CC__Deal__ChangeEvent';
-    Fields: Fields$Sstack_CC__Deal__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Deal__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Deal__ChangeEvent;
-  }
+  Name: 'Sstack_CC__Deal__ChangeEvent';
+  Fields: Fields$Sstack_CC__Deal__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Deal__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Deal__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Deal__c = {
   //
@@ -33409,11 +33910,11 @@ type ChildRelationships$Sstack_CC__Deal__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Deal__c extends SObjectDefinition<'Sstack_CC__Deal__c'> {
-    Name: 'Sstack_CC__Deal__c';
-    Fields: Fields$Sstack_CC__Deal__c;
-    ParentReferences: ParentReferences$Sstack_CC__Deal__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Deal__c;
-  }
+  Name: 'Sstack_CC__Deal__c';
+  Fields: Fields$Sstack_CC__Deal__c;
+  ParentReferences: ParentReferences$Sstack_CC__Deal__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Deal__c;
+}
 
 type Fields$Sstack_CC__JP_Information__ChangeEvent = {
   //
@@ -33473,12 +33974,13 @@ type ChildRelationships$Sstack_CC__JP_Information__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__JP_Information__ChangeEvent extends SObjectDefinition<'Sstack_CC__JP_Information__ChangeEvent'> {
-    Name: 'Sstack_CC__JP_Information__ChangeEvent';
-    Fields: Fields$Sstack_CC__JP_Information__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__JP_Information__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__JP_Information__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__JP_Information__ChangeEvent'> {
+  Name: 'Sstack_CC__JP_Information__ChangeEvent';
+  Fields: Fields$Sstack_CC__JP_Information__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__JP_Information__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__ChangeEvent;
+}
 
 type Fields$Sstack_CC__JP_Information__History = {
   //
@@ -33503,12 +34005,13 @@ type ChildRelationships$Sstack_CC__JP_Information__History = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__JP_Information__History extends SObjectDefinition<'Sstack_CC__JP_Information__History'> {
-    Name: 'Sstack_CC__JP_Information__History';
-    Fields: Fields$Sstack_CC__JP_Information__History;
-    ParentReferences: ParentReferences$Sstack_CC__JP_Information__History;
-    ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__History;
-  }
+interface SObjectDefinition$Sstack_CC__JP_Information__History
+  extends SObjectDefinition<'Sstack_CC__JP_Information__History'> {
+  Name: 'Sstack_CC__JP_Information__History';
+  Fields: Fields$Sstack_CC__JP_Information__History;
+  ParentReferences: ParentReferences$Sstack_CC__JP_Information__History;
+  ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__History;
+}
 
 type Fields$Sstack_CC__JP_Information__c = {
   //
@@ -33600,11 +34103,11 @@ type ChildRelationships$Sstack_CC__JP_Information__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__JP_Information__c extends SObjectDefinition<'Sstack_CC__JP_Information__c'> {
-    Name: 'Sstack_CC__JP_Information__c';
-    Fields: Fields$Sstack_CC__JP_Information__c;
-    ParentReferences: ParentReferences$Sstack_CC__JP_Information__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__c;
-  }
+  Name: 'Sstack_CC__JP_Information__c';
+  Fields: Fields$Sstack_CC__JP_Information__c;
+  ParentReferences: ParentReferences$Sstack_CC__JP_Information__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__JP_Information__c;
+}
 
 type Fields$Sstack_CC__Job_Placement_AM__ChangeEvent = {
   //
@@ -33630,12 +34133,13 @@ type ChildRelationships$Sstack_CC__Job_Placement_AM__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Job_Placement_AM__ChangeEvent extends SObjectDefinition<'Sstack_CC__Job_Placement_AM__ChangeEvent'> {
-    Name: 'Sstack_CC__Job_Placement_AM__ChangeEvent';
-    Fields: Fields$Sstack_CC__Job_Placement_AM__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement_AM__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_AM__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Job_Placement_AM__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Job_Placement_AM__ChangeEvent'> {
+  Name: 'Sstack_CC__Job_Placement_AM__ChangeEvent';
+  Fields: Fields$Sstack_CC__Job_Placement_AM__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement_AM__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_AM__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Job_Placement_AM__c = {
   //
@@ -33686,11 +34190,11 @@ type ChildRelationships$Sstack_CC__Job_Placement_AM__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Job_Placement_AM__c extends SObjectDefinition<'Sstack_CC__Job_Placement_AM__c'> {
-    Name: 'Sstack_CC__Job_Placement_AM__c';
-    Fields: Fields$Sstack_CC__Job_Placement_AM__c;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement_AM__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_AM__c;
-  }
+  Name: 'Sstack_CC__Job_Placement_AM__c';
+  Fields: Fields$Sstack_CC__Job_Placement_AM__c;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement_AM__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_AM__c;
+}
 
 type Fields$Sstack_CC__Job_Placement_Recruiter__ChangeEvent = {
   //
@@ -33716,12 +34220,13 @@ type ChildRelationships$Sstack_CC__Job_Placement_Recruiter__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Job_Placement_Recruiter__ChangeEvent extends SObjectDefinition<'Sstack_CC__Job_Placement_Recruiter__ChangeEvent'> {
-    Name: 'Sstack_CC__Job_Placement_Recruiter__ChangeEvent';
-    Fields: Fields$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Job_Placement_Recruiter__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Job_Placement_Recruiter__ChangeEvent'> {
+  Name: 'Sstack_CC__Job_Placement_Recruiter__ChangeEvent';
+  Fields: Fields$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_Recruiter__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Job_Placement_Recruiter__c = {
   //
@@ -33771,12 +34276,13 @@ type ChildRelationships$Sstack_CC__Job_Placement_Recruiter__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Sstack_CC__Job_Placement_Recruiter__c extends SObjectDefinition<'Sstack_CC__Job_Placement_Recruiter__c'> {
-    Name: 'Sstack_CC__Job_Placement_Recruiter__c';
-    Fields: Fields$Sstack_CC__Job_Placement_Recruiter__c;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement_Recruiter__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_Recruiter__c;
-  }
+interface SObjectDefinition$Sstack_CC__Job_Placement_Recruiter__c
+  extends SObjectDefinition<'Sstack_CC__Job_Placement_Recruiter__c'> {
+  Name: 'Sstack_CC__Job_Placement_Recruiter__c';
+  Fields: Fields$Sstack_CC__Job_Placement_Recruiter__c;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement_Recruiter__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement_Recruiter__c;
+}
 
 type Fields$Sstack_CC__Job_Placement__ChangeEvent = {
   //
@@ -33831,12 +34337,13 @@ type ChildRelationships$Sstack_CC__Job_Placement__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Job_Placement__ChangeEvent extends SObjectDefinition<'Sstack_CC__Job_Placement__ChangeEvent'> {
-    Name: 'Sstack_CC__Job_Placement__ChangeEvent';
-    Fields: Fields$Sstack_CC__Job_Placement__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Job_Placement__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Job_Placement__ChangeEvent'> {
+  Name: 'Sstack_CC__Job_Placement__ChangeEvent';
+  Fields: Fields$Sstack_CC__Job_Placement__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Job_Placement__History = {
   //
@@ -33861,12 +34368,13 @@ type ChildRelationships$Sstack_CC__Job_Placement__History = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Job_Placement__History extends SObjectDefinition<'Sstack_CC__Job_Placement__History'> {
-    Name: 'Sstack_CC__Job_Placement__History';
-    Fields: Fields$Sstack_CC__Job_Placement__History;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement__History;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__History;
-  }
+interface SObjectDefinition$Sstack_CC__Job_Placement__History
+  extends SObjectDefinition<'Sstack_CC__Job_Placement__History'> {
+  Name: 'Sstack_CC__Job_Placement__History';
+  Fields: Fields$Sstack_CC__Job_Placement__History;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement__History;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__History;
+}
 
 type Fields$Sstack_CC__Job_Placement__c = {
   //
@@ -33952,11 +34460,11 @@ type ChildRelationships$Sstack_CC__Job_Placement__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Job_Placement__c extends SObjectDefinition<'Sstack_CC__Job_Placement__c'> {
-    Name: 'Sstack_CC__Job_Placement__c';
-    Fields: Fields$Sstack_CC__Job_Placement__c;
-    ParentReferences: ParentReferences$Sstack_CC__Job_Placement__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__c;
-  }
+  Name: 'Sstack_CC__Job_Placement__c';
+  Fields: Fields$Sstack_CC__Job_Placement__c;
+  ParentReferences: ParentReferences$Sstack_CC__Job_Placement__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Job_Placement__c;
+}
 
 type Fields$Sstack_CC__Referrer__ChangeEvent = {
   //
@@ -33987,12 +34495,13 @@ type ChildRelationships$Sstack_CC__Referrer__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Referrer__ChangeEvent extends SObjectDefinition<'Sstack_CC__Referrer__ChangeEvent'> {
-    Name: 'Sstack_CC__Referrer__ChangeEvent';
-    Fields: Fields$Sstack_CC__Referrer__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Referrer__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Referrer__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Referrer__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Referrer__ChangeEvent'> {
+  Name: 'Sstack_CC__Referrer__ChangeEvent';
+  Fields: Fields$Sstack_CC__Referrer__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Referrer__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Referrer__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Referrer__c = {
   //
@@ -34048,11 +34557,11 @@ type ChildRelationships$Sstack_CC__Referrer__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Referrer__c extends SObjectDefinition<'Sstack_CC__Referrer__c'> {
-    Name: 'Sstack_CC__Referrer__c';
-    Fields: Fields$Sstack_CC__Referrer__c;
-    ParentReferences: ParentReferences$Sstack_CC__Referrer__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Referrer__c;
-  }
+  Name: 'Sstack_CC__Referrer__c';
+  Fields: Fields$Sstack_CC__Referrer__c;
+  ParentReferences: ParentReferences$Sstack_CC__Referrer__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Referrer__c;
+}
 
 type Fields$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent = {
   //
@@ -34087,12 +34596,13 @@ type ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent =
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent extends SObjectDefinition<'Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent'> {
-    Name: 'Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent';
-    Fields: Fields$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent'> {
+  Name: 'Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent';
+  Fields: Fields$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Staff_Aug_Commission_Variables__c = {
   //
@@ -34152,12 +34662,13 @@ type ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Sstack_CC__Staff_Aug_Commission_Variables__c extends SObjectDefinition<'Sstack_CC__Staff_Aug_Commission_Variables__c'> {
-    Name: 'Sstack_CC__Staff_Aug_Commission_Variables__c';
-    Fields: Fields$Sstack_CC__Staff_Aug_Commission_Variables__c;
-    ParentReferences: ParentReferences$Sstack_CC__Staff_Aug_Commission_Variables__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__c;
-  }
+interface SObjectDefinition$Sstack_CC__Staff_Aug_Commission_Variables__c
+  extends SObjectDefinition<'Sstack_CC__Staff_Aug_Commission_Variables__c'> {
+  Name: 'Sstack_CC__Staff_Aug_Commission_Variables__c';
+  Fields: Fields$Sstack_CC__Staff_Aug_Commission_Variables__c;
+  ParentReferences: ParentReferences$Sstack_CC__Staff_Aug_Commission_Variables__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Staff_Aug_Commission_Variables__c;
+}
 
 type Fields$Sstack_CC__Total_Hours__ChangeEvent = {
   //
@@ -34183,12 +34694,13 @@ type ChildRelationships$Sstack_CC__Total_Hours__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Total_Hours__ChangeEvent extends SObjectDefinition<'Sstack_CC__Total_Hours__ChangeEvent'> {
-    Name: 'Sstack_CC__Total_Hours__ChangeEvent';
-    Fields: Fields$Sstack_CC__Total_Hours__ChangeEvent;
-    ParentReferences: ParentReferences$Sstack_CC__Total_Hours__ChangeEvent;
-    ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__ChangeEvent;
-  }
+interface SObjectDefinition$Sstack_CC__Total_Hours__ChangeEvent
+  extends SObjectDefinition<'Sstack_CC__Total_Hours__ChangeEvent'> {
+  Name: 'Sstack_CC__Total_Hours__ChangeEvent';
+  Fields: Fields$Sstack_CC__Total_Hours__ChangeEvent;
+  ParentReferences: ParentReferences$Sstack_CC__Total_Hours__ChangeEvent;
+  ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__ChangeEvent;
+}
 
 type Fields$Sstack_CC__Total_Hours__History = {
   //
@@ -34213,12 +34725,13 @@ type ChildRelationships$Sstack_CC__Total_Hours__History = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Total_Hours__History extends SObjectDefinition<'Sstack_CC__Total_Hours__History'> {
-    Name: 'Sstack_CC__Total_Hours__History';
-    Fields: Fields$Sstack_CC__Total_Hours__History;
-    ParentReferences: ParentReferences$Sstack_CC__Total_Hours__History;
-    ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__History;
-  }
+interface SObjectDefinition$Sstack_CC__Total_Hours__History
+  extends SObjectDefinition<'Sstack_CC__Total_Hours__History'> {
+  Name: 'Sstack_CC__Total_Hours__History';
+  Fields: Fields$Sstack_CC__Total_Hours__History;
+  ParentReferences: ParentReferences$Sstack_CC__Total_Hours__History;
+  ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__History;
+}
 
 type Fields$Sstack_CC__Total_Hours__c = {
   //
@@ -34276,11 +34789,11 @@ type ChildRelationships$Sstack_CC__Total_Hours__c = {
 };
 
 interface SObjectDefinition$Sstack_CC__Total_Hours__c extends SObjectDefinition<'Sstack_CC__Total_Hours__c'> {
-    Name: 'Sstack_CC__Total_Hours__c';
-    Fields: Fields$Sstack_CC__Total_Hours__c;
-    ParentReferences: ParentReferences$Sstack_CC__Total_Hours__c;
-    ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__c;
-  }
+  Name: 'Sstack_CC__Total_Hours__c';
+  Fields: Fields$Sstack_CC__Total_Hours__c;
+  ParentReferences: ParentReferences$Sstack_CC__Total_Hours__c;
+  ChildRelationships: ChildRelationships$Sstack_CC__Total_Hours__c;
+}
 
 type Fields$Sstack_CC__Trigger_Settings__mdt = {
   //
@@ -34302,12 +34815,13 @@ type ChildRelationships$Sstack_CC__Trigger_Settings__mdt = {
   //
 };
 
-interface SObjectDefinition$Sstack_CC__Trigger_Settings__mdt extends SObjectDefinition<'Sstack_CC__Trigger_Settings__mdt'> {
-    Name: 'Sstack_CC__Trigger_Settings__mdt';
-    Fields: Fields$Sstack_CC__Trigger_Settings__mdt;
-    ParentReferences: ParentReferences$Sstack_CC__Trigger_Settings__mdt;
-    ChildRelationships: ChildRelationships$Sstack_CC__Trigger_Settings__mdt;
-  }
+interface SObjectDefinition$Sstack_CC__Trigger_Settings__mdt
+  extends SObjectDefinition<'Sstack_CC__Trigger_Settings__mdt'> {
+  Name: 'Sstack_CC__Trigger_Settings__mdt';
+  Fields: Fields$Sstack_CC__Trigger_Settings__mdt;
+  ParentReferences: ParentReferences$Sstack_CC__Trigger_Settings__mdt;
+  ChildRelationships: ChildRelationships$Sstack_CC__Trigger_Settings__mdt;
+}
 
 type Fields$Staff_Aug_Commission_Variables__ChangeEvent = {
   //
@@ -34320,6 +34834,7 @@ type Fields$Staff_Aug_Commission_Variables__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Burden__c: number | null;
   Daily_Bill_Rate_Conversion_Factor__c: number | null;
   Effective_Date__c: DateString | null;
   Federal_Sick_Leave_Hours__c: number | null;
@@ -34341,12 +34856,13 @@ type ChildRelationships$Staff_Aug_Commission_Variables__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Staff_Aug_Commission_Variables__ChangeEvent extends SObjectDefinition<'Staff_Aug_Commission_Variables__ChangeEvent'> {
-    Name: 'Staff_Aug_Commission_Variables__ChangeEvent';
-    Fields: Fields$Staff_Aug_Commission_Variables__ChangeEvent;
-    ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__ChangeEvent;
-    ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__ChangeEvent;
-  }
+interface SObjectDefinition$Staff_Aug_Commission_Variables__ChangeEvent
+  extends SObjectDefinition<'Staff_Aug_Commission_Variables__ChangeEvent'> {
+  Name: 'Staff_Aug_Commission_Variables__ChangeEvent';
+  Fields: Fields$Staff_Aug_Commission_Variables__ChangeEvent;
+  ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__ChangeEvent;
+  ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__ChangeEvent;
+}
 
 type Fields$Staff_Aug_Commission_Variables__c = {
   //
@@ -34359,6 +34875,9 @@ type Fields$Staff_Aug_Commission_Variables__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Burden__c: number | null;
   Daily_Bill_Rate_Conversion_Factor__c: number;
   Effective_Date__c: DateString;
   Federal_Sick_Leave_Hours__c: number;
@@ -34403,12 +34922,13 @@ type ChildRelationships$Staff_Aug_Commission_Variables__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$Staff_Aug_Commission_Variables__c extends SObjectDefinition<'Staff_Aug_Commission_Variables__c'> {
-    Name: 'Staff_Aug_Commission_Variables__c';
-    Fields: Fields$Staff_Aug_Commission_Variables__c;
-    ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__c;
-    ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__c;
-  }
+interface SObjectDefinition$Staff_Aug_Commission_Variables__c
+  extends SObjectDefinition<'Staff_Aug_Commission_Variables__c'> {
+  Name: 'Staff_Aug_Commission_Variables__c';
+  Fields: Fields$Staff_Aug_Commission_Variables__c;
+  ParentReferences: ParentReferences$Staff_Aug_Commission_Variables__c;
+  ChildRelationships: ChildRelationships$Staff_Aug_Commission_Variables__c;
+}
 
 type Fields$Stamp = {
   //
@@ -34437,11 +34957,11 @@ type ChildRelationships$Stamp = {
 };
 
 interface SObjectDefinition$Stamp extends SObjectDefinition<'Stamp'> {
-    Name: 'Stamp';
-    Fields: Fields$Stamp;
-    ParentReferences: ParentReferences$Stamp;
-    ChildRelationships: ChildRelationships$Stamp;
-  }
+  Name: 'Stamp';
+  Fields: Fields$Stamp;
+  ParentReferences: ParentReferences$Stamp;
+  ChildRelationships: ChildRelationships$Stamp;
+}
 
 type Fields$StampAssignment = {
   //
@@ -34469,11 +34989,11 @@ type ChildRelationships$StampAssignment = {
 };
 
 interface SObjectDefinition$StampAssignment extends SObjectDefinition<'StampAssignment'> {
-    Name: 'StampAssignment';
-    Fields: Fields$StampAssignment;
-    ParentReferences: ParentReferences$StampAssignment;
-    ChildRelationships: ChildRelationships$StampAssignment;
-  }
+  Name: 'StampAssignment';
+  Fields: Fields$StampAssignment;
+  ParentReferences: ParentReferences$StampAssignment;
+  ChildRelationships: ChildRelationships$StampAssignment;
+}
 
 type Fields$StaticResource = {
   //
@@ -34503,11 +35023,11 @@ type ChildRelationships$StaticResource = {
 };
 
 interface SObjectDefinition$StaticResource extends SObjectDefinition<'StaticResource'> {
-    Name: 'StaticResource';
-    Fields: Fields$StaticResource;
-    ParentReferences: ParentReferences$StaticResource;
-    ChildRelationships: ChildRelationships$StaticResource;
-  }
+  Name: 'StaticResource';
+  Fields: Fields$StaticResource;
+  ParentReferences: ParentReferences$StaticResource;
+  ChildRelationships: ChildRelationships$StaticResource;
+}
 
 type Fields$StreamingChannel = {
   //
@@ -34541,11 +35061,11 @@ type ChildRelationships$StreamingChannel = {
 };
 
 interface SObjectDefinition$StreamingChannel extends SObjectDefinition<'StreamingChannel'> {
-    Name: 'StreamingChannel';
-    Fields: Fields$StreamingChannel;
-    ParentReferences: ParentReferences$StreamingChannel;
-    ChildRelationships: ChildRelationships$StreamingChannel;
-  }
+  Name: 'StreamingChannel';
+  Fields: Fields$StreamingChannel;
+  ParentReferences: ParentReferences$StreamingChannel;
+  ChildRelationships: ChildRelationships$StreamingChannel;
+}
 
 type Fields$StreamingChannelShare = {
   //
@@ -34571,11 +35091,11 @@ type ChildRelationships$StreamingChannelShare = {
 };
 
 interface SObjectDefinition$StreamingChannelShare extends SObjectDefinition<'StreamingChannelShare'> {
-    Name: 'StreamingChannelShare';
-    Fields: Fields$StreamingChannelShare;
-    ParentReferences: ParentReferences$StreamingChannelShare;
-    ChildRelationships: ChildRelationships$StreamingChannelShare;
-  }
+  Name: 'StreamingChannelShare';
+  Fields: Fields$StreamingChannelShare;
+  ParentReferences: ParentReferences$StreamingChannelShare;
+  ChildRelationships: ChildRelationships$StreamingChannelShare;
+}
 
 type Fields$Survey = {
   //
@@ -34628,11 +35148,11 @@ type ChildRelationships$Survey = {
 };
 
 interface SObjectDefinition$Survey extends SObjectDefinition<'Survey'> {
-    Name: 'Survey';
-    Fields: Fields$Survey;
-    ParentReferences: ParentReferences$Survey;
-    ChildRelationships: ChildRelationships$Survey;
-  }
+  Name: 'Survey';
+  Fields: Fields$Survey;
+  ParentReferences: ParentReferences$Survey;
+  ChildRelationships: ChildRelationships$Survey;
+}
 
 type Fields$SurveyEmailBranding = {
   //
@@ -34666,11 +35186,11 @@ type ChildRelationships$SurveyEmailBranding = {
 };
 
 interface SObjectDefinition$SurveyEmailBranding extends SObjectDefinition<'SurveyEmailBranding'> {
-    Name: 'SurveyEmailBranding';
-    Fields: Fields$SurveyEmailBranding;
-    ParentReferences: ParentReferences$SurveyEmailBranding;
-    ChildRelationships: ChildRelationships$SurveyEmailBranding;
-  }
+  Name: 'SurveyEmailBranding';
+  Fields: Fields$SurveyEmailBranding;
+  ParentReferences: ParentReferences$SurveyEmailBranding;
+  ChildRelationships: ChildRelationships$SurveyEmailBranding;
+}
 
 type Fields$SurveyEngagementContext = {
   //
@@ -34704,11 +35224,11 @@ type ChildRelationships$SurveyEngagementContext = {
 };
 
 interface SObjectDefinition$SurveyEngagementContext extends SObjectDefinition<'SurveyEngagementContext'> {
-    Name: 'SurveyEngagementContext';
-    Fields: Fields$SurveyEngagementContext;
-    ParentReferences: ParentReferences$SurveyEngagementContext;
-    ChildRelationships: ChildRelationships$SurveyEngagementContext;
-  }
+  Name: 'SurveyEngagementContext';
+  Fields: Fields$SurveyEngagementContext;
+  ParentReferences: ParentReferences$SurveyEngagementContext;
+  ChildRelationships: ChildRelationships$SurveyEngagementContext;
+}
 
 type Fields$SurveyEngagementContextShare = {
   //
@@ -34734,11 +35254,11 @@ type ChildRelationships$SurveyEngagementContextShare = {
 };
 
 interface SObjectDefinition$SurveyEngagementContextShare extends SObjectDefinition<'SurveyEngagementContextShare'> {
-    Name: 'SurveyEngagementContextShare';
-    Fields: Fields$SurveyEngagementContextShare;
-    ParentReferences: ParentReferences$SurveyEngagementContextShare;
-    ChildRelationships: ChildRelationships$SurveyEngagementContextShare;
-  }
+  Name: 'SurveyEngagementContextShare';
+  Fields: Fields$SurveyEngagementContextShare;
+  ParentReferences: ParentReferences$SurveyEngagementContextShare;
+  ChildRelationships: ChildRelationships$SurveyEngagementContextShare;
+}
 
 type Fields$SurveyFeed = {
   //
@@ -34779,11 +35299,11 @@ type ChildRelationships$SurveyFeed = {
 };
 
 interface SObjectDefinition$SurveyFeed extends SObjectDefinition<'SurveyFeed'> {
-    Name: 'SurveyFeed';
-    Fields: Fields$SurveyFeed;
-    ParentReferences: ParentReferences$SurveyFeed;
-    ChildRelationships: ChildRelationships$SurveyFeed;
-  }
+  Name: 'SurveyFeed';
+  Fields: Fields$SurveyFeed;
+  ParentReferences: ParentReferences$SurveyFeed;
+  ChildRelationships: ChildRelationships$SurveyFeed;
+}
 
 type Fields$SurveyInvitation = {
   //
@@ -34843,11 +35363,11 @@ type ChildRelationships$SurveyInvitation = {
 };
 
 interface SObjectDefinition$SurveyInvitation extends SObjectDefinition<'SurveyInvitation'> {
-    Name: 'SurveyInvitation';
-    Fields: Fields$SurveyInvitation;
-    ParentReferences: ParentReferences$SurveyInvitation;
-    ChildRelationships: ChildRelationships$SurveyInvitation;
-  }
+  Name: 'SurveyInvitation';
+  Fields: Fields$SurveyInvitation;
+  ParentReferences: ParentReferences$SurveyInvitation;
+  ChildRelationships: ChildRelationships$SurveyInvitation;
+}
 
 type Fields$SurveyInvitationShare = {
   //
@@ -34873,11 +35393,11 @@ type ChildRelationships$SurveyInvitationShare = {
 };
 
 interface SObjectDefinition$SurveyInvitationShare extends SObjectDefinition<'SurveyInvitationShare'> {
-    Name: 'SurveyInvitationShare';
-    Fields: Fields$SurveyInvitationShare;
-    ParentReferences: ParentReferences$SurveyInvitationShare;
-    ChildRelationships: ChildRelationships$SurveyInvitationShare;
-  }
+  Name: 'SurveyInvitationShare';
+  Fields: Fields$SurveyInvitationShare;
+  ParentReferences: ParentReferences$SurveyInvitationShare;
+  ChildRelationships: ChildRelationships$SurveyInvitationShare;
+}
 
 type Fields$SurveyPage = {
   //
@@ -34908,11 +35428,11 @@ type ChildRelationships$SurveyPage = {
 };
 
 interface SObjectDefinition$SurveyPage extends SObjectDefinition<'SurveyPage'> {
-    Name: 'SurveyPage';
-    Fields: Fields$SurveyPage;
-    ParentReferences: ParentReferences$SurveyPage;
-    ChildRelationships: ChildRelationships$SurveyPage;
-  }
+  Name: 'SurveyPage';
+  Fields: Fields$SurveyPage;
+  ParentReferences: ParentReferences$SurveyPage;
+  ChildRelationships: ChildRelationships$SurveyPage;
+}
 
 type Fields$SurveyQuestion = {
   //
@@ -34956,11 +35476,11 @@ type ChildRelationships$SurveyQuestion = {
 };
 
 interface SObjectDefinition$SurveyQuestion extends SObjectDefinition<'SurveyQuestion'> {
-    Name: 'SurveyQuestion';
-    Fields: Fields$SurveyQuestion;
-    ParentReferences: ParentReferences$SurveyQuestion;
-    ChildRelationships: ChildRelationships$SurveyQuestion;
-  }
+  Name: 'SurveyQuestion';
+  Fields: Fields$SurveyQuestion;
+  ParentReferences: ParentReferences$SurveyQuestion;
+  ChildRelationships: ChildRelationships$SurveyQuestion;
+}
 
 type Fields$SurveyQuestionChoice = {
   //
@@ -34995,11 +35515,11 @@ type ChildRelationships$SurveyQuestionChoice = {
 };
 
 interface SObjectDefinition$SurveyQuestionChoice extends SObjectDefinition<'SurveyQuestionChoice'> {
-    Name: 'SurveyQuestionChoice';
-    Fields: Fields$SurveyQuestionChoice;
-    ParentReferences: ParentReferences$SurveyQuestionChoice;
-    ChildRelationships: ChildRelationships$SurveyQuestionChoice;
-  }
+  Name: 'SurveyQuestionChoice';
+  Fields: Fields$SurveyQuestionChoice;
+  ParentReferences: ParentReferences$SurveyQuestionChoice;
+  ChildRelationships: ChildRelationships$SurveyQuestionChoice;
+}
 
 type Fields$SurveyQuestionResponse = {
   //
@@ -35049,11 +35569,11 @@ type ChildRelationships$SurveyQuestionResponse = {
 };
 
 interface SObjectDefinition$SurveyQuestionResponse extends SObjectDefinition<'SurveyQuestionResponse'> {
-    Name: 'SurveyQuestionResponse';
-    Fields: Fields$SurveyQuestionResponse;
-    ParentReferences: ParentReferences$SurveyQuestionResponse;
-    ChildRelationships: ChildRelationships$SurveyQuestionResponse;
-  }
+  Name: 'SurveyQuestionResponse';
+  Fields: Fields$SurveyQuestionResponse;
+  ParentReferences: ParentReferences$SurveyQuestionResponse;
+  ChildRelationships: ChildRelationships$SurveyQuestionResponse;
+}
 
 type Fields$SurveyQuestionScore = {
   //
@@ -35097,11 +35617,11 @@ type ChildRelationships$SurveyQuestionScore = {
 };
 
 interface SObjectDefinition$SurveyQuestionScore extends SObjectDefinition<'SurveyQuestionScore'> {
-    Name: 'SurveyQuestionScore';
-    Fields: Fields$SurveyQuestionScore;
-    ParentReferences: ParentReferences$SurveyQuestionScore;
-    ChildRelationships: ChildRelationships$SurveyQuestionScore;
-  }
+  Name: 'SurveyQuestionScore';
+  Fields: Fields$SurveyQuestionScore;
+  ParentReferences: ParentReferences$SurveyQuestionScore;
+  ChildRelationships: ChildRelationships$SurveyQuestionScore;
+}
 
 type Fields$SurveyResponse = {
   //
@@ -35155,11 +35675,11 @@ type ChildRelationships$SurveyResponse = {
 };
 
 interface SObjectDefinition$SurveyResponse extends SObjectDefinition<'SurveyResponse'> {
-    Name: 'SurveyResponse';
-    Fields: Fields$SurveyResponse;
-    ParentReferences: ParentReferences$SurveyResponse;
-    ChildRelationships: ChildRelationships$SurveyResponse;
-  }
+  Name: 'SurveyResponse';
+  Fields: Fields$SurveyResponse;
+  ParentReferences: ParentReferences$SurveyResponse;
+  ChildRelationships: ChildRelationships$SurveyResponse;
+}
 
 type Fields$SurveyShare = {
   //
@@ -35185,11 +35705,11 @@ type ChildRelationships$SurveyShare = {
 };
 
 interface SObjectDefinition$SurveyShare extends SObjectDefinition<'SurveyShare'> {
-    Name: 'SurveyShare';
-    Fields: Fields$SurveyShare;
-    ParentReferences: ParentReferences$SurveyShare;
-    ChildRelationships: ChildRelationships$SurveyShare;
-  }
+  Name: 'SurveyShare';
+  Fields: Fields$SurveyShare;
+  ParentReferences: ParentReferences$SurveyShare;
+  ChildRelationships: ChildRelationships$SurveyShare;
+}
 
 type Fields$SurveySubject = {
   //
@@ -35229,11 +35749,11 @@ type ChildRelationships$SurveySubject = {
 };
 
 interface SObjectDefinition$SurveySubject extends SObjectDefinition<'SurveySubject'> {
-    Name: 'SurveySubject';
-    Fields: Fields$SurveySubject;
-    ParentReferences: ParentReferences$SurveySubject;
-    ChildRelationships: ChildRelationships$SurveySubject;
-  }
+  Name: 'SurveySubject';
+  Fields: Fields$SurveySubject;
+  ParentReferences: ParentReferences$SurveySubject;
+  ChildRelationships: ChildRelationships$SurveySubject;
+}
 
 type Fields$SurveyVersion = {
   //
@@ -35274,11 +35794,11 @@ type ChildRelationships$SurveyVersion = {
 };
 
 interface SObjectDefinition$SurveyVersion extends SObjectDefinition<'SurveyVersion'> {
-    Name: 'SurveyVersion';
-    Fields: Fields$SurveyVersion;
-    ParentReferences: ParentReferences$SurveyVersion;
-    ChildRelationships: ChildRelationships$SurveyVersion;
-  }
+  Name: 'SurveyVersion';
+  Fields: Fields$SurveyVersion;
+  ParentReferences: ParentReferences$SurveyVersion;
+  ChildRelationships: ChildRelationships$SurveyVersion;
+}
 
 type Fields$SurveyVersionAddlInfo = {
   //
@@ -35311,11 +35831,11 @@ type ChildRelationships$SurveyVersionAddlInfo = {
 };
 
 interface SObjectDefinition$SurveyVersionAddlInfo extends SObjectDefinition<'SurveyVersionAddlInfo'> {
-    Name: 'SurveyVersionAddlInfo';
-    Fields: Fields$SurveyVersionAddlInfo;
-    ParentReferences: ParentReferences$SurveyVersionAddlInfo;
-    ChildRelationships: ChildRelationships$SurveyVersionAddlInfo;
-  }
+  Name: 'SurveyVersionAddlInfo';
+  Fields: Fields$SurveyVersionAddlInfo;
+  ParentReferences: ParentReferences$SurveyVersionAddlInfo;
+  ChildRelationships: ChildRelationships$SurveyVersionAddlInfo;
+}
 
 type Fields$TabDefinition = {
   //
@@ -35345,11 +35865,11 @@ type ChildRelationships$TabDefinition = {
 };
 
 interface SObjectDefinition$TabDefinition extends SObjectDefinition<'TabDefinition'> {
-    Name: 'TabDefinition';
-    Fields: Fields$TabDefinition;
-    ParentReferences: ParentReferences$TabDefinition;
-    ChildRelationships: ChildRelationships$TabDefinition;
-  }
+  Name: 'TabDefinition';
+  Fields: Fields$TabDefinition;
+  ParentReferences: ParentReferences$TabDefinition;
+  ChildRelationships: ChildRelationships$TabDefinition;
+}
 
 type Fields$Task = {
   //
@@ -35443,11 +35963,11 @@ type ChildRelationships$Task = {
 };
 
 interface SObjectDefinition$Task extends SObjectDefinition<'Task'> {
-    Name: 'Task';
-    Fields: Fields$Task;
-    ParentReferences: ParentReferences$Task;
-    ChildRelationships: ChildRelationships$Task;
-  }
+  Name: 'Task';
+  Fields: Fields$Task;
+  ParentReferences: ParentReferences$Task;
+  ChildRelationships: ChildRelationships$Task;
+}
 
 type Fields$TaskChangeEvent = {
   //
@@ -35518,11 +36038,11 @@ type ChildRelationships$TaskChangeEvent = {
 };
 
 interface SObjectDefinition$TaskChangeEvent extends SObjectDefinition<'TaskChangeEvent'> {
-    Name: 'TaskChangeEvent';
-    Fields: Fields$TaskChangeEvent;
-    ParentReferences: ParentReferences$TaskChangeEvent;
-    ChildRelationships: ChildRelationships$TaskChangeEvent;
-  }
+  Name: 'TaskChangeEvent';
+  Fields: Fields$TaskChangeEvent;
+  ParentReferences: ParentReferences$TaskChangeEvent;
+  ChildRelationships: ChildRelationships$TaskChangeEvent;
+}
 
 type Fields$TaskFeed = {
   //
@@ -35563,11 +36083,11 @@ type ChildRelationships$TaskFeed = {
 };
 
 interface SObjectDefinition$TaskFeed extends SObjectDefinition<'TaskFeed'> {
-    Name: 'TaskFeed';
-    Fields: Fields$TaskFeed;
-    ParentReferences: ParentReferences$TaskFeed;
-    ChildRelationships: ChildRelationships$TaskFeed;
-  }
+  Name: 'TaskFeed';
+  Fields: Fields$TaskFeed;
+  ParentReferences: ParentReferences$TaskFeed;
+  ChildRelationships: ChildRelationships$TaskFeed;
+}
 
 type Fields$TaskPriority = {
   //
@@ -35595,11 +36115,11 @@ type ChildRelationships$TaskPriority = {
 };
 
 interface SObjectDefinition$TaskPriority extends SObjectDefinition<'TaskPriority'> {
-    Name: 'TaskPriority';
-    Fields: Fields$TaskPriority;
-    ParentReferences: ParentReferences$TaskPriority;
-    ChildRelationships: ChildRelationships$TaskPriority;
-  }
+  Name: 'TaskPriority';
+  Fields: Fields$TaskPriority;
+  ParentReferences: ParentReferences$TaskPriority;
+  ChildRelationships: ChildRelationships$TaskPriority;
+}
 
 type Fields$TaskRelation = {
   //
@@ -35630,11 +36150,11 @@ type ChildRelationships$TaskRelation = {
 };
 
 interface SObjectDefinition$TaskRelation extends SObjectDefinition<'TaskRelation'> {
-    Name: 'TaskRelation';
-    Fields: Fields$TaskRelation;
-    ParentReferences: ParentReferences$TaskRelation;
-    ChildRelationships: ChildRelationships$TaskRelation;
-  }
+  Name: 'TaskRelation';
+  Fields: Fields$TaskRelation;
+  ParentReferences: ParentReferences$TaskRelation;
+  ChildRelationships: ChildRelationships$TaskRelation;
+}
 
 type Fields$TaskRelationChangeEvent = {
   //
@@ -35660,11 +36180,11 @@ type ChildRelationships$TaskRelationChangeEvent = {
 };
 
 interface SObjectDefinition$TaskRelationChangeEvent extends SObjectDefinition<'TaskRelationChangeEvent'> {
-    Name: 'TaskRelationChangeEvent';
-    Fields: Fields$TaskRelationChangeEvent;
-    ParentReferences: ParentReferences$TaskRelationChangeEvent;
-    ChildRelationships: ChildRelationships$TaskRelationChangeEvent;
-  }
+  Name: 'TaskRelationChangeEvent';
+  Fields: Fields$TaskRelationChangeEvent;
+  ParentReferences: ParentReferences$TaskRelationChangeEvent;
+  ChildRelationships: ChildRelationships$TaskRelationChangeEvent;
+}
 
 type Fields$TaskStatus = {
   //
@@ -35692,11 +36212,11 @@ type ChildRelationships$TaskStatus = {
 };
 
 interface SObjectDefinition$TaskStatus extends SObjectDefinition<'TaskStatus'> {
-    Name: 'TaskStatus';
-    Fields: Fields$TaskStatus;
-    ParentReferences: ParentReferences$TaskStatus;
-    ChildRelationships: ChildRelationships$TaskStatus;
-  }
+  Name: 'TaskStatus';
+  Fields: Fields$TaskStatus;
+  ParentReferences: ParentReferences$TaskStatus;
+  ChildRelationships: ChildRelationships$TaskStatus;
+}
 
 type Fields$TaskWhoRelation = {
   //
@@ -35727,11 +36247,11 @@ type ChildRelationships$TaskWhoRelation = {
 };
 
 interface SObjectDefinition$TaskWhoRelation extends SObjectDefinition<'TaskWhoRelation'> {
-    Name: 'TaskWhoRelation';
-    Fields: Fields$TaskWhoRelation;
-    ParentReferences: ParentReferences$TaskWhoRelation;
-    ChildRelationships: ChildRelationships$TaskWhoRelation;
-  }
+  Name: 'TaskWhoRelation';
+  Fields: Fields$TaskWhoRelation;
+  ParentReferences: ParentReferences$TaskWhoRelation;
+  ChildRelationships: ChildRelationships$TaskWhoRelation;
+}
 
 type Fields$Team_Member_Rep__ChangeEvent = {
   //
@@ -35759,11 +36279,11 @@ type ChildRelationships$Team_Member_Rep__ChangeEvent = {
 };
 
 interface SObjectDefinition$Team_Member_Rep__ChangeEvent extends SObjectDefinition<'Team_Member_Rep__ChangeEvent'> {
-    Name: 'Team_Member_Rep__ChangeEvent';
-    Fields: Fields$Team_Member_Rep__ChangeEvent;
-    ParentReferences: ParentReferences$Team_Member_Rep__ChangeEvent;
-    ChildRelationships: ChildRelationships$Team_Member_Rep__ChangeEvent;
-  }
+  Name: 'Team_Member_Rep__ChangeEvent';
+  Fields: Fields$Team_Member_Rep__ChangeEvent;
+  ParentReferences: ParentReferences$Team_Member_Rep__ChangeEvent;
+  ChildRelationships: ChildRelationships$Team_Member_Rep__ChangeEvent;
+}
 
 type Fields$Team_Member_Rep__c = {
   //
@@ -35821,11 +36341,11 @@ type ChildRelationships$Team_Member_Rep__c = {
 };
 
 interface SObjectDefinition$Team_Member_Rep__c extends SObjectDefinition<'Team_Member_Rep__c'> {
-    Name: 'Team_Member_Rep__c';
-    Fields: Fields$Team_Member_Rep__c;
-    ParentReferences: ParentReferences$Team_Member_Rep__c;
-    ChildRelationships: ChildRelationships$Team_Member_Rep__c;
-  }
+  Name: 'Team_Member_Rep__c';
+  Fields: Fields$Team_Member_Rep__c;
+  ParentReferences: ParentReferences$Team_Member_Rep__c;
+  ChildRelationships: ChildRelationships$Team_Member_Rep__c;
+}
 
 type Fields$Teaming_Partner__ChangeEvent = {
   //
@@ -35852,11 +36372,11 @@ type ChildRelationships$Teaming_Partner__ChangeEvent = {
 };
 
 interface SObjectDefinition$Teaming_Partner__ChangeEvent extends SObjectDefinition<'Teaming_Partner__ChangeEvent'> {
-    Name: 'Teaming_Partner__ChangeEvent';
-    Fields: Fields$Teaming_Partner__ChangeEvent;
-    ParentReferences: ParentReferences$Teaming_Partner__ChangeEvent;
-    ChildRelationships: ChildRelationships$Teaming_Partner__ChangeEvent;
-  }
+  Name: 'Teaming_Partner__ChangeEvent';
+  Fields: Fields$Teaming_Partner__ChangeEvent;
+  ParentReferences: ParentReferences$Teaming_Partner__ChangeEvent;
+  ChildRelationships: ChildRelationships$Teaming_Partner__ChangeEvent;
+}
 
 type Fields$Teaming_Partner__History = {
   //
@@ -35882,11 +36402,11 @@ type ChildRelationships$Teaming_Partner__History = {
 };
 
 interface SObjectDefinition$Teaming_Partner__History extends SObjectDefinition<'Teaming_Partner__History'> {
-    Name: 'Teaming_Partner__History';
-    Fields: Fields$Teaming_Partner__History;
-    ParentReferences: ParentReferences$Teaming_Partner__History;
-    ChildRelationships: ChildRelationships$Teaming_Partner__History;
-  }
+  Name: 'Teaming_Partner__History';
+  Fields: Fields$Teaming_Partner__History;
+  ParentReferences: ParentReferences$Teaming_Partner__History;
+  ChildRelationships: ChildRelationships$Teaming_Partner__History;
+}
 
 type Fields$Teaming_Partner__c = {
   //
@@ -35944,11 +36464,11 @@ type ChildRelationships$Teaming_Partner__c = {
 };
 
 interface SObjectDefinition$Teaming_Partner__c extends SObjectDefinition<'Teaming_Partner__c'> {
-    Name: 'Teaming_Partner__c';
-    Fields: Fields$Teaming_Partner__c;
-    ParentReferences: ParentReferences$Teaming_Partner__c;
-    ChildRelationships: ChildRelationships$Teaming_Partner__c;
-  }
+  Name: 'Teaming_Partner__c';
+  Fields: Fields$Teaming_Partner__c;
+  ParentReferences: ParentReferences$Teaming_Partner__c;
+  ChildRelationships: ChildRelationships$Teaming_Partner__c;
+}
 
 type Fields$TenantUsageEntitlement = {
   //
@@ -35984,11 +36504,11 @@ type ChildRelationships$TenantUsageEntitlement = {
 };
 
 interface SObjectDefinition$TenantUsageEntitlement extends SObjectDefinition<'TenantUsageEntitlement'> {
-    Name: 'TenantUsageEntitlement';
-    Fields: Fields$TenantUsageEntitlement;
-    ParentReferences: ParentReferences$TenantUsageEntitlement;
-    ChildRelationships: ChildRelationships$TenantUsageEntitlement;
-  }
+  Name: 'TenantUsageEntitlement';
+  Fields: Fields$TenantUsageEntitlement;
+  ParentReferences: ParentReferences$TenantUsageEntitlement;
+  ChildRelationships: ChildRelationships$TenantUsageEntitlement;
+}
 
 type Fields$TestSuiteMembership = {
   //
@@ -36016,11 +36536,11 @@ type ChildRelationships$TestSuiteMembership = {
 };
 
 interface SObjectDefinition$TestSuiteMembership extends SObjectDefinition<'TestSuiteMembership'> {
-    Name: 'TestSuiteMembership';
-    Fields: Fields$TestSuiteMembership;
-    ParentReferences: ParentReferences$TestSuiteMembership;
-    ChildRelationships: ChildRelationships$TestSuiteMembership;
-  }
+  Name: 'TestSuiteMembership';
+  Fields: Fields$TestSuiteMembership;
+  ParentReferences: ParentReferences$TestSuiteMembership;
+  ChildRelationships: ChildRelationships$TestSuiteMembership;
+}
 
 type Fields$ThirdPartyAccountLink = {
   //
@@ -36046,11 +36566,11 @@ type ChildRelationships$ThirdPartyAccountLink = {
 };
 
 interface SObjectDefinition$ThirdPartyAccountLink extends SObjectDefinition<'ThirdPartyAccountLink'> {
-    Name: 'ThirdPartyAccountLink';
-    Fields: Fields$ThirdPartyAccountLink;
-    ParentReferences: ParentReferences$ThirdPartyAccountLink;
-    ChildRelationships: ChildRelationships$ThirdPartyAccountLink;
-  }
+  Name: 'ThirdPartyAccountLink';
+  Fields: Fields$ThirdPartyAccountLink;
+  ParentReferences: ParentReferences$ThirdPartyAccountLink;
+  ChildRelationships: ChildRelationships$ThirdPartyAccountLink;
+}
 
 type Fields$TimeSlot = {
   //
@@ -36085,11 +36605,11 @@ type ChildRelationships$TimeSlot = {
 };
 
 interface SObjectDefinition$TimeSlot extends SObjectDefinition<'TimeSlot'> {
-    Name: 'TimeSlot';
-    Fields: Fields$TimeSlot;
-    ParentReferences: ParentReferences$TimeSlot;
-    ChildRelationships: ChildRelationships$TimeSlot;
-  }
+  Name: 'TimeSlot';
+  Fields: Fields$TimeSlot;
+  ParentReferences: ParentReferences$TimeSlot;
+  ChildRelationships: ChildRelationships$TimeSlot;
+}
 
 type Fields$Timesheet_File__ChangeEvent = {
   //
@@ -36114,11 +36634,11 @@ type ChildRelationships$Timesheet_File__ChangeEvent = {
 };
 
 interface SObjectDefinition$Timesheet_File__ChangeEvent extends SObjectDefinition<'Timesheet_File__ChangeEvent'> {
-    Name: 'Timesheet_File__ChangeEvent';
-    Fields: Fields$Timesheet_File__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_File__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_File__ChangeEvent;
-  }
+  Name: 'Timesheet_File__ChangeEvent';
+  Fields: Fields$Timesheet_File__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet_File__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet_File__ChangeEvent;
+}
 
 type Fields$Timesheet_File__c = {
   //
@@ -36167,11 +36687,11 @@ type ChildRelationships$Timesheet_File__c = {
 };
 
 interface SObjectDefinition$Timesheet_File__c extends SObjectDefinition<'Timesheet_File__c'> {
-    Name: 'Timesheet_File__c';
-    Fields: Fields$Timesheet_File__c;
-    ParentReferences: ParentReferences$Timesheet_File__c;
-    ChildRelationships: ChildRelationships$Timesheet_File__c;
-  }
+  Name: 'Timesheet_File__c';
+  Fields: Fields$Timesheet_File__c;
+  ParentReferences: ParentReferences$Timesheet_File__c;
+  ChildRelationships: ChildRelationships$Timesheet_File__c;
+}
 
 type Fields$Timesheet_Line__ChangeEvent = {
   //
@@ -36224,6 +36744,7 @@ type Fields$Timesheet_Line__ChangeEvent = {
   Manager_3__c: string | null;
   End_Date__c: DateString | null;
   PTO_Type__c: string | null;
+  Job_Placement_2__c: string | null;
 };
 
 type ParentReferences$Timesheet_Line__ChangeEvent = {
@@ -36235,11 +36756,11 @@ type ChildRelationships$Timesheet_Line__ChangeEvent = {
 };
 
 interface SObjectDefinition$Timesheet_Line__ChangeEvent extends SObjectDefinition<'Timesheet_Line__ChangeEvent'> {
-    Name: 'Timesheet_Line__ChangeEvent';
-    Fields: Fields$Timesheet_Line__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_Line__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_Line__ChangeEvent;
-  }
+  Name: 'Timesheet_Line__ChangeEvent';
+  Fields: Fields$Timesheet_Line__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet_Line__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet_Line__ChangeEvent;
+}
 
 type Fields$Timesheet_Line__c = {
   //
@@ -36293,6 +36814,7 @@ type Fields$Timesheet_Line__c = {
   Manager_3__c: string | null;
   End_Date__c: DateString | null;
   PTO_Type__c: string | null;
+  Job_Placement_2__c: string | null;
 };
 
 type ParentReferences$Timesheet_Line__c = {
@@ -36305,6 +36827,7 @@ type ParentReferences$Timesheet_Line__c = {
   Manager__r: SObjectDefinition$Contact | null;
   Manager_User__r: SObjectDefinition$User | null;
   Manager_3__r: SObjectDefinition$Contact | null;
+  Job_Placement_2__r: SObjectDefinition$Job_Placement__c | null;
 };
 
 type ChildRelationships$Timesheet_Line__c = {
@@ -36337,11 +36860,11 @@ type ChildRelationships$Timesheet_Line__c = {
 };
 
 interface SObjectDefinition$Timesheet_Line__c extends SObjectDefinition<'Timesheet_Line__c'> {
-    Name: 'Timesheet_Line__c';
-    Fields: Fields$Timesheet_Line__c;
-    ParentReferences: ParentReferences$Timesheet_Line__c;
-    ChildRelationships: ChildRelationships$Timesheet_Line__c;
-  }
+  Name: 'Timesheet_Line__c';
+  Fields: Fields$Timesheet_Line__c;
+  ParentReferences: ParentReferences$Timesheet_Line__c;
+  ChildRelationships: ChildRelationships$Timesheet_Line__c;
+}
 
 type Fields$Timesheet_Note__ChangeEvent = {
   //
@@ -36368,11 +36891,11 @@ type ChildRelationships$Timesheet_Note__ChangeEvent = {
 };
 
 interface SObjectDefinition$Timesheet_Note__ChangeEvent extends SObjectDefinition<'Timesheet_Note__ChangeEvent'> {
-    Name: 'Timesheet_Note__ChangeEvent';
-    Fields: Fields$Timesheet_Note__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_Note__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_Note__ChangeEvent;
-  }
+  Name: 'Timesheet_Note__ChangeEvent';
+  Fields: Fields$Timesheet_Note__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet_Note__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet_Note__ChangeEvent;
+}
 
 type Fields$Timesheet_Note__c = {
   //
@@ -36423,11 +36946,11 @@ type ChildRelationships$Timesheet_Note__c = {
 };
 
 interface SObjectDefinition$Timesheet_Note__c extends SObjectDefinition<'Timesheet_Note__c'> {
-    Name: 'Timesheet_Note__c';
-    Fields: Fields$Timesheet_Note__c;
-    ParentReferences: ParentReferences$Timesheet_Note__c;
-    ChildRelationships: ChildRelationships$Timesheet_Note__c;
-  }
+  Name: 'Timesheet_Note__c';
+  Fields: Fields$Timesheet_Note__c;
+  ParentReferences: ParentReferences$Timesheet_Note__c;
+  ChildRelationships: ChildRelationships$Timesheet_Note__c;
+}
 
 type Fields$Timesheet_Settings_2__mdt = {
   //
@@ -36455,11 +36978,11 @@ type ChildRelationships$Timesheet_Settings_2__mdt = {
 };
 
 interface SObjectDefinition$Timesheet_Settings_2__mdt extends SObjectDefinition<'Timesheet_Settings_2__mdt'> {
-    Name: 'Timesheet_Settings_2__mdt';
-    Fields: Fields$Timesheet_Settings_2__mdt;
-    ParentReferences: ParentReferences$Timesheet_Settings_2__mdt;
-    ChildRelationships: ChildRelationships$Timesheet_Settings_2__mdt;
-  }
+  Name: 'Timesheet_Settings_2__mdt';
+  Fields: Fields$Timesheet_Settings_2__mdt;
+  ParentReferences: ParentReferences$Timesheet_Settings_2__mdt;
+  ChildRelationships: ChildRelationships$Timesheet_Settings_2__mdt;
+}
 
 type Fields$Timesheet_Settings__ChangeEvent = {
   //
@@ -36486,12 +37009,13 @@ type ChildRelationships$Timesheet_Settings__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Timesheet_Settings__ChangeEvent extends SObjectDefinition<'Timesheet_Settings__ChangeEvent'> {
-    Name: 'Timesheet_Settings__ChangeEvent';
-    Fields: Fields$Timesheet_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_Settings__ChangeEvent;
-  }
+interface SObjectDefinition$Timesheet_Settings__ChangeEvent
+  extends SObjectDefinition<'Timesheet_Settings__ChangeEvent'> {
+  Name: 'Timesheet_Settings__ChangeEvent';
+  Fields: Fields$Timesheet_Settings__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet_Settings__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet_Settings__ChangeEvent;
+}
 
 type Fields$Timesheet_Settings__c = {
   //
@@ -36539,11 +37063,11 @@ type ChildRelationships$Timesheet_Settings__c = {
 };
 
 interface SObjectDefinition$Timesheet_Settings__c extends SObjectDefinition<'Timesheet_Settings__c'> {
-    Name: 'Timesheet_Settings__c';
-    Fields: Fields$Timesheet_Settings__c;
-    ParentReferences: ParentReferences$Timesheet_Settings__c;
-    ChildRelationships: ChildRelationships$Timesheet_Settings__c;
-  }
+  Name: 'Timesheet_Settings__c';
+  Fields: Fields$Timesheet_Settings__c;
+  ParentReferences: ParentReferences$Timesheet_Settings__c;
+  ChildRelationships: ChildRelationships$Timesheet_Settings__c;
+}
 
 type Fields$Timesheet_Survey_Settings__ChangeEvent = {
   //
@@ -36566,12 +37090,13 @@ type ChildRelationships$Timesheet_Survey_Settings__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$Timesheet_Survey_Settings__ChangeEvent extends SObjectDefinition<'Timesheet_Survey_Settings__ChangeEvent'> {
-    Name: 'Timesheet_Survey_Settings__ChangeEvent';
-    Fields: Fields$Timesheet_Survey_Settings__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet_Survey_Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet_Survey_Settings__ChangeEvent;
-  }
+interface SObjectDefinition$Timesheet_Survey_Settings__ChangeEvent
+  extends SObjectDefinition<'Timesheet_Survey_Settings__ChangeEvent'> {
+  Name: 'Timesheet_Survey_Settings__ChangeEvent';
+  Fields: Fields$Timesheet_Survey_Settings__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet_Survey_Settings__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet_Survey_Settings__ChangeEvent;
+}
 
 type Fields$Timesheet_Survey_Settings__c = {
   //
@@ -36618,11 +37143,11 @@ type ChildRelationships$Timesheet_Survey_Settings__c = {
 };
 
 interface SObjectDefinition$Timesheet_Survey_Settings__c extends SObjectDefinition<'Timesheet_Survey_Settings__c'> {
-    Name: 'Timesheet_Survey_Settings__c';
-    Fields: Fields$Timesheet_Survey_Settings__c;
-    ParentReferences: ParentReferences$Timesheet_Survey_Settings__c;
-    ChildRelationships: ChildRelationships$Timesheet_Survey_Settings__c;
-  }
+  Name: 'Timesheet_Survey_Settings__c';
+  Fields: Fields$Timesheet_Survey_Settings__c;
+  ParentReferences: ParentReferences$Timesheet_Survey_Settings__c;
+  ChildRelationships: ChildRelationships$Timesheet_Survey_Settings__c;
+}
 
 type Fields$Timesheet__ChangeEvent = {
   //
@@ -36667,11 +37192,11 @@ type ChildRelationships$Timesheet__ChangeEvent = {
 };
 
 interface SObjectDefinition$Timesheet__ChangeEvent extends SObjectDefinition<'Timesheet__ChangeEvent'> {
-    Name: 'Timesheet__ChangeEvent';
-    Fields: Fields$Timesheet__ChangeEvent;
-    ParentReferences: ParentReferences$Timesheet__ChangeEvent;
-    ChildRelationships: ChildRelationships$Timesheet__ChangeEvent;
-  }
+  Name: 'Timesheet__ChangeEvent';
+  Fields: Fields$Timesheet__ChangeEvent;
+  ParentReferences: ParentReferences$Timesheet__ChangeEvent;
+  ChildRelationships: ChildRelationships$Timesheet__ChangeEvent;
+}
 
 type Fields$Timesheet__c = {
   //
@@ -36747,11 +37272,11 @@ type ChildRelationships$Timesheet__c = {
 };
 
 interface SObjectDefinition$Timesheet__c extends SObjectDefinition<'Timesheet__c'> {
-    Name: 'Timesheet__c';
-    Fields: Fields$Timesheet__c;
-    ParentReferences: ParentReferences$Timesheet__c;
-    ChildRelationships: ChildRelationships$Timesheet__c;
-  }
+  Name: 'Timesheet__c';
+  Fields: Fields$Timesheet__c;
+  ParentReferences: ParentReferences$Timesheet__c;
+  ChildRelationships: ChildRelationships$Timesheet__c;
+}
 
 type Fields$TodayGoal = {
   //
@@ -36782,11 +37307,11 @@ type ChildRelationships$TodayGoal = {
 };
 
 interface SObjectDefinition$TodayGoal extends SObjectDefinition<'TodayGoal'> {
-    Name: 'TodayGoal';
-    Fields: Fields$TodayGoal;
-    ParentReferences: ParentReferences$TodayGoal;
-    ChildRelationships: ChildRelationships$TodayGoal;
-  }
+  Name: 'TodayGoal';
+  Fields: Fields$TodayGoal;
+  ParentReferences: ParentReferences$TodayGoal;
+  ChildRelationships: ChildRelationships$TodayGoal;
+}
 
 type Fields$TodayGoalShare = {
   //
@@ -36812,11 +37337,11 @@ type ChildRelationships$TodayGoalShare = {
 };
 
 interface SObjectDefinition$TodayGoalShare extends SObjectDefinition<'TodayGoalShare'> {
-    Name: 'TodayGoalShare';
-    Fields: Fields$TodayGoalShare;
-    ParentReferences: ParentReferences$TodayGoalShare;
-    ChildRelationships: ChildRelationships$TodayGoalShare;
-  }
+  Name: 'TodayGoalShare';
+  Fields: Fields$TodayGoalShare;
+  ParentReferences: ParentReferences$TodayGoalShare;
+  ChildRelationships: ChildRelationships$TodayGoalShare;
+}
 
 type Fields$Topic = {
   //
@@ -36846,11 +37371,11 @@ type ChildRelationships$Topic = {
 };
 
 interface SObjectDefinition$Topic extends SObjectDefinition<'Topic'> {
-    Name: 'Topic';
-    Fields: Fields$Topic;
-    ParentReferences: ParentReferences$Topic;
-    ChildRelationships: ChildRelationships$Topic;
-  }
+  Name: 'Topic';
+  Fields: Fields$Topic;
+  ParentReferences: ParentReferences$Topic;
+  ChildRelationships: ChildRelationships$Topic;
+}
 
 type Fields$TopicAssignment = {
   //
@@ -36877,11 +37402,11 @@ type ChildRelationships$TopicAssignment = {
 };
 
 interface SObjectDefinition$TopicAssignment extends SObjectDefinition<'TopicAssignment'> {
-    Name: 'TopicAssignment';
-    Fields: Fields$TopicAssignment;
-    ParentReferences: ParentReferences$TopicAssignment;
-    ChildRelationships: ChildRelationships$TopicAssignment;
-  }
+  Name: 'TopicAssignment';
+  Fields: Fields$TopicAssignment;
+  ParentReferences: ParentReferences$TopicAssignment;
+  ChildRelationships: ChildRelationships$TopicAssignment;
+}
 
 type Fields$TopicFeed = {
   //
@@ -36922,11 +37447,11 @@ type ChildRelationships$TopicFeed = {
 };
 
 interface SObjectDefinition$TopicFeed extends SObjectDefinition<'TopicFeed'> {
-    Name: 'TopicFeed';
-    Fields: Fields$TopicFeed;
-    ParentReferences: ParentReferences$TopicFeed;
-    ChildRelationships: ChildRelationships$TopicFeed;
-  }
+  Name: 'TopicFeed';
+  Fields: Fields$TopicFeed;
+  ParentReferences: ParentReferences$TopicFeed;
+  ChildRelationships: ChildRelationships$TopicFeed;
+}
 
 type Fields$TopicUserEvent = {
   //
@@ -36946,11 +37471,11 @@ type ChildRelationships$TopicUserEvent = {
 };
 
 interface SObjectDefinition$TopicUserEvent extends SObjectDefinition<'TopicUserEvent'> {
-    Name: 'TopicUserEvent';
-    Fields: Fields$TopicUserEvent;
-    ParentReferences: ParentReferences$TopicUserEvent;
-    ChildRelationships: ChildRelationships$TopicUserEvent;
-  }
+  Name: 'TopicUserEvent';
+  Fields: Fields$TopicUserEvent;
+  ParentReferences: ParentReferences$TopicUserEvent;
+  ChildRelationships: ChildRelationships$TopicUserEvent;
+}
 
 type Fields$Translation = {
   //
@@ -36976,11 +37501,11 @@ type ChildRelationships$Translation = {
 };
 
 interface SObjectDefinition$Translation extends SObjectDefinition<'Translation'> {
-    Name: 'Translation';
-    Fields: Fields$Translation;
-    ParentReferences: ParentReferences$Translation;
-    ChildRelationships: ChildRelationships$Translation;
-  }
+  Name: 'Translation';
+  Fields: Fields$Translation;
+  ParentReferences: ParentReferences$Translation;
+  ChildRelationships: ChildRelationships$Translation;
+}
 
 type Fields$UiFormulaCriterion = {
   //
@@ -37010,11 +37535,11 @@ type ChildRelationships$UiFormulaCriterion = {
 };
 
 interface SObjectDefinition$UiFormulaCriterion extends SObjectDefinition<'UiFormulaCriterion'> {
-    Name: 'UiFormulaCriterion';
-    Fields: Fields$UiFormulaCriterion;
-    ParentReferences: ParentReferences$UiFormulaCriterion;
-    ChildRelationships: ChildRelationships$UiFormulaCriterion;
-  }
+  Name: 'UiFormulaCriterion';
+  Fields: Fields$UiFormulaCriterion;
+  ParentReferences: ParentReferences$UiFormulaCriterion;
+  ChildRelationships: ChildRelationships$UiFormulaCriterion;
+}
 
 type Fields$UiFormulaRule = {
   //
@@ -37046,11 +37571,11 @@ type ChildRelationships$UiFormulaRule = {
 };
 
 interface SObjectDefinition$UiFormulaRule extends SObjectDefinition<'UiFormulaRule'> {
-    Name: 'UiFormulaRule';
-    Fields: Fields$UiFormulaRule;
-    ParentReferences: ParentReferences$UiFormulaRule;
-    ChildRelationships: ChildRelationships$UiFormulaRule;
-  }
+  Name: 'UiFormulaRule';
+  Fields: Fields$UiFormulaRule;
+  ParentReferences: ParentReferences$UiFormulaRule;
+  ChildRelationships: ChildRelationships$UiFormulaRule;
+}
 
 type Fields$UndecidedEventRelation = {
   //
@@ -37083,11 +37608,11 @@ type ChildRelationships$UndecidedEventRelation = {
 };
 
 interface SObjectDefinition$UndecidedEventRelation extends SObjectDefinition<'UndecidedEventRelation'> {
-    Name: 'UndecidedEventRelation';
-    Fields: Fields$UndecidedEventRelation;
-    ParentReferences: ParentReferences$UndecidedEventRelation;
-    ChildRelationships: ChildRelationships$UndecidedEventRelation;
-  }
+  Name: 'UndecidedEventRelation';
+  Fields: Fields$UndecidedEventRelation;
+  ParentReferences: ParentReferences$UndecidedEventRelation;
+  ChildRelationships: ChildRelationships$UndecidedEventRelation;
+}
 
 type Fields$User = {
   //
@@ -37323,11 +37848,11 @@ type ChildRelationships$User = {
 };
 
 interface SObjectDefinition$User extends SObjectDefinition<'User'> {
-    Name: 'User';
-    Fields: Fields$User;
-    ParentReferences: ParentReferences$User;
-    ChildRelationships: ChildRelationships$User;
-  }
+  Name: 'User';
+  Fields: Fields$User;
+  ParentReferences: ParentReferences$User;
+  ChildRelationships: ChildRelationships$User;
+}
 
 type Fields$UserAppInfo = {
   //
@@ -37356,11 +37881,11 @@ type ChildRelationships$UserAppInfo = {
 };
 
 interface SObjectDefinition$UserAppInfo extends SObjectDefinition<'UserAppInfo'> {
-    Name: 'UserAppInfo';
-    Fields: Fields$UserAppInfo;
-    ParentReferences: ParentReferences$UserAppInfo;
-    ChildRelationships: ChildRelationships$UserAppInfo;
-  }
+  Name: 'UserAppInfo';
+  Fields: Fields$UserAppInfo;
+  ParentReferences: ParentReferences$UserAppInfo;
+  ChildRelationships: ChildRelationships$UserAppInfo;
+}
 
 type Fields$UserAppMenuCustomization = {
   //
@@ -37390,11 +37915,11 @@ type ChildRelationships$UserAppMenuCustomization = {
 };
 
 interface SObjectDefinition$UserAppMenuCustomization extends SObjectDefinition<'UserAppMenuCustomization'> {
-    Name: 'UserAppMenuCustomization';
-    Fields: Fields$UserAppMenuCustomization;
-    ParentReferences: ParentReferences$UserAppMenuCustomization;
-    ChildRelationships: ChildRelationships$UserAppMenuCustomization;
-  }
+  Name: 'UserAppMenuCustomization';
+  Fields: Fields$UserAppMenuCustomization;
+  ParentReferences: ParentReferences$UserAppMenuCustomization;
+  ChildRelationships: ChildRelationships$UserAppMenuCustomization;
+}
 
 type Fields$UserAppMenuCustomizationShare = {
   //
@@ -37420,11 +37945,11 @@ type ChildRelationships$UserAppMenuCustomizationShare = {
 };
 
 interface SObjectDefinition$UserAppMenuCustomizationShare extends SObjectDefinition<'UserAppMenuCustomizationShare'> {
-    Name: 'UserAppMenuCustomizationShare';
-    Fields: Fields$UserAppMenuCustomizationShare;
-    ParentReferences: ParentReferences$UserAppMenuCustomizationShare;
-    ChildRelationships: ChildRelationships$UserAppMenuCustomizationShare;
-  }
+  Name: 'UserAppMenuCustomizationShare';
+  Fields: Fields$UserAppMenuCustomizationShare;
+  ParentReferences: ParentReferences$UserAppMenuCustomizationShare;
+  ChildRelationships: ChildRelationships$UserAppMenuCustomizationShare;
+}
 
 type Fields$UserAppMenuItem = {
   //
@@ -37455,11 +37980,11 @@ type ChildRelationships$UserAppMenuItem = {
 };
 
 interface SObjectDefinition$UserAppMenuItem extends SObjectDefinition<'UserAppMenuItem'> {
-    Name: 'UserAppMenuItem';
-    Fields: Fields$UserAppMenuItem;
-    ParentReferences: ParentReferences$UserAppMenuItem;
-    ChildRelationships: ChildRelationships$UserAppMenuItem;
-  }
+  Name: 'UserAppMenuItem';
+  Fields: Fields$UserAppMenuItem;
+  ParentReferences: ParentReferences$UserAppMenuItem;
+  ChildRelationships: ChildRelationships$UserAppMenuItem;
+}
 
 type Fields$UserChangeEvent = {
   //
@@ -37633,11 +38158,11 @@ type ChildRelationships$UserChangeEvent = {
 };
 
 interface SObjectDefinition$UserChangeEvent extends SObjectDefinition<'UserChangeEvent'> {
-    Name: 'UserChangeEvent';
-    Fields: Fields$UserChangeEvent;
-    ParentReferences: ParentReferences$UserChangeEvent;
-    ChildRelationships: ChildRelationships$UserChangeEvent;
-  }
+  Name: 'UserChangeEvent';
+  Fields: Fields$UserChangeEvent;
+  ParentReferences: ParentReferences$UserChangeEvent;
+  ChildRelationships: ChildRelationships$UserChangeEvent;
+}
 
 type Fields$UserEmailCalendarSync = {
   //
@@ -37656,11 +38181,11 @@ type ChildRelationships$UserEmailCalendarSync = {
 };
 
 interface SObjectDefinition$UserEmailCalendarSync extends SObjectDefinition<'UserEmailCalendarSync'> {
-    Name: 'UserEmailCalendarSync';
-    Fields: Fields$UserEmailCalendarSync;
-    ParentReferences: ParentReferences$UserEmailCalendarSync;
-    ChildRelationships: ChildRelationships$UserEmailCalendarSync;
-  }
+  Name: 'UserEmailCalendarSync';
+  Fields: Fields$UserEmailCalendarSync;
+  ParentReferences: ParentReferences$UserEmailCalendarSync;
+  ChildRelationships: ChildRelationships$UserEmailCalendarSync;
+}
 
 type Fields$UserEmailPreferredPerson = {
   //
@@ -37691,11 +38216,11 @@ type ChildRelationships$UserEmailPreferredPerson = {
 };
 
 interface SObjectDefinition$UserEmailPreferredPerson extends SObjectDefinition<'UserEmailPreferredPerson'> {
-    Name: 'UserEmailPreferredPerson';
-    Fields: Fields$UserEmailPreferredPerson;
-    ParentReferences: ParentReferences$UserEmailPreferredPerson;
-    ChildRelationships: ChildRelationships$UserEmailPreferredPerson;
-  }
+  Name: 'UserEmailPreferredPerson';
+  Fields: Fields$UserEmailPreferredPerson;
+  ParentReferences: ParentReferences$UserEmailPreferredPerson;
+  ChildRelationships: ChildRelationships$UserEmailPreferredPerson;
+}
 
 type Fields$UserEmailPreferredPersonShare = {
   //
@@ -37721,11 +38246,11 @@ type ChildRelationships$UserEmailPreferredPersonShare = {
 };
 
 interface SObjectDefinition$UserEmailPreferredPersonShare extends SObjectDefinition<'UserEmailPreferredPersonShare'> {
-    Name: 'UserEmailPreferredPersonShare';
-    Fields: Fields$UserEmailPreferredPersonShare;
-    ParentReferences: ParentReferences$UserEmailPreferredPersonShare;
-    ChildRelationships: ChildRelationships$UserEmailPreferredPersonShare;
-  }
+  Name: 'UserEmailPreferredPersonShare';
+  Fields: Fields$UserEmailPreferredPersonShare;
+  ParentReferences: ParentReferences$UserEmailPreferredPersonShare;
+  ChildRelationships: ChildRelationships$UserEmailPreferredPersonShare;
+}
 
 type Fields$UserEntityAccess = {
   //
@@ -37754,11 +38279,11 @@ type ChildRelationships$UserEntityAccess = {
 };
 
 interface SObjectDefinition$UserEntityAccess extends SObjectDefinition<'UserEntityAccess'> {
-    Name: 'UserEntityAccess';
-    Fields: Fields$UserEntityAccess;
-    ParentReferences: ParentReferences$UserEntityAccess;
-    ChildRelationships: ChildRelationships$UserEntityAccess;
-  }
+  Name: 'UserEntityAccess';
+  Fields: Fields$UserEntityAccess;
+  ParentReferences: ParentReferences$UserEntityAccess;
+  ChildRelationships: ChildRelationships$UserEntityAccess;
+}
 
 type Fields$UserFeed = {
   //
@@ -37799,11 +38324,11 @@ type ChildRelationships$UserFeed = {
 };
 
 interface SObjectDefinition$UserFeed extends SObjectDefinition<'UserFeed'> {
-    Name: 'UserFeed';
-    Fields: Fields$UserFeed;
-    ParentReferences: ParentReferences$UserFeed;
-    ChildRelationships: ChildRelationships$UserFeed;
-  }
+  Name: 'UserFeed';
+  Fields: Fields$UserFeed;
+  ParentReferences: ParentReferences$UserFeed;
+  ChildRelationships: ChildRelationships$UserFeed;
+}
 
 type Fields$UserFieldAccess = {
   //
@@ -37827,11 +38352,11 @@ type ChildRelationships$UserFieldAccess = {
 };
 
 interface SObjectDefinition$UserFieldAccess extends SObjectDefinition<'UserFieldAccess'> {
-    Name: 'UserFieldAccess';
-    Fields: Fields$UserFieldAccess;
-    ParentReferences: ParentReferences$UserFieldAccess;
-    ChildRelationships: ChildRelationships$UserFieldAccess;
-  }
+  Name: 'UserFieldAccess';
+  Fields: Fields$UserFieldAccess;
+  ParentReferences: ParentReferences$UserFieldAccess;
+  ChildRelationships: ChildRelationships$UserFieldAccess;
+}
 
 type Fields$UserLicense = {
   //
@@ -37857,11 +38382,11 @@ type ChildRelationships$UserLicense = {
 };
 
 interface SObjectDefinition$UserLicense extends SObjectDefinition<'UserLicense'> {
-    Name: 'UserLicense';
-    Fields: Fields$UserLicense;
-    ParentReferences: ParentReferences$UserLicense;
-    ChildRelationships: ChildRelationships$UserLicense;
-  }
+  Name: 'UserLicense';
+  Fields: Fields$UserLicense;
+  ParentReferences: ParentReferences$UserLicense;
+  ChildRelationships: ChildRelationships$UserLicense;
+}
 
 type Fields$UserListView = {
   //
@@ -37891,11 +38416,11 @@ type ChildRelationships$UserListView = {
 };
 
 interface SObjectDefinition$UserListView extends SObjectDefinition<'UserListView'> {
-    Name: 'UserListView';
-    Fields: Fields$UserListView;
-    ParentReferences: ParentReferences$UserListView;
-    ChildRelationships: ChildRelationships$UserListView;
-  }
+  Name: 'UserListView';
+  Fields: Fields$UserListView;
+  ParentReferences: ParentReferences$UserListView;
+  ChildRelationships: ChildRelationships$UserListView;
+}
 
 type Fields$UserListViewCriterion = {
   //
@@ -37925,11 +38450,11 @@ type ChildRelationships$UserListViewCriterion = {
 };
 
 interface SObjectDefinition$UserListViewCriterion extends SObjectDefinition<'UserListViewCriterion'> {
-    Name: 'UserListViewCriterion';
-    Fields: Fields$UserListViewCriterion;
-    ParentReferences: ParentReferences$UserListViewCriterion;
-    ChildRelationships: ChildRelationships$UserListViewCriterion;
-  }
+  Name: 'UserListViewCriterion';
+  Fields: Fields$UserListViewCriterion;
+  ParentReferences: ParentReferences$UserListViewCriterion;
+  ChildRelationships: ChildRelationships$UserListViewCriterion;
+}
 
 type Fields$UserLogin = {
   //
@@ -37951,11 +38476,11 @@ type ChildRelationships$UserLogin = {
 };
 
 interface SObjectDefinition$UserLogin extends SObjectDefinition<'UserLogin'> {
-    Name: 'UserLogin';
-    Fields: Fields$UserLogin;
-    ParentReferences: ParentReferences$UserLogin;
-    ChildRelationships: ChildRelationships$UserLogin;
-  }
+  Name: 'UserLogin';
+  Fields: Fields$UserLogin;
+  ParentReferences: ParentReferences$UserLogin;
+  ChildRelationships: ChildRelationships$UserLogin;
+}
 
 type Fields$UserPackageLicense = {
   //
@@ -37982,11 +38507,11 @@ type ChildRelationships$UserPackageLicense = {
 };
 
 interface SObjectDefinition$UserPackageLicense extends SObjectDefinition<'UserPackageLicense'> {
-    Name: 'UserPackageLicense';
-    Fields: Fields$UserPackageLicense;
-    ParentReferences: ParentReferences$UserPackageLicense;
-    ChildRelationships: ChildRelationships$UserPackageLicense;
-  }
+  Name: 'UserPackageLicense';
+  Fields: Fields$UserPackageLicense;
+  ParentReferences: ParentReferences$UserPackageLicense;
+  ChildRelationships: ChildRelationships$UserPackageLicense;
+}
 
 type Fields$UserPermissionAccess = {
   //
@@ -38274,11 +38799,11 @@ type ChildRelationships$UserPermissionAccess = {
 };
 
 interface SObjectDefinition$UserPermissionAccess extends SObjectDefinition<'UserPermissionAccess'> {
-    Name: 'UserPermissionAccess';
-    Fields: Fields$UserPermissionAccess;
-    ParentReferences: ParentReferences$UserPermissionAccess;
-    ChildRelationships: ChildRelationships$UserPermissionAccess;
-  }
+  Name: 'UserPermissionAccess';
+  Fields: Fields$UserPermissionAccess;
+  ParentReferences: ParentReferences$UserPermissionAccess;
+  ChildRelationships: ChildRelationships$UserPermissionAccess;
+}
 
 type Fields$UserPreference = {
   //
@@ -38298,11 +38823,11 @@ type ChildRelationships$UserPreference = {
 };
 
 interface SObjectDefinition$UserPreference extends SObjectDefinition<'UserPreference'> {
-    Name: 'UserPreference';
-    Fields: Fields$UserPreference;
-    ParentReferences: ParentReferences$UserPreference;
-    ChildRelationships: ChildRelationships$UserPreference;
-  }
+  Name: 'UserPreference';
+  Fields: Fields$UserPreference;
+  ParentReferences: ParentReferences$UserPreference;
+  ChildRelationships: ChildRelationships$UserPreference;
+}
 
 type Fields$UserProvAccount = {
   //
@@ -38340,11 +38865,11 @@ type ChildRelationships$UserProvAccount = {
 };
 
 interface SObjectDefinition$UserProvAccount extends SObjectDefinition<'UserProvAccount'> {
-    Name: 'UserProvAccount';
-    Fields: Fields$UserProvAccount;
-    ParentReferences: ParentReferences$UserProvAccount;
-    ChildRelationships: ChildRelationships$UserProvAccount;
-  }
+  Name: 'UserProvAccount';
+  Fields: Fields$UserProvAccount;
+  ParentReferences: ParentReferences$UserProvAccount;
+  ChildRelationships: ChildRelationships$UserProvAccount;
+}
 
 type Fields$UserProvAccountStaging = {
   //
@@ -38380,11 +38905,11 @@ type ChildRelationships$UserProvAccountStaging = {
 };
 
 interface SObjectDefinition$UserProvAccountStaging extends SObjectDefinition<'UserProvAccountStaging'> {
-    Name: 'UserProvAccountStaging';
-    Fields: Fields$UserProvAccountStaging;
-    ParentReferences: ParentReferences$UserProvAccountStaging;
-    ChildRelationships: ChildRelationships$UserProvAccountStaging;
-  }
+  Name: 'UserProvAccountStaging';
+  Fields: Fields$UserProvAccountStaging;
+  ParentReferences: ParentReferences$UserProvAccountStaging;
+  ChildRelationships: ChildRelationships$UserProvAccountStaging;
+}
 
 type Fields$UserProvMockTarget = {
   //
@@ -38414,11 +38939,11 @@ type ChildRelationships$UserProvMockTarget = {
 };
 
 interface SObjectDefinition$UserProvMockTarget extends SObjectDefinition<'UserProvMockTarget'> {
-    Name: 'UserProvMockTarget';
-    Fields: Fields$UserProvMockTarget;
-    ParentReferences: ParentReferences$UserProvMockTarget;
-    ChildRelationships: ChildRelationships$UserProvMockTarget;
-  }
+  Name: 'UserProvMockTarget';
+  Fields: Fields$UserProvMockTarget;
+  ParentReferences: ParentReferences$UserProvMockTarget;
+  ChildRelationships: ChildRelationships$UserProvMockTarget;
+}
 
 type Fields$UserProvisioningConfig = {
   //
@@ -38458,11 +38983,11 @@ type ChildRelationships$UserProvisioningConfig = {
 };
 
 interface SObjectDefinition$UserProvisioningConfig extends SObjectDefinition<'UserProvisioningConfig'> {
-    Name: 'UserProvisioningConfig';
-    Fields: Fields$UserProvisioningConfig;
-    ParentReferences: ParentReferences$UserProvisioningConfig;
-    ChildRelationships: ChildRelationships$UserProvisioningConfig;
-  }
+  Name: 'UserProvisioningConfig';
+  Fields: Fields$UserProvisioningConfig;
+  ParentReferences: ParentReferences$UserProvisioningConfig;
+  ChildRelationships: ChildRelationships$UserProvisioningConfig;
+}
 
 type Fields$UserProvisioningLog = {
   //
@@ -38495,11 +39020,11 @@ type ChildRelationships$UserProvisioningLog = {
 };
 
 interface SObjectDefinition$UserProvisioningLog extends SObjectDefinition<'UserProvisioningLog'> {
-    Name: 'UserProvisioningLog';
-    Fields: Fields$UserProvisioningLog;
-    ParentReferences: ParentReferences$UserProvisioningLog;
-    ChildRelationships: ChildRelationships$UserProvisioningLog;
-  }
+  Name: 'UserProvisioningLog';
+  Fields: Fields$UserProvisioningLog;
+  ParentReferences: ParentReferences$UserProvisioningLog;
+  ChildRelationships: ChildRelationships$UserProvisioningLog;
+}
 
 type Fields$UserProvisioningRequest = {
   //
@@ -38548,11 +39073,11 @@ type ChildRelationships$UserProvisioningRequest = {
 };
 
 interface SObjectDefinition$UserProvisioningRequest extends SObjectDefinition<'UserProvisioningRequest'> {
-    Name: 'UserProvisioningRequest';
-    Fields: Fields$UserProvisioningRequest;
-    ParentReferences: ParentReferences$UserProvisioningRequest;
-    ChildRelationships: ChildRelationships$UserProvisioningRequest;
-  }
+  Name: 'UserProvisioningRequest';
+  Fields: Fields$UserProvisioningRequest;
+  ParentReferences: ParentReferences$UserProvisioningRequest;
+  ChildRelationships: ChildRelationships$UserProvisioningRequest;
+}
 
 type Fields$UserProvisioningRequestShare = {
   //
@@ -38578,11 +39103,11 @@ type ChildRelationships$UserProvisioningRequestShare = {
 };
 
 interface SObjectDefinition$UserProvisioningRequestShare extends SObjectDefinition<'UserProvisioningRequestShare'> {
-    Name: 'UserProvisioningRequestShare';
-    Fields: Fields$UserProvisioningRequestShare;
-    ParentReferences: ParentReferences$UserProvisioningRequestShare;
-    ChildRelationships: ChildRelationships$UserProvisioningRequestShare;
-  }
+  Name: 'UserProvisioningRequestShare';
+  Fields: Fields$UserProvisioningRequestShare;
+  ParentReferences: ParentReferences$UserProvisioningRequestShare;
+  ChildRelationships: ChildRelationships$UserProvisioningRequestShare;
+}
 
 type Fields$UserRecordAccess = {
   //
@@ -38606,11 +39131,11 @@ type ChildRelationships$UserRecordAccess = {
 };
 
 interface SObjectDefinition$UserRecordAccess extends SObjectDefinition<'UserRecordAccess'> {
-    Name: 'UserRecordAccess';
-    Fields: Fields$UserRecordAccess;
-    ParentReferences: ParentReferences$UserRecordAccess;
-    ChildRelationships: ChildRelationships$UserRecordAccess;
-  }
+  Name: 'UserRecordAccess';
+  Fields: Fields$UserRecordAccess;
+  ParentReferences: ParentReferences$UserRecordAccess;
+  ChildRelationships: ChildRelationships$UserRecordAccess;
+}
 
 type Fields$UserRole = {
   //
@@ -38643,11 +39168,11 @@ type ChildRelationships$UserRole = {
 };
 
 interface SObjectDefinition$UserRole extends SObjectDefinition<'UserRole'> {
-    Name: 'UserRole';
-    Fields: Fields$UserRole;
-    ParentReferences: ParentReferences$UserRole;
-    ChildRelationships: ChildRelationships$UserRole;
-  }
+  Name: 'UserRole';
+  Fields: Fields$UserRole;
+  ParentReferences: ParentReferences$UserRole;
+  ChildRelationships: ChildRelationships$UserRole;
+}
 
 type Fields$UserSetupEntityAccess = {
   //
@@ -38669,11 +39194,11 @@ type ChildRelationships$UserSetupEntityAccess = {
 };
 
 interface SObjectDefinition$UserSetupEntityAccess extends SObjectDefinition<'UserSetupEntityAccess'> {
-    Name: 'UserSetupEntityAccess';
-    Fields: Fields$UserSetupEntityAccess;
-    ParentReferences: ParentReferences$UserSetupEntityAccess;
-    ChildRelationships: ChildRelationships$UserSetupEntityAccess;
-  }
+  Name: 'UserSetupEntityAccess';
+  Fields: Fields$UserSetupEntityAccess;
+  ParentReferences: ParentReferences$UserSetupEntityAccess;
+  ChildRelationships: ChildRelationships$UserSetupEntityAccess;
+}
 
 type Fields$UserShare = {
   //
@@ -38699,11 +39224,11 @@ type ChildRelationships$UserShare = {
 };
 
 interface SObjectDefinition$UserShare extends SObjectDefinition<'UserShare'> {
-    Name: 'UserShare';
-    Fields: Fields$UserShare;
-    ParentReferences: ParentReferences$UserShare;
-    ChildRelationships: ChildRelationships$UserShare;
-  }
+  Name: 'UserShare';
+  Fields: Fields$UserShare;
+  ParentReferences: ParentReferences$UserShare;
+  ChildRelationships: ChildRelationships$UserShare;
+}
 
 type Fields$UserTeamMember = {
   //
@@ -38731,11 +39256,11 @@ type ChildRelationships$UserTeamMember = {
 };
 
 interface SObjectDefinition$UserTeamMember extends SObjectDefinition<'UserTeamMember'> {
-    Name: 'UserTeamMember';
-    Fields: Fields$UserTeamMember;
-    ParentReferences: ParentReferences$UserTeamMember;
-    ChildRelationships: ChildRelationships$UserTeamMember;
-  }
+  Name: 'UserTeamMember';
+  Fields: Fields$UserTeamMember;
+  ParentReferences: ParentReferences$UserTeamMember;
+  ChildRelationships: ChildRelationships$UserTeamMember;
+}
 
 type Fields$VerificationHistory = {
   //
@@ -38775,11 +39300,11 @@ type ChildRelationships$VerificationHistory = {
 };
 
 interface SObjectDefinition$VerificationHistory extends SObjectDefinition<'VerificationHistory'> {
-    Name: 'VerificationHistory';
-    Fields: Fields$VerificationHistory;
-    ParentReferences: ParentReferences$VerificationHistory;
-    ChildRelationships: ChildRelationships$VerificationHistory;
-  }
+  Name: 'VerificationHistory';
+  Fields: Fields$VerificationHistory;
+  ParentReferences: ParentReferences$VerificationHistory;
+  ChildRelationships: ChildRelationships$VerificationHistory;
+}
 
 type Fields$VisualforceAccessMetrics = {
   //
@@ -38803,11 +39328,11 @@ type ChildRelationships$VisualforceAccessMetrics = {
 };
 
 interface SObjectDefinition$VisualforceAccessMetrics extends SObjectDefinition<'VisualforceAccessMetrics'> {
-    Name: 'VisualforceAccessMetrics';
-    Fields: Fields$VisualforceAccessMetrics;
-    ParentReferences: ParentReferences$VisualforceAccessMetrics;
-    ChildRelationships: ChildRelationships$VisualforceAccessMetrics;
-  }
+  Name: 'VisualforceAccessMetrics';
+  Fields: Fields$VisualforceAccessMetrics;
+  ParentReferences: ParentReferences$VisualforceAccessMetrics;
+  ChildRelationships: ChildRelationships$VisualforceAccessMetrics;
+}
 
 type Fields$Vote = {
   //
@@ -38834,11 +39359,11 @@ type ChildRelationships$Vote = {
 };
 
 interface SObjectDefinition$Vote extends SObjectDefinition<'Vote'> {
-    Name: 'Vote';
-    Fields: Fields$Vote;
-    ParentReferences: ParentReferences$Vote;
-    ChildRelationships: ChildRelationships$Vote;
-  }
+  Name: 'Vote';
+  Fields: Fields$Vote;
+  ParentReferences: ParentReferences$Vote;
+  ChildRelationships: ChildRelationships$Vote;
+}
 
 type Fields$Voucher__ChangeEvent = {
   //
@@ -38871,11 +39396,11 @@ type ChildRelationships$Voucher__ChangeEvent = {
 };
 
 interface SObjectDefinition$Voucher__ChangeEvent extends SObjectDefinition<'Voucher__ChangeEvent'> {
-    Name: 'Voucher__ChangeEvent';
-    Fields: Fields$Voucher__ChangeEvent;
-    ParentReferences: ParentReferences$Voucher__ChangeEvent;
-    ChildRelationships: ChildRelationships$Voucher__ChangeEvent;
-  }
+  Name: 'Voucher__ChangeEvent';
+  Fields: Fields$Voucher__ChangeEvent;
+  ParentReferences: ParentReferences$Voucher__ChangeEvent;
+  ChildRelationships: ChildRelationships$Voucher__ChangeEvent;
+}
 
 type Fields$Voucher__c = {
   //
@@ -38939,11 +39464,11 @@ type ChildRelationships$Voucher__c = {
 };
 
 interface SObjectDefinition$Voucher__c extends SObjectDefinition<'Voucher__c'> {
-    Name: 'Voucher__c';
-    Fields: Fields$Voucher__c;
-    ParentReferences: ParentReferences$Voucher__c;
-    ChildRelationships: ChildRelationships$Voucher__c;
-  }
+  Name: 'Voucher__c';
+  Fields: Fields$Voucher__c;
+  ParentReferences: ParentReferences$Voucher__c;
+  ChildRelationships: ChildRelationships$Voucher__c;
+}
 
 type Fields$WaveAutoInstallRequest = {
   //
@@ -38978,11 +39503,11 @@ type ChildRelationships$WaveAutoInstallRequest = {
 };
 
 interface SObjectDefinition$WaveAutoInstallRequest extends SObjectDefinition<'WaveAutoInstallRequest'> {
-    Name: 'WaveAutoInstallRequest';
-    Fields: Fields$WaveAutoInstallRequest;
-    ParentReferences: ParentReferences$WaveAutoInstallRequest;
-    ChildRelationships: ChildRelationships$WaveAutoInstallRequest;
-  }
+  Name: 'WaveAutoInstallRequest';
+  Fields: Fields$WaveAutoInstallRequest;
+  ParentReferences: ParentReferences$WaveAutoInstallRequest;
+  ChildRelationships: ChildRelationships$WaveAutoInstallRequest;
+}
 
 type Fields$WaveCompatibilityCheckItem = {
   //
@@ -39014,11 +39539,11 @@ type ChildRelationships$WaveCompatibilityCheckItem = {
 };
 
 interface SObjectDefinition$WaveCompatibilityCheckItem extends SObjectDefinition<'WaveCompatibilityCheckItem'> {
-    Name: 'WaveCompatibilityCheckItem';
-    Fields: Fields$WaveCompatibilityCheckItem;
-    ParentReferences: ParentReferences$WaveCompatibilityCheckItem;
-    ChildRelationships: ChildRelationships$WaveCompatibilityCheckItem;
-  }
+  Name: 'WaveCompatibilityCheckItem';
+  Fields: Fields$WaveCompatibilityCheckItem;
+  ParentReferences: ParentReferences$WaveCompatibilityCheckItem;
+  ChildRelationships: ChildRelationships$WaveCompatibilityCheckItem;
+}
 
 type Fields$WebLink = {
   //
@@ -39063,11 +39588,11 @@ type ChildRelationships$WebLink = {
 };
 
 interface SObjectDefinition$WebLink extends SObjectDefinition<'WebLink'> {
-    Name: 'WebLink';
-    Fields: Fields$WebLink;
-    ParentReferences: ParentReferences$WebLink;
-    ChildRelationships: ChildRelationships$WebLink;
-  }
+  Name: 'WebLink';
+  Fields: Fields$WebLink;
+  ParentReferences: ParentReferences$WebLink;
+  ChildRelationships: ChildRelationships$WebLink;
+}
 
 type Fields$WorkAccess = {
   //
@@ -39097,11 +39622,11 @@ type ChildRelationships$WorkAccess = {
 };
 
 interface SObjectDefinition$WorkAccess extends SObjectDefinition<'WorkAccess'> {
-    Name: 'WorkAccess';
-    Fields: Fields$WorkAccess;
-    ParentReferences: ParentReferences$WorkAccess;
-    ChildRelationships: ChildRelationships$WorkAccess;
-  }
+  Name: 'WorkAccess';
+  Fields: Fields$WorkAccess;
+  ParentReferences: ParentReferences$WorkAccess;
+  ChildRelationships: ChildRelationships$WorkAccess;
+}
 
 type Fields$WorkAccessShare = {
   //
@@ -39127,11 +39652,11 @@ type ChildRelationships$WorkAccessShare = {
 };
 
 interface SObjectDefinition$WorkAccessShare extends SObjectDefinition<'WorkAccessShare'> {
-    Name: 'WorkAccessShare';
-    Fields: Fields$WorkAccessShare;
-    ParentReferences: ParentReferences$WorkAccessShare;
-    ChildRelationships: ChildRelationships$WorkAccessShare;
-  }
+  Name: 'WorkAccessShare';
+  Fields: Fields$WorkAccessShare;
+  ParentReferences: ParentReferences$WorkAccessShare;
+  ChildRelationships: ChildRelationships$WorkAccessShare;
+}
 
 type Fields$WorkBadge = {
   //
@@ -39168,11 +39693,11 @@ type ChildRelationships$WorkBadge = {
 };
 
 interface SObjectDefinition$WorkBadge extends SObjectDefinition<'WorkBadge'> {
-    Name: 'WorkBadge';
-    Fields: Fields$WorkBadge;
-    ParentReferences: ParentReferences$WorkBadge;
-    ChildRelationships: ChildRelationships$WorkBadge;
-  }
+  Name: 'WorkBadge';
+  Fields: Fields$WorkBadge;
+  ParentReferences: ParentReferences$WorkBadge;
+  ChildRelationships: ChildRelationships$WorkBadge;
+}
 
 type Fields$WorkBadgeDefinition = {
   //
@@ -39222,11 +39747,11 @@ type ChildRelationships$WorkBadgeDefinition = {
 };
 
 interface SObjectDefinition$WorkBadgeDefinition extends SObjectDefinition<'WorkBadgeDefinition'> {
-    Name: 'WorkBadgeDefinition';
-    Fields: Fields$WorkBadgeDefinition;
-    ParentReferences: ParentReferences$WorkBadgeDefinition;
-    ChildRelationships: ChildRelationships$WorkBadgeDefinition;
-  }
+  Name: 'WorkBadgeDefinition';
+  Fields: Fields$WorkBadgeDefinition;
+  ParentReferences: ParentReferences$WorkBadgeDefinition;
+  ChildRelationships: ChildRelationships$WorkBadgeDefinition;
+}
 
 type Fields$WorkBadgeDefinitionFeed = {
   //
@@ -39267,11 +39792,11 @@ type ChildRelationships$WorkBadgeDefinitionFeed = {
 };
 
 interface SObjectDefinition$WorkBadgeDefinitionFeed extends SObjectDefinition<'WorkBadgeDefinitionFeed'> {
-    Name: 'WorkBadgeDefinitionFeed';
-    Fields: Fields$WorkBadgeDefinitionFeed;
-    ParentReferences: ParentReferences$WorkBadgeDefinitionFeed;
-    ChildRelationships: ChildRelationships$WorkBadgeDefinitionFeed;
-  }
+  Name: 'WorkBadgeDefinitionFeed';
+  Fields: Fields$WorkBadgeDefinitionFeed;
+  ParentReferences: ParentReferences$WorkBadgeDefinitionFeed;
+  ChildRelationships: ChildRelationships$WorkBadgeDefinitionFeed;
+}
 
 type Fields$WorkBadgeDefinitionHistory = {
   //
@@ -39297,11 +39822,11 @@ type ChildRelationships$WorkBadgeDefinitionHistory = {
 };
 
 interface SObjectDefinition$WorkBadgeDefinitionHistory extends SObjectDefinition<'WorkBadgeDefinitionHistory'> {
-    Name: 'WorkBadgeDefinitionHistory';
-    Fields: Fields$WorkBadgeDefinitionHistory;
-    ParentReferences: ParentReferences$WorkBadgeDefinitionHistory;
-    ChildRelationships: ChildRelationships$WorkBadgeDefinitionHistory;
-  }
+  Name: 'WorkBadgeDefinitionHistory';
+  Fields: Fields$WorkBadgeDefinitionHistory;
+  ParentReferences: ParentReferences$WorkBadgeDefinitionHistory;
+  ChildRelationships: ChildRelationships$WorkBadgeDefinitionHistory;
+}
 
 type Fields$WorkBadgeDefinitionShare = {
   //
@@ -39327,11 +39852,11 @@ type ChildRelationships$WorkBadgeDefinitionShare = {
 };
 
 interface SObjectDefinition$WorkBadgeDefinitionShare extends SObjectDefinition<'WorkBadgeDefinitionShare'> {
-    Name: 'WorkBadgeDefinitionShare';
-    Fields: Fields$WorkBadgeDefinitionShare;
-    ParentReferences: ParentReferences$WorkBadgeDefinitionShare;
-    ChildRelationships: ChildRelationships$WorkBadgeDefinitionShare;
-  }
+  Name: 'WorkBadgeDefinitionShare';
+  Fields: Fields$WorkBadgeDefinitionShare;
+  ParentReferences: ParentReferences$WorkBadgeDefinitionShare;
+  ChildRelationships: ChildRelationships$WorkBadgeDefinitionShare;
+}
 
 type Fields$WorkThanks = {
   //
@@ -39364,11 +39889,11 @@ type ChildRelationships$WorkThanks = {
 };
 
 interface SObjectDefinition$WorkThanks extends SObjectDefinition<'WorkThanks'> {
-    Name: 'WorkThanks';
-    Fields: Fields$WorkThanks;
-    ParentReferences: ParentReferences$WorkThanks;
-    ChildRelationships: ChildRelationships$WorkThanks;
-  }
+  Name: 'WorkThanks';
+  Fields: Fields$WorkThanks;
+  ParentReferences: ParentReferences$WorkThanks;
+  ChildRelationships: ChildRelationships$WorkThanks;
+}
 
 type Fields$WorkThanksShare = {
   //
@@ -39394,11 +39919,11 @@ type ChildRelationships$WorkThanksShare = {
 };
 
 interface SObjectDefinition$WorkThanksShare extends SObjectDefinition<'WorkThanksShare'> {
-    Name: 'WorkThanksShare';
-    Fields: Fields$WorkThanksShare;
-    ParentReferences: ParentReferences$WorkThanksShare;
-    ChildRelationships: ChildRelationships$WorkThanksShare;
-  }
+  Name: 'WorkThanksShare';
+  Fields: Fields$WorkThanksShare;
+  ParentReferences: ParentReferences$WorkThanksShare;
+  ChildRelationships: ChildRelationships$WorkThanksShare;
+}
 
 type Fields$myV2MOM__Measure_Team__ChangeEvent = {
   //
@@ -39428,12 +39953,13 @@ type ChildRelationships$myV2MOM__Measure_Team__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$myV2MOM__Measure_Team__ChangeEvent extends SObjectDefinition<'myV2MOM__Measure_Team__ChangeEvent'> {
-    Name: 'myV2MOM__Measure_Team__ChangeEvent';
-    Fields: Fields$myV2MOM__Measure_Team__ChangeEvent;
-    ParentReferences: ParentReferences$myV2MOM__Measure_Team__ChangeEvent;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__ChangeEvent;
-  }
+interface SObjectDefinition$myV2MOM__Measure_Team__ChangeEvent
+  extends SObjectDefinition<'myV2MOM__Measure_Team__ChangeEvent'> {
+  Name: 'myV2MOM__Measure_Team__ChangeEvent';
+  Fields: Fields$myV2MOM__Measure_Team__ChangeEvent;
+  ParentReferences: ParentReferences$myV2MOM__Measure_Team__ChangeEvent;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__ChangeEvent;
+}
 
 type Fields$myV2MOM__Measure_Team__Feed = {
   //
@@ -39474,11 +40000,11 @@ type ChildRelationships$myV2MOM__Measure_Team__Feed = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure_Team__Feed extends SObjectDefinition<'myV2MOM__Measure_Team__Feed'> {
-    Name: 'myV2MOM__Measure_Team__Feed';
-    Fields: Fields$myV2MOM__Measure_Team__Feed;
-    ParentReferences: ParentReferences$myV2MOM__Measure_Team__Feed;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__Feed;
-  }
+  Name: 'myV2MOM__Measure_Team__Feed';
+  Fields: Fields$myV2MOM__Measure_Team__Feed;
+  ParentReferences: ParentReferences$myV2MOM__Measure_Team__Feed;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__Feed;
+}
 
 type Fields$myV2MOM__Measure_Team__History = {
   //
@@ -39504,11 +40030,11 @@ type ChildRelationships$myV2MOM__Measure_Team__History = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure_Team__History extends SObjectDefinition<'myV2MOM__Measure_Team__History'> {
-    Name: 'myV2MOM__Measure_Team__History';
-    Fields: Fields$myV2MOM__Measure_Team__History;
-    ParentReferences: ParentReferences$myV2MOM__Measure_Team__History;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__History;
-  }
+  Name: 'myV2MOM__Measure_Team__History';
+  Fields: Fields$myV2MOM__Measure_Team__History;
+  ParentReferences: ParentReferences$myV2MOM__Measure_Team__History;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__History;
+}
 
 type Fields$myV2MOM__Measure_Team__c = {
   //
@@ -39571,11 +40097,11 @@ type ChildRelationships$myV2MOM__Measure_Team__c = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure_Team__c extends SObjectDefinition<'myV2MOM__Measure_Team__c'> {
-    Name: 'myV2MOM__Measure_Team__c';
-    Fields: Fields$myV2MOM__Measure_Team__c;
-    ParentReferences: ParentReferences$myV2MOM__Measure_Team__c;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__c;
-  }
+  Name: 'myV2MOM__Measure_Team__c';
+  Fields: Fields$myV2MOM__Measure_Team__c;
+  ParentReferences: ParentReferences$myV2MOM__Measure_Team__c;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure_Team__c;
+}
 
 type Fields$myV2MOM__Measure__ChangeEvent = {
   //
@@ -39626,11 +40152,11 @@ type ChildRelationships$myV2MOM__Measure__ChangeEvent = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure__ChangeEvent extends SObjectDefinition<'myV2MOM__Measure__ChangeEvent'> {
-    Name: 'myV2MOM__Measure__ChangeEvent';
-    Fields: Fields$myV2MOM__Measure__ChangeEvent;
-    ParentReferences: ParentReferences$myV2MOM__Measure__ChangeEvent;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure__ChangeEvent;
-  }
+  Name: 'myV2MOM__Measure__ChangeEvent';
+  Fields: Fields$myV2MOM__Measure__ChangeEvent;
+  ParentReferences: ParentReferences$myV2MOM__Measure__ChangeEvent;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure__ChangeEvent;
+}
 
 type Fields$myV2MOM__Measure__Feed = {
   //
@@ -39671,11 +40197,11 @@ type ChildRelationships$myV2MOM__Measure__Feed = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure__Feed extends SObjectDefinition<'myV2MOM__Measure__Feed'> {
-    Name: 'myV2MOM__Measure__Feed';
-    Fields: Fields$myV2MOM__Measure__Feed;
-    ParentReferences: ParentReferences$myV2MOM__Measure__Feed;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure__Feed;
-  }
+  Name: 'myV2MOM__Measure__Feed';
+  Fields: Fields$myV2MOM__Measure__Feed;
+  ParentReferences: ParentReferences$myV2MOM__Measure__Feed;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure__Feed;
+}
 
 type Fields$myV2MOM__Measure__History = {
   //
@@ -39701,11 +40227,11 @@ type ChildRelationships$myV2MOM__Measure__History = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure__History extends SObjectDefinition<'myV2MOM__Measure__History'> {
-    Name: 'myV2MOM__Measure__History';
-    Fields: Fields$myV2MOM__Measure__History;
-    ParentReferences: ParentReferences$myV2MOM__Measure__History;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure__History;
-  }
+  Name: 'myV2MOM__Measure__History';
+  Fields: Fields$myV2MOM__Measure__History;
+  ParentReferences: ParentReferences$myV2MOM__Measure__History;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure__History;
+}
 
 type Fields$myV2MOM__Measure__Share = {
   //
@@ -39731,11 +40257,11 @@ type ChildRelationships$myV2MOM__Measure__Share = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure__Share extends SObjectDefinition<'myV2MOM__Measure__Share'> {
-    Name: 'myV2MOM__Measure__Share';
-    Fields: Fields$myV2MOM__Measure__Share;
-    ParentReferences: ParentReferences$myV2MOM__Measure__Share;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure__Share;
-  }
+  Name: 'myV2MOM__Measure__Share';
+  Fields: Fields$myV2MOM__Measure__Share;
+  ParentReferences: ParentReferences$myV2MOM__Measure__Share;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure__Share;
+}
 
 type Fields$myV2MOM__Measure__c = {
   //
@@ -39819,11 +40345,11 @@ type ChildRelationships$myV2MOM__Measure__c = {
 };
 
 interface SObjectDefinition$myV2MOM__Measure__c extends SObjectDefinition<'myV2MOM__Measure__c'> {
-    Name: 'myV2MOM__Measure__c';
-    Fields: Fields$myV2MOM__Measure__c;
-    ParentReferences: ParentReferences$myV2MOM__Measure__c;
-    ChildRelationships: ChildRelationships$myV2MOM__Measure__c;
-  }
+  Name: 'myV2MOM__Measure__c';
+  Fields: Fields$myV2MOM__Measure__c;
+  ParentReferences: ParentReferences$myV2MOM__Measure__c;
+  ChildRelationships: ChildRelationships$myV2MOM__Measure__c;
+}
 
 type Fields$myV2MOM__Method__ChangeEvent = {
   //
@@ -39850,11 +40376,11 @@ type ChildRelationships$myV2MOM__Method__ChangeEvent = {
 };
 
 interface SObjectDefinition$myV2MOM__Method__ChangeEvent extends SObjectDefinition<'myV2MOM__Method__ChangeEvent'> {
-    Name: 'myV2MOM__Method__ChangeEvent';
-    Fields: Fields$myV2MOM__Method__ChangeEvent;
-    ParentReferences: ParentReferences$myV2MOM__Method__ChangeEvent;
-    ChildRelationships: ChildRelationships$myV2MOM__Method__ChangeEvent;
-  }
+  Name: 'myV2MOM__Method__ChangeEvent';
+  Fields: Fields$myV2MOM__Method__ChangeEvent;
+  ParentReferences: ParentReferences$myV2MOM__Method__ChangeEvent;
+  ChildRelationships: ChildRelationships$myV2MOM__Method__ChangeEvent;
+}
 
 type Fields$myV2MOM__Method__Feed = {
   //
@@ -39895,11 +40421,11 @@ type ChildRelationships$myV2MOM__Method__Feed = {
 };
 
 interface SObjectDefinition$myV2MOM__Method__Feed extends SObjectDefinition<'myV2MOM__Method__Feed'> {
-    Name: 'myV2MOM__Method__Feed';
-    Fields: Fields$myV2MOM__Method__Feed;
-    ParentReferences: ParentReferences$myV2MOM__Method__Feed;
-    ChildRelationships: ChildRelationships$myV2MOM__Method__Feed;
-  }
+  Name: 'myV2MOM__Method__Feed';
+  Fields: Fields$myV2MOM__Method__Feed;
+  ParentReferences: ParentReferences$myV2MOM__Method__Feed;
+  ChildRelationships: ChildRelationships$myV2MOM__Method__Feed;
+}
 
 type Fields$myV2MOM__Method__History = {
   //
@@ -39925,11 +40451,11 @@ type ChildRelationships$myV2MOM__Method__History = {
 };
 
 interface SObjectDefinition$myV2MOM__Method__History extends SObjectDefinition<'myV2MOM__Method__History'> {
-    Name: 'myV2MOM__Method__History';
-    Fields: Fields$myV2MOM__Method__History;
-    ParentReferences: ParentReferences$myV2MOM__Method__History;
-    ChildRelationships: ChildRelationships$myV2MOM__Method__History;
-  }
+  Name: 'myV2MOM__Method__History';
+  Fields: Fields$myV2MOM__Method__History;
+  ParentReferences: ParentReferences$myV2MOM__Method__History;
+  ChildRelationships: ChildRelationships$myV2MOM__Method__History;
+}
 
 type Fields$myV2MOM__Method__Share = {
   //
@@ -39955,11 +40481,11 @@ type ChildRelationships$myV2MOM__Method__Share = {
 };
 
 interface SObjectDefinition$myV2MOM__Method__Share extends SObjectDefinition<'myV2MOM__Method__Share'> {
-    Name: 'myV2MOM__Method__Share';
-    Fields: Fields$myV2MOM__Method__Share;
-    ParentReferences: ParentReferences$myV2MOM__Method__Share;
-    ChildRelationships: ChildRelationships$myV2MOM__Method__Share;
-  }
+  Name: 'myV2MOM__Method__Share';
+  Fields: Fields$myV2MOM__Method__Share;
+  ParentReferences: ParentReferences$myV2MOM__Method__Share;
+  ChildRelationships: ChildRelationships$myV2MOM__Method__Share;
+}
 
 type Fields$myV2MOM__Method__c = {
   //
@@ -40019,11 +40545,11 @@ type ChildRelationships$myV2MOM__Method__c = {
 };
 
 interface SObjectDefinition$myV2MOM__Method__c extends SObjectDefinition<'myV2MOM__Method__c'> {
-    Name: 'myV2MOM__Method__c';
-    Fields: Fields$myV2MOM__Method__c;
-    ParentReferences: ParentReferences$myV2MOM__Method__c;
-    ChildRelationships: ChildRelationships$myV2MOM__Method__c;
-  }
+  Name: 'myV2MOM__Method__c';
+  Fields: Fields$myV2MOM__Method__c;
+  ParentReferences: ParentReferences$myV2MOM__Method__c;
+  ChildRelationships: ChildRelationships$myV2MOM__Method__c;
+}
 
 type Fields$myV2MOM__V2MOM__ChangeEvent = {
   //
@@ -40053,11 +40579,11 @@ type ChildRelationships$myV2MOM__V2MOM__ChangeEvent = {
 };
 
 interface SObjectDefinition$myV2MOM__V2MOM__ChangeEvent extends SObjectDefinition<'myV2MOM__V2MOM__ChangeEvent'> {
-    Name: 'myV2MOM__V2MOM__ChangeEvent';
-    Fields: Fields$myV2MOM__V2MOM__ChangeEvent;
-    ParentReferences: ParentReferences$myV2MOM__V2MOM__ChangeEvent;
-    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__ChangeEvent;
-  }
+  Name: 'myV2MOM__V2MOM__ChangeEvent';
+  Fields: Fields$myV2MOM__V2MOM__ChangeEvent;
+  ParentReferences: ParentReferences$myV2MOM__V2MOM__ChangeEvent;
+  ChildRelationships: ChildRelationships$myV2MOM__V2MOM__ChangeEvent;
+}
 
 type Fields$myV2MOM__V2MOM__Feed = {
   //
@@ -40098,11 +40624,11 @@ type ChildRelationships$myV2MOM__V2MOM__Feed = {
 };
 
 interface SObjectDefinition$myV2MOM__V2MOM__Feed extends SObjectDefinition<'myV2MOM__V2MOM__Feed'> {
-    Name: 'myV2MOM__V2MOM__Feed';
-    Fields: Fields$myV2MOM__V2MOM__Feed;
-    ParentReferences: ParentReferences$myV2MOM__V2MOM__Feed;
-    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Feed;
-  }
+  Name: 'myV2MOM__V2MOM__Feed';
+  Fields: Fields$myV2MOM__V2MOM__Feed;
+  ParentReferences: ParentReferences$myV2MOM__V2MOM__Feed;
+  ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Feed;
+}
 
 type Fields$myV2MOM__V2MOM__History = {
   //
@@ -40128,11 +40654,11 @@ type ChildRelationships$myV2MOM__V2MOM__History = {
 };
 
 interface SObjectDefinition$myV2MOM__V2MOM__History extends SObjectDefinition<'myV2MOM__V2MOM__History'> {
-    Name: 'myV2MOM__V2MOM__History';
-    Fields: Fields$myV2MOM__V2MOM__History;
-    ParentReferences: ParentReferences$myV2MOM__V2MOM__History;
-    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__History;
-  }
+  Name: 'myV2MOM__V2MOM__History';
+  Fields: Fields$myV2MOM__V2MOM__History;
+  ParentReferences: ParentReferences$myV2MOM__V2MOM__History;
+  ChildRelationships: ChildRelationships$myV2MOM__V2MOM__History;
+}
 
 type Fields$myV2MOM__V2MOM__Share = {
   //
@@ -40158,11 +40684,11 @@ type ChildRelationships$myV2MOM__V2MOM__Share = {
 };
 
 interface SObjectDefinition$myV2MOM__V2MOM__Share extends SObjectDefinition<'myV2MOM__V2MOM__Share'> {
-    Name: 'myV2MOM__V2MOM__Share';
-    Fields: Fields$myV2MOM__V2MOM__Share;
-    ParentReferences: ParentReferences$myV2MOM__V2MOM__Share;
-    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Share;
-  }
+  Name: 'myV2MOM__V2MOM__Share';
+  Fields: Fields$myV2MOM__V2MOM__Share;
+  ParentReferences: ParentReferences$myV2MOM__V2MOM__Share;
+  ChildRelationships: ChildRelationships$myV2MOM__V2MOM__Share;
+}
 
 type Fields$myV2MOM__V2MOM__c = {
   //
@@ -40227,11 +40753,11 @@ type ChildRelationships$myV2MOM__V2MOM__c = {
 };
 
 interface SObjectDefinition$myV2MOM__V2MOM__c extends SObjectDefinition<'myV2MOM__V2MOM__c'> {
-    Name: 'myV2MOM__V2MOM__c';
-    Fields: Fields$myV2MOM__V2MOM__c;
-    ParentReferences: ParentReferences$myV2MOM__V2MOM__c;
-    ChildRelationships: ChildRelationships$myV2MOM__V2MOM__c;
-  }
+  Name: 'myV2MOM__V2MOM__c';
+  Fields: Fields$myV2MOM__V2MOM__c;
+  ParentReferences: ParentReferences$myV2MOM__V2MOM__c;
+  ChildRelationships: ChildRelationships$myV2MOM__V2MOM__c;
+}
 
 type Fields$pandadoc__DocStatus__ChangeEvent = {
   //
@@ -40257,12 +40783,13 @@ type ChildRelationships$pandadoc__DocStatus__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__DocStatus__ChangeEvent extends SObjectDefinition<'pandadoc__DocStatus__ChangeEvent'> {
-    Name: 'pandadoc__DocStatus__ChangeEvent';
-    Fields: Fields$pandadoc__DocStatus__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__DocStatus__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__DocStatus__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__DocStatus__ChangeEvent
+  extends SObjectDefinition<'pandadoc__DocStatus__ChangeEvent'> {
+  Name: 'pandadoc__DocStatus__ChangeEvent';
+  Fields: Fields$pandadoc__DocStatus__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__DocStatus__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__DocStatus__ChangeEvent;
+}
 
 type Fields$pandadoc__DocStatus__c = {
   //
@@ -40312,11 +40839,11 @@ type ChildRelationships$pandadoc__DocStatus__c = {
 };
 
 interface SObjectDefinition$pandadoc__DocStatus__c extends SObjectDefinition<'pandadoc__DocStatus__c'> {
-    Name: 'pandadoc__DocStatus__c';
-    Fields: Fields$pandadoc__DocStatus__c;
-    ParentReferences: ParentReferences$pandadoc__DocStatus__c;
-    ChildRelationships: ChildRelationships$pandadoc__DocStatus__c;
-  }
+  Name: 'pandadoc__DocStatus__c';
+  Fields: Fields$pandadoc__DocStatus__c;
+  ParentReferences: ParentReferences$pandadoc__DocStatus__c;
+  ChildRelationships: ChildRelationships$pandadoc__DocStatus__c;
+}
 
 type Fields$pandadoc__Object_Tokens__ChangeEvent = {
   //
@@ -40340,12 +40867,13 @@ type ChildRelationships$pandadoc__Object_Tokens__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__Object_Tokens__ChangeEvent extends SObjectDefinition<'pandadoc__Object_Tokens__ChangeEvent'> {
-    Name: 'pandadoc__Object_Tokens__ChangeEvent';
-    Fields: Fields$pandadoc__Object_Tokens__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__Object_Tokens__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__Object_Tokens__ChangeEvent
+  extends SObjectDefinition<'pandadoc__Object_Tokens__ChangeEvent'> {
+  Name: 'pandadoc__Object_Tokens__ChangeEvent';
+  Fields: Fields$pandadoc__Object_Tokens__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__Object_Tokens__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__ChangeEvent;
+}
 
 type Fields$pandadoc__Object_Tokens__c = {
   //
@@ -40393,11 +40921,11 @@ type ChildRelationships$pandadoc__Object_Tokens__c = {
 };
 
 interface SObjectDefinition$pandadoc__Object_Tokens__c extends SObjectDefinition<'pandadoc__Object_Tokens__c'> {
-    Name: 'pandadoc__Object_Tokens__c';
-    Fields: Fields$pandadoc__Object_Tokens__c;
-    ParentReferences: ParentReferences$pandadoc__Object_Tokens__c;
-    ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__c;
-  }
+  Name: 'pandadoc__Object_Tokens__c';
+  Fields: Fields$pandadoc__Object_Tokens__c;
+  ParentReferences: ParentReferences$pandadoc__Object_Tokens__c;
+  ChildRelationships: ChildRelationships$pandadoc__Object_Tokens__c;
+}
 
 type Fields$pandadoc__PandaDocDocument__ChangeEvent = {
   //
@@ -40435,12 +40963,13 @@ type ChildRelationships$pandadoc__PandaDocDocument__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__PandaDocDocument__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDocDocument__ChangeEvent'> {
-    Name: 'pandadoc__PandaDocDocument__ChangeEvent';
-    Fields: Fields$pandadoc__PandaDocDocument__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__PandaDocDocument__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__PandaDocDocument__ChangeEvent
+  extends SObjectDefinition<'pandadoc__PandaDocDocument__ChangeEvent'> {
+  Name: 'pandadoc__PandaDocDocument__ChangeEvent';
+  Fields: Fields$pandadoc__PandaDocDocument__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__PandaDocDocument__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__ChangeEvent;
+}
 
 type Fields$pandadoc__PandaDocDocument__c = {
   //
@@ -40506,11 +41035,11 @@ type ChildRelationships$pandadoc__PandaDocDocument__c = {
 };
 
 interface SObjectDefinition$pandadoc__PandaDocDocument__c extends SObjectDefinition<'pandadoc__PandaDocDocument__c'> {
-    Name: 'pandadoc__PandaDocDocument__c';
-    Fields: Fields$pandadoc__PandaDocDocument__c;
-    ParentReferences: ParentReferences$pandadoc__PandaDocDocument__c;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__c;
-  }
+  Name: 'pandadoc__PandaDocDocument__c';
+  Fields: Fields$pandadoc__PandaDocDocument__c;
+  ParentReferences: ParentReferences$pandadoc__PandaDocDocument__c;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDocDocument__c;
+}
 
 type Fields$pandadoc__PandaDocLog__ChangeEvent = {
   //
@@ -40536,12 +41065,13 @@ type ChildRelationships$pandadoc__PandaDocLog__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDocLog__ChangeEvent'> {
-    Name: 'pandadoc__PandaDocLog__ChangeEvent';
-    Fields: Fields$pandadoc__PandaDocLog__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__PandaDocLog__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__PandaDocLog__ChangeEvent
+  extends SObjectDefinition<'pandadoc__PandaDocLog__ChangeEvent'> {
+  Name: 'pandadoc__PandaDocLog__ChangeEvent';
+  Fields: Fields$pandadoc__PandaDocLog__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__PandaDocLog__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__ChangeEvent;
+}
 
 type Fields$pandadoc__PandaDocLog__c = {
   //
@@ -40591,11 +41121,11 @@ type ChildRelationships$pandadoc__PandaDocLog__c = {
 };
 
 interface SObjectDefinition$pandadoc__PandaDocLog__c extends SObjectDefinition<'pandadoc__PandaDocLog__c'> {
-    Name: 'pandadoc__PandaDocLog__c';
-    Fields: Fields$pandadoc__PandaDocLog__c;
-    ParentReferences: ParentReferences$pandadoc__PandaDocLog__c;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
-  }
+  Name: 'pandadoc__PandaDocLog__c';
+  Fields: Fields$pandadoc__PandaDocLog__c;
+  ParentReferences: ParentReferences$pandadoc__PandaDocLog__c;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDocLog__c;
+}
 
 type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
   //
@@ -40625,12 +41155,13 @@ type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
-    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
-    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent
+  extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent'> {
+  Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent';
+  Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__ChangeEvent;
+}
 
 type Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
   //
@@ -40680,12 +41211,13 @@ type ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__c'> {
-    Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__c';
-    Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c;
-    ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__c;
-    ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__c;
-  }
+interface SObjectDefinition$pandadoc__PandaDoc_JsonBulder_Mapping__c
+  extends SObjectDefinition<'pandadoc__PandaDoc_JsonBulder_Mapping__c'> {
+  Name: 'pandadoc__PandaDoc_JsonBulder_Mapping__c';
+  Fields: Fields$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+  ParentReferences: ParentReferences$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+  ChildRelationships: ChildRelationships$pandadoc__PandaDoc_JsonBulder_Mapping__c;
+}
 
 type Fields$pandadoc__Pricing_Item_Mapping__ChangeEvent = {
   //
@@ -40709,12 +41241,13 @@ type ChildRelationships$pandadoc__Pricing_Item_Mapping__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__ChangeEvent'> {
-    Name: 'pandadoc__Pricing_Item_Mapping__ChangeEvent';
-    Fields: Fields$pandadoc__Pricing_Item_Mapping__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__ChangeEvent
+  extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__ChangeEvent'> {
+  Name: 'pandadoc__Pricing_Item_Mapping__ChangeEvent';
+  Fields: Fields$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__ChangeEvent;
+}
 
 type Fields$pandadoc__Pricing_Item_Mapping__c = {
   //
@@ -40761,12 +41294,13 @@ type ChildRelationships$pandadoc__Pricing_Item_Mapping__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__c extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__c'> {
-    Name: 'pandadoc__Pricing_Item_Mapping__c';
-    Fields: Fields$pandadoc__Pricing_Item_Mapping__c;
-    ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__c;
-    ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__c;
-  }
+interface SObjectDefinition$pandadoc__Pricing_Item_Mapping__c
+  extends SObjectDefinition<'pandadoc__Pricing_Item_Mapping__c'> {
+  Name: 'pandadoc__Pricing_Item_Mapping__c';
+  Fields: Fields$pandadoc__Pricing_Item_Mapping__c;
+  ParentReferences: ParentReferences$pandadoc__Pricing_Item_Mapping__c;
+  ChildRelationships: ChildRelationships$pandadoc__Pricing_Item_Mapping__c;
+}
 
 type Fields$pandadoc__Recipient_Map__ChangeEvent = {
   //
@@ -40790,12 +41324,13 @@ type ChildRelationships$pandadoc__Recipient_Map__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent extends SObjectDefinition<'pandadoc__Recipient_Map__ChangeEvent'> {
-    Name: 'pandadoc__Recipient_Map__ChangeEvent';
-    Fields: Fields$pandadoc__Recipient_Map__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__Recipient_Map__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__Recipient_Map__ChangeEvent
+  extends SObjectDefinition<'pandadoc__Recipient_Map__ChangeEvent'> {
+  Name: 'pandadoc__Recipient_Map__ChangeEvent';
+  Fields: Fields$pandadoc__Recipient_Map__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__Recipient_Map__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__ChangeEvent;
+}
 
 type Fields$pandadoc__Recipient_Map__c = {
   //
@@ -40843,11 +41378,11 @@ type ChildRelationships$pandadoc__Recipient_Map__c = {
 };
 
 interface SObjectDefinition$pandadoc__Recipient_Map__c extends SObjectDefinition<'pandadoc__Recipient_Map__c'> {
-    Name: 'pandadoc__Recipient_Map__c';
-    Fields: Fields$pandadoc__Recipient_Map__c;
-    ParentReferences: ParentReferences$pandadoc__Recipient_Map__c;
-    ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
-  }
+  Name: 'pandadoc__Recipient_Map__c';
+  Fields: Fields$pandadoc__Recipient_Map__c;
+  ParentReferences: ParentReferences$pandadoc__Recipient_Map__c;
+  ChildRelationships: ChildRelationships$pandadoc__Recipient_Map__c;
+}
 
 type Fields$pandadoc__Settings__ChangeEvent = {
   //
@@ -40871,12 +41406,13 @@ type ChildRelationships$pandadoc__Settings__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__Settings__ChangeEvent extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
-    Name: 'pandadoc__Settings__ChangeEvent';
-    Fields: Fields$pandadoc__Settings__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__Settings__ChangeEvent
+  extends SObjectDefinition<'pandadoc__Settings__ChangeEvent'> {
+  Name: 'pandadoc__Settings__ChangeEvent';
+  Fields: Fields$pandadoc__Settings__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__Settings__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__Settings__ChangeEvent;
+}
 
 type Fields$pandadoc__Settings__c = {
   //
@@ -40921,11 +41457,11 @@ type ChildRelationships$pandadoc__Settings__c = {
 };
 
 interface SObjectDefinition$pandadoc__Settings__c extends SObjectDefinition<'pandadoc__Settings__c'> {
-    Name: 'pandadoc__Settings__c';
-    Fields: Fields$pandadoc__Settings__c;
-    ParentReferences: ParentReferences$pandadoc__Settings__c;
-    ChildRelationships: ChildRelationships$pandadoc__Settings__c;
-  }
+  Name: 'pandadoc__Settings__c';
+  Fields: Fields$pandadoc__Settings__c;
+  ParentReferences: ParentReferences$pandadoc__Settings__c;
+  ChildRelationships: ChildRelationships$pandadoc__Settings__c;
+}
 
 type Fields$pandadoc__TriggerSetting__ChangeEvent = {
   //
@@ -40953,12 +41489,13 @@ type ChildRelationships$pandadoc__TriggerSetting__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent extends SObjectDefinition<'pandadoc__TriggerSetting__ChangeEvent'> {
-    Name: 'pandadoc__TriggerSetting__ChangeEvent';
-    Fields: Fields$pandadoc__TriggerSetting__ChangeEvent;
-    ParentReferences: ParentReferences$pandadoc__TriggerSetting__ChangeEvent;
-    ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__ChangeEvent;
-  }
+interface SObjectDefinition$pandadoc__TriggerSetting__ChangeEvent
+  extends SObjectDefinition<'pandadoc__TriggerSetting__ChangeEvent'> {
+  Name: 'pandadoc__TriggerSetting__ChangeEvent';
+  Fields: Fields$pandadoc__TriggerSetting__ChangeEvent;
+  ParentReferences: ParentReferences$pandadoc__TriggerSetting__ChangeEvent;
+  ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__ChangeEvent;
+}
 
 type Fields$pandadoc__TriggerSetting__c = {
   //
@@ -41010,11 +41547,11 @@ type ChildRelationships$pandadoc__TriggerSetting__c = {
 };
 
 interface SObjectDefinition$pandadoc__TriggerSetting__c extends SObjectDefinition<'pandadoc__TriggerSetting__c'> {
-    Name: 'pandadoc__TriggerSetting__c';
-    Fields: Fields$pandadoc__TriggerSetting__c;
-    ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
-    ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
-  }
+  Name: 'pandadoc__TriggerSetting__c';
+  Fields: Fields$pandadoc__TriggerSetting__c;
+  ParentReferences: ParentReferences$pandadoc__TriggerSetting__c;
+  ChildRelationships: ChildRelationships$pandadoc__TriggerSetting__c;
+}
 
 type Fields$rcsfl__AdminSetting__ChangeEvent = {
   //
@@ -41048,12 +41585,13 @@ type ChildRelationships$rcsfl__AdminSetting__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$rcsfl__AdminSetting__ChangeEvent extends SObjectDefinition<'rcsfl__AdminSetting__ChangeEvent'> {
-    Name: 'rcsfl__AdminSetting__ChangeEvent';
-    Fields: Fields$rcsfl__AdminSetting__ChangeEvent;
-    ParentReferences: ParentReferences$rcsfl__AdminSetting__ChangeEvent;
-    ChildRelationships: ChildRelationships$rcsfl__AdminSetting__ChangeEvent;
-  }
+interface SObjectDefinition$rcsfl__AdminSetting__ChangeEvent
+  extends SObjectDefinition<'rcsfl__AdminSetting__ChangeEvent'> {
+  Name: 'rcsfl__AdminSetting__ChangeEvent';
+  Fields: Fields$rcsfl__AdminSetting__ChangeEvent;
+  ParentReferences: ParentReferences$rcsfl__AdminSetting__ChangeEvent;
+  ChildRelationships: ChildRelationships$rcsfl__AdminSetting__ChangeEvent;
+}
 
 type Fields$rcsfl__AdminSetting__c = {
   //
@@ -41108,11 +41646,11 @@ type ChildRelationships$rcsfl__AdminSetting__c = {
 };
 
 interface SObjectDefinition$rcsfl__AdminSetting__c extends SObjectDefinition<'rcsfl__AdminSetting__c'> {
-    Name: 'rcsfl__AdminSetting__c';
-    Fields: Fields$rcsfl__AdminSetting__c;
-    ParentReferences: ParentReferences$rcsfl__AdminSetting__c;
-    ChildRelationships: ChildRelationships$rcsfl__AdminSetting__c;
-  }
+  Name: 'rcsfl__AdminSetting__c';
+  Fields: Fields$rcsfl__AdminSetting__c;
+  ParentReferences: ParentReferences$rcsfl__AdminSetting__c;
+  ChildRelationships: ChildRelationships$rcsfl__AdminSetting__c;
+}
 
 type Fields$sansancard__SSCard__ChangeEvent = {
   //
@@ -41154,12 +41692,13 @@ type ChildRelationships$sansancard__SSCard__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$sansancard__SSCard__ChangeEvent extends SObjectDefinition<'sansancard__SSCard__ChangeEvent'> {
-    Name: 'sansancard__SSCard__ChangeEvent';
-    Fields: Fields$sansancard__SSCard__ChangeEvent;
-    ParentReferences: ParentReferences$sansancard__SSCard__ChangeEvent;
-    ChildRelationships: ChildRelationships$sansancard__SSCard__ChangeEvent;
-  }
+interface SObjectDefinition$sansancard__SSCard__ChangeEvent
+  extends SObjectDefinition<'sansancard__SSCard__ChangeEvent'> {
+  Name: 'sansancard__SSCard__ChangeEvent';
+  Fields: Fields$sansancard__SSCard__ChangeEvent;
+  ParentReferences: ParentReferences$sansancard__SSCard__ChangeEvent;
+  ChildRelationships: ChildRelationships$sansancard__SSCard__ChangeEvent;
+}
 
 type Fields$sansancard__SSCard__c = {
   //
@@ -41225,11 +41764,11 @@ type ChildRelationships$sansancard__SSCard__c = {
 };
 
 interface SObjectDefinition$sansancard__SSCard__c extends SObjectDefinition<'sansancard__SSCard__c'> {
-    Name: 'sansancard__SSCard__c';
-    Fields: Fields$sansancard__SSCard__c;
-    ParentReferences: ParentReferences$sansancard__SSCard__c;
-    ChildRelationships: ChildRelationships$sansancard__SSCard__c;
-  }
+  Name: 'sansancard__SSCard__c';
+  Fields: Fields$sansancard__SSCard__c;
+  ParentReferences: ParentReferences$sansancard__SSCard__c;
+  ChildRelationships: ChildRelationships$sansancard__SSCard__c;
+}
 
 type Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
   //
@@ -41267,12 +41806,13 @@ type ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__ChangeEvent'> {
-    Name: 'sansancard__ScanToSalesforce_Setting__ChangeEvent';
-    Fields: Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent;
-    ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent;
-    ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent;
-  }
+interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__ChangeEvent
+  extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__ChangeEvent'> {
+  Name: 'sansancard__ScanToSalesforce_Setting__ChangeEvent';
+  Fields: Fields$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+  ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+  ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__ChangeEvent;
+}
 
 type Fields$sansancard__ScanToSalesforce_Setting__c = {
   //
@@ -41330,12 +41870,13 @@ type ChildRelationships$sansancard__ScanToSalesforce_Setting__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__c extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__c'> {
-    Name: 'sansancard__ScanToSalesforce_Setting__c';
-    Fields: Fields$sansancard__ScanToSalesforce_Setting__c;
-    ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__c;
-    ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__c;
-  }
+interface SObjectDefinition$sansancard__ScanToSalesforce_Setting__c
+  extends SObjectDefinition<'sansancard__ScanToSalesforce_Setting__c'> {
+  Name: 'sansancard__ScanToSalesforce_Setting__c';
+  Fields: Fields$sansancard__ScanToSalesforce_Setting__c;
+  ParentReferences: ParentReferences$sansancard__ScanToSalesforce_Setting__c;
+  ChildRelationships: ChildRelationships$sansancard__ScanToSalesforce_Setting__c;
+}
 
 type Fields$sansancard__TransferMeta__ChangeEvent = {
   //
@@ -41362,12 +41903,13 @@ type ChildRelationships$sansancard__TransferMeta__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$sansancard__TransferMeta__ChangeEvent extends SObjectDefinition<'sansancard__TransferMeta__ChangeEvent'> {
-    Name: 'sansancard__TransferMeta__ChangeEvent';
-    Fields: Fields$sansancard__TransferMeta__ChangeEvent;
-    ParentReferences: ParentReferences$sansancard__TransferMeta__ChangeEvent;
-    ChildRelationships: ChildRelationships$sansancard__TransferMeta__ChangeEvent;
-  }
+interface SObjectDefinition$sansancard__TransferMeta__ChangeEvent
+  extends SObjectDefinition<'sansancard__TransferMeta__ChangeEvent'> {
+  Name: 'sansancard__TransferMeta__ChangeEvent';
+  Fields: Fields$sansancard__TransferMeta__ChangeEvent;
+  ParentReferences: ParentReferences$sansancard__TransferMeta__ChangeEvent;
+  ChildRelationships: ChildRelationships$sansancard__TransferMeta__ChangeEvent;
+}
 
 type Fields$sansancard__TransferMeta__c = {
   //
@@ -41418,11 +41960,11 @@ type ChildRelationships$sansancard__TransferMeta__c = {
 };
 
 interface SObjectDefinition$sansancard__TransferMeta__c extends SObjectDefinition<'sansancard__TransferMeta__c'> {
-    Name: 'sansancard__TransferMeta__c';
-    Fields: Fields$sansancard__TransferMeta__c;
-    ParentReferences: ParentReferences$sansancard__TransferMeta__c;
-    ChildRelationships: ChildRelationships$sansancard__TransferMeta__c;
-  }
+  Name: 'sansancard__TransferMeta__c';
+  Fields: Fields$sansancard__TransferMeta__c;
+  ParentReferences: ParentReferences$sansancard__TransferMeta__c;
+  ChildRelationships: ChildRelationships$sansancard__TransferMeta__c;
+}
 
 type Fields$vfirst__Config__ChangeEvent = {
   //
@@ -41458,11 +42000,11 @@ type ChildRelationships$vfirst__Config__ChangeEvent = {
 };
 
 interface SObjectDefinition$vfirst__Config__ChangeEvent extends SObjectDefinition<'vfirst__Config__ChangeEvent'> {
-    Name: 'vfirst__Config__ChangeEvent';
-    Fields: Fields$vfirst__Config__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Config__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Config__ChangeEvent;
-  }
+  Name: 'vfirst__Config__ChangeEvent';
+  Fields: Fields$vfirst__Config__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Config__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Config__ChangeEvent;
+}
 
 type Fields$vfirst__Config__c = {
   //
@@ -41521,11 +42063,11 @@ type ChildRelationships$vfirst__Config__c = {
 };
 
 interface SObjectDefinition$vfirst__Config__c extends SObjectDefinition<'vfirst__Config__c'> {
-    Name: 'vfirst__Config__c';
-    Fields: Fields$vfirst__Config__c;
-    ParentReferences: ParentReferences$vfirst__Config__c;
-    ChildRelationships: ChildRelationships$vfirst__Config__c;
-  }
+  Name: 'vfirst__Config__c';
+  Fields: Fields$vfirst__Config__c;
+  ParentReferences: ParentReferences$vfirst__Config__c;
+  ChildRelationships: ChildRelationships$vfirst__Config__c;
+}
 
 type Fields$vfirst__Site_Guest_Access_Helper__ChangeEvent = {
   //
@@ -41556,12 +42098,13 @@ type ChildRelationships$vfirst__Site_Guest_Access_Helper__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__ChangeEvent extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__ChangeEvent'> {
-    Name: 'vfirst__Site_Guest_Access_Helper__ChangeEvent';
-    Fields: Fields$vfirst__Site_Guest_Access_Helper__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__ChangeEvent
+  extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__ChangeEvent'> {
+  Name: 'vfirst__Site_Guest_Access_Helper__ChangeEvent';
+  Fields: Fields$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__ChangeEvent;
+}
 
 type Fields$vfirst__Site_Guest_Access_Helper__c = {
   //
@@ -41615,12 +42158,13 @@ type ChildRelationships$vfirst__Site_Guest_Access_Helper__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__c extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__c'> {
-    Name: 'vfirst__Site_Guest_Access_Helper__c';
-    Fields: Fields$vfirst__Site_Guest_Access_Helper__c;
-    ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__c;
-    ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__c;
-  }
+interface SObjectDefinition$vfirst__Site_Guest_Access_Helper__c
+  extends SObjectDefinition<'vfirst__Site_Guest_Access_Helper__c'> {
+  Name: 'vfirst__Site_Guest_Access_Helper__c';
+  Fields: Fields$vfirst__Site_Guest_Access_Helper__c;
+  ParentReferences: ParentReferences$vfirst__Site_Guest_Access_Helper__c;
+  ChildRelationships: ChildRelationships$vfirst__Site_Guest_Access_Helper__c;
+}
 
 type Fields$vfirst__Verified_First_Alias__ChangeEvent = {
   //
@@ -41647,12 +42191,13 @@ type ChildRelationships$vfirst__Verified_First_Alias__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Alias__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Alias__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Alias__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Alias__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Alias__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Alias__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Alias__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Alias__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Alias__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Alias__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Alias__c = {
   //
@@ -41702,12 +42247,13 @@ type ChildRelationships$vfirst__Verified_First_Alias__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Alias__c extends SObjectDefinition<'vfirst__Verified_First_Alias__c'> {
-    Name: 'vfirst__Verified_First_Alias__c';
-    Fields: Fields$vfirst__Verified_First_Alias__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Alias__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Alias__c
+  extends SObjectDefinition<'vfirst__Verified_First_Alias__c'> {
+  Name: 'vfirst__Verified_First_Alias__c';
+  Fields: Fields$vfirst__Verified_First_Alias__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Alias__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Alias__c;
+}
 
 type Fields$vfirst__Verified_First_Object_Address__ChangeEvent = {
   //
@@ -41737,12 +42283,13 @@ type ChildRelationships$vfirst__Verified_First_Object_Address__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Object_Address__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Object_Address__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Object_Address__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Object_Address__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Object_Address__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Object_Address__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Object_Address__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Object_Address__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Object_Address__c = {
   //
@@ -41795,12 +42342,13 @@ type ChildRelationships$vfirst__Verified_First_Object_Address__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Object_Address__c extends SObjectDefinition<'vfirst__Verified_First_Object_Address__c'> {
-    Name: 'vfirst__Verified_First_Object_Address__c';
-    Fields: Fields$vfirst__Verified_First_Object_Address__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Object_Address__c
+  extends SObjectDefinition<'vfirst__Verified_First_Object_Address__c'> {
+  Name: 'vfirst__Verified_First_Object_Address__c';
+  Fields: Fields$vfirst__Verified_First_Object_Address__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Object_Address__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Object_Address__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Field_Set__ChangeEvent = {
   //
@@ -41824,12 +42372,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field_Set__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Field_Set__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Field_Set__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Field_Set__c = {
   //
@@ -41876,12 +42425,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field_Set__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__c'> {
-    Name: 'vfirst__Verified_First_Order_Field_Set__c';
-    Fields: Fields$vfirst__Verified_First_Order_Field_Set__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Set__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Set__c'> {
+  Name: 'vfirst__Verified_First_Order_Field_Set__c';
+  Fields: Fields$vfirst__Verified_First_Order_Field_Set__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Set__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Set__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Field_Value__ChangeEvent = {
   //
@@ -41906,12 +42456,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field_Value__ChangeEvent = 
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Field_Value__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Field_Value__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Field_Value__c = {
   //
@@ -41960,12 +42511,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field_Value__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__c'> {
-    Name: 'vfirst__Verified_First_Order_Field_Value__c';
-    Fields: Fields$vfirst__Verified_First_Order_Field_Value__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field_Value__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field_Value__c'> {
+  Name: 'vfirst__Verified_First_Order_Field_Value__c';
+  Fields: Fields$vfirst__Verified_First_Order_Field_Value__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field_Value__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field_Value__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Field__ChangeEvent = {
   //
@@ -41991,12 +42543,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Field__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Field__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Field__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Field__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Field__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Field__c = {
   //
@@ -42045,12 +42598,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Field__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Field__c extends SObjectDefinition<'vfirst__Verified_First_Order_Field__c'> {
-    Name: 'vfirst__Verified_First_Order_Field__c';
-    Fields: Fields$vfirst__Verified_First_Order_Field__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Field__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Field__c'> {
+  Name: 'vfirst__Verified_First_Order_Field__c';
+  Fields: Fields$vfirst__Verified_First_Order_Field__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Field__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Field__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent = {
   //
@@ -42075,12 +42629,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEv
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Jurisdiction_Data__c = {
   //
@@ -42128,12 +42683,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__c extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__c'> {
-    Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__c';
-    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction_Data__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction_Data__c'> {
+  Name: 'vfirst__Verified_First_Order_Jurisdiction_Data__c';
+  Fields: Fields$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction_Data__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent = {
   //
@@ -42161,12 +42717,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent =
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Jurisdiction__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Jurisdiction__c = {
   //
@@ -42217,12 +42774,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__c extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__c'> {
-    Name: 'vfirst__Verified_First_Order_Jurisdiction__c';
-    Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Jurisdiction__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Jurisdiction__c'> {
+  Name: 'vfirst__Verified_First_Order_Jurisdiction__c';
+  Fields: Fields$vfirst__Verified_First_Order_Jurisdiction__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Jurisdiction__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Jurisdiction__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Product__ChangeEvent = {
   //
@@ -42246,12 +42804,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Product__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Product__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Product__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Product__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Product__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Product__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Product__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Product__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Product__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Product__c = {
   //
@@ -42298,12 +42857,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Product__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Product__c extends SObjectDefinition<'vfirst__Verified_First_Order_Product__c'> {
-    Name: 'vfirst__Verified_First_Order_Product__c';
-    Fields: Fields$vfirst__Verified_First_Order_Product__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Product__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Product__c'> {
+  Name: 'vfirst__Verified_First_Order_Product__c';
+  Fields: Fields$vfirst__Verified_First_Order_Product__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Product__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Product__c;
+}
 
 type Fields$vfirst__Verified_First_Order_Status__ChangeEvent = {
   //
@@ -42329,12 +42889,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Status__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Status__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_Status__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_Status__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_Status__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Status__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Status__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_Status__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_Status__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_Status__c = {
   //
@@ -42383,12 +42944,13 @@ type ChildRelationships$vfirst__Verified_First_Order_Status__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_Status__c extends SObjectDefinition<'vfirst__Verified_First_Order_Status__c'> {
-    Name: 'vfirst__Verified_First_Order_Status__c';
-    Fields: Fields$vfirst__Verified_First_Order_Status__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_Status__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_Status__c'> {
+  Name: 'vfirst__Verified_First_Order_Status__c';
+  Fields: Fields$vfirst__Verified_First_Order_Status__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_Status__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_Status__c;
+}
 
 type Fields$vfirst__Verified_First_Order_XML_Block__ChangeEvent = {
   //
@@ -42412,12 +42974,13 @@ type ChildRelationships$vfirst__Verified_First_Order_XML_Block__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Order_XML_Block__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Order_XML_Block__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Order_XML_Block__c = {
   //
@@ -42464,12 +43027,13 @@ type ChildRelationships$vfirst__Verified_First_Order_XML_Block__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__c extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__c'> {
-    Name: 'vfirst__Verified_First_Order_XML_Block__c';
-    Fields: Fields$vfirst__Verified_First_Order_XML_Block__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Order_XML_Block__c
+  extends SObjectDefinition<'vfirst__Verified_First_Order_XML_Block__c'> {
+  Name: 'vfirst__Verified_First_Order_XML_Block__c';
+  Fields: Fields$vfirst__Verified_First_Order_XML_Block__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Order_XML_Block__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Order_XML_Block__c;
+}
 
 type Fields$vfirst__Verified_First_Package__ChangeEvent = {
   //
@@ -42494,12 +43058,13 @@ type ChildRelationships$vfirst__Verified_First_Package__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Package__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Package__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Package__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Package__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Package__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Package__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Package__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Package__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Package__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Package__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Package__c = {
   //
@@ -42547,12 +43112,13 @@ type ChildRelationships$vfirst__Verified_First_Package__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Package__c extends SObjectDefinition<'vfirst__Verified_First_Package__c'> {
-    Name: 'vfirst__Verified_First_Package__c';
-    Fields: Fields$vfirst__Verified_First_Package__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Package__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Package__c
+  extends SObjectDefinition<'vfirst__Verified_First_Package__c'> {
+  Name: 'vfirst__Verified_First_Package__c';
+  Fields: Fields$vfirst__Verified_First_Package__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Package__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Package__c;
+}
 
 type Fields$vfirst__Verified_First_Report__ChangeEvent = {
   //
@@ -42627,12 +43193,13 @@ type ChildRelationships$vfirst__Verified_First_Report__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Report__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Report__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Report__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Report__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Report__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Report__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Report__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Report__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Report__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Report__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Report__c = {
   //
@@ -42738,12 +43305,13 @@ type ChildRelationships$vfirst__Verified_First_Report__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Report__c extends SObjectDefinition<'vfirst__Verified_First_Report__c'> {
-    Name: 'vfirst__Verified_First_Report__c';
-    Fields: Fields$vfirst__Verified_First_Report__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Report__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__c;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Report__c
+  extends SObjectDefinition<'vfirst__Verified_First_Report__c'> {
+  Name: 'vfirst__Verified_First_Report__c';
+  Fields: Fields$vfirst__Verified_First_Report__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Report__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Report__c;
+}
 
 type Fields$vfirst__Verified_First_Subscriber__ChangeEvent = {
   //
@@ -42767,12 +43335,13 @@ type ChildRelationships$vfirst__Verified_First_Subscriber__ChangeEvent = {
   //
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Subscriber__ChangeEvent extends SObjectDefinition<'vfirst__Verified_First_Subscriber__ChangeEvent'> {
-    Name: 'vfirst__Verified_First_Subscriber__ChangeEvent';
-    Fields: Fields$vfirst__Verified_First_Subscriber__ChangeEvent;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__ChangeEvent;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__ChangeEvent;
-  }
+interface SObjectDefinition$vfirst__Verified_First_Subscriber__ChangeEvent
+  extends SObjectDefinition<'vfirst__Verified_First_Subscriber__ChangeEvent'> {
+  Name: 'vfirst__Verified_First_Subscriber__ChangeEvent';
+  Fields: Fields$vfirst__Verified_First_Subscriber__ChangeEvent;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__ChangeEvent;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__ChangeEvent;
+}
 
 type Fields$vfirst__Verified_First_Subscriber__c = {
   //
@@ -42819,13 +43388,13 @@ type ChildRelationships$vfirst__Verified_First_Subscriber__c = {
   TopicAssignments: SObjectDefinition$TopicAssignment;
 };
 
-interface SObjectDefinition$vfirst__Verified_First_Subscriber__c extends SObjectDefinition<'vfirst__Verified_First_Subscriber__c'> {
-    Name: 'vfirst__Verified_First_Subscriber__c';
-    Fields: Fields$vfirst__Verified_First_Subscriber__c;
-    ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__c;
-    ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__c;
-  }
-
+interface SObjectDefinition$vfirst__Verified_First_Subscriber__c
+  extends SObjectDefinition<'vfirst__Verified_First_Subscriber__c'> {
+  Name: 'vfirst__Verified_First_Subscriber__c';
+  Fields: Fields$vfirst__Verified_First_Subscriber__c;
+  ParentReferences: ParentReferences$vfirst__Verified_First_Subscriber__c;
+  ChildRelationships: ChildRelationships$vfirst__Verified_First_Subscriber__c;
+}
 
 export interface SmoothstackSchema extends Schema {
   SObjects: {
@@ -42851,6 +43420,8 @@ export interface SmoothstackSchema extends Schema {
     ActivityMetric: SObjectDefinition$ActivityMetric;
     ActivityMetricRollup: SObjectDefinition$ActivityMetricRollup;
     AdditionalNumber: SObjectDefinition$AdditionalNumber;
+    Address_Autocomplete__ChangeEvent: SObjectDefinition$Address_Autocomplete__ChangeEvent;
+    Address_Autocomplete__c: SObjectDefinition$Address_Autocomplete__c;
     AggregateResult: SObjectDefinition$AggregateResult;
     Announcement: SObjectDefinition$Announcement;
     Anticipated_Revenue__ChangeEvent: SObjectDefinition$Anticipated_Revenue__ChangeEvent;
@@ -43386,6 +43957,7 @@ export interface SmoothstackSchema extends Schema {
     OperatingHoursFeed: SObjectDefinition$OperatingHoursFeed;
     OperatingHoursHoliday: SObjectDefinition$OperatingHoursHoliday;
     OperatingHoursHolidayFeed: SObjectDefinition$OperatingHoursHolidayFeed;
+    OperatingHoursShare: SObjectDefinition$OperatingHoursShare;
     Opportunity: SObjectDefinition$Opportunity;
     OpportunityChangeEvent: SObjectDefinition$OpportunityChangeEvent;
     OpportunityCompetitor: SObjectDefinition$OpportunityCompetitor;
@@ -43423,6 +43995,7 @@ export interface SmoothstackSchema extends Schema {
     PTO_Carryover__ChangeEvent: SObjectDefinition$PTO_Carryover__ChangeEvent;
     PTO_Carryover__c: SObjectDefinition$PTO_Carryover__c;
     PTO_Request__ChangeEvent: SObjectDefinition$PTO_Request__ChangeEvent;
+    PTO_Request__History: SObjectDefinition$PTO_Request__History;
     PTO_Request__c: SObjectDefinition$PTO_Request__c;
     PackageLicense: SObjectDefinition$PackageLicense;
     Partner: SObjectDefinition$Partner;
