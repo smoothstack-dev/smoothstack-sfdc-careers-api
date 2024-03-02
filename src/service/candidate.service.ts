@@ -37,7 +37,7 @@ export const createCandidate = async (
     MailingPostalCode: candidateFields.zip,
     Potential_Smoothstack_Email__c: derivePotentialEmail(candidateFields.firstName, candidateFields.lastName),
     Military_Status__c: candidateFields.militaryStatus,
-    ...(candidateFields.militaryBranch && { Military_Branch__c: candidateFields.militaryBranch }),
+    ...(candidateFields.militaryBranch && { Military_Service_Type__c: candidateFields.militaryBranch }),
     Race__c: candidateFields.race,
     GenderIdentity: candidateFields.gender,
     Disability__c: candidateFields.disability,
