@@ -46,7 +46,8 @@ export const createCandidate = async (
 
   const candidateRes = existingId
     ? await conn.update('Contact', { Id: existingId, ...candidateRecord })
-    : await conn.insert('Contact', candidateRecord);
+    : await conn.insert('Contact', candidateRecord, { headers: { 'Sforce-Duplicate-Rule-Header': 'allowSave=true' } });
+
   return candidateRes.id;
 };
 
