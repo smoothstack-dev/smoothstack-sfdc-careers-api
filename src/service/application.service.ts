@@ -47,7 +47,7 @@ export const createApplication = async (
     ...(applicationFields.utmTerm && { UTM_Term__c: applicationFields.utmTerm }),
     Work_Authorization__c: applicationFields.workAuthorization,
     Willing_to_Relocate__c: applicationFields.relocation,
-    Coding_Self_Rank__c: +applicationFields.codingAbility,
+    Coding_Self_Rank__c: applicationFields.selfRank,
     Years_of_Experience_Self_Disclosed__c: applicationFields.yearsOfExperience,
     ...(applicationFields.graduationDate && {
       Graduation_Date__c: new Date(applicationFields.graduationDate).toISOString().split('T')[0] as DateString,

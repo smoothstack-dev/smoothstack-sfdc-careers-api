@@ -4,7 +4,7 @@ import { Knockout, KNOCKOUT_NOTE, KNOCKOUT_STATUS } from '../model/Knockout';
 import { toTitleCase } from '../util/misc.util';
 import { resolveJobByKnockout } from '../util/job.util';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
-import { findActiveKOJobs } from './jobs.service';
+import { fetchJob, findActiveKOJobs } from './jobs.service';
 import { calculateKnockout } from '../util/knockout.util';
 import { createApplication } from './application.service';
 import { getSchedulingLink } from '../util/links';
@@ -15,10 +15,12 @@ import { publishDataGenerationRequest } from './sns.service';
 import { findContactByEmailOrPhone } from './contact.service';
 import { saveSFDCFiles } from './files.service';
 import { CandidateFields } from '../model/Candidate';
+import { Fields$Job__c } from '../model/smoothstack.schema';
 
 export const apply = async (event: APIGatewayProxyEvent) => {
   console.log('Received Candidate Application Request: ', event.queryStringParameters);
   const {
+    jobId,
     firstName,
     lastName,
     nickName,
@@ -61,9 +63,10 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     techSelection,
     hardwareDesign,
     hardwareSkills,
+    mechanicalAbility,
+    physicalRequirements,
   } = extraFields;
 
-  const activeJobs = await findActiveKOJobs(conn);
   const knockoutFields = {
     workAuthorization,
     relocation,
@@ -71,25 +74,32 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     yearsOfExperience,
     educationDegree,
     degreeExpected,
-    codingAbility: +codingAbility,
+    selfRank: +(codingAbility ?? mechanicalAbility),
     techSelection,
     hardwareDesign,
     hardwareSkills,
     existingApplications,
+    // technician job
+    physicalRequirements,
   };
 
-  const job = resolveJobByKnockout(knockoutFields, activeJobs);
-  const knockout = calculateKnockout(
-    {
-      requiredWorkAuthorization: job.Allowable_Work_Authorization__c.split(';'),
-      jobLocation: job.Job_Location__c,
-      maxMonthsToGraduation: job.Max_Months_to_Graduation__c,
-      minYearsOfExperience: job.Min_Years_of_Coding_Experience__c,
-      minRequiredDegree: job.Min_Degree_Required__c,
-      minSelfRank: +job.Min_Coding_Self_Rank__c,
-    },
-    knockoutFields
-  );
+  let job: Fields$Job__c;
+
+  if (+jobId === 1) {
+    const activeJobs = await findActiveKOJobs(conn);
+    job = resolveJobByKnockout(knockoutFields, activeJobs);
+  } else {
+    job = await fetchJob(conn, 58);
+  }
+  const knockoutReqs = {
+    requiredWorkAuthorization: job.Allowable_Work_Authorization__c.split(';'),
+    jobLocation: job.Job_Location__c,
+    maxMonthsToGraduation: job.Max_Months_to_Graduation__c,
+    minYearsOfExperience: job.Min_Years_of_Coding_Experience__c,
+    minRequiredDegree: job.Min_Degree_Required__c,
+    minSelfRank: +job.Min_Coding_Self_Rank__c,
+  };
+  const knockout = calculateKnockout(knockoutReqs, knockoutFields);
 
   const candidateFields: CandidateFields = {
     firstName: formattedFirstName,
@@ -116,6 +126,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
     ...(utmCampaign && { utmCampaign }),
     ...(utmTerm && { utmTerm }),
     ...extraFields,
+    selfRank: +(codingAbility ?? mechanicalAbility),
   } as any;
 
   const { applicationId, candidateId } = await createApplication(

@@ -21,5 +21,5 @@ export interface CandidateFields {
   gender: string;
   disability: string;
   militaryStatus: string;
-  militaryBranch: string;
+  militaryBranch?: string;
 }

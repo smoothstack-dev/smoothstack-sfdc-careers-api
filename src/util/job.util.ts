@@ -18,7 +18,7 @@ export const resolveJobByKnockout = (knockout: KnockoutFields, activeJobs: Field
     yearsOfExperience,
     educationDegree,
     degreeExpected,
-    codingAbility,
+    selfRank,
     techSelection,
     hardwareDesign,
     hardwareSkills,
@@ -71,7 +71,7 @@ export const resolveJobByKnockout = (knockout: KnockoutFields, activeJobs: Field
         pointMap[j.Job_ID__c].extraPoints++;
       }
     }
-    if (codingAbility >= +Min_Coding_Self_Rank__c) {
+    if (selfRank >= +Min_Coding_Self_Rank__c) {
       pointMap[j.Job_ID__c].basePoints++;
     }
     if (JOB_BATCHTYPE_MAPPING[techSelection].includes(j.Cohort_Category__c)) {

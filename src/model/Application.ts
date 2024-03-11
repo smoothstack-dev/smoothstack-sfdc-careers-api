@@ -15,19 +15,18 @@ export interface ApplicationFields {
   utmTerm?: string;
   workAuthorization: string;
   relocation: string;
-  codingAbility: string;
+  selfRank: number;
   currentlyStudent: string;
-  yearsOfExperience: string;
-  militaryStatus: string;
+  yearsOfExperience?: string;
   name?: string;
   graduationDate?: string;
   degreeExpected?: string;
   highestDegree?: string;
-  militaryBranch?: string;
   major?: string;
-  techSelection: string;
+  techSelection?: string;
   hardwareDesign?: string;
   hardwareSkills?: string;
   instagram?: string;
   linkedin?: string;
+  physicalRequirements?: string;
 }

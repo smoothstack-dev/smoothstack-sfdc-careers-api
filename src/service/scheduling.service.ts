@@ -32,6 +32,9 @@ export const processSchedulingEvent = async (event: SchedulingEvent) => {
     case SchedulingTypeId.WEBINAR:
       await processWebinarScheduling(event);
       break;
+    case SchedulingTypeId.TECHNICIAN_WEBINAR:
+      await processWebinarScheduling(event);
+      break;
     case SchedulingTypeId.TECHSCREEN:
       await processTechScreenScheduling(event);
       break;

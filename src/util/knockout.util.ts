@@ -17,8 +17,9 @@ export const calculateKnockout = (knockoutReqs: KnockoutRequirements, fields: Kn
     yearsOfExperience,
     educationDegree,
     degreeExpected,
-    codingAbility,
+    selfRank,
     existingApplications,
+    physicalRequirements,
   } = fields;
   const monthsToGraduation = graduationDate ? calculateMonthsToGrad(new Date(graduationDate)) : 0;
   if (hasRecentApplication(existingApplications)) {
@@ -39,8 +40,11 @@ export const calculateKnockout = (knockoutReqs: KnockoutRequirements, fields: Kn
   if (!hasMinDegree(minRequiredDegree, educationDegree ?? degreeExpected)) {
     return Knockout.DEGREE;
   }
-  if (codingAbility < minSelfRank) {
+  if (selfRank < minSelfRank) {
     return Knockout.SELF_RANK;
+  }
+  if (physicalRequirements === 'No') {
+    return Knockout.PHYSICAL_REQS;
   }
   return Knockout.PASS;
 };

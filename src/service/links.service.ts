@@ -14,15 +14,14 @@ import { publishDataGenerationRequest } from './sns.service';
 
 export const generateInitialLinks = async (conn: Connection<SmoothstackSchema>, applicationId: string) => {
   const application = await fetchApplication(conn, applicationId);
-  const { Candidate__r } = application as any;
+  const { Candidate__r, Job__r } = application;
   const { Calendar_ID__c } = await findHTDAssignmentGroupMemberByUserId(conn, Candidate__r.Owner.Id);
-
   const webinarSchedulingLink = getSchedulingLink(
     Candidate__r.FirstName,
     Candidate__r.LastName,
     Candidate__r.Email,
     Candidate__r.MobilePhone,
-    SchedulingTypeId.WEBINAR,
+    Job__r.Cohort_Category__c === 'Technician' ? SchedulingTypeId.TECHNICIAN_WEBINAR : SchedulingTypeId.WEBINAR,
     application.Id
   );
 
@@ -118,13 +117,8 @@ export const generateTechScreenLinks = async (conn: Connection<SmoothstackSchema
 
   if (!Tech_Screen_Scheduling_Link__c) {
     const { Applications__r } = await fetchCandidate(conn, Candidate__r.Id);
-    const {
-      techScreenSchedulingLink,
-      techScreenResult,
-      techScreenDate,
-      screenerDetermination,
-      applicationStatus,
-    } = getTechScreenLinksData(Applications__r.records, application);
+    const { techScreenSchedulingLink, techScreenResult, techScreenDate, screenerDetermination, applicationStatus } =
+      getTechScreenLinksData(Applications__r.records, application);
 
     const updateData: Partial<Application> = {
       Tech_Screen_Scheduling_Link__c: techScreenSchedulingLink,
