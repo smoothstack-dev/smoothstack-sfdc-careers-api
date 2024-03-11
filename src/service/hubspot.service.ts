@@ -57,6 +57,7 @@ const prepTextMessage = (msg: string, application: Application) => {
     '%CHALLENGE_DATE%': application.Challenge_Date_Time__c,
     '%WEBINAR_SCHEDULING_LINK%': application.Webinar_Scheduling_Link__c,
     '%PRESCREEN_SCHEDULING_LINK%': application.Prescreen_Scheduling_Link__c,
+    '%CHALLENGE_TYPE%': application.Job__r.Cohort_Category__c === 'Technician' ? 'skills' : 'coding',
   };
 
   return Object.keys(vars).reduce((acc, v) => {
