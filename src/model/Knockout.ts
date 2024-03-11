@@ -10,17 +10,21 @@ export interface KnockoutRequirements {
 }
 
 export interface KnockoutFields {
+  // baseFields
   workAuthorization: string;
   relocation: string;
-  yearsOfExperience: string;
   graduationDate?: string;
   educationDegree?: string;
   degreeExpected?: string;
-  codingAbility: number;
+  existingApplications: Application[];
+  selfRank: number;
+  // coding job
+  yearsOfExperience?: string;
   techSelection?: string;
   hardwareDesign?: string;
   hardwareSkills?: string;
-  existingApplications: Application[];
+  // tehnician job
+  physicalRequirements?: string;
 }
 
 export enum Knockout {
@@ -32,6 +36,8 @@ export enum Knockout {
   DEGREE = 'DEGREE',
   SELF_RANK = 'SELF_RANK',
   RECENTLY_APPLIED = 'RECENTLY_APPLIED',
+  // technician job
+  PHYSICAL_REQS = 'PHYSICAL_REQS',
 }
 
 export const KNOCKOUT_STATUS = {
@@ -43,6 +49,7 @@ export const KNOCKOUT_STATUS = {
   [Knockout.DEGREE]: { applicationStatus: 'R-Education', candidateStatus: 'Rejected' },
   [Knockout.SELF_RANK]: { applicationStatus: 'R-Self Rank', candidateStatus: 'Rejected' },
   [Knockout.RECENTLY_APPLIED]: { applicationStatus: 'R-Recently Applied', candidateStatus: null },
+  [Knockout.PHYSICAL_REQS]: { applicationStatus: 'R-Physical Requirements', candidateStatus: 'Rejected' },
 };
 
 export const KNOCKOUT_NOTE = {
@@ -53,6 +60,7 @@ export const KNOCKOUT_NOTE = {
     'Candidate Snoozed as they are currently in school and not graduating within a reasonable timeframe.',
   [Knockout.YEARS_OF_EXP]: 'Candidate rejected for years of experience. Potentially eligible for another role.',
   [Knockout.DEGREE]: 'Candidate rejected for education. Potentially eligible for another role.',
-  [Knockout.SELF_RANK]: 'Candidate rejected for coding self rank ability.',
+  [Knockout.SELF_RANK]: 'Candidate rejected for technical self ranking.',
   [Knockout.RECENTLY_APPLIED]: 'Candidate rejected because they have another application within the last 60 days',
+  [Knockout.PHYSICAL_REQS]: 'Candidate rejected for not meeting physical requirements for job',
 };

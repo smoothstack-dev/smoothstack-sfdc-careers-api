@@ -16,6 +16,7 @@ export const calculateMonthsToGrad = (graduationDate: Date): number => {
 
 export const hasMinYearsOfExperience = (minYears: string, years: string) => {
   const EXP_MAP = {
+    undefined: 0,
     'Not Specified': 0,
     '0-1': 0,
     '1-2': 1,

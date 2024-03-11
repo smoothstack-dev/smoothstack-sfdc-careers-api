@@ -7,7 +7,7 @@ import {
   ChallengeAppointmentData,
   TechScreenAppointmentData,
 } from '../model/AppointmentGenerationRequest';
-import { WEBINAR_TOPIC, WEBINAR_TYPE } from './webinar.service';
+import { WEBINAR_TOPIC_MAP, WEBINAR_TYPE } from './webinar.service';
 import { WebinarEvent } from '../model/Webinar';
 import { DocGenerationMsg, DocumentEvent } from '../model/Document';
 import { DataGenerationRequest, GenerationType } from '../model/ApplicationData';
@@ -15,7 +15,6 @@ import { ConsultantGenerationRequest } from '../model/Consultant';
 import { MSUser } from '../model/MSUser';
 import { CohortUserGenerationRequest } from '../model/Cohort';
 import { JobEventProcessingRequest } from '../model/Job';
-import { OfferParams } from '../model/Offer';
 
 export const publishDataGenerationRequest = async (applicationId: string, type: GenerationType) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
@@ -54,7 +53,7 @@ export const publishWebinarProcessingRequest = async (data: any) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
   const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-webinar-processing-sns-topic-v2`;
   const { id, uuid, type, topic } = data.payload.object;
-  if (topic === WEBINAR_TOPIC && type === WEBINAR_TYPE) {
+  if (Object.values(WEBINAR_TOPIC_MAP).includes(topic) && type === WEBINAR_TYPE) {
     const request: WebinarEvent = {
       event: data.event,
       webinar: {

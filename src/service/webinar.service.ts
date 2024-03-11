@@ -7,15 +7,19 @@ import { getSFDCConnection } from './auth/sfdc.auth.service';
 import { updateApplication } from './application.service';
 import { createHmac } from 'crypto';
 import { getZoomSecrets } from './secrets.service';
+import { SchedulingTypeId } from '../model/SchedulingType';
 
-export const WEBINAR_TOPIC = 'Candidate Information Session / Learn about Smoothstack';
+export const WEBINAR_TOPIC_MAP = {
+  [SchedulingTypeId.WEBINAR]: 'Candidate Information Session / Learn about Smoothstack',
+  [SchedulingTypeId.TECHNICIAN_WEBINAR]: 'Technician Information Session / Learn about Smoothstack',
+};
 
 export const WEBINAR_TYPE = 9;
 const BASE_URL = 'https://api.zoom.us/v2';
 
 export const generateWebinarRegistration = async (appointment: Appointment): Promise<WebinarRegistration> => {
   const token = await generateZoomToken();
-  const webinarId = await findWebinarId(token, appointment.datetime);
+  const webinarId = await findWebinarId(token, appointment.datetime, WEBINAR_TOPIC_MAP[appointment.appointmentTypeID]);
   const occurrenceId = await findWebinarOccurrenceId(token, webinarId, appointment.datetime);
   return registerCandidate(token, webinarId, occurrenceId, appointment);
 };
@@ -32,21 +36,7 @@ export const cancelWebinarRegistration = async (registration: WebinarRegistratio
   });
 };
 
-export const getWebinarRegistrationURL = async () => {
-  const token = await generateZoomToken();
-  const webinarId = await findWebinarId(token, new Date().toISOString());
-
-  const url = `${BASE_URL}/webinars/${webinarId}`;
-  const { data } = await axios.get(url, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
-
-  return data.registration_url;
-};
-
-const findWebinarId = async (token: string, date: string): Promise<string> => {
+const findWebinarId = async (token: string, date: string, webinarTopic: string): Promise<string> => {
   const url = `${BASE_URL}/users/OxHMtzLCQ7yQtd3RjNJfXw/webinars`;
 
   const { data } = await axios.get(url, {
@@ -66,7 +56,7 @@ const findWebinarId = async (token: string, date: string): Promise<string> => {
     })
     .find((w: any) => {
       const lastOccurrenceDate = new Date(w.start_time).toISOString();
-      return w.type === WEBINAR_TYPE && w.topic === WEBINAR_TOPIC && appointmentDate <= lastOccurrenceDate;
+      return w.type === WEBINAR_TYPE && w.topic === webinarTopic && appointmentDate <= lastOccurrenceDate;
     });
 
   return webinar.id;
