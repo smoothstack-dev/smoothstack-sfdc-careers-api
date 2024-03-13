@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { Fields$Contact } from '../model/smoothstack.schema';
 import { Appointment } from '../model/Appointment';
 import { Application } from '../model/Application';
 import { getMSAuthData } from './auth/microsoft.oauth.service';
@@ -13,16 +12,22 @@ const getBaseURLbySender = (senderEmail: string) => {
 };
 
 export const sendChallengeCalendarInvite = async (
-  candidate: Fields$Contact,
+  application: Application,
   challengeLink: string,
   appointment: Appointment
 ): Promise<string> => {
   const { token } = await getMSAuthData();
+  const candidate = application.Candidate__r;
   const event = {
     subject: `Smoothstack Coding Challenge - ${candidate.FirstName} ${candidate.LastName}`,
     body: {
       contentType: 'HTML',
-      content: generateChallengeDescription(candidate.FirstName, challengeLink, appointment.confirmationPage),
+      content: generateChallengeDescription(
+        candidate.FirstName,
+        challengeLink,
+        appointment.confirmationPage,
+        application.Job__r.Cohort_Category__c
+      ),
     },
     start: {
       dateTime: appointment.datetime,
@@ -169,6 +174,15 @@ export const cancelCalendarInvite = async (eventId: string, senderEmail?: string
     ));
 };
 
-const generateChallengeDescription = (firstName: string, challengeLink: string, confirmationLink: string) => {
-  return `Hi ${firstName}, your Smoothstack Coding Challenge appointment has been successfully scheduled.<br/><br/><a href="${challengeLink}">Coding Challenge Link</a><br/><br/><a href="${confirmationLink}">Click here</a> to reschedule/cancel your appointment.<br/><br/><p><u><strong><span style="font-size:16px;">8 Tips for successfully completing the Coding Challenge:</span></strong></u></p><p><span class="c-mrkdwn__br"></span>1. Read deliverables carefully! This will help ensure that your solution(s) reflect all requirements of the challenge.</p><p><span class="c-mrkdwn__br"></span>2. Set aside 2-3 hours of uninterrupted time to take the coding challenge.</p><p><span class="c-mrkdwn__br"></span>3. Choose a quiet space, without distractions.</p><p><span class="c-mrkdwn__br"></span>4. Double check your work, before submitting!</p><p><span class="c-mrkdwn__br"></span>5. Don't study! This is not a traditional test that can be studied for...the purpose of this test is to assess your basic scripting/coding knowledge.</p><p><span class="c-mrkdwn__br"></span>6. Write comments in your code to show your thought process (if you have extra time). This will allow us to review your code with a subjective lens in the event that you do not successfully pass the challenge.</p><p><span class="c-mrkdwn__br"></span>7. Don't cheat! Above all, Smoothstack values integrity. As such, we have controls in place to identify plagiarism and dishonesty.</p><p><span class="c-mrkdwn__br"></span>8. Read through the FAQ's in the link below. <span class="c-mrkdwn__br"></span><a target="_blank" href="https://support.hackerrank.com/hc/en-us/sections/115001822568-Frequently-Asked-Questions-FAQs-" style="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;" rel="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;">FAQ/DEMO</a></p><p><a target="_blank" href="https://support.hackerrank.com/hc/en-us/sections/115001822568-Frequently-Asked-Questions-FAQs-" style="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;" rel="noreferrer noopener"></a>Happy Coding!</p>`;
+const generateChallengeDescription = (
+  firstName: string,
+  challengeLink: string,
+  confirmationLink: string,
+  cohortType: string
+) => {
+  const challengeType = cohortType === 'Technician' ? 'Skills' : 'Coding';
+  const tipsBlock = `<br/><br/><p><u><strong><span style="font-size:16px;">8 Tips for successfully completing the Coding Challenge:</span></strong></u></p><p><span class="c-mrkdwn__br"></span>1. Read deliverables carefully! This will help ensure that your solution(s) reflect all requirements of the challenge.</p><p><span class="c-mrkdwn__br"></span>2. Set aside 2-3 hours of uninterrupted time to take the coding challenge.</p><p><span class="c-mrkdwn__br"></span>3. Choose a quiet space, without distractions.</p><p><span class="c-mrkdwn__br"></span>4. Double check your work, before submitting!</p><p><span class="c-mrkdwn__br"></span>5. Don't study! This is not a traditional test that can be studied for...the purpose of this test is to assess your basic scripting/coding knowledge.</p><p><span class="c-mrkdwn__br"></span>6. Write comments in your code to show your thought process (if you have extra time). This will allow us to review your code with a subjective lens in the event that you do not successfully pass the challenge.</p><p><span class="c-mrkdwn__br"></span>7. Don't cheat! Above all, Smoothstack values integrity. As such, we have controls in place to identify plagiarism and dishonesty.</p><p><span class="c-mrkdwn__br"></span>8. Read through the FAQ's in the link below. <span class="c-mrkdwn__br"></span><a target="_blank" href="https://support.hackerrank.com/hc/en-us/sections/115001822568-Frequently-Asked-Questions-FAQs-" style="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;" rel="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;">FAQ/DEMO</a></p><p><a target="_blank" href="https://support.hackerrank.com/hc/en-us/sections/115001822568-Frequently-Asked-Questions-FAQs-" style="background-color:rgb(248,248,248);text-decoration:none;font-family:'Slack-Lato', appleLogo, sans-serif;font-size:15px;" rel="noreferrer noopener"></a>Happy Coding!</p>`;
+  return `Hi ${firstName}, your Smoothstack ${challengeType} Challenge appointment has been successfully scheduled.<br/><br/><a href="${challengeLink}">${challengeType} Challenge Link</a><br/><br/><a href="${confirmationLink}">Click here</a> to reschedule/cancel your appointment.${
+    challengeType === 'Skills' ? '' : tipsBlock
+  }`;
 };
