@@ -27,10 +27,10 @@ export const generateAppointment = async (event: SNSEvent) => {
 
 const generateChallengeAppointment = async (appointmentData: ChallengeAppointmentData) => {
   const conn = await getSFDCConnection();
-  const candidate = appointmentData.application.Candidate__r;
+  const application = appointmentData.application;
   const challengeLink = await generateChallengeLinks(conn, appointmentData.application.Id);
   if (challengeLink) {
-    const eventId = await sendChallengeCalendarInvite(candidate, challengeLink, appointmentData.appointment);
+    const eventId = await sendChallengeCalendarInvite(application, challengeLink, appointmentData.appointment);
     await updateApplication(
       conn,
       { id: appointmentData.application.Id },
