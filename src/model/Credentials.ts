@@ -32,6 +32,7 @@ export interface HackerRankCredentials {
 
 export interface PandaDocCredentials {
   API_KEY: string;
+  SA_API_KEY: string;
 }
 
 export interface HubspotCredentials {
