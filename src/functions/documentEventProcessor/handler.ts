@@ -8,6 +8,8 @@ import { DateString } from 'jsforce';
 import { saveSFDCFiles } from '../../service/files.service';
 import { HttpFile } from 'pandadoc-node-client';
 import { publishMSUserGenerationRequest } from '../../service/sns.service';
+import { sendSADocument } from '../../service/document.sa.service';
+import { updateSAApplication } from '../../service/application.sa.service';
 
 const documentEventProcessor = async (event: SNSEvent) => {
   try {
@@ -31,20 +33,34 @@ const documentEventProcessor = async (event: SNSEvent) => {
               });
               await updateConsultantData(docEvent.data.metadata.consultantId, 'SENT');
               break;
+            case 'RTR':
+              await sendSADocument(docEvent.data.id, {
+                subject: 'Smoothstack Right to Represent',
+                message: 'See attached RTR Document from Smoothstack.',
+              });
+              await updateSAApplicationData(docEvent.data.metadata.applicationId, 'SENT');
+              break;
           }
         }
         break;
       case 'recipient_completed':
         switch (docEvent.data.metadata.type) {
-          case 'QUICK_COURSE':
+          case 'QUICK_COURSE': {
             const docFile = await downloadSignedDocument(docEvent.data.id);
             await updateApplicationData(docEvent.data.metadata.applicationId, 'SIGNED', docFile);
             break;
-          case 'OFFER_LETTER':
+          }
+          case 'OFFER_LETTER': {
             if (docEvent.data.action_by.email !== 'hr@smoothstack.com') {
               await updateConsultantData(docEvent.data.metadata.consultantId, 'SIGNED');
             }
             break;
+          }
+          case 'RTR': {
+            const docFile = await downloadSignedDocument(docEvent.data.id);
+            await updateSAApplicationData(docEvent.data.metadata.applicationId, 'SIGNED', docFile);
+            break;
+          }
         }
         break;
     }
@@ -84,6 +100,41 @@ const updateApplicationData = async (applicationId: string, eventType: 'SENT' | 
         },
       ]);
       await publishMSUserGenerationRequest(applicationId);
+      break;
+  }
+};
+
+const updateSAApplicationData = async (applicationId: string, eventType: 'SENT' | 'SIGNED', docFile?: HttpFile) => {
+  const conn = await getSFDCConnection();
+  switch (eventType) {
+    case 'SENT':
+      await updateSAApplication(
+        conn,
+        { id: applicationId },
+        {
+          RTR_Status__c: 'Sent',
+          RTR_Sent__c: new Date().toISOString() as DateString,
+        }
+      );
+      break;
+    case 'SIGNED':
+      await updateSAApplication(
+        conn,
+        { id: applicationId },
+        {
+          Status__c: 'RTR Signed',
+          RTR_Status__c: 'Signed',
+          RTR_Signed__c: new Date().toISOString() as DateString,
+        }
+      );
+      await saveSFDCFiles(conn, applicationId, [
+        {
+          type: 'RTR',
+          contentType: 'application/pdf',
+          fileContent: docFile.data.toString('base64'),
+          name: 'Signed_RTR.pdf',
+        },
+      ]);
       break;
   }
 };

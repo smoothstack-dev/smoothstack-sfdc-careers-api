@@ -25,14 +25,19 @@ const documentEvents = async (event: APIGatewayEvent) => {
         switch (event.httpMethod) {
           case 'POST': {
             const body = event.body as any;
-            if (body?.applicationId) {
-              await publishDocumentGenerationRequest({
-                type: 'QUICK_COURSE',
-                params: { applicationId: body.applicationId },
-              });
-            } else {
+            if (!body?.applicationId) {
               throw createHttpError(400, 'applicationId missing in request body.');
             }
+            const docType = body?.docType ?? 'QUICK_COURSE';
+            if (!['QUICK_COURSE', 'RTR'].includes(docType)) {
+              throw createHttpError(400, 'Invalid docType param in request body. Must be one of -> QUICK_COURSE, RTR');
+            }
+
+            await publishDocumentGenerationRequest({
+              type: docType,
+              params: { applicationId: body.applicationId },
+            });
+
             break;
           }
         }

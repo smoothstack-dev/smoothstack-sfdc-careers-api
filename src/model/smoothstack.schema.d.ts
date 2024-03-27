@@ -7336,6 +7336,11 @@ type Fields$Commission_Report_Result__ChangeEvent = {
   CreatedById: string | null;
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
+  Account_Manager__c: string | null;
+  End_Date__c: DateString | null;
+  Recruiter__c: string | null;
+  Referrer__c: string | null;
+  Start_Date__c: DateString | null;
 };
 
 type ParentReferences$Commission_Report_Result__ChangeEvent = {
@@ -7365,6 +7370,11 @@ type Fields$Commission_Report_Result__c = {
   LastModifiedDate: DateString;
   LastModifiedById: string;
   SystemModstamp: DateString;
+  Account_Manager__c: string | null;
+  End_Date__c: DateString | null;
+  Recruiter__c: string | null;
+  Referrer__c: string | null;
+  Start_Date__c: DateString | null;
 };
 
 type ParentReferences$Commission_Report_Result__c = {
@@ -7372,6 +7382,9 @@ type ParentReferences$Commission_Report_Result__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
+  Account_Manager__r: SObjectDefinition$User | null;
+  Recruiter__r: SObjectDefinition$Contact | null;
+  Referrer__r: SObjectDefinition$Contact | null;
 };
 
 type ChildRelationships$Commission_Report_Result__c = {
@@ -8152,12 +8165,11 @@ type Fields$Contact = {
   Employment_Offer_Status__c: string | null;
   Smoothstack_Manager__c: string | null;
   Race__c: string | null;
-  GenderIdentity: string | null;
   Num_of_Applications__c: number | null;
   Disability__c: string | null;
   Duplicate_Of__c: string | null;
-  Military_Branch__c: string | null;
   Military_Status__c: string | null;
+  GenderIdentity: string | null;
 };
 
 type ParentReferences$Contact = {
@@ -8527,7 +8539,6 @@ type Fields$ContactChangeEvent = {
   Num_of_Applications__c: number | null;
   Disability__c: string | null;
   Duplicate_Of__c: string | null;
-  Military_Branch__c: string | null;
   Military_Status__c: string | null;
 };
 
@@ -20676,6 +20687,7 @@ type Fields$Job__ChangeEvent = {
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number | null;
   Public_Description__c: string | null;
+  Physical_Requirements__c: string | null;
   Year_1_Salary__c: number | null;
   Year_2_Salary__c: number | null;
   Quick_Course_Start_Date__c: DateString | null;
@@ -20766,6 +20778,7 @@ type Fields$Job__c = {
   Coding_Challenge_Name__c: string | null;
   Passing_Challenge_Score__c: number;
   Public_Description__c: string | null;
+  Physical_Requirements__c: string | null;
   Year_1_Salary__c: number;
   Year_2_Salary__c: number;
   Quick_Course_Start_Date__c: DateString;
@@ -22808,6 +22821,8 @@ type Fields$Marketing__ChangeEvent = {
   Target_Rate__c: number | null;
   Target_NetRevenue_Percentage__c: number | null;
   Target_Net_Revenue__c: number | null;
+  Net_Revenue__c: number | null;
+  Net_Revenue_Per__c: number | null;
 };
 
 type ParentReferences$Marketing__ChangeEvent = {
@@ -22925,6 +22940,8 @@ type Fields$Marketing__c = {
   Target_Rate__c: number | null;
   Target_NetRevenue_Percentage__c: number | null;
   Target_Net_Revenue__c: number | null;
+  Net_Revenue__c: number | null;
+  Net_Revenue_Per__c: number | null;
 };
 
 type ParentReferences$Marketing__c = {
@@ -24460,7 +24477,7 @@ type Fields$Opportunity = {
   Additional_Questions__c: string | null;
   DB_Competitor__c: string | null;
   Referral_terms__c: string | null;
-  Qualified__c: boolean;
+  Account_Fee__c: number | null;
   Client_Job_Description__c: string | null;
   Qualification_notes__c: string | null;
   Decision_Maker__c: string | null;
@@ -24650,7 +24667,27 @@ type Fields$Opportunity = {
   INPUT_Status__c: string | null;
   INPUT_Update_Date__c: DateString | null;
   Previously_Applied_Notes__c: string | null;
+  Req_Experience__c: string | null;
   Number_of_Applications__c: number | null;
+  Publishing_Status__c: string | null;
+  Reason_Closed__c: string | null;
+  Travel_Requirements__c: string | null;
+  Client_Onsite_Address__Street__s: string | null;
+  Client_Onsite_Address__City__s: string | null;
+  Client_Onsite_Address__PostalCode__s: string | null;
+  Client_Onsite_Address__StateCode__s: string | null;
+  Client_Onsite_Address__CountryCode__s: string | null;
+  Client_Onsite_Address__Latitude__s: number | null;
+  Client_Onsite_Address__Longitude__s: number | null;
+  Client_Onsite_Address__GeocodeAccuracy__s: string | null;
+  Client_Onsite_Address__c: Address | null;
+  Job_Req_Status__c: string | null;
+  Priority__c: string | null;
+  Job_Title__c: string | null;
+  Requisition__c: string;
+  Published_Description__c: string | null;
+  Qualified__c: string | null;
+  Cohort_Category__c: string | null;
 };
 
 type ParentReferences$Opportunity = {
@@ -24779,7 +24816,7 @@ type Fields$OpportunityChangeEvent = {
   Additional_Questions__c: string | null;
   DB_Competitor__c: string | null;
   Referral_terms__c: string | null;
-  Qualified__c: boolean;
+  Account_Fee__c: number | null;
   Client_Job_Description__c: string | null;
   Qualification_notes__c: string | null;
   Decision_Maker__c: string | null;
@@ -24969,7 +25006,27 @@ type Fields$OpportunityChangeEvent = {
   INPUT_Status__c: string | null;
   INPUT_Update_Date__c: DateString | null;
   Previously_Applied_Notes__c: string | null;
+  Req_Experience__c: string | null;
   Number_of_Applications__c: number | null;
+  Publishing_Status__c: string | null;
+  Reason_Closed__c: string | null;
+  Travel_Requirements__c: string | null;
+  Client_Onsite_Address__Street__s: string | null;
+  Client_Onsite_Address__City__s: string | null;
+  Client_Onsite_Address__PostalCode__s: string | null;
+  Client_Onsite_Address__StateCode__s: string | null;
+  Client_Onsite_Address__CountryCode__s: string | null;
+  Client_Onsite_Address__Latitude__s: number | null;
+  Client_Onsite_Address__Longitude__s: number | null;
+  Client_Onsite_Address__GeocodeAccuracy__s: string | null;
+  Client_Onsite_Address__c: Address | null;
+  Job_Req_Status__c: string | null;
+  Priority__c: string | null;
+  Job_Title__c: string | null;
+  Requisition__c: string;
+  Published_Description__c: string | null;
+  Qualified__c: string | null;
+  Cohort_Category__c: string | null;
 };
 
 type ParentReferences$OpportunityChangeEvent = {
@@ -34846,6 +34903,7 @@ type Fields$Staff_Aug_Commission_Variables__ChangeEvent = {
   W2_Burden__c: number | null;
   X1099_C2C_Burden__c: number | null;
   X401K__c: number | null;
+  Net_Revenue_Target__c: number | null;
 };
 
 type ParentReferences$Staff_Aug_Commission_Variables__ChangeEvent = {
@@ -34889,6 +34947,7 @@ type Fields$Staff_Aug_Commission_Variables__c = {
   W2_Burden__c: number;
   X1099_C2C_Burden__c: number;
   X401K__c: number;
+  Net_Revenue_Target__c: number | null;
 };
 
 type ParentReferences$Staff_Aug_Commission_Variables__c = {
