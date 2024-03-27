@@ -8,7 +8,7 @@ import { DateString } from 'jsforce';
 import { saveSFDCFiles } from '../../service/files.service';
 import { HttpFile } from 'pandadoc-node-client';
 import { publishMSUserGenerationRequest } from '../../service/sns.service';
-import { sendSADocument } from '../../service/document.sa.service';
+import { downloadSASignedDocument, sendSADocument } from '../../service/document.sa.service';
 import { updateSAApplication } from '../../service/application.sa.service';
 
 const documentEventProcessor = async (event: SNSEvent) => {
@@ -57,7 +57,7 @@ const documentEventProcessor = async (event: SNSEvent) => {
             break;
           }
           case 'RTR': {
-            const docFile = await downloadSignedDocument(docEvent.data.id);
+            const docFile = await downloadSASignedDocument(docEvent.data.id);
             await updateSAApplicationData(docEvent.data.metadata.applicationId, 'SIGNED', docFile);
             break;
           }
