@@ -129,7 +129,7 @@ const updateSAApplicationData = async (applicationId: string, eventType: 'SENT' 
       );
       await saveSFDCFiles(conn, applicationId, [
         {
-          type: 'RTR',
+          type: 'Other',
           contentType: 'application/pdf',
           fileContent: docFile.data.toString('base64'),
           name: 'Signed_RTR.pdf',
