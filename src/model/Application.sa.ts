@@ -11,5 +11,6 @@ export interface SAApplicationFields {
   status: string;
   workAuthorization: string;
   willRelocate: string;
-  yearsOfProfessionalExperience?: string;
+  educationLevel: string;
+  yearsOfProfessionalExperience: string;
 }

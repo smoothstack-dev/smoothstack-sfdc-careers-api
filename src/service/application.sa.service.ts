@@ -5,18 +5,19 @@ import { SAApplication, SAApplicationFields } from '../model/Application.sa';
 import { createSACandidate } from './candidate.sa.service';
 import { deriveSAApplicationStatus } from '../util/application.sa.util';
 import { SAJob } from '../model/Job.sa';
+import { fetchUser } from './user.service';
 
 const SA_SUBMISSION_RECORD_TYPE_ID = '012Jw000001vSobIAE';
 
 export const createSAApplication = async (
   conn: Connection<SmoothstackSchema>,
-  jobId: string,
+  job: SAJob,
   application: { candidateFields: SACandidateFields; applicationFields: SAApplicationFields },
-  existingCandidateId?: string
+  existingCandidate?: SACandidate
 ): Promise<{ candidateId: string; applicationId: string }> => {
   const { candidateFields, applicationFields } = application;
-
-  const candidateId = await createSACandidate(conn, candidateFields, existingCandidateId);
+  const ownerId = await deriveOwnerId(conn, existingCandidate, job);
+  const candidateId = await createSACandidate(conn, candidateFields, ownerId, existingCandidate?.Id);
   const { status, rejectionReason } = deriveSAApplicationStatus(applicationFields.status);
   const applicationRecord: Partial<SAApplication> = {
     RecordTypeId: SA_SUBMISSION_RECORD_TYPE_ID,
@@ -25,21 +26,31 @@ export const createSAApplication = async (
     ...(rejectionReason && { Rejection_Reason__c: rejectionReason }),
     Work_Authorization__c: applicationFields.workAuthorization,
     Willing_to_Relocate__c: applicationFields.willRelocate,
+    Education_Level__c: applicationFields.educationLevel,
     Years_Experience__c: applicationFields.yearsOfProfessionalExperience,
     Resource__c: candidateId,
-    Opportunity__c: jobId,
+    Opportunity__c: job.Id,
+    OwnerId__c: ownerId,
   };
 
   const { id: applicationId }: any = await conn._createSingle('Marketing__c', applicationRecord, {});
-  // await conn._createSingle(
-  //   'OpportunityContactRole',
-  //   {
-  //     ContactId: candidateId,
-  //     OpportunityId: applicationId,
-  //   },
-  //   {}
-  // );
+
   return { applicationId, candidateId };
+};
+
+const deriveOwnerId = async (
+  conn: Connection<SmoothstackSchema>,
+  existingCandidate: SACandidate,
+  job: SAJob
+): Promise<string> => {
+  const existingApplications = existingCandidate?.Marketing__r?.records ?? [];
+  const appsWithOwner = existingApplications.filter((app) => app.OwnerId__c);
+  const sortedApps = appsWithOwner.sort((a, b) => {
+    return new Date(b.CreatedDate).getTime() - new Date(a.CreatedDate).getTime();
+  });
+  const appOwnerId = sortedApps[0]?.OwnerId__c;
+  const appOwner = appOwnerId && (await fetchUser(conn, appOwnerId));
+  return appOwner?.IsActive ? appOwnerId : job.OwnerId;
 };
 
 export const fetchSAApplication = async (
