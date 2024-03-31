@@ -2,7 +2,7 @@ import { SAApplication } from './Application.sa';
 import { Fields$Contact } from './smoothstack.schema';
 
 export interface SACandidate extends Fields$Contact {
-  Marketings__r?: { records: SAApplication[] };
+  Marketing__r?: { records: SAApplication[] };
 }
 
 export interface SACandidateFields {

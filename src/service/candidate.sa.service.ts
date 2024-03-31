@@ -8,6 +8,7 @@ export const SA_CANDIDATE_RECORD_TYPE_ID = '012Jw0000020adSIAQ';
 export const createSACandidate = async (
   conn: Connection<SmoothstackSchema>,
   candidateFields: SACandidateFields,
+  ownerId: string,
   existingId?: string
 ): Promise<string> => {
   const candidateRecord: Partial<SACandidate> = {
@@ -22,6 +23,7 @@ export const createSACandidate = async (
     MailingStateCode: getStateCode(candidateFields.state),
     MailingCountryCode: 'US',
     MailingPostalCode: candidateFields.zip,
+    OwnerId: ownerId,
   };
 
   const candidateRes = existingId

@@ -3790,6 +3790,107 @@ interface SObjectDefinition$BatchApexErrorEvent extends SObjectDefinition<'Batch
   ChildRelationships: ChildRelationships$BatchApexErrorEvent;
 }
 
+type Fields$Billing_Exclusion__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  OwnerId: string | null;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Comment__c: string | null;
+  End_Date__c: DateString | null;
+  Job_Placement_2__c: string | null;
+  Job_Placement__c: string | null;
+  Start_Date__c: DateString | null;
+  Total_Hours_for_Period__c: number | null;
+  Account_Name__c: string | null;
+  Opportunity_Name__c: string | null;
+  Resource_Name__c: string | null;
+};
+
+type ParentReferences$Billing_Exclusion__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Billing_Exclusion__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Billing_Exclusion__ChangeEvent extends SObjectDefinition<'Billing_Exclusion__ChangeEvent'> {
+  Name: 'Billing_Exclusion__ChangeEvent';
+  Fields: Fields$Billing_Exclusion__ChangeEvent;
+  ParentReferences: ParentReferences$Billing_Exclusion__ChangeEvent;
+  ChildRelationships: ChildRelationships$Billing_Exclusion__ChangeEvent;
+}
+
+type Fields$Billing_Exclusion__c = {
+  //
+  Id: string;
+  OwnerId: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  LastViewedDate: DateString | null;
+  LastReferencedDate: DateString | null;
+  Comment__c: string | null;
+  End_Date__c: DateString | null;
+  Job_Placement_2__c: string | null;
+  Job_Placement__c: string | null;
+  Start_Date__c: DateString | null;
+  Total_Hours_for_Period__c: number | null;
+  Account_Name__c: string | null;
+  Opportunity_Name__c: string | null;
+  Resource_Name__c: string | null;
+};
+
+type ParentReferences$Billing_Exclusion__c = {
+  //
+  Owner: SObjectDefinition$Name;
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Job_Placement_2__r: SObjectDefinition$Job_Placement__c | null;
+  Job_Placement__r: SObjectDefinition$Sstack_CC__Job_Placement__c | null;
+};
+
+type ChildRelationships$Billing_Exclusion__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Billing_Exclusion__c extends SObjectDefinition<'Billing_Exclusion__c'> {
+  Name: 'Billing_Exclusion__c';
+  Fields: Fields$Billing_Exclusion__c;
+  ParentReferences: ParentReferences$Billing_Exclusion__c;
+  ChildRelationships: ChildRelationships$Billing_Exclusion__c;
+}
+
 type Fields$BrandTemplate = {
   //
   Id: string;
@@ -11195,6 +11296,92 @@ interface SObjectDefinition$CustomPermissionDependency extends SObjectDefinition
   ChildRelationships: ChildRelationships$CustomPermissionDependency;
 }
 
+type Fields$Custom_Note_To_Contact__ChangeEvent = {
+  //
+  Id: string | null;
+  ReplayId: string | null;
+  ChangeEventHeader: any;
+  Name: string | null;
+  CreatedDate: DateString | null;
+  CreatedById: string | null;
+  LastModifiedDate: DateString | null;
+  LastModifiedById: string | null;
+  Custom_Note__c: string | null;
+  Account__c: string | null;
+  Contact__c: string | null;
+};
+
+type ParentReferences$Custom_Note_To_Contact__ChangeEvent = {
+  //
+};
+
+type ChildRelationships$Custom_Note_To_Contact__ChangeEvent = {
+  //
+};
+
+interface SObjectDefinition$Custom_Note_To_Contact__ChangeEvent
+  extends SObjectDefinition<'Custom_Note_To_Contact__ChangeEvent'> {
+  Name: 'Custom_Note_To_Contact__ChangeEvent';
+  Fields: Fields$Custom_Note_To_Contact__ChangeEvent;
+  ParentReferences: ParentReferences$Custom_Note_To_Contact__ChangeEvent;
+  ChildRelationships: ChildRelationships$Custom_Note_To_Contact__ChangeEvent;
+}
+
+type Fields$Custom_Note_To_Contact__c = {
+  //
+  Id: string;
+  IsDeleted: boolean;
+  Name: string;
+  CreatedDate: DateString;
+  CreatedById: string;
+  LastModifiedDate: DateString;
+  LastModifiedById: string;
+  SystemModstamp: DateString;
+  Custom_Note__c: string;
+  Account__c: string | null;
+  Contact__c: string | null;
+};
+
+type ParentReferences$Custom_Note_To_Contact__c = {
+  //
+  CreatedBy: SObjectDefinition$User;
+  LastModifiedBy: SObjectDefinition$User;
+  Custom_Note__r: SObjectDefinition$Custom_Note__c;
+  Account__r: SObjectDefinition$Account | null;
+  Contact__r: SObjectDefinition$Contact | null;
+};
+
+type ChildRelationships$Custom_Note_To_Contact__c = {
+  //
+  AttachedContentDocuments: SObjectDefinition$AttachedContentDocument;
+  AttachedContentNotes: SObjectDefinition$AttachedContentNote;
+  Attachments: SObjectDefinition$Attachment;
+  RecordAssociatedGroups: SObjectDefinition$CollaborationGroupRecord;
+  CombinedAttachments: SObjectDefinition$CombinedAttachment;
+  ContactRequests: SObjectDefinition$ContactRequest;
+  ContentDocumentLinks: SObjectDefinition$ContentDocumentLink;
+  DuplicateRecordItems: SObjectDefinition$DuplicateRecordItem;
+  FeedSubscriptionsForEntity: SObjectDefinition$EntitySubscription;
+  EventRelations: SObjectDefinition$EventRelation;
+  Notes: SObjectDefinition$Note;
+  NotesAndAttachments: SObjectDefinition$NoteAndAttachment;
+  ProcessExceptions: SObjectDefinition$ProcessException;
+  ProcessInstances: SObjectDefinition$ProcessInstance;
+  ProcessSteps: SObjectDefinition$ProcessInstanceHistory;
+  RecordActions: SObjectDefinition$RecordAction;
+  RecordActionHistories: SObjectDefinition$RecordActionHistory;
+  SurveySubjectEntities: SObjectDefinition$SurveySubject;
+  TaskRelations: SObjectDefinition$TaskRelation;
+  TopicAssignments: SObjectDefinition$TopicAssignment;
+};
+
+interface SObjectDefinition$Custom_Note_To_Contact__c extends SObjectDefinition<'Custom_Note_To_Contact__c'> {
+  Name: 'Custom_Note_To_Contact__c';
+  Fields: Fields$Custom_Note_To_Contact__c;
+  ParentReferences: ParentReferences$Custom_Note_To_Contact__c;
+  ChildRelationships: ChildRelationships$Custom_Note_To_Contact__c;
+}
+
 type Fields$Custom_Note__ChangeEvent = {
   //
   Id: string | null;
@@ -11207,13 +11394,12 @@ type Fields$Custom_Note__ChangeEvent = {
   LastModifiedDate: DateString | null;
   LastModifiedById: string | null;
   Note__c: string | null;
-  Contact__c: string | null;
-  Account__c: string | null;
   Content_Document_Link_ID__c: string | null;
   Initially_Created_By__c: string | null;
   Preview__c: string | null;
   Note_Source__c: string | null;
   Type__c: string | null;
+  Migrated_D__c: boolean;
 };
 
 type ParentReferences$Custom_Note__ChangeEvent = {
@@ -11276,13 +11462,12 @@ type Fields$Custom_Note__c = {
   LastViewedDate: DateString | null;
   LastReferencedDate: DateString | null;
   Note__c: string | null;
-  Contact__c: string | null;
-  Account__c: string | null;
   Content_Document_Link_ID__c: string | null;
   Initially_Created_By__c: string | null;
   Preview__c: string | null;
   Note_Source__c: string | null;
   Type__c: string | null;
+  Migrated_D__c: boolean;
 };
 
 type ParentReferences$Custom_Note__c = {
@@ -11290,8 +11475,6 @@ type ParentReferences$Custom_Note__c = {
   Owner: SObjectDefinition$Name;
   CreatedBy: SObjectDefinition$User;
   LastModifiedBy: SObjectDefinition$User;
-  Contact__r: SObjectDefinition$Contact | null;
-  Account__r: SObjectDefinition$Account | null;
   Initially_Created_By__r: SObjectDefinition$User | null;
 };
 
@@ -22805,6 +22988,7 @@ type Fields$Marketing__ChangeEvent = {
   Rejection_Reason__c: string | null;
   Source__c: string | null;
   Desired_Pay_Rate_Hourly__c: number | null;
+  OwnerId__c: string | null;
   Referral_Fee_Hourly__c: number | null;
   Referral_Fee_One_Time__c: number | null;
   Willing_to_Relocate__c: string | null;
@@ -22895,7 +23079,7 @@ type Fields$Marketing__c = {
   Number_Of_PTO_Weeks__c: number | null;
   Pay_Rate__c: number | null;
   Placement_Fee__c: number | null;
-  Placement_Type__c: string;
+  Placement_Type__c: string | null;
   Salary_Amount__c: number | null;
   Selected_Date__c: DateString | null;
   Status__c: string;
@@ -22924,6 +23108,7 @@ type Fields$Marketing__c = {
   Rejection_Reason__c: string | null;
   Source__c: string | null;
   Desired_Pay_Rate_Hourly__c: number | null;
+  OwnerId__c: string | null;
   Referral_Fee_Hourly__c: number | null;
   Referral_Fee_One_Time__c: number | null;
   Willing_to_Relocate__c: string | null;
@@ -22953,6 +23138,7 @@ type ParentReferences$Marketing__c = {
   Opportunity__r: SObjectDefinition$Opportunity;
   Job_Placement__r: SObjectDefinition$Sstack_CC__Job_Placement__c | null;
   Cohort_Participant__r: SObjectDefinition$Cohort_Participant__c | null;
+  OwnerId__r: SObjectDefinition$User | null;
 };
 
 type ChildRelationships$Marketing__c = {
@@ -24671,6 +24857,7 @@ type Fields$Opportunity = {
   Number_of_Applications__c: number | null;
   Publishing_Status__c: string | null;
   Reason_Closed__c: string | null;
+  Job_Details_JSON__c: string | null;
   Travel_Requirements__c: string | null;
   Client_Onsite_Address__Street__s: string | null;
   Client_Onsite_Address__City__s: string | null;
@@ -25010,6 +25197,7 @@ type Fields$OpportunityChangeEvent = {
   Number_of_Applications__c: number | null;
   Publishing_Status__c: string | null;
   Reason_Closed__c: string | null;
+  Job_Details_JSON__c: string | null;
   Travel_Requirements__c: string | null;
   Client_Onsite_Address__Street__s: string | null;
   Client_Onsite_Address__City__s: string | null;
@@ -43550,6 +43738,8 @@ export interface SmoothstackSchema extends Schema {
     AuthorizationFormTextHistory: SObjectDefinition$AuthorizationFormTextHistory;
     BackgroundOperation: SObjectDefinition$BackgroundOperation;
     BatchApexErrorEvent: SObjectDefinition$BatchApexErrorEvent;
+    Billing_Exclusion__ChangeEvent: SObjectDefinition$Billing_Exclusion__ChangeEvent;
+    Billing_Exclusion__c: SObjectDefinition$Billing_Exclusion__c;
     BrandTemplate: SObjectDefinition$BrandTemplate;
     BrandingSet: SObjectDefinition$BrandingSet;
     BrandingSetProperty: SObjectDefinition$BrandingSetProperty;
@@ -43722,6 +43912,8 @@ export interface SmoothstackSchema extends Schema {
     CustomObjectUserLicenseMetrics: SObjectDefinition$CustomObjectUserLicenseMetrics;
     CustomPermission: SObjectDefinition$CustomPermission;
     CustomPermissionDependency: SObjectDefinition$CustomPermissionDependency;
+    Custom_Note_To_Contact__ChangeEvent: SObjectDefinition$Custom_Note_To_Contact__ChangeEvent;
+    Custom_Note_To_Contact__c: SObjectDefinition$Custom_Note_To_Contact__c;
     Custom_Note__ChangeEvent: SObjectDefinition$Custom_Note__ChangeEvent;
     Custom_Note__History: SObjectDefinition$Custom_Note__History;
     Custom_Note__c: SObjectDefinition$Custom_Note__c;

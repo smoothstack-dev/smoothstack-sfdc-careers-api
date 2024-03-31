@@ -14,7 +14,7 @@ import { generateApplicationNote } from '../util/note.util';
 import { publishDataGenerationRequest } from './sns.service';
 import { findContactByEmailOrPhone } from './contact.service';
 import { saveSFDCFiles } from './files.service';
-import { CandidateFields } from '../model/Candidate';
+import { Candidate, CandidateFields } from '../model/Candidate';
 import { Fields$Job__c } from '../model/smoothstack.schema';
 import { CANDIDATE_RECORD_TYPE_ID } from './candidate.service';
 
@@ -50,7 +50,7 @@ export const apply = async (event: APIGatewayProxyEvent) => {
   const formattedLastName = toTitleCase(lastName);
   const formattedEmail = email.toLowerCase();
   const formattedPhone = phone.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-  const existingCandidate = await findContactByEmailOrPhone(
+  const existingCandidate: Candidate = await findContactByEmailOrPhone(
     conn,
     formattedEmail,
     formattedPhone,
