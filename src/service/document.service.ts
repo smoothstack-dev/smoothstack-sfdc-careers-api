@@ -11,7 +11,8 @@ import {
 import { fetchConsultant } from './consultant.service';
 import { OfferParams, isSPOffer } from '../model/Offer';
 
-const QUICK_COURSE_TEMPLATE_ID = 'Y6R59eHG5TiaFaBeahQE5R';
+const QQ_TEMPLATE_ID = 'Y6R59eHG5TiaFaBeahQE5R';
+const TECH_QQ_TEMPLATE_ID = 'HuGF3tveGHLprFk3mM765Y';
 const OFFER_TEMPLATE_IDS = {
   'RELO/R': 'fBVyepV5U7sfyGmM9wSjBk',
   'NO-RELO/R': '8jVeGKtN2HcjGS87G9Sf38',
@@ -23,12 +24,12 @@ export const generateQuickCourseDoc = async (applicationId: string) => {
   const conn = await getSFDCConnection();
   const pDoc = new DocumentsApi(await getPandaDocConfig());
   const application = await fetchApplication(conn, applicationId);
-
+  const templateUuid = application.Job__r.Cohort_Category__c === 'Technician' ? TECH_QQ_TEMPLATE_ID : QQ_TEMPLATE_ID;
   const body: DocumentsApiCreateDocumentRequest = {
     documentCreateRequest: {
       name: 'Smoothstack Document Signature Request',
       folderUuid: '4dgo8Rwrpsrxft42RBn9SN',
-      templateUuid: QUICK_COURSE_TEMPLATE_ID,
+      templateUuid,
       recipients: [
         {
           email: application.Candidate__r.Email,
