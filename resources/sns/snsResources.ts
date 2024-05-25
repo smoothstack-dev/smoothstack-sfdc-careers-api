@@ -55,4 +55,10 @@ export const snsResources: AWS['resources']['Resources'] = {
       TopicName: 'smoothstack-job-event-processing-sns-topic-v2',
     },
   },
+  CohortEventProcessingTopic: {
+    Type: 'AWS::SNS::Topic',
+    Properties: {
+      TopicName: 'smoothstack-cohort-event-processing-sns-topic-v2',
+    },
+  },
 };

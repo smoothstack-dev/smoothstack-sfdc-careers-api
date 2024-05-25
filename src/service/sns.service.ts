@@ -13,7 +13,7 @@ import { DocGenerationMsg, DocumentEvent } from '../model/Document';
 import { DataGenerationRequest, GenerationType } from '../model/ApplicationData';
 import { ConsultantGenerationRequest } from '../model/Consultant';
 import { MSUser } from '../model/MSUser';
-import { CohortUserGenerationRequest } from '../model/Cohort';
+import { CohortEventProcessingRequest, CohortUserGenerationRequest } from '../model/Cohort';
 import { JobEventProcessingRequest } from '../model/Job';
 
 export const publishDataGenerationRequest = async (applicationId: string, type: GenerationType) => {
@@ -139,6 +139,17 @@ export const publishCohortUserGenerationRequest = async (applicationId: string, 
 export const publishJobProcessingRequest = async (request: JobEventProcessingRequest) => {
   const sns = new SNS(getSNSConfig(process.env.ENV));
   const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-job-event-processing-sns-topic-v2`;
+  const message: PublishInput = {
+    Message: JSON.stringify(request),
+    TopicArn: snsTopic,
+  };
+
+  await sns.publish(message).promise();
+};
+
+export const publishCohortEventProcessingRequest = async (request: CohortEventProcessingRequest) => {
+  const sns = new SNS(getSNSConfig(process.env.ENV));
+  const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-cohort-event-processing-sns-topic-v2`;
   const message: PublishInput = {
     Message: JSON.stringify(request),
     TopicArn: snsTopic,
