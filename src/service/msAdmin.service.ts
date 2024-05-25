@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { fetchMSUser } from './msUser.service';
-import { Fields$Job__c } from '../model/smoothstack.schema';
+import { Fields$Cohort__c } from '../model/smoothstack.schema';
 import { MSTeam } from '../model/MSTeam';
 
 const BASE_URL = `https://graph.microsoft.com/v1.0`;
 
-export const addTeam = async (authToken: string, job: Fields$Job__c): Promise<MSTeam> => {
-  const teamName = deriveTeamName(job);
+export const addTeam = async (authToken: string, cohort: Fields$Cohort__c): Promise<MSTeam> => {
+  const teamName = deriveTeamName(cohort);
   const team = {
     'template@odata.bind': `${BASE_URL}/teamsTemplates('standard')`,
     displayName: teamName,
@@ -32,10 +32,10 @@ export const addTeam = async (authToken: string, job: Fields$Job__c): Promise<MS
 export const updateTeam = async (
   authToken: string,
   teamId: string,
-  job: Fields$Job__c,
+  cohort: Fields$Cohort__c,
   existingTeamName: string
 ): Promise<MSTeam> => {
-  const teamName = deriveTeamName(job);
+  const teamName = deriveTeamName(cohort);
   if (teamName.toLowerCase() !== existingTeamName.toLowerCase()) {
     const teamInfo = {
       displayName: teamName,
@@ -69,10 +69,10 @@ const deleteTeam = async (authToken: string, teamId: string) => {
 
 export const addDistribution = async (
   authToken: string,
-  job: Fields$Job__c,
+  cohort: Fields$Cohort__c,
   members: string[] = []
 ): Promise<MSTeam> => {
-  const distributionName = deriveTeamName(job, '_Trainees');
+  const distributionName = deriveTeamName(cohort, '_Trainees');
   const distribution = {
     'owners@odata.bind': [`${BASE_URL}/users('support@smoothstack.com')`],
     groupTypes: ['Unified'],
@@ -95,13 +95,13 @@ export const addDistribution = async (
 export const updateDistribution = async (
   authToken: string,
   distroId: string,
-  job: Fields$Job__c,
+  cohort: Fields$Cohort__c,
   existingDistroName: string
 ): Promise<MSTeam> => {
-  const distributionName = deriveTeamName(job, '_Trainees');
+  const distributionName = deriveTeamName(cohort, '_Trainees');
   if (`${distributionName.toLowerCase()}@smoothstack.com` !== existingDistroName.toLowerCase()) {
     const existingMembers = await listDistributionMembers(authToken, distroId);
-    const newDistroInfo = await addDistribution(authToken, job, existingMembers);
+    const newDistroInfo = await addDistribution(authToken, cohort, existingMembers);
     await deleteTeam(authToken, distroId);
     return newDistroInfo;
   }
@@ -165,14 +165,14 @@ export const removeDistributionMember = async (authToken: string, distroId: stri
   });
 };
 
-const deriveTeamName = (job: Fields$Job__c, suffix: string = '') => {
-  const date = new Date(job.Quick_Course_Start_Date__c);
+const deriveTeamName = (cohort: Fields$Cohort__c, suffix: string = '') => {
+  const date = new Date(cohort.Training_Start_Date__c);
   const year = date.getFullYear();
   const numberMonth = (date.getMonth() + 1).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false,
   });
   const dayOfMonth = date.getUTCDate();
-  const technology = job.Cohort_Category__c.replace(/ /g, '');
+  const technology = cohort.Cohort_Category__c.replace(/ /g, '');
   return `${year}_${numberMonth}_${dayOfMonth}_${technology}${suffix}`;
 };
