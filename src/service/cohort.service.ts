@@ -5,6 +5,7 @@ import {
   Fields$Job__c,
   SmoothstackSchema,
 } from '../model/smoothstack.schema';
+import { CohortParticipant } from '../model/Cohort';
 
 export const fetchCohort = async (conn: Connection<SmoothstackSchema>, cohortId: string): Promise<Fields$Cohort__c> => {
   return await conn.sobject('Cohort__c').findOne({ Id: { $eq: cohortId ?? null } });
@@ -44,6 +45,16 @@ export const updateCohort = async (
   await conn.sobject('Cohort__c').update({ Id: cohortId, ...updateFields });
 };
 
+export const fetchCohortParticipant = async (
+  conn: Connection<SmoothstackSchema>,
+  cohortParticipantId: string
+): Promise<CohortParticipant> => {
+  return await conn
+    .sobject('Cohort_Participant__c')
+    .findOne({ Id: { $eq: cohortParticipantId ?? null } })
+    .select('Id, MSMembershipId__c, Cohort__r.*, Participant__r.*');
+};
+
 export const insertCohortParticipant = async (
   conn: Connection<SmoothstackSchema>,
   cohortId: string,
@@ -56,6 +67,14 @@ export const insertCohortParticipant = async (
     Participant__c: userId,
     Is_Latest__c: true,
   });
+};
+
+export const updateCohortParticipant = async (
+  conn: Connection<SmoothstackSchema>,
+  cohortParticipantId: string,
+  updateFields: Partial<Fields$Cohort_Participant__c>
+) => {
+  await conn.sobject('Cohort_Participant__c').update({ Id: cohortParticipantId, ...updateFields });
 };
 
 export const deleteCohortParticipant = async (conn: Connection<SmoothstackSchema>, cohortParticipantId: string) => {
@@ -87,4 +106,15 @@ export const saveCohort = async (
   } else {
     return { Id: await insertCohort(conn, dataFields) };
   }
+};
+
+export const fetchPreviousParticipantCohortId = async (
+  conn: Connection<SmoothstackSchema>,
+  cohortParticipantId: string
+): Promise<string> => {
+  const history = await conn
+    .sobject('Cohort_Participant__History')
+    .find({ ParentId: { $eq: cohortParticipantId ?? null }, $and: [{ Field: 'Cohort__c' }, { DataType: 'EntityId' }] })
+    .orderby('CreatedDate', 'DESC');
+  return history[0].OldValue;
 };
