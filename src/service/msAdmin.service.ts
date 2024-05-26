@@ -59,7 +59,7 @@ const cloneTeam = async (authToken: string, teamId: string, teamInfo: any) => {
   return headers['content-location'].split("'")[1];
 };
 
-const deleteTeam = async (authToken: string, teamId: string) => {
+export const deleteTeam = async (authToken: string, teamId: string) => {
   await axios.delete(`${BASE_URL}/groups/${teamId}`, {
     headers: {
       Authorization: `Bearer ${authToken}`,

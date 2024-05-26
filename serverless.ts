@@ -21,6 +21,8 @@ import offers from './src/functions/offers';
 import saJobs from './src/functions/saJobs';
 import cohortEvents from './src/functions/cohortEvents';
 import cohortEventProcessor from './src/functions/cohortEventProcessor';
+import cohortParticipantReassignment from './src/functions/cohortParticipantReassignment';
+import cpReassignmentProcessor from './src/functions/cpReassignmentProcessor';
 
 const serverlessConfiguration: AWS = {
   service: 'smoothstack-sfdc-careers-api',
@@ -97,6 +99,8 @@ const serverlessConfiguration: AWS = {
     saJobs,
     cohortEvents,
     cohortEventProcessor,
+    cohortParticipantReassignment,
+    cpReassignmentProcessor,
   },
   resources: {
     Resources: {

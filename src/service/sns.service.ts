@@ -157,3 +157,14 @@ export const publishCohortEventProcessingRequest = async (request: CohortEventPr
 
   await sns.publish(message).promise();
 };
+
+export const publishCPReassignmentRequest = async (cohortParticipantId: string) => {
+  const sns = new SNS(getSNSConfig(process.env.ENV));
+  const snsTopic = `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT}:smoothstack-cp-reassignment-processing-sns-topic-v2`;
+  const message: PublishInput = {
+    Message: JSON.stringify({ cohortParticipantId }),
+    TopicArn: snsTopic,
+  };
+
+  await sns.publish(message).promise();
+};

@@ -16,7 +16,7 @@ const cohortEvents = async (event: APIGatewayEvent) => {
         break;
       }
     }
-    console.log('Successfully processed Job Event');
+    console.log('Successfully processed Cohort Event');
   } catch (e) {
     console.error(e);
     throw e;
