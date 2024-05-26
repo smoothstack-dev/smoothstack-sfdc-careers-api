@@ -74,10 +74,11 @@ export const saveCohort = async (
   });
   const dayOfMonth = date.getUTCDate();
   const technology = job.Cohort_Category__c.replace(/ /g, '');
-  const dataFields = {
+  const dataFields: Partial<Fields$Cohort__c> = {
     Name: `${year}_${numberMonth}_${dayOfMonth}_${technology}`,
     Training_Start_Date__c: job.Quick_Course_Start_Date__c,
-    Job_Id__c: job.Id,
+    Cohort_Category__c: job.Cohort_Category__c,
+    Job_ID__c: job.Id,
   };
   const existingCohort = await findCohortByJobId(conn, job.Id);
   if (existingCohort) {
