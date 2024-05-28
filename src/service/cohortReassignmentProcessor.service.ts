@@ -13,9 +13,8 @@ export const reassignCohortParticipant = async (cohortParticipantId: string) => 
   const conn = await getSFDCConnection();
   const { token } = await getMSAuthData();
   const previousCohortId = await fetchPreviousParticipantCohortId(conn, cohortParticipantId);
-  console.log(previousCohortId);
   const previousCohort = await fetchCohort(conn, previousCohortId);
-  console.log(previousCohort);
+  
   const {
     Cohort__r: newCohort,
     MSMembershipId__c,
