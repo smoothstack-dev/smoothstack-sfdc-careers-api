@@ -85,16 +85,8 @@ export const saveCohort = async (
   conn: Connection<SmoothstackSchema>,
   job: Fields$Job__c
 ): Promise<Partial<Fields$Cohort__c>> => {
-  const date = new Date(job.Quick_Course_Start_Date__c);
-  const year = date.getFullYear();
-  const numberMonth = (date.getMonth() + 1).toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false,
-  });
-  const dayOfMonth = date.getUTCDate();
-  const technology = job.Cohort_Category__c.replace(/ /g, '');
   const dataFields: Partial<Fields$Cohort__c> = {
-    Name: `${year}_${numberMonth}_${dayOfMonth}_${technology}`,
+    Name: deriveCohortName(job.Quick_Course_Start_Date__c, job.Cohort_Category__c),
     Training_Start_Date__c: job.Quick_Course_Start_Date__c,
     Cohort_Category__c: job.Cohort_Category__c,
     Job_ID__c: job.Id,
@@ -106,6 +98,22 @@ export const saveCohort = async (
   } else {
     return { Id: await insertCohort(conn, dataFields) };
   }
+};
+
+export const deriveCohortName = (startDate: string, category: string) => {
+  const date = new Date(startDate);
+  const year = date.getFullYear();
+  const numberMonth = (date.getMonth() + 1).toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  const dayOfMonth = date.getUTCDate().toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  const technology = category.replace(/ /g, '');
+
+  return `${year}_${numberMonth}_${dayOfMonth}_${technology}`;
 };
 
 export const fetchPreviousParticipantCohortId = async (

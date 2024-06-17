@@ -172,7 +172,10 @@ const deriveTeamName = (cohort: Fields$Cohort__c, suffix: string = '') => {
     minimumIntegerDigits: 2,
     useGrouping: false,
   });
-  const dayOfMonth = date.getUTCDate();
+  const dayOfMonth = date.getUTCDate().toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
   const technology = cohort.Cohort_Category__c.replace(/ /g, '');
   return `${year}_${numberMonth}_${dayOfMonth}_${technology}${suffix}`;
 };

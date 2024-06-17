@@ -1,7 +1,7 @@
 import { CohortEventProcessingRequest } from '../model/Cohort';
 import { getMSAuthData } from './auth/microsoft.oauth.service';
 import { getSFDCConnection } from './auth/sfdc.auth.service';
-import { fetchCohort, updateCohort } from './cohort.service';
+import { deriveCohortName, fetchCohort, updateCohort } from './cohort.service';
 import { addDistribution, addTeam, deleteTeam, updateDistribution, updateTeam } from './msAdmin.service';
 
 export const processCohortEvent = async ({ eventType, cohortId }: CohortEventProcessingRequest) => {
@@ -14,6 +14,8 @@ export const processCohortEvent = async ({ eventType, cohortId }: CohortEventPro
     await Promise.all(requests);
   } else {
     const {
+      Training_Start_Date__c,
+      Cohort_Category__c,
       MSTeamID__c: existingMsTeamId,
       MSDistributionID__c: existingMsDistroId,
       Slack_Channel_Name__c: existingMsTeamName,
@@ -23,6 +25,7 @@ export const processCohortEvent = async ({ eventType, cohortId }: CohortEventPro
       ? await updateTeam(token, existingMsTeamId, cohort, existingMsTeamName)
       : await addTeam(token, cohort);
     await updateCohort(conn, cohortId, {
+      Name: deriveCohortName(Training_Start_Date__c, Cohort_Category__c),
       MSTeamID__c: msTeamId,
       Slack_Channel_Name__c: msTeamName,
     });
